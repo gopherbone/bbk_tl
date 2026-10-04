@@ -19,6 +19,8 @@ pub enum Action {
     Up,
     Mark(String),
     End,
+    /// write bytes at a CPU address (cheats); applied like inputs, at a frame start
+    Poke(u16, Vec<u8>),
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -84,6 +86,17 @@ pub fn parse_line(line: &str) -> Result<Option<Event>, String> {
         Action::Mark(m.replace("\\\"", "\"").replace("\\\\", "\\"))
     } else if field(line, "end").is_some() {
         Action::End
+    } else if let Some(a) = field(line, "poke") {
+        let addr = u16::from_str_radix(a, 16).map_err(|_| format!("bad poke address in {line}"))?;
+        let hex = field(line, "data").ok_or_else(|| format!("poke without data: {line}"))?;
+        if hex.len() % 2 != 0 {
+            return Err(format!("odd poke data in {line}"));
+        }
+        let data = (0..hex.len() / 2)
+            .map(|i| u8::from_str_radix(&hex[2 * i..2 * i + 2], 16))
+            .collect::<Result<Vec<u8>, _>>()
+            .map_err(|_| format!("bad poke data in {line}"))?;
+        Action::Poke(addr, data)
     } else {
         return Err(format!("unknown route event: {line}"));
     };
@@ -100,6 +113,12 @@ pub fn to_line(e: &Event) -> String {
             m.replace('\\', "\\\\").replace('"', "\\\"")
         ),
         Action::End => format!("{{\"f\":{},\"end\":1}}", e.frame),
+        Action::Poke(a, d) => format!(
+            "{{\"f\":{},\"poke\":\"{:04x}\",\"data\":\"{}\"}}",
+            e.frame,
+            a,
+            d.iter().map(|b| format!("{b:02x}")).collect::<String>()
+        ),
     }
 }
 
@@ -109,6 +128,11 @@ pub fn apply(emu: &mut Emulator, e: &Event) {
         Action::Down(k) => emu.key_down(*k),
         Action::Up => emu.key_up(),
         Action::Mark(_) | Action::End => {}
+        Action::Poke(a, d) => {
+            for (i, b) in d.iter().enumerate() {
+                emu.cpu.memory_mut().write(a.wrapping_add(i as u16), *b);
+            }
+        }
     }
 }
 
@@ -123,6 +147,7 @@ mod tests {
             Event { frame: 13, action: Action::Up },
             Event { frame: 14, action: Action::Mark("boss \"A\"".into()) },
             Event { frame: 15, action: Action::End },
+            Event { frame: 16, action: Action::Poke(0x1826, vec![1, 0, 0xff]) },
         ] {
             assert_eq!(parse_line(&to_line(&e)).unwrap(), Some(e));
         }

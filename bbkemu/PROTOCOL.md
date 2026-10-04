@@ -112,6 +112,8 @@ Key names are BBKEmu's: `ENTER`, `EXIT`, `UP`, `DOWN`, `LEFT`, `RIGHT`,
 | `route.status` | — | `{recording, path, events}` |
 | `route.stop` | — | writes the session's end marker |
 
+While recording, `mem.write` to a CPU `addr` is scheduled for the next frame start and recorded as a route `poke` event (`{"f":N,"poke":"1a8f","data":"0f27"}`), so cheats replay identically in bbkemu and bbkplay. Physical/.gam writes are not recorded.
+
 `snapshot.load` and `rewind.pop` truncate the recorded route back to the
 snapshot, so the route always describes one straight path from boot. That
 makes retries and save-scumming safe. `input.press`/`input.release` take

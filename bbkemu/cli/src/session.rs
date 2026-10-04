@@ -206,10 +206,11 @@ impl Recorder {
     }
 }
 
-#[derive(Clone, Copy)]
+#[derive(Clone)]
 enum InputEv {
     Press(BbkKey),
     Release,
+    Poke(u16, Vec<u8>),
 }
 
 enum Limit {
@@ -575,6 +576,7 @@ impl Session {
                         self.held = None;
                         route::Action::Up
                     }
+                    InputEv::Poke(a, d) => route::Action::Poke(a, d),
                 };
                 let e = route::Event { frame: f, action };
                 route::apply(emu, &e);
@@ -900,6 +902,13 @@ impl Session {
             (None, Some(off)) => Some(GAM_FLASH + off as u32),
             _ => None,
         };
+        if let (Some(a), true) = (addr, self.rec.is_some()) {
+            // recording: a CPU write is part of the route (cheats), applied at
+            // the next frame start like an input so it replays identically
+            let at = self.input_frame()?;
+            self.schedule.entry(at).or_default().push(InputEv::Poke(a as u16, data.clone()));
+            return Ok(json!({"written": data.len(), "scheduled_frame": at}));
+        }
         let e = self.emu_mut()?;
         let m = e.cpu.memory_mut();
         if let Some(a) = addr {
