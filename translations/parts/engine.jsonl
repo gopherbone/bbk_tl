@@ -44,11 +44,11 @@
 {"id": "ENG/1f8e4.0", "en": "Equip"}
 {"id": "ENG/1f8e4.1", "en": "Throw"}
 {"id": "ENG/1f8e4.2", "en": "Use"}
-{"id": "ENG/2facd", "en": "EXP"}
-{"id": "ENG/2fad6", "en": "Earned "}
-{"id": "ENG/2fae3", "en": "Got "}
-{"id": "ENG/2faec", "en": "Level up!"}
-{"id": "ENG/2fb65", "en": "Stole "}
+{"id": "ENG/2facd", "en": "Got EXP "}
+{"id": "ENG/2fad6", "en": "You earn "}
+{"id": "ENG/2fae3", "en": "Got: "}
+{"id": "ENG/2faec", "en": " levels up!"}
+{"id": "ENG/2fb65", "en": "Took "}
 {"id": "ENG/3398b", "en": "Acc."}
 {"id": "ENG/33990", "en": "Acc."}
 {"id": "ENG/33995", "en": "Wrist"}
@@ -76,3 +76,4 @@
 {"id": "ENG/3b457", "en": "Money:"}
 {"id": "ENG/3b45e", "en": "Not enough money!"}
 {"id": "ENG/3b469", "en": "Inventory full!"}
+{"id": "ENG/2fae0", "en": " gold"}

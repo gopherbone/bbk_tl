@@ -52,7 +52,7 @@ IMAGES = {
     # battle status window: labels next to the small numbers, status counters row
     (11, 2, 11): [
         ("clear", 34, 4, 49, 32), ("small", 38, 10, "HP"), ("small", 34, 22, "ATK"),
-        ("clear", 70, 4, 86, 32), ("small", 74, 10, "LUK"), ("small", 74, 22, "AGI"),
+        ("clear", 68, 4, 86, 32), ("small", 71, 10, "LUK"), ("small", 71, 22, "AGI"),
         ("clear", 5, 34, 116, 50),
         ("small", 9, 40, "ATK"), ("small", 25, 40, "DEF"), ("small", 41, 40, "AGI"), ("small", 57, 40, "PSN"),
         ("small", 73, 40, "CNF"), ("small", 89, 40, "SIL"), ("small", 105, 40, "SLP"),
@@ -118,8 +118,45 @@ def render(key, blob: bytes) -> bytes:
     return image.encode(h, frames)
 
 
+# images embedded in SRS effect resources: key -> {image number: ops}
+SRS_IMAGES = {
+    # boot logo animation (伏魔记 with lightning): image 2 is the 106x32 title
+    (5, 1, 248): {2: [("clear", 0, 0, 106, 32), ("ctext", 53, 7, "Demonbane", 2)]},
+}
+
+
+def _render_ops(ops, blob: bytes) -> bytes:
+    key = object()
+    IMAGES[key] = ops
+    try:
+        return render(key, blob)
+    finally:
+        del IMAGES[key]
+
+
+def render_srs(key, blob: bytes) -> bytes:
+    """SRS: header (6), frame table (5 bytes per frame), then the images."""
+    out = bytearray(blob[:6 + 5 * blob[2]])
+    p = len(out)
+    for i in range(blob[3]):
+        h = image.header(blob[p:])
+        rb = image._row_bytes(h["w"], h["mode"])
+        n = 6 + rb * h["h"] * h["frames"]
+        part = blob[p:p + n]
+        if i in SRS_IMAGES[key]:
+            part = _render_ops(SRS_IMAGES[key][i], part)
+            assert len(part) == n
+        out += part
+        p += n
+    out += blob[p:]
+    return bytes(out)
+
+
 def apply(res: dict) -> None:
     """Replace the translated images in an archive's resource dict, in place."""
     for key in IMAGES:
         if key in res:
             res[key] = render(key, res[key])
+    for key in SRS_IMAGES:
+        if key in res:
+            res[key] = render_srs(key, res[key])

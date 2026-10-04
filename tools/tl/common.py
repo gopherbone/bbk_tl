@@ -37,12 +37,13 @@ def problems(r: dict, en: str) -> list[str]:
     k = r["kind"]
     if k == "choice" and len(en) > 19:
         out.append(f"choice is {len(en)} chars; max 19")
-    if k in ("grs.name", "ars.name", "mrs.name", "map.name") and len(en) > r["limits"]["max_bytes"]:
-        out.append(f"name is {len(en)} chars; max {r['limits']['max_bytes']}")
-    if k == "setscenename" and len(en) > 11:
-        # copied unbounded into a 10-byte RAM buffer (0x1942); the original's
-        # longest names are 11 bytes, so never go past that
-        out.append(f"scene name is {len(en)} chars; max 11")
+    # display limits found in QA (the engine shows fewer bytes than the fields hold)
+    shown = {"grs.name": 10, "mrs.name": 11, "ars.name": 11, "map.name": 12}
+    if k in shown and len(en) > min(shown[k], r["limits"]["max_bytes"]):
+        out.append(f"name is {len(en)} chars; max {min(shown[k], r['limits']['max_bytes'])}")
+    if k == "setscenename" and len(en) > 10:
+        # copied unbounded into a 10-byte RAM buffer (0x1942); the banner shows 10
+        out.append(f"scene name is {len(en)} chars; max 10")
     if k in ("grs.desc", "mrs.desc") and len(fit.rows(en, fit.DESC_WIDTH)) > fit.DESC_ROWS:
         out.append(f"description needs {len(fit.rows(en, fit.DESC_WIDTH))} rows; the window shows {fit.DESC_ROWS}")
     if k == "message" and len(fit.rows(en, fit.MESSAGE_WIDTH)) > 4:

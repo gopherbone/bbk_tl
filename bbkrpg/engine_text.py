@@ -52,6 +52,7 @@ ENTRIES: list[tuple[int, str, list[int] | None]] = [
     (0x1F8E4, "装备投掷使用", [4, 4, 4]),
     (0x2FACD, "获得经验", None),
     (0x2FAD6, "战斗获得 ", None),
+    (0x2FAE0, "钱", None),
     (0x2FAE3, "得到 ", None),
     (0x2FAEC, "修行提升", None),
     (0x2FB65, "偷得 ", None),
@@ -142,12 +143,15 @@ def apply(gam: bytes, rows: list[dict], bank: list[bytes]) -> tuple[bytes, list[
         if rid not in en:
             continue
         text = en[rid].encode("ascii", errors="replace")
+        # Pad with spaces, not NULs: the engine often appends a value at the
+        # string's original length (e.g. "得到 " + item name at offset 5), so
+        # the text must run up to there.
         if slot:
             data = inline_token(bank, text, slot)
         elif len(text) <= len(orig):
-            data = text + b"\0" * (len(orig) - len(text))
+            data = text + b" " * (len(orig) - len(text))
         elif len(orig) >= 4:
-            data = inline_token(bank, text, 4) + b"\0" * (len(orig) - 4)
+            data = inline_token(bank, text, 4) + b" " * (len(orig) - 4)
         elif len(orig) == 2:
             data = inline_token(bank, text, 2)
         else:
