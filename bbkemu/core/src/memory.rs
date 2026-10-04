@@ -281,6 +281,11 @@ impl Memory {
 
     /// bbkemu-cli: physical address behind a CPU address (RAM below 0x1000 maps to itself).
     pub fn physical(&self, addr: u16) -> u32 {
+        if (registers::DATA1..=registers::DATA4).contains(&addr) {
+            // direct-access data ports read/write through the channel's address registers
+            let base = registers::ADDR1L as usize + (addr - registers::DATA1) as usize * 3;
+            return self.ram[base] as u32 | (self.ram[base + 1] as u32) << 8 | (self.ram[base + 2] as u32) << 16;
+        }
         if addr < 0x1000 {
             addr as u32
         } else {

@@ -41,9 +41,24 @@ rebuild and via text listing) for 伏魔记, 金庸群侠传, 赤壁之战 and �
 relocation stress test that lengthens every script string and checks each
 jump still lands on the same instruction.
 
+## bbkemu (agent emulator)
+
+`bbkemu/` is a Cargo workspace: `core/` is BBKEmu's core vendored with small
+patches (snapshots by clone, bus access recording, a split frame loop), and
+`cli/` is a JSON-lines server with gbemu-cli's envelope. GPLv3, like BBKEmu.
+
+```sh
+cd bbkemu && cargo build --release        # -> bbkemu/target/release/bbkemu
+python3 bbkemu/cli/tests/smoke.py         # boot, first dialogue, text.log ids
+```
+
+`bbkemu/PROTOCOL.md` lists the commands. `bbkemu/cli/py/bbkemu.py` is the
+Python client; its `Hooks` class gives `text.log` (every string the OS draws)
+tagged with `script.where` (the string-table row id that drew it).
+
 ## Not done yet
 
-- bbkemu-cli (phase 3).
+- Phase 4: full-game input route, glossary, engine-code strings.
 - 10 fan games have script variants the decoder rejects (e.g. 魔道传奇 leaves the
   script length field at 0); 伏魔记 and 87 others decode cleanly.
 

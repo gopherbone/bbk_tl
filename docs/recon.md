@@ -92,3 +92,18 @@ Native (tier 3): Eros方块, 三国霸业, 中国象棋, 丰收, 乒乓球, 二�
 - **Navigation.** Title appears by frame 1000; ENTER starts a new game, EXIT
   skips the intro scroll (`showgut`), first dialogue follows within ~300 frames.
 - Run speed: about 1,250 frames/s on this Mac (20x real time).
+- **Text drawing.** The engine copies each row of text to RAM and calls OS
+  draw-string (OS call `0x2E`, dispatched via `0xD2F6`); its handler at
+  physical `0xE94843` holds the string pointer in `$2f`. One call per row:
+  12 bytes for the first row beside a portrait, else 16; y = 58 and 77 in the
+  dialogue box. A full row appears within 1-2 frames, so native text speed is
+  fast; extra pages cost key presses, not waiting.
+- **Glyphs.** The OS fetches 16×16 glyphs from 8.BIN through DMA channel 4;
+  the font is ordered by pinyin (不 < 蝶 < 蝴 < 跑 < 小 < 要), so mapping glyphs
+  back to GB2312 needs the OS's lookup table. Hook the draw-string call instead.
+- **Script interpreter.** Opcode fetch at physical `0x211134` through `($20)`.
+  Its `lib.map` position equals the bbkrpg row id (`gut/1-1-1@039b` for the
+  first line), so every drawn line can be tied to its table row.
+- **Line layout.** The engine's per-character layout loop is at `0x215822`
+  (bytes ≥ 0x80 are 2-byte hanzi), with a column counter in stack slot `0x1f`.
+  That is the place to patch for word wrap and a variable-width font.

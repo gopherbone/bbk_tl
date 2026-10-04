@@ -103,13 +103,29 @@ pub fn key_from_name(name: &str) -> R<BbkKey> {
 #[derive(Clone)]
 struct Break {
     id: u64,
-    addr: u16,
-    /// optional physical address the pc must map to (bank-qualified break)
+    /// CPU address; None = match on physical address alone
+    addr: Option<u16>,
+    /// physical address the pc must map to (bank-qualified break)
     phys: Option<u32>,
     stop: bool,
     hits: u64,
-    /// memory to capture into break.log on each hit: (cpu addr, len)
-    capture: Vec<(u16, u16)>,
+    /// memory to capture into break.log on each hit
+    capture: Vec<Capture>,
+}
+
+/// One capture on a breakpoint hit. `deref`: `addr` holds a little-endian
+/// pointer and the capture reads from where it points. `cstr`: stop at NUL
+/// (`len` is then a maximum). `stack`: capture `len` bytes above the stack
+/// pointer instead (return addresses).
+#[derive(Clone)]
+struct Capture {
+    addr: u16,
+    len: u16,
+    deref: bool,
+    cstr: bool,
+    stack: bool,
+    /// with deref: record the pointer's physical address (6 hex digits) instead of bytes
+    phys: bool,
 }
 
 #[derive(Clone)]
@@ -253,7 +269,7 @@ impl Session {
                 Ok(json!({"cleared": true}))
             }
             "break.list" => Ok(json!({"breakpoints": self.breaks.iter().map(|b| json!({
-                "id": b.id, "addr": format!("{:04x}", b.addr),
+                "id": b.id, "addr": b.addr.map(|a| format!("{a:04x}")),
                 "phys": b.phys.map(|x| format!("{x:06x}")), "stop": b.stop, "hits": b.hits,
             })).collect::<Vec<_>>()})),
             "break.log" => {
@@ -500,6 +516,7 @@ impl Session {
         let mut stop: Option<(String, Value)> = None;
         let mut frames_done = 0u64;
         let check_breaks = !self.breaks.is_empty();
+        let phys_breaks = self.breaks.iter().any(|b| b.addr.is_none());
         let tracing = self.trace.as_ref().is_some_and(|t| t.cap > 0);
 
         loop {
@@ -521,11 +538,17 @@ impl Session {
                         break;
                     }
                 }
-                if check_breaks && self.skip_break_at != Some(pc) {
+                if check_breaks && self.skip_break_at != Some(pc)
+                    && (phys_breaks || self.breaks.iter().any(|b| b.addr == Some(pc)))
+                {
                     let phys = emu.cpu.memory().physical(pc);
                     let mut halt_here = None;
                     for b in self.breaks.iter_mut() {
-                        if b.addr == pc && b.phys.is_none_or(|x| x == phys) {
+                        let hit = match b.addr {
+                            Some(a) => a == pc && b.phys.is_none_or(|x| x == phys),
+                            None => b.phys == Some(phys),
+                        };
+                        if hit {
                             b.hits += 1;
                             let mut ent = json!({
                                 "id": b.id, "pc": format!("{pc:04x}"), "phys": format!("{phys:06x}"),
@@ -533,8 +556,27 @@ impl Session {
                                 "x": format!("{:02x}", emu.cpu.x()), "y": format!("{:02x}", emu.cpu.y()),
                             });
                             if !b.capture.is_empty() {
-                                let caps: Vec<String> = b.capture.iter().map(|&(a, n)| {
-                                    hex(&(0..n).map(|i| emu.cpu.memory().read(a.wrapping_add(i))).collect::<Vec<_>>())
+                                let m = emu.cpu.memory();
+                                let caps: Vec<String> = b.capture.iter().map(|c| {
+                                    let base = if c.stack {
+                                        0x101u16 + emu.cpu.sp() as u16
+                                    } else if c.deref {
+                                        m.read(c.addr) as u16 | (m.read(c.addr.wrapping_add(1)) as u16) << 8
+                                    } else {
+                                        c.addr
+                                    };
+                                    if c.phys {
+                                        return format!("{:06x}", m.physical(base));
+                                    }
+                                    let mut out = Vec::new();
+                                    for i in 0..c.len {
+                                        let v = m.read(base.wrapping_add(i));
+                                        if c.cstr && v == 0 {
+                                            break;
+                                        }
+                                        out.push(v);
+                                    }
+                                    hex(&out)
                                 }).collect();
                                 ent["mem"] = json!(caps);
                             }
@@ -682,22 +724,33 @@ impl Session {
     // -------------------------------------------------------- breakpoints --
 
     fn break_add(&mut self, p: &Value) -> R<Value> {
-        let addr = p_req(p, "addr")? as u16;
+        let addr = p_num(p, "addr")?.map(|a| a as u16);
         let phys = match (p_num(p, "phys")?, p_num(p, "gam")?) {
             (Some(x), _) => Some(x as u32),
             (None, Some(off)) => Some(GAM_FLASH + off as u32),
             _ => None,
         };
+        if addr.is_none() && phys.is_none() {
+            return Err("break.add needs addr, phys or gam".into());
+        }
         let mut capture = Vec::new();
         if let Some(arr) = p.get("capture").and_then(Value::as_array) {
             for c in arr {
-                capture.push((p_req(c, "addr")? as u16, p_num(c, "len")?.unwrap_or(16) as u16));
+                let stack = p_bool(c, "stack", false);
+                capture.push(Capture {
+                    addr: if stack { 0 } else { p_req(c, "addr")? as u16 },
+                    len: p_num(c, "len")?.unwrap_or(16).min(4096) as u16,
+                    deref: p_bool(c, "deref", false),
+                    cstr: p_bool(c, "cstr", false),
+                    stack,
+                    phys: p_bool(c, "phys", false),
+                });
             }
         }
         let id = self.next_id;
         self.next_id += 1;
         self.breaks.push(Break { id, addr, phys, stop: p_bool(p, "stop", true), hits: 0, capture });
-        Ok(json!({"id": id, "addr": format!("{addr:04x}")}))
+        Ok(json!({"id": id, "addr": addr.map(|a| format!("{a:04x}")), "phys": phys.map(|x| format!("{x:06x}"))}))
     }
 
     fn watch_add(&mut self, p: &Value) -> R<Value> {
