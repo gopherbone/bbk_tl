@@ -40,6 +40,8 @@ pub struct Emulator {
     timer_rate: f32,
     /// Whether the emulator is running
     running: bool,
+    /// bbkemu-cli: pc of an undefined opcode the CPU stopped on (the game crashed)
+    pub illegal_at: Option<u16>,
     /// Frame counter
     frame_count: u64,
     /// CPU cycles accumulated toward the next 400-cycle timer tick.
@@ -76,6 +78,7 @@ impl Emulator {
             cpu_rate: 1.0,
             timer_rate: 1.0,
             running: false,
+            illegal_at: None,
             frame_count: 0,
             timer_cycle_remainder: 0,
             hle_far_calls: Vec::new(),
@@ -364,6 +367,14 @@ impl Emulator {
 
         // Execute the instruction normally
         let cycles = self.cpu.step();
+        if cycles == 0 {
+            // mos6502 could not decode the opcode and did nothing: the game has
+            // crashed. Stop instead of spinning forever on the same pc.
+            log::warn!("undefined opcode {opcode:#04x} at {pc:#06x}; stopping");
+            self.illegal_at = Some(pc);
+            self.running = false;
+            return 1;
+        }
 
         // Handle interrupts
         self.handle_interrupts();

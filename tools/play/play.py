@@ -220,7 +220,7 @@ def _event_cells(m, keep=()):
 def goto(x, y, blocked=(), quiet=False):
     for _ in range(10):
         m = curmap()
-        p = m.path(pos(), (x, y), blocked=set(blocked) | _event_cells(m, [(x, y)]))
+        p = m.path(pos(), (x, y), blocked=set(blocked) | _event_cells(m, [(x, y)]) | (blockers() - {(x, y)}))
         if p is None:
             return ("nopath", 0, None)
         r = walk(p, quiet)
@@ -279,6 +279,9 @@ def in_battle():
     return False
 
 
+AUTO_FIGHT = True   # adv(): spam-attack battles that come up. Set False before scripted boss fights.
+
+
 def adv(max_taps=80, quiet=False, key="ENTER"):
     """Press ENTER until back on the free map. Returns drawn lines.
     Stops (and prints STUCK) when 3 taps in a row draw nothing new: a menu/shop."""
@@ -294,6 +297,9 @@ def adv(max_taps=80, quiet=False, key="ENTER"):
             e.run_frames(10)
             continue
         if in_battle():
+            if wheel_shown() and not AUTO_FIGHT:
+                print("adv: battle wheel (AUTO_FIGHT off)")
+                break
             out += [(None, t) for t in fight(quiet=quiet)]
             continue
         e.tap(key, hold=2, wait=10)
@@ -466,6 +472,7 @@ def enter_door(ev, quiet=False, tries=8, once=False):
 
 # --- battles -------------------------------------------------------------------
 FIGHTS = []   # (frame, texts) per battle
+FLEE = False  # fight(): try 逃跑 instead of attacking (e.g. to avoid exp before a scripted fight)
 
 
 def fight(quiet=True, max_rounds=200):
@@ -480,6 +487,12 @@ def fight(quiet=True, max_rounds=200):
         if st == "key":
             # battle wheel: UP = attack (sword), LEFT = magic, RIGHT = items,
             # DOWN = flee/other. UP is harmless on message boxes.
+            if FLEE and wheel_shown():
+                # DOWN -> 围攻/道具/防御/逃跑/状态: 逃跑 is the 4th entry
+                for k in ("DOWN", "ENTER", "DOWN", "DOWN", "DOWN", "ENTER"):
+                    e.tap(k, hold=2, wait=20)
+                e.run_frames(30)
+                continue
             e.tap("UP", hold=2, wait=6)
             e.tap("ENTER", hold=2, wait=20)
         else:
@@ -697,7 +710,12 @@ def mons(n=3):
 
 
 # battle action key sequences (from the command wheel)
-A_ATTACK = ("UP", "ENTER")
+A_ATTACK = ("UP", "ENTER")    # the hero's sword hits a group: no target step
+
+
+def A_ATK(ix=0):
+    """Single-target attack (慕容小梅): wheel, then pick the target."""
+    return ("UP", "ENTER", None) + ("RIGHT",) * ix + ("ENTER",)
 A_HEAL = ("LEFT", "ENTER", "ENTER", "ENTER")   # 气疗术 (first magic) on self
 
 
@@ -1019,4 +1037,436 @@ def shop_browse(addr=None, n=30, quiet=False, tile=None):
     return names
 
 
+
+
+def engage(addr, quiet=False, tries=6):
+    """Walk to the object at heap record `addr`, face it, press ENTER and advance
+    dialogue only until a battle command wheel shows (for boss fights).
+    Returns True at the wheel."""
+    for _ in range(tries):
+        o = _obj_at(addr)
+        if not o:
+            return False
+        r = goto_adj(o["x"], o["y"], quiet=quiet)
+        o2 = _obj_at(addr)
+        px, py = pos()
+        if r is not True or not o2 or (o2["x"] - px, o2["y"] - py) not in _DIRS:
+            continue
+        e.tap(_DIRS[(o2["x"] - px, o2["y"] - py)], hold=2, wait=8)
+        e.tap("ENTER", hold=2, wait=20)
+        if waitstate() == "idle":
+            continue
+        return to_wheel(quiet=quiet)
+    return False
+
+
+def party():
+    """[(name, stats)] of party members: heap name blocks followed by a 75 6e 1c 00 stat block."""
+    m = e.read(0x3000, 0x5000)
+    out = []
+    i = m.find(bytes.fromhex("756e1c00"))
+    while i >= 0:
+        r = m[i + 4:i + 0x20]
+        w = lambda k: r[k] | r[k + 1] << 8
+        # name block precedes: 75 6e 10 00 <name>
+        j = m.rfind(bytes.fromhex("756e1000"), max(0, i - 0x20), i)
+        name = m[j + 4:j + 0x10].split(b"\0")[0].decode("gb2312", "replace") if j >= 0 else "?"
+        if j >= 0:
+            out.append((name, {"hpmax": w(6), "hp": w(8), "mpmax": w(10), "mp": w(12), "atk": w(14), "def": w(16), "addr": hex(0x3000 + i)}))
+        i = m.find(bytes.fromhex("756e1c00"), i + 4)
+    return out
+
+
+
+
+
+def A_MAG(idx, right=0):
+    """Magic list entry idx (0-based), target = first enemy + `right` RIGHTs."""
+    return ("LEFT", "ENTER", None) + ("DOWN",) * idx + ("ENTER", None) + ("RIGHT",) * right + ("ENTER",)
+
+
+def A_MAG_SELF(idx):
+    """Magic idx on a party member (default target = the caster)."""
+    return ("LEFT", "ENTER", None) + ("DOWN",) * idx + ("ENTER", None, "ENTER")
+
+
+
+def alive_index(name):
+    """Target index (RIGHT presses) of monster `name` among living monsters."""
+    ms = [m for m in mons_all() if m[1] > 0]
+    for i, m in enumerate(ms):
+        if m[0] == name:
+            return i
+    return None
+
+
+def mons_all(n=3):
+    """Like mons() but keeps scanning past zeroed (dead) records."""
+    out = []
+    for i in range(n):
+        r = e.read(MON_BASE + i * MON_STRIDE, MON_STRIDE)
+        if r[0] != 3:
+            continue
+        name = r[6:0x12].split(b"\0")[0].decode("gb2312", "replace")
+        out.append((name, r[0x1a] | r[0x1b] << 8, r[0x18] | r[0x19] << 8))
+    return out
+
+
+def pstate():
+    return [(n, s["hp"], s["mp"]) for n, s in party()]
+
+
+ACTOR = 0x1785   # battle: index of the party member whose command wheel is up
+
+
+def act_as(keys, want, tries=4):
+    """act() from a wheel, then make sure the wheel that follows belongs to party
+    member `want` (0x1785); returns 'wheel'/'msg'/'idle'/None ('stuck' if the
+    input did not register)."""
+    if want == 0:
+        # the round runs after the last command: wait for the wheel to go away first
+        e.run_frames(10)
+        if callable(keys):
+            keys()
+            keys = ()
+        for k in keys:
+            if k is None:
+                e.run_frames(30)
+            else:
+                e.tap(k, hold=2, wait=26)
+        for _ in range(40):
+            if not wheel_shown():
+                break
+            e.run_frames(3)
+        r = wait_wheel()
+        poll(True)
+    else:
+        # the next member's wheel shows at once; just send the keys
+        e.run_frames(10)
+        if callable(keys):
+            keys()
+            keys = ()
+        for k in keys:
+            if k is None:
+                e.run_frames(30)
+            else:
+                e.tap(k, hold=2, wait=26)
+        e.run_frames(20)
+        poll(True)
+        r = "wheel" if wheel_shown() else wait_wheel()
+    return r
+
+
+def duo_round(hero, mei, tag="dr"):
+    """One battle round for 柳清风 + 慕容小梅: key tuples/callables for each.
+    Returns (result, monsters, party)."""
+    if mei is None:                      # hero fights alone
+        r = act_as(hero, 0)
+    else:
+        r = act_as(hero, 1)
+        if r == "wheel":
+            r = act_as(mei, 0)
+    for _ in range(12):     # in-battle dialogue (enterfight events): ENTER through it
+        if r not in ("msg", None) or not any(m[1] > 0 for m in mons_all()):
+            break
+        if r is None and not any(m[1] > 0 for m in mons_all()):
+            break
+        e.tap("ENTER", hold=2, wait=20)
+        r = wait_wheel(max_frames=1500)
+        poll(True)
+    return r, mons_all(), pstate()
+
+
+
+def battle_list(kind="throw", n=30):
+    """At a battle wheel: names in the 道具 投掷 (kind='throw') or 使用 ('use') list.
+    Leaves the menu with EXITs (back at the same wheel)."""
+    keys = ("DOWN", "ENTER", "DOWN", "ENTER", "DOWN", "ENTER") if kind == "throw" else ("DOWN", "ENTER", "DOWN", "ENTER", "DOWN", "DOWN", "ENTER")
+    for k in keys:
+        e.tap(k, hold=2, wait=26)
+    e.run_frames(30)
+    cur = [t for _, t in poll(True)]
+    names = [cur[cur.index("数量：") - 1]] if "数量：" in cur else []
+    for _ in range(n):
+        e.tap("DOWN", hold=2, wait=26)
+        o = [t for _, t in poll(True)]
+        if not o or o[0] in names:
+            break
+        names.append(o[0])
+    for _ in range(3):
+        e.tap("EXIT", hold=2, wait=26)
+    poll(True)
+    return names
+
+
+
+def duo_greedy(target, rounds=40, hero_cands=None, mei_cands=None, heal_hero=120, heal_mei=70,
+               w_other=0.3, tag="dg", verbose=True, safety=None, w_safe=1.0):
+    """Greedy one-round lookahead for 柳清风 + 慕容小梅 boss fights.
+    hero_cands/mei_cands: functions (ix) -> [(name, keys)] where ix = target's
+    RIGHT count among living monsters. Default: hero magic 天师符法 / attack,
+    小梅 attack or 观音咒 when someone is low."""
+    if hero_cands is None:
+        hero_cands = lambda ix: [("tsf", A_MAG(2, ix)), ("atk", A_ATTACK)]
+    if mei_cands is None:
+        def mei_cands(ix):
+            ps = dict((n, hp) for n, hp, mp in pstate())
+            c = [("atk", A_ATTACK)]
+            if ps.get("柳清风", 999) < heal_hero or ps.get("慕容小梅", 999) < heal_mei:
+                c += [("heal0", A_MAG_SELF(0)),
+                      ("healL", ("LEFT", "ENTER", None, "ENTER", None, "LEFT", "ENTER")),
+                      ("healR", ("LEFT", "ENTER", None, "ENTER", None, "RIGHT", "ENTER"))]
+            return c
+    safety = safety or {}
+    hist = []
+    for i in range(rounds):
+        ms0 = {m[0]: m[1] for m in mons_all()}
+        ps0 = dict((n, hp) for n, hp, mp in pstate())
+        ix = alive_index(target)
+        ix = 0 if ix is None else ix
+        e.call("snapshot.save", name="%s%d" % (tag, i))
+        res = []
+        for hn, hk in hero_cands(ix):
+            for mn, mk in mei_cands(ix):
+                e.call("snapshot.load", name="%s%d" % (tag, i))
+                try:
+                    r, ms, ps = duo_round(hk, mk)
+                except LookupError:
+                    continue
+                msd = {m[0]: m[1] for m in ms}
+                psd = dict((n, hp) for n, hp, mp in ps)
+                if r is None:
+                    sc = -2e6
+                elif r != "wheel":
+                    sc = 1e6 if all(v > 0 for v in psd.values()) and not any(m[1] > 0 for m in ms) else -1e6
+                else:
+                    dt = ms0.get(target, 0) - msd.get(target, 0)
+                    do = sum(ms0.values()) - sum(msd.values()) - dt
+                    loss = sum(ps0[n] - psd.get(n, 0) for n in ps0)
+                    sc = dt + w_other * do - loss
+                    for n, lim in safety.items():
+                        sc -= max(0, lim - psd.get(n, 0)) * w_safe
+                    if any(v == 0 for v in psd.values()):
+                        sc -= 5000
+                res.append((sc, hn, mn, hk, mk, r))
+        res.sort(key=lambda x: -x[0])
+        b = res[0]
+        e.call("snapshot.load", name="%s%d" % (tag, i))
+        r, ms, ps = duo_round(b[3], b[4])
+        hist.append((i, b[1], b[2], r, ms, ps))
+        if verbose:
+            print(i, b[1], b[2], r, ms, ps, [(round(x[0]), x[1], x[2]) for x in res[:4]])
+        if r != "wheel":
+            break
+    return hist
+
+
+
+def duo_beam(target, rounds=30, width=3, hero_cands=None, mei_cands=None, value=None, start=None, verbose=True):
+    """Beam search over battle rounds (RNG depends only on the action sequence).
+    hero_cands/mei_cands: f(ix, party_state) -> [(name, keys)]. value(ms, ps) -> float.
+    Leaves the emulator in the best final state (battle won if found). Returns the
+    winning action list or None."""
+    if value is None:
+        def value(ms, ps):
+            d = dict((n, hp) for n, hp, mp in ps)
+            boss = sum(m[1] for m in ms)
+            return -boss + 0.6 * d.get("柳清风", 0) + 0.3 * d.get("慕容小梅", 0) + (80 if d.get("慕容小梅", 0) > 0 else 0)
+    root = start or "beam_root"
+    e.call("snapshot.save", name=root)
+    beam = [(0.0, root, [], [])]
+    n = 0
+    for rnd in range(rounds):
+        kids = []
+        for _sc, snap, hist, keys in beam:
+            e.call("snapshot.load", name=snap)
+            ps0 = pstate()
+            ix = alive_index(target)
+            ix = 0 if ix is None else ix
+            for hn, hk in hero_cands(ix, ps0):
+                for mn, mk in mei_cands(ix, ps0):
+                    e.call("snapshot.load", name=snap)
+                    try:
+                        r, ms, ps = duo_round(hk, mk)
+                    except LookupError:
+                        continue
+                    d = dict((x, hp) for x, hp, mp in ps)
+                    if r in ("idle", "msg") or (r != "wheel" and not any(m[1] > 0 for m in ms)):
+                        if d.get("柳清风", 0) > 0 or stats():
+                            if verbose:
+                                print("WIN at round", rnd, hist + [(hn, mn)])
+                            return _beam_replay(root, keys + [(hk, mk)], hist + [(hn, mn)])
+                    if r != "wheel" or d.get("柳清风", 0) == 0:
+                        continue
+                    n += 1
+                    name = "bm%d" % n
+                    e.call("snapshot.save", name=name)
+                    kids.append((value(ms, ps), name, hist + [(hn, mn)], ms, ps, keys + [(hk, mk)]))
+        if not kids:
+            print("beam: no survivors at round", rnd)
+            return None
+        kids.sort(key=lambda k: -k[0])
+        keep = kids[:width]
+        for k in kids[width:]:
+            e.call("snapshot.delete", name=k[1])
+        for b in beam:
+            if b[1] != root:
+                e.call("snapshot.delete", name=b[1])
+        beam = [(k[0], k[1], k[2], k[5]) for k in keep]
+        if verbose:
+            k = keep[0]
+            print(rnd, round(k[0]), k[2][-1], k[3], k[4], "| kids", len(kids))
+    # no win: leave the emulator on the best line, replayed from the root so the
+    # recorded route stays one straight path
+    _beam_replay(root, beam[0][3], beam[0][2])
+    return None
+
+
+def _beam_replay(root, keys, hist):
+    """Reload the beam root (an ancestor: route truncation is exact) and replay
+    the chosen rounds. Loading a sibling snapshot directly would leave the wrong
+    events in the route (snapshot.load truncates by event count only)."""
+    e.call("snapshot.load", name=root)
+    for (hk, mk), hm in zip(keys, hist):
+        r = duo_round(hk, mk)
+        print("  replay", hm, r[0], r[1], r[2])
+    return hist
+
+
+
+def equip_list_goto(name, max_items=40):
+    """In a map-menu item list (物品 使用/装备, shops): move the cursor to `name`
+    (reads drawn names). A list end draws nothing; one dropped key is tolerated."""
+    e.run_frames(30)
+    poll(True)
+    miss = 0
+    for _ in range(max_items):          # to the top
+        e.tap("UP", hold=2, wait=30)
+        o = [t for _, t in poll(True)]
+        if not o:
+            miss += 1
+            if miss >= 2:
+                break
+            continue
+        miss = 0
+        if o[0] == name:
+            return True
+    miss = 0
+    for _ in range(max_items):
+        e.tap("DOWN", hold=2, wait=30)
+        o = [t for _, t in poll(True)]
+        if not o:
+            miss += 1
+            if miss >= 2:
+                return False
+            continue
+        miss = 0
+        if o[0] == name:
+            return True
+    return False
+
+
+def equip(name, who=0):
+    """From the 物品/装备 list: equip `name` on party member `who` (0 hero)."""
+    if not equip_list_goto(name):
+        return False
+    e.run_frames(20)
+    e.tap("ENTER", hold=2, wait=40)
+    t = [x for _, x in poll(True)]
+    if "柳清风" in t or "慕容小梅" in t:      # who-wears-it popup (several can)
+        for _ in range(who):
+            e.tap("DOWN", hold=2, wait=30)
+        e.tap("ENTER", hold=2, wait=40)       # -> stat comparison screen
+    e.tap("ENTER", hold=2, wait=40)           # confirm
+    poll(True)
+    return True
+
+
+
+def menu_use(name, times=1, who=0):
+    """At the map menu's 物品/使用 list: use `name` `times` times on party member `who`."""
+    if not equip_list_goto(name):
+        return False
+    e.run_frames(20)
+    e.tap("ENTER", hold=2, wait=40)
+    for _ in range(who):
+        e.tap("DOWN", hold=2, wait=30)
+    for _ in range(times):
+        e.tap("ENTER", hold=2, wait=40)
+    e.tap("EXIT", hold=2, wait=40)
+    poll(True)
+    return True
+
+
+
+MONEY = 0x1a8f   # u16 (3807 seen); party money
+
+
+def money():
+    b = e.read(MONEY, 3)
+    return b[0] | b[1] << 8 | b[2] << 16
+
+
+def shop_buy(tile, want, quiet=True):
+    """At a shop counter (map tile event `tile` inside the shop): buy {name: count}.
+    The list cursor is moved by drawn names; 买入个数 counts up with UP."""
+    m = curmap()
+    for c in m.events().get(tile, []):
+        if goto_adj(*c, quiet=quiet) is True:
+            px, py = pos()
+            e.tap(_DIRS[(c[0] - px, c[1] - py)], hold=2, wait=8)
+            break
+    for _ in range(10):
+        e.run_frames(20)
+        t = [x for _, x in poll(quiet)]
+        if "价：" in t or "名：" in t:
+            break
+        if waitstate() == "key":
+            e.tap("ENTER", hold=2, wait=20)
+            t = [x for _, x in poll(quiet)]
+            if "价：" in t or "名：" in t:
+                break
+    e.run_frames(30)
+    poll(True)
+    got = {}
+    for name, cnt in want.items():
+        if not equip_list_goto(name):
+            print("shop: no", name)
+            continue
+        m0 = money()
+        e.run_frames(20)
+        e.tap("ENTER", hold=2, wait=40)
+        for _ in range(cnt):
+            e.tap("UP", hold=2, wait=20)
+        e.tap("ENTER", hold=2, wait=40)
+        poll(True)
+        got[name] = m0 - money()
+    e.tap("EXIT", hold=2, wait=30)
+    adv(quiet=quiet)
+    return got
+
+
+
+def map_heal(target=0, times=1, caster=1, spell=0):
+    """Map menu 魔法: `caster` casts magic #spell (观音咒 for 小梅) on `target`, `times` times."""
+    for k in ("EXIT", "DOWN", "ENTER"):
+        e.tap(k, hold=2, wait=30)
+    for _ in range(caster):
+        e.tap("DOWN", hold=2, wait=30)
+    e.tap("ENTER", hold=2, wait=40)
+    e.run_frames(20)
+    for _ in range(spell):
+        e.tap("DOWN", hold=2, wait=30)
+    e.tap("ENTER", hold=2, wait=40)
+    e.run_frames(20)
+    for _ in range(target):            # RIGHT cycles the target (PGUP/PGDN page stats)
+        e.tap("RIGHT", hold=2, wait=30)
+    for _ in range(times):
+        e.tap("ENTER", hold=2, wait=60)
+    for _ in range(6):
+        e.tap("EXIT", hold=2, wait=30)
+        if waitstate() == "idle":
+            break
+    poll(True)
+    return pstate()
 __all__ = [k for k in list(globals()) if not k.startswith("_") and k not in _PRIVATE]

@@ -276,7 +276,10 @@ impl ApplicationHandler for App {
             }
         }
         if !self.emu.is_running() {
-            println!("the game exited (frame {})", self.emu.frame_count());
+            match self.emu.illegal_at {
+                Some(pc) => println!("the game crashed: undefined opcode at {pc:04x} (frame {})", self.emu.frame_count()),
+                None => println!("the game exited (frame {})", self.emu.frame_count()),
+            }
             self.record(Action::End);
             el.exit();
             return;

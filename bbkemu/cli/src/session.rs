@@ -168,8 +168,10 @@ struct Snap {
     frame_cycles: u32,
     instructions: u64,
     held: Option<BbkKey>,
-    /// recorded route length when the snapshot was taken
-    rec_len: Option<usize>,
+    /// the recorded route when the snapshot was taken (restored with it, so
+    /// loading any snapshot, even from an abandoned branch, keeps the route
+    /// consistent with the state)
+    rec_events: Option<std::sync::Arc<Vec<route::Event>>>,
 }
 
 /// route.record: the inputs actually applied, as a bbkplay route. Loading a
@@ -178,7 +180,8 @@ struct Snap {
 struct Recorder {
     path: String,
     header: String,
-    events: Vec<route::Event>,
+    /// shared with snapshots; copied on the first push after a snapshot
+    events: std::sync::Arc<Vec<route::Event>>,
 }
 
 impl Recorder {
@@ -187,12 +190,12 @@ impl Recorder {
         if let Ok(mut f) = std::fs::OpenOptions::new().append(true).open(&self.path) {
             let _ = writeln!(f, "{}", route::to_line(&e));
         }
-        self.events.push(e);
+        std::sync::Arc::make_mut(&mut self.events).push(e);
     }
 
     fn rewrite(&self) {
         let mut s = self.header.clone() + "\n";
-        for e in &self.events {
+        for e in self.events.iter() {
             s += &route::to_line(e);
             s.push('\n');
         }
@@ -537,7 +540,7 @@ impl Session {
         if self.rewind_cap > 0 {
             let snap = Snap {
                 emu: emu.clone(), frame_cycles: 0, instructions: self.instructions, held: self.held,
-                rec_len: self.rec.as_ref().map(|r| r.events.len()),
+                rec_events: self.rec.as_ref().map(|r| r.events.clone()),
             };
             self.rewind.push_back(snap);
             while self.rewind.len() > self.rewind_cap {
@@ -596,7 +599,11 @@ impl Session {
             }
             let emu = self.emu.as_mut().unwrap();
             if !emu.is_running() {
-                stop = Some(("exited".into(), json!({})));
+                stop = Some(match emu.illegal_at {
+                    Some(pc) => ("illegal_opcode".into(), json!({"pc": format!("{pc:04x}"),
+                        "phys": format!("{:06x}", emu.cpu.memory().physical(pc))})),
+                    None => ("exited".into(), json!({})),
+                });
                 break;
             }
             let halted = emu.is_halted();
@@ -1015,7 +1022,7 @@ impl Session {
             for e in &events {
                 self.replay.entry(e.frame).or_default().push(e.clone());
             }
-            self.rec = Some(Recorder { path, header, events });
+            self.rec = Some(Recorder { path, header, events: std::sync::Arc::new(events) });
             self.rec.as_ref().unwrap().rewrite();
             let n = self.rec.as_ref().unwrap().events.len();
             let r = if last > 0 { self.run(Limit::Frames(last))? } else { json!({}) };
@@ -1025,7 +1032,7 @@ impl Session {
             }
             return Ok(json!({"resumed": n, "frame": self.emu()?.frame_count(), "run": r}));
         }
-        let rec = Recorder { path, header, events };
+        let rec = Recorder { path, header, events: std::sync::Arc::new(events) };
         rec.rewrite();
         self.rec = Some(rec);
         Ok(json!({"recording": true, "frame": self.emu()?.frame_count()}))
@@ -1158,14 +1165,14 @@ impl Session {
     fn snap(&self) -> R<Snap> {
         Ok(Snap {
             emu: self.emu()?.clone(), frame_cycles: self.frame_cycles, instructions: self.instructions,
-            held: self.held, rec_len: self.rec.as_ref().map(|r| r.events.len()),
+            held: self.held, rec_events: self.rec.as_ref().map(|r| r.events.clone()),
         })
     }
 
     fn restore(&mut self, s: Snap) {
-        if let (Some(r), Some(n)) = (self.rec.as_mut(), s.rec_len) {
-            if r.events.len() != n {
-                r.events.truncate(n);
+        if let (Some(r), Some(ev)) = (self.rec.as_mut(), s.rec_events) {
+            if !std::sync::Arc::ptr_eq(&r.events, &ev) {
+                r.events = ev;
                 r.rewrite();
             }
         }
