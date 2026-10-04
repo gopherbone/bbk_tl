@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BBK Games in English</title>
+<meta name="description" content="Hobbyist RPGs from Chinese electronic dictionaries of the 2000s, translated into English and playable in your browser.">
+<meta name="theme-color" content="#15171a">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-head">
+    <a class="brand" href="./">BBK Games <span>in English</span></a>
+    <nav><a href="#library">Library</a><a href="#about">About</a><a href="#credits">Credits</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Games from Chinese pocket dictionaries, now in English.</h1>
+      <p>In the 2000s, Chinese students carried electronic dictionaries that could also run games, and a whole scene of
+        RPGs grew up on them. These are those games, running on an emulator in your browser and translated so you can
+        play them without reading Chinese.</p>
+    </section>
+
+    <aside class="ai-note" id="ai">
+      <strong>These translations were made with AI.</strong>
+      <p>Claude, an AI model by Anthropic, did the translation and the work around it: the English font, the ROM
+        patching tools and the test playthroughs. A human project lead directed it and made the calls on style and
+        names. No professional translator or editor has reviewed the text, so expect some stiff phrasing and the odd
+        mistake.</p>
+    </aside>
+
+    <section id="library">
+      <h2>Library</h2>
+      <div class="games" id="games"><p class="hint">Loading the library…</p></div>
+      <p class="coming">More games will be added as they're translated. Each one also has the original Chinese
+        version, so you can compare.</p>
+    </section>
+
+    <section id="about">
+      <h2>What were these?</h2>
+      <p>BBK (步步高) electronic dictionaries were everyday school gear in China in the early 2000s. Models like the
+        A4980 and A4988 had a 159×96 one-bit LCD, a keyboard and a 6502-family processor. They could also load
+        <code>.gam</code> game files, and hobbyists wrote RPGs, strategy games, puzzles and ports for them, swapping
+        them on forums. Some, like Demonbane Chronicle, also credit BBK's own game team.</p>
+      <p>The games were made for a screen smaller than a business card and a few keys, and they are surprisingly
+        ambitious: long stories, turn-based battles, shops, side quests and save files, all in one bit per pixel.</p>
+    </section>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <p>Each game runs on an emulator of the dictionary's hardware, compiled to WebAssembly, so it behaves the way
+        it did on the device. Text that the original drew from the dictionary's Chinese font is redrawn by a small
+        variable-width English renderer patched into the game, and menus and pictures with Chinese text are redrawn
+        too. Your in-game saves are kept in this browser.</p>
+      <p>Controls: the arrow keys move, <b>OK</b> is the dictionary's Enter key, and <b>Back</b> is its Exit key. On
+        a phone, use the on-screen pad, and turn the phone sideways for a bigger layout.</p>
+      <p>If you have your own copy of a game, each translation is also available as a <code>.bps</code> patch.
+        Apply it with any BPS patcher (Floating IPS, Rom Patcher JS, beat) and play the result in the gam4980
+        libretro core.</p>
+    </section>
+
+    <section id="credits">
+      <h2>Credits</h2>
+      <dl class="credits">
+        <dt>Original games</dt>
+        <dd>Their authors, listed on each game. Demonbane Chronicle (<span class="zh">伏魔记</span>) is by
+          <span class="zh">通宵虫</span> and <span class="zh">南方小鬼</span> with the BBK Game Team, 2004.</dd>
+        <dt>Web emulator</dt>
+        <dd>The gam4988 WebAssembly core from <a href="https://github.com/iuxt/bbk-games">iuxt/bbk-games</a>, a
+          Chinese-language collection of these games that inspired this site. It's built on
+          <a href="https://codeberg.org/iyzsong/gam4980">gam4980</a> by iyzsong, the
+          <a href="https://gitee.com/BA4988/BBK-simulator">BA4988 simulator</a> by <span class="zh">无云</span>, and
+          <a href="https://github.com/visrealm/vrEmu6502">vrEmu6502</a> by Troy Schrapel. GPL v3:
+          <a href="vendor/gam4988/UPSTREAM.md">source and license</a>.</dd>
+        <dt>Translation</dt>
+        <dd>Claude (Anthropic), directed by a human project lead. See the note above.</dd>
+        <dt>Thanks</dt>
+        <dd>Everyone who made, collected and kept these games alive on the BBK forums.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>A non-commercial fan project for preservation and curiosity. Not affiliated with BBK (步步高) or with the
+      games' authors. The games and the dictionary firmware belong to their owners.</p>
+    <p>This site's own code is GPL v3, like the emulator it uses.</p>
+  </footer>
+</div>
+<script src="js/home.js"></script>
+</body>
+</html>

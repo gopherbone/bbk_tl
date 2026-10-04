@@ -1,0 +1,40 @@
+{
+  "firmware": [
+    "gam4980/retroarch/system/gam4980/8.BIN",
+    "gam4980/retroarch/system/gam4980/E.BIN"
+  ],
+  "games": [
+    {
+      "id": "demonbane",
+      "title": "Demonbane Chronicle",
+      "title_zh": "伏魔记",
+      "pinyin": "Fú Mó Jì",
+      "year": 2004,
+      "genre": "RPG",
+      "authors": "通宵虫 (Allnighter) and 南方小鬼 (South Imp), with the BBK Game Team",
+      "blurb": "The best-known RPG of the BBK dictionary scene. Liu Qingfeng and his companions take on a rising tide of demons in a full-length turn-based adventure with towns, dungeons, Taoist magic and a long story, all on a 159×96 one-bit screen.",
+      "keys": [
+        "arrows",
+        "ok",
+        "back"
+      ],
+      "versions": [
+        {
+          "lang": "en",
+          "label": "English",
+          "version": "v0.2",
+          "status": "Complete translation",
+          "base": "gam4980/retroarch/downloads/bbk/伏魔记.gam",
+          "patch": "dist/DemonbaneChronicle-v0.2.bps"
+        },
+        {
+          "lang": "zh",
+          "label": "Original (Chinese)",
+          "version": "完美版 1.0",
+          "status": "Original release",
+          "base": "gam4980/retroarch/downloads/bbk/伏魔记.gam"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Play · BBK Games in English</title>
+<meta name="theme-color" content="#15171a">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body class="play">
+<div class="player">
+  <header class="bar">
+    <a class="back" href="./">‹ Library</a>
+    <div class="title"><b id="game-title">Loading…</b><span id="game-sub"></span></div>
+    <button class="icon-btn" id="menu-btn" aria-label="Menu" title="Menu">⋯</button>
+  </header>
+
+  <div class="stage">
+    <div class="device">
+      <canvas id="screen" width="159" height="96" aria-label="Game screen"></canvas>
+      <div class="overlay" id="overlay">
+        <div id="overlay-text">Loading…</div>
+        <div class="bar-track" id="overlay-bar"><div class="bar-fill" id="overlay-fill"></div></div>
+        <button id="overlay-btn" hidden>Turn it back on</button>
+      </div>
+      <div class="label">159 × 96 LCD</div>
+    </div>
+
+    <div class="controls">
+      <div class="dpad" id="dpad" aria-label="Direction pad">
+        <i class="up">▲</i><i class="down">▼</i><i class="left">◀</i><i class="right">▶</i>
+      </div>
+      <div class="ab">
+        <button class="key back" data-key="EXIT" aria-label="Back (Exit)"><span>Back</span></button>
+        <button class="key ok" data-key="ENTER" aria-label="OK (Enter)"><span>OK</span></button>
+      </div>
+    </div>
+
+    <div class="extra">
+      <div class="more-keys" id="more-keys" hidden>
+        <button class="key" data-key="PGUP" data-repeat>PgUp</button>
+        <button class="key" data-key="PGDN" data-repeat>PgDn</button>
+        <button class="key" data-key="SPACE">Space</button>
+        <button class="key" data-key="SHIFT">Shift</button>
+        <button class="key" data-key="HELP">Help</button>
+        <button class="key" data-key="SEARCH">Search</button>
+        <button class="key" data-key="INPUT">Input</button>
+        <button class="key" data-key="DEL">Del</button>
+      </div>
+      <p class="hint keyboard">Keyboard: <kbd>←↑↓→</kbd> move · <kbd>Enter</kbd>/<kbd>Z</kbd> OK ·
+        <kbd>Esc</kbd>/<kbd>X</kbd> Back · <kbd>PgUp</kbd>/<kbd>PgDn</kbd></p>
+    </div>
+  </div>
+</div>
+
+<dialog class="menu" id="menu">
+  <form method="dialog" class="menu-body">
+    <h2 id="menu-title">Menu</h2>
+    <div class="menu-group">
+      <h3>Quick save</h3>
+      <div class="row">
+        <button class="button" type="button" id="state-save">Save state</button>
+        <button class="button" type="button" id="state-load">Load state</button>
+      </div>
+      <p class="menu-note">In-game saves are kept in this browser automatically. Quick save stores the exact moment,
+        one slot per game.</p>
+    </div>
+    <div class="menu-group">
+      <h3>Save file</h3>
+      <div class="row">
+        <button class="button" type="button" id="save-export">Download</button>
+        <button class="button" type="button" id="save-import">Import…</button>
+      </div>
+      <input type="file" id="save-file" accept=".sav,application/octet-stream" hidden>
+    </div>
+    <div class="menu-group">
+      <h3>Screen</h3>
+      <label>Colour
+        <select id="lcd-colour">
+          <option value="classic">Classic grey-green</option>
+          <option value="pale">Pale</option>
+          <option value="blue">Backlit blue</option>
+        </select>
+      </label>
+      <label>LCD ghosting <input type="checkbox" id="lcd-ghost"></label>
+      <label>Extra dictionary keys <input type="checkbox" id="show-more"></label>
+    </div>
+    <div class="menu-group">
+      <div class="row">
+        <button class="button" type="button" id="restart">Restart game</button>
+        <button class="button primary" value="close">Resume</button>
+      </div>
+      <p class="menu-note" id="menu-version"></p>
+      <p class="menu-note">Translated with AI (Claude, by Anthropic), directed by a human. <a href="./#ai">More about
+        this</a>. Emulator: gam4988 from <a href="https://github.com/iuxt/bbk-games">iuxt/bbk-games</a> (GPL v3).</p>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="js/store.js"></script>
+<script src="js/player.js"></script>
+</body>
+</html>

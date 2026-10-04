@@ -1,0 +1,10 @@
+// Cloudflare Workers static assets. Build first: python3 tools/site/build.py
+// then deploy from this directory: npx wrangler deploy
+{
+  "name": "bbk-games-en",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
