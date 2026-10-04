@@ -22,7 +22,10 @@ _SMALL = {
     "N": ["110", "101", "101", "101", "101"], "O": ["010", "101", "101", "101", "010"],
     "P": ["110", "101", "110", "100", "100"], "R": ["110", "101", "110", "101", "101"],
     "S": ["011", "100", "010", "001", "110"], "T": ["111", "010", "010", "010", "010"],
-    "U": ["101", "101", "101", "101", "111"], "Y": ["101", "101", "010", "010", "010"],
+    "U": ["101", "101", "101", "101", "111"], "W": ["101", "101", "111", "111", "101"],
+    "V": ["101", "101", "101", "101", "010"], "X": ["101", "101", "010", "101", "101"],
+    "J": ["001", "001", "001", "101", "010"], "Q": ["010", "101", "101", "110", "011"],
+    "Z": ["111", "001", "010", "100", "111"], "Y": ["101", "101", "010", "010", "010"],
 }
 
 
@@ -118,8 +121,27 @@ def render(key, blob: bytes) -> bytes:
     return image.encode(h, frames)
 
 
+def _stone(*lines):
+    ops = [("clear", 8, 7, 26, 24)]
+    y = 15 - (6 * len(lines) - 1) // 2
+    for ln in lines:
+        ops.append(("small", 16 - small_width(ln) // 2, y, ln))
+        y += 6
+    return ops
+
+
+# the four chime stones in the Mt. Heming cave spell 替天行道
+for _key, _lines in {(8, 4, 32): ("FOR",), (8, 4, 33): ("HEA", "VEN"),
+                     (8, 4, 34): ("UPH", "OLD"), (8, 4, 35): ("THE", "WAY")}.items():
+    IMAGES[_key] = _stone(*_lines)
+
 # images embedded in SRS effect resources: key -> {image number: ops}
 SRS_IMAGES = {
+    # the zooming 完 end card
+    (5, 1, 4): {0: [("clear", 0, 0, 8, 9), ("small", 2, 2, "E")],
+                1: [("clear", 0, 0, 12, 13), ("small", 1, 4, "END")],
+                2: [("clear", 0, 0, 16, 16), ("ctext", 8, 2, "End", 1)],
+                3: [("clear", 0, 0, 23, 25), ("ctext", 11, 1, "THE", 1), ("ctext", 11, 13, "END", 1)]},
     # boot logo animation (伏魔记 with lightning): image 2 is the 106x32 title
     (5, 1, 248): {2: [("clear", 0, 0, 106, 32), ("ctext", 53, 7, "Demonbane", 2)]},
 }
@@ -152,6 +174,28 @@ def render_srs(key, blob: bytes) -> bytes:
     return bytes(out)
 
 
+# shop signs in the town tilesets (16x16 tiles; black border, white inside)
+def _sign(top: str, bottom: str):
+    return [("clear", 2, 2, 14, 14), ("small", 8 - small_width(top) // 2, 3, top),
+            ("small", 8 - small_width(bottom) // 2, 9, bottom)]
+
+
+_SIGNS = {0: _sign("PA", "WN"), 1: _sign("AR", "MS"), 2: _sign("HE", "RB"),
+          3: [("clear", 2, 2, 16, 14), ("text", 9, 2, "Inn", 1)],
+          4: [("clear", 0, 2, 14, 14), ("text", 9 - 16, 2, "Inn", 1)],
+          5: _sign("SH", "OP")}
+TILE_FRAMES = {(7, 1, 1): {120 + i: ops for i, ops in _SIGNS.items()},
+               (7, 1, 9): {80 + i: ops for i, ops in _SIGNS.items()}}
+
+
+def render_frames(key, blob: bytes) -> bytes:
+    h, frames = image.decode(blob)
+    for n, ops in TILE_FRAMES[key].items():
+        one = image.encode(dict(h, frames=1), [frames[n]])
+        frames[n] = image.decode(_render_ops(ops, one))[1][0]
+    return image.encode(h, frames)
+
+
 def apply(res: dict) -> None:
     """Replace the translated images in an archive's resource dict, in place."""
     for key in IMAGES:
@@ -160,3 +204,6 @@ def apply(res: dict) -> None:
     for key in SRS_IMAGES:
         if key in res:
             res[key] = render_srs(key, res[key])
+    for key in TILE_FRAMES:
+        if key in res:
+            res[key] = render_frames(key, res[key])

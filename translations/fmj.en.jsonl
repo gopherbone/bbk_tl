@@ -101,7 +101,7 @@
 {"id": "gut/1-2-18@0557", "en": "Taoist: Yes, sir."}
 {"id": "gut/1-2-18@0574", "en": "Your son's this big already and all you do is play! You don't act like a father one bit!"}
 {"id": "gut/1-2-18@05ac", "en": "Yikes! The old lady's back! Quick, let's run, or she'll nag me until my teeth explode!"}
-{"id": "gut/1-2-18@05ec", "en": "==== Credits ====\nEngine:\nAllnighter, South Imp\nProduction:\nAllnighter, South Imp\nTesting:\nLots of forum friends\nIntro:\nPure Blue Guardian (forum member)\nBBK Game Team\nJune 2004"}
+{"id": "gut/1-2-18@05ec", "en": "==== Credits ====\nEngine:\nAllnighter\nSouth Imp\nProduction:\nAllnighter\nSouth Imp\nTesting:\nLots of forum friends\nIntro:\nPure Blue Guardian (forum member)\nBBK Game Team\nJune 2004"}
 {"id": "gut/1-2-18@07f3", "en": "Swordwarden: Let me show you my new ultimate move!"}
 {"id": "gut/1-2-18@0812", "en": "I'm no pushover either. Let's see who's tougher."}
 {"id": "gut/1-2-19@005e", "en": "Lamp Cave1"}
@@ -130,20 +130,20 @@
 {"id": "gut/1-2-26@00d8", "en": "Lampwarden 8: Who dares run wild in here?"}
 {"id": "gut/1-2-31@0057", "en": "Cloudstep"}
 {"id": "gut/1-2-32@00c2", "en": "Sky Summit"}
-{"id": "gut/1-2-32@0114.1", "en": "Cancel"}
+{"id": "gut/1-2-32@0114.1", "en": "  Cancel"}
 {"id": "gut/1-2-32@0114.2", "en": "Use Dragon Orb"}
-{"id": "gut/1-2-32@0148.1", "en": "Cancel"}
+{"id": "gut/1-2-32@0148.1", "en": "  Cancel"}
 {"id": "gut/1-2-32@0148.2", "en": "Use Tiger Orb"}
-{"id": "gut/1-2-32@017c.1", "en": "Cancel"}
-{"id": "gut/1-2-32@017c.2", "en": "Use Phoenix Orb"}
-{"id": "gut/1-2-32@01b0.1", "en": "Cancel"}
+{"id": "gut/1-2-32@017c.1", "en": "  Cancel"}
+{"id": "gut/1-2-32@017c.2", "en": "Use Bird Orb"}
+{"id": "gut/1-2-32@01b0.1", "en": "  Cancel"}
 {"id": "gut/1-2-32@01b0.2", "en": "Use Turtle Orb"}
 {"id": "gut/1-2-32@01d7", "en": "You don't have it."}
 {"id": "gut/1-2-32@01e1", "en": "Your soul is sucked away!"}
 {"id": "gut/1-2-32@024a", "en": "The Four Symbols Godslayer Array is broken!"}
 {"id": "gut/1-2-32@0262", "en": "Godslayer: Who dares barge into my Godslayer Array? I'll scatter your soul to the winds!"}
 {"id": "gut/1-2-33@0055", "en": "Starwatch"}
-{"id": "gut/1-2-33@00a5.1", "en": "Cancel"}
+{"id": "gut/1-2-33@00a5.1", "en": "  Cancel"}
 {"id": "gut/1-2-33@00a5.2", "en": "Use Picklock"}
 {"id": "gut/1-2-33@00bb", "en": "You have no key."}
 {"id": "gut/1-2-34@0057", "en": "Bridge"}
@@ -301,7 +301,7 @@
 {"id": "gut/1-4-9@0096", "en": "Den Vault"}
 {"id": "gut/1-4-10@009b", "en": "Hidden Den"}
 {"id": "gut/1-5-1@00fb", "en": "Stonedream"}
-{"id": "gut/1-5-1@0200.1", "en": "Cancel"}
+{"id": "gut/1-5-1@0200.1", "en": "  Cancel"}
 {"id": "gut/1-5-1@0200.2", "en": "Use Key"}
 {"id": "gut/1-5-1@0229", "en": "You have no key."}
 {"id": "gut/1-5-1@0279", "en": "This is no place to play around. Get lost!"}
@@ -545,7 +545,7 @@
 {"id": "gut/1-9-1@03ba", "en": "Watchman: There are ghosts in there. The Mayor told us to stand guard so nobody goes in and gets hurt."}
 {"id": "gut/1-9-1@03f9", "en": "Watchman: We follow the Mayor's orders."}
 {"id": "gut/1-9-1@041d", "en": "Mayor: Be careful!"}
-{"id": "gut/1-9-1@045a.1", "en": "Cancel"}
+{"id": "gut/1-9-1@045a.1", "en": "  Cancel"}
 {"id": "gut/1-9-1@045a.2", "en": "Use Picklock"}
 {"id": "gut/1-9-1@0470", "en": "You have no key."}
 {"id": "gut/1-9-1@0493", "en": "Passerby: Oh, son, look how big you've grown! And that must be my daughter-in-law next to you."}
@@ -666,7 +666,7 @@
 {"id": "gut/1-10-1@0556", "en": "You don't have that item."}
 {"id": "gut/1-10-1@0561", "en": "Let's look around first."}
 {"id": "gut/1-10-1@0574", "en": "We haven't gotten Zhou Chu's big reward yet. Leaving now would be a waste..."}
-{"id": "gut/1-10-1@05a6.1", "en": "Cancel"}
+{"id": "gut/1-10-1@05a6.1", "en": "  Cancel"}
 {"id": "gut/1-10-1@05a6.2", "en": "Use Picklock"}
 {"id": "gut/1-10-1@05bc", "en": "You have no key."}
 {"id": "gut/1-10-1@05d3", "en": "This was once a great treasure of the Demon Realm. It was lost to the mortal world during the War of Gods and Demons."}
@@ -721,7 +721,7 @@
 {"id": "gut/1-11-4@0214", "en": "Just taking a look around."}
 {"id": "gut/1-11-4@0226", "en": "Innkeeper: Please don't go out, sir! Nothing out there right now is human. I won't even open my front door."}
 {"id": "gut/1-11-4@0267", "en": "Don't worry, we're just going to catch up with some old friends."}
-{"id": "gut/1-11-4@02a6.1", "en": "Cancel"}
+{"id": "gut/1-11-4@02a6.1", "en": "  Cancel"}
 {"id": "gut/1-11-4@02a6.2", "en": "Use Picklock"}
 {"id": "gut/1-11-4@02bc", "en": "You have no key."}
 {"id": "gut/1-11-5@0057", "en": "Herb Shop"}
@@ -843,8 +843,8 @@
 {"id": "gut/1-14-8@05ae", "en": "Red Phoenix: Wuji put me at Liu Qingfeng's side to get rid of him once he had killed Tiandao. The demons that raided Mt. Zhong were Tiandao's men. Tiandao knew Wuji's plan, but he had long coveted the Tyrant Bell, and with Wuji not stepping in, it was the chance of a lifetime. Tiandao also knew my mission, so even in death he forced out my true form to ruin Wuji's scheme. But he never expected the Tyrant Bell to fail against Liu Qingfeng - still less that Zhou Chu would change my heart..."}
 {"id": "gut/1-14-8@071d", "en": "No... it can't be..."}
 {"id": "gut/1-14-8@0757", "en": "Red Phoenix: You must reach Sanqing Hall within three days and destroy Wuji. Once he masters the tenth level of the Myriad Demon Metamorphosis, not even the highest immortals can stop him. At the tenth level he can turn anything into a demon, and the demons he makes cannot die. Now that I've seen the light, I have no regrets!!"}
-{"id": "gut/1-14-8@0826", "en": "Red Phoenix: The Chaos Urn sits inside the Four Symbols Godslayer Array. The souls of the Four Symbols that built it were drawn into the Urn to control the array. Return the four souls to their places and the array will fail. You still need the Turtle Orb - sadly I can't go with you to find it. Even out of control, the Urn can drain the soul of anyone who enters, so you'll need the Heaven Lamp to protect you."}
-{"id": "gut/1-14-8@0939", "en": "Red Phoenix: I have a move called \"Dragon Cloud Grab\". I hope it serves you well."}
+{"id": "gut/1-14-8@0826", "en": "Red Phoenix: The Chaos Urn sits inside the Four Symbols Godslayer Array. The souls of the Four Symbols that built it were drawn into the Urn to control the array. Return the four souls to their places and the array will fail. You still need the Turtle Orb - sadly I can't go with you to find it. Even out of control, the Urn can drain the soul of anyone who enters, so you'll need the Heart Lamp to protect you."}
+{"id": "gut/1-14-8@0939", "en": "Red Phoenix: I have a move called \"Dragon Grab\". I hope it serves you well."}
 {"id": "gut/1-14-8@0972", "en": "The Red Phoenix takes her own life."}
 {"id": "gut/1-14-8@097c", "en": "Yuan..."}
 {"id": "gut/1-14-8@0986", "en": "How could this happen..."}
@@ -871,7 +871,7 @@
 {"id": "gut/1-14-9@01a0", "en": "Dark Turtle: Heh heh, now you know how tough I am!"}
 {"id": "gut/1-14-9@01c5", "en": "You're the Dark Turtle? Then you've got the Turtle Orb, right?"}
 {"id": "gut/1-14-9@01e5", "en": "Dark Turtle: Oh? That depends on what you can do."}
-{"id": "gut/1-14-9@020e.1", "en": "Cancel"}
+{"id": "gut/1-14-9@020e.1", "en": "  Cancel"}
 {"id": "gut/1-14-9@020e.2", "en": "Use Picklock"}
 {"id": "gut/1-14-9@0224", "en": "You have no key."}
 {"id": "gut/1-14-9@0255", "en": "The last few characters are really strange."}
@@ -1065,7 +1065,7 @@
 {"id": "GRS/6-6-16/desc", "en": "Carved from ancient black ice jade. Restores 30 MP per turn."}
 {"id": "GRS/6-6-17/name", "en": "Star Lamp"}
 {"id": "GRS/6-6-17/desc", "en": "Zhuge Liang's life lamp. Restores 30 HP per turn, but bulky. AGI -3."}
-{"id": "GRS/6-6-18/name", "en": "3 Banes"}
+{"id": "GRS/6-6-18/name", "en": "Zhou Novel"}
 {"id": "GRS/6-6-18/desc", "en": "A novel about Zhou Chu and the Three Banes. Odd power. DEF +2."}
 {"id": "GRS/6-7-1/name", "en": "Wood Sword"}
 {"id": "GRS/6-7-1/desc", "en": "A carved wooden sword. A kid's toy. Attack +2."}
