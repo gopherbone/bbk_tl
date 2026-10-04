@@ -60,6 +60,9 @@ def pages(text: str, portrait: bool) -> list[list[str]]:
 
 
 MESSAGE_WIDTH = 140      # widest row in a message box (fontpatch msgbox: box <= 155 px)
+DESC_WIDTH = 108         # item/magic description window: rows from x=46 to the screen edge
+DESC_ROWS = 3
+SCROLL_COLS = 20         # showgut: the engine slices the text into 20-byte rows
 
 
 def rows(text: str, width: int) -> list[str]:
@@ -83,3 +86,28 @@ def rows(text: str, width: int) -> list[str]:
                 cur = piece
         out.append(cur)
     return out
+
+
+def scroll_bytes(text: str) -> bytes:
+    """showgut text: word-wrapped into rows of <= SCROLL_COLS characters, each
+    padded with spaces to exactly SCROLL_COLS bytes (the engine's row size)."""
+    out = []
+    for line in text.split("\n"):
+        cur = ""
+        for word in line.split(" "):
+            while len(word) > SCROLL_COLS:
+                if cur:
+                    out.append(cur)
+                    cur = ""
+                out.append(word[:SCROLL_COLS])
+                word = word[SCROLL_COLS:]
+            if not word:
+                continue
+            cand = f"{cur} {word}" if cur else word
+            if len(cand) <= SCROLL_COLS:
+                cur = cand
+            else:
+                out.append(cur)
+                cur = word
+        out.append(cur)
+    return "".join(r.ljust(SCROLL_COLS) for r in out).encode("ascii")

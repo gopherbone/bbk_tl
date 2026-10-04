@@ -43,6 +43,8 @@ LEFT_X = 14
 ROW_WIDTHS_PORTRAIT = (101, 101, 133)   # keep 2 px clear of the right border (x=151)
 ROW_WIDTHS_PLAIN = (133, 133, 133)
 GAM_PHYS = 0x20D000                # physical address of .gam offset 0
+DIALOGUE_Y = 58                    # y of a say box's first row; other page tokens are blocks
+BLOCK_PITCH = 11
 
 # OS calls we take over: (OS jump-table vector, renderer routine, padding offset
 # of the 3-byte entry in every calling segment and in the font segment).
@@ -156,6 +158,8 @@ to_os:  lda #<OSVEC
         jmp DISPATCH            ; tail call: the OS returns to our caller
 
 ascii:  jsr savezp
+        lda #0
+        sta NOWRAP
         lda #GLYPH_TOP
         sta GT
         lda #CELL
@@ -165,14 +169,58 @@ ascii:  jsr savezp
         jsr dmarest
         jmp restzp
 
-; draw the string at STR (ASCII + inline tokens) at (X, Y0) with GT/CH
+; draw the string at STR (ASCII + inline tokens) at (X, Y0) with GT/CH.
+; Unless NOWRAP, wrap like the OS DrawString does, on its 8 px grid: OSX
+; counts 8 px per byte; at OSX >= 153 the pen moves to x=0 and 16 px down,
+; and drawing stops once y >= 81. Engine layouts that rely on the OS wrap
+; (the opening scroll) keep their rows; glyphs are still proportional.
 drawstr:
+        lda X
+        sta OSX
 strlp:  ldy #0
         lda (STR),y
         beq strdone
+        pha
+        lda NOWRAP
+        bne nowrap
+        lda OSX
+        cmp #153
+        bcc nowrap
+        jsr padrow
+        lda #0
+        sta OSX
+        sta X
+        lda Y0
+        clc
+        adc #16
+        sta Y0
+        cmp #81
+        bcc nowrap
+        pla
+        rts
+strdone: lda NOWRAP
+        bne sdr
+        jsr padrow
+sdr:    rts
+
+; clear the rest of the OS grid span (the OS's 8 px cells would have covered it)
+padrow: lda X
+        cmp OSX
+        bcs padx
+        cmp #155
+        bcs padx
+        lda #$20
+        jsr drawch
+        jmp padrow
+padx:   rts
+nowrap: pla
         cmp #$fc
         bcs special
         jsr drawch
+        lda OSX
+        clc
+        adc #8
+        sta OSX
         lda #1
 advstr: clc
         adc STR
@@ -180,7 +228,6 @@ advstr: clc
         bcc strlp
         inc STR+1
         jmp strlp
-strdone: rts
 special:
         cmp #$fc
         bne inl
@@ -188,6 +235,10 @@ special:
         clc
         adc #16
         sta X
+        lda OSX
+        clc
+        adc #16
+        sta OSX
         lda #2
         jmp advstr
 inl:    ; $fd id (2 bytes, min 16 px) or $fe hi $fe lo (4 bytes, min 32 px)
@@ -235,7 +286,14 @@ inlend: lda X
         bcs inlx
         lda MINADV
         sta X
-inlx:   lda TLEN
+inlx:   lda TLEN            ; OSX += 8 px per byte of the token
+        asl a
+        asl a
+        asl a
+        clc
+        adc OSX
+        sta OSX
+        lda TLEN
         jmp advstr
 
 ; TP:TP+1 = page id  ->  TP..TP+2 = physical address of its text (clobbers GP)
@@ -307,15 +365,28 @@ token:  jsr savezp
         jsr dmasave
         lda #0
         sta PORT
+        sta BLOCK
+        lda Y0
+        cmp #DLG_Y
+        beq dlgmode
+        ; block mode: rows from the call's own (x, y), 11 px apart
+        inc BLOCK
         lda X
+        sta BLKX
+        ldx Y0
+        dex
+        stx BLKY
+        lda #BLK_PITCH
+        sta CH
+        jmp tokgo
+dlgmode: lda X
         cmp #30
         bcc noport
         inc PORT
-noport: lda #0
-        sta GT
-        lda #TCELL
+noport: lda #TCELL
         sta CH
-        lda #0
+tokgo:  lda #0
+        sta GT
         sta TROW
         jsr rowstart
 toklp:  jsr fetch
@@ -333,7 +404,39 @@ tokdone:
 
 ; pen position for token row TROW
 rowstart:
+        lda BLOCK
+        beq rsdlg
+        lda #0              ; block: y = BLKY + 11 * row (16-bit), x = BLKX
+        sta RW
         lda TROW
+        asl a
+        rol RW
+        sta Y0              ; 2r
+        asl a
+        rol RW
+        asl a
+        rol RW              ; 8r (RW = high byte)
+        clc
+        adc Y0              ; 10r
+        bcc rs1
+        inc RW
+rs1:    clc
+        adc TROW            ; 11r
+        bcc rs2
+        inc RW
+rs2:    clc
+        adc BLKY
+        bcc rs3
+        inc RW
+rs3:    sta Y0
+        lda RW
+        beq rs4
+        lda #$ff            ; past the bottom: rows are skipped
+        sta Y0
+rs4:    lda BLKX
+        sta X
+        rts
+rsdlg:  lda TROW
         asl a
         asl a
         sta Y0              ; 4 * row
@@ -547,6 +650,11 @@ PY     = $20a1      ; plot y
 RW     = $20a2      ; row width accumulator
 TP0    = $20a3      ; saved bank pointer (3)
 BANKMODE = $20a6
+BLOCK  = $20a7      ; token page drawn as a block at the call's (x, y)
+BLKX   = $20a8
+BLKY   = $20a9
+OSX    = $20aa      ; OS-grid pen x for wrapping
+NOWRAP = $20ab      ; nonzero: never wrap (msgbox)
 
 msgbox: ldy #0
         lda ($28),y
@@ -689,6 +797,8 @@ mtb:    jsr fetch
 mtbch:  jsr drawch
         jmp mtb
 mtxt_inline:
+        lda #1
+        sta NOWRAP
         jsr drawstr
 mdone:  jsr dmarest
         jmp restzp
@@ -945,7 +1055,7 @@ def build_segment(page_addrs: list[int] = ()) -> tuple[bytes, dict]:
     table = b"".join(a.to_bytes(3, "little") for a in page_addrs) or b"\0"
     syms = {"OSVEC": OS_DRAWSTRING_VEC, "DISPATCH": DISPATCH, "GLYPH_TOP": GLYPH_TOP,
             "GLYPH_H": font_sans.H, "CELL": CELL, "TCELL": TOKEN_PITCH, "TOP": TOKEN_TOP,
-            "PX0": PORTRAIT_X, "LX": LEFT_X, "OSMSG": OS_MSGBOX_VEC}
+            "PX0": PORTRAIT_X, "LX": LEFT_X, "OSMSG": OS_MSGBOX_VEC, "DLG_Y": DIALOGUE_Y, "BLK_PITCH": BLOCK_PITCH}
 
     def src(lo, hi):
         return RENDERER.format(widths=_bytes_lines(widths), glyph_lo=_bytes_lines(lo), glyph_hi=_bytes_lines(hi),

@@ -101,7 +101,7 @@ Key names are BBKEmu's: `ENTER`, `EXIT`, `UP`, `DOWN`, `LEFT`, `RIGHT`,
 | `input.tap` | `key`, `hold` (4 frames), `wait` (4), `run` (true) | run result for hold + wait frames |
 | `input.script` | `steps: [{key?, hold, wait}]` (no key = wait), `run` (true) | run result |
 | `input.press` / `input.release` | `key` | holds until released |
-| `input.replay` | `path` (bbkplay route), `until_frame`, `run` (true) | `{events, last_frame, marks, run}`. Applies events exactly as bbkplay does; run it right after `load_gam` |
+| `input.replay` | `path` (bbkplay route), `until_frame`, `run` (true), `any_gam` (false: refuse a route recorded on another .gam) | `{events, last_frame, marks, run}`. Applies events exactly as bbkplay does; run it right after `load_gam` |
 
 ### Route recording
 | cmd | params | result |

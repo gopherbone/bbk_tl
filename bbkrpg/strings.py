@@ -143,6 +143,9 @@ def translate_instr(i, argn: int, value, bank: list[bytes] | None) -> list:
     if not isinstance(value, str):
         i.args[argn] = value
         return []
+    if i.name == "showgut":                 # the engine lays the scroll out 20 bytes per row
+        i.args[argn] = fit.scroll_bytes(value)
+        return []
     if i.name == "message":                 # one box, rows from the bank
         bank.append("\n".join(fit.rows(value, fit.MESSAGE_WIDTH)).encode("ascii"))
         n = len(bank) - 1
@@ -187,7 +190,7 @@ def apply(lib: Lib, rows: list[dict], bank: list[bytes] | None = None) -> tuple[
         if rid.startswith("gut/"):
             key_s, _, where = rid[4:].partition("@")
             gut_rows.setdefault(parse_key(key_s), {})[where] = (
-                r["en"] if bank is not None and r["kind"] in ("say", "message") else data)
+                r["en"] if bank is not None and r["kind"] in ("say", "message", "showgut") else data)
             continue
         tag, key_s, fname = rid.split("/")
         k = parse_key(key_s)
@@ -200,6 +203,13 @@ def apply(lib: Lib, rows: list[dict], bank: list[bytes] | None = None) -> tuple[
             continue
         f = fs[0]
         cap = f.size - 1 if f.name == "name" else f.size
+        if f.name == "desc" and bank is not None:     # wrapped rows in the bank, token in the record
+            rws = fit.rows(r["en"], fit.DESC_WIDTH)
+            if len(rws) > fit.DESC_ROWS:
+                problems.append(f"{rid}: {len(rws)} rows, the window shows {fit.DESC_ROWS}")
+                continue
+            bank.append("\n".join(rws).encode("ascii"))
+            data = fontpatch.token(len(bank) - 1)
         if len(data) > cap:
             problems.append(f"{rid}: {len(data)} bytes, field holds {cap}")
             continue

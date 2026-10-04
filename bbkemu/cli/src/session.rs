@@ -1093,11 +1093,12 @@ impl Session {
         let path = p_str(p, "path").ok_or("missing 'path'")?;
         let text = std::fs::read_to_string(path).map_err(|e| format!("{path}: {e}"))?;
         let now = self.emu()?.frame_count();
+        let any_gam = p_bool(p, "any_gam", false);
         let mut events = Vec::new();
         let mut marks = Vec::new();
         for (n, line) in text.lines().enumerate() {
             if let Some((hash, _)) = route::parse_header(line) {
-                if hash != route::gam_hash(&self.gam) {
+                if hash != route::gam_hash(&self.gam) && !any_gam {
                     return Err(format!("{path} was recorded on a different .gam"));
                 }
                 continue;
