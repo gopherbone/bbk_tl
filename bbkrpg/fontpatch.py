@@ -637,7 +637,7 @@ chdone: lda X
 
 ; ---- msgbox: replacement for the OS message box (vector E953).
 ; C stack: [text ptr lo, hi, mode lo, hi]. Draws a centred framed box with the
-; text and returns, like the OS. Text: an FE token alone (rows from the bank,
+; text and waits like the OS (mwait). Text: an FE token alone (rows from the bank,
 ; separated by \n) or a one-row string (ASCII + inline tokens).
 MW     = $209a      ; widest row (px, incl. trailing 1 px spacing)
 NR     = $209b      ; rows
@@ -801,7 +801,146 @@ mtxt_inline:
         sta NOWRAP
         jsr drawstr
 mdone:  jsr dmarest
+        jsr mwait
         jmp restzp
+
+; ---- mwait: wait like the OS box does (OS page 9 $8195): a key (message 1)
+; closes it; a nonzero timeout (C-stack arg 2, in timer ticks: message 6, about
+; 100 a second) closes it too, e.g. "Got: X" notices and scene banners (100).
+; A zero timeout waits for a key (script message boxes). Frame of 12 bytes on
+; the C stack: [0..7] message buffer, [8] old timer, [9..10] ticks; the caller's
+; timeout is then at [14..15].
+mwait:  php
+        sei
+        sec
+        lda $28
+        sbc #12
+        sta $28
+        lda $29
+        sbc #0
+        sta $29
+        plp
+        ldy #9
+        lda #0
+        sta ($28),y
+        iny
+        sta ($28),y
+        jsr mwto
+        beq mwloop
+        ldx #$b8                ; current timer
+        ldy #$e7
+        jsr farcall
+        ldy #8
+        sta ($28),y
+        cmp #1
+        bcc mwt1
+        ldx #$b5                ; stop it
+        ldy #$e7
+        jsr farcall
+mwt1:   lda #1                  ; start ours
+        ldx #$b2
+        ldy #$e7
+        jsr farcall
+mwloop: ldx #$35                ; get message into the buffer
+        jsr msgcall
+        beq mwloop
+        ldy #0
+        lda ($28),y
+        cmp #1
+        beq mwend               ; key
+        cmp #$0a
+        bne mwtick
+        ldy #1                  ; system event 3: let the OS handle it, then close
+        lda ($28),y
+        cmp #3
+        bne mwloop
+        iny
+        lda ($28),y
+        bne mwloop
+        ldx #$2f
+        jsr msgcall
+        jmp mwend
+mwtick: cmp #6
+        bne mwloop
+        jsr mwto
+        beq mwloop
+        ldy #9
+        lda ($28),y
+        clc
+        adc #1
+        sta ($28),y
+        iny
+        lda ($28),y
+        adc #0
+        sta ($28),y
+        ldy #15                 ; ticks >= timeout?
+        cmp ($28),y
+        bcc mwloop
+        bne mwend
+        ldy #9
+        lda ($28),y
+        ldy #14
+        cmp ($28),y
+        bcc mwloop
+mwend:  jsr mwto
+        beq mwfree
+        ldx #$b5                ; stop our timer, restart the old one
+        ldy #$e7
+        jsr farcall
+        ldy #8
+        lda ($28),y
+        beq mwfree
+        ldx #$b2
+        ldy #$e7
+        jsr farcall
+mwfree: php
+        sei
+        clc
+        lda $28
+        adc #12
+        sta $28
+        lda $29
+        adc #0
+        sta $29
+        plp
+        rts
+
+; Z clear when the caller's timeout is nonzero
+mwto:   ldy #14
+        lda ($28),y
+        iny
+        ora ($28),y
+        rts
+
+; OS call $E9xx (low byte in X) with the frame's message buffer as its C-stack
+; argument; returns its A (Z set when zero)
+msgcall:
+        lda $28
+        sta $20
+        lda $29
+        sta $21
+        jsr $daca               ; push the buffer pointer
+        ldy #$e9
+        jsr farcall
+        tax
+        php
+        sei
+        clc
+        lda $28
+        adc #2
+        sta $28
+        lda $29
+        adc #0
+        sta $29
+        plp
+        txa
+        rts
+
+; far call to the OS jump-table entry Y:X (A passes through)
+farcall:
+        stx $26
+        sty $27
+        jmp DISPATCH
 
 ; RW = max(RW, ...) helpers
 rowmax: lda RW
