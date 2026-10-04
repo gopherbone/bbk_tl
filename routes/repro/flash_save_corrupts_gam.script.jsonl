@@ -1,0 +1,17 @@
+{"id":1,"cmd":"load_gam","params":{"path":"gam4980/retroarch/downloads/bbk/伏魔记.gam","rom_dir":"gam4980/retroarch/system/gam4980"}}
+{"id":2,"cmd":"input.replay","params":{"path":"routes/fmj.agent.route.jsonl","until_frame":26800}}
+{"id":3,"cmd":"run.frames","params":{"n":60}}
+{"id":4,"cmd":"mem.read","params":{"gam":"0x30f8","len":8}}
+{"id":5,"cmd":"mem.read","params":{"gam":"0x0","len":8}}
+{"id":6,"cmd":"input.tap","params":{"key":"EXIT","hold":2,"wait":30}}
+{"id":7,"cmd":"input.tap","params":{"key":"DOWN","hold":2,"wait":30}}
+{"id":8,"cmd":"input.tap","params":{"key":"DOWN","hold":2,"wait":30}}
+{"id":9,"cmd":"input.tap","params":{"key":"DOWN","hold":2,"wait":30}}
+{"id":10,"cmd":"input.tap","params":{"key":"ENTER","hold":2,"wait":30}}
+{"id":11,"cmd":"screen.capture","params":{}}
+{"id":12,"cmd":"input.tap","params":{"key":"ENTER","hold":2,"wait":40}}
+{"id":13,"cmd":"input.tap","params":{"key":"ENTER","hold":2,"wait":60}}
+{"id":14,"cmd":"run.frames","params":{"n":200}}
+{"id":15,"cmd":"mem.read","params":{"gam":"0x30f8","len":8}}
+{"id":16,"cmd":"mem.read","params":{"gam":"0x0","len":8}}
+{"id":17,"cmd":"mem.read","params":{"phys":"0x2080f8","len":8}}

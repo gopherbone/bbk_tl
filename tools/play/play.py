@@ -69,6 +69,7 @@ def start(record=True):
     print("frame", frame())
 
 
+WATCH_LOG = []  # watchpoint hits drained by poll()
 LAST_HIT = {}   # breakpoint id -> last frame it fired (non-hook breakpoints)
 
 
@@ -85,8 +86,10 @@ def _drain():
             args = bytes.fromhex(x["mem"][1])
             out.append({"frame": x["frame"], "y": args[0], "text": _gb(x["mem"][0]),
                         "raw": x["mem"][0], "args": x["mem"][1], "script": h.where})
-        else:
+        elif "frame" in x:
             LAST_HIT[x["id"]] = x["frame"]
+        else:
+            WATCH_LOG.append(x)   # watchpoint hit (watch.add log=True)
     return out
 
 
@@ -1292,7 +1295,7 @@ def duo_beam(target, rounds=30, width=3, hero_cands=None, mei_cands=None, value=
                         continue
                     d = dict((x, hp) for x, hp, mp in ps)
                     if r in ("idle", "msg") or (r != "wheel" and not any(m[1] > 0 for m in ms)):
-                        if d.get("柳清风", 0) > 0 or stats():
+                        if any(v > 0 for v in d.values()):   # someone alive (a game over also zeroes the monsters)
                             if verbose:
                                 print("WIN at round", rnd, hist + [(hn, mn)])
                             return _beam_replay(root, keys + [(hk, mk)], hist + [(hn, mn)])

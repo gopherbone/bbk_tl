@@ -455,13 +455,7 @@ impl Memory {
             FlashCmd::Normal | FlashCmd::ByteProgram => {
                 // For save area (last 32KiB), rotate to front
                 // Otherwise, read directly
-                let actual_addr = if addr >= FLASH_SIZE as u32 - 0x8000 {
-                    // Save area: rotate last 32KiB to front
-                    (addr + 0x8000) % FLASH_SIZE as u32
-                } else {
-                    addr
-                };
-                self.flash[actual_addr as usize]
+                self.flash[flash_index(addr)]
             }
             // Software ID and CFI query share the same info table
             FlashCmd::SoftwareId | FlashCmd::CfiQuery => {
@@ -536,9 +530,13 @@ impl Memory {
                 if self.flash_cmd == FlashCmd::ByteProgram {
                     self.flash_cmd = FlashCmd::Normal;
                     self.flash_cycles = 0;
-                    // Rotate last 32KiB to the front for save
-                    let addr = (addr + 0x8000) % FLASH_SIZE as u32;
-                    self.flash[addr as usize] = val;
+                    // bbk_tl fix: map the address exactly as read_flash does
+                    // (only the last 32 KiB is rotated to the front). Rotating
+                    // every address sent the OS file system's writes 32 KiB
+                    // higher, into the game image. Programming can only clear
+                    // bits, as on real flash.
+                    let i = flash_index(addr);
+                    self.flash[i] &= val;
                 } else if addr == 0x5555 && val == 0xAA {
                     self.flash_cycles += 1;
                 }
@@ -552,21 +550,16 @@ impl Memory {
                     }
                     0x30 => {
                         // Sector-Erase
-                        let addr = (addr + 0x8000) % FLASH_SIZE as u32;
                         let sector = addr & 0x1FF000;
                         for i in 0..0x1000 {
-                            self.flash[(sector + i) as usize] = 0xFF;
+                            self.flash[flash_index(sector + i)] = 0xFF;
                         }
                     }
                     0x50 => {
                         // Block-Erase
-                        let addr = ((addr & 0x1F0000) + 0x8000) % FLASH_SIZE as u32;
-                        for i in 0..0x8000 {
-                            self.flash[(addr + i) as usize] = 0xFF;
-                        }
-                        let addr2 = (addr + 0x8000) % FLASH_SIZE as u32;
-                        for i in 0..0x8000 {
-                            self.flash[(addr2 + i) as usize] = 0xFF;
+                        let block = addr & 0x1F0000;
+                        for i in 0..0x10000 {
+                            self.flash[flash_index(block + i)] = 0xFF;
                         }
                     }
                     _ => {}
@@ -692,6 +685,13 @@ impl Memory {
     pub fn ram_mut(&mut self) -> &mut [u8] {
         &mut self.ram
     }
+}
+
+/// Index into `Memory::flash` for a flash address: the last 32 KiB (the save
+/// area) is stored rotated to the front; everything else is direct.
+fn flash_index(addr: u32) -> usize {
+    let size = FLASH_SIZE as u32;
+    (if addr >= size - 0x8000 { addr - (size - 0x8000) } else { addr }) as usize
 }
 
 impl Bus for Memory {

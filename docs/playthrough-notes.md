@@ -1,37 +1,56 @@
 # 伏魔记 agent playthrough — notes
 
-Route: `routes/fmj.agent.route.jsonl` (stopped cleanly, ends at frame 535195,
-~149 min game time; `bbkplay --verify` hash 1370459f99d81d20).
+Route: `routes/fmj.agent.route.jsonl` (stopped cleanly, ends at frame 537510,
+~149 min game time; `bbkplay --verify` hash 6e64f31e8d81e799).
 Coverage of the route (`tools/play/route_coverage.py` -> `route_seen.json`):
-165 / 632 `say` rows (26.1%), 172 gut rows. `seen.json` is cumulative over all
+171 / 632 `say` rows (27.1%), 179 gut rows. `seen.json` is cumulative over all
 attempts incl. rewound ones (also counts GRS/MRS names/descs).
 
 The three emulator bugs found in session 1 (IRQ I flag, save-marker overwrite,
 auto power-off) are fixed in the official `bbkemu/target/release/bbkemu`;
 `work/bbkemu_irqfix/` and `emu_fixes.patch` are obsolete.
 
-## Where we are (end of session 3)
+## BLOCKER (session 4): OS flash writes corrupt the game image
 
-- In 蛇窟宝洞 (script 1-4-9, map (3,9)), player (12,8), all 6 boxes looted,
-  events 214/215 set (蛇妖 beaten once in 1-4-8, it fled). Party 柳清风 Lv12
-  (HP 310, MP 211/244, exp 967, next 1665) + 慕容小梅 Lv7 (HP 185, MP 232).
-  Money 3431. 小梅 wears 芦藤雌甲/渺影衣/平安符/鹿皮靴, hero 芦藤雄甲/香袋.
-- **Next**: the 传送点 box at (15,3) sits on tile 2: `goto(15,4)` then tap UP
-  -> `startchapter 3,12`: cut-scene, 小梅 faints (`deleteactor 2`), then a
-  **solo** fight vs 蛇妖男 (2000 HP, full). Set `play.AUTO_FIGHT=False` first
-  so `adv()` stops at the wheel. Session 3 won it twice with
-  `duo_beam(..., mei_cands=lambda ix, ps: [("-", None)])` (hero alone):
-  无影神针, 火/土/风/水灵符, 剑气术 (magic idx 4), 玉蓝草, 魔王甲. Items left:
-  无影神针 x1, 灵符 x5 kinds, 观音符, 玉蓝草 x5, 魔王甲, 还神丹, 定心符.
-- **Watch out (game crash)**: if this battle levels the hero up *twice*
-  (12->13->14), the engine corrupts its heap (garbage NPC names, hero HP
-  48449) and ~2600 frames later runs into code in the wrong bank and hangs
-  the emulator (see Emulator problems). Hero exp must stay < 1105 before the
-  fight (967 now; the fight gives 860). That is why random fights on the way
-  were fled (`play.FLEE=True`). With exp 900 or 0 (RAM poke test) no crash.
-- A second, unexplained emulator hang happened inside one beam-search *sim*
-  of this solo fight (not on the recorded line). Because snapshots die with
-  the emulator, the beam was lost; see "Beam search" below for a guard idea.
+**Progress past 1-3-12 is blocked by an emulator bug** (Emulator problems #3
+below). Any OS file write (an in-game 存储进度 save, or the engine's
+`deleteactor 2` in 1-3-12, which stashes 小梅's data in a flash file) goes
+through `write_flash` in `bbkemu/core/src/memory.rs`, which shifts every
+program/erase address by +0x8000 while `read_flash` does not. The OS formats
+its file area (programs flash 0x80ff, erases sectors 0x5000 and 0xb000); in
+the emulator these land on .gam offsets 0x30ff, 0x0000-0x0fff and
+0x6000-0x6fff (engine code + header). The game keeps running for a while, then
+draws NPCs through the broken code at gam 0x30ff (`lda $21` became `$03`): a
+garbage sprite pointer, a 169-row blit past the 1920-byte back buffer at
+0x2e3c that overwrites the hero record (HP 0xbdxx = 484xx) and heap tags,
+then `illegal_opcode` at phys e275ae. It happens on **every** line through
+the 蛇妖 fight (tested: exp 0/500/700/900/1051, no level-up / one level-up,
+different last actions, fled vs fought random fights, boss HP poked to 1).
+The session-3 "double level-up" theory and the "exp < 1105" rule were wrong.
+Until the core is fixed: never save in-game, and do not press ENTER at the
+current route end.
+
+## Where we are (end of session 4)
+
+- The route ends inside the 1-3-12 cut-scene with the message box
+  `慕容小梅昏倒了！` (gut/1-3-12@0158) on screen, waiting for a key; the game
+  image is still intact there (0 bytes differ from the .gam). Map (1,23).
+  Party 柳清风 Lv12 (HP 310/310, MP 211/244, exp 967, next 1665) +
+  慕容小梅 Lv7 (HP 185, MP 232). Two random fights on the way to (15,4) were
+  fled (`play.FLEE=True`). Money 3431. 1-4-9 has no exit back (its only
+  tile event is the teleport), so 1-4-8 box 22 is out of reach now.
+- **Next (after the emulator fix)**: resume, ENTER -> `deleteactor 2`,
+  `say 我和你拼了！`, then the **solo** fight vs 蛇妖男 (2000 HP). Set
+  `play.AUTO_FIGHT=False` so `adv()` stops at the wheel. Winning line found
+  this session (hero alone, `duo_beam(..., mei_cands=lambda ix, ps:
+  [("-", None)])`): 无影神针, 剑气术, 剑气术, 火灵符, 剑气术, 土灵符, 剑气术,
+  风灵符, 剑气术, 青阴君, 青阴君, 剑气术 (剑气术 = `A_MAG(4, 0)`, items by
+  name with `A_THROW_N` / `A_USE_N`). RNG depends on the action history, so
+  a different pre-fight line may need a new search. Rewards: exp 860, 1200
+  money, 软蛟披风, level 13 (learns 卸劲诀).
+  Afterwards check `e.read(gam=0x30f8, length=8)` is still `18a52069d38520a5`.
+- Session 4 did: diagnosis only (the crash), plus the 1-3-12 opening says
+  (0060-0158). Repro: `routes/repro/flash_save_corrupts_gam.script.jsonl`.
 - After 1-3-12: `say`s, 忘忧坟场/村 scenes, tile 2 -> 2-43 (三清山入口) -> back
   up the mountain (bridge maze, `maze_walk`) to 无机阁 1-2-2: talking to
   无机子 with 215 set sets 216 (钟山 request) = end of this story arc; 2-50
@@ -99,7 +118,11 @@ auto power-off) are fixed in the official `bbkemu/target/release/bbkemu`;
   prefix. Old routes kept for the repros: `work/playthrough/
   broken_session3.route.jsonl`, `work/playthrough/hang_3_12.route.jsonl`.
 
-## Emulator problems (session 3)
+## Emulator problems (sessions 3-4)
+
+(1 and 2 are fixed in the current build: snapshot.load restores the route
+exactly; an undefined opcode stops the run with reason `illegal_opcode`.)
+
 
 1. **snapshot.load truncates the route by event count only.** Loading a
    snapshot that is not an ancestor of the current state keeps the wrong
@@ -116,10 +139,34 @@ auto power-off) are fixed in the official `bbkemu/target/release/bbkemu`;
    0 frames advancing. Cause upstream: OS routine at phys e8a48b loops x=$a5
    times bumping $0c/$0d/$0e; when $0d reaches $27 the $f000 window (bank
    index 15) switches from e8a to e27 under the running code, which then runs
-   data. That loop count comes from the corrupted heap after the double
-   level-up (above), so the game itself is probably at fault; the emulator
-   problem is only that an unknown opcode stalls the frame loop instead of
-   advancing (a real 65C02 treats $9B as a 1-byte NOP).
+   data. Session 4 found the real cause upstream: problem 3 (the engine code
+   was already corrupted by the OS file write at `deleteactor 2`), not the
+   double level-up.
+3. **Flash program/erase addresses are shifted by +0x8000 (open, blocks the
+   playthrough).** `core/src/memory.rs`: `read_flash` rotates only the last
+   32 KiB (`addr >= FLASH_SIZE - 0x8000`), but `write_flash` applies
+   `(addr + 0x8000) % FLASH_SIZE` to *every* byte-program and sector/block
+   erase. The OS file system lives below the game (flash 0x5000-0xcfff, phys
+   0x205000-0x20cfff; the game is at 0xd000), so its writes land 32 KiB higher,
+   inside the game image (gam offset = flash addr - 0x5000), while the OS
+   reads back unchanged 0xff (so it re-formats on every write). One file
+   write erases gam 0x0000-0x0fff (header + engine code) and 0x6000-0x6fff and
+   sets gam 0x30ff to 0x03 (also: a byte-program assigns instead of AND-ing).
+   Minimal repro (`bbkemu --script routes/repro/flash_save_corrupts_gam.script.jsonl`):
+   replay the agent route to frame 26800 (三清宫), EXIT, DOWN x3 (系统),
+   ENTER (存储进度), ENTER, ENTER (save to slot 1), 200 frames: `mem.read gam
+   0x30f8 len 8` goes `18a52069d38520a5` -> `18a52069d3852003`, gam 0x0 goes
+   `47414d00...` (`GAM\0`) -> `ffff...`, while `phys 0x2080f8` (where the OS
+   wrote) still reads `ff`. In the playthrough the same happens at frame
+   ~537560 when 1-3-12 runs `deleteactor 2` (OS file call from engine code
+   at phys 21c245, `jsr $d2f6` with $26/$27 = e9e9, filename built from
+   "伏魔记" at 0x1938); the crash follows ~1.5k-18k frames later depending on
+   input (`illegal_opcode` at e275ae). Likely fix: in `write_flash` rotate
+   only when `addr >= FLASH_SIZE - 0x8000` (as `read_flash`), and program as
+   `flash &= val`. bbkplay shares the core, so **in-game saves in bbkplay
+   corrupt the game too** (PLAYING.md says saving is fine; it is not with
+   this build). The load_gam save-marker fix of session 1 was a symptom of
+   the same mapping.
 
 ## Battle notes (session 2)
 
@@ -191,9 +238,20 @@ auto power-off) are fixed in the official `bbkemu/target/release/bbkemu`;
 | hero record (0x35e4 this save) | after `75 6e 1c 00`: +0 level, +6 maxHP, +8 HP, +10 maxMP, +12 MP, +14 atk, +16 def, +18 exp, +20 next-level exp (u16) |
 | 小梅 record | the next `75 6e 1c 00` block (0x36dc); `party()` reads both |
 | equipment events | worn items with GRS +0x84 != 0 set that event (2000/2001 = 芦藤甲) |
+| hero exp | +18 is exp *within the level* (reset by the level-up: 1911 -> 246 at Lv13), +20 next = 1965 at Lv13 |
+| heap | 0x2c00-0x3fff, blocks `75 6e <u16 size>` used, `62 6e` free, `62 65` last free block; 0x2e38 (1940 B) = the 20x96-byte back buffer at 0x2e3c (`$1936`) |
+| map object pointer table | 0x19d3 + 2*i -> NPC/box records (index = object slot) |
+| OS file system | below the game in flash (0x205000-0x20cfff); directory byte at phys 0x2080ff. Writes are broken in bbkemu (Emulator problems #3) |
 
 ## Tools (tools/play/)
 
+- Session 4: `duo_beam` declared a win when the hero had died (a game over
+  also zeroes the monster records); it now needs a living party member.
+  `poll()` keeps watchpoint hits (`watch.add log=True`) in `play.WATCH_LOG`
+  instead of crashing on them. Careful: `poll()` drains `break.log`, so
+  your own silent breakpoints' hits only survive in `LAST_HIT`; and after
+  `snapshot.load` drain once (`poll(True); log.clear()`) before trusting
+  `goto`/`adv`, or stale text from the abandoned branch looks like an event.
 - Session 3 additions in play.py: `engage`, `party`, `pstate`, `mons_all`,
   `alive_index`, `A_ATK`, `A_MAG`, `A_MAG_SELF`, `act_as`, `duo_round`,
   `duo_greedy`, `duo_beam` (+`_beam_replay`), `battle_list`, `equip`,
@@ -240,3 +298,7 @@ count line `<item> :`), 告示 signs (`say 0`), and GRS descriptions that embed
 `\r\n` (天师符, 雷灵符, 火灵符: "符咒\r\n。") are drawn with the CR/LF bytes in
 the 2-row description window. Item/magic names and the first row of descriptions come
 from GRS/MRS (2-row windows; long descriptions are cut, not scrolled).
+Session 4: the level-up popup `<name> / 练成 / <magic>` draws the name and
+magic through draw-string but `练成` is a bitmap (not in text.log); the
+存储进度 screen (title in a decorative font, slots `空档案`) was seen only in
+a scratch emulator without hooks.
