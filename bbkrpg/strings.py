@@ -1,0 +1,198 @@
+"""Translation string table: export every translatable string from an archive
+to JSONL rows, and import translated rows back into a copy of the archive.
+
+Import always starts from the original (Chinese) archive, so row ids are
+stable: they name the resource and the string's original address.
+
+Row ids
+  gut/<key>@<addr>[.<n>]   script string; addr is the instruction's original
+                           script address, n = operand number when a command
+                           carries more than one string (choice)
+  <TYPE>/<key>/<field>     fixed-width field in a record (GRS/MRS/ARS/MAP)
+"""
+
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+
+from . import gut as gutmod
+from .lib import Key, Lib, key_str, parse_key
+
+
+@dataclass(frozen=True)
+class Field:
+    res_type: int
+    subtypes: frozenset | None
+    offset: int
+    size: int
+    name: str
+    tag: str
+
+
+# Field spans run to the next field the engine reads (BBKRPGSimulator).
+FIELDS = [
+    Field(6, None, 0x06, 0x0c, "name", "GRS"),
+    Field(6, None, 0x1e, 0x66, "desc", "GRS"),
+    Field(4, None, 0x06, 0x14, "name", "MRS"),
+    Field(4, None, 0x1a, 0x56, "desc", "MRS"),
+    Field(3, frozenset({1}), 0x0a, 0x0c, "name", "ARS"),       # player
+    Field(3, frozenset({2, 4}), 0x09, 0x0c, "name", "ARS"),    # npc, scene object
+    Field(3, frozenset({3}), 0x06, 0x0c, "name", "ARS"),       # monster
+    Field(2, None, 0x03, 0x0d, "name", "MAP"),
+]
+
+STRING_KINDS = {"say", "choice", "message", "setscenename", "showgut", "menu", "timemsg"}
+
+
+def _field_text(raw: bytes) -> bytes:
+    return raw.split(b"\0", 1)[0]
+
+
+def fields_for(k: Key) -> list[Field]:
+    return [f for f in FIELDS if f.res_type == k[0] and (f.subtypes is None or k[1] in f.subtypes)]
+
+
+def export(lib: Lib) -> list[dict]:
+    rows: list[dict] = []
+    map_names = {}
+    for k in lib.keys_of(2):
+        map_names[k] = gutmod.bytes_to_text(_field_text(lib.res[k][0x03:0x10]))
+
+    for k in lib.keys_of(1):
+        g = gutmod.parse(lib.res[k])
+        hl = g.header_len
+        scene = None
+        script_rows: list[dict] = []
+        for i in g.code:
+            if i.name == "loadmap":
+                scene = map_names.get((2, i.args[0], i.args[1]), scene)
+            if i.name not in STRING_KINDS:
+                continue
+            addr = hl + i.off
+            strs = [(n, v) for n, (kind, v) in enumerate(zip(i.kinds, i.args)) if kind == "s"]
+            for sn, (argn, v) in enumerate(strs):
+                rid = f"gut/{key_str(k)}@{addr:04x}" + (f".{sn + 1}" if len(strs) > 1 else "")
+                ctx: dict = {"scene": scene}
+                limits: dict = {"max_bytes": None}
+                if i.name == "say":
+                    ctx["pic"] = i.args[0]
+                    limits.update(box="say", portrait=bool(i.args[0]))
+                elif i.name == "choice":
+                    limits.update(box="choice", max_bytes=19)   # 8 px per byte, 160 px wide frame
+                elif i.name == "showgut":
+                    limits.update(box="scroll", cols=20)
+                elif i.name == "menu":
+                    limits.update(box="menu", sep=" ")
+                elif i.name == "setscenename":
+                    limits.update(box="scenename")
+                if i.name == "setscenename":
+                    scene = gutmod.bytes_to_text(v)
+                script_rows.append({
+                    "id": rid, "kind": i.name, "zh": gutmod.bytes_to_text(v), "en": "",
+                    "ctx": ctx, "limits": limits, "status": "todo", "note": "",
+                })
+        for n, r in enumerate(script_rows):
+            r["prev"] = script_rows[n - 1]["id"] if n else None
+            r["next"] = script_rows[n + 1]["id"] if n + 1 < len(script_rows) else None
+        rows += script_rows
+
+    for t in (6, 4, 3, 2):
+        for k in lib.keys_of(t):
+            blob = lib.res[k]
+            for f in fields_for(k):
+                text = _field_text(blob[f.offset:f.offset + f.size])
+                if not text:
+                    continue
+                rows.append({
+                    "id": f"{f.tag}/{key_str(k)}/{f.name}", "kind": f"{f.tag.lower()}.{f.name}",
+                    "zh": gutmod.bytes_to_text(text), "en": "", "ctx": {},
+                    "limits": {"max_bytes": f.size - 1 if f.name == "name" else f.size},
+                    "status": "todo", "note": "",
+                })
+    return rows
+
+
+def write_jsonl(rows: list[dict], path: str) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+
+def read_jsonl(path: str) -> list[dict]:
+    with open(path, encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+class ImportError_(Exception):
+    pass
+
+
+def encode_en(s: str) -> bytes:
+    """English text -> bytes. Escapes (\\xNN) pass through like the listing."""
+    return gutmod.text_to_bytes(s)
+
+
+def apply(lib: Lib, rows: list[dict]) -> tuple[Lib, list[str]]:
+    """Return a new Lib with every row that has `en` applied, plus problems.
+    Problems are fatal for that row only; the original text stays."""
+    problems: list[str] = []
+    res = dict(lib.res)
+    gut_rows: dict[Key, dict[str, bytes]] = {}
+    for r in rows:
+        if not r.get("en"):
+            continue
+        rid = r["id"]
+        try:
+            data = encode_en(r["en"])
+        except gutmod.GutError as e:
+            problems.append(f"{rid}: {e}")
+            continue
+        if b"\0" in data:
+            problems.append(f"{rid}: contains NUL")
+            continue
+        if rid.startswith("gut/"):
+            key_s, _, where = rid[4:].partition("@")
+            gut_rows.setdefault(parse_key(key_s), {})[where] = data
+            continue
+        tag, key_s, fname = rid.split("/")
+        k = parse_key(key_s)
+        if k not in res:
+            problems.append(f"{rid}: no such resource")
+            continue
+        fs = [f for f in fields_for(k) if f.name == fname and f.tag == tag]
+        if not fs:
+            problems.append(f"{rid}: unknown field")
+            continue
+        f = fs[0]
+        cap = f.size - 1 if f.name == "name" else f.size
+        if len(data) > cap:
+            problems.append(f"{rid}: {len(data)} bytes, field holds {cap}")
+            continue
+        blob = bytearray(res[k])
+        span = data + (b"\0" if len(data) < f.size else b"")
+        blob[f.offset:f.offset + len(span)] = span
+        res[k] = bytes(blob)
+
+    for k, repl in gut_rows.items():
+        if k not in res:
+            problems.append(f"gut/{key_str(k)}: no such script")
+            continue
+        g = gutmod.parse(lib.res[k])
+        targets = gutmod.target_map(g)
+        hl = g.header_len
+        for i in g.code:
+            addr = f"{hl + i.off:04x}"
+            sidx = [n for n, kind in enumerate(i.kinds) if kind == "s"]
+            for sn, argn in enumerate(sidx):
+                tag = addr + (f".{sn + 1}" if len(sidx) > 1 else "")
+                if tag in repl:
+                    i.args[argn] = repl.pop(tag)
+        for tag in repl:
+            problems.append(f"gut/{key_str(k)}@{tag}: no string at that address")
+        try:
+            res[k] = gutmod.build(g, targets)
+        except gutmod.GutError as e:
+            problems.append(f"gut/{key_str(k)}: {e}")
+    out = Lib(lib.head, lib.banks, lib.order, res, lib.tail)
+    return out, problems
