@@ -213,10 +213,14 @@ def walk(keys, quiet=False):
     return ("ok", len(keys), None)
 
 
+def _event_cells(m, keep=()):
+    return {c for cs in m.events().values() for c in cs} - set(keep)
+
+
 def goto(x, y, blocked=(), quiet=False):
     for _ in range(10):
         m = curmap()
-        p = m.path(pos(), (x, y), blocked=set(blocked))
+        p = m.path(pos(), (x, y), blocked=set(blocked) | _event_cells(m, [(x, y)]))
         if p is None:
             return ("nopath", 0, None)
         r = walk(p, quiet)
@@ -357,7 +361,7 @@ def goto_adj(x, y, tries=4, quiet=False):
         m = curmap()
         others = blockers() - {(x, y)}
         goals = [(x + dx, y + dy) for dx, dy in _DIRS if m.walk(x + dx, y + dy) and (x + dx, y + dy) not in others]
-        p = m.path(pos(), set(goals), blocked=others)
+        p = m.path(pos(), set(goals), blocked=others | _event_cells(m, goals))
         if p is None:
             return False
         r = walk(p, quiet)
@@ -438,7 +442,7 @@ def exit_room(ev=1, quiet=False):
 
 
 
-def enter_door(ev, quiet=False, tries=8):
+def enter_door(ev, quiet=False, tries=8, once=False):
     """Trigger map tile event `ev` (script event 40+ev): step onto it, or walk
     into it when it is not walkable. Returns True when the map changed."""
     m0 = mapid()
@@ -449,12 +453,12 @@ def enter_door(ev, quiet=False, tries=8):
                 goto(*c, quiet=quiet)
             else:
                 r = goto_adj(*c, quiet=quiet)
-                if r is True:
-                    px, py = pos()
+                px, py = pos()
+                if r is True and mapid() == m0 and (c[0] - px, c[1] - py) in _DIRS:
                     e.tap(_DIRS[(c[0] - px, c[1] - py)], hold=2, wait=8)
             adv(quiet=quiet)
-            if mapid() != m0:
-                return True
+            if mapid() != m0 or once:
+                return mapid() != m0
         e.run_frames(40)
     return False
 
@@ -617,6 +621,402 @@ def fight3(plan=(), heal_below=0.5, quiet=True, max_rounds=400, log_hp=True):
     texts += [t for _, t in poll(quiet)]
     FIGHTS.append((frame(), texts))
     return texts
+
+
+
+
+def to_wheel(max_taps=30, quiet=False):
+    """ENTER through dialogue until the battle command wheel is shown."""
+    for _ in range(max_taps):
+        if wheel_shown():
+            return True
+        st = waitstate()
+        poll(quiet)
+        if wheel_shown():
+            return True
+        if st == "idle":
+            return False
+        e.tap("ENTER", hold=2, wait=20)
+    return wheel_shown()
+
+
+
+
+def wait_wheel(max_frames=3000):
+    """Run until the battle wheel waits for a key ("wheel"), the free map ("idle"),
+    or a key wait that is neither for 90+ frames ("msg": results/dialogue box)."""
+    n = 0
+    still = 0
+    while n < max_frames:
+        e.run_frames(5)
+        n += 5
+        pc, sp = cpu()
+        if pc == KEYWAIT_PC:
+            if wheel_shown():
+                e.run_frames(2)
+                if wheel_shown() and cpu()[0] == KEYWAIT_PC:
+                    return "wheel"
+            elif sp == IDLE_SP:
+                return "idle"
+            still += 5
+            if still >= 90:
+                return "msg"
+        else:
+            still = 0
+    return None
+
+
+def turn(*keys, quiet=True):
+    """Press keys (each with a 25-frame wait) from the wheel, then wait for the next wheel."""
+    for k in keys:
+        e.tap(k, hold=2, wait=25)
+    r = wait_wheel()
+    t = [x for _, x in poll(quiet)]
+    s_ = stats() or {}
+    print("turn", keys, "->", r, "hp", s_.get("hp"), "mp", s_.get("mp"), mons(), t[:12])
+    return r
+
+
+
+
+MON_BASE, MON_STRIDE = 0x1826, 0x33   # battle monster records (ARS type-3 layout)
+
+
+def mons(n=3):
+    """[(name, hp, maxhp)] of the battle's monsters (records copied from ARS)."""
+    out = []
+    for i in range(n):
+        r = e.read(MON_BASE + i * MON_STRIDE, MON_STRIDE)
+        if r[0] != 3:
+            break
+        name = r[6:0x12].split(b"\0")[0].decode("gb2312", "replace")
+        out.append((name, r[0x1a] | r[0x1b] << 8, r[0x18] | r[0x19] << 8))
+    return out
+
+
+
+
+# battle action key sequences (from the command wheel)
+A_ATTACK = ("UP", "ENTER")
+A_HEAL = ("LEFT", "ENTER", "ENTER", "ENTER")   # 气疗术 (first magic) on self
+
+
+def A_USE(i):
+    """道具/使用 list item i (cursor reset by UPs), on the hero."""
+    return ("DOWN", "ENTER", "DOWN", "ENTER", "DOWN", "DOWN", "ENTER", None) + ("UP",) * 14 + ("DOWN",) * i + ("ENTER", "ENTER")
+
+
+def A_THROW(i, right=0):
+    """道具/投掷 list item i at target (default first, RIGHT moves)."""
+    return ("DOWN", "ENTER", "DOWN", "ENTER", "DOWN", "ENTER", None) + ("UP",) * 12 + ("DOWN",) * i + ("ENTER",) + ("RIGHT",) * right + ("ENTER",)
+
+
+def act(keys, delay=0, w=26):
+    if delay:
+        e.run_frames(delay)
+    if callable(keys):
+        keys()
+        keys = ()
+    for k in keys:
+        if k is None:
+            e.run_frames(30)   # let a list finish drawing (first key is dropped otherwise)
+        else:
+            e.tap(k, hold=2, wait=w)
+    r = wait_wheel()
+    poll(True)
+    return r
+
+
+
+
+def bstate():
+    s_ = stats() or {}
+    return sum(h_ for _, h_, _m in mons()), s_.get("hp", 0), s_.get("mp", 0), mons()
+
+
+def best_round(keys, delays=(0, 2, 5, 9, 14, 20), w_hp=1.5, tag="br"):
+    """Try `keys` after each delay from a saved state; keep the best outcome.
+    Score = enemy HP removed - w_hp * hero HP lost (+ big bonus on a win)."""
+    e.call("snapshot.save", name=tag)
+    m0, h0, _, _ = bstate()
+    best = None
+    for d in delays:
+        e.call("snapshot.load", name=tag)
+        r = act(keys, delay=d)
+        m1, h1, mp1, ms = bstate()
+        if r != "wheel":
+            sc = 1e6 if (h1 > 0 and m1 == 0) or r == "idle" else (-1e6 if h1 == 0 else 0)
+            if r == "msg" and h1 > 0:
+                sc = 1e6
+        else:
+            sc = (m0 - m1) - w_hp * (h0 - h1)
+        if best is None or sc > best[0]:
+            best = (sc, d, r)
+        if sc >= 1e6:
+            break
+    e.call("snapshot.load", name=tag)
+    r = act(keys, delay=best[1])
+    print("round", keys[:2], "delay", best[1], "score", best[0], "->", r, bstate())
+    return r
+
+
+
+
+def boss_policy(rounds=60, heal_at=140, first=(), tag="bp"):
+    """Run a battle with a simple policy, snapshot each round as tag%d."""
+    plan = list(first)
+    hist = []
+    for i in range(rounds):
+        m, h_, mp, ms = bstate()
+        if plan:
+            keys = plan.pop(0)
+        elif h_ < heal_at:
+            keys = A_USE(12)
+        else:
+            keys = A_ATTACK
+        e.call("snapshot.save", name="%s%d" % (tag, i))
+        r = act(keys)
+        st = bstate()
+        hist.append((i, keys if callable(keys) else keys[:1], r, st[1], st[2], [x[1] for x in st[3]]))
+        print(hist[-1])
+        if r != "wheel":
+            break
+    return hist
+
+
+
+
+def try_actions(cands, score, tag="ta"):
+    """Evaluate each (name, keys) from the saved state; replay the best. Returns (name, result)."""
+    e.call("snapshot.save", name=tag)
+    res = []
+    for name, keys in cands:
+        e.call("snapshot.load", name=tag)
+        try:
+            r = act(keys)
+        except LookupError:
+            continue
+        st = bstate()
+        res.append((score(r, st), name, keys, r, st))
+    res.sort(key=lambda x: -x[0])
+    best = res[0]
+    e.call("snapshot.load", name=tag)
+    r = act(best[2])
+    return best[1], r, res
+
+
+def boss_greedy(rounds=80, heal_at=150, extra=(), tag="bg", items=None):
+    """Greedy one-round lookahead battle loop. extra: more attack-ish candidates
+    [(name, keys)]; items: dict name->count for consumables in extra."""
+    items = dict(items or {})
+    hist = []
+    for i in range(rounds):
+        m0, h0, mp0, ms0 = bstate()
+        e.call("snapshot.save", name="%s%d" % (tag, i))
+        if h0 < heal_at:
+            cands = [("qyj", A_USE_N("青阴君"))]
+            if mp0 >= 36:
+                cands.append(("qls", A_HEAL))
+            def sc(r, st):
+                if r != "wheel":
+                    return 1e6 if st[1] > 0 else -1e6
+                return st[1] + 0.3 * (m0 - st[0])
+        else:
+            cands = [("atk", A_ATTACK)] + list(extra)
+            def sc(r, st):
+                if r != "wheel":
+                    return 1e6 if st[1] > 0 else -1e6
+                return (m0 - st[0]) - 1.0 * (h0 - st[1])
+        name, r, res = try_actions(cands, sc)
+        st = bstate()
+        hist.append((i, name, r, st[1], st[2], [x[1] for x in st[3]]))
+        print(hist[-1], [(round(x[0]), x[1]) for x in res])
+        if r != "wheel":
+            break
+    return hist
+
+
+
+
+def _pick(menu_keys, name, max_items=24):
+    """Open an item list with menu_keys, move to `name` by reading the drawn names.
+    Returns True when the cursor is on it."""
+    for k in menu_keys:
+        e.tap(k, hold=2, wait=26)
+    e.run_frames(30)
+    cur = [t for _, t in poll(True)]
+    nm = cur[cur.index("数量：") - 1] if "数量：" in cur else None
+    for _ in range(max_items):          # to the top
+        if nm == name:
+            return True
+        e.tap("UP", hold=2, wait=26)
+        o = [t for _, t in poll(True)]
+        if not o:
+            break
+        nm = o[0]
+    for _ in range(max_items):
+        if nm == name:
+            return True
+        e.tap("DOWN", hold=2, wait=26)
+        o = [t for _, t in poll(True)]
+        if not o:
+            return False
+        nm = o[0]
+    return nm == name
+
+
+def A_USE_N(name):
+    def f():
+        if not _pick(("DOWN", "ENTER", "DOWN", "ENTER", "DOWN", "DOWN", "ENTER"), name):
+            raise LookupError(name)
+        e.tap("ENTER", hold=2, wait=26)
+        e.tap("ENTER", hold=2, wait=26)
+    return f
+
+
+def A_THROW_N(name, right=0):
+    def f():
+        if not _pick(("DOWN", "ENTER", "DOWN", "ENTER", "DOWN", "ENTER"), name):
+            raise LookupError(name)
+        e.tap("ENTER", hold=2, wait=26)
+        for _ in range(right):
+            e.tap("RIGHT", hold=2, wait=26)
+        e.tap("ENTER", hold=2, wait=26)
+    return f
+
+
+
+
+EVENT_BASE = 0x2c04   # script event flags: event n = bit (n % 8) of byte EVENT_BASE + n // 8
+
+
+def flags(lo=0, hi=2400):
+    m = e.read(EVENT_BASE, 300)
+    return [n for n in range(lo, hi) if m[n // 8] >> (n % 8) & 1]
+
+
+def maze_walk(goal, lo=100, hi=128, maxsteps=30, quiet=True):
+    """Follow tools/play/maze.py's solution from the current script to `goal` ("3-1"),
+    re-solving after every step from the live event flags."""
+    import maze as _mz
+    for _ in range(maxsteps):
+        key = h.where[0][2:] if h.where else None
+        if key == goal:
+            return True
+        p = _mz.solve(key, goal, set(flags(lo, hi + 1)), range(lo, hi + 1))
+        if not p:
+            print("maze: no path from", key, flags(lo, hi + 1))
+            return False
+        k, tile, nxt, fl, _n = p[0]
+        r = enter_door(tile, quiet=quiet)
+        print("maze:", k, "tile", tile, "->", h.where, "flags", flags(lo, hi + 1), r)
+    return False
+
+
+
+
+def npc_pos(key):
+    """createnpc positions (x, y) in a script."""
+    return [(int(x), int(y)) for _i, _t, x, y in _re.findall(r"createnpc (\d+), (\d+), (\d+), (\d+)", gut(key))]
+
+
+def visit(tile, key, talks=1, exit_tile=1, do_loot=True, quiet=False):
+    """Enter a house by map tile `tile`, talk to its NPCs `talks` times each,
+    loot its boxes, leave by `exit_tile`."""
+    m0 = mapid()
+    if not enter_door(tile, quiet=quiet):
+        print("visit: could not enter", tile)
+        return False
+    talk_all(talks, quiet=quiet)
+    if do_loot:
+        loot(key, quiet=quiet)
+    if exit_tile:
+        enter_door(exit_tile, quiet=quiet)
+    return mapid() == m0
+
+
+
+
+def _obj_at(addr):
+    for o in objs():
+        if o["addr"] == addr:
+            return o
+    return None
+
+
+def talk_obj(addr, quiet=False, tries=6):
+    """Talk to the map object whose heap record is at `addr` (NPCs wander, and the
+    record's +11/+12 fields follow x/y, so position is not an identity)."""
+    for _ in range(tries):
+        o = _obj_at(addr)
+        if not o:
+            return None
+        r = goto_adj(o["x"], o["y"], quiet=quiet)
+        if r is not True:
+            if isinstance(r, tuple):
+                return r
+            continue
+        o2 = _obj_at(addr)
+        px, py = pos()
+        if not o2 or (o2["x"] - px, o2["y"] - py) not in _DIRS:
+            continue
+        e.tap(_DIRS[(o2["x"] - px, o2["y"] - py)], hold=2, wait=8)
+        return press_enter(quiet)
+    return None
+
+
+def talk_all(times=1, quiet=False, names=None):
+    out = {}
+    for o in objs():
+        if o["kind"] in (2, 3) and (names is None or o["name"] in names):
+            for _ in range(times):
+                out.setdefault(o["name"], []).append(talk_obj(o["addr"], quiet=quiet))
+    return out
+
+
+
+
+def shop_browse(addr=None, n=30, quiet=False, tile=None):
+    """Talk to the shopkeeper (object addr, default first NPC), page through the
+    shop list with DOWN (draws every item name/description), then EXIT."""
+    if tile is not None:       # counter: walk into the map tile event
+        m = curmap()
+        for c in m.events().get(tile, []):
+            if goto_adj(*c, quiet=quiet) is True:
+                px, py = pos()
+                e.tap(_DIRS[(c[0] - px, c[1] - py)], hold=2, wait=8)
+                break
+    else:
+        if addr is None:
+            addr = [o for o in objs() if o["kind"] in (2, 3)][0]["addr"]
+        o = _obj_at(addr)
+        r = goto_adj(o["x"], o["y"], quiet=quiet)
+        o = _obj_at(addr)
+        px, py = pos()
+        e.tap(_DIRS[(o["x"] - px, o["y"] - py)], hold=2, wait=8)
+        e.tap("ENTER", hold=2, wait=20)
+    names = []
+    for _ in range(10):        # through the greeting, until the list is drawn
+        e.run_frames(20)
+        t = [x for _, x in poll(quiet)]
+        if "价：" in t or "名：" in t:
+            break
+        if waitstate() == "key":
+            e.tap("ENTER", hold=2, wait=20)
+            t = [x for _, x in poll(quiet)]
+            if "价：" in t or "名：" in t:
+                break
+    e.run_frames(20)
+    poll(quiet)
+    for _ in range(n):
+        e.tap("DOWN", hold=2, wait=26)
+        t = [x for _, x in poll(quiet)]
+        if not t:
+            break
+        names.append(t[0])
+    e.tap("EXIT", hold=2, wait=30)
+    adv(quiet=quiet)
+    return names
 
 
 __all__ = [k for k in list(globals()) if not k.startswith("_") and k not in _PRIVATE]
