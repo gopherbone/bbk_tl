@@ -1,0 +1,15 @@
+[package]
+name = "bbkplay"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Play a BBK game in a window and record every key press as a replayable route"
+
+[[bin]]
+name = "bbkplay"
+path = "src/main.rs"
+
+[dependencies]
+bbkemu-core = { path = "../core" }
+winit = "0.30"
+softbuffer = "0.4"

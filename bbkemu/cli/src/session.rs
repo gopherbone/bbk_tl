@@ -5,6 +5,7 @@ use std::collections::{BTreeMap, HashMap, VecDeque};
 
 use bbkemu_core::input::BbkKey;
 use bbkemu_core::memory::BusAccess;
+use bbkemu_core::route;
 use bbkemu_core::{model, Emulator};
 use serde_json::{json, Value};
 
@@ -190,6 +191,8 @@ pub struct Session {
     instructions: u64,
     held: Option<BbkKey>,
     schedule: BTreeMap<u64, Vec<InputEv>>,
+    /// route events from input.replay, applied exactly as bbkplay applies them
+    replay: BTreeMap<u64, Vec<route::Event>>,
     breaks: Vec<Break>,
     watches: Vec<Watch>,
     next_id: u64,
@@ -214,6 +217,7 @@ impl Session {
             instructions: 0,
             held: None,
             schedule: BTreeMap::new(),
+            replay: BTreeMap::new(),
             breaks: Vec::new(),
             watches: Vec::new(),
             next_id: 1,
@@ -317,6 +321,7 @@ impl Session {
             }
             "input.tap" => self.input_tap(p),
             "input.script" => self.input_script(p),
+            "input.replay" => self.input_replay(p),
             "screen.capture" => self.screen_capture(p),
             "snapshot.save" => self.snapshot_save(p),
             "snapshot.load" => self.snapshot_load(p),
@@ -405,6 +410,7 @@ impl Session {
         self.instructions = 0;
         self.held = None;
         self.schedule.clear();
+        self.replay.clear();
         self.breaks.clear();
         self.watches.clear();
         self.break_log.clear();
@@ -478,6 +484,12 @@ impl Session {
     fn on_frame_start(&mut self) {
         let Some(emu) = self.emu.as_mut() else { return };
         let f = emu.frame_count();
+        let due: Vec<u64> = self.replay.range(..=f).map(|(k, _)| *k).collect();
+        for k in due {
+            for ev in self.replay.remove(&k).unwrap_or_default() {
+                route::apply(emu, &ev);
+            }
+        }
         // apply every input event due at or before this frame
         let due: Vec<u64> = self.schedule.range(..=f).map(|(k, _)| *k).collect();
         for k in due {
@@ -493,10 +505,6 @@ impl Session {
                     }
                 }
             }
-        }
-        if let Some(key) = self.held {
-            // a held key keeps its interrupt flag raised, like a real press
-            emu.key_down(key);
         }
         emu.begin_frame();
         if self.rewind_cap > 0 {
@@ -950,6 +958,46 @@ impl Session {
         Ok(json!({"queued_frames": frames}))
     }
 
+    /// Replay a bbkplay route. Events must not be in the past; normally this
+    /// runs right after load_gam. Runs to the route's last frame (or
+    /// `until_frame`) unless run:false.
+    fn input_replay(&mut self, p: &Value) -> R<Value> {
+        let path = p_str(p, "path").ok_or("missing 'path'")?;
+        let text = std::fs::read_to_string(path).map_err(|e| format!("{path}: {e}"))?;
+        let now = self.emu()?.frame_count();
+        let mut events = Vec::new();
+        let mut marks = Vec::new();
+        for (n, line) in text.lines().enumerate() {
+            if let Some((hash, _)) = route::parse_header(line) {
+                if hash != route::gam_hash(&self.gam) {
+                    return Err(format!("{path} was recorded on a different .gam"));
+                }
+                continue;
+            }
+            if let Some(e) = route::parse_line(line).map_err(|e| format!("{path}:{}: {e}", n + 1))? {
+                if e.frame < now {
+                    return Err(format!("{path}:{}: frame {} is already past (now {now})", n + 1, e.frame));
+                }
+                if let route::Action::Mark(m) = &e.action {
+                    marks.push(json!({"frame": e.frame, "mark": m}));
+                }
+                events.push(e);
+            }
+        }
+        let last = events.iter().map(|e| e.frame).max().unwrap_or(now);
+        let n = events.len();
+        for e in events {
+            self.replay.entry(e.frame).or_default().push(e);
+        }
+        let until = p_num(p, "until_frame")?.unwrap_or(last);
+        let mut out = json!({"events": n, "last_frame": last, "marks": marks});
+        if p_bool(p, "run", true) && until > now {
+            let r = self.run(Limit::Frames(until - now))?;
+            out["run"] = r;
+        }
+        Ok(out)
+    }
+
     // ------------------------------------------------------------- screen --
 
     fn screen_capture(&mut self, p: &Value) -> R<Value> {
@@ -991,6 +1039,7 @@ impl Session {
         self.instructions = s.instructions;
         self.held = s.held;
         self.schedule.clear();
+        self.replay.clear();
         self.skip_break_at = None;
     }
 

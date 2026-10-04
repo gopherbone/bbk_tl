@@ -56,6 +56,12 @@ python3 bbkemu/cli/tests/smoke.py         # boot, first dialogue, text.log ids
 Python client; its `Hooks` class gives `text.log` (every string the OS draws)
 tagged with `script.where` (the string-table row id that drew it).
 
+## Playthrough route
+
+`PLAYING.md`: play in `bbkplay` (records `routes/*.route.jsonl`); replay with
+`input.replay` in `bbkemu`. Both apply inputs through `core/src/route.rs`, so
+replays match frame for frame.
+
 ## Not done yet
 
 - Phase 4: full-game input route, glossary, engine-code strings.

@@ -13,6 +13,7 @@ pub mod input;
 pub mod lcd;
 pub mod memory;
 pub mod model;
+pub mod route;
 pub mod save;
 
 pub use emulator::Emulator;
