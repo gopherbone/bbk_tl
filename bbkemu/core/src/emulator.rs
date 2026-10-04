@@ -153,14 +153,15 @@ impl Emulator {
         } else {
             0x7000 // A4980
         };
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xF8] = 0x02;
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xF9] = 0x02;
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xFA] = 0x02;
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xFB] = 0x02;
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xFC] = 0x02;
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xFD] = 0x02;
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xFE] = 0x03;
-        self.cpu.memory_mut().flash[flash_base + save_base + 0xFF] = 0x02;
+        // bbk_tl fix: the save-area marker at flash 0x100F8 (A4988) / 0xF0F8
+        // (A4980) lies inside any game larger than ~12 KiB (the game sits at
+        // flash 0xD000) and clobbered 8 bytes of 伏魔记's engine code. Only
+        // write it when it is outside the game image.
+        let marker = flash_base + save_base + 0xF8;
+        if marker + 8 <= flash_offset || marker >= flash_offset + game_data.len() {
+            self.cpu.memory_mut().flash[marker..marker + 8]
+                .copy_from_slice(&[0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x03, 0x02]);
+        }
 
         // Set system control
         self.cpu.memory_mut().write(0x2029, 0x0D);
@@ -456,6 +457,7 @@ impl Emulator {
         self.cpu.memory_mut().ram[0x100 | sp.wrapping_sub(1) as usize] = (pc & 0xFF) as u8;
         self.cpu.memory_mut().ram[0x100 | sp.wrapping_sub(2) as usize] = status;
         self.cpu.set_sp(sp.wrapping_sub(3));
+        self.cpu.set_interrupt_disable();
 
         // Each vector slot contains an executable ROM jump stub.
         self.cpu.set_pc(0x0300 + (vector_idx as u16) * 4);

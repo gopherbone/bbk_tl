@@ -1,0 +1,622 @@
+"""Helpers for playing 伏魔记 in bbkemu while recording a route.
+
+Used inside the daemon namespace (tools/play/daemon.py) or directly:
+    from play import *; start()
+"""
+import json, os, sys
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, os.path.join(ROOT, "bbkemu", "cli", "py"))
+from bbkemu import BBKEmu, Hooks  # noqa: E402
+
+GAM = os.path.join(ROOT, "gam4980/retroarch/downloads/bbk/伏魔记.gam")
+ROMS = os.path.join(ROOT, "gam4980/retroarch/system/gam4980")
+ROUTE = os.path.join(ROOT, "routes/fmj.agent.route.jsonl")
+SEEN = os.path.join(ROOT, "work/playthrough/seen.json")
+SHOTS = os.path.join(ROOT, "work/playthrough/shots")
+STRINGS = os.path.join(ROOT, "work/fmj.strings.jsonl")
+# The stock bbkemu hangs at frame ~3540 (RTC alarm IRQ storm: IRQ entry does not
+# set the I flag), and load_gam clobbers gam 0x30f8..0x30ff (engine code) with a
+# save-area marker (fixed in bbkemu/core since commit "core: fix IRQ I flag...").
+BIN = os.environ.get("BBKEMU_BIN", os.path.join(ROOT, "bbkemu/target/release/bbkemu"))
+
+import builtins as _b
+e = getattr(_b, "e", None)
+h = getattr(_b, "h", None)
+_PRIVATE = {"e", "h"}
+seen = set()
+log = []          # every drawn line this session: (frame, row id or None, text)
+
+ROWS = {}
+for _l in open(STRINGS, encoding="utf-8"):
+    _r = json.loads(_l)
+    ROWS[_r["id"]] = _r
+SAY_IDS = {k for k, r in ROWS.items() if r["kind"] == "say"}
+# engine-drawn resource text (item/actor/magic names, descriptions) by text
+NAME_IDX = {}
+DESC_ROWS = []
+for _k, _r in ROWS.items():
+    if _r["kind"] in ("grs.name", "ars.name", "mrs.name", "map.name"):
+        NAME_IDX.setdefault(_r["zh"].strip(), []).append(_k)
+    elif _r["kind"] in ("grs.desc", "mrs.desc"):
+        DESC_ROWS.append((_k, _r["zh"]))
+if os.path.exists(SEEN):
+    seen = set(json.load(open(SEEN)))
+
+
+def _load_seen():
+    global seen
+    if os.path.exists(SEEN):
+        seen = set(json.load(open(SEEN)))
+
+
+def save_seen():
+    json.dump(sorted(seen), open(SEEN, "w"), indent=0)
+
+
+def start(record=True):
+    """Boot, replay/resume the route, install hooks."""
+    global e, h
+    _load_seen()
+    e = BBKEmu(BIN)
+    e.load_gam(GAM, rom_dir=ROMS)
+    if record:
+        r = e.call("route.record", path=ROUTE)
+        print("route.record:", r)
+    h = Hooks(e)
+    import builtins
+    builtins.e, builtins.h = e, h
+    print("frame", frame())
+
+
+LAST_HIT = {}   # breakpoint id -> last frame it fired (non-hook breakpoints)
+
+
+def _drain():
+    """Hooks.drain, but also remembers when other silent breakpoints fired."""
+    from bbkemu import _gb
+    out = []
+    for x in e.call("break.log", clear=True, max=100000)["entries"]:
+        if x["id"] == h.fetch_id:
+            pos_ = h._script_pos(x["mem"][0])
+            if pos_:
+                h.where = pos_
+        elif x["id"] == h.text_id:
+            args = bytes.fromhex(x["mem"][1])
+            out.append({"frame": x["frame"], "y": args[0], "text": _gb(x["mem"][0]),
+                        "raw": x["mem"][0], "args": x["mem"][1], "script": h.where})
+        else:
+            LAST_HIT[x["id"]] = x["frame"]
+    return out
+
+
+def frame():
+    return e.call("info")["frame"]
+
+
+def poll(quiet=False):
+    """Drain drawn text, update coverage, print new lines."""
+    out = []
+    printed = set()
+    for d in _drain():
+        rid = None
+        if d["script"]:
+            rid = "gut/%s@%04x" % d["script"]
+        txt = d["text"].rstrip()
+        if rid in ROWS:
+            seen.add(rid)
+        t = txt.strip()
+        if t in NAME_IDX:
+            seen.update(NAME_IDX[t])
+        elif len(t) >= 4:
+            for k, z in DESC_ROWS:
+                if z.startswith(t):
+                    seen.add(k)
+        log.append((d["frame"], rid, txt))
+        out.append((rid, txt))
+        if not quiet and txt not in printed:
+            printed.add(txt)
+            print("  [%s] %s" % (rid, txt))
+    save_seen()
+    return out
+
+
+def tap(key, hold=4, wait=4, n=1, quiet=False):
+    for _ in range(n):
+        e.tap(key, hold=hold, wait=wait)
+    return poll(quiet)
+
+
+def wait(n):
+    e.run_frames(n)
+    return poll()
+
+
+def shot(name="s", scale=2):
+    p = os.path.join(SHOTS, name + ".png")
+    e.screen(p, scale=scale)
+    return p
+
+
+def hash_():
+    return e.screen()["hash"]
+
+
+def coverage():
+    s = len(seen & SAY_IDS)
+    print("say rows seen: %d / %d (%.1f%%); all rows seen: %d / %d" % (
+        s, len(SAY_IDS), 100.0 * s / len(SAY_IDS), len(seen), len(ROWS)))
+
+
+def mark(text):
+    e.call("route.mark", text=text)
+
+
+def stop():
+    e.call("route.stop")
+    save_seen()
+
+
+
+# --- RAM ------------------------------------------------------------------
+# 0x1979 map type, 0x197a map index (MAP key (2, a, b) = `loadmap a, b`)
+# 0x197c/0x197d view origin x/y; player tile = origin + (4, 3)
+# 0x197e/0x197f map width/height
+def pos():
+    b = e.read(0x1979, 7)
+    return (b[3] + 4, b[4] + 3)
+
+
+def mapid():
+    b = e.read(0x1979, 2)
+    return (b[0], b[1])
+
+
+def stack():
+    sp = int(e.regs()["sp"], 16)
+    return e.read(0x100 + sp + 1, 0xff - sp).hex()
+
+
+# --- walking ----------------------------------------------------------------
+import maps as _maps  # noqa: E402
+_mapcache = {}
+
+
+def curmap():
+    k = mapid()
+    if k not in _mapcache:
+        _mapcache[k] = _maps.Map(*k)
+    return _mapcache[k]
+
+
+def step(k, quiet=False):
+    """One tile step (10 frames). Returns text drawn (list) or [] ."""
+    e.tap(k, hold=2, wait=8)
+    return poll(quiet)
+
+
+def walk(keys, quiet=False):
+    """Walk a key list; stop early if the position doesn't change or text appears."""
+    for i, k in enumerate(keys):
+        p0, m0 = pos(), mapid()
+        out = step(k, quiet)
+        if out or mapid() != m0:
+            return ("event", i, out)
+        if pos() == p0 and in_battle():
+            return ("fight", i, fight(quiet=quiet))
+        if pos() == p0:
+            out = step(k, quiet)
+            if out or mapid() != m0:
+                return ("event", i, out)
+            if pos() == p0:
+                return ("blocked", i, k)
+    return ("ok", len(keys), None)
+
+
+def goto(x, y, blocked=(), quiet=False):
+    for _ in range(10):
+        m = curmap()
+        p = m.path(pos(), (x, y), blocked=set(blocked))
+        if p is None:
+            return ("nopath", 0, None)
+        r = walk(p, quiet)
+        if r[0] != "fight":
+            return r
+        print("  fight:", r[2])
+    return r
+
+
+def show(marks=None):
+    print(curmap().show(me=pos(), marks=marks))
+
+
+
+# --- dialogue ----------------------------------------------------------------
+KEYWAIT_PC = "e9e317"   # OS wait-for-key; on the free map the hardware sp is 0xe8
+IDLE_SP = 0xE8
+
+
+def cpu():
+    r = e.regs()
+    return r["pc_phys"], int(r["sp"], 16)
+
+
+def waitstate(n=8):
+    """Sample n frames: 'idle' (free map), 'key' (waiting a key in a box/menu), 'busy'."""
+    sps = set()
+    e.run_frames(2)
+    for _ in range(n):
+        e.run_frames(1)
+        pc, sp = cpu()
+        if pc == KEYWAIT_PC:
+            sps.add(sp)
+    if sps - {IDLE_SP}:
+        return "key"
+    if IDLE_SP in sps:
+        return "idle"
+    return "busy"
+
+
+def idle():
+    return waitstate() == "idle"
+
+
+BATTLE_FRAMES = ("12d3e709", "12d3e33b")   # far-call frames under the battle key wait
+
+
+def in_battle():
+    """At a key wait whose call stack is the battle command loop."""
+    for _ in range(40):
+        e.run_frames(3)
+        pc, sp = cpu()
+        if pc == KEYWAIT_PC:
+            st = stack()
+            return any(f in st for f in BATTLE_FRAMES)
+    return False
+
+
+def adv(max_taps=80, quiet=False, key="ENTER"):
+    """Press ENTER until back on the free map. Returns drawn lines.
+    Stops (and prints STUCK) when 3 taps in a row draw nothing new: a menu/shop."""
+    out = []
+    texts = set()
+    stale = 0
+    for _ in range(max_taps):
+        st = waitstate()
+        out += poll(quiet)
+        if st == "idle":
+            break
+        if st == "busy":
+            e.run_frames(10)
+            continue
+        if in_battle():
+            out += [(None, t) for t in fight(quiet=quiet)]
+            continue
+        e.tap(key, hold=2, wait=10)
+        new = poll(quiet)
+        out += new
+        if any(t in ("耗真气:", "数量：") for _, t in new):
+            # ENTER opened the battle magic/item menu: we are in a fight
+            e.tap("EXIT", hold=2, wait=10)
+            out += [(None, t) for t in fight(quiet=quiet)]
+            continue
+        fresh = [t for t in new if t not in texts]
+        texts.update(new)
+        stale = 0 if fresh else stale + 1
+        if stale >= 3:
+            print("adv: STUCK (menu/shop?)")
+            break
+    return out
+
+
+def talk(direction=None, quiet=False):
+    """Face direction (if given) and press ENTER, then advance the dialogue."""
+    if direction:
+        e.tap(direction, hold=2, wait=8)
+    e.tap("ENTER", hold=2, wait=10)
+    return adv(quiet=quiet)
+
+
+
+# --- NPCs --------------------------------------------------------------------
+# Map objects (NPCs, boxes) are heap records: "75 6e 20 00" (heap tag), then
+# +4 kind (2 npc, 3 npc variant, 4 box), +5 actor type, +9/+10 tile x/y,
+# +11/+12 initial x/y, +13 name (GB2312). Found by scanning 0x3000-0x7fff.
+_TAG = bytes.fromhex("756e2000")
+
+
+def objs():
+    m = e.read(0x3000, 0x5000)
+    out = []
+    i = m.find(_TAG)
+    while i >= 0:
+        r = m[i:i + 0x20]
+        if len(r) >= 0x14 and r[4] in (2, 3, 4) and r[9] < 128 and r[10] < 128:
+            name = r[13:r.find(b"\0", 13)] if b"\0" in r[13:] else b""
+            out.append({"addr": 0x3000 + i, "kind": r[4], "type": r[5], "x": r[9], "y": r[10],
+                        "x0": r[11], "y0": r[12], "name": name.decode("gb2312", "replace")})
+        i = m.find(_TAG, i + 4)
+    return out
+
+
+def npcs():
+    """{(x0, y0): (x, y)} for NPCs, keyed by their createnpc position."""
+    return {(o["x0"], o["y0"]): (o["x"], o["y"]) for o in objs() if o["kind"] in (2, 3)}
+
+
+def blockers():
+    return {(o["x"], o["y"]) for o in objs()}
+
+
+_DIRS = {(1, 0): "RIGHT", (-1, 0): "LEFT", (0, 1): "DOWN", (0, -1): "UP"}
+
+
+def goto_adj(x, y, tries=4, quiet=False):
+    """Walk next to (x, y) and face it."""
+    for _ in range(tries):
+        m = curmap()
+        others = blockers() - {(x, y)}
+        goals = [(x + dx, y + dy) for dx, dy in _DIRS if m.walk(x + dx, y + dy) and (x + dx, y + dy) not in others]
+        p = m.path(pos(), set(goals), blocked=others)
+        if p is None:
+            return False
+        r = walk(p, quiet)
+        if r[0] == "event":
+            return r
+        px, py = pos()
+        d = (x - px, y - py)
+        if d in _DIRS:
+            e.tap(_DIRS[d], hold=2, wait=8)
+            return True
+    return False
+
+
+def talk_npc(i, quiet=False):
+    """i = the NPC's createnpc position (x0, y0)."""
+    for _ in range(4):
+        n = npcs().get(i)
+        if not n:
+            return None
+        r = goto_adj(*n, quiet=quiet)
+        if r is not True:
+            return r
+        if npcs().get(i) != n:
+            continue
+        return press_enter(quiet)
+    return None
+
+
+def press_enter(quiet=False, tries=3):
+    """ENTER (retrying when nothing happens), then advance the dialogue."""
+    for _ in range(tries):
+        e.run_frames(6)
+        e.tap("ENTER", hold=2, wait=12)
+        out = poll(quiet)
+        if out or waitstate() != "idle":
+            return out + adv(quiet=quiet)
+    return []
+
+
+def open_box(x, y, quiet=False):
+    r = goto_adj(x, y, quiet=quiet)
+    if r is not True:
+        return r
+    return press_enter(quiet)
+
+
+
+# --- scripts -------------------------------------------------------------------
+import re as _re
+GUT_DIR = os.path.join(ROOT, "work/fmj_gut")
+
+
+def gut(key):
+    return open(os.path.join(GUT_DIR, key + ".gut"), encoding="utf-8").read()
+
+
+def boxes(key):
+    """createbox id, type, x, y in a script's init part."""
+    return [tuple(map(int, m)) for m in _re.findall(r"createbox (\d+), (\d+), (\d+), (\d+)", gut(key))]
+
+
+def loot(key, quiet=False):
+    out = []
+    for bid, _t, x, y in boxes(key):
+        r = open_box(x, y, quiet=quiet)
+        out.append(((x, y), r if not isinstance(r, list) else [t for _, t in r]))
+    return out
+
+
+def exit_room(ev=1, quiet=False):
+    """Walk onto the room's tile event `ev` (script event 40+ev)."""
+    m = curmap()
+    cells = m.events().get(ev, [])
+    for c in cells:
+        r = goto(*c, quiet=quiet)
+        adv(quiet=quiet)
+        return r
+
+
+
+def enter_door(ev, quiet=False, tries=8):
+    """Trigger map tile event `ev` (script event 40+ev): step onto it, or walk
+    into it when it is not walkable. Returns True when the map changed."""
+    m0 = mapid()
+    for _ in range(tries):
+        m = curmap()
+        for c in m.events().get(ev, []):
+            if m.walk(*c):
+                goto(*c, quiet=quiet)
+            else:
+                r = goto_adj(*c, quiet=quiet)
+                if r is True:
+                    px, py = pos()
+                    e.tap(_DIRS[(c[0] - px, c[1] - py)], hold=2, wait=8)
+            adv(quiet=quiet)
+            if mapid() != m0:
+                return True
+        e.run_frames(40)
+    return False
+
+
+
+# --- battles -------------------------------------------------------------------
+FIGHTS = []   # (frame, texts) per battle
+
+
+def fight(quiet=True, max_rounds=200):
+    """Spam ENTER (attack the default target) until back on the free map.
+    Returns the texts drawn. Assumes the default command (attack) wins."""
+    texts = []
+    for _ in range(max_rounds):
+        st = waitstate()
+        texts += [t for _, t in poll(quiet)]
+        if st == "idle":
+            break
+        if st == "key":
+            # battle wheel: UP = attack (sword), LEFT = magic, RIGHT = items,
+            # DOWN = flee/other. UP is harmless on message boxes.
+            e.tap("UP", hold=2, wait=6)
+            e.tap("ENTER", hold=2, wait=20)
+        else:
+            e.run_frames(20)
+    texts += [t for _, t in poll(quiet)]
+    FIGHTS.append((frame(), texts))
+    if not quiet:
+        print("fight:", texts)
+    return texts
+
+
+
+def stats():
+    """Hero record: heap block after the name record "柳清风"."""
+    m = e.read(0x3000, 0x5000)
+    i = m.find("柳清风".encode("gb2312"))
+    if i < 0:
+        return None
+    j = m.find(bytes.fromhex("756e1c00"), i)
+    r = m[j + 4:j + 0x20]
+    w = lambda k: r[k] | r[k + 1] << 8
+    return {"hpmax": w(6), "hp": w(8), "mpmax": w(10), "mp": w(12), "atk": w(14), "def": w(16),
+            "lv": r[3] if False else None, "addr": hex(0x3000 + j)}
+
+
+
+def lamp_cave(n, quiet=True):
+    """伏魔洞 lamp cave n (1..8): loot boxes, fight the lamp guardian, leave."""
+    assert enter_door(n + 1, quiet=quiet), "could not enter cave %d" % n
+    res = {"map": mapid()}
+    os_ = objs()
+    for o in os_:
+        if "宝箱" in o["name"]:
+            r = open_box(o["x"], o["y"], quiet=quiet)
+            res.setdefault("boxes", []).append((o["name"], r if not isinstance(r, list) else [t for _, t in r]))
+    for o in os_:
+        if o["name"] == "伏魔灯":
+            for _ in range(5):
+                r = open_box(o["x"], o["y"], quiet=quiet)
+                if isinstance(r, list) and r:
+                    break
+            res["lamp"] = r if not isinstance(r, list) else [t for _, t in r]
+    ex = 1 if n <= 4 else 2   # caves 5-8 are mirrored: the stairs are tile 2
+    for _ in range(3):
+        res["exit"] = enter_door(ex, quiet=quiet)
+        if res["exit"]:
+            break
+    res["stats"] = stats()
+    return res
+
+
+
+def wheel_shown():
+    """Battle command wheel + HP box on screen (HP box top border in LCD RAM)."""
+    m = e.read(0x400 + 69 * 32, 3 * 32)
+    return m[9:14] == b"\xff" * 5 and (m[2 * 32 + 14] & 0x10) != 0
+
+
+def fight2(heal_below=0.45, quiet=True, max_rounds=400, log_hp=False):
+    """Battle loop: at the command wheel cast 气疗术 (magic slot 1, on self)
+    when HP is low, else attack the default target. Returns texts."""
+    texts = []
+    for _ in range(max_rounds):
+        st = waitstate()
+        texts += [t for _, t in poll(quiet)]
+        if st == "idle":
+            break
+        if st == "busy":
+            e.run_frames(10)
+            continue
+        if wheel_shown():
+            s_ = stats() or {}
+            if log_hp:
+                print("  hp", s_.get("hp"), "/", s_.get("hpmax"), "mp", s_.get("mp"))
+            if s_ and s_["hp"] < heal_below * s_["hpmax"] and s_["mp"] >= 36:
+                for k, w in (("LEFT", 20), ("ENTER", 40), ("ENTER", 40), ("ENTER", 60)):
+                    e.tap(k, hold=2, wait=w)
+            else:
+                e.tap("UP", hold=2, wait=8)
+                e.tap("ENTER", hold=2, wait=30)
+        else:
+            e.tap("ENTER", hold=2, wait=20)
+    texts += [t for _, t in poll(quiet)]
+    FIGHTS.append((frame(), texts))
+    return texts
+
+
+
+# battle wheel actions (UP attack, LEFT magic, DOWN misc: 围攻/道具/防御/逃跑/状态,
+# RIGHT 合击). 道具 -> 装备/投掷/使用 -> item list (cursor starts at the top).
+def act_attack():
+    e.tap("UP", hold=2, wait=8)
+    e.tap("ENTER", hold=2, wait=30)
+    e.tap("ENTER", hold=2, wait=30)   # default target when several enemies
+
+
+def act_heal_magic():
+    for k, w in (("LEFT", 20), ("ENTER", 40), ("ENTER", 40), ("ENTER", 60)):
+        e.tap(k, hold=2, wait=w)
+
+
+def act_item(kind, idx):
+    """kind 1 = 投掷 (throw), 2 = 使用 (use); idx = position in that list."""
+    for k, w in [("DOWN", 20), ("ENTER", 40), ("DOWN", 20), ("ENTER", 40)] + [("DOWN", 20)] * kind + [("ENTER", 50)]:
+        e.tap(k, hold=2, wait=w)
+    for _ in range(idx):
+        e.tap("DOWN", hold=2, wait=25)
+    e.tap("ENTER", hold=2, wait=40)
+    e.tap("ENTER", hold=2, wait=40)
+
+
+def fight3(plan=(), heal_below=0.5, quiet=True, max_rounds=400, log_hp=True):
+    """Like fight2, but the first turns follow `plan` (callables)."""
+    plan = list(plan)
+    texts = []
+    for _ in range(max_rounds):
+        st = waitstate()
+        texts += [t for _, t in poll(quiet)]
+        if st == "idle":
+            break
+        if st == "busy":
+            e.run_frames(10)
+            continue
+        if wheel_shown():
+            s_ = stats() or {}
+            if log_hp:
+                print("  hp", s_.get("hp"), "/", s_.get("hpmax"), "mp", s_.get("mp"), "plan", len(plan))
+            if s_ and s_["hp"] < heal_below * s_["hpmax"] and s_["mp"] >= 36:
+                act_heal_magic()
+            elif plan:
+                plan.pop(0)()
+            else:
+                act_attack()
+        else:
+            e.tap("ENTER", hold=2, wait=20)
+        if "引：" in texts:
+            print("GAME OVER")
+            break
+    texts += [t for _, t in poll(quiet)]
+    FIGHTS.append((frame(), texts))
+    return texts
+
+
+__all__ = [k for k in list(globals()) if not k.startswith("_") and k not in _PRIVATE]

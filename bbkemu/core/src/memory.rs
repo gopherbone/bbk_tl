@@ -435,6 +435,13 @@ impl Memory {
         if addr < 0x8000 {
             // RAM
             self.ram[addr as usize] = val;
+            // bbk_tl fix: the "prevent auto power off" hack in write_ram never
+            // fired, because 0x2028 is above 0x1000 and is written through
+            // here. 0x2028 is the OS's idle countdown (minutes, reloaded from
+            // 0x2027 = 4); the alarm IRQ counts it down and the game exits at 0.
+            if addr == 0x2028 {
+                self.ram[addr as usize] = 0xFF;
+            }
         } else if (0x200000..0x400000).contains(&addr) {
             // Flash
             self.write_flash(addr - 0x200000, val);

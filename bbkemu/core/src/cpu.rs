@@ -64,6 +64,11 @@ impl CpuWrapper {
         self.inner.registers.status.bits()
     }
 
+    /// Set the interrupt-disable flag (IRQ entry, as on a real 6502)
+    pub fn set_interrupt_disable(&mut self) {
+        self.inner.registers.status.insert(mos6502::registers::Status::PS_DISABLE_INTERRUPTS);
+    }
+
     /// Get total cycles
     pub fn cycles(&self) -> u64 {
         self.inner.cycles

@@ -1,6 +1,6 @@
-refs/
 __pycache__/
-*.pyc
-work/
 .venv/
+*.pyc
 gam4980/
+refs/
+work/
