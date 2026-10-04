@@ -134,6 +134,34 @@ def encode_en(s: str) -> bytes:
     return gutmod.text_to_bytes(s)
 
 
+def translate_instr(i, argn: int, value, bank: list[bytes] | None) -> list:
+    """Put a translation into string operand `argn` of instruction `i`.
+    `value` is bytes (written as is) or, for a `say` with a text bank, the
+    English text, which is fitted into pages: `i` gets the first page token
+    and the extra `say`s for the other pages are returned (insert them after
+    `i`)."""
+    if not isinstance(value, str):
+        i.args[argn] = value
+        return []
+    if i.name == "message":                 # one box, rows from the bank
+        bank.append("\n".join(fit.rows(value, fit.MESSAGE_WIDTH)).encode("ascii"))
+        n = len(bank) - 1
+        i.args[argn] = bytes([0xFE, 0x80 | n >> 7, 0xFE, 0x80 | n & 0x7F])
+        return []
+    ps = fit.pages(value, portrait=bool(i.args[0]))
+    toks = []
+    for page in ps:
+        bank.append("\n".join(page).encode("ascii"))
+        toks.append(fontpatch.token(len(bank) - 1))
+    i.args[argn] = toks[0]
+    extra = []
+    for t in toks[1:]:
+        args = list(i.args)
+        args[argn] = t
+        extra.append(gutmod.Instr(0, i.op, args, b""))
+    return extra
+
+
 def apply(lib: Lib, rows: list[dict], bank: list[bytes] | None = None) -> tuple[Lib, list[str]]:
     """Return a new Lib with every row that has `en` applied, plus problems.
     Problems are fatal for that row only; the original text stays.
@@ -158,7 +186,8 @@ def apply(lib: Lib, rows: list[dict], bank: list[bytes] | None = None) -> tuple[
             continue
         if rid.startswith("gut/"):
             key_s, _, where = rid[4:].partition("@")
-            gut_rows.setdefault(parse_key(key_s), {})[where] = data if bank is None or r["kind"] != "say" else r["en"]
+            gut_rows.setdefault(parse_key(key_s), {})[where] = (
+                r["en"] if bank is not None and r["kind"] in ("say", "message") else data)
             continue
         tag, key_s, fname = rid.split("/")
         k = parse_key(key_s)
@@ -197,20 +226,7 @@ def apply(lib: Lib, rows: list[dict], bank: list[bytes] | None = None) -> tuple[
                 tag = addr + (f".{sn + 1}" if len(sidx) > 1 else "")
                 if tag not in repl:
                     continue
-                v = repl.pop(tag)
-                if isinstance(v, str):          # a say for the page renderer
-                    ps = fit.pages(v, portrait=bool(i.args[0]))
-                    toks = []
-                    for page in ps:
-                        bank.append("\n".join(page).encode("ascii"))
-                        toks.append(fontpatch.token(len(bank) - 1))
-                    i.args[argn] = toks[0]
-                    for t in toks[1:]:
-                        args = list(i.args)
-                        args[argn] = t
-                        extra.append(gutmod.Instr(0, i.op, args, b""))
-                else:
-                    i.args[argn] = v
+                extra += translate_instr(i, argn, repl.pop(tag), bank)
             code.append(i)
             code += extra
         new_index[len(g.code)] = len(code)

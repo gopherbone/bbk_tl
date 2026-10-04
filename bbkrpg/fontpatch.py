@@ -31,6 +31,7 @@ from .asm6502 import assemble
 
 SEG = 0x4000
 OS_DRAWSTRING_VEC = 0xE79A
+OS_MSGBOX_VEC = 0xE953
 DISPATCH = 0xD2F6
 ENTRY_SEG_OFFSET = 0x3FF0          # table entry inside each caller's trailing padding
 GLYPH_TOP = 3                      # glyph rows start this far below the OS cell top
@@ -43,7 +44,20 @@ ROW_WIDTHS_PORTRAIT = (101, 101, 133)   # keep 2 px clear of the right border (x
 ROW_WIDTHS_PLAIN = (133, 133, 133)
 GAM_PHYS = 0x20D000                # physical address of .gam offset 0
 
-CALL_RE = re.compile(rb"\xa2\x9a\x86\x26\xa2\xe7\x86\x27\x20\xf6\xd2")
+# OS calls we take over: (OS jump-table vector, renderer routine, padding offset
+# of the 3-byte entry in every calling segment and in the font segment).
+REROUTES = [
+    (0xE79A, "drawstring", 0x3FF0),     # DrawString
+    (0xE953, "msgbox", 0x3FF3),         # message box
+]
+
+
+def call_re(vec: int):
+    """ldx #lo / stx $26 / ldx #hi / stx $27 / jsr $D2F6 for an OS vector."""
+    return re.compile(bytes([0xA2, vec & 0xFF, 0x86, 0x26, 0xA2, vec >> 8, 0x86, 0x27, 0x20, 0xF6, 0xD2]))
+
+
+CALL_RE = call_re(0xE79A)
 
 
 def font_tables():
@@ -146,6 +160,13 @@ ascii:  jsr savezp
         sta GT
         lda #CELL
         sta CH
+        jsr dmasave
+        jsr drawstr
+        jsr dmarest
+        jmp restzp
+
+; draw the string at STR (ASCII + inline tokens) at (X, Y0) with GT/CH
+drawstr:
 strlp:  ldy #0
         lda (STR),y
         beq strdone
@@ -159,7 +180,7 @@ advstr: clc
         bcc strlp
         inc STR+1
         jmp strlp
-strdone: jmp restzp
+strdone: rts
 special:
         cmp #$fc
         bne inl
@@ -203,15 +224,13 @@ inlgo:  lda X
         adc MINADV
         sta MINADV              ; now: minimum pen x after the slot
         jsr lookup
-        jsr dmasave
 inllp:  jsr fetch
         beq inlend
         cmp #$0a
         beq inlend
         jsr drawch
         jmp inllp
-inlend: jsr dmarest
-        lda X
+inlend: lda X
         cmp MINADV
         bcs inlx
         lda MINADV
@@ -328,7 +347,7 @@ rowstart:
         lda TROW
         cmp #2
         bcs left
-        lda #PX
+        lda #PX0
         sta X
         rts
 left:   lda #LX
@@ -513,6 +532,395 @@ chdone: lda X
         sta X
         rts
 
+; ---- msgbox: replacement for the OS message box (vector E953).
+; C stack: [text ptr lo, hi, mode lo, hi]. Draws a centred framed box with the
+; text and returns, like the OS. Text: an FE token alone (rows from the bank,
+; separated by \n) or a one-row string (ASCII + inline tokens).
+MW     = $209a      ; widest row (px, incl. trailing 1 px spacing)
+NR     = $209b      ; rows
+BX     = $209c      ; box left
+BY     = $209d      ; box top
+BW     = $209e      ; box width
+BH     = $209f      ; box height
+PX     = $20a0      ; plot x
+PY     = $20a1      ; plot y
+RW     = $20a2      ; row width accumulator
+TP0    = $20a3      ; saved bank pointer (3)
+BANKMODE = $20a6
+
+msgbox: ldy #0
+        lda ($28),y
+        sta STR
+        iny
+        lda ($28),y
+        sta STR+1
+        ldy #0
+mscan:  lda (STR),y
+        beq msgok
+        bpl mscan1
+        cmp #$fe
+        beq mskip4
+        cmp #$fc
+        bcc msg_os
+        iny
+mscan1: iny
+        bne mscan
+        beq msgok
+mskip4: iny
+        iny
+        iny
+        iny
+        bne mscan
+        beq msgok
+msg_os: lda #<OSMSG
+        sta $26
+        lda #>OSMSG
+        sta $27
+        jmp DISPATCH
+
+msgok:  jsr savezp
+        jsr dmasave
+        lda #0
+        sta MW
+        sta BANKMODE
+        lda #1
+        sta NR
+        ; bank mode: the string is exactly FE hi FE lo NUL
+        ldy #0
+        lda (STR),y
+        cmp #$fe
+        bne minline
+        ldy #4
+        lda (STR),y
+        bne minline
+        inc BANKMODE
+        jsr tokid4
+        jsr lookup
+        lda TP
+        sta TP0
+        lda TP+1
+        sta TP0+1
+        lda TP+2
+        sta TP0+2
+        lda #0
+        sta NR
+mbrow:  lda #0
+        sta RW
+mbch:   jsr fetch
+        beq mbend
+        cmp #$0a
+        beq mbnl
+        jsr chwidth
+        jmp mbch
+mbnl:   jsr rowmax
+        inc NR
+        jmp mbrow
+mbend:  jsr rowmax
+        inc NR
+        jmp mdims
+minline:
+        jsr strwidth
+        lda RW
+        sta MW
+mdims:  ; BW = MW + 7 (4 px padding each side, minus trailing spacing), max 155
+        lda MW
+        clc
+        adc #7
+        bcs mwide
+        cmp #156
+        bcc mwok
+mwide:  lda #155
+mwok:   sta BW
+        lda #159
+        sec
+        sbc BW
+        lsr a
+        sta BX
+        ; BH = NR * 12 + 7
+        lda NR
+        asl a
+        asl a
+        sta BH
+        asl a
+        clc
+        adc BH
+        adc #7
+        sta BH
+        lda #95
+        sec
+        sbc BH
+        lsr a
+        sta BY
+        jsr drawbox
+        ; text
+        lda #0
+        sta GT
+        lda #GLYPH_H
+        sta CH
+        lda BY
+        clc
+        adc #4
+        sta Y0
+        lda BX
+        clc
+        adc #4
+        sta X
+        lda BANKMODE
+        beq mtxt_inline
+        lda TP0
+        sta TP
+        lda TP0+1
+        sta TP+1
+        lda TP0+2
+        sta TP+2
+mtb:    jsr fetch
+        beq mdone
+        cmp #$0a
+        bne mtbch
+        lda Y0
+        clc
+        adc #12
+        sta Y0
+        lda BX
+        clc
+        adc #4
+        sta X
+        jmp mtb
+mtbch:  jsr drawch
+        jmp mtb
+mtxt_inline:
+        jsr drawstr
+mdone:  jsr dmarest
+        jmp restzp
+
+; RW = max(RW, ...) helpers
+rowmax: lda RW
+        cmp MW
+        bcc rmx
+        sta MW
+rmx:    rts
+
+; RW += width(A) + 1
+chwidth:
+        sec
+        sbc #$20
+        bcc cwbad
+        cmp #95
+        bcc cwok
+cwbad:  lda #31
+cwok:   tax
+        lda widths,x
+        sec
+        adc RW
+        sta RW
+        rts
+
+; RW = width of the one-row string at STR (ASCII + inline tokens)
+strwidth:
+        lda #0
+        sta RW
+        lda STR
+        sta GP
+        lda STR+1
+        sta GP+1
+        ldy #0
+swl:    lda (GP),y
+        beq swdone
+        cmp #$fc
+        bcs swspec
+        sty TROW
+        jsr chwidth
+        ldy TROW
+        iny
+        bne swl
+swdone: rts
+swspec: cmp #$fc
+        bne swtok
+        lda RW
+        clc
+        adc #16
+        sta RW
+        iny
+        iny
+        bne swl
+        rts
+swtok:  ; FD (2 bytes) or FE (4 bytes): add the bank text width
+        sty TROW
+        cmp #$fe
+        beq swt4
+        iny
+        lda (GP),y
+        and #$7f
+        sta TP
+        lda #0
+        sta TP+1
+        lda #2
+        jmp swtgo
+swt4:   iny
+        lda (GP),y
+        and #$7f
+        sta TP+1
+        iny
+        iny
+        lda (GP),y
+        and #$7f
+        asl a
+        lsr TP+1
+        ror a
+        sta TP
+        lda #4
+swtgo:  clc
+        adc TROW
+        sta TROW            ; index after the token
+        lda GP
+        pha
+        lda GP+1
+        pha
+        jsr lookup
+swtl:   jsr fetch
+        beq swte
+        cmp #$0a
+        beq swte
+        jsr chwidth
+        jmp swtl
+swte:   pla
+        sta GP+1
+        pla
+        sta GP
+        ldy TROW
+        jmp swl
+
+; TP:TP+1 = id of the FE token at STR
+tokid4: ldy #1
+        lda (STR),y
+        and #$7f
+        sta TP+1
+        ldy #3
+        lda (STR),y
+        and #$7f
+        asl a
+        lsr TP+1
+        ror a
+        sta TP
+        rts
+
+; box: white inside, 1 px black border, 1 px shadow right and bottom
+drawbox:
+        lda BY
+        sta PY
+dbrow:  lda BX
+        sta PX
+dbcol:  ldy #0              ; 0 = white
+        lda PY
+        cmp BY
+        beq dbblack
+        lda BY
+        clc
+        adc BH
+        sec
+        sbc #1
+        cmp PY
+        beq dbblack
+        lda PX
+        cmp BX
+        beq dbblack
+        lda BX
+        clc
+        adc BW
+        sec
+        sbc #1
+        cmp PX
+        bne dbplot
+dbblack: ldy #1
+dbplot: jsr plot
+        inc PX
+        lda BX
+        clc
+        adc BW
+        cmp PX
+        bne dbcol
+        ; shadow pixel at the right edge (rows below the top)
+        lda PY
+        cmp BY
+        beq dbnosh
+        ldy #1
+        jsr plot
+dbnosh: inc PY
+        lda BY
+        clc
+        adc BH
+        cmp PY
+        bne dbrow
+        ; bottom shadow row
+        lda BX
+        sta PX
+        inc PX
+dbsh:   ldy #1
+        jsr plot
+        inc PX
+        lda BX
+        clc
+        adc BW
+        clc
+        adc #1
+        cmp PX
+        bne dbsh
+        rts
+
+; set (Y=1) or clear (Y=0) pixel (PX, PY)
+plot:   sty BITS
+        lda PX
+        cmp #159
+        bcs plotx
+        lda PY
+        cmp #96
+        bcs plotx
+        cmp #66
+        bcs plow
+        sta LP
+        lda #65
+        sec
+        sbc LP
+plow:   sta LP
+        lda #0
+        sta LP+1
+        ldx #5
+plm:    asl LP
+        rol LP+1
+        dex
+        bne plm
+        lda LP+1
+        clc
+        adc #4
+        sta LP+1
+        lda PX
+        lsr a
+        lsr a
+        lsr a
+        tay
+        beq plc0
+        dey
+        jmp plby
+plc0:   ldy #19
+plby:   lda PX
+        and #7
+        tax
+        lda #$80
+plsh:   cpx #0
+        beq plmask
+        lsr a
+        dex
+        jmp plsh
+plmask: ldx BITS
+        beq plclr
+        ora (LP),y
+        sta (LP),y
+plotx:  rts
+plclr:  eor #$ff
+        and (LP),y
+        sta (LP),y
+        rts
+
 widths:
 {widths}
 glyph_lo:
@@ -530,14 +938,14 @@ def _bytes_lines(b: bytes) -> str:
     return "\n".join("        .byte " + ", ".join(f"${x:02x}" for x in b[i:i + 16]) for i in range(0, len(b), 16))
 
 
-def build_segment(page_addrs: list[int] = ()) -> tuple[bytes, int]:
+def build_segment(page_addrs: list[int] = ()) -> tuple[bytes, dict]:
     """Assemble the font segment with a page table of physical addresses;
-    returns (16 KiB segment, renderer address)."""
+    returns (16 KiB segment, symbols)."""
     widths, rows = font_tables()
     table = b"".join(a.to_bytes(3, "little") for a in page_addrs) or b"\0"
     syms = {"OSVEC": OS_DRAWSTRING_VEC, "DISPATCH": DISPATCH, "GLYPH_TOP": GLYPH_TOP,
             "GLYPH_H": font_sans.H, "CELL": CELL, "TCELL": TOKEN_PITCH, "TOP": TOKEN_TOP,
-            "PX": PORTRAIT_X, "LX": LEFT_X}
+            "PX0": PORTRAIT_X, "LX": LEFT_X, "OSMSG": OS_MSGBOX_VEC}
 
     def src(lo, hi):
         return RENDERER.format(widths=_bytes_lines(widths), glyph_lo=_bytes_lines(lo), glyph_hi=_bytes_lines(hi),
@@ -550,7 +958,7 @@ def build_segment(page_addrs: list[int] = ()) -> tuple[bytes, int]:
     assert org == 0x5000 and s["glyphs"] == base
     if len(code) > SEG:
         raise ValueError("font segment overflow")
-    return code + b"\xff" * (SEG - len(code)), s["drawstring"]
+    return code + b"\xff" * (SEG - len(code)), s
 
 
 def token(page_id: int) -> bytes:
@@ -579,30 +987,35 @@ def patch(gam: bytes, pages: list[bytes] = ()) -> tuple[bytes, dict]:
         bank += p + b"\0"
     nbank = -(-len(bank) // SEG)
     bank_off = data_off + SEG                      # text bank follows the font segment
-    seg, entry = build_segment([GAM_PHYS + bank_off + o for o in offs])
+    seg, syms = build_segment([GAM_PHYS + bank_off + o for o in offs])
     # The dispatcher reads the page byte through the caller's mapping, then
     # switches pages and reads the target address at the same CPU address, so
-    # the entry must also exist at that offset in the font segment.
+    # each entry must also exist at that offset in the font segment.
     seg = bytearray(seg)
-    if seg[ENTRY_SEG_OFFSET:ENTRY_SEG_OFFSET + 3] != b"\xff\xff\xff":
-        raise ValueError("font segment too large for the table entry")
-    seg[ENTRY_SEG_OFFSET:ENTRY_SEG_OFFSET + 3] = bytes([entry & 0xFF, entry >> 8, page])
     engine = bytearray(gam[:data_off])
-    sites = [m.start() for m in CALL_RE.finditer(engine)]
-    if not sites:
-        raise ValueError("no DrawString call sites found (already patched?)")
-    segs = sorted({s // SEG for s in sites})
-    for n in segs:
-        at = n * SEG + ENTRY_SEG_OFFSET
-        if engine[at:at + 3] != b"\xff\xff\xff":
-            raise ValueError(f"segment {n}: no free padding at {at:#x}")
-        engine[at:at + 3] = bytes([entry & 0xFF, entry >> 8, page])
-    cpu_entry = 0x5000 + ENTRY_SEG_OFFSET
-    for s in sites:
-        engine[s + 1] = cpu_entry & 0xFF
-        engine[s + 5] = cpu_entry >> 8
+    report = {}
+    for vec, routine, slot in REROUTES:
+        entry = syms[routine]
+        ent = bytes([entry & 0xFF, entry >> 8, page])
+        if seg[slot:slot + 3] != b"\xff\xff\xff":
+            raise ValueError("font segment too large for the table entries")
+        seg[slot:slot + 3] = ent
+        sites = [m.start() for m in call_re(vec).finditer(engine)]
+        if not sites:
+            raise ValueError(f"no call sites for OS vector {vec:#x} (already patched?)")
+        segs = sorted({x // SEG for x in sites})
+        for n in segs:
+            at = n * SEG + slot
+            if engine[at:at + 3] != b"\xff\xff\xff":
+                raise ValueError(f"segment {n}: no free padding at {at:#x}")
+            engine[at:at + 3] = ent
+        cpu_entry = 0x5000 + slot
+        for x in sites:
+            engine[x + 1] = cpu_entry & 0xFF
+            engine[x + 5] = cpu_entry >> 8
+        report[routine] = {"sites": len(sites), "segments": segs}
     bank += b"\xff" * (nbank * SEG - len(bank))
     out = bytearray(engine) + seg + bank + gam[data_off:]
     out[0x42:0x46] = (data_off + SEG * (1 + nbank)).to_bytes(4, "little")
-    return bytes(out), {"sites": len(sites), "segments": segs, "page": page, "entry": entry,
+    return bytes(out), {"sites": report["drawstring"]["sites"], "reroutes": report, "page": page,
                         "pages": len(pages), "bank_bytes": len(bank.rstrip(b"\xff")), "bank_segments": nbank}

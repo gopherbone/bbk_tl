@@ -57,3 +57,29 @@ def pages(text: str, portrait: bool) -> list[list[str]]:
         for i in range(0, len(rows), len(widths)):
             out.append(rows[i:i + len(widths)])
     return out
+
+
+MESSAGE_WIDTH = 140      # widest row in a message box (fontpatch msgbox: box <= 155 px)
+
+
+def rows(text: str, width: int) -> list[str]:
+    """Word-wrap `text` into rows of at most `width` px ("\\n" forces a break)."""
+    out: list[str] = []
+    for line in text.split("\n"):
+        cur = ""
+        for word in line.split(" "):
+            if not word:
+                continue
+            cand = f"{cur} {word}" if cur else word
+            if font_sans.text_width(cand) <= width:
+                cur = cand
+                continue
+            if cur:
+                out.append(cur)
+            cur = ""
+            for piece in _split_word(word, width):
+                if cur:
+                    out.append(cur)
+                cur = piece
+        out.append(cur)
+    return out
