@@ -22,10 +22,10 @@
         {
           "lang": "en",
           "label": "English",
-          "version": "v0.2",
+          "version": "v0.3",
           "status": "Complete translation",
           "base": "gam4980/retroarch/downloads/bbk/伏魔记.gam",
-          "patch": "dist/DemonbaneChronicle-v0.2.bps"
+          "patch": "dist/DemonbaneChronicle-v0.3.bps"
         },
         {
           "lang": "zh",
@@ -53,10 +53,10 @@
         {
           "lang": "en",
           "label": "English",
-          "version": "v0.1",
+          "version": "v0.2",
           "status": "Complete translation",
           "base": "gam4980/retroarch/downloads/bbk/金庸群侠传.gam",
-          "patch": "dist/HeroesOfJinYong-v0.1.bps"
+          "patch": "dist/HeroesOfJinYong-v0.2.bps"
         },
         {
           "lang": "zh",

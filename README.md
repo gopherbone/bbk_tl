@@ -38,8 +38,8 @@ engine string table, image redraws and working paths. The scripts in
 
 | Key | Game | Parts | Glossary | Release |
 | --- | --- | --- | --- | --- |
-| `fmj` | 伏魔记 | `translations/parts/` | `docs/glossary.jsonl` | Demonbane Chronicle v0.2 |
-| `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` | Heroes of Jin Yong v0.1 |
+| `fmj` | 伏魔记 | `translations/parts/` | `docs/glossary.jsonl` | Demonbane Chronicle v0.3 |
+| `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` | Heroes of Jin Yong v0.2 |
 
 ```sh
 python3 -m bbkrpg strings export gam4980/retroarch/downloads/bbk/金庸群侠传.gam work/jy.strings.jsonl
