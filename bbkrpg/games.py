@@ -38,6 +38,7 @@ class Game:
     engine: list = field(default_factory=list)  # engine_text entries for this build
     images: Callable[[dict, list], None] | None = None  # (res, rows): redraws text inside images
     title_en: str | None = None               # release name; None = not releasable yet
+    owner: str = "BBK"                        # rights holder named in release notes
     strings: str = ""
     gut: str = ""
     parts: str = ""
@@ -76,7 +77,8 @@ GAMES: dict[str, Game] = {g.key: g for g in [
           title_en="Demonbane Chronicle",
           parts="translations/parts", glossary="docs/glossary.jsonl",
           playthrough="work/playthrough", qa="work/qa"),
-    _game("jy", "金庸群侠传", engine=engine_text.JY, images=_jy_images, title_en="Heroes of Jin Yong"),
+    _game("jy", "金庸群侠传", engine=engine_text.JY, images=_jy_images, title_en="Heroes of Jin Yong",
+          owner="its authors, BOSS Studio (BOSS工作室)"),
 ]}
 
 DEFAULT = "fmj"

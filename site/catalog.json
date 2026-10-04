@@ -35,6 +35,37 @@
           "base": "gam4980/retroarch/downloads/bbk/伏魔记.gam"
         }
       ]
+    },
+    {
+      "id": "heroes-of-jin-yong",
+      "title": "Heroes of Jin Yong",
+      "title_zh": "金庸群侠传",
+      "pinyin": "Jīn Yōng Qún Xiá Zhuàn",
+      "genre": "RPG",
+      "authors": "BOSS工作室 (BOSS Studio)",
+      "blurb": "A fan-made wuxia crossover on the BBKRPG engine: pick a hero, join one of a dozen sects from Shaolin to the Ancient Tomb, learn their martial arts, and travel between the Capital, Xixia, Dali and Yangzhou alongside Guo Jing, Huang Rong, Linghu Chong and other Jin Yong heroes.",
+      "keys": [
+        "arrows",
+        "ok",
+        "back"
+      ],
+      "versions": [
+        {
+          "lang": "en",
+          "label": "English",
+          "version": "v0.1",
+          "status": "Complete translation",
+          "base": "gam4980/retroarch/downloads/bbk/金庸群侠传.gam",
+          "patch": "dist/HeroesOfJinYong-v0.1.bps"
+        },
+        {
+          "lang": "zh",
+          "label": "Original (Chinese)",
+          "version": "正式版",
+          "status": "Original release",
+          "base": "gam4980/retroarch/downloads/bbk/金庸群侠传.gam"
+        }
+      ]
     }
   ]
 }

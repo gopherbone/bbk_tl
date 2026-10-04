@@ -29,7 +29,7 @@
       el('div', {}, [
         el('h3', {}, [game.title, el('span', { class: 'badge', text: en.status + ' · ' + en.version })]),
         el('p', { class: 'orig' }, [el('span', { class: 'zh', text: game.title_zh }), ' · ' + game.pinyin]),
-        el('p', { class: 'meta', text: game.year + ' · ' + game.genre + ' · ' + game.authors }),
+        el('p', { class: 'meta', text: [game.year, game.genre, game.authors].filter(Boolean).join(' · ') }),
         el('p', { class: 'blurb', text: game.blurb }),
         el('div', { class: 'actions-row' }, buttons)
       ])

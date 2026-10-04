@@ -36,17 +36,24 @@ engine string table, image redraws and working paths. The scripts in
 `tools/tl`, `tools/qa`, `tools/play` and `tools/release.py` take
 `--game KEY` (or `BBK_GAME=KEY`) and default to `fmj`.
 
-| Key | Game | Parts | Glossary |
-| --- | --- | --- | --- |
-| `fmj` | 伏魔记 | `translations/parts/` | `docs/glossary.jsonl` |
-| `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` |
+| Key | Game | Parts | Glossary | Release |
+| --- | --- | --- | --- | --- |
+| `fmj` | 伏魔记 | `translations/parts/` | `docs/glossary.jsonl` | Demonbane Chronicle v0.2 |
+| `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` | Heroes of Jin Yong v0.1 |
 
 ```sh
 python3 -m bbkrpg strings export gam4980/retroarch/downloads/bbk/金庸群侠传.gam work/jy.strings.jsonl
 python3 -m bbkrpg gut disasm gam4980/retroarch/downloads/bbk/金庸群侠传.gam --all -o work/jy_gut
 python3 tools/tl/build_en.py --game jy        # -> work/jy_en.gam
+python3 tools/qa/sweep.py --game jy           # every script row in the emulator -> work/jy/qa/sweep
+python3 tools/release.py --game jy v0.1       # -> dist/HeroesOfJinYong-v0.1.bps
 tools/play/restart.sh jy                      # play daemon on work/jy/playthrough/daemon.sock
 ```
+
+Adding a game: a profile in `bbkrpg/games.py` (engine-string offsets in
+`bbkrpg/engine_text.py`, image redraws like `bbkrpg/images_jy.py`), then the
+docs/<key>/ glossary and brief, parts, sweep and release. 金庸群侠传's notes
+are in `docs/jy/` (`translating.md` is the brief its translators used).
 
 ## Tests
 

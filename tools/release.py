@@ -17,7 +17,7 @@ src = game.read_gam()
 tgt = open(game.en_gam, "rb").read()
 patch = bps.create(src, tgt, f"{game.title_en} ({game.zh}) English translation {ver}".encode())
 assert bps.apply(patch, src) == tgt
-name = f"{game.title_en.replace(' ', '')}-{ver}"
+name = "".join(w[:1].upper() + w[1:] for w in game.title_en.split()) + f"-{ver}"   # HeroesOfJinYong-v0.1
 open(f"dist/{name}.bps", "wb").write(patch)
 gver = src[0x37:0x40].split(b"\0")[0].decode("ascii")   # header version string, e.g. Ver1.3
 crc = lambda b: f"{zlib.crc32(b):08x}"
@@ -34,7 +34,7 @@ Patched result:
   size {len(tgt)}  CRC32 {crc(tgt)}  SHA-1 {sha(tgt)}
 
 The patch contains no BBK firmware and no game data beyond the translated
-text, font and the English renderer. {game.zh} belongs to BBK.
+text, font and the English renderer. {game.zh} belongs to {game.owner}.
 """
 open(f"dist/{name}.README.txt", "w").write(readme)
 print(f"dist/{name}.bps: {len(patch)} bytes")
