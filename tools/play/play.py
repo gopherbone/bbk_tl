@@ -1,6 +1,10 @@
 """Helpers for playing a game in bbkemu while recording a route.
 
 The game is BBK_GAME (default fmj); the daemon sets it from `--game`.
+BBK_PLAY_EN=1 plays the English build (the profile's en_gam, built by
+tools/tl/build_en.py) with text logged through EnHooks, recording to
+routes/<key>.en.route.jsonl: routes from the original desync on it, because
+English text takes a different number of frames to show.
 
 Used inside the daemon namespace (tools/play/daemon.py) or directly:
     from play import *; start()
@@ -10,13 +14,14 @@ import json, os, sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.insert(0, os.path.join(ROOT, "bbkemu", "cli", "py"))
 sys.path.insert(0, ROOT)
-from bbkemu import BBKEmu, Hooks  # noqa: E402
+from bbkemu import BBKEmu, Hooks, EnHooks  # noqa: E402
 from bbkrpg import games  # noqa: E402
 
 GAME = games.get()
-GAM = GAME.path("gam")
+EN = os.environ.get("BBK_PLAY_EN") == "1"
+GAM = os.environ.get("BBK_PLAY_GAM") or (GAME.path("en_gam") if EN else GAME.path("gam"))   # a frozen build
 ROMS = GAME.path("roms")
-ROUTE = GAME.path("route")
+ROUTE = os.path.join(ROOT, "routes", f"{GAME.key}.en.route.jsonl") if EN else GAME.path("route")
 SEEN = os.path.join(GAME.path("playthrough"), "seen.json")
 SHOTS = os.path.join(GAME.path("playthrough"), "shots")
 os.makedirs(SHOTS, exist_ok=True)
@@ -69,7 +74,7 @@ def start(record=True):
     if record:
         r = e.call("route.record", path=ROUTE)
         print("route.record:", r)
-    h = Hooks(e)
+    h = EnHooks(e, os.path.splitext(GAM)[0] + ".bank.json") if EN else Hooks(e)
     import builtins
     builtins.e, builtins.h = e, h
     print("frame", frame())
@@ -88,6 +93,10 @@ def _drain():
             pos_ = h._script_pos(x["mem"][0])
             if pos_:
                 h.where = pos_
+        elif EN and x["id"] in (h.text_id, h.msg_id):
+            y = bytes.fromhex(x["mem"][0])[0] if x["id"] == h.text_id else None
+            out.append({"frame": x["frame"], "y": y, "text": h._decode(bytes.fromhex(x["mem"][1])),
+                        "raw": x["mem"][1], "args": x["mem"][0], "script": h.where})
         elif x["id"] == h.text_id:
             args = bytes.fromhex(x["mem"][1])
             out.append({"frame": x["frame"], "y": args[0], "text": _gb(x["mem"][0]),
@@ -1434,6 +1443,23 @@ MONEY = 0x1a8f   # u16 (3807 seen); party money
 def money():
     b = e.read(MONEY, 3)
     return b[0] | b[1] << 8 | b[2] << 16
+
+
+def cheat(hp=9999, mp=9999, atk=999, df=999, gold=None, level=None):
+    """Max out every party member (stat block after 75 6e 1c 00: +0 level,
+    +6 maxHP, +8 HP, +10 maxMP, +12 MP, +14 atk, +16 def) and optionally set
+    money and level. While recording these are route poke events. Level-ups
+    recompute stats from the level table, so call it again after one."""
+    for name, st in party():
+        a = int(st["addr"], 16) + 4
+        if level is not None:
+            e.call("mem.write", addr=a, data=bytes([level]).hex())
+        blk = b"".join(v.to_bytes(2, "little") for v in (hp, hp, mp, mp, atk, df))
+        e.call("mem.write", addr=a + 6, data=blk.hex())
+    if gold is not None:
+        e.call("mem.write", addr=MONEY, data=gold.to_bytes(3, "little").hex())
+    e.run_frames(1)
+    return party()
 
 
 def shop_buy(tile, want, quiet=True):

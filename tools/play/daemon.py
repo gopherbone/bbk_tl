@@ -17,6 +17,8 @@ sys.path.insert(0, ROOT)
 from bbkrpg import games  # noqa: E402
 GAME = games.from_argv()
 os.environ["BBK_GAME"] = GAME.key      # play.py (and its reloads) read it
+if "--en" in sys.argv:                 # play the English build (play.py BBK_PLAY_EN)
+    os.environ["BBK_PLAY_EN"] = "1"
 os.makedirs(GAME.path("playthrough"), exist_ok=True)
 SOCK = os.path.join(GAME.path("playthrough"), "daemon.sock")
 os.chdir(ROOT)
