@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 
+from . import fit, fontpatch
 from . import gut as gutmod
 from .lib import Key, Lib, key_str, parse_key
 
@@ -133,9 +134,13 @@ def encode_en(s: str) -> bytes:
     return gutmod.text_to_bytes(s)
 
 
-def apply(lib: Lib, rows: list[dict]) -> tuple[Lib, list[str]]:
+def apply(lib: Lib, rows: list[dict], bank: list[bytes] | None = None) -> tuple[Lib, list[str]]:
     """Return a new Lib with every row that has `en` applied, plus problems.
-    Problems are fatal for that row only; the original text stays."""
+    Problems are fatal for that row only; the original text stays.
+
+    With `bank` (a list to fill), `say` lines are fitted into pages for the
+    patched renderer (fontpatch): each page becomes its own `say` carrying a
+    page token, and the page text is appended to `bank`."""
     problems: list[str] = []
     res = dict(lib.res)
     gut_rows: dict[Key, dict[str, bytes]] = {}
@@ -153,7 +158,7 @@ def apply(lib: Lib, rows: list[dict]) -> tuple[Lib, list[str]]:
             continue
         if rid.startswith("gut/"):
             key_s, _, where = rid[4:].partition("@")
-            gut_rows.setdefault(parse_key(key_s), {})[where] = data
+            gut_rows.setdefault(parse_key(key_s), {})[where] = data if bank is None or r["kind"] != "say" else r["en"]
             continue
         tag, key_s, fname = rid.split("/")
         k = parse_key(key_s)
@@ -181,15 +186,38 @@ def apply(lib: Lib, rows: list[dict]) -> tuple[Lib, list[str]]:
         g = gutmod.parse(lib.res[k])
         targets = gutmod.target_map(g)
         hl = g.header_len
-        for i in g.code:
+        code: list = []
+        new_index: dict[int, int] = {}
+        for n, i in enumerate(g.code):
+            new_index[n] = len(code)
             addr = f"{hl + i.off:04x}"
-            sidx = [n for n, kind in enumerate(i.kinds) if kind == "s"]
+            sidx = [m for m, kind in enumerate(i.kinds) if kind == "s"]
+            extra: list = []
             for sn, argn in enumerate(sidx):
                 tag = addr + (f".{sn + 1}" if len(sidx) > 1 else "")
-                if tag in repl:
-                    i.args[argn] = repl.pop(tag)
+                if tag not in repl:
+                    continue
+                v = repl.pop(tag)
+                if isinstance(v, str):          # a say for the page renderer
+                    ps = fit.pages(v, portrait=bool(i.args[0]))
+                    toks = []
+                    for page in ps:
+                        bank.append("\n".join(page).encode("ascii"))
+                        toks.append(fontpatch.token(len(bank) - 1))
+                    i.args[argn] = toks[0]
+                    for t in toks[1:]:
+                        args = list(i.args)
+                        args[argn] = t
+                        extra.append(gutmod.Instr(0, i.op, args, b""))
+                else:
+                    i.args[argn] = v
+            code.append(i)
+            code += extra
+        new_index[len(g.code)] = len(code)
         for tag in repl:
             problems.append(f"gut/{key_str(k)}@{tag}: no string at that address")
+        g.code = code
+        targets = {a: new_index[ix] for a, ix in targets.items()}
         try:
             res[k] = gutmod.build(g, targets)
         except gutmod.GutError as e:
