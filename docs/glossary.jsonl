@@ -1,0 +1,871 @@
+{"zh": "柳清风", "en": "Qingfeng", "category": "person", "count": 12, "alt": "Liu Qingfeng", "note": "Hero (party slot 1), young disciple of Wuji at Sanqing Hall. Full name Liu Qingfeng does not fit the 11-byte ARS field, so the field uses the given name; dialogue may use the full name where it is spoken in full. [ARS/3-1-1]", "source_ids": ["ARS/3-1-1/name", "gut/1-3-9@00a5", "gut/1-8-12@0461"]}
+{"zh": "清风", "en": "Qingfeng", "category": "person", "count": 19, "note": "How Wuji, Chongxu and others address the hero.", "source_ids": ["gut/1-1-5@0098", "gut/1-1-5@0100", "gut/1-2-10@0082"]}
+{"zh": "柳大哥", "en": "Brother Liu", "category": "title", "count": 7, "alt": "Big Brother Liu", "note": "Xiaomei's (and the little painter's) name for the hero; 大哥 = 'big brother', affectionate, not kin.", "source_ids": ["gut/1-1-5@00c1", "gut/1-3-11@0099", "gut/1-3-12@0299"]}
+{"zh": "柳师兄", "en": "Brother Liu", "category": "title", "count": 1, "note": "Zhongshan Taoists to the hero (senior disciple of a sister temple).", "source_ids": ["gut/1-8-12@0015"]}
+{"zh": "慕容小梅", "en": "Xiaomei", "category": "person", "count": 12, "alt": "Murong Xiaomei", "note": "Heroine (party slot 2), daughter of Elder Murong Xuan of Heartsease, trained in medicine; twin-sword fighter and healer. Field limit 11 -> given name; long form in dialogue/system messages ('Murong Xiaomei joins the party'). [ARS/3-1-2; ARS/3-2-6]", "source_ids": ["ARS/3-1-2/name", "ARS/3-2-6/name", "gut/1-3-9@02c0"]}
+{"zh": "小梅", "en": "Xiaomei", "category": "person", "count": 20, "alt": "Mei", "note": "Short name used by everyone.", "source_ids": ["gut/1-3-1@00df", "gut/1-3-9@029a", "gut/1-3-9@02c0"]}
+{"zh": "慕容", "en": "Murong", "category": "person", "count": 21, "note": "Compound surname of Xiaomei's family (慕容家 = the Murong family; 慕容家双剑术 = Murong twin-sword style).", "source_ids": ["gut/1-3-9@00e3", "gut/1-3-9@02c0", "gut/1-3-10@0055"]}
+{"zh": "袁萍芷", "en": "Pingzhi", "category": "person", "count": 7, "alt": "Yuan Pingzhi", "note": "Third party member; met as a thief in Jianye, secretly the Red Phoenix (朱雀) sent by Wuji to watch the hero. Field limit 11 -> given name. [ARS/3-1-3; ARS/3-2-7]", "source_ids": ["ARS/3-1-3/name", "ARS/3-2-7/name", "gut/1-7-14@011e"]}
+{"zh": "袁姐姐", "en": "Sister Yuan", "category": "title", "count": 6, "note": "Xiaomei's name for Pingzhi.", "source_ids": ["gut/1-7-1@009d", "gut/1-7-14@0156", "gut/1-7-14@01b2"]}
+{"zh": "袁姑娘", "en": "Miss Yuan", "category": "title", "count": 5, "note": "How the hero and Chongxu refer to Pingzhi.", "source_ids": ["gut/1-8-2@00d7", "gut/1-8-2@018b", "gut/1-8-12@01b9"]}
+{"zh": "小偷袁", "en": "Thief Yuan", "category": "monster", "count": 1, "note": "ARS monster record for Pingzhi in her thief fight in Jianye (1-7-14). [ARS/3-3-20]", "source_ids": ["ARS/3-3-20/name"]}
+{"zh": "无机", "en": "Wuji", "category": "person", "count": 39, "note": "Hero's master, head of Sanqing Hall; legendary swordsman who fought the Crimson Demon 20 years ago; secretly turning demonic and final boss. Pinyin; 无机 and 无极 both read Wuji, which conveniently merges the two spellings of the sword (see 无机乾坤剑). [ARS/3-3-47]", "source_ids": ["ARS/3-3-47/name", "gut/1-1-1@0003", "gut/1-1-1@0422"]}
+{"zh": "无机子", "en": "Wuji", "category": "person", "count": 3, "alt": "Wujizi; Master Wuji", "note": "Formal Taoist name (子 suffix). Dropped in English: 'I am Liu Qingfeng, disciple of Wuji of Sanqing Hall.'", "source_ids": ["gut/1-2-2@045c", "gut/1-3-9@00a5", "gut/1-14-11@00f0"]}
+{"zh": "无机道人", "en": "Taoist Wuji", "category": "person", "count": 2, "alt": "Wuji the Taoist", "note": "ARS NPC name (3-2-1) and once in tourist dialogue. Fits 11 bytes. [ARS/3-2-1]", "source_ids": ["ARS/3-2-1/name", "gut/1-2-1@0266"]}
+{"zh": "无机道长", "en": "Master Wuji", "category": "person", "count": 5, "alt": "Taoist Master Wuji", "note": "Used only in the opening scroll (5x): the legend of the peerless swordsman.", "source_ids": ["gut/1-1-1@0003"]}
+{"zh": "慕容玄", "en": "Murong Xuan", "category": "person", "count": 3, "note": "Xiaomei's father, village elder of Heartsease; killed by the Snake Demon (1-3-12). [ARS/3-2-9]", "source_ids": ["ARS/3-2-9/name", "gut/1-3-9@00e3", "MAP/2-1-24/name"]}
+{"zh": "蔡婆婆", "en": "Granny Cai", "category": "person", "count": 7, "note": "Old woman in Heartsease whose daughter (the little painter) was abducted by Li Hu.", "source_ids": ["gut/1-3-4@008d", "gut/1-3-7@00b7", "gut/1-5-16@00d7"]}
+{"zh": "蔡婆", "en": "Granny Cai", "category": "person", "count": 8, "note": "Short form in the scene name 蔡婆家.", "source_ids": ["gut/1-3-4@008d", "gut/1-3-7@00b7", "gut/1-3-8@0067"]}
+{"zh": "蔡大妈", "en": "Granny Cai", "category": "person", "count": 1, "alt": "Auntie Cai", "note": "ARS name of the same NPC (3-2-8); dialogue always says 蔡婆婆. Unified as Granny Cai. INCONSISTENT in source (大妈 'auntie' vs 婆婆 'granny'). [ARS/3-2-8]", "source_ids": ["ARS/3-2-8/name"]}
+{"zh": "小画家", "en": "Painter", "category": "person", "count": 9, "alt": "Little Painter; Xiao Huajia", "note": "Granny Cai's daughter, a nickname ('little painter'); probably a dev-team artist's handle, like the other cameos. Short form for the 11-byte field; 'Little Painter' in dialogue if the reviewer accepts two forms. [ARS/3-2-20]", "source_ids": ["ARS/3-2-20/name", "gut/1-3-7@00b7", "gut/1-3-12@0299"]}
+{"zh": "小画家被绑", "en": "Bound Girl", "category": "other", "count": 1, "alt": "Painter (tied)", "note": "ARS scene object: the painter tied up in Li Manor (not displayed). [ARS/3-4-22]", "source_ids": ["ARS/3-4-22/name"]}
+{"zh": "阿霞", "en": "Ah Xia", "category": "person", "count": 4, "alt": "Axia; A-Xia", "note": "Heartsease villager (jokes about being a clerk in the 'development department'). [ARS/3-2-21]", "source_ids": ["ARS/3-2-21/name", "gut/1-3-7@0067", "gut/1-3-7@008a"]}
+{"zh": "东东", "en": "Dongdong", "category": "person", "count": 4, "note": "Heartsease villager. [ARS/3-2-22]", "source_ids": ["ARS/3-2-22/name", "gut/1-3-4@0067", "gut/1-3-4@00b8"]}
+{"zh": "疯子", "en": "Madman", "category": "person", "count": 3, "alt": "Loony", "note": "Heartsease villager: 'Everyone calls me \"Madman\", but I'm actually very handsome!' [ARS/3-2-23]", "source_ids": ["ARS/3-2-23/name", "gut/1-3-6@005e", "gut/1-3-6@0077"]}
+{"zh": "老孟", "en": "Old Meng", "category": "person", "count": 7, "alt": "Meng", "note": "Heartsease villager (a woman, despite 老) who sends a love letter to her boyfriend Ah Jun in Jianye. [ARS/3-2-24]", "source_ids": ["ARS/3-2-24/name", "gut/1-3-5@005e", "gut/1-3-5@007c"]}
+{"zh": "阿军", "en": "Ah Jun", "category": "person", "count": 8, "alt": "Ajun; A-Jun", "note": "Old Meng's boyfriend in Jianye, a locksmith nicknamed 万锁开; gives the Picklocks.", "source_ids": ["gut/1-3-5@007c", "gut/1-7-9@007b", "gut/1-7-9@00c6"]}
+{"zh": "万锁开", "en": "Lockmaster", "category": "person", "count": 3, "alt": "Wan Suokai", "note": "Ah Jun's nickname ('opens ten thousand locks').", "source_ids": ["gut/1-7-9@007b", "GRS/6-14-1/desc", "GRS/6-14-2/desc"]}
+{"zh": "猎人", "en": "Hunter", "category": "person", "count": 2, "note": "Hunter near the Miasma Wood who explains the Reed Mail. 猎户 in his dialogue = same. [ARS/3-2-19]", "source_ids": ["ARS/3-2-19/name", "gut/1-4-2@005e"]}
+{"zh": "鲁斧", "en": "Lu Fu", "category": "person", "count": 4, "note": "Descendant of Lu Ban living in Stonedream; owner of the Reed Mail. [ARS/3-2-26]", "source_ids": ["ARS/3-2-26/name", "gut/1-4-2@0153", "gut/1-5-13@005e"]}
+{"zh": "鲁公", "en": "Lord Lu", "category": "person", "count": 3, "alt": "Master Lu; Lu Ban", "note": "Lu Ban, legendary craftsman (鲁班 in item descriptions); 'Lord Lu made the Reed Mail'.", "source_ids": ["gut/1-4-2@0153", "gut/1-5-13@008e", "gut/1-5-13@024e"]}
+{"zh": "鲁班", "en": "Lu Ban", "category": "person", "count": 2, "note": "Legendary craftsman in Reed Mail descriptions; same person as 鲁公.", "source_ids": ["GRS/6-4-13/desc", "GRS/6-4-14/desc"]}
+{"zh": "鲁先生", "en": "Mr. Lu", "category": "title", "count": 1, "note": "The hero to Lu Fu.", "source_ids": ["gut/1-5-13@01f8"]}
+{"zh": "李虎", "en": "Li Hu", "category": "person", "count": 9, "alt": "Tiger Li", "note": "Thug boss of Stonedream who kidnaps girls and stole the Reed Mail; boss fight (ARS 3-2-25 NPC, 3-3-9 monster). Name means 'tiger Li' but pinyin per convention. [ARS/3-2-25; ARS/3-3-9]", "source_ids": ["ARS/3-2-25/name", "ARS/3-3-9/name", "gut/1-3-7@00b7"]}
+{"zh": "霸爷", "en": "the Boss", "category": "title", "count": 1, "alt": "Lord Tyrant", "note": "Li Hu's guards' name for him ('give the girl to the Boss').", "source_ids": ["gut/1-5-1@034f"]}
+{"zh": "老王", "en": "Old Wang", "category": "person", "count": 11, "note": "Li Hu's servant; can be spared (then his wife tells of the secret passage) or killed. Also ARS monster 3-3-19. [ARS/3-3-19]", "source_ids": ["ARS/3-3-19/name", "gut/1-5-2@0079", "gut/1-5-2@00a1"]}
+{"zh": "王妻", "en": "Mrs. Wang", "category": "person", "count": 3, "note": "Old Wang's wife, former wet-nurse in Li Manor.", "source_ids": ["gut/1-5-2@00fd", "gut/1-5-2@0146", "gut/1-5-2@01bf"]}
+{"zh": "鲁大憨", "en": "Lu Dahan", "category": "monster", "count": 1, "alt": "Lu the Oaf", "note": "ARS monster 3-3-26 ('Big Oaf Lu'); not named in dialogue. [ARS/3-3-26]", "source_ids": ["ARS/3-3-26/name"]}
+{"zh": "冲虚道人", "en": "Taoist Chongxu", "category": "person", "count": 10, "note": "The hero's uncle (师叔), head of Zhongshan Abbey. Speaker tag in 1-8-x.", "source_ids": ["gut/1-8-2@0074", "gut/1-8-2@00d7", "gut/1-8-2@013e"]}
+{"zh": "冲虚", "en": "Chongxu", "category": "person", "count": 11, "note": "As in 冲虚居 (Chongxu's room).", "source_ids": ["gut/1-8-2@0074", "gut/1-8-2@00d7", "gut/1-8-2@013e"]}
+{"zh": "玄虚子", "en": "Xuanxu", "category": "person", "count": 1, "alt": "Chongxu (fix)", "note": "Named once by Wuji (1-2-2) as 'your uncle Xuanxu' who sends the pigeon from Zhongshan, but the uncle at Zhongshan is 冲虚. INCONSISTENT in source; recommend 'Chongxu' in 1-2-2 (reviewer decision).", "source_ids": ["gut/1-2-2@056d"]}
+{"zh": "玄虚真人", "en": "Perfected Xuanxu", "category": "person", "count": 1, "alt": "Xuanxu the Perfected", "note": "Ancient master who sealed the Red Phoenix in Demon Cave (1-14-8). 真人 = Perfected One (Taoist title).", "source_ids": ["gut/1-14-8@0369"]}
+{"zh": "参虚", "en": "Canxu", "category": "person", "count": 1, "note": "Only in scene name 参虚阁 at Zhongshan; possibly a slip for 冲虚.", "source_ids": ["gut/1-8-3@00c3"]}
+{"zh": "张道陵", "en": "Zhang Daoling", "category": "person", "count": 4, "note": "Historical founder of Celestial Master Taoism (the 天师); his soul fragment appears in the Sage's Tomb.", "source_ids": ["gut/1-14-11@009f", "GRS/6-2-6/desc", "GRS/6-7-14/desc"]}
+{"zh": "天师", "en": "Celestial Master", "category": "title", "count": 11, "alt": "Heavenly Master; Tianshi; Sage", "note": "Zhang Daoling's title. In 11-byte compounds shortened to 'Sage' (Sage Charm, Sage Robe, Sage Spirit, Sage's Tomb) - see open decisions.", "source_ids": ["gut/1-14-11@004a", "gut/1-14-11@009f", "gut/1-14-11@00f0"]}
+{"zh": "天师精魄", "en": "Sage Spirit", "category": "person", "count": 2, "alt": "Celestial Master's Soul", "note": "Speaker tag in the tomb; ARS calls it 天师魂魄 (same entity, both -> Sage Spirit).", "source_ids": ["gut/1-14-11@009f", "gut/1-14-11@012a"]}
+{"zh": "天师魂魄", "en": "Sage Spirit", "category": "monster", "count": 2, "alt": "Celestial Master's Soul", "note": "ARS monster 3-3-45 (the tomb fight). Same entity as 天师精魄. [ARS/3-3-45]", "source_ids": ["ARS/3-3-45/name", "gut/1-14-11@00f0"]}
+{"zh": "天师尸体", "en": "Sage Corpse", "category": "other", "count": 1, "note": "ARS scene object (not displayed). [ARS/3-4-36]", "source_ids": ["ARS/3-4-36/name"]}
+{"zh": "周处", "en": "Zhou Chu", "category": "person", "count": 16, "note": "Jin-dynasty hero of the 'Zhou Chu eliminates the three scourges' legend (tiger, river dragon, himself); now a local god with a shrine in Nanbei Village.", "source_ids": ["gut/1-10-1@0574", "gut/1-10-2@0057", "gut/1-10-2@0097"]}
+{"zh": "周公", "en": "Lord Zhou", "category": "person", "count": 6, "note": "Villagers' name for Zhou Chu in Nanbei Village (not the Duke of Zhou).", "source_ids": ["gut/1-10-1@01e5", "gut/1-10-1@0247", "gut/1-10-1@0288"]}
+{"zh": "天道", "en": "Tiandao", "category": "person", "count": 25, "alt": "Heavenway", "note": "Villain: head (掌教) of the Way of the Five Pecks of Rice at Mt. Heming, steals the Tyrant Bell; ARS boss 3-3-44. Name = 'Heaven's Way' (cf. the banner 替天行道); pinyin keeps it a name. [ARS/3-3-44]", "source_ids": ["ARS/3-3-44/name", "gut/1-11-10@0342", "gut/1-11-10@0400"]}
+{"zh": "天道Npc", "en": "Tiandao NPC", "category": "other", "count": 1, "note": "ARS NPC sprite for Tiandao in cut-scenes (dev label). [ARS/3-4-31]", "source_ids": ["ARS/3-4-31/name"]}
+{"zh": "天道祖师", "en": "Patriarch Tiandao", "category": "title", "count": 2, "note": "Ghost King: demons demand the ghosts submit to 'Patriarch Tiandao'.", "source_ids": ["gut/1-11-10@0342", "gut/1-11-10@043b"]}
+{"zh": "赤血", "en": "Crimson", "category": "monster", "count": 13, "alt": "Chixue; Redblood", "note": "The great demon 赤血天魔; fought Wuji 20 years ago, steals the Tyrant Bell at Zhongshan, runs the Soulsnare Array. ARS boss 3-3-18; speaker tag. [ARS/3-3-18]", "source_ids": ["ARS/3-3-18/name", "gut/1-1-1@0003", "gut/1-8-12@040f"]}
+{"zh": "赤血天魔", "en": "Crimson Demon", "category": "person", "count": 2, "alt": "Crimson Heavenly Demon; Chixue", "note": "Full title in the opening scroll ('the great archfiend of the age - the Crimson Demon').", "source_ids": ["gut/1-1-1@0003"]}
+{"zh": "赤血Npc", "en": "Crimson NPC", "category": "other", "count": 1, "note": "ARS NPC sprite for the Crimson Demon (dev label). [ARS/3-2-27]", "source_ids": ["ARS/3-2-27/name"]}
+{"zh": "鬼王", "en": "Ghost King", "category": "person", "count": 16, "note": "Ruler of the ghosts in Fengdu; hates Taoists because of Tiandao. Fought as ARS 真阎罗.", "source_ids": ["gut/1-11-10@0089", "gut/1-11-10@00e8", "gut/1-11-10@00fa"]}
+{"zh": "真阎罗", "en": "True Yama", "category": "monster", "count": 1, "alt": "Ghost King; Yama", "note": "ARS monster 3-3-39, the Ghost King's battle name. Dialogue only says 鬼王; consider 'Ghost King' for the battle name too. [ARS/3-3-39]", "source_ids": ["ARS/3-3-39/name"]}
+{"zh": "白无常", "en": "Bai Wuchang", "category": "monster", "count": 5, "alt": "White Impermanence; White Reaper", "note": "White Impermanence, underworld escort of souls; fights the party in Fengdu (ARS 3-3-38). [ARS/3-3-38]", "source_ids": ["ARS/3-3-38/name", "gut/1-11-10@00bd", "gut/1-11-10@00fa"]}
+{"zh": "黑无常", "en": "Hei Wuchang", "category": "person", "count": 1, "alt": "Black Impermanence", "note": "His absent brother ('away on business').", "source_ids": ["gut/1-11-10@017c"]}
+{"zh": "牛头马面", "en": "Ox-Head and Horse-Face", "category": "person", "count": 1, "note": "The two underworld vanguard generals the ghosts lost to the bell.", "source_ids": ["gut/1-11-10@043b"]}
+{"zh": "钢叉牛头", "en": "Ox-Head", "category": "monster", "count": 1, "alt": "Fork Ox-Head", "note": "ARS monster 3-3-37 (steel-fork Ox-Head). [ARS/3-3-37]", "source_ids": ["ARS/3-3-37/name"]}
+{"zh": "伥鬼", "en": "Tiger Thrall", "category": "monster", "count": 3, "alt": "Changgui", "note": "Ghosts of tiger victims serving the White Tiger (为虎作伥); speaker tag in the South Hill maze.", "source_ids": ["gut/1-12-2@0137", "gut/1-12-2@0182", "gut/1-12-2@01aa"]}
+{"zh": "苍龙", "en": "Blue Dragon", "category": "monster", "count": 8, "alt": "Azure Dragon", "note": "Azure Dragon of the East, one of the Four Symbols; revived at North Sea, uses Blood Rain. ARS 3-3-41. 'Azure Dragon' (12) is too long for ARS. [ARS/3-3-41]", "source_ids": ["ARS/3-3-41/name", "gut/1-2-32@0114.2", "gut/1-10-2@00c0"]}
+{"zh": "白虎", "en": "White Tiger", "category": "monster", "count": 16, "note": "White Tiger of the West, Four Symbols; revived at South Hill, uses the Reek Wind. ARS 3-3-40. [ARS/3-3-40]", "source_ids": ["ARS/3-3-40/name", "gut/1-2-32@0148.2", "gut/1-10-1@042d"]}
+{"zh": "朱雀", "en": "Red Phoenix", "category": "monster", "count": 15, "alt": "Vermilion Bird; Zhuque", "note": "Vermilion Bird of the South, Four Symbols; Pingzhi's true identity (朱雀（袁萍芷）). ARS 3-3-42. 'Vermilion Bird' (14) too long. [ARS/3-3-42]", "source_ids": ["ARS/3-3-42/name", "gut/1-2-32@017c.2", "gut/1-14-8@0272"]}
+{"zh": "朱雀现身", "en": "Phoenix", "category": "other", "count": 1, "alt": "Phoenix Form", "note": "ARS scene object: Pingzhi revealing her Red Phoenix form (not displayed). [ARS/3-4-42]", "source_ids": ["ARS/3-4-42/name"]}
+{"zh": "玄武", "en": "Dark Turtle", "category": "monster", "count": 11, "alt": "Black Tortoise; Black Turtle (12)", "note": "Black Tortoise of the North, Four Symbols; guards the Sage's Tomb on Mt. Heming. ARS 3-3-43. 'Black Tortoise' (14) too long. [ARS/3-3-43]", "source_ids": ["ARS/3-3-43/name", "gut/1-2-32@01b0.2", "gut/1-14-8@0826"]}
+{"zh": "诛仙", "en": "Godslayer", "category": "monster", "count": 6, "alt": "Zhuxian; Immortal Slayer", "note": "Spirit of the Four Symbols Godslayer Array at Sky Summit ('Who dares enter my Godslayer Array?'). ARS 3-3-46. 诛仙 lit. 'slay immortals'. [ARS/3-3-46]", "source_ids": ["ARS/3-3-46/name", "gut/1-2-32@024a", "gut/1-2-32@0262"]}
+{"zh": "北海蛟", "en": "North Sea Wyrm", "category": "person", "count": 10, "alt": "North Sea Jiao", "note": "Speaker tag; Blue Dragon's guard (蛟 jiao = flood dragon). The hero mocks it as a lizard. Fought as ARS 蛟护院.", "source_ids": ["gut/1-13-2@02de", "gut/1-13-2@037c", "gut/1-13-2@03d3"]}
+{"zh": "北海龙", "en": "North Sea Drake", "category": "person", "count": 8, "alt": "North Sea Dragon", "note": "Speaker tag; the other guard, mocked as a puppy. 'Drake' pairs with 'Wyrm' and fits the ARS field. Fought as ARS 蛇护院 (sic).", "source_ids": ["gut/1-13-2@021d", "gut/1-13-2@0341", "gut/1-13-2@0503"]}
+{"zh": "蛟护院", "en": "Wyrm Guard", "category": "monster", "count": 2, "alt": "Jiao Guard", "note": "ARS 3-3-35; Blue Dragon calls them 'my Wyrm Guard and Drake Guard'. [ARS/3-3-35]", "source_ids": ["ARS/3-3-35/name", "gut/1-13-2@06e5"]}
+{"zh": "龙护院", "en": "Drake Guard", "category": "title", "count": 1, "alt": "Dragon Guard", "note": "Dialogue name of the second North Sea guard (1-13-2).", "source_ids": ["gut/1-13-2@06e5"]}
+{"zh": "蛇护院", "en": "Drake Guard", "category": "monster", "count": 1, "alt": "Snake Guard (literal)", "note": "ARS 3-3-36. zh says 蛇 'snake', but dialogue calls this guard 龙护院 / 北海龙. INCONSISTENT in source; unified with dialogue (reviewer decision). [ARS/3-3-36]", "source_ids": ["ARS/3-3-36/name"]}
+{"zh": "小雷公", "en": "Thunderling", "category": "monster", "count": 3, "alt": "Little Thunder", "note": "Little thunder god who mistakes the party for demons at Zhongshan (ARS 3-3-14). [ARS/3-3-14]", "source_ids": ["ARS/3-3-14/name", "gut/1-8-11@00e0", "gut/1-8-11@012f"]}
+{"zh": "雷爷", "en": "Lord Thunder", "category": "title", "count": 1, "note": "Thunderling's boast about himself.", "source_ids": ["gut/1-8-11@00e0"]}
+{"zh": "护剑神", "en": "Swordwarden", "category": "monster", "count": 9, "alt": "Sword Guardian", "note": "Guardian spirit of the Demonbane Sword in Demon Cave; recurring sparring partner (ARS 3-3-11). [ARS/3-3-11]", "source_ids": ["ARS/3-3-11/name", "gut/1-2-18@017b", "gut/1-2-18@02a5"]}
+{"zh": "护剑兽", "en": "Swordwarden", "category": "monster", "count": 1, "alt": "Sword Beast", "note": "Wuji's name for the same guardian in 1-2-2 ('defeat the sword-guarding beast'). INCONSISTENT with 护剑神; unified.", "source_ids": ["gut/1-2-2@02af"]}
+{"zh": "超护剑神", "en": "Archwarden", "category": "monster", "count": 1, "alt": "Super Swordwarden", "note": "Powered-up Swordwarden of the epilogue rematch (ARS 3-3-63). [ARS/3-3-63]", "source_ids": ["ARS/3-3-63/name"]}
+{"zh": "护灯兽", "en": "Lampwarden", "category": "monster", "count": 9, "alt": "Lamp Beast", "note": "Guardian beasts of the eight lamps in the Lamp Caves (ARS 3-3-10; speaker tags 护灯兽一..八 = Lampwarden 1..8). [ARS/3-3-10]", "source_ids": ["ARS/3-3-10/name", "gut/1-2-19@00df", "gut/1-2-20@011e"]}
+{"zh": "蛇妖", "en": "Snake Demon", "category": "monster", "count": 9, "alt": "Snake Fiend", "note": "Half-man half-snake demon terrorizing Heartsease; speaker tag; ARS scene object 3-4-24. [ARS/3-4-24]", "source_ids": ["ARS/3-4-24/name", "gut/1-3-12@0101", "gut/1-4-8@00fb"]}
+{"zh": "蛇妖男", "en": "Snake Demon", "category": "monster", "count": 1, "alt": "Snake Man", "note": "ARS monster 3-3-5 (battle form of the Snake Demon). Unified with 蛇妖. [ARS/3-3-5]", "source_ids": ["ARS/3-3-5/name"]}
+{"zh": "天道手下", "en": "Henchman", "category": "monster", "count": 4, "alt": "Tiandao's Man", "note": "Tiandao's men (ARS 3-2-28..31, numbered).", "source_ids": ["ARS/3-2-28/name", "ARS/3-2-29/name", "ARS/3-2-30/name"]}
+{"zh": "异域人", "en": "Outlander", "category": "title", "count": 18, "alt": "Foreigner; Visitor", "note": "'Person from another realm': prefix of the dev-team cameo NPCs in the Fool's Hut (异域人通宵虫 -> 'Outlander Allnighter').", "source_ids": ["gut/1-2-52@00c9", "gut/1-2-52@0101", "gut/1-2-52@0157"]}
+{"zh": "通宵虫", "en": "Allnighter", "category": "person", "count": 10, "alt": "Tongxiaochong; All-Night Bug", "note": "Dev-team cameo (credited for engine and production); handle = 'all-night bug'. Teaches 百虫欺天. Real person's online handle - see open decisions. [ARS/3-2-32]", "source_ids": ["ARS/3-2-32/name", "gut/1-2-18@05ec", "gut/1-2-52@00c9"]}
+{"zh": "南方小鬼", "en": "South Imp", "category": "person", "count": 10, "alt": "Southern Imp; Nanfang Xiaogui", "note": "Dev-team cameo (credited engine/production); handle = 'little imp from the south'. Teaches 泽伟补命术. [ARS/3-2-33]", "source_ids": ["ARS/3-2-33/name", "gut/1-2-18@05ec", "gut/1-2-52@036a"]}
+{"zh": "不点点", "en": "Tiny Tot", "category": "person", "count": 4, "alt": "Budiandian", "note": "Cameo; Allnighter's girlfriend ('my BF'), sells gear for her card. [ARS/3-2-34]", "source_ids": ["ARS/3-2-34/name", "gut/1-2-52@0264", "gut/1-2-52@02cc"]}
+{"zh": "纯蓝守护者", "en": "Pure Blue Guardian", "category": "person", "count": 1, "note": "Credits only (wrote the intro, a forum member).", "source_ids": ["gut/1-2-18@05ec"]}
+{"zh": "陈泽伟", "en": "Chen Zewei", "category": "person", "count": 1, "note": "Named in the 泽伟补命术 description as the outlander who taught it (another cameo).", "source_ids": ["MRS/4-3-8/desc"]}
+{"zh": "小师弟", "en": "Junior", "category": "person", "count": 1, "alt": "Little Brother", "note": "ARS 3-2-2: the youngest disciple who fetches the hero in the opening (calls him 师兄). [ARS/3-2-2]", "source_ids": ["ARS/3-2-2/name"]}
+{"zh": "大师兄", "en": "Big Brother", "category": "title", "count": 3, "alt": "Eldest Brother", "note": "Eldest disciple of Sanqing Hall (ARS 3-2-5, room 大师兄居). [ARS/3-2-5]", "source_ids": ["ARS/3-2-5/name", "gut/1-2-7@0067", "MAP/2-2-2/name"]}
+{"zh": "普通弟子", "en": "Disciple", "category": "person", "count": 4, "note": "ARS 3-2-3, generic Sanqing disciple. [ARS/3-2-3]", "source_ids": ["ARS/3-2-3/name", "gut/1-2-6@0067", "gut/1-2-8@0067"]}
+{"zh": "门卫", "en": "Guard", "category": "person", "count": 4, "note": "Gate guards of Li Manor (ARS 3-2-4; speaker tags 门卫一/门卫二 = Guard 1/Guard 2). [ARS/3-2-4]", "source_ids": ["ARS/3-2-4/name", "gut/1-5-1@032a", "gut/1-5-1@034f"]}
+{"zh": "恶斋门卫", "en": "Gate Thug", "category": "person", "count": 1, "note": "ARS 3-2-10 (dev label 'evil-house guard'). [ARS/3-2-10]", "source_ids": ["ARS/3-2-10/name"]}
+{"zh": "goods商人", "en": "Merchant", "category": "person", "count": 1, "note": "ARS 3-2-11 (mixed dev label). [ARS/3-2-11]", "source_ids": ["ARS/3-2-11/name"]}
+{"zh": "药店商人", "en": "Herbalist", "category": "person", "count": 1, "alt": "Herb Seller", "note": "ARS 3-2-12, herb shop keeper. [ARS/3-2-12]", "source_ids": ["ARS/3-2-12/name"]}
+{"zh": "打手", "en": "Thug", "category": "monster", "count": 2, "note": "ARS 3-3-6, Li Hu's hired muscle. [ARS/3-3-6]", "source_ids": ["ARS/3-3-6/name", "gut/1-3-8@00fe"]}
+{"zh": "飞龙腿", "en": "Flying Kick", "category": "monster", "count": 1, "alt": "Dragon Legs", "note": "ARS 3-3-7, kicker thug ('flying dragon legs'). [ARS/3-3-7]", "source_ids": ["ARS/3-3-7/name"]}
+{"zh": "无赖飞锤", "en": "Hammer Thug", "category": "monster", "count": 1, "alt": "Rogue Hammer", "note": "ARS 3-3-8, rogue with a flying hammer. [ARS/3-3-8]", "source_ids": ["ARS/3-3-8/name"]}
+{"zh": "掌柜", "en": "Innkeeper", "category": "person", "count": 16, "alt": "Shopkeeper", "note": "Speaker tag of innkeepers (Jianye, Whitewater, Fengdu).", "source_ids": ["gut/1-7-2@01a7", "gut/1-7-2@01c5", "gut/1-7-2@0249"]}
+{"zh": "镇长", "en": "Mayor", "category": "person", "count": 25, "note": "Mayor of Whitewater.", "source_ids": ["gut/1-9-1@0109", "gut/1-9-1@013a", "gut/1-9-1@01e1"]}
+{"zh": "村长", "en": "Elder", "category": "title", "count": 5, "alt": "Village Head; Village Chief", "note": "Village head (Murong Xuan of Heartsease).", "source_ids": ["gut/1-3-9@0067", "gut/1-3-9@00a5", "gut/1-3-9@0211"]}
+{"zh": "守宅人", "en": "Watchman", "category": "person", "count": 3, "note": "Men guarding the haunted old manor in Whitewater.", "source_ids": ["gut/1-9-1@0383", "gut/1-9-1@03ba", "gut/1-9-1@03f9"]}
+{"zh": "游人", "en": "Passerby", "category": "person", "count": 24, "alt": "Traveler", "note": "Generic speaker tag (pickpocket gang in Jianye, the crazed father in Whitewater, Fengdu townsfolk). 游人甲/乙 = Passerby A/B.", "source_ids": ["gut/1-7-1@0281", "gut/1-7-1@02b8", "gut/1-7-1@0320"]}
+{"zh": "三清游人", "en": "Pilgrim", "category": "person", "count": 6, "alt": "Visitor", "note": "Visitors on Mt. Sanqing (ARS 3-2-13..18, numbered).", "source_ids": ["ARS/3-2-13/name", "ARS/3-2-14/name", "ARS/3-2-15/name"]}
+{"zh": "路人", "en": "Bystander", "category": "person", "count": 1, "note": "Speaker tag in Jianye ('Stop, thief!').", "source_ids": ["gut/1-7-14@000f"]}
+{"zh": "小偷", "en": "Thief", "category": "person", "count": 4, "note": "Speaker tag (Pingzhi before she is unmasked).", "source_ids": ["gut/1-7-14@000f", "gut/1-7-14@0039", "gut/1-7-14@004e"]}
+{"zh": "少女", "en": "Girl", "category": "person", "count": 4, "alt": "Young Woman", "note": "Speaker tag of the captive painter before she is named.", "source_ids": ["gut/1-1-1@0003", "gut/1-5-16@005a", "gut/1-5-16@00b8"]}
+{"zh": "村民", "en": "Villager", "category": "person", "count": 20, "note": "Speaker tag; 村民甲/乙 = Villager A/B.", "source_ids": ["gut/1-2-2@04fb", "gut/1-10-1@01e5", "gut/1-10-1@0247"]}
+{"zh": "钟山道士", "en": "Zhong Taoist", "category": "person", "count": 3, "alt": "Mt. Zhong Taoist", "note": "Speaker tag, disciples of Zhongshan Abbey.", "source_ids": ["gut/1-8-12@0015", "gut/1-8-12@005c", "gut/1-8-12@028f"]}
+{"zh": "道士", "en": "Taoist", "category": "title", "count": 15, "alt": "Daoist", "note": "Generic Taoist priest/monk (speaker tag in the epilogue).", "source_ids": ["gut/1-2-18@0505", "gut/1-2-18@0557", "gut/1-8-12@0015"]}
+{"zh": "皮皮", "en": "Pipi", "category": "person", "count": 1, "note": "Only in scene name 皮皮家 (Nanbei Village).", "source_ids": ["gut/1-10-5@0057"]}
+{"zh": "神童", "en": "Prodigy", "category": "person", "count": 1, "note": "Only in scene name 神童家 (Fengdu).", "source_ids": ["gut/1-11-2@0055"]}
+{"zh": "师父", "en": "Master", "category": "title", "count": 27, "alt": "Shifu", "note": "The hero to Wuji (and Zhongshan disciples to Chongxu). As in the demo dialogue.", "source_ids": ["gut/1-1-1@0422", "gut/1-1-1@04d7", "gut/1-1-5@0098"]}
+{"zh": "师傅", "en": "Master", "category": "title", "count": 3, "note": "Variant spelling of 师父 in 1-1-1 and the scene/map name 师傅居; same meaning here. INCONSISTENT spelling in source, same English.", "source_ids": ["gut/1-1-1@0422", "gut/1-2-5@0070", "MAP/2-2-1/name"]}
+{"zh": "为师", "en": "I (your master)", "category": "title", "count": 1, "note": "Wuji referring to himself; render as plain 'I' or 'your master'.", "source_ids": ["gut/1-2-2@01ef"]}
+{"zh": "师兄", "en": "Brother", "category": "title", "count": 6, "alt": "Senior Brother", "note": "Senior fellow disciple. As in the demo ('Brother, so this is where you are!').", "source_ids": ["gut/1-1-1@0422", "gut/1-2-7@0067", "gut/1-2-18@0505"]}
+{"zh": "师弟", "en": "little brother", "category": "title", "count": 1, "alt": "Junior Brother", "note": "Junior fellow disciple (address).", "source_ids": ["ARS/3-2-2/name"]}
+{"zh": "师叔", "en": "Uncle", "category": "title", "count": 12, "alt": "Martial Uncle; Master-Uncle", "note": "Master's fellow disciple (Chongxu). 'Uncle Chongxu'.", "source_ids": ["gut/1-2-2@056d", "gut/1-2-43@00e1", "gut/1-3-11@00b7"]}
+{"zh": "掌门", "en": "Sect Head", "category": "title", "count": 1, "alt": "Sect Leader; Headmaster", "note": "Head of the sect. Epilogue: a Taoist addresses the hero as 掌门师兄 - he now leads Sanqing.", "source_ids": ["gut/1-2-18@0505"]}
+{"zh": "掌门师兄", "en": "Brother Sect Head", "category": "title", "count": 1, "alt": "Head Brother", "note": "Epilogue address to the grown-up hero.", "source_ids": ["gut/1-2-18@0505"]}
+{"zh": "掌教", "en": "head", "category": "title", "count": 1, "alt": "patriarch", "note": "Tiandao is 'head of the Five Pecks of Rice'.", "source_ids": ["gut/1-11-10@043b"]}
+{"zh": "祖师", "en": "Patriarch", "category": "title", "count": 3, "note": "Founder/ancestral master (天道祖师).", "source_ids": ["gut/1-11-10@0342", "gut/1-11-10@043b", "gut/1-14-11@02d0"]}
+{"zh": "祖师爷", "en": "granddaddy", "category": "title", "count": 1, "alt": "Grand Patriarch", "note": "Last line of the game: '我是你祖师爷！' - a taunt ('I'm your granddaddy!'), lit. 'your grand patriarch'.", "source_ids": ["gut/1-14-11@02d0"]}
+{"zh": "道长", "en": "Master Taoist", "category": "title", "count": 13, "alt": "Reverend; Taoist sir", "note": "Polite address for a Taoist used by villagers to the hero ('Thank you, Master Taoist').", "source_ids": ["gut/1-1-1@0003", "gut/1-3-8@0184", "gut/1-3-9@00e3"]}
+{"zh": "道人", "en": "Taoist", "category": "title", "count": 12, "note": "Suffix in names: 冲虚道人 -> Taoist Chongxu, 无机道人 -> Taoist Wuji.", "source_ids": ["gut/1-2-1@0266", "gut/1-8-2@0074", "gut/1-8-2@00d7"]}
+{"zh": "道爷", "en": "this Taoist", "category": "title", "count": 1, "alt": "your Taoist granddad", "note": "Swagger self-reference ('this Taoist is here to sort you out!').", "source_ids": ["gut/1-4-8@013c"]}
+{"zh": "真人", "en": "the Perfected", "category": "title", "count": 1, "alt": "True Man", "note": "Taoist honorific (玄虚真人).", "source_ids": ["gut/1-14-8@0369"]}
+{"zh": "星君", "en": "Star Lord", "category": "title", "count": 1, "note": "四象星君 = Star Lord of the Four Symbols (the Red Phoenix's rank).", "source_ids": ["gut/1-14-8@0369"]}
+{"zh": "大侠", "en": "hero", "category": "title", "count": 5, "alt": "good sir; great hero", "note": "Commoners to the hero ('Thank you, hero!').", "source_ids": ["gut/1-5-2@00a1", "gut/1-5-2@01a7", "gut/1-5-16@00b8"]}
+{"zh": "恩公", "en": "benefactor", "category": "title", "count": 3, "note": "Granny Cai and the Mayor to the party.", "source_ids": ["gut/1-3-8@01ca", "gut/1-3-8@0208", "gut/1-9-14@0037"]}
+{"zh": "姑娘", "en": "Miss", "category": "title", "count": 11, "alt": "young lady", "note": "Young woman (address); 'that girl' in narration.", "source_ids": ["gut/1-7-2@01c5", "gut/1-8-2@00d7", "gut/1-8-2@018b"]}
+{"zh": "客官", "en": "sir", "category": "title", "count": 11, "alt": "honored guest", "note": "Innkeepers to guests.", "source_ids": ["gut/1-7-2@013d", "gut/1-7-2@01a7", "gut/1-7-2@0249"]}
+{"zh": "婆婆", "en": "Granny", "category": "title", "count": 9, "note": "Old woman (address).", "source_ids": ["gut/1-3-4@008d", "gut/1-3-7@00b7", "gut/1-3-8@00d8"]}
+{"zh": "姐姐", "en": "Sister", "category": "title", "count": 7, "note": "Older girl (Xiaomei to Pingzhi).", "source_ids": ["gut/1-7-1@009d", "gut/1-7-14@00f8", "gut/1-7-14@0156"]}
+{"zh": "大哥", "en": "Brother", "category": "title", "count": 7, "note": "Affectionate 'big brother' (柳大哥).", "source_ids": ["gut/1-1-5@00c1", "gut/1-3-11@0099", "gut/1-3-12@0299"]}
+{"zh": "老夫", "en": "I", "category": "title", "count": 2, "note": "Old man's self-reference (Murong Xuan); plain 'I' with an old-fashioned tone.", "source_ids": ["gut/1-3-9@00e3", "gut/1-3-9@0231"]}
+{"zh": "三清", "en": "Sanqing", "category": "sect", "count": 35, "alt": "Three Pure Ones", "note": "The Three Pure Ones of Taoism; name of the mountain and the hero's temple/sect. Pinyin (real place, Mt. Sanqing in Jiangxi).", "source_ids": ["gut/1-1-1@0003", "gut/1-1-2@0084", "gut/1-2-1@0085"]}
+{"zh": "三清宫", "en": "Sanqing Hall", "category": "place", "count": 18, "alt": "Sanqing Temple; Sanqing Palace", "note": "The hero's temple and sect ('I'm a disciple of Wuji of Sanqing Hall'); map/scene name. 'Sanqing Temple/Palace' (14) exceeds the 12-byte map field. [MAP/2-1-1]", "source_ids": ["gut/1-1-2@0084", "gut/1-2-1@0085", "MAP/2-1-1/name"]}
+{"zh": "五斗米道", "en": "Way of the Five Pecks of Rice", "category": "sect", "count": 1, "alt": "Five Pecks Sect; Wudoumi Dao", "note": "Historical Taoist movement founded by Zhang Daoling at Mt. Heming; Tiandao is its head.", "source_ids": ["gut/1-11-10@043b"]}
+{"zh": "茅山", "en": "Maoshan", "category": "sect", "count": 1, "note": "Taoist exorcist school (Sage Charm description; 矛山 typo in the 天师符法 description).", "source_ids": ["GRS/6-8-3/desc"]}
+{"zh": "百花派", "en": "Hundred Flowers Sect", "category": "sect", "count": 1, "note": "Martial sect in the Hibiscus description.", "source_ids": ["GRS/6-7-28/desc"]}
+{"zh": "诡踪堡", "en": "Ghosttrack Fort", "category": "sect", "count": 1, "note": "Clan in the Night Garb description.", "source_ids": ["GRS/6-2-17/desc"]}
+{"zh": "魔族", "en": "demonkind", "category": "sect", "count": 6, "alt": "demon clan; the Demon Tribe", "note": "The demons as a people ('the demonkind keep harassing the ghosts').", "source_ids": ["gut/1-10-1@01e5", "gut/1-11-10@03e2", "gut/1-11-10@043b"]}
+{"zh": "鬼族", "en": "ghostkind", "category": "sect", "count": 7, "alt": "ghost clan", "note": "The ghosts of Fengdu as a people.", "source_ids": ["gut/1-11-10@0249", "gut/1-11-10@0342", "gut/1-11-10@043b"]}
+{"zh": "道门", "en": "the Taoist order", "category": "sect", "count": 1, "note": "Taoism as an institution ('a disgrace to the Taoist order').", "source_ids": ["gut/1-14-11@012a"]}
+{"zh": "步步高", "en": "BBK", "category": "other", "count": 1, "note": "Manufacturer (credits: 步步高游戏组 = BBK Game Team).", "source_ids": ["gut/1-2-18@05ec"]}
+{"zh": "伏魔记", "en": "Demonbane Chronicle", "category": "other", "count": 0, "alt": "Record of Demon Quelling; Fu Mo Ji", "note": "Game title (not in the string table; for the title screen/readme). Reviewer decision.", "source_ids": []}
+{"zh": "伏魔", "en": "Demonbane", "category": "other", "count": 19, "alt": "demon-quelling; demon-subduing", "note": "'Subduing demons'; in Demon Cave, the Demonbane Sword, the Primal Demonbane Array. Place compounds use the shorter 'Demon' to fit 12-byte map names (Demon Cave, Demon Trail).", "source_ids": ["gut/1-1-1@0003", "gut/1-1-5@0100", "gut/1-2-1@00eb"]}
+{"zh": "伏魔剑", "en": "Demonbane Sword", "category": "weapon", "count": 4, "note": "The sword the hero pulls from Demon Cave in chapter 1 (also 伏魔宝剑); pulling it breaks the seal and frees the demons. Probably the same object as ARS 无极乾坤剑 - see open decisions.", "source_ids": ["gut/1-2-1@00eb", "gut/1-2-2@025f", "gut/1-2-2@02af"]}
+{"zh": "伏魔宝剑", "en": "Demonbane Sword", "category": "weapon", "count": 1, "note": "Swordwarden's name for it.", "source_ids": ["gut/1-2-18@02a5"]}
+{"zh": "无机乾坤剑", "en": "Wuji Sword", "category": "item", "count": 1, "alt": "Wuji Cosmos Sword; Wuji Qiankun Sword", "note": "Key item GRS 6-14-12 ('a super sword you can't equip - ha!'). SAME sword as ARS 无极乾坤剑: the game spells 无机 (Wuji the master) vs 无极 (the Taoist 'limitless'); both are pinyin Wuji, so English unifies them for free. Full name >11 bytes. [GRS/6-14-12 desc: 你不能装备的超级好剑，气死你。哈哈……]", "source_ids": ["GRS/6-14-12/name"]}
+{"zh": "无极乾坤剑", "en": "Wuji Sword", "category": "item", "count": 1, "alt": "Wuji Cosmos Sword", "note": "ARS scene object 3-4-8 (the sword in its cave). Alternate spelling of 无机乾坤剑 - flagged inconsistency, same English. [ARS/3-4-8]", "source_ids": ["ARS/3-4-8/name"]}
+{"zh": "道", "en": "the Way", "category": "other", "count": 140, "alt": "Tao; the Dao", "note": "Philosophical sense (道魔不两立 'the Way and the demonic cannot coexist'; 道非道，魔非魔 echoes the Tao Te Ching). Count is inflated by compounds (知道, 道长...). [ARS/3-4-35]", "source_ids": ["ARS/3-4-35/name", "gut/1-1-1@0003", "gut/1-2-1@0224"]}
+{"zh": "魔", "en": "demon", "category": "other", "count": 122, "alt": "devil", "note": "Demon/demonic; opposite of 道 in the intro. Count inflated by compounds.", "source_ids": ["gut/1-1-1@0003", "gut/1-1-5@00c1", "gut/1-1-5@0100"]}
+{"zh": "妖", "en": "fiend", "category": "other", "count": 74, "alt": "yao; monster", "note": "Monster spirit; kept distinct from 魔 'demon' where it matters (Fiendslayer vs Demonslayer).", "source_ids": ["gut/1-1-5@0100", "gut/1-2-2@01ef", "gut/1-2-2@04fb"]}
+{"zh": "妖魔", "en": "demons", "category": "other", "count": 18, "alt": "fiends and demons", "note": "Generic 'demons and monsters' (18x).", "source_ids": ["gut/1-2-2@056d", "gut/1-2-18@036f", "gut/1-2-18@0441"]}
+{"zh": "妖怪", "en": "monster", "category": "other", "count": 14, "alt": "fiend", "note": "Generic creature/monster (14x).", "source_ids": ["gut/1-1-5@0100", "gut/1-2-2@04fb", "gut/1-3-4@00e8"]}
+{"zh": "魔头", "en": "archfiend", "category": "other", "count": 3, "alt": "demon lord", "note": "Great villain ('the real archfiend is Wuji').", "source_ids": ["gut/1-1-1@0003", "gut/1-14-8@0a89", "gut/1-14-11@012a"]}
+{"zh": "心魔", "en": "inner demon", "category": "other", "count": 2, "note": "Wuji's corruption ('my inner demon has been dispelled').", "source_ids": ["gut/1-1-5@0100", "gut/1-14-8@0369"]}
+{"zh": "魔功", "en": "demonic arts", "category": "skill", "count": 5, "note": "Evil cultivation (Wuji, White Tiger, Red Phoenix).", "source_ids": ["gut/1-12-3@0354", "gut/1-14-8@0369", "gut/1-14-8@0478"]}
+{"zh": "魔道", "en": "the demonic path", "category": "other", "count": 1, "note": "'fallen to the demonic path'.", "source_ids": ["gut/1-14-8@0b48"]}
+{"zh": "魔界", "en": "Demon Realm", "category": "place", "count": 2, "note": "Realm of demons (Violet Lamp description).", "source_ids": ["gut/1-10-1@05d3", "GRS/6-6-13/desc"]}
+{"zh": "三界", "en": "Three Realms", "category": "place", "count": 1, "note": "Gods, demons, mortals (Tiandao's ambition).", "source_ids": ["gut/1-14-8@01c1"]}
+{"zh": "人间", "en": "the mortal world", "category": "place", "count": 9, "alt": "the human world", "note": "'brought down to the mortal world'.", "source_ids": ["gut/1-1-1@0003", "gut/1-10-1@05d3", "gut/1-10-2@027f"]}
+{"zh": "天界", "en": "Heaven", "category": "place", "count": 1, "note": "Heavenly court (Dragonbind description).", "source_ids": ["GRS/6-8-25/desc"]}
+{"zh": "江湖", "en": "the martial world", "category": "other", "count": 2, "alt": "jianghu", "note": "Opening scroll ('anyone in the martial world with ears...').", "source_ids": ["gut/1-1-1@0003"]}
+{"zh": "除魔卫道", "en": "slay demons and defend the Way", "category": "other", "count": 4, "note": "The hero's duty, said by Wuji, Lu Fu and the hero.", "source_ids": ["gut/1-2-2@0470", "gut/1-5-13@0212", "gut/1-8-12@0104"]}
+{"zh": "替天行道", "en": "do Heaven's justice", "category": "other", "count": 2, "alt": "act on Heaven's behalf", "note": "Battle cry vs Li Hu and Tiandao. Also spelled out by four ARS scene objects named 替 / 天 / 行 / 道 (3-4-32..35, a banner in Tiandao's lair; not displayed) - give those 'Banner 1/4'..'Banner 4/4' if a name is needed; they are left out as single-character terms.", "source_ids": ["gut/1-5-15@011e", "gut/1-14-8@0a58"]}
+{"zh": "万魔幻化", "en": "Myriad Demon Metamorphosis", "category": "skill", "count": 4, "alt": "Ten-Thousand Demon Transformation", "note": "Wuji's forbidden art; at level 10 it turns anything into undying demons.", "source_ids": ["gut/1-1-5@0100", "gut/1-14-8@0478", "gut/1-14-8@0757"]}
+{"zh": "先天伏魔阵", "en": "Primal Demonbane Array", "category": "other", "count": 2, "alt": "Primordial Demon-Subduing Formation", "note": "The ancient array in Demon Cave that holds the sealed demons; the Chaos Urn placed at its center ends the game.", "source_ids": ["gut/1-1-5@0100", "gut/1-14-8@0478"]}
+{"zh": "阵", "en": "Array", "category": "other", "count": 23, "alt": "Formation", "note": "Magic formation (Soulsnare Array, Godslayer Array).", "source_ids": ["gut/1-1-5@0100", "gut/1-2-32@024a", "gut/1-2-32@0262"]}
+{"zh": "四象", "en": "Four Symbols", "category": "other", "count": 10, "alt": "Four Images", "note": "Blue Dragon, White Tiger, Red Phoenix, Dark Turtle.", "source_ids": ["gut/1-2-32@024a", "gut/1-14-8@0369", "gut/1-14-8@0826"]}
+{"zh": "四象诛仙阵", "en": "Four Symbols Godslayer Array", "category": "other", "count": 3, "note": "Array on Sky Summit built by the Red Phoenix for Wuji; broken by returning the four Orbs.", "source_ids": ["gut/1-2-32@024a", "gut/1-14-8@0369", "gut/1-14-8@0826"]}
+{"zh": "诛仙阵", "en": "Godslayer Array", "category": "other", "count": 4, "note": "Short form.", "source_ids": ["gut/1-2-32@024a", "gut/1-2-32@0262", "gut/1-14-8@0369"]}
+{"zh": "摄魂阵", "en": "Soulsnare Array", "category": "other", "count": 5, "note": "The Crimson Demon's array under the old manor in Whitewater; also a scene name.", "source_ids": ["gut/1-9-13@02ed", "gut/1-9-13@030a", "gut/1-9-13@046b"]}
+{"zh": "摄魂术", "en": "Soulsnare", "category": "skill", "count": 2, "alt": "Soul-Snaring Art", "note": "The Crimson Demon's soul-draining art.", "source_ids": ["gut/1-9-13@030a", "gut/1-9-13@080b"]}
+{"zh": "七大邪阵", "en": "Seven Evil Arrays", "category": "other", "count": 1, "note": "Pingzhi's lore.", "source_ids": ["gut/1-9-13@030a"]}
+{"zh": "腥风魔功", "en": "Reek Wind art", "category": "skill", "count": 2, "note": "White Tiger's art.", "source_ids": ["gut/1-12-3@0354"]}
+{"zh": "腥风", "en": "reek wind", "category": "other", "count": 2, "note": "White Tiger's foul wind.", "source_ids": ["gut/1-12-3@0354"]}
+{"zh": "醒风", "en": "reek wind", "category": "other", "count": 3, "note": "Typo for 腥风 in 1-10-x ('白虎醒风'). INCONSISTENT spelling in source, same English.", "source_ids": ["gut/1-10-1@03b3", "gut/1-10-2@01b2", "gut/1-10-2@027f"]}
+{"zh": "血雨", "en": "Blood Rain", "category": "other", "count": 2, "note": "Blue Dragon's blight (血雨大法 = Blood Rain technique).", "source_ids": ["gut/1-10-2@027f", "gut/1-13-2@06e5"]}
+{"zh": "妙手空空", "en": "Deft Hands", "category": "skill", "count": 1, "alt": "Light Fingers", "note": "Name Pingzhi gives the steal skill when she teaches it (1-14-8); the magic record is 飞龙探云手. INCONSISTENT names in source; reviewer: use 'Dragon Cloud Grab' in the line?", "source_ids": ["gut/1-14-8@0939"]}
+{"zh": "神魔大战", "en": "War of Gods and Demons", "category": "other", "count": 2, "note": "Ancient war (Violet Lamp lore).", "source_ids": ["gut/1-10-1@05d3", "GRS/6-6-13/desc"]}
+{"zh": "魂魄", "en": "soul", "category": "other", "count": 16, "note": "Souls drawn into the Chaos Urn, etc.", "source_ids": ["gut/1-2-32@01e1", "gut/1-9-13@030a", "gut/1-14-8@0826"]}
+{"zh": "妖气", "en": "evil aura", "category": "other", "count": 2, "alt": "demonic aura", "note": "'a strong evil aura around Miss Yuan'.", "source_ids": ["gut/1-2-2@01ef", "gut/1-8-12@01b9"]}
+{"zh": "正气", "en": "righteousness", "category": "other", "count": 1, "note": "Opposite of 妖气.", "source_ids": ["gut/1-8-12@01b9"]}
+{"zh": "法宝", "en": "treasure", "category": "other", "count": 6, "alt": "magic treasure", "note": "Magic artifact.", "source_ids": ["gut/1-10-1@05d3", "GRS/6-2-12/desc", "GRS/6-6-13/desc"]}
+{"zh": "符", "en": "Charm", "category": "other", "count": 28, "alt": "Talisman", "note": "Taoist paper talisman; 'Charm' in item names to fit 11 bytes (Sage Charm, Wind Charm...).", "source_ids": ["GRS/6-6-1/name", "GRS/6-6-1/desc", "GRS/6-8-3/name"]}
+{"zh": "符咒", "en": "charm", "category": "other", "count": 9, "alt": "talisman", "note": "In descriptions.", "source_ids": ["GRS/6-8-3/desc", "GRS/6-8-8/desc", "GRS/6-8-9/desc"]}
+{"zh": "咒", "en": "Spell", "category": "other", "count": 41, "alt": "Mantra; Incantation", "note": "In magic names (雷咒 Thunder Spell); 'Curse' for evil ones (蚀骨毒咒 Bone-Rot Curse).", "source_ids": ["GRS/6-1-4/desc", "GRS/6-7-12/desc", "GRS/6-8-3/desc"]}
+{"zh": "诀", "en": "Mantra", "category": "other", "count": 8, "alt": "Verse; Secret", "note": "Technique formula in magic names (御魔诀 Demonward Mantra).", "source_ids": ["MRS/4-1-7/desc", "MRS/4-1-10/name", "MRS/4-1-13/name"]}
+{"zh": "功夫", "en": "kung fu", "category": "other", "count": 6, "alt": "martial arts", "note": "The hero's word for his self-made moves.", "source_ids": ["gut/1-2-2@01b1", "gut/1-3-8@0132", "gut/1-12-3@0334"]}
+{"zh": "武功", "en": "martial arts", "category": "other", "count": 4, "note": "Appears in: dialogue, item descriptions, magic descriptions.", "source_ids": ["gut/1-2-52@03ad", "gut/1-9-3@007d", "GRS/6-2-4/desc"]}
+{"zh": "比武大会", "en": "tournament", "category": "other", "count": 1, "note": "Wuji: 'you came second-to-last in the tournament'.", "source_ids": ["gut/1-2-2@0159"]}
+{"zh": "告示", "en": "Notice", "category": "ui", "count": 1, "note": "Sign text prefix ('告示：三清山' -> 'Notice: Mt. Sanqing').", "source_ids": ["gut/1-2-43@00f6"]}
+{"zh": "三清山", "en": "Mt. Sanqing", "category": "place", "count": 7, "alt": "Sanqing Mountain", "note": "The hero's mountain (real place).", "source_ids": ["gut/1-1-1@0003", "gut/1-2-1@029b", "gut/1-2-43@006c"]}
+{"zh": "三清山入口", "en": "Sanqing Gate", "category": "place", "count": 3, "alt": "Mt. Sanqing Entrance", "note": "Foot of the mountain path; map + scene name. [MAP/2-1-20]", "source_ids": ["gut/1-2-43@006c", "gut/1-2-44@0069", "MAP/2-1-20/name"]}
+{"zh": "无机阁", "en": "Wuji Tower", "category": "place", "count": 6, "alt": "Wuji Pavilion", "note": "Wuji's hall (map 2-2-7/2-2-8). The demo dialogue uses 'Wuji Pavilion' (13), too long for the 12-byte map field. [MAP/2-2-7; MAP/2-2-8]", "source_ids": ["gut/1-1-3@0057", "gut/1-2-2@0100", "MAP/2-2-7/name"]}
+{"zh": "无机洞", "en": "Wuji Cave", "category": "place", "count": 2, "note": "Final scene where Wuji is fought (1-1-4/5).", "source_ids": ["gut/1-1-4@015a", "gut/1-1-5@0074"]}
+{"zh": "百草地", "en": "Herb Meadow", "category": "place", "count": 2, "alt": "Hundred Herbs Field", "note": "Where the hero chases butterflies in the opening. [MAP/2-1-2]", "source_ids": ["gut/1-2-12@0072", "MAP/2-1-2/name"]}
+{"zh": "竹林山道", "en": "Bamboo Path", "category": "place", "count": 2, "alt": "Bamboo Mountain Path", "note": "Mountain path through bamboo. [MAP/2-1-3]", "source_ids": ["gut/1-2-13@0059", "MAP/2-1-3/name"]}
+{"zh": "后山浮桥", "en": "Float Bridge", "category": "place", "count": 2, "alt": "Back-Mountain Floating Bridge", "note": "Floating bridge on the back of the mountain. [MAP/2-1-4]", "source_ids": ["gut/1-2-15@0057", "MAP/2-1-4/name"]}
+{"zh": "后山", "en": "back mountain", "category": "place", "count": 6, "alt": "rear hill", "note": "Rear slopes of a mountain (Sanqing; Zhongshan's bell cave).", "source_ids": ["gut/1-2-2@025f", "gut/1-2-15@0057", "gut/1-8-12@005c"]}
+{"zh": "伏魔山道", "en": "Demon Trail", "category": "place", "count": 2, "alt": "Demonbane Trail", "note": "Path to Demon Cave. [MAP/2-1-5]", "source_ids": ["gut/1-2-16@0057", "MAP/2-1-5/name"]}
+{"zh": "伏魔洞口", "en": "Cave Mouth", "category": "place", "count": 2, "alt": "Demon Cave Mouth", "note": "Entrance of Demon Cave. [MAP/2-1-6]", "source_ids": ["gut/1-2-17@0073", "MAP/2-1-6/name"]}
+{"zh": "伏魔洞", "en": "Demon Cave", "category": "place", "count": 8, "alt": "Demonbane Cave (14)", "note": "Cave on Sanqing's back mountain where demons are sealed and the sword is kept. [MAP/2-3-1]", "source_ids": ["gut/1-2-18@0065", "MAP/2-3-1/name", "gut/1-1-1@0003"]}
+{"zh": "三清坟场", "en": "Hill Graves", "category": "place", "count": 2, "alt": "Sanqing Graveyard", "note": "Sanqing's graveyard. [MAP/2-1-7]", "source_ids": ["gut/1-2-14@0055", "MAP/2-1-7/name"]}
+{"zh": "前山步云桥", "en": "Cloudstep", "category": "place", "count": 1, "alt": "Front-Mountain Cloudstep Bridge", "note": "Map name of the front-mountain bridge (same place as scene 步云桥). [MAP/2-1-8]", "source_ids": ["MAP/2-1-8/name"]}
+{"zh": "步云桥", "en": "Cloudstep", "category": "place", "count": 2, "alt": "Cloudstep Bridge", "note": "Bridge maze on the front of the mountain ('stepping on clouds').", "source_ids": ["gut/1-2-31@0057", "MAP/2-1-8/name"]}
+{"zh": "前山", "en": "front mountain", "category": "place", "count": 1, "note": "Appears in: map name.", "source_ids": ["MAP/2-1-8/name"]}
+{"zh": "摩天顶", "en": "Sky Summit", "category": "place", "count": 2, "alt": "Skytop", "note": "Peak with the Four Symbols Godslayer Array. [MAP/2-1-9]", "source_ids": ["gut/1-2-32@00c2", "MAP/2-1-9/name"]}
+{"zh": "观星亭", "en": "Star Gazebo", "category": "place", "count": 2, "alt": "Stargazing Pavilion", "note": "Pavilion on the bridge maze (locked; needs a Picklock). [MAP/2-1-12]", "source_ids": ["gut/1-2-33@0055", "MAP/2-1-12/name"]}
+{"zh": "通用横桥", "en": "Bridge H", "category": "place", "count": 1, "note": "Generic horizontal bridge map (dev label). [MAP/2-1-10]", "source_ids": ["MAP/2-1-10/name"]}
+{"zh": "通用竖桥", "en": "Bridge V", "category": "place", "count": 1, "note": "Generic vertical bridge map (dev label). [MAP/2-1-11]", "source_ids": ["MAP/2-1-11/name"]}
+{"zh": "横桥", "en": "Bridge", "category": "place", "count": 4, "note": "Scene name of horizontal bridges (player sees no H/V distinction).", "source_ids": ["gut/1-2-34@0057", "gut/1-6-12@0057", "gut/1-14-6@0057"]}
+{"zh": "竖桥", "en": "Bridge", "category": "place", "count": 4, "note": "Scene name of vertical bridges.", "source_ids": ["gut/1-2-35@0057", "gut/1-6-8@0057", "gut/1-14-2@0057"]}
+{"zh": "歇息台子", "en": "Rest Ledge", "category": "place", "count": 14, "alt": "Rest Stop", "note": "Resting platforms in the bridge mazes (map 2-1-13..19 numbered).", "source_ids": ["gut/1-2-36@0057", "gut/1-2-37@0057", "gut/1-2-38@005b"]}
+{"zh": "台子", "en": "Ledge", "category": "place", "count": 20, "alt": "Platform", "note": "Platform scenes (Zhongshan, Heming bridge mazes).", "source_ids": ["gut/1-6-9@005b", "gut/1-6-10@0055", "gut/1-6-11@0055"]}
+{"zh": "原野阡", "en": "Fields N-S", "category": "place", "count": 3, "alt": "Wilds (north road)", "note": "Wild fields maze, north-south paths (阡). [MAP/2-1-21]", "source_ids": ["gut/1-2-45@006e", "gut/1-6-1@006e", "MAP/2-1-21/name"]}
+{"zh": "原野陌", "en": "Fields E-W", "category": "place", "count": 3, "alt": "Wilds (east road)", "note": "Wild fields maze, east-west paths (陌). [MAP/2-1-22]", "source_ids": ["gut/1-2-46@006e", "gut/1-6-2@006e", "MAP/2-1-22/name"]}
+{"zh": "忘忧村", "en": "Heartsease", "category": "place", "count": 11, "alt": "Wangyou Village; Carefree Village", "note": "Xiaomei's village ('forget-sorrow'); heartsease is a flower named for peace of mind. Add 'village' in prose when needed. [MAP/2-1-23]", "source_ids": ["gut/1-3-1@009e", "gut/1-3-13@0059", "MAP/2-1-23/name"]}
+{"zh": "忘忧坟场", "en": "Graveyard", "category": "place", "count": 3, "alt": "Heartsease Graveyard", "note": "Heartsease graveyard, where the Snake Demon's tunnel comes out. [MAP/2-1-32]", "source_ids": ["gut/1-2-53@0055", "MAP/2-1-32/name", "gut/1-3-12@0074"]}
+{"zh": "慕容玄家", "en": "Murong Home", "category": "place", "count": 1, "alt": "Murong Xuan's House", "note": "Map name of the elder's house. [MAP/2-1-24]", "source_ids": ["MAP/2-1-24/name"]}
+{"zh": "村长家", "en": "Elder's House", "category": "place", "count": 2, "note": "Scene name (Heartsease; also used for the Whitewater mayor's house - source reuse).", "source_ids": ["gut/1-3-9@0067", "gut/1-9-4@0055"]}
+{"zh": "慕容厨房", "en": "Kitchen", "category": "place", "count": 2, "alt": "Murong Kitchen", "note": "Murong kitchen. [MAP/2-2-14]", "source_ids": ["gut/1-3-10@0055", "MAP/2-2-14/name"]}
+{"zh": "慕容主房", "en": "Main Room", "category": "place", "count": 2, "alt": "Murong Main Room", "note": "Murong main room. [MAP/2-2-15]", "source_ids": ["gut/1-3-11@0074", "MAP/2-2-15/name"]}
+{"zh": "东东家", "en": "Dongdong's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-4@0067"]}
+{"zh": "老孟家", "en": "Old Meng's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-5@005e"]}
+{"zh": "疯子家", "en": "Madman's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-6@005e"]}
+{"zh": "阿霞家", "en": "Ah Xia's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-7@0067"]}
+{"zh": "蔡婆家", "en": "Granny Cai's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-8@0067"]}
+{"zh": "野外斜路", "en": "Wild Slope", "category": "place", "count": 1, "note": "Map name (diagonal road). [MAP/2-1-25]", "source_ids": ["MAP/2-1-25/name"]}
+{"zh": "转折路口", "en": "Crossroads", "category": "place", "count": 13, "note": "Junction maps/scenes (numbered maps 2-1-26..30).", "source_ids": ["gut/1-2-48@0057", "gut/1-2-49@0057", "gut/1-2-50@005b"]}
+{"zh": "愚人居", "en": "Fool's Hut", "category": "place", "count": 2, "alt": "Fools' Lodge", "note": "Hideout of the dev-team cameos. [MAP/2-1-31]", "source_ids": ["gut/1-2-52@005e", "MAP/2-1-31/name"]}
+{"zh": "瘴气林", "en": "Miasma Wood", "category": "place", "count": 4, "alt": "Miasma Forest", "note": "Poison forest south of Heartsease (needs both Reed Mails).", "source_ids": ["gut/1-3-9@01f7", "gut/1-4-2@00c9", "gut/1-4-8@00fb"]}
+{"zh": "毒瘴林", "en": "Miasma Wood", "category": "place", "count": 2, "note": "Same forest (毒瘴林 vs 瘴气林: two names, one place).", "source_ids": ["gut/1-4-1@0062", "MAP/2-1-33/name"]}
+{"zh": "毒瘴林入口", "en": "Miasma Gate", "category": "place", "count": 2, "alt": "Miasma Wood Entrance", "note": "Entrance of the Miasma Wood. [MAP/2-1-33]", "source_ids": ["gut/1-4-1@0062", "MAP/2-1-33/name"]}
+{"zh": "猎人居", "en": "Hunter's Lodge", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-4-2@005e"]}
+{"zh": "森林道路", "en": "Forest Road", "category": "place", "count": 6, "note": "Map 2-1-34/2-1-38 and scenes (森林道路2 = Forest Road 2). [MAP/2-1-34; MAP/2-1-38]", "source_ids": ["gut/1-4-3@006e", "gut/1-6-3@006e", "gut/1-14-7@0082"]}
+{"zh": "人蛇窟", "en": "Snakeman Den", "category": "place", "count": 2, "note": "Lair of the Snake Demon.", "source_ids": ["gut/1-4-5@0058", "MAP/2-1-35/name"]}
+{"zh": "人蛇窟入口", "en": "Snake Gate", "category": "place", "count": 2, "alt": "Snakeman Den Entrance", "note": "Entrance of the Snakeman Den. [MAP/2-1-35]", "source_ids": ["gut/1-4-5@0058", "MAP/2-1-35/name"]}
+{"zh": "蛇窟", "en": "Snake Den", "category": "place", "count": 10, "note": "Appears in: scene name, map name.", "source_ids": ["gut/1-4-5@0058", "gut/1-4-6@0138", "gut/1-4-7@009c"]}
+{"zh": "蛇窟山洞", "en": "Snake Den", "category": "place", "count": 6, "note": "Cave maps 2-3-6..8 (scenes 蛇窟山洞2/3 = Snake Den 2/3). [MAP/2-3-6; MAP/2-3-7; MAP/2-3-8]", "source_ids": ["gut/1-4-6@0138", "MAP/2-3-6/name", "MAP/2-3-7/name"]}
+{"zh": "蛇窟宝洞", "en": "Den Vault", "category": "place", "count": 1, "alt": "Snake Den Treasure Cave", "note": "Treasure cave of the Snake Den.", "source_ids": ["gut/1-4-9@0096"]}
+{"zh": "蛇窟隐洞", "en": "Hidden Den", "category": "place", "count": 1, "note": "Hidden cave of the Snake Den.", "source_ids": ["gut/1-4-10@009b"]}
+{"zh": "石梦城", "en": "Stonedream", "category": "place", "count": 6, "alt": "Shimeng City", "note": "Town ruled by Li Hu ('stone dream'). [MAP/2-1-37]", "source_ids": ["gut/1-5-1@00fb", "MAP/2-1-37/name", "gut/1-3-7@00b7"]}
+{"zh": "李府", "en": "Li Manor", "category": "place", "count": 4, "note": "Li Hu's mansion (dialogue).", "source_ids": ["gut/1-5-2@00be", "gut/1-5-2@0146"]}
+{"zh": "李俯", "en": "Li Manor", "category": "place", "count": 8, "note": "Scene names spell it 李俯 (typo for 李府). INCONSISTENT in source, same English. Rooms: 西厢房 West Wing, 客厅 Parlor, 东厢房 East Wing, 密道 Secret Passage, 下人房 Servants' Room, 厨房 Kitchen, 下房 Back Room, 宝库 Vault.", "source_ids": ["gut/1-5-14@0055", "gut/1-5-15@0083", "gut/1-5-16@0076"]}
+{"zh": "李虎家主房", "en": "Li Hu's Hall", "category": "place", "count": 1, "note": "Map name. [MAP/2-2-20]", "source_ids": ["MAP/2-2-20/name"]}
+{"zh": "老王家", "en": "Old Wang's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-5-2@0079"]}
+{"zh": "鲁斧家", "en": "Lu Fu's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-5-13@005e"]}
+{"zh": "周处庙", "en": "Zhou Shrine", "category": "place", "count": 2, "alt": "Zhou Chu Shrine", "note": "Zhou Chu's shrine in Nanbei Village. [MAP/2-1-36]", "source_ids": ["gut/1-10-2@0057", "MAP/2-1-36/name"]}
+{"zh": "建业城", "en": "Jianye", "category": "place", "count": 4, "alt": "Jianye City", "note": "City (historical name of Nanjing). [MAP/2-1-39]", "source_ids": ["gut/1-7-1@0076", "MAP/2-1-39/name", "gut/1-3-5@00da"]}
+{"zh": "建业客栈", "en": "Jianye Inn", "category": "place", "count": 2, "note": "Appears in: scene name, map name. [MAP/2-2-22]", "source_ids": ["gut/1-7-2@005d", "MAP/2-2-22/name"]}
+{"zh": "新野客栈", "en": "Xinye Inn", "category": "place", "count": 1, "note": "Map 2-2-21; the scene shown is 建业客栈 - leftover dev name, flagged. [MAP/2-2-21]", "source_ids": ["MAP/2-2-21/name"]}
+{"zh": "钟山", "en": "Mt. Zhong", "category": "place", "count": 18, "alt": "Zhongshan; Bell Mountain", "note": "Mountain of Chongxu's abbey, where the Tyrant Bell is kept (real Zhongshan near Nanjing).", "source_ids": ["gut/1-2-2@056d", "gut/1-3-11@00b7", "gut/1-6-13@0061"]}
+{"zh": "钟山入口", "en": "Zhong Gate", "category": "place", "count": 2, "alt": "Mt. Zhong Entrance", "note": "Map + scene name. [MAP/2-1-40]", "source_ids": ["gut/1-6-13@0061", "MAP/2-1-40/name"]}
+{"zh": "钟山道院", "en": "Zhong Abbey", "category": "place", "count": 2, "alt": "Zhongshan Abbey", "note": "Chongxu's abbey. [MAP/2-1-44]", "source_ids": ["gut/1-8-1@0088", "MAP/2-1-44/name"]}
+{"zh": "参虚阁", "en": "Canxu Tower", "category": "place", "count": 1, "alt": "Canxu Pavilion", "note": "Zhongshan's main hall (cf. Wuji Tower).", "source_ids": ["gut/1-8-3@00c3"]}
+{"zh": "冲虚居", "en": "Chongxu's Room", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-8-6@005e"]}
+{"zh": "弟子居", "en": "Dormitory", "category": "place", "count": 4, "note": "Disciples' quarters (Zhongshan).", "source_ids": ["gut/1-8-7@0055", "gut/1-2-6@0067", "gut/1-2-8@0067"]}
+{"zh": "普通弟子居", "en": "Dormitory", "category": "place", "count": 3, "note": "Sanqing disciples' quarters (map 2-2-4; scenes 普通弟子居1/2 = Dormitory 1/2). [MAP/2-2-4]", "source_ids": ["MAP/2-2-4/name", "gut/1-2-6@0067", "gut/1-2-8@0067"]}
+{"zh": "师傅居", "en": "Abbot's Room", "category": "place", "count": 2, "alt": "Master's Room", "note": "Wuji's quarters (map 2-2-1). \"Master's Room\" is 13 bytes, over the 12-byte map field. [MAP/2-2-1]", "source_ids": ["gut/1-2-5@0070", "MAP/2-2-1/name"]}
+{"zh": "大师兄居", "en": "Senior Room", "category": "place", "count": 2, "alt": "Big Brother's Room", "note": "Eldest disciple's room. [MAP/2-2-2]", "source_ids": ["gut/1-2-7@0067", "MAP/2-2-2/name"]}
+{"zh": "清风居", "en": "My Room", "category": "place", "count": 2, "alt": "Qingfeng's Room", "note": "The hero's own room (rest point). [MAP/2-2-3]", "source_ids": ["gut/1-2-10@0082", "MAP/2-2-3/name"]}
+{"zh": "三清宫厨房", "en": "Kitchen", "category": "place", "count": 2, "note": "Appears in: scene name, map name. [MAP/2-2-5]", "source_ids": ["gut/1-2-11@0070", "MAP/2-2-5/name"]}
+{"zh": "厨房", "en": "Kitchen", "category": "place", "count": 7, "note": "Appears in: scene name, map name.", "source_ids": ["gut/1-8-8@0055", "gut/1-2-11@0070", "gut/1-3-10@0055"]}
+{"zh": "三清宫药房", "en": "Dispensary", "category": "place", "count": 2, "alt": "Sanqing Dispensary", "note": "Temple medicine shop. [MAP/2-2-9]", "source_ids": ["gut/1-2-3@0057", "MAP/2-2-9/name"]}
+{"zh": "药房", "en": "Dispensary", "category": "place", "count": 3, "note": "Zhongshan medicine shop.", "source_ids": ["gut/1-8-4@0057", "gut/1-2-3@0057", "MAP/2-2-9/name"]}
+{"zh": "三清宫丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Alchemy room (scene).", "source_ids": ["gut/1-2-4@0067"]}
+{"zh": "三清练丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Map 2-2-6 (练 for 炼 typo). [MAP/2-2-6]", "source_ids": ["MAP/2-2-6/name"]}
+{"zh": "炼丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Zhongshan alchemy room.", "source_ids": ["gut/1-8-5@005e"]}
+{"zh": "霸王钟洞口", "en": "Bell Cave Mouth", "category": "place", "count": 1, "note": "Scene at Zhongshan.", "source_ids": ["gut/1-8-2@0230"]}
+{"zh": "霸王钟洞", "en": "Bell Cave", "category": "place", "count": 2, "alt": "Tyrant Bell Cave", "note": "Cave where the Tyrant Bell is kept.", "source_ids": ["gut/1-8-10@008b", "gut/1-8-2@0230"]}
+{"zh": "霸王迷宫", "en": "Bell Maze", "category": "place", "count": 1, "alt": "Tyrant Maze", "note": "Maze before the bell cave.", "source_ids": ["gut/1-8-9@0146"]}
+{"zh": "白水镇", "en": "Whitewater", "category": "place", "count": 6, "alt": "Baishui Town", "note": "Town where children disappear. [MAP/2-1-42]", "source_ids": ["gut/1-9-1@0069", "MAP/2-1-42/name", "gut/1-7-1@00ee"]}
+{"zh": "老宅子", "en": "Old Manor", "category": "place", "count": 1, "alt": "Old House", "note": "Haunted house in Whitewater.", "source_ids": ["gut/1-9-2@0057"]}
+{"zh": "老宅主房", "en": "Manor Hall", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-9-11@005e"]}
+{"zh": "枯井迷宫", "en": "Dry Well Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-9-12@0110"]}
+{"zh": "南北村", "en": "Nanbei Village", "category": "place", "count": 3, "alt": "Northsouth Village", "note": "Village between South Hill and North Sea (lit. 'South-North'); Zhou Chu's home.", "source_ids": ["gut/1-10-1@00e2", "gut/1-10-1@0247", "gut/1-14-8@0272"]}
+{"zh": "酆都城", "en": "Fengdu", "category": "place", "count": 2, "alt": "Fengdu City", "note": "The 'ghost city' (real Fengdu, Chongqing). [MAP/2-1-43]", "source_ids": ["gut/1-11-1@00b7", "MAP/2-1-43/name"]}
+{"zh": "酆都", "en": "Fengdu", "category": "place", "count": 5, "note": "Appears in: dialogue, scene name, map name.", "source_ids": ["gut/1-10-1@052a", "gut/1-11-1@00b7", "gut/1-11-4@0114"]}
+{"zh": "城隍庙", "en": "City God Temple", "category": "place", "count": 1, "note": "Where the Ghost King waits, south of Fengdu.", "source_ids": ["gut/1-11-10@017c"]}
+{"zh": "南山", "en": "South Hill", "category": "place", "count": 4, "alt": "Nanshan", "note": "Lair of the White Tiger.", "source_ids": ["gut/1-10-2@00c0", "gut/1-12-1@0057", "gut/1-12-2@011b"]}
+{"zh": "南山入口", "en": "South Hill Gate", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-1@0057"]}
+{"zh": "南山迷宫", "en": "South Hill Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-2@011b"]}
+{"zh": "南山虎穴", "en": "Tiger's Den", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-3@024d"]}
+{"zh": "北海", "en": "North Sea", "category": "place", "count": 22, "note": "Lair of the Blue Dragon (whirlpool entrance). [MAP/2-1-45]", "source_ids": ["gut/1-6-14@0072", "MAP/2-1-45/name", "gut/1-10-2@00c0"]}
+{"zh": "北海迷宫", "en": "North Sea Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-13-1@0124"]}
+{"zh": "北海龙潭", "en": "Dragon Pool", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-13-2@021d"]}
+{"zh": "鹤鸣山", "en": "Mt. Heming", "category": "place", "count": 8, "alt": "Crane Cry Mountain", "note": "Tiandao's mountain (real Heming Shan, birthplace of the Five Pecks of Rice).", "source_ids": ["gut/1-6-1@0300", "gut/1-11-10@05c4", "gut/1-14-1@00c2"]}
+{"zh": "鹤鸣山入口", "en": "Heming Gate", "category": "place", "count": 1, "note": "Map name. [MAP/2-1-41]", "source_ids": ["MAP/2-1-41/name"]}
+{"zh": "鹤鸣山脚", "en": "Heming Foot", "category": "place", "count": 1, "note": "Scene name: devastated village at the foot of the mountain.", "source_ids": ["gut/1-14-1@00c2"]}
+{"zh": "鹤鸣山洞口", "en": "Heming Cave", "category": "place", "count": 2, "alt": "Heming Cave Mouth", "note": "Map + scene: cave mouth where Tiandao and the Red Phoenix die. [MAP/2-1-46]", "source_ids": ["gut/1-14-8@009a", "MAP/2-1-46/name"]}
+{"zh": "鹤鸣山洞", "en": "Heming Cavern", "category": "place", "count": 3, "note": "Inside the cave (Dark Turtle).", "source_ids": ["gut/1-14-9@00c3", "gut/1-14-8@009a", "MAP/2-1-46/name"]}
+{"zh": "陵墓迷宫", "en": "Tomb Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-14-10@008e"]}
+{"zh": "天师陵墓", "en": "Sage's Tomb", "category": "place", "count": 2, "alt": "Tomb of the Celestial Master", "note": "Tomb of the Celestial Master. [MAP/2-3-11]", "source_ids": ["gut/1-14-11@004a", "MAP/2-3-11/name"]}
+{"zh": "灯洞", "en": "Lamp Cave", "category": "place", "count": 12, "note": "Eight lamp caves inside Demon Cave (maps 2-3-2..5, scenes 灯洞1..8).", "source_ids": ["gut/1-2-19@005e", "gut/1-2-20@008b", "gut/1-2-21@0074"]}
+{"zh": "通用山洞", "en": "Cave", "category": "place", "count": 1, "note": "Generic cave map (dev label). [MAP/2-3-9]", "source_ids": ["MAP/2-3-9/name"]}
+{"zh": "通用迷宫", "en": "Maze", "category": "place", "count": 1, "note": "Generic maze map (dev label). [MAP/2-3-10]", "source_ids": ["MAP/2-3-10/name"]}
+{"zh": "杂货店", "en": "Goods Shop", "category": "place", "count": 6, "alt": "General Store", "note": "General store. [MAP/2-2-16]", "source_ids": ["gut/1-3-3@0065", "gut/1-5-7@0065", "gut/1-9-8@0065"]}
+{"zh": "杂货铺", "en": "Goods Shop", "category": "place", "count": 1, "note": "Same as 杂货店 (Jianye).", "source_ids": ["gut/1-7-4@0065"]}
+{"zh": "武器店", "en": "Weapon Shop", "category": "place", "count": 7, "note": "Appears in: scene name, map name. [MAP/2-2-17]", "source_ids": ["gut/1-3-2@006e", "gut/1-5-11@0065", "gut/1-7-3@0065"]}
+{"zh": "药店", "en": "Herb Shop", "category": "place", "count": 5, "note": "Appears in: scene name, ARS name.", "source_ids": ["gut/1-5-3@0057", "gut/1-9-7@0057", "gut/1-10-6@0057"]}
+{"zh": "药铺", "en": "Herb Shop", "category": "place", "count": 2, "note": "Appears in: scene name, map name. [MAP/2-2-18]", "source_ids": ["gut/1-7-6@0057", "MAP/2-2-18/name"]}
+{"zh": "当铺", "en": "Pawnshop", "category": "place", "count": 6, "note": "Appears in: scene name, dialogue, map name. [MAP/2-2-19]", "source_ids": ["gut/1-5-9@0057", "gut/1-7-5@0057", "gut/1-9-9@0057"]}
+{"zh": "客栈", "en": "Inn", "category": "place", "count": 11, "note": "Appears in: scene name, dialogue, map name.", "source_ids": ["gut/1-5-10@0055", "gut/1-9-5@0059", "gut/1-7-1@00cd"]}
+{"zh": "小客栈", "en": "Small Inn", "category": "place", "count": 3, "note": "Appears in: scene name, map name. [MAP/2-2-26]", "source_ids": ["gut/1-10-9@0057", "gut/1-11-4@0062", "MAP/2-2-26/name"]}
+{"zh": "客栈客房", "en": "Guest Room", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-7-12@0055"]}
+{"zh": "客栈厨房", "en": "Inn Kitchen", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-7-13@0055"]}
+{"zh": "民宅", "en": "House", "category": "place", "count": 16, "note": "Generic houses (scenes 民宅1..5 = House 1..5).", "source_ids": ["gut/1-9-6@0055", "gut/1-9-10@0055", "gut/1-10-7@0055"]}
+{"zh": "农舍", "en": "Farmhouse", "category": "place", "count": 6, "note": "Map names (农舍1..4 numbered). [MAP/2-2-23; MAP/2-2-24]", "source_ids": ["MAP/2-2-23/name", "MAP/2-2-24/name", "MAP/2-2-10/name"]}
+{"zh": "豪华居", "en": "Mansion", "category": "place", "count": 1, "note": "Map name. [MAP/2-2-25]", "source_ids": ["MAP/2-2-25/name"]}
+{"zh": "龙泉", "en": "Longquan", "category": "place", "count": 3, "note": "Sword-making town (Longquan sword).", "source_ids": ["GRS/6-7-6/name", "GRS/6-7-6/desc"]}
+{"zh": "华山", "en": "Mt. Hua", "category": "place", "count": 1, "note": "Item description.", "source_ids": ["GRS/6-9-2/desc"]}
+{"zh": "太白山", "en": "Mt. Taibai", "category": "place", "count": 1, "note": "Item description.", "source_ids": ["GRS/6-11-14/desc"]}
+{"zh": "天山", "en": "Tianshan", "category": "place", "count": 1, "note": "Item description.", "source_ids": ["GRS/6-11-11/desc"]}
+{"zh": "火焰山", "en": "Flaming Mountain", "category": "place", "count": 1, "note": "Item description.", "source_ids": ["GRS/6-8-28/desc"]}
+{"zh": "瀛洲", "en": "Yingzhou", "category": "place", "count": 1, "note": "Isle of immortals (Galeweed).", "source_ids": ["GRS/6-12-6/desc"]}
+{"zh": "西域", "en": "the Western Regions", "category": "place", "count": 1, "note": "Appears in: item name.", "source_ids": ["GRS/6-9-13/name"]}
+{"zh": "塞北", "en": "the northern frontier", "category": "place", "count": 1, "note": "Appears in: item descriptions.", "source_ids": ["GRS/6-11-13/desc"]}
+{"zh": "八仙洞", "en": "Eight Immortals Cave", "category": "place", "count": 1, "note": "Fairy Stone description.", "source_ids": ["GRS/6-11-2/desc"]}
+{"zh": "三清宫门左", "en": "Hall Gate L", "category": "other", "count": 1, "note": "Scene object (dev label). [ARS/3-4-1]", "source_ids": ["ARS/3-4-1/name"]}
+{"zh": "三清宫门中", "en": "Hall Gate M", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-2]", "source_ids": ["ARS/3-4-2/name"]}
+{"zh": "三清宫门右", "en": "Hall Gate R", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-3]", "source_ids": ["ARS/3-4-3/name"]}
+{"zh": "横向栏杆", "en": "Railing", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-4]", "source_ids": ["ARS/3-4-4/name"]}
+{"zh": "树1", "en": "Tree 1", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-5]", "source_ids": ["ARS/3-4-5/name"]}
+{"zh": "机关门", "en": "Puzzle Door", "category": "other", "count": 2, "alt": "Trick Door", "note": "Mechanism door guarding the sword ('open the mechanism door'). [ARS/3-4-6]", "source_ids": ["ARS/3-4-6/name", "gut/1-2-2@02af"]}
+{"zh": "伏魔灯", "en": "Demon Lamp", "category": "other", "count": 1, "alt": "Demonbane Lamp", "note": "The eight lamps of the Lamp Caves (scene object). [ARS/3-4-7]", "source_ids": ["ARS/3-4-7/name"]}
+{"zh": "宝箱1", "en": "Chest 1", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-9]", "source_ids": ["ARS/3-4-9/name"]}
+{"zh": "挡路石", "en": "Boulder", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-10]", "source_ids": ["ARS/3-4-10/name"]}
+{"zh": "迷宫楼梯", "en": "Maze Stairs", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-11]", "source_ids": ["ARS/3-4-11/name"]}
+{"zh": "云彩", "en": "Cloud", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-12]", "source_ids": ["ARS/3-4-12/name"]}
+{"zh": "山洞隐层", "en": "Cave Cover", "category": "other", "count": 1, "note": "Scene object (hidden cave overlay). [ARS/3-4-13]", "source_ids": ["ARS/3-4-13/name"]}
+{"zh": "传送点", "en": "Warp Point", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-14]", "source_ids": ["ARS/3-4-14/name"]}
+{"zh": "大箱子", "en": "Big Chest", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-15]", "source_ids": ["ARS/3-4-15/name"]}
+{"zh": "玉马", "en": "Jade Horse", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-16]", "source_ids": ["ARS/3-4-16/name"]}
+{"zh": "文物", "en": "Antique", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-17]", "source_ids": ["ARS/3-4-17/name"]}
+{"zh": "透明宝箱", "en": "Ghost Chest", "category": "other", "count": 1, "alt": "Hidden Chest", "note": "Invisible chest (scene object). [ARS/3-4-18]", "source_ids": ["ARS/3-4-18/name"]}
+{"zh": "房门", "en": "Door", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-19]", "source_ids": ["ARS/3-4-19/name"]}
+{"zh": "商店招牌", "en": "Shop Sign", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-20]", "source_ids": ["ARS/3-4-20/name"]}
+{"zh": "无头尸体", "en": "Headless", "category": "other", "count": 1, "alt": "Headless Body", "note": "Headless body (scene object). [ARS/3-4-23]", "source_ids": ["ARS/3-4-23/name"]}
+{"zh": "烟雾左", "en": "Smoke L", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-25]", "source_ids": ["ARS/3-4-25/name"]}
+{"zh": "烟雾右", "en": "Smoke R", "category": "other", "count": 1, "note": "Scene object. [ARS/3-4-26]", "source_ids": ["ARS/3-4-26/name"]}
+{"zh": "旋涡", "en": "Whirlpool", "category": "other", "count": 2, "note": "Scene object (entrance to the North Sea). [ARS/3-4-27]", "source_ids": ["ARS/3-4-27/name", "gut/1-6-14@008b"]}
+{"zh": "蛟对象", "en": "Wyrm", "category": "other", "count": 1, "note": "Scene object of the North Sea Wyrm. [ARS/3-4-28]", "source_ids": ["ARS/3-4-28/name"]}
+{"zh": "小狗", "en": "Puppy", "category": "other", "count": 3, "note": "The North Sea Drake in disguise ('what a cute puppy!'). [ARS/3-4-29]", "source_ids": ["ARS/3-4-29/name", "gut/1-13-2@030e", "gut/1-13-2@0503"]}
+{"zh": "草堆", "en": "Haystack", "category": "other", "count": 3, "note": "The White Tiger disguised as haystacks. [ARS/3-4-30]", "source_ids": ["ARS/3-4-30/name", "gut/1-12-3@0290", "ARS/3-3-3/name"]}
+{"zh": "盘龙柱", "en": "Dragon Post", "category": "other", "count": 1, "alt": "Coiled Dragon Pillar", "note": "Coiled-dragon pillar (scene object). [ARS/3-4-40]", "source_ids": ["ARS/3-4-40/name"]}
+{"zh": "百虫秘籍", "en": "Bug Manual", "category": "other", "count": 1, "alt": "Hundred Bugs Manual", "note": "Scene object; cf. magic 百虫欺天 taught by Allnighter. [ARS/3-4-43]", "source_ids": ["ARS/3-4-43/name"]}
+{"zh": "龟头虫", "en": "Turtle Bug", "category": "monster", "count": 1, "alt": "Turtlehead", "note": "Turtle-head bug; zh has a crude double meaning (龟头) the dev team surely intended - reviewer may want a cheeky name. [ARS/3-3-1]", "source_ids": ["ARS/3-3-1/name"]}
+{"zh": "小蜜蜂", "en": "Little Bee", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-2]", "source_ids": ["ARS/3-3-2/name"]}
+{"zh": "风草堆", "en": "Windstack", "category": "monster", "count": 1, "alt": "Wind Haystack", "note": "Wind-blown haystack monster (cf. the White Tiger's haystack disguise). [ARS/3-3-3]", "source_ids": ["ARS/3-3-3/name"]}
+{"zh": "酒坛怪", "en": "Jar Fiend", "category": "monster", "count": 1, "alt": "Wine Jar Imp", "note": "Living wine jar. [ARS/3-3-4]", "source_ids": ["ARS/3-3-4/name"]}
+{"zh": "蟑螂", "en": "Cockroach", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-12]", "source_ids": ["ARS/3-3-12/name"]}
+{"zh": "小火怪", "en": "Fire Imp", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-13]", "source_ids": ["ARS/3-3-13/name"]}
+{"zh": "小蛇", "en": "Small Snake", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-15]", "source_ids": ["ARS/3-3-15/name"]}
+{"zh": "蝎子", "en": "Scorpion", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-16]", "source_ids": ["ARS/3-3-16/name"]}
+{"zh": "五彩蜘蛛", "en": "Iris Spider", "category": "monster", "count": 1, "alt": "Rainbow Spider", "note": "Five-colored spider. 'Rainbow Spider' is 14. [ARS/3-3-17]", "source_ids": ["ARS/3-3-17/name"]}
+{"zh": "公背婆", "en": "Piggyback", "category": "monster", "count": 1, "alt": "Piggyback Pair", "note": "Folk figure of an old man carrying an old woman on his back (one costume, two heads). [ARS/3-3-21]", "source_ids": ["ARS/3-3-21/name"]}
+{"zh": "小蜈蚣", "en": "Centipede", "category": "monster", "count": 1, "alt": "Little Centipede", "note": "Monster. Appears in: ARS name. [ARS/3-3-22]", "source_ids": ["ARS/3-3-22/name"]}
+{"zh": "僵尸", "en": "Zombie", "category": "monster", "count": 5, "alt": "Jiangshi", "note": "Chinese hopping corpse. [ARS/3-3-23]", "source_ids": ["ARS/3-3-23/name", "GRS/6-8-14/desc", "ARS/3-4-37/name"]}
+{"zh": "小孩僵尸", "en": "Ghoul Kid", "category": "other", "count": 3, "alt": "Zombie Kid", "note": "Child zombies (ARS scene objects 3-4-37..39, numbered).", "source_ids": ["ARS/3-4-37/name", "ARS/3-4-38/name", "ARS/3-4-39/name"]}
+{"zh": "骷髅兵", "en": "Skeleton", "category": "monster", "count": 1, "alt": "Bone Soldier", "note": "Monster. Appears in: ARS name. [ARS/3-3-24]", "source_ids": ["ARS/3-3-24/name"]}
+{"zh": "恶猩猩", "en": "Evil Ape", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-25]", "source_ids": ["ARS/3-3-25/name"]}
+{"zh": "怨妇幻妖", "en": "Banshee", "category": "monster", "count": 8, "alt": "Grudge Wraith", "note": "Spirits of the pregnant women buried head-down around the Soulsnare Array; they wail at night. Numbered 1..8 (ARS 3-3-27..34).", "source_ids": ["ARS/3-3-27/name", "ARS/3-3-28/name", "ARS/3-3-29/name"]}
+{"zh": "高粱酒坛", "en": "Sorghum Jar", "category": "monster", "count": 1, "note": "Sorghum-liquor jar monster. [ARS/3-3-48]", "source_ids": ["ARS/3-3-48/name"]}
+{"zh": "毒蜘蛛", "en": "Bane Spider", "category": "monster", "count": 2, "alt": "Venom Spider", "note": "Poison spider (element set: Bane/Bolt/Gale/Fire/Rock/Ice). 'Venom Spider' is 12. [ARS/3-3-49]", "source_ids": ["ARS/3-3-49/name", "GRS/6-8-16/desc"]}
+{"zh": "雷蜘蛛", "en": "Bolt Spider", "category": "monster", "count": 1, "alt": "Thunder Spider", "note": "Thunder spider. [ARS/3-3-50]", "source_ids": ["ARS/3-3-50/name"]}
+{"zh": "风蜘蛛", "en": "Gale Spider", "category": "monster", "count": 1, "note": "Wind spider. [ARS/3-3-51]", "source_ids": ["ARS/3-3-51/name"]}
+{"zh": "火蜘蛛", "en": "Fire Spider", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-52]", "source_ids": ["ARS/3-3-52/name"]}
+{"zh": "土蜘蛛", "en": "Rock Spider", "category": "monster", "count": 1, "alt": "Earth Spider", "note": "Earth spider. [ARS/3-3-53]", "source_ids": ["ARS/3-3-53/name"]}
+{"zh": "冰蜘蛛", "en": "Ice Spider", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-54]", "source_ids": ["ARS/3-3-54/name"]}
+{"zh": "怪妖坛子", "en": "Demon Jar", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-55]", "source_ids": ["ARS/3-3-55/name"]}
+{"zh": "蝴蝶仙子", "en": "Butterfly", "category": "monster", "count": 1, "alt": "Butterfly Fairy", "note": "Butterfly fairy (callback to the opening butterfly). [ARS/3-3-56]", "source_ids": ["ARS/3-3-56/name"]}
+{"zh": "大头怪", "en": "Bighead", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-57]", "source_ids": ["ARS/3-3-57/name"]}
+{"zh": "小可爱", "en": "Cutie", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-58]", "source_ids": ["ARS/3-3-58/name"]}
+{"zh": "恶鱼", "en": "Evil Fish", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-59]", "source_ids": ["ARS/3-3-59/name"]}
+{"zh": "章鱼", "en": "Octopus", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-60]", "source_ids": ["ARS/3-3-60/name"]}
+{"zh": "贝壳", "en": "Seashell", "category": "monster", "count": 1, "alt": "Clam", "note": "Monster. Appears in: ARS name. [ARS/3-3-61]", "source_ids": ["ARS/3-3-61/name"]}
+{"zh": "血云雾", "en": "Blood Mist", "category": "monster", "count": 1, "note": "Monster. Appears in: ARS name. [ARS/3-3-62]", "source_ids": ["ARS/3-3-62/name"]}
+{"zh": "发带", "en": "Hair Band", "category": "armor", "count": 1, "note": "Head. Cloth hair tie. [GRS/6-1-1 desc: 绑头发的一根布条。防御+1。]", "source_ids": ["GRS/6-1-1/name"]}
+{"zh": "头巾", "en": "Headscarf", "category": "armor", "count": 2, "note": "Head. [GRS/6-1-2 desc: 普通人戴的头巾，不但可以防灰，还有保暖作用。防御+2。]", "source_ids": ["GRS/6-1-2/name", "GRS/6-1-2/desc"]}
+{"zh": "避雨帽", "en": "Rain Hat", "category": "armor", "count": 1, "note": "Head. Leather rain hat. [GRS/6-1-3 desc: 牛皮制成的帽子，用来防雨防雪。防御+4。]", "source_ids": ["GRS/6-1-3/name"]}
+{"zh": "法帽", "en": "Taoist Hat", "category": "armor", "count": 1, "note": "Head. Worn by accomplished Taoists. [GRS/6-1-4 desc: 有修为的道士所戴的帽子。防御+11、灵力+3、避咒封。]", "source_ids": ["GRS/6-1-4/name"]}
+{"zh": "将军盔", "en": "Battle Helm", "category": "armor", "count": 1, "alt": "General's Helm", "note": "Head. A general's helmet. [GRS/6-1-5 desc: 是立下过赫赫战功的大将，所护头的东西。防御+28、身法+5、灵力+3、吉运+3。]", "source_ids": ["GRS/6-1-5/name"]}
+{"zh": "紫金冠", "en": "Royal Crown", "category": "armor", "count": 1, "alt": "Purple-Gold Crown", "note": "Head. Purple-gold crown, top-tier. [GRS/6-1-6 desc: 此物本应天上有，人间能得几回见，绝对的极品。真气上限+15、攻击-4、防御+20、灵力+12、避乱、避眠。]", "source_ids": ["GRS/6-1-6/name"]}
+{"zh": "彩带", "en": "Ribbon", "category": "armor", "count": 1, "note": "Head. Colored ribbon (girls). [GRS/6-1-7 desc: 彩色的布条，女孩子比较喜欢。防御+2。]", "source_ids": ["GRS/6-1-7/name"]}
+{"zh": "头饰", "en": "Crane Clasp", "category": "armor", "count": 1, "alt": "Hair Ornament", "note": "Head. Silver crane-shaped hair ornament. [GRS/6-1-8 desc: 银制的仙鹤形状发饰。防御+3。]", "source_ids": ["GRS/6-1-8/name"]}
+{"zh": "头簪", "en": "Hairpin", "category": "armor", "count": 3, "note": "Head. [GRS/6-1-9 desc: 头上插的发簪。防御+5。]", "source_ids": ["GRS/6-1-9/name", "GRS/6-1-11/name", "GRS/6-1-11/desc"]}
+{"zh": "天鸡毛", "en": "Dawn Plume", "category": "armor", "count": 1, "alt": "Sky Rooster Feather", "note": "Head. Feather of the heavenly rooster that wakes the sun. [GRS/6-1-10 desc: 每天叫醒太阳的天鸡身上的毛。防御+2  灵力+2  吉运+2。]", "source_ids": ["GRS/6-1-10/name"]}
+{"zh": "宝石头簪", "en": "Gem Hairpin", "category": "armor", "count": 1, "note": "Head. Sapphire hairpin. [GRS/6-1-11 desc: 镶有蓝宝石的头簪。防御+9、吉运+6。]", "source_ids": ["GRS/6-1-11/name"]}
+{"zh": "避邪冠", "en": "Ward Crown", "category": "armor", "count": 1, "note": "Head. 避邪 'ward off evil' -> Ward. [GRS/6-1-12 desc: 黎族姑娘戴的头冠，据传可护身避邪。防御+10、避乱。]", "source_ids": ["GRS/6-1-12/name"]}
+{"zh": "蓝玉冠", "en": "Azure Crown", "category": "armor", "count": 1, "alt": "Blue Jade Crown", "note": "Head. Silver crown with blue jade. [GRS/6-1-13 desc: 以白银铸成，外饰以珍贵蓝玉石。防御+18 灵力+6 吉运+4。]", "source_ids": ["GRS/6-1-13/name"]}
+{"zh": "天蚕丝带", "en": "Silk Band", "category": "armor", "count": 1, "alt": "Sky Silk Band", "note": "Head. Heavenly-silkworm silk band. [GRS/6-1-14 desc: 以极珍贵的天蚕丝织成，轻薄柔韧。防御+25、身法+8、避封。]", "source_ids": ["GRS/6-1-14/name"]}
+{"zh": "防毒面罩", "en": "Toxin Mask", "category": "armor", "count": 1, "alt": "Gas Mask", "note": "Head. Weird-looking anti-poison mask. [GRS/6-1-15 desc: 造型怪异，能防毒的面罩。]", "source_ids": ["GRS/6-1-15/name"]}
+{"zh": "白衣", "en": "White Robe", "category": "armor", "count": 2, "note": "Body. [GRS/6-2-1 desc: 粗布缝制的交领长袖白衣。防御+3。]", "source_ids": ["GRS/6-2-1/name", "GRS/6-2-1/desc"]}
+{"zh": "皮甲", "en": "Hide Armor", "category": "armor", "count": 1, "note": "Body. Buffalo leather. [GRS/6-2-2 desc: 用水牛皮制做的护甲。防御+7。]", "source_ids": ["GRS/6-2-2/name"]}
+{"zh": "铁锁衣", "en": "Chain Mail", "category": "armor", "count": 1, "note": "Body. [GRS/6-2-3 desc: 以铁环扣锁制成的护甲。防御+20、身法-3。]", "source_ids": ["GRS/6-2-3/name"]}
+{"zh": "罗汉袍", "en": "Arhat Robe", "category": "armor", "count": 1, "note": "Body. Fighting monk's robe. [GRS/6-2-4 desc: 有武功、有修为的和尚所穿的衣服。防御+15、吉运+5、灵力+5。]", "source_ids": ["GRS/6-2-4/name"]}
+{"zh": "百练衣", "en": "Snakeskin", "category": "armor", "count": 1, "note": "Body. Made from 百练 snake skin, resists poison. [GRS/6-2-5 desc: 用百练蛇皮做的衣服，具有防毒的效果。防御+35、避毒。]", "source_ids": ["GRS/6-2-5/name"]}
+{"zh": "天师法衣", "en": "Sage Robe", "category": "armor", "count": 1, "alt": "Celestial Master's Vestment", "note": "Body. Zhang Daoling's vestment. [GRS/6-2-6 desc: 张道陵升仙前所穿的法衣。防御+40、灵力+12、避封。]", "source_ids": ["GRS/6-2-6/name"]}
+{"zh": "金缕衣", "en": "Jade Suit", "category": "armor", "count": 1, "alt": "Gold-Thread Jade Suit", "note": "Body. Gold-threaded jade suit (金缕玉衣). [GRS/6-2-7 desc: 以金线穿玉片编制而成，又称[金缕玉衣]。防御+40、吉运+10、身法-10。避乱。]", "source_ids": ["GRS/6-2-7/name"]}
+{"zh": "丝衣", "en": "Silk Dress", "category": "armor", "count": 2, "note": "Body. [GRS/6-2-8 desc: 富贵人家小姐的家常衣服，对穷人就不一样哟！只有过年的时候才能穿上一穿呀！防御+10。]", "source_ids": ["GRS/6-2-8/name", "GRS/6-2-14/name"]}
+{"zh": "贵妃衣", "en": "Noble Gown", "category": "armor", "count": 1, "alt": "Consort's Gown", "note": "Body. Imperial consort's gown. [GRS/6-2-9 desc: 是有身份的达官显贵女子所穿的衣服。防御+18、吉运+2。]", "source_ids": ["GRS/6-2-9/name"]}
+{"zh": "渺影衣", "en": "Shadowsilk", "category": "armor", "count": 1, "note": "Body. [GRS/6-2-10 desc: 使用天蚕丝纺成的衣服，轻盈且防御效果不错。防御+24、身法+8。]", "source_ids": ["GRS/6-2-10/name"]}
+{"zh": "火羽衣", "en": "Flame Robe", "category": "armor", "count": 1, "alt": "Fire Feather Robe", "note": "Body. Red feather robe that looks like fire. [GRS/6-2-11 desc: 红颜色的羽衣，远看像一团火而得名。防御+30，身法+4、避乱。]", "source_ids": ["GRS/6-2-11/name"]}
+{"zh": "朝圣衣", "en": "Holy Robe", "category": "armor", "count": 1, "alt": "Pilgrim Robe", "note": "Body. DEF+100. [GRS/6-2-12 desc: 内有护身法宝“如影随行”，该衣具有超高的防御效果。防御+100。]", "source_ids": ["GRS/6-2-12/name"]}
+{"zh": "鬼针胃", "en": "Barbed Mail", "category": "armor", "count": 1, "alt": "Ghost Spike Armor", "note": "Body. Barbed bronze armor. 胃 'stomach' is a typo for 胄 'armor'; flagged. [GRS/6-2-13 desc: 长满倒刺的铜制盔肌，防御+55，攻击+19。]", "source_ids": ["GRS/6-2-13/name"]}
+{"zh": "天蛛丝衣", "en": "Spider Silk", "category": "armor", "count": 1, "note": "Body. [GRS/6-2-14 desc: 使用蜘蛛神吐的丝织成，轻薄柔韧。防御+40、避毒。]", "source_ids": ["GRS/6-2-14/name"]}
+{"zh": "珍珠衫", "en": "Pearl Shirt", "category": "armor", "count": 1, "note": "Body. (Description calls it 珍珠衣.) [GRS/6-2-15 desc: 此衣全部饰用上等珍珠穿编而成，故称珍珠衣。防御+60、身法-3、吉运+10。]", "source_ids": ["GRS/6-2-15/name"]}
+{"zh": "避毒衣", "en": "Swan Robe", "category": "armor", "count": 1, "alt": "Antitoxin Robe", "note": "Body. White swan feathers; resists poison. [GRS/6-2-16 desc: 此衣用白天鹅的羽毛织成，透气保暖亦可避毒。防御+64、身法+6、避毒。]", "source_ids": ["GRS/6-2-16/name"]}
+{"zh": "诡踪衣", "en": "Night Garb", "category": "armor", "count": 1, "alt": "Stealth Garb", "note": "Body. Black garb of the Ghosttrack Fort. [GRS/6-2-17 desc: 诡踪堡特有的黑色衣服，来无影、去无踪。防御+35、身法+22、吉运-6。]", "source_ids": ["GRS/6-2-17/name"]}
+{"zh": "潮海衣", "en": "Tide Robe", "category": "armor", "count": 1, "alt": "Ocean Robe", "note": "Body. Ultimate robe. [GRS/6-2-18 desc: 天蚕抽丝，仙鹤织就，穿上可以不落沉沦、不堕地狱，坐有万佛朝礼、行有七佛随身。是宝物中的宝物呀!]", "source_ids": ["GRS/6-2-18/name"]}
+{"zh": "草鞋", "en": "Straw Shoes", "category": "armor", "count": 3, "note": "Feet. [GRS/6-3-1 desc: 以蔺草编织而成，十分便宜，穿起来很轻便，适宜行走。防御+1。]", "source_ids": ["GRS/6-3-1/name", "GRS/6-3-14/name", "GRS/6-3-14/desc"]}
+{"zh": "布鞋", "en": "Cloth Shoes", "category": "armor", "count": 2, "note": "Feet. [GRS/6-3-2 desc: 粗布缝制的长统靴。防御+3、身法+1。]", "source_ids": ["GRS/6-3-2/name", "GRS/6-3-7/name"]}
+{"zh": "道靴", "en": "Tao Boots", "category": "armor", "count": 1, "alt": "Taoist Boots", "note": "Feet. Taoist boots. [GRS/6-3-3 desc: 道士穿的长靴子。防御+5、身法+2。]", "source_ids": ["GRS/6-3-3/name"]}
+{"zh": "长寿靴", "en": "Life Boots", "category": "armor", "count": 1, "alt": "Longevity Boots", "note": "Feet. Longevity boots, max HP+10. [GRS/6-3-4 desc: 王侯将相所穿，精雕细做的靴子。防御+8、身法+6、生命上限+10。]", "source_ids": ["GRS/6-3-4/name"]}
+{"zh": "霸王靴", "en": "Steel Boots", "category": "armor", "count": 1, "alt": "Tyrant Boots (12)", "note": "Feet. Steel-wire lined. [GRS/6-3-5 desc: 此靴底及靴面内层都加有特铸的金钢丝，可防刀剑。防御+22、身法+5。]", "source_ids": ["GRS/6-3-5/name"]}
+{"zh": "追风靴", "en": "Windchasers", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-6 desc: 以薄如云雾的蝉纱织成，助穿者疾行如风。防御+10、身法+18。]", "source_ids": ["GRS/6-3-6/name"]}
+{"zh": "花布鞋", "en": "Print Shoes", "category": "armor", "count": 1, "alt": "Floral Shoes", "note": "Feet. Floral cotton shoes. [GRS/6-3-7 desc: 用普通的花纹布所做的鞋子。防御+4、身法+2。]", "source_ids": ["GRS/6-3-7/name"]}
+{"zh": "闺秀鞋", "en": "Lady Shoes", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-8 desc: 大家闺秀所穿的带有精致花纹的鞋子。防御+8、身法+3。]", "source_ids": ["GRS/6-3-8/name"]}
+{"zh": "鹿皮靴", "en": "Deerskins", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-9 desc: 鞋面以麋鹿鹿皮毛缝缝制，质地轻柔，行动可如麋鹿般迅捷。防御+11、身法+5。]", "source_ids": ["GRS/6-3-9/name"]}
+{"zh": "莲花靴", "en": "Lotus Boots", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-10 desc: 饰以金莲的长统绣花鞋。防御+10、身法+8。]", "source_ids": ["GRS/6-3-10/name"]}
+{"zh": "夜光靴", "en": "Glow Boots", "category": "armor", "count": 1, "note": "Feet. Luminous pearl boots. [GRS/6-3-11 desc: 水晶制作而成的，镶嵌夜明珠，晚上不用打灯笼也能看到路。防御+15、身法+12。]", "source_ids": ["GRS/6-3-11/name"]}
+{"zh": "灵狐靴", "en": "Fox Boots", "category": "armor", "count": 1, "note": "Feet. Spirit-fox fur. [GRS/6-3-12 desc: 用九天灵狐的皮做的鞋子，价格不菲，绝对是值钱的东西。防御+20、身法+16。]", "source_ids": ["GRS/6-3-12/name"]}
+{"zh": "登天泥鞋", "en": "Skyclimbers", "category": "armor", "count": 1, "note": "Feet. Divine clay shoes. [GRS/6-3-13 desc: 神泥做的鞋子，可以适应不同的脚而成不同的形状。生命上限+20、防御+16、身法+22。]", "source_ids": ["GRS/6-3-13/name"]}
+{"zh": "御风草鞋", "en": "Windriders", "category": "armor", "count": 1, "note": "Feet. Straw sandals for riding the wind. [GRS/6-3-14 desc: 可以御风而行的草鞋。生命真气上限+20、防御+4、身法+26。]", "source_ids": ["GRS/6-3-14/name"]}
+{"zh": "乾坤游步", "en": "Cosmos Walk", "category": "armor", "count": 1, "note": "Feet. Tour the world in a day. [GRS/6-3-15 desc: 穿上此鞋可于一日内游遍三山五岳。防御+30、身法+24、灵力+12、吉运+10。]", "source_ids": ["GRS/6-3-15/name"]}
+{"zh": "披风", "en": "Cape", "category": "armor", "count": 7, "alt": "Cloak", "note": "Cape slot (UI 肩披 = Cape). [GRS/6-4-1 desc: 挡风御寒的东西。防御+2。]", "source_ids": ["GRS/6-4-1/name", "GRS/6-4-4/name", "GRS/6-4-4/desc"]}
+{"zh": "肩甲", "en": "Pauldrons", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-2 desc: 用于护两肩的铠甲。防御+6。]", "source_ids": ["GRS/6-4-2/name"]}
+{"zh": "青铜铠", "en": "Bronze Mail", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-3 desc: 防御效果不错的铠甲，只是重量可不轻呀！穿上去一定很笨重。防御+12、身法-7。]", "source_ids": ["GRS/6-4-3/name"]}
+{"zh": "软蛟披风", "en": "Wyrm Cape", "category": "armor", "count": 1, "note": "Cape. Jiao (wyrm) hide. [GRS/6-4-4 desc: 利用蛟龙的皮制作成的披风，防御效果不错。防御+12。]", "source_ids": ["GRS/6-4-4/name"]}
+{"zh": "铁鳞甲", "en": "Scale Mail", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-5 desc: 以鱼鳞形甲片编缀而成的铠甲。防御+18、身法-4。]", "source_ids": ["GRS/6-4-5/name"]}
+{"zh": "金钢肌", "en": "Steel Plate", "category": "armor", "count": 1, "alt": "Vajra Plate", "note": "Cape. 肌 'muscle' likely a typo for 甲; flagged. [GRS/6-4-6 desc: 以稀有的上等金钢铁铸造而成。防御+19。]", "source_ids": ["GRS/6-4-6/name"]}
+{"zh": "圣斗甲", "en": "Saint Mail", "category": "armor", "count": 1, "alt": "Saint Cloth", "note": "Cape. Saint Seiya joke (圣斗士). [GRS/6-4-7 desc: 此甲以一张血汗宝马的皮制成。防御+28。]", "source_ids": ["GRS/6-4-7/name"]}
+{"zh": "青雷战衣", "en": "Storm Coat", "category": "armor", "count": 1, "alt": "Green Thunder Coat", "note": "Cape. [GRS/6-4-8 desc: 以十张同兽龄青蛇的皮制成，柔软灵活。防御+32。]", "source_ids": ["GRS/6-4-8/name"]}
+{"zh": "圣洁披风", "en": "Holy Cape", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-9 desc: 以菊黄色的雄鹰的羽毛编织成的。防御+32、灵力+16。]", "source_ids": ["GRS/6-4-9/name"]}
+{"zh": "御灵道袍", "en": "Spirit Robe", "category": "armor", "count": 1, "note": "Cape. Powerful Taoist's outer robe. [GRS/6-4-10 desc: 法力高强的道士所穿的外袍。防御+31、灵力+16。]", "source_ids": ["GRS/6-4-10/name"]}
+{"zh": "神龙披风", "en": "Dragon Cape", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-11 desc: 相传是李天王未登天庭以前穿过的，带有他的神气。防御+66、灵力+15。]", "source_ids": ["GRS/6-4-11/name"]}
+{"zh": "凤纹披风", "en": "Plume Cape", "category": "armor", "count": 1, "alt": "Phoenix Cape", "note": "Cape. Phoenix-embroidered; 'Phoenix Cape' is 12. [GRS/6-4-12 desc: 相传为织女缝织的披风，绣凤织锦，光彩夺目。防御+52、灵力+15。]", "source_ids": ["GRS/6-4-12/name"]}
+{"zh": "芦藤雌甲", "en": "Reed Mail F", "category": "armor", "count": 1, "alt": "Female Reed Mail", "note": "Cape. Female half of Lu Ban's anti-poison reed armor (worn by Xiaomei; both halves needed for the Miasma Wood). [GRS/6-4-13 desc: 相传为鲁班用云南能避百毒的白芦所造，共有雌雄两件，这件为雌的。防御+3，避毒。]", "source_ids": ["GRS/6-4-13/name"]}
+{"zh": "芦藤雄甲", "en": "Reed Mail M", "category": "armor", "count": 1, "alt": "Male Reed Mail", "note": "Cape. Male half (worn by the hero). [GRS/6-4-14 desc: 相传为鲁班用云南能避百毒的白芦所造，共有雌雄两件，这件为雄的。防御+3，避毒。]", "source_ids": ["GRS/6-4-14/name"]}
+{"zh": "芦藤甲", "en": "Reed Mail", "category": "item", "count": 3, "alt": "Reed-Vine Armor", "note": "The pair as named in dialogue.", "source_ids": ["gut/1-4-2@00ef", "gut/1-4-2@0139", "gut/1-5-13@00d2"]}
+{"zh": "布护腕", "en": "Cloth Cuffs", "category": "armor", "count": 1, "note": "Wrist. [GRS/6-5-1 desc: 衣服袖子上的装饰品，可以起到将人体热气保留在衣服内的效果，能增加保暖功能。防御+2。]", "source_ids": ["GRS/6-5-1/name"]}
+{"zh": "铁护腕", "en": "Iron Cuffs", "category": "armor", "count": 1, "note": "Wrist. [GRS/6-5-2 desc: 纯铁打造的腕上防具，只是会影响身法。防御+12、身法-3。]", "source_ids": ["GRS/6-5-2/name"]}
+{"zh": "雕龙护腕", "en": "Gold Cuffs", "category": "armor", "count": 1, "alt": "Dragon Cuffs", "note": "Wrist. Carved-dragon gold cuffs. [GRS/6-5-3 desc: 装饰的不错的金护腕。防御+10。]", "source_ids": ["GRS/6-5-3/name"]}
+{"zh": "避血手腕", "en": "Blood Cuffs", "category": "armor", "count": 1, "note": "Wrist. Must not see blood or its demon wakes. [GRS/6-5-4 desc: 不能见到鲜血，不然会激起它的魔性。攻击+10、防御+24、灵力+4。]", "source_ids": ["GRS/6-5-4/name"]}
+{"zh": "赤镯", "en": "Red Bangle", "category": "armor", "count": 1, "note": "Wrist. [GRS/6-5-5 desc: 红布缝制的护腕。防御+4。]", "source_ids": ["GRS/6-5-5/name"]}
+{"zh": "玉镯", "en": "Jade Bangle", "category": "armor", "count": 2, "note": "Wrist. [GRS/6-5-6 desc: 普通的玉镯子。防御+10。]", "source_ids": ["GRS/6-5-6/name", "GRS/6-5-6/desc"]}
+{"zh": "飞天镯", "en": "Sky Bangle", "category": "armor", "count": 1, "alt": "Apsara Bangle", "note": "Wrist. [GRS/6-5-7 desc: 用飞天白玉做成的镯子。防御+16、吉运+4。]", "source_ids": ["GRS/6-5-7/name"]}
+{"zh": "吸灵镯", "en": "Soul Bangle", "category": "armor", "count": 1, "alt": "Leech Bangle", "note": "Wrist. Drains MP into AGI/Luck. [GRS/6-5-8 desc: 会吸食佩带者的灵气，转化为身法和吉运的镯子。防御+8、真气上限-10、身法+10、吉运+10。]", "source_ids": ["GRS/6-5-8/name"]}
+{"zh": "平安符", "en": "Peace Charm", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-1 desc: 人们经常在神的面前诚心许愿，求一道符用来保护自己小孩的平安，据说只要许愿的人心诚，真会有用！吉运+4。]", "source_ids": ["GRS/6-6-1/name"]}
+{"zh": "香袋", "en": "Sachet", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-2 desc: 填充木屑，香粉的小布包，常用来装饰兼避邪的物品。灵力+4   吉运+2。]", "source_ids": ["GRS/6-6-2/name"]}
+{"zh": "长命锁", "en": "Life Lock", "category": "armor", "count": 1, "note": "Accessory. Longevity lock. [GRS/6-6-3 desc: 一根红头绳，经过高人开光后就具有了灵性。据说佩带可保长命。防御+3、灵力+3、吉运+3。]", "source_ids": ["GRS/6-6-3/name"]}
+{"zh": "铜镜", "en": "Mirror", "category": "armor", "count": 2, "alt": "Bronze Mirror", "note": "Accessory. Bronze mirror. [GRS/6-6-4 desc: 青铜制造的照容用具。防御+6。]", "source_ids": ["GRS/6-6-4/name", "GRS/6-6-9/desc"]}
+{"zh": "避邪袋", "en": "Ward Pouch", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-5 desc: 用优质的丝绸缝制的小布袋，里面装有艾草、及香料等。防御+6、灵力+3、吉运+5。]", "source_ids": ["GRS/6-6-5/name"]}
+{"zh": "象牙坠", "en": "Ivory Tusk", "category": "armor", "count": 1, "alt": "Ivory Pendant", "note": "Accessory. Ivory pendant. [GRS/6-6-6 desc: 用大象的牙做的坠子。防御+12。]", "source_ids": ["GRS/6-6-6/name"]}
+{"zh": "八卦镜", "en": "Bagua Glass", "category": "armor", "count": 1, "alt": "Bagua Mirror", "note": "Accessory. Trigram mirror. [GRS/6-6-7 desc: 用朱砂在镜面画八卦，可借用自然界的灵气。灵力+5、防御+5。]", "source_ids": ["GRS/6-6-7/name"]}
+{"zh": "督化笛", "en": "Mercy Flute", "category": "armor", "count": 1, "note": "Accessory. Flute that converts demons. [GRS/6-6-8 desc: 此笛为九孔笛，笛声悠扬独特，可感化魔妖。吉运+18。]", "source_ids": ["GRS/6-6-8/name"]}
+{"zh": "乾坤镜", "en": "Taiji Glass", "category": "armor", "count": 1, "alt": "Cosmos Mirror", "note": "Accessory. Mirror with the taiji diagram. [GRS/6-6-9 desc: 铜镜背面铸有太极乾坤图，可吸取天地阴阳之灵气。灵力+9、防御+9。]", "source_ids": ["GRS/6-6-9/name"]}
+{"zh": "寒冰玉佩", "en": "Frost Jade", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-10 desc: 用寒冰雕刻而成的玉佩，具有很强的灵力。灵力+20。]", "source_ids": ["GRS/6-6-10/name"]}
+{"zh": "定神珠", "en": "Focus Pearl", "category": "armor", "count": 1, "note": "Accessory. MP regen. [GRS/6-6-11 desc: 具有聚精汇神作用的一颗珠子。每回合恢复真气10。]", "source_ids": ["GRS/6-6-11/name"]}
+{"zh": "富贵珠", "en": "Luck Pearl", "category": "armor", "count": 1, "alt": "Fortune Pearl", "note": "Accessory. Luck+99. [GRS/6-6-12 desc: 拥有此珠者便可大富大贵，给人带来福气。吉运+99。]", "source_ids": ["GRS/6-6-12/name"]}
+{"zh": "紫瞳魔灯", "en": "Violet Lamp", "category": "armor", "count": 1, "alt": "Violet-Eye Demon Lamp", "note": "Accessory. Demon-realm treasure hidden in Nanbei Village. [GRS/6-6-13 desc: 本为魔界的一大法宝，后在神魔大战时，被不遗落到了人间。攻击防御身法灵力吉运各+15。]", "source_ids": ["GRS/6-6-13/name"]}
+{"zh": "天心灯", "en": "Heaven Lamp", "category": "armor", "count": 2, "alt": "Heart of Heaven Lamp", "note": "Accessory. Gonggong's lamp; protects against the Chaos Urn on Sky Summit (named in dialogue). [GRS/6-6-14 desc: 上古传下的神器，为共工的护身法宝。每回合恢复生命真气30点，身法+5。]", "source_ids": ["GRS/6-6-14/name", "gut/1-14-8@0826"]}
+{"zh": "霸王钟", "en": "Tyrant Bell", "category": "item", "count": 21, "alt": "Overlord Bell (13)", "note": "The bell guarded at Zhongshan, stolen by the Crimson Demon for Tiandao; also an accessory (GRS 6-6-15), a monster spell (MRS 4-1-57) and a scene object. [GRS/6-6-15 desc: 魔器之一，极为霸气的法宝。攻击+100、灵力-20、吉运-40。; MRS/4-1-57; ARS/3-4-21]", "source_ids": ["GRS/6-6-15/name", "MRS/4-1-57/name", "ARS/3-4-21/name"]}
+{"zh": "玄冰玉如意", "en": "Frost Ruyi", "category": "armor", "count": 1, "alt": "Black Ice Jade Ruyi", "note": "Accessory. [GRS/6-6-16 desc: 用千年的玄冰玉雕刻而成的法宝，每回合恢复真气30点。]", "source_ids": ["GRS/6-6-16/name"]}
+{"zh": "七星灯", "en": "Star Lamp", "category": "armor", "count": 1, "alt": "Seven Star Lamp", "note": "Accessory. Zhuge Liang's seven-star lamp. [GRS/6-6-17 desc: 相传是孔明禳星祈命之灯，每回合可恢复生命30点，只是携带不方便。身法-3。]", "source_ids": ["GRS/6-6-17/name"]}
+{"zh": "周处除三害", "en": "Three Banes", "category": "armor", "count": 2, "alt": "Zhou Chu's Tale", "note": "Accessory: a storybook 'Zhou Chu Rids the Three Banes', Zhou Chu's reward. [GRS/6-6-18 desc: 记载着“周处除三害”故事的一本小说，据说有很玄的作用。防御+2。]", "source_ids": ["GRS/6-6-18/name", "GRS/6-6-18/desc"]}
+{"zh": "木剑", "en": "Wood Sword", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-1 desc: 用木材雕刻的剑，小孩玩具。攻击+2。]", "source_ids": ["GRS/6-7-1/name"]}
+{"zh": "铁剑", "en": "Iron Sword", "category": "weapon", "count": 3, "note": "Weapon. Appears in: item name, item descriptions. [GRS/6-7-2 desc: 一般铁匠大量生产的剑，打造得颇为粗劣。攻击+8。]", "source_ids": ["GRS/6-7-2/name", "GRS/6-7-3/desc", "GRS/6-7-4/name"]}
+{"zh": "长剑", "en": "Long Sword", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-3 desc: 一般铁匠接受订造的剑，比铁剑精致锋利。攻击+18，身法-3。]", "source_ids": ["GRS/6-7-3/name"]}
+{"zh": "玄铁剑", "en": "Black Sword", "category": "weapon", "count": 1, "alt": "Black Iron Sword", "note": "Black (meteoric) iron. [GRS/6-7-4 desc: 用玄铁矿打造的剑，制作工匠的手艺一般，威力也受到了影响。攻击+32、身法-10。]", "source_ids": ["GRS/6-7-4/name"]}
+{"zh": "青锋剑", "en": "Blue Steel", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-5 desc: 名家精心打造的剑，轻薄锋利。攻击+45、身法+5。]", "source_ids": ["GRS/6-7-5/name"]}
+{"zh": "龙泉剑", "en": "Longquan", "category": "weapon", "count": 2, "alt": "Longquan Sword", "note": "Sword from Longquan. [GRS/6-7-6 desc: 龙泉的水质非常适合造剑，当地生产的剑叫龙泉剑。攻击+66、身法+8。]", "source_ids": ["GRS/6-7-6/name", "GRS/6-7-6/desc"]}
+{"zh": "斩妖剑", "en": "Fiendslayer", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-7 desc: 此剑是专门为道士降妖伏魔所打造的兵器，剑刃锋利，有避邪之功效。攻击+72、吉运+10。]", "source_ids": ["GRS/6-7-7/name"]}
+{"zh": "龙吟剑", "en": "Dragonsong", "category": "weapon", "count": 1, "note": "Hums like a dragon when drawn. [GRS/6-7-8 desc: 宝剑出鞘，有龙吟之声，故有“龙吟”之称。攻击+88、灵力+6、防御+4。]", "source_ids": ["GRS/6-7-8/name"]}
+{"zh": "钨龙剑", "en": "Dark Dragon", "category": "weapon", "count": 1, "alt": "Tungsten Dragon", "note": "钨 'tungsten' probably for 乌 'black'. [GRS/6-7-9 desc: 同样用玄铁打造，但这次的做工就明显好的多了。攻击+108、身法+6。]", "source_ids": ["GRS/6-7-9/name"]}
+{"zh": "辟魔剑", "en": "Peachwood", "category": "weapon", "count": 1, "alt": "Demonward Sword", "note": "Thousand-year peachwood sword that wards off demons. [GRS/6-7-10 desc: 用千年的桃木所制，可避过邪魔妖道施法。攻击+80、身法+5，可能产生混乱3回合。]", "source_ids": ["GRS/6-7-10/name"]}
+{"zh": "催眠剑", "en": "Sleep Sword", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-11 desc: 可将敌人催眠的剑，打造工匠不详。攻击+100、吉运-3。可能产生5昏睡回合。]", "source_ids": ["GRS/6-7-11/name"]}
+{"zh": "七星剑", "en": "Star Sword", "category": "weapon", "count": 1, "alt": "Seven Star Sword", "note": "Weapon. Appears in: item name. [GRS/6-7-12 desc: 剑身镶七颗金黄色的宝石，可吸取北斗七星之精气。攻击120灵力15身法12吉运12防御15，可能产生5回合咒封。]", "source_ids": ["GRS/6-7-12/name"]}
+{"zh": "嗜血剑", "en": "Bloodthirst", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-13 desc: 屡经战乱，嗜血成性的剑，会吞噬装备者的生命。攻击+250、灵力-40、防御-30、吉运-30，生命上限-50。]", "source_ids": ["GRS/6-7-13/name"]}
+{"zh": "九龙道剑", "en": "Nine Dragon", "category": "weapon", "count": 1, "alt": "Nine Dragon Sword", "note": "Zhang Daoling's sword. [GRS/6-7-14 desc: 相传张道陵用此剑诛杀了九条恶龙，龙魂聚在剑上不散而成。可全体攻击，其它属性不详细。]", "source_ids": ["GRS/6-7-14/name"]}
+{"zh": "匕首", "en": "Dagger", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-15 desc: 携带方便，且可以当水果刀用。削水果的话，效果不错哟。攻击+4。]", "source_ids": ["GRS/6-7-15/name"]}
+{"zh": "砍刀", "en": "Machete", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-16 desc: 普通的生铁打造，可用来防身。攻击+10、身法-2。]", "source_ids": ["GRS/6-7-16/name"]}
+{"zh": "佩刀", "en": "Saber", "category": "weapon", "count": 1, "note": "刀 = saber/blade, 剑 = sword. [GRS/6-7-17 desc: 刀身宽而长，刃部锋利背部厚重。攻击+16、防御+1。]", "source_ids": ["GRS/6-7-17/name"]}
+{"zh": "旋风刀", "en": "Whirlblade", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-18 desc: 刀身宽而短，攻击敌人时可旋转。攻击+28、身法+3。]", "source_ids": ["GRS/6-7-18/name"]}
+{"zh": "弯月刀", "en": "Crescent", "category": "weapon", "count": 1, "alt": "Crescent Blade", "note": "Weapon. Appears in: item name. [GRS/6-7-19 desc: 一般的刀形状像弯弯的月亮。攻击+49、身法+4、吉运-9。]", "source_ids": ["GRS/6-7-19/name"]}
+{"zh": "莲花刀", "en": "Lotus Blade", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-20 desc: 以上等的精铁打造，刀尖向上翘，刀背略弯曲。攻击+64、身法+3、灵力+4。]", "source_ids": ["GRS/6-7-20/name"]}
+{"zh": "魔哭刀", "en": "Demonwail", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-21 desc: 出鞘之声犹如魔鬼哭泣，令人不寒而栗。攻击+80、防御+10、灵力+3。]", "source_ids": ["GRS/6-7-21/name"]}
+{"zh": "屠魔刀", "en": "Demonslayer", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-22 desc: 此刀以六合精英打造，浑厚有力，是所有妖魔的克星。攻击+124、防御+30、身法+5、灵力+6。]", "source_ids": ["GRS/6-7-22/name"]}
+{"zh": "移魂刀", "en": "Soulshift", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-23 desc: 神兵就是神兵，绝对的厉害。攻击+124、身法+10，全体攻击。可能产生5回合混乱。]", "source_ids": ["GRS/6-7-23/name"]}
+{"zh": "双手剑", "en": "Twin Swords", "category": "weapon", "count": 2, "note": "Xiaomei's twin swords start here. [GRS/6-7-24 desc: 一尺长的双手剑，适合女子使用。攻击+8、防御+13。]", "source_ids": ["GRS/6-7-24/name", "GRS/6-7-24/desc"]}
+{"zh": "明目双剑", "en": "Keen Twins", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-25 desc: 以中等生铁打造的双剑。攻击+19、防御+17。]", "source_ids": ["GRS/6-7-25/name"]}
+{"zh": "姐妹剑", "en": "Sister Pair", "category": "weapon", "count": 2, "alt": "Sister Swords", "note": "Weapon. Appears in: item name, item descriptions. [GRS/6-7-26 desc: 以上等的精铁铸造而成，此剑为一对，故称[姐妹剑]。攻击+27、防御+20。]", "source_ids": ["GRS/6-7-26/name", "GRS/6-7-26/desc"]}
+{"zh": "碧玉双剑", "en": "Jade Twins", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-27 desc: 此双剑精巧别致，灵气逼人。攻击+36、身法+4、防御+24。]", "source_ids": ["GRS/6-7-27/name"]}
+{"zh": "芙蓉刀", "en": "Hibiscus", "category": "weapon", "count": 1, "note": "Twin curved sabers of the Hundred Flowers Sect. [GRS/6-7-28 desc: 百花派独门兵器双手弯刀。攻击+48、身法+6、防御+28。]", "source_ids": ["GRS/6-7-28/name"]}
+{"zh": "无影双剑", "en": "Shadowless", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-29 desc: 用此剑攻击人时，剑光闪闪使人看不清剑在那里，故称[无影剑]。攻击+60、身法+10、防御+36、吉运+6。]", "source_ids": ["GRS/6-7-29/name"]}
+{"zh": "阴阳双剑", "en": "Yin Yang", "category": "weapon", "count": 1, "alt": "Yin-Yang Twins", "note": "Weapon. Appears in: item name. [GRS/6-7-30 desc: 相传是名匠蒲良打造，人间难觅的武器。攻击+85、灵力+10、防御+44、身法+10、吉运+12。]", "source_ids": ["GRS/6-7-30/name"]}
+{"zh": "幽真双剑", "en": "Enigma", "category": "weapon", "count": 1, "alt": "Mystic Twins", "note": "Origin unknown, 'a riddle'. [GRS/6-7-31 desc: 整个剑就是一个谜，无人知晓它的来历。攻击+125、防御+56、灵力+15、身法+15、吉运+15，真气上限+80。]", "source_ids": ["GRS/6-7-31/name"]}
+{"zh": "尺骨双剑", "en": "Bone Twins", "category": "weapon", "count": 1, "note": "尺骨 = ulna. [GRS/6-7-32 desc: 剑是不怎么样，可它有最大的一个好处――可能产生3回合中毒。攻击+50、防御-10、身法-10。]", "source_ids": ["GRS/6-7-32/name"]}
+{"zh": "梅花镖", "en": "Plum Dart", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-1 desc: 形如梅花的暗器，敌人hp-90。]", "source_ids": ["GRS/6-8-1/name"]}
+{"zh": "雷火珠", "en": "Thunderball", "category": "consumable", "count": 1, "note": "Thrown bomb. [GRS/6-8-2 desc: 充火药的铁珠，投掷撞击后会爆裂伤人。伤敌250。]", "source_ids": ["GRS/6-8-2/name"]}
+{"zh": "天师符", "en": "Sage Charm", "category": "consumable", "count": 2, "alt": "Celestial Charm", "note": "Thrown Maoshan charm. [GRS/6-8-3 desc: 茅山道士用来对付妖怪的符咒\\x0d\\x0a。伤敌150。]", "source_ids": ["GRS/6-8-3/name", "MRS/4-1-8/name"]}
+{"zh": "袖里剑", "en": "Sleeveblade", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-4 desc: 暗藏在衣袖中的飞剑。伤敌250。]", "source_ids": ["GRS/6-8-4/name"]}
+{"zh": "透骨钉", "en": "Bonepiercer", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-5 desc: 精铁打造、三寸长的铁针是很锋利的暗器。敌人hp-250。]", "source_ids": ["GRS/6-8-5/name"]}
+{"zh": "无影神针", "en": "Unseen Pin", "category": "consumable", "count": 1, "alt": "Shadowless Needle", "note": "Thrown. [GRS/6-8-6 desc: 细如牛毛，伤人于无形。敌人Hp-400。]", "source_ids": ["GRS/6-8-6/name"]}
+{"zh": "旋魂铊", "en": "Soulspinner", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-7 desc: 此物青光闪闪，旋转极快伤人于无形之中。敌方全体hp-300。]", "source_ids": ["GRS/6-8-7/name"]}
+{"zh": "风灵符", "en": "Wind Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-8 desc: 产生凤系法术的符咒。]", "source_ids": ["GRS/6-8-8/name"]}
+{"zh": "雷灵符", "en": "Bolt Charm", "category": "consumable", "count": 1, "alt": "Thunder Charm", "note": "Thrown. 雷 = Bolt in 11-byte names, Thunder elsewhere. [GRS/6-8-9 desc: 产生雷系法术的符咒\\x0d\\x0a。]", "source_ids": ["GRS/6-8-9/name"]}
+{"zh": "水灵符", "en": "Water Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-10 desc: 产生水系法术的符咒。]", "source_ids": ["GRS/6-8-10/name"]}
+{"zh": "土灵符", "en": "Earth Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-11 desc: 产生土系法术的符咒咒。]", "source_ids": ["GRS/6-8-11/name"]}
+{"zh": "火灵符", "en": "Fire Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-12 desc: 产生火系法术的符咒\\x0d\\x0a。]", "source_ids": ["GRS/6-8-12/name"]}
+{"zh": "青蛇卵", "en": "Snake Egg", "category": "consumable", "count": 1, "note": "Thrown, poison. [GRS/6-8-13 desc: 毒蛇的卵，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-13/name"]}
+{"zh": "童尸肉", "en": "Corpse Meat", "category": "consumable", "count": 1, "note": "Thrown, poison. [GRS/6-8-14 desc: 童年僵尸身上的肉，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-14/name"]}
+{"zh": "红蝎卵", "en": "Sting Egg", "category": "consumable", "count": 1, "alt": "Scorpion Egg", "note": "Thrown, poison (red scorpion egg). [GRS/6-8-15 desc: 毒蝎的卵，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-15/name"]}
+{"zh": "蜘蛛卵", "en": "Spider Egg", "category": "consumable", "count": 1, "note": "Thrown, poison. [GRS/6-8-16 desc: 毒蜘蛛的卵，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-16/name"]}
+{"zh": "毒铁菱", "en": "Caltrops", "category": "consumable", "count": 1, "alt": "Poison Caltrops", "note": "Thrown, poison. [GRS/6-8-17 desc: 带毒的暗器，被伤到者虽不会立即毙命，但若延误医治的话，则必死无疑。伤敌80，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-17/name"]}
+{"zh": "孔雀胆", "en": "Gall Poison", "category": "consumable", "count": 1, "alt": "Peacock Gall", "note": "Thrown. 'Peacock gall', a classic poison. [GRS/6-8-18 desc: 七大毒蛊。可是敌人产生5回合中毒状态。]", "source_ids": ["GRS/6-8-18/name"]}
+{"zh": "蝮蛇涎", "en": "Viper Spit", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-19 desc: 蝮蛇的毒涎，可使敌方全体中毒5回合。]", "source_ids": ["GRS/6-8-19/name"]}
+{"zh": "蚀毒砂", "en": "Venom Sand", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-20 desc: 以六毒蚀脏粉配以铁砂。伤害全体敌人150。可能5回合中毒效果。]", "source_ids": ["GRS/6-8-20/name"]}
+{"zh": "迷魂香", "en": "Sleep Smoke", "category": "consumable", "count": 1, "alt": "Knockout Incense", "note": "Thrown. [GRS/6-8-21 desc: 点燃蒙汗药散发迷香，可使敌人昏睡五回合。]", "source_ids": ["GRS/6-8-21/name"]}
+{"zh": "醍醐香", "en": "Heady Bloom", "category": "consumable", "count": 1, "note": "Thrown, confusion. [GRS/6-8-22 desc: 紫叶小白花，散发浓郁香气，闻到香气便如酒醉一般，混乱5回合。]", "source_ids": ["GRS/6-8-22/name"]}
+{"zh": "缠魂丝", "en": "Soul Silk", "category": "consumable", "count": 1, "note": "Thrown, confusion. [GRS/6-8-23 desc: 千年蜘蛛的毒丝。可使人混乱5回合。]", "source_ids": ["GRS/6-8-23/name"]}
+{"zh": "定魂旗", "en": "Bind Banner", "category": "consumable", "count": 1, "note": "Thrown, silence. [GRS/6-8-24 desc: 将人的魂魄定在体内3回合，不能施展法术。咒封3回合。]", "source_ids": ["GRS/6-8-24/name"]}
+{"zh": "缚龙索", "en": "Dragonbind", "category": "consumable", "count": 1, "alt": "Dragon Rope", "note": "Thrown, silence. [GRS/6-8-25 desc: 原本是天界用来捆绑恶龙的绳索，不知被谁偷盗后卖到了人间。咒封5回合。]", "source_ids": ["GRS/6-8-25/name"]}
+{"zh": "太极符", "en": "Taiji Charm", "category": "consumable", "count": 3, "note": "Thrown. [GRS/6-8-26 desc: 具有和太极符法相同的作用。伤敌350、咒封3回合。]", "source_ids": ["GRS/6-8-26/name", "GRS/6-8-26/desc", "MRS/4-1-9/name"]}
+{"zh": "忘魂花", "en": "Lethe Bloom", "category": "consumable", "count": 1, "note": "Thrown, sleep. [GRS/6-8-27 desc: 青蓝色小花，散发淡淡香气，闻到香气，便会昏睡三回合，闻到会使人昏睡3回合。]", "source_ids": ["GRS/6-8-27/name"]}
+{"zh": "火毛虫", "en": "Fire Grub", "category": "consumable", "count": 1, "note": "Thrown, sleep. [GRS/6-8-28 desc: 生长在火焰山附近的一种小虫，可以用来攻击敌人。可使敌人昏睡5回合。]", "source_ids": ["GRS/6-8-28/name"]}
+{"zh": "罗喉针", "en": "Rahu Needle", "category": "consumable", "count": 1, "note": "Thrown, drains HP. [GRS/6-8-29 desc: 铁制钢针，尾端系以灵蛊蚕丝，可吸取敌人hp180。]", "source_ids": ["GRS/6-8-29/name"]}
+{"zh": "石矶珠", "en": "Shiji Pearl", "category": "consumable", "count": 1, "note": "Mystery item tied to Nuwa. [GRS/6-8-30 desc: 神秘物品之一，相传和女娲炼石补天有关的一件东西，功用不详。]", "source_ids": ["GRS/6-8-30/name"]}
+{"zh": "止血草", "en": "Bloodwort", "category": "consumable", "count": 1, "alt": "Styptic Herb", "note": "HP+50. [GRS/6-9-1 desc: 嚼碎后敷在伤口上，可迅速止血。恢复生命50。]", "source_ids": ["GRS/6-9-1/name"]}
+{"zh": "青阴君", "en": "Shadeleaf", "category": "consumable", "count": 1, "alt": "Qingyin Herb", "note": "HP+150. [GRS/6-9-2 desc: 生长于华山悬崖陡壁之间，对阴阳失调败心火有奇效。hp+150。]", "source_ids": ["GRS/6-9-2/name"]}
+{"zh": "玉蓝草", "en": "Jadegrass", "category": "consumable", "count": 1, "note": "HP+280. [GRS/6-9-3 desc: 生长于沙漠之中、极为罕见的一种植物，可治疗刀伤、剑伤、砸伤等多种外伤。hp+280。]", "source_ids": ["GRS/6-9-3/name"]}
+{"zh": "赤玉断续膏", "en": "Ruby Salve", "category": "consumable", "count": 1, "note": "HP+450 bone-mending salve. [GRS/6-9-4 desc: 颜色赤黄透明如玉、可治疗骨头损伤的一种药。Hp+450。]", "source_ids": ["GRS/6-9-4/name"]}
+{"zh": "观音符", "en": "Mercy Charm", "category": "consumable", "count": 1, "alt": "Guanyin Charm", "note": "HP+700. 观音 Guanyin, Goddess of Mercy. [GRS/6-9-5 desc: 以观音圣水书写的灵符\\x0d\\x0a。hp+700。]", "source_ids": ["GRS/6-9-5/name"]}
+{"zh": "行军丹", "en": "March Pill", "category": "consumable", "count": 1, "note": "HP+1000. [GRS/6-9-6 desc: 特制的一种活血顺气的黑色药丸。Hp+1000。]", "source_ids": ["GRS/6-9-6/name"]}
+{"zh": "圣灵符", "en": "Holy Charm", "category": "consumable", "count": 1, "note": "Party HP+300 (Nuwa). [GRS/6-9-7 desc: 具有女娲神强大灵力的符咒。全体hp+300。]", "source_ids": ["GRS/6-9-7/name"]}
+{"zh": "鼠儿果", "en": "Mouse Fruit", "category": "consumable", "count": 1, "note": "MP+36. [GRS/6-9-8 desc: 产于山间野地，多为鼠类所食，经人发现移种平地。Mp+36。]", "source_ids": ["GRS/6-9-8/name"]}
+{"zh": "还神丹", "en": "Spirit Pill", "category": "consumable", "count": 1, "note": "MP+50. [GRS/6-9-9 desc: 提神醒脑、养脑养神的药丸。Mp+50。]", "source_ids": ["GRS/6-9-9/name"]}
+{"zh": "菊花酒", "en": "Mum Wine", "category": "consumable", "count": 1, "note": "MP+110. Chrysanthemum wine. [GRS/6-9-10 desc: 撒点菊花在酒中，保存十年而成。Mp+110。]", "source_ids": ["GRS/6-9-10/name"]}
+{"zh": "魔王甲", "en": "King Beetle", "category": "consumable", "count": 1, "alt": "Demon Beetle", "note": "MP+250. 'Demon-king beetle'. [GRS/6-9-11 desc: 周身青黑色，极其难看的一种甲虫，但可增加真气。Mp+250。]", "source_ids": ["GRS/6-9-11/name"]}
+{"zh": "蟠果", "en": "Holy Peach", "category": "consumable", "count": 1, "note": "MP+450. From the Queen Mother's peach garden. [GRS/6-9-12 desc: 西王母蟠桃园遗种，籽小肉厚，汁液香甜\\x0d\\x0a。Mp+450。]", "source_ids": ["GRS/6-9-12/name"]}
+{"zh": "西域奇糯", "en": "Exotic Rice", "category": "consumable", "count": 1, "note": "MP+800. [GRS/6-9-13 desc: 产于西藏的一种糯米。Mp+800。]", "source_ids": ["GRS/6-9-13/name"]}
+{"zh": "紫菁玉蓉膏", "en": "Royal Salve", "category": "consumable", "count": 1, "note": "Full MP. [GRS/6-9-14 desc: 依宫廷秘方，采珍贵药材炼制，是疗伤药的极品。真气补满。]", "source_ids": ["GRS/6-9-14/name"]}
+{"zh": "黑狐甲", "en": "Fox Beetle", "category": "consumable", "count": 1, "note": "Party MP+240. [GRS/6-9-15 desc: 人为饲养的一种小甲虫，非常有灵气。全体Mp+240。]", "source_ids": ["GRS/6-9-15/name"]}
+{"zh": "鸡蛋", "en": "Egg", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-16 desc: 便宜而常见的食物。HpMp+10。]", "source_ids": ["GRS/6-9-16/name"]}
+{"zh": "烧肉", "en": "Roast Pork", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-17 desc: 以炭火熏烤的酱汁猪肉，可恢复体力。HpMp+45。]", "source_ids": ["GRS/6-9-17/name"]}
+{"zh": "蜂王蜜", "en": "Royal Honey", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-18 desc: 蜜蜂所酿最好的蜜，恢复生命150 真气50。]", "source_ids": ["GRS/6-9-18/name"]}
+{"zh": "千里飘", "en": "Farscent", "category": "consumable", "count": 1, "note": "Wine whose scent carries a thousand li. [GRS/6-9-19 desc: 以多种极品鲜果酿制五十年的美酒，打开之后香飘千里。可解毒，HpMp+180。]", "source_ids": ["GRS/6-9-19/name"]}
+{"zh": "冰糖葫芦", "en": "Candy Haws", "category": "consumable", "count": 1, "note": "Tanghulu. [GRS/6-9-20 desc: 以竹签串李子，裹上麦芽糖，形如葫芦，故称糖葫芦。HpMp+400。]", "source_ids": ["GRS/6-9-20/name"]}
+{"zh": "鬼枯藤", "en": "Ghost Vine", "category": "consumable", "count": 1, "note": "Cures poison. [GRS/6-9-21 desc: 具毒性的黑褐色野生藤蔓，可解毒。]", "source_ids": ["GRS/6-9-21/name"]}
+{"zh": "盐巴", "en": "Salt", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-22 desc: 取海水煎熬或暴晒而成，用来调味，有时可解毒。]", "source_ids": ["GRS/6-9-22/name"]}
+{"zh": "九节菖蒲", "en": "Calamus", "category": "consumable", "count": 1, "note": "Cures poison. [GRS/6-9-23 desc: 一种水草，叶子狭长如剑，可解毒。]", "source_ids": ["GRS/6-9-23/name"]}
+{"zh": "净衣符", "en": "Pure Charm", "category": "consumable", "count": 1, "note": "Party poison cure. [GRS/6-9-24 desc: 具有祛病、驱邪的法力、可全体解毒。]", "source_ids": ["GRS/6-9-24/name"]}
+{"zh": "雄黄", "en": "Realgar", "category": "consumable", "count": 3, "note": "Consumable. Appears in: item name, item descriptions. [GRS/6-9-25 desc: 天然产的矿物，块状、色黄，，可解毒，hp+350。]", "source_ids": ["GRS/6-9-25/name", "GRS/6-9-26/name", "GRS/6-9-26/desc"]}
+{"zh": "雄黄酒", "en": "Duanwu Wine", "category": "consumable", "count": 1, "alt": "Realgar Wine (12)", "note": "Realgar wine, drunk at the Dragon Boat (Duanwu) festival. [GRS/6-9-26 desc: 一点点的雄黄，撒在酒中，习俗在端午节喝这种酒。可解除乱、眠。]", "source_ids": ["GRS/6-9-26/name"]}
+{"zh": "定心符", "en": "Calm Charm", "category": "consumable", "count": 1, "note": "Cures confusion/silence/sleep. [GRS/6-9-27 desc: 具有安气宁神、增加定力、防止走火入魔之功效。可解乱、封、眠。]", "source_ids": ["GRS/6-9-27/name"]}
+{"zh": "灵山仙芝", "en": "Lingzhi", "category": "consumable", "count": 1, "note": "Revive 15%. [GRS/6-10-1 desc: 寄生于枯木上的菌类，俗称瑞草，具有养气培元之神效。Hp恢复15%。]", "source_ids": ["GRS/6-10-1/name"]}
+{"zh": "赎魂灯", "en": "Ransom Lamp", "category": "consumable", "count": 1, "note": "Revive 30%; bargains with the Wuchang for a soul. [GRS/6-10-2 desc: 用此灯再施以法术可以和黑白无尝交涉，释放已被带走的魂魄。Hp恢复30%。]", "source_ids": ["GRS/6-10-2/name"]}
+{"zh": "孟婆汤", "en": "Mengpo Soup", "category": "consumable", "count": 1, "note": "Revive 50%. [GRS/6-10-3 desc: 服用之后消除死者平生所犯之罪孽，使死者复活hp恢复50%。]", "source_ids": ["GRS/6-10-3/name"]}
+{"zh": "天香续命露", "en": "Heaven Dew", "category": "consumable", "count": 1, "note": "Revive 100%. [GRS/6-10-4 desc: 以八十一种顶级精秘药，用三冥真火炼九九八十一天而成，可引住魂魄，滋养肉体延长寿命Hp恢复100%。]", "source_ids": ["GRS/6-10-4/name"]}
+{"zh": "枸杞仙果", "en": "Goji Berry", "category": "consumable", "count": 1, "note": "Max HP+5. [GRS/6-11-1 desc: 增大生命上限5点。]", "source_ids": ["GRS/6-11-1/name"]}
+{"zh": "八仙石", "en": "Fairy Stone", "category": "consumable", "count": 1, "note": "DEF+2. From the Eight Immortals Cave. [GRS/6-11-2 desc: 八仙洞中仙石，可增强防御2点。]", "source_ids": ["GRS/6-11-2/name"]}
+{"zh": "霸王花", "en": "Cereus", "category": "consumable", "count": 1, "note": "Night-blooming cereus. [GRS/6-11-3 desc: 食用者武术上限+2。]", "source_ids": ["GRS/6-11-3/name"]}
+{"zh": "试炼果", "en": "Trial Fruit", "category": "consumable", "count": 1, "note": "Spirit+3. [GRS/6-11-4 desc: 药王神农氏尝百草时，最早发现的珍药。可提高灵力3点。]", "source_ids": ["GRS/6-11-4/name"]}
+{"zh": "金鍪", "en": "Gold Cap", "category": "consumable", "count": 1, "note": "Rare herb of Mt. Sanqing. [GRS/6-11-5 desc: 三清山上一种名贵的药材，可增强灵力2点。]", "source_ids": ["GRS/6-11-5/name"]}
+{"zh": "无忧仙丹", "en": "Bliss Pill", "category": "consumable", "count": 1, "alt": "Carefree Pill", "note": "Max HP/MP+10. Zhou Chu's 无忧丹 in dialogue is the same pill. [GRS/6-11-6 desc: 太上老君的灵丹之一，可提升生命上限10点，真气上限10点。]", "source_ids": ["GRS/6-11-6/name"]}
+{"zh": "无忧丹", "en": "Bliss Pill", "category": "consumable", "count": 1, "note": "Dialogue name (1-10-2).", "source_ids": ["gut/1-10-2@020c"]}
+{"zh": "珠仙草", "en": "Pearlweed", "category": "consumable", "count": 1, "note": "Spirit+3. [GRS/6-11-7 desc: 红色叶子，三大仙草之一，提升灵力3点。]", "source_ids": ["GRS/6-11-7/name"]}
+{"zh": "玄冥草", "en": "Netherweed", "category": "consumable", "count": 1, "note": "AGI+3. [GRS/6-11-8 desc: 黑色叶子，三大仙草之二，提升身法3点。]", "source_ids": ["GRS/6-11-8/name"]}
+{"zh": "无妄草", "en": "Fateweed", "category": "consumable", "count": 1, "note": "Luck+3. [GRS/6-11-9 desc: 黄色叶子，三大仙草之三，提升吉运3点。]", "source_ids": ["GRS/6-11-9/name"]}
+{"zh": "佛天圆", "en": "Sarira", "category": "consumable", "count": 1, "note": "Max MP+2. [GRS/6-11-10 desc: 有成就的高僧西归后、遗体火化时结成的形如圆球带有灵性的东西。最大真气值+2。]", "source_ids": ["GRS/6-11-10/name"]}
+{"zh": "天玉菩提", "en": "Bodhi Seed", "category": "consumable", "count": 1, "note": "Max MP+3. [GRS/6-11-11 desc: 天山菩提树的树种籽，八十年才结一次籽。最大真气值+3。]", "source_ids": ["GRS/6-11-11/name"]}
+{"zh": "玉银杏宝", "en": "Ginkgo Nut", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-12 desc: 东华上仙居后院的一棵银杏树所结的果子。最大体力值+3。]", "source_ids": ["GRS/6-11-12/name"]}
+{"zh": "罗汉笑", "en": "Arhat Smile", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-13 desc: 塞北药王‘笑天下’亲手培育的奇药。灵力最大值+2。]", "source_ids": ["GRS/6-11-13/name"]}
+{"zh": "雪蛤蟆", "en": "Snow Toad", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-14 desc: 世间罕见，只生长在太白山寒冰洞的洞底。武术上限+2，防御上限+2。]", "source_ids": ["GRS/6-11-14/name"]}
+{"zh": "金毛虫", "en": "Gold Grub", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-15 desc: 浑身通红并付有灵气的一种小甲虫，人服食后可增加真气2。]", "source_ids": ["GRS/6-11-15/name"]}
+{"zh": "生龙活虎丹", "en": "Vigor Pill", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-1 desc: 使用后犹如生龙活虎般，增强攻击力。攻击提升1回合。]", "source_ids": ["GRS/6-12-1/name"]}
+{"zh": "龟甲散", "en": "Shell Dust", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-2 desc: 使用后如身覆龟甲，刀枪不入。防御提升5回合。]", "source_ids": ["GRS/6-12-2/name"]}
+{"zh": "飘飘香", "en": "Airy Scent", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-3 desc: 可以释放出一种特异的香味，使人产生飘飘欲仙的感觉，故又名“欲仙丹”。身法提升4回合。]", "source_ids": ["GRS/6-12-3/name"]}
+{"zh": "战狂石", "en": "Rage Stone", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-4 desc: 使用后，使人进入暴劲状态，攻击力增强一倍，持续5回合。]", "source_ids": ["GRS/6-12-4/name"]}
+{"zh": "子金光符", "en": "Glare Charm", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-5 desc: 符咒显灵后、金光四射刺眼非凡，使敌人看不清自己。增加防御一倍，持续七回合。]", "source_ids": ["GRS/6-12-5/name"]}
+{"zh": "飓行草", "en": "Galeweed", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-6 desc: 在海外的瀛洲仙岛的阴暗处生长一种草，使用后犹如乘飓风而行，身法提升一倍，持续9回合。]", "source_ids": ["GRS/6-12-6/name"]}
+{"zh": "引路石", "en": "Guide Stone", "category": "consumable", "count": 1, "note": "Escapes a maze. [GRS/6-13-1 desc: 当你在迷宫中迷路时，它可一帮你回到起始点。]", "source_ids": ["GRS/6-13-1/name"]}
+{"zh": "蔡婆婆的信", "en": "Cai Letter", "category": "item", "count": 1, "alt": "Granny Cai's Letter", "note": "Desc: Granny Cai's letter to Lockmaster (unused?). [GRS/6-14-1 desc: 蔡婆婆寄给万锁开的信。]", "source_ids": ["GRS/6-14-1/name"]}
+{"zh": "万能钥匙", "en": "Picklock", "category": "item", "count": 6, "alt": "Skeleton Key; Master Key", "note": "One-use master key made by Lockmaster. [GRS/6-14-2 desc: 建业城中开锁能手“万锁开”制造的，可打开加锁的宝箱。由于做工问题，使用一次后会毁掉。]", "source_ids": ["GRS/6-14-2/name", "gut/1-2-33@00a5.2", "gut/1-9-1@045a.2"]}
+{"zh": "老孟情书", "en": "Love Letter", "category": "item", "count": 1, "note": "Old Meng's letter to Ah Jun. [GRS/6-14-3 desc: 住在忘忧村的老孟写给他在建业打工的男朋友阿军的情书。]", "source_ids": ["GRS/6-14-3/name"]}
+{"zh": "金色钥匙", "en": "Gold Key", "category": "item", "count": 1, "note": "Opens Li Manor's east wing. [GRS/6-14-4 desc: 可以打开李虎家东厢房的钥匙。]", "source_ids": ["GRS/6-14-4/name"]}
+{"zh": "虫子卡片", "en": "Bug Card", "category": "item", "count": 2, "note": "Allnighter's card. [GRS/6-14-5 desc: 神秘卡片之一，用途不明。]", "source_ids": ["GRS/6-14-5/name", "gut/1-2-52@021c"]}
+{"zh": "小鬼卡片", "en": "Imp Card", "category": "item", "count": 1, "note": "South Imp's card. [GRS/6-14-6 desc: 神秘卡片之二，用途不明。]", "source_ids": ["GRS/6-14-6/name"]}
+{"zh": "不点卡片", "en": "Tot Card", "category": "item", "count": 2, "note": "Tiny Tot's card. [GRS/6-14-7 desc: 神秘卡片之三，用途不明。]", "source_ids": ["GRS/6-14-7/name", "gut/1-2-52@0264"]}
+{"zh": "苍龙之精", "en": "Dragon Orb", "category": "item", "count": 2, "alt": "Blue Dragon Essence", "note": "Essence of the Blue Dragon; one of four used on Sky Summit. [GRS/6-14-8 desc: 四象之一，苍龙的精魄。]", "source_ids": ["GRS/6-14-8/name", "gut/1-2-32@0114.2"]}
+{"zh": "白虎之精", "en": "Tiger Orb", "category": "item", "count": 2, "note": "Essence of the White Tiger. [GRS/6-14-9 desc: 四象之一，白虎的精魄。]", "source_ids": ["GRS/6-14-9/name", "gut/1-2-32@0148.2"]}
+{"zh": "朱雀之精", "en": "Phoenix Orb", "category": "item", "count": 2, "note": "Essence of the Red Phoenix. [GRS/6-14-10 desc: 四象之一，朱雀的精魄。]", "source_ids": ["GRS/6-14-10/name", "gut/1-2-32@017c.2"]}
+{"zh": "玄武之精", "en": "Turtle Orb", "category": "item", "count": 4, "note": "Essence of the Dark Turtle. [GRS/6-14-11 desc: 四象之一，玄武的精魄。]", "source_ids": ["GRS/6-14-11/name", "gut/1-2-32@01b0.2", "gut/1-14-8@0826"]}
+{"zh": "混元金斗", "en": "Chaos Urn", "category": "item", "count": 6, "alt": "Hunyuan Golden Bushel", "note": "Primordial golden bushel that swallows souls; placed in the Primal Demonbane Array at the end. Also ARS object 3-4-41. [GRS/6-14-13 desc: 可以吸取任何生命体魂魄的仙家至宝。; ARS/3-4-41]", "source_ids": ["GRS/6-14-13/name", "ARS/3-4-41/name", "gut/1-1-5@0100"]}
+{"zh": "天鸡", "en": "Sky Rooster", "category": "other", "count": 2, "note": "Appears in: item name, item descriptions.", "source_ids": ["GRS/6-1-10/name", "GRS/6-1-10/desc"]}
+{"zh": "御剑术", "en": "Flying Sword", "category": "magic", "count": 1, "note": "Hero, basic sword control. [MRS/4-1-1 desc: 意念驱剑进行攻击，是剑术的入门功夫。]", "source_ids": ["MRS/4-1-1/name"]}
+{"zh": "剑气术", "en": "Sword Qi", "category": "magic", "count": 1, "alt": "Sword Aura", "note": "Hero, sword energy on all enemies. [MRS/4-1-2 desc: 由剑身驱出剑气伤人，攻击敌方全体。]", "source_ids": ["MRS/4-1-2/name"]}
+{"zh": "万剑归一", "en": "All Swords As One", "category": "magic", "count": 1, "alt": "Myriad Swords", "note": "Magic. Appears in: magic name. [MRS/4-1-3 desc: 许多剑从不同的方向刺向一个敌人，威力可想而知。]", "source_ids": ["MRS/4-1-3/name"]}
+{"zh": "无双剑咒", "en": "Peerless Sword", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-4 desc: 全体攻击的剑咒的一种，比较稀松平常。]", "source_ids": ["MRS/4-1-4/name"]}
+{"zh": "人剑合一", "en": "One With the Sword", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name, magic descriptions. [MRS/4-1-5 desc: 古来能修炼到人剑合一的又有几人呢？]", "source_ids": ["MRS/4-1-5/name", "MRS/4-1-5/desc"]}
+{"zh": "破天一剑", "en": "Sky-Rending Sword", "category": "magic", "count": 1, "note": "The hero's self-made move ('my own kung fu'). [MRS/4-1-6 desc: 自创的武功招式。放出飞剑穿破天空，威力无穷。]", "source_ids": ["MRS/4-1-6/name"]}
+{"zh": "神剑御魔", "en": "Divine Demonward", "category": "magic", "count": 1, "note": "Derived from 御魔诀. [MRS/4-1-7 desc: 源自御魔诀的超强剑招，几乎可以一剑御魔。]", "source_ids": ["MRS/4-1-7/name"]}
+{"zh": "天师符法", "en": "Sage Charm Art", "category": "magic", "count": 1, "alt": "Celestial Charm Art", "note": "Maoshan charm attack (desc typo 矛山). [MRS/4-1-8 desc: 矛山道士所创的一种攻击符法，能对妖魔鬼怪进行有效的攻击。]", "source_ids": ["MRS/4-1-8/name"]}
+{"zh": "太极符法", "en": "Taiji Charm Art", "category": "magic", "count": 2, "note": "Magic. Appears in: item descriptions, magic name. [MRS/4-1-9 desc: 利用太极的力量形成强力攻击的符咒。可能产生3回合咒封。]", "source_ids": ["MRS/4-1-9/name", "GRS/6-8-26/desc"]}
+{"zh": "御魔诀", "en": "Demonward Mantra", "category": "magic", "count": 2, "note": "Magic. Appears in: magic descriptions, magic name. [MRS/4-1-10 desc: 除了它的攻击效果外，还可使敌人产生3回合的混乱状态。]", "source_ids": ["MRS/4-1-10/name", "MRS/4-1-7/desc"]}
+{"zh": "百虫欺天", "en": "Swarm Over Heaven", "category": "magic", "count": 1, "alt": "Hundred Bugs", "note": "Taught by Allnighter. [MRS/4-1-11 desc: 异域人通宵虫最恐怖的招式，吸取全体敌人每人生命300。]", "source_ids": ["MRS/4-1-11/name"]}
+{"zh": "双剑斩", "en": "Twin Sword Slash", "category": "magic", "count": 1, "note": "Murong twin-sword style. [MRS/4-1-12 desc: 双剑平行齐出，攻击敌人。为慕容家双剑术的起手式。]", "source_ids": ["MRS/4-1-12/name"]}
+{"zh": "傲剑诀", "en": "Proud Sword Mantra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-13 desc: 双剑分前后飞出，攻击敌人。]", "source_ids": ["MRS/4-1-13/name"]}
+{"zh": "剪刀剑气", "en": "Scissor Sword Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-14 desc: 双剑交叉飞出，攻击敌人。]", "source_ids": ["MRS/4-1-14/name"]}
+{"zh": "凤舞九天", "en": "Phoenix Dance", "category": "magic", "count": 1, "alt": "Phoenix Over Nine Heavens", "note": "Magic. Appears in: magic name. [MRS/4-1-15 desc: 一只凤飞上九天之上，落下凤羽箭攻击全体敌人。]", "source_ids": ["MRS/4-1-15/name"]}
+{"zh": "独孤刀", "en": "Lone Blade", "category": "magic", "count": 1, "note": "Desc says 孤独刀 (swapped characters). [MRS/4-1-16 desc: 单刀御敌，攻击敌方单人。]", "source_ids": ["MRS/4-1-16/name"]}
+{"zh": "狂刀斩", "en": "Mad Blade Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-17 desc: 孤独刀的暴劲招式，攻击单个敌人。]", "source_ids": ["MRS/4-1-17/name"]}
+{"zh": "霸王横刀", "en": "Tyrant Sweep", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-18 desc: 大刀一挥，斩妖除魔。攻击全体。]", "source_ids": ["MRS/4-1-18/name"]}
+{"zh": "火旋灯", "en": "Fire Pinwheel", "category": "magic", "count": 2, "alt": "Spinning Fire Lamp", "note": "Magic. Appears in: magic name. [MRS/4-1-19 desc: 召唤火灯，旋转攻击单个敌人。]", "source_ids": ["MRS/4-1-19/name", "MRS/4-1-20/name"]}
+{"zh": "烈火旋灯", "en": "Blazing Pinwheel", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-20 desc: 召唤火灯，旋转攻击全体敌人。]", "source_ids": ["MRS/4-1-20/name"]}
+{"zh": "天火击", "en": "Skyfire Strike", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-21 desc: 天降烈火，攻击单个敌人。]", "source_ids": ["MRS/4-1-21/name"]}
+{"zh": "天火烈焰", "en": "Skyfire Blaze", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-22 desc: 天降烈火，攻击全体敌人。]", "source_ids": ["MRS/4-1-22/name"]}
+{"zh": "魔域炼火", "en": "Demon Realm Fire", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-23 desc: 召唤地下魔域的炼火攻击所有敌人。]", "source_ids": ["MRS/4-1-23/name"]}
+{"zh": "火雷破空", "en": "Fire Thunder Burst", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-24 desc: 火系魔法和雷系魔法相结合所形成的魔法，威力无穷。攻击敌方全体。]", "source_ids": ["MRS/4-1-24/name"]}
+{"zh": "炎龙覆天", "en": "Flame Dragon", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-25 desc: 召唤天上的炎龙俯冲到地上，攻击全体敌人。]", "source_ids": ["MRS/4-1-25/name"]}
+{"zh": "雷咒", "en": "Thunder Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-26]", "source_ids": ["MRS/4-1-26/name"]}
+{"zh": "五雷破空", "en": "Five Thunders Burst", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-27]", "source_ids": ["MRS/4-1-27/name"]}
+{"zh": "五雷轰顶", "en": "Five Thunder Crash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-28]", "source_ids": ["MRS/4-1-28/name"]}
+{"zh": "地裂术", "en": "Earth Split", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-29]", "source_ids": ["MRS/4-1-29/name"]}
+{"zh": "龟裂天下", "en": "Shatter the World", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-30]", "source_ids": ["MRS/4-1-30/name"]}
+{"zh": "风咒", "en": "Wind Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-31]", "source_ids": ["MRS/4-1-31/name"]}
+{"zh": "狂风术", "en": "Gale", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-32]", "source_ids": ["MRS/4-1-32/name"]}
+{"zh": "飞沙走石", "en": "Sandstorm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-33]", "source_ids": ["MRS/4-1-33/name"]}
+{"zh": "横刀斩", "en": "Sweeping Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-34]", "source_ids": ["MRS/4-1-34/name"]}
+{"zh": "气剑指", "en": "Qi Sword Finger", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-35]", "source_ids": ["MRS/4-1-35/name"]}
+{"zh": "魔音", "en": "Demon Song", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-36]", "source_ids": ["MRS/4-1-36/name"]}
+{"zh": "瘴气", "en": "Miasma", "category": "magic", "count": 7, "note": "Monster spell, and the poisonous vapor of the Miasma Wood (lowercase 'miasma' in prose). [MRS/4-1-37]", "source_ids": ["MRS/4-1-37/name", "gut/1-3-9@01f7", "gut/1-4-1@0089"]}
+{"zh": "毒吞天下", "en": "World-Eating Venom", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-38]", "source_ids": ["MRS/4-1-38/name"]}
+{"zh": "噬灵蛇咒", "en": "Snake Soul Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-39]", "source_ids": ["MRS/4-1-39/name"]}
+{"zh": "霸王狮子吼", "en": "Tyrant Lion Roar", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-40 desc: 利用吼声降低敌人攻击力和防御力。]", "source_ids": ["MRS/4-1-40/name"]}
+{"zh": "火龙掌", "en": "Fire Dragon Palm", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-1-41]", "source_ids": ["MRS/4-1-41/name", "MRS/4-1-42/name"]}
+{"zh": "大火龙掌", "en": "Great Dragon Palm", "category": "magic", "count": 1, "alt": "Great Fire Dragon Palm (20)", "note": "Magic. Appears in: magic name. [MRS/4-1-42]", "source_ids": ["MRS/4-1-42/name"]}
+{"zh": "五煞齐出", "en": "Five Fiends Strike", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-43]", "source_ids": ["MRS/4-1-43/name"]}
+{"zh": "御蜂咒", "en": "Bee Swarm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-44]", "source_ids": ["MRS/4-1-44/name"]}
+{"zh": "御虫咒", "en": "Bug Swarm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-45]", "source_ids": ["MRS/4-1-45/name"]}
+{"zh": "天崩地裂", "en": "Cataclysm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-46]", "source_ids": ["MRS/4-1-46/name"]}
+{"zh": "蚀骨毒咒", "en": "Bone-Rot Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-47]", "source_ids": ["MRS/4-1-47/name"]}
+{"zh": "罗煞咒", "en": "Rakshasa Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-48]", "source_ids": ["MRS/4-1-48/name"]}
+{"zh": "玄月斩", "en": "Dark Moon Slash", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-1-49]", "source_ids": ["MRS/4-1-49/name", "MRS/4-1-50/name"]}
+{"zh": "大玄月斩", "en": "Great Moon Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-50]", "source_ids": ["MRS/4-1-50/name"]}
+{"zh": "冰咒", "en": "Ice Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-51]", "source_ids": ["MRS/4-1-51/name"]}
+{"zh": "火咒", "en": "Fire Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-52]", "source_ids": ["MRS/4-1-52/name"]}
+{"zh": "天女散花", "en": "Petal Rain", "category": "magic", "count": 1, "alt": "Heavenly Maiden's Flowers", "note": "Magic. Appears in: magic name. [MRS/4-1-53]", "source_ids": ["MRS/4-1-53/name"]}
+{"zh": "飞岩术", "en": "Flying Rocks", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-54]", "source_ids": ["MRS/4-1-54/name"]}
+{"zh": "血魔神功", "en": "Blood Demon Art", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-55]", "source_ids": ["MRS/4-1-55/name"]}
+{"zh": "地爪术", "en": "Earth Claw", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-56]", "source_ids": ["MRS/4-1-56/name"]}
+{"zh": "幽冥鬼爪", "en": "Nether Ghost Claw", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-58]", "source_ids": ["MRS/4-1-58/name"]}
+{"zh": "魔掌天下", "en": "Demon Palm Sweep", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-59]", "source_ids": ["MRS/4-1-59/name"]}
+{"zh": "风云变色", "en": "Shifting Storm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-60]", "source_ids": ["MRS/4-1-60/name"]}
+{"zh": "神鬼乱舞", "en": "Spirit Frenzy", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-61]", "source_ids": ["MRS/4-1-61/name"]}
+{"zh": "鬼哭神号", "en": "Wailing Spirits", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-62]", "source_ids": ["MRS/4-1-62/name"]}
+{"zh": "乌手术", "en": "Black Hand", "category": "magic", "count": 1, "note": "Poison. [MRS/4-1-63 desc: 一种发毒手法。单体中毒3回合。]", "source_ids": ["MRS/4-1-63/name"]}
+{"zh": "万毒手", "en": "Myriad Poison Hand", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-64 desc: 一种可将任合毒药以快、狠、准的身手投向敌人的法术。全体敌人中毒5回合。]", "source_ids": ["MRS/4-1-64/name"]}
+{"zh": "苦口婆心", "en": "Endless Nagging", "category": "magic", "count": 1, "note": "Confuses (idiom: earnest nagging). [MRS/4-1-65 desc: 造成敌人混乱5回合。]", "source_ids": ["MRS/4-1-65/name"]}
+{"zh": "玄籁之音", "en": "Mystic Echo", "category": "magic", "count": 1, "note": "Murong family art. [MRS/4-1-66 desc: 慕容家的家传绝学，可使全体敌人混乱3回合。]", "source_ids": ["MRS/4-1-66/name"]}
+{"zh": "五鬼乱神", "en": "Five Ghost Chaos", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-67 desc: 魔族的一种邪术，可使人丧失心志5回合。]", "source_ids": ["MRS/4-1-67/name"]}
+{"zh": "笑里藏刀", "en": "Smiling Dagger", "category": "magic", "count": 1, "note": "Idiom 'a dagger hidden in a smile'. [MRS/4-1-68 desc: 很阴险的招数，让人不知不觉中被咒封，持续4回合。]", "source_ids": ["MRS/4-1-68/name"]}
+{"zh": "八门金锁", "en": "Eight Gate Lock", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-69 desc: 运用休、生、伤、杜、景、死、惊、开八门的力量将敌人全体咒封10回合。]", "source_ids": ["MRS/4-1-69/name"]}
+{"zh": "回梦", "en": "Return to Dream", "category": "magic", "count": 1, "note": "Sleep. [MRS/4-1-70 desc: 将人催眠的魔法，眠4回合。]", "source_ids": ["MRS/4-1-70/name"]}
+{"zh": "九天困乏咒", "en": "Weariness Curse", "category": "magic", "count": 1, "alt": "Nine Heavens Fatigue (20)", "note": "Magic. Appears in: magic name. [MRS/4-1-71 desc: 可以另全体敌人都进入睡眠状态的魔法，持续2回合。]", "source_ids": ["MRS/4-1-71/name"]}
+{"zh": "御梦心经", "en": "Dream Sutra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-72 desc: 可将人带入梦境中的特殊魔法，单体眠5回合。]", "source_ids": ["MRS/4-1-72/name"]}
+{"zh": "卸劲诀", "en": "Sap Strength", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-73 desc: 敌方单人攻击减弱5回合。]", "source_ids": ["MRS/4-1-73/name"]}
+{"zh": "破兵卸劲", "en": "Shatter Arms", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-74 desc: 敌方全体攻击减弱3回合。]", "source_ids": ["MRS/4-1-74/name"]}
+{"zh": "血魔噬主", "en": "Blood Demon Bite", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-75 desc: 单人防御降低5回合。]", "source_ids": ["MRS/4-1-75/name"]}
+{"zh": "血魔破甲", "en": "Blood Armorbreak", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-76 desc: 敌方全体防御降低，持续5回合。]", "source_ids": ["MRS/4-1-76/name"]}
+{"zh": "丹凤解甲", "en": "Phoenix Disarm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-77 desc: 敌方单人防御大幅度降低，持续3回合。]", "source_ids": ["MRS/4-1-77/name"]}
+{"zh": "抽丝剥茧", "en": "Unravel", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name, magic descriptions. [MRS/4-1-78 desc: 将施展对象的防御像抽丝剥茧似的层层吸去，可极大的降低防御，持续4回合。]", "source_ids": ["MRS/4-1-78/name", "MRS/4-1-78/desc"]}
+{"zh": "定影神咒", "en": "Shadowbind Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-79 desc: 对着敌人的影子念动咒语，可降低他的身法5回合。]", "source_ids": ["MRS/4-1-79/name"]}
+{"zh": "地气锁", "en": "Earth Lock", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-80 desc: 利用大地的吸附能力，降低所有敌人的身法，6回合内有效。]", "source_ids": ["MRS/4-1-80/name"]}
+{"zh": "御魔剑诀", "en": "Demonward Sword", "category": "magic", "count": 1, "note": "Zhang Daoling's sword mantra. [MRS/4-1-81 desc: 张道陵所创的一种攻击剑诀，能对妖魔鬼怪进行有效的攻击。]", "source_ids": ["MRS/4-1-81/name"]}
+{"zh": "金刚咒", "en": "Diamond Spell", "category": "magic", "count": 1, "alt": "Vajra Spell", "note": "Magic. Appears in: magic name. [MRS/4-2-1 desc: 增强防御能力50%，持续5回合。]", "source_ids": ["MRS/4-2-1/name"]}
+{"zh": "金钟护身", "en": "Golden Bell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-2 desc: 使用后有如金钟铁罩护身，加倍防御9回合。]", "source_ids": ["MRS/4-2-2/name"]}
+{"zh": "固若金汤", "en": "Iron Bastion", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-3 desc: 全体人员5回合内，防御提高一倍。]", "source_ids": ["MRS/4-2-3/name"]}
+{"zh": "望月步", "en": "Moongaze Step", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-4 desc: 一种轻盈的战斗步法，可使一个人5回合内，身法提升提升50%。]", "source_ids": ["MRS/4-2-4/name"]}
+{"zh": "御风行", "en": "Wind Walk", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-5 desc: 单人身法提升1倍，持续8回合。]", "source_ids": ["MRS/4-2-5/name"]}
+{"zh": "天罡战气", "en": "Heavenly War Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-6 desc: 被施展者普通攻击效果上升7回合。]", "source_ids": ["MRS/4-2-6/name"]}
+{"zh": "六祖战经", "en": "Six Patriarch Sutra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-7 desc: 我方全体人员，5回合内普通攻击威力加倍。]", "source_ids": ["MRS/4-2-7/name"]}
+{"zh": "气疗术", "en": "Qi Heal", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-1 desc: 修道之人疗伤的基本法术，恢复生命75。]", "source_ids": ["MRS/4-3-1/name"]}
+{"zh": "归心术", "en": "Mind Restore", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-3-2 desc: 中级疗伤法术，单人恢复生命400。]", "source_ids": ["MRS/4-3-2/name", "MRS/4-3-6/name"]}
+{"zh": "老子回天术", "en": "Laozi's Revival", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-3 desc: 太上老君秘传的恢复法术，我方单人恢复生命1000。]", "source_ids": ["MRS/4-3-3/name"]}
+{"zh": "观音咒", "en": "Mercy Spell", "category": "magic", "count": 1, "alt": "Guanyin Mantra", "note": "Xiaomei's basic heal. [MRS/4-3-4 desc: 初级疗伤心法，单人恢复生命150。]", "source_ids": ["MRS/4-3-4/name"]}
+{"zh": "凝神归元", "en": "Restore Essence", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-5 desc: 中级疗伤心法，单人恢复生命220。]", "source_ids": ["MRS/4-3-5/name"]}
+{"zh": "元灵归心术", "en": "Spirit Return", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-6 desc: 高级疗伤心法，单人恢复生命560。]", "source_ids": ["MRS/4-3-6/name"]}
+{"zh": "五朝元气", "en": "Fivefold Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-7 desc: 特殊疗伤心法，全体恢复生命360。]", "source_ids": ["MRS/4-3-7/name"]}
+{"zh": "泽伟补命术", "en": "Zewei's Life Mend", "category": "magic", "count": 1, "note": "Named after cameo Chen Zewei; taught by South Imp. [MRS/4-3-8 desc: 异域人陈泽伟传授的强力恢复魔法，而且耗费真气极少。全体恢复生命1000。解除毒、乱、封、眠]", "source_ids": ["MRS/4-3-8/name"]}
+{"zh": "百火练金术", "en": "Hundred Fire Forge", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-9 desc: 我方单人恢复生命900的强力法术。]", "source_ids": ["MRS/4-3-9/name"]}
+{"zh": "凝神诀", "en": "Focus Mantra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-10 desc: 三清心法的一种，使人处于明镜状态。解除乱、眠状态。]", "source_ids": ["MRS/4-3-10/name"]}
+{"zh": "净衣咒", "en": "Purify Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-11 desc: 净化身体的元气，解除中毒状态。]", "source_ids": ["MRS/4-3-11/name"]}
+{"zh": "冰心决", "en": "Icy Heart Mantra", "category": "magic", "count": 1, "note": "决 for 诀 (typo). [MRS/4-3-12 desc: 可解除混乱状态的一种咒语。]", "source_ids": ["MRS/4-3-12/name"]}
+{"zh": "华佗化封诀", "en": "Hua Tuo's Unseal", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-13 desc: 根据华佗的身体穴位图，催动真气念真言，单体解除封招的咒语。]", "source_ids": ["MRS/4-3-13/name"]}
+{"zh": "马师皇针灸", "en": "Ma Shihuang Needles", "category": "magic", "count": 1, "alt": "Acupuncture", "note": "Magic. Appears in: magic name. [MRS/4-3-14 desc: 神医马师皇传下来的一种针灸方法，能令人解除疲乏，恢复精神。单体解除眠状态。]", "source_ids": ["MRS/4-3-14/name"]}
+{"zh": "五禽戏咒", "en": "Five Animals Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-15 desc: 华佗创造的五禽戏，经历代名医道士的演习所形成具有相同作用的咒语，可解除毒乱封眠。]", "source_ids": ["MRS/4-3-15/name"]}
+{"zh": "还魂咒", "en": "Revive Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-4-1 desc: 使脱离人体的魂魄回归本身的咒语。起死回生，恢复15%的生命。]", "source_ids": ["MRS/4-4-1/name"]}
+{"zh": "唤灵术", "en": "Soul Call", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-4-2 desc: 寻找脱离本位的魂魄，使其回归原位。起死回生，恢复30%的生命。]", "source_ids": ["MRS/4-4-2/name"]}
+{"zh": "赎魂", "en": "Soul Ransom", "category": "magic", "count": 2, "note": "Magic. Appears in: item name, magic name. [MRS/4-4-3 desc: 从鬼差手中讨回被索取的魂魄。起死回生，恢复50%的生命。]", "source_ids": ["MRS/4-4-3/name", "GRS/6-10-2/name"]}
+{"zh": "飞龙探云手", "en": "Dragon Cloud Grab", "category": "skill", "count": 1, "alt": "Flying Dragon Cloud Hand", "note": "Steal skill taught by Pingzhi as 妙手空空 (MRS 4-5-1; a nod to Chinese Paladin). [MRS/4-5-1 desc: 偷取敌人身上的物品。]", "source_ids": ["MRS/4-5-1/name"]}
+{"zh": "生命", "en": "HP", "category": "ui", "count": 26, "alt": "Life", "note": "Stat (engine label + item descriptions).", "source_ids": ["GRS/6-3-4/desc", "GRS/6-3-13/desc", "GRS/6-3-14/desc"]}
+{"zh": "真气", "en": "MP", "category": "ui", "count": 17, "alt": "Qi", "note": "Stat.", "source_ids": ["GRS/6-1-6/desc", "GRS/6-3-14/desc", "GRS/6-5-8/desc"]}
+{"zh": "攻击", "en": "Attack", "category": "ui", "count": 72, "alt": "ATK", "note": "Stat in descriptions (engine label 攻击力 = Attack). Abbreviate ATK only if a description overflows 102 bytes.", "source_ids": ["GRS/6-1-6/desc", "GRS/6-2-13/desc", "GRS/6-5-4/desc"]}
+{"zh": "防御", "en": "Defense", "category": "ui", "count": 109, "alt": "DEF; Guard (battle command)", "note": "Stat in descriptions (label 防御力 = Defense). EXCEPTION: the battle command slot ENG/1f8aa.2 (same zh) is the action 'Guard' (engine_demo) - deliberate context split.", "source_ids": ["GRS/6-1-1/desc", "GRS/6-1-2/desc", "GRS/6-1-3/desc"]}
+{"zh": "身法", "en": "Agility", "category": "ui", "count": 61, "alt": "AGI (tight descriptions); Speed", "note": "Stat (engine label and descriptions).", "source_ids": ["GRS/6-1-5/desc", "GRS/6-1-14/desc", "GRS/6-2-3/desc"]}
+{"zh": "灵力", "en": "Spirit", "category": "ui", "count": 36, "alt": "SPI (tight descriptions)", "note": "Stat (engine label and descriptions); magic power.", "source_ids": ["GRS/6-1-4/desc", "GRS/6-1-5/desc", "GRS/6-1-6/desc"]}
+{"zh": "吉运", "en": "Luck", "category": "ui", "count": 30, "alt": "LCK", "note": "Luck in item descriptions (the engine status label says 幸运, also Luck).", "source_ids": ["GRS/6-1-5/desc", "GRS/6-1-10/desc", "GRS/6-1-11/desc"]}
+{"zh": "武术", "en": "Attack", "category": "ui", "count": 2, "alt": "Martial", "note": "Only in 霸王花/雪蛤蟆 descriptions ('武术上限'); apparently = attack.", "source_ids": ["GRS/6-11-3/desc", "GRS/6-11-14/desc"]}
+{"zh": "体力", "en": "HP", "category": "ui", "count": 3, "note": "Stamina = HP ('休息片刻 体力恢复' -> 'You rest. HP restored.').", "source_ids": ["gut/1-2-10@00dd", "GRS/6-9-17/desc", "GRS/6-11-12/desc"]}
+{"zh": "回合", "en": "turns", "category": "ui", "count": 60, "alt": "rounds", "note": "Battle rounds in descriptions ('3 turns').", "source_ids": ["GRS/6-6-11/desc", "GRS/6-6-14/desc", "GRS/6-6-16/desc"]}
+{"zh": "上限", "en": "max", "category": "ui", "count": 13, "note": "'生命上限+10' -> 'Max HP+10'.", "source_ids": ["GRS/6-1-6/desc", "GRS/6-3-4/desc", "GRS/6-3-13/desc"]}
+{"zh": "中毒", "en": "Poison", "category": "ui", "count": 7, "note": "Status (engine short 毒 = Psn).", "source_ids": ["GRS/6-7-32/desc", "GRS/6-8-18/desc", "GRS/6-8-19/desc"]}
+{"zh": "混乱", "en": "Confuse", "category": "ui", "count": 8, "alt": "Confusion", "note": "Status (engine short 乱 = Cnf).", "source_ids": ["GRS/6-7-10/desc", "GRS/6-7-23/desc", "GRS/6-8-22/desc"]}
+{"zh": "咒封", "en": "Silence", "category": "ui", "count": 8, "alt": "Seal", "note": "Status: cannot cast (engine short 封 = Sil).", "source_ids": ["GRS/6-1-4/desc", "GRS/6-7-12/desc", "GRS/6-8-24/desc"]}
+{"zh": "昏睡", "en": "Sleep", "category": "ui", "count": 5, "note": "Status (engine short 眠 = Slp).", "source_ids": ["GRS/6-7-11/desc", "GRS/6-8-21/desc", "GRS/6-8-27/desc"]}
+{"zh": "避毒", "en": "resist Poison", "category": "ui", "count": 8, "alt": "Immune: Psn", "note": "Equipment immunity (also 避乱/避封/避眠/避咒封).", "source_ids": ["gut/1-4-2@0153", "GRS/6-2-5/desc", "GRS/6-2-14/desc"]}
+{"zh": "加入队列", "en": "joins the party", "category": "ui", "count": 8, "note": "System message 'X加入队列' (e.g. 'Murong Xiaomei joins the party').", "source_ids": ["gut/1-3-9@02c0", "gut/1-3-11@0191", "gut/1-7-14@0207"]}
+{"zh": "没有钥匙", "en": "You have no key.", "category": "ui", "count": 6, "note": "Message.", "source_ids": ["gut/1-2-33@00bb", "gut/1-5-1@0229", "gut/1-9-1@0470"]}
+{"zh": "没此物品", "en": "You don't have it.", "category": "ui", "count": 2, "note": "Message (also 无此物品).", "source_ids": ["gut/1-2-32@01d7", "gut/1-7-9@01d5"]}
+{"zh": "取消", "en": "Cancel", "category": "ui", "count": 10, "note": "Choice option.", "source_ids": ["gut/1-2-32@0114.1", "gut/1-2-32@0148.1", "gut/1-2-32@017c.1"]}
+{"zh": "使用钥匙", "en": "Use Key", "category": "ui", "count": 1, "note": "Choice option (Li Manor).", "source_ids": ["gut/1-5-1@0200.2"]}
+{"zh": "使用万能钥匙", "en": "Use Picklock", "category": "ui", "count": 5, "note": "Choice option (<=19 bytes).", "source_ids": ["gut/1-2-33@00a5.2", "gut/1-9-1@045a.2", "gut/1-10-1@05a6.2"]}
+{"zh": "免战", "en": "Truce", "category": "ui", "count": 1, "alt": "Decline", "note": "Choice vs Swordwarden in the epilogue.", "source_ids": ["gut/1-2-18@0362.1"]}
+{"zh": "欠扁", "en": "Bring it on", "category": "ui", "count": 1, "alt": "Fight", "note": "Choice: lit. 'asking for a beating'.", "source_ids": ["gut/1-2-18@0362.2"]}
+{"zh": "不给", "en": "Refuse", "category": "ui", "count": 5, "alt": "Keep it", "note": "Choice.", "source_ids": ["gut/1-2-52@00f4.1", "gut/1-2-52@02bf.1", "gut/1-2-52@03fa.1"]}
+{"zh": "奉还", "en": "Give back", "category": "ui", "count": 3, "note": "Choice.", "source_ids": ["gut/1-2-52@00f4.2", "gut/1-2-52@03fa.2", "gut/1-7-1@02ab.2"]}
+{"zh": "交出", "en": "Hand over", "category": "ui", "count": 2, "note": "Choice.", "source_ids": ["gut/1-2-52@02bf.2", "gut/1-9-13@05b0"]}
+{"zh": "不换", "en": "No deal", "category": "ui", "count": 1, "note": "Choice.", "source_ids": ["gut/1-2-52@014a.1"]}
+{"zh": "交换", "en": "Trade", "category": "ui", "count": 2, "note": "Choice.", "source_ids": ["gut/1-2-52@014a.2", "gut/1-14-8@0369"]}
+{"zh": "放走", "en": "Let go", "category": "ui", "count": 1, "note": "Choice (Old Wang).", "source_ids": ["gut/1-5-18@00ba.1"]}
+{"zh": "杀死", "en": "Kill", "category": "ui", "count": 2, "note": "Choice (Old Wang).", "source_ids": ["gut/1-5-18@00ba.2", "gut/1-14-8@05ae"]}
+{"zh": "允许存盘", "en": "SaveOK", "category": "ui", "count": 1, "alt": "Allow saving", "note": "Script menu 1-0-6 (debug?): allow saving. <=6 chars.", "source_ids": ["gut/1-0-6@0003"]}
+{"zh": "禁止存盘", "en": "NoSave", "category": "ui", "count": 1, "alt": "Disallow saving", "note": "Script menu 1-0-6: disallow saving.", "source_ids": ["gut/1-0-6@0003"]}
+{"zh": "李俯西厢房", "en": "Li Manor West Wing", "category": "place", "count": 1, "note": "Scene name (李俯 = typo for 李府).", "source_ids": ["gut/1-5-14@0055"]}
+{"zh": "李俯客厅", "en": "Li Manor Parlor", "category": "place", "count": 1, "note": "Scene name; Li Hu's boss fight.", "source_ids": ["gut/1-5-15@0083"]}
+{"zh": "李俯东厢房", "en": "Li Manor East Wing", "category": "place", "count": 1, "note": "Scene name; the painter is held here (Gold Key).", "source_ids": ["gut/1-5-16@0076"]}
+{"zh": "李俯密道", "en": "Li Manor Secret Passage", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-17@009e"]}
+{"zh": "李俯下人房", "en": "Li Manor Servants' Room", "category": "place", "count": 1, "note": "Scene name; Old Wang.", "source_ids": ["gut/1-5-18@0070"]}
+{"zh": "李俯厨房", "en": "Li Manor Kitchen", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-19@0055"]}
+{"zh": "李俯下房", "en": "Li Manor Back Room", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-20@0082"]}
+{"zh": "李俯宝库", "en": "Li Manor Vault", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-21@009f"]}
+{"zh": "皮皮家", "en": "Pipi's House", "category": "place", "count": 1, "note": "Scene name (Nanbei Village).", "source_ids": ["gut/1-10-5@0057"]}
+{"zh": "神童家", "en": "Prodigy's House", "category": "place", "count": 1, "note": "Scene name (Fengdu).", "source_ids": ["gut/1-11-2@0055"]}
+{"zh": "使用苍龙之精", "en": "Use Dragon Orb", "category": "ui", "count": 1, "note": "Choice on Sky Summit (<=19 bytes).", "source_ids": ["gut/1-2-32@0114.2"]}
+{"zh": "使用白虎之精", "en": "Use Tiger Orb", "category": "ui", "count": 1, "note": "Choice on Sky Summit.", "source_ids": ["gut/1-2-32@0148.2"]}
+{"zh": "使用朱雀之精", "en": "Use Phoenix Orb", "category": "ui", "count": 1, "note": "Choice on Sky Summit.", "source_ids": ["gut/1-2-32@017c.2"]}
+{"zh": "使用玄武之精", "en": "Use Turtle Orb", "category": "ui", "count": 1, "note": "Choice on Sky Summit.", "source_ids": ["gut/1-2-32@01b0.2"]}
+{"zh": "普通弟子居1", "en": "Dormitory 1", "category": "place", "count": 1, "note": "Numbered instance of 普通弟子居 (Dormitory).", "source_ids": ["gut/1-2-6@0067"]}
+{"zh": "普通弟子居2", "en": "Dormitory 2", "category": "place", "count": 1, "note": "Numbered instance of 普通弟子居 (Dormitory).", "source_ids": ["gut/1-2-8@0067"]}
+{"zh": "灯洞1", "en": "Lamp Cave 1", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-19@005e", "MAP/2-3-2/name"]}
+{"zh": "灯洞2", "en": "Lamp Cave 2", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-20@008b", "MAP/2-3-3/name"]}
+{"zh": "灯洞3", "en": "Lamp Cave 3", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-21@0074", "MAP/2-3-4/name"]}
+{"zh": "灯洞4", "en": "Lamp Cave 4", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-22@0055", "MAP/2-3-5/name"]}
+{"zh": "灯洞5", "en": "Lamp Cave 5", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-23@006b"]}
+{"zh": "灯洞6", "en": "Lamp Cave 6", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-24@007f"]}
+{"zh": "灯洞7", "en": "Lamp Cave 7", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-25@0062"]}
+{"zh": "灯洞8", "en": "Lamp Cave 8", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-26@0057"]}
+{"zh": "森林道路2", "en": "Forest Road 2", "category": "place", "count": 1, "note": "Numbered instance of 森林道路 (Forest Road).", "source_ids": ["gut/1-4-4@006e"]}
+{"zh": "蛇窟山洞2", "en": "Snake Den 2", "category": "place", "count": 1, "note": "Numbered instance of 蛇窟山洞 (Snake Den).", "source_ids": ["gut/1-4-7@009c"]}
+{"zh": "蛇窟山洞3", "en": "Snake Den 3", "category": "place", "count": 1, "note": "Numbered instance of 蛇窟山洞 (Snake Den).", "source_ids": ["gut/1-4-8@00ca"]}
+{"zh": "民宅1", "en": "House 1", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-4@0055", "gut/1-7-7@0055"]}
+{"zh": "民宅2", "en": "House 2", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-5@0055", "gut/1-7-8@0055"]}
+{"zh": "民宅3", "en": "House 3", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-6@0055", "gut/1-7-9@005e"]}
+{"zh": "民宅4", "en": "House 4", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-8@0055", "gut/1-7-10@0055"]}
+{"zh": "民宅5", "en": "House 5", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-12@0055", "gut/1-7-11@0055"]}
+{"zh": "三清游人1", "en": "Pilgrim 1", "category": "person", "count": 1, "note": "Numbered instance of 三清游人 (Pilgrim).", "source_ids": ["ARS/3-2-13/name"]}
+{"zh": "三清游人2", "en": "Pilgrim 2", "category": "person", "count": 1, "note": "Numbered instance of 三清游人 (Pilgrim).", "source_ids": ["ARS/3-2-14/name"]}
+{"zh": "三清游人3", "en": "Pilgrim 3", "category": "person", "count": 1, "note": "Numbered instance of 三清游人 (Pilgrim).", "source_ids": ["ARS/3-2-15/name"]}
+{"zh": "三清游人4", "en": "Pilgrim 4", "category": "person", "count": 1, "note": "Numbered instance of 三清游人 (Pilgrim).", "source_ids": ["ARS/3-2-16/name"]}
+{"zh": "三清游人5", "en": "Pilgrim 5", "category": "person", "count": 1, "note": "Numbered instance of 三清游人 (Pilgrim).", "source_ids": ["ARS/3-2-17/name"]}
+{"zh": "三清游人6", "en": "Pilgrim 6", "category": "person", "count": 1, "note": "Numbered instance of 三清游人 (Pilgrim).", "source_ids": ["ARS/3-2-18/name"]}
+{"zh": "天道手下1", "en": "Henchman 1", "category": "monster", "count": 1, "note": "Numbered instance of 天道手下 (Henchman).", "source_ids": ["ARS/3-2-28/name"]}
+{"zh": "天道手下2", "en": "Henchman 2", "category": "monster", "count": 1, "note": "Numbered instance of 天道手下 (Henchman).", "source_ids": ["ARS/3-2-29/name"]}
+{"zh": "天道手下3", "en": "Henchman 3", "category": "monster", "count": 1, "note": "Numbered instance of 天道手下 (Henchman).", "source_ids": ["ARS/3-2-30/name"]}
+{"zh": "天道手下4", "en": "Henchman 4", "category": "monster", "count": 1, "note": "Numbered instance of 天道手下 (Henchman).", "source_ids": ["ARS/3-2-31/name"]}
+{"zh": "怨妇幻妖1", "en": "Banshee 1", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-27/name"]}
+{"zh": "怨妇幻妖2", "en": "Banshee 2", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-28/name"]}
+{"zh": "怨妇幻妖3", "en": "Banshee 3", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-29/name"]}
+{"zh": "怨妇幻妖4", "en": "Banshee 4", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-30/name"]}
+{"zh": "怨妇幻妖5", "en": "Banshee 5", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-31/name"]}
+{"zh": "怨妇幻妖6", "en": "Banshee 6", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-32/name"]}
+{"zh": "怨妇幻妖7", "en": "Banshee 7", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-33/name"]}
+{"zh": "怨妇幻妖8", "en": "Banshee 8", "category": "monster", "count": 1, "note": "Numbered instance of 怨妇幻妖 (Banshee).", "source_ids": ["ARS/3-3-34/name"]}
+{"zh": "小孩僵尸1", "en": "Ghoul Kid 1", "category": "other", "count": 1, "note": "Numbered instance of 小孩僵尸 (Ghoul Kid).", "source_ids": ["ARS/3-4-37/name"]}
+{"zh": "小孩僵尸2", "en": "Ghoul Kid 2", "category": "other", "count": 1, "note": "Numbered instance of 小孩僵尸 (Ghoul Kid).", "source_ids": ["ARS/3-4-38/name"]}
+{"zh": "小孩僵尸3", "en": "Ghoul Kid 3", "category": "other", "count": 1, "note": "Numbered instance of 小孩僵尸 (Ghoul Kid).", "source_ids": ["ARS/3-4-39/name"]}
+{"zh": "歇息台子1", "en": "Rest Ledge 1", "category": "place", "count": 1, "note": "Numbered instance of 歇息台子 (Rest Ledge).", "source_ids": ["MAP/2-1-13/name"]}
+{"zh": "歇息台子2", "en": "Rest Ledge 2", "category": "place", "count": 1, "note": "Numbered instance of 歇息台子 (Rest Ledge).", "source_ids": ["MAP/2-1-14/name"]}
+{"zh": "歇息台子3", "en": "Rest Ledge 3", "category": "place", "count": 1, "note": "Numbered instance of 歇息台子 (Rest Ledge).", "source_ids": ["MAP/2-1-15/name"]}
+{"zh": "歇息台子4", "en": "Rest Ledge 4", "category": "place", "count": 1, "note": "Numbered instance of 歇息台子 (Rest Ledge).", "source_ids": ["MAP/2-1-16/name"]}
+{"zh": "歇息台子5", "en": "Rest Ledge 5", "category": "place", "count": 1, "note": "Numbered instance of 歇息台子 (Rest Ledge).", "source_ids": ["MAP/2-1-17/name"]}
+{"zh": "歇息台子6", "en": "Rest Ledge 6", "category": "place", "count": 1, "note": "Numbered instance of 歇息台子 (Rest Ledge).", "source_ids": ["MAP/2-1-18/name"]}
+{"zh": "歇息台子7", "en": "Rest Ledge 7", "category": "place", "count": 1, "note": "Numbered instance of 歇息台子 (Rest Ledge).", "source_ids": ["MAP/2-1-19/name"]}
+{"zh": "转折路口1", "en": "Crossroads 1", "category": "place", "count": 1, "note": "Numbered instance of 转折路口 (Crossroads).", "source_ids": ["MAP/2-1-26/name"]}
+{"zh": "转折路口2", "en": "Crossroads 2", "category": "place", "count": 1, "note": "Numbered instance of 转折路口 (Crossroads).", "source_ids": ["MAP/2-1-27/name"]}
+{"zh": "转折路口3", "en": "Crossroads 3", "category": "place", "count": 1, "note": "Numbered instance of 转折路口 (Crossroads).", "source_ids": ["MAP/2-1-28/name"]}
+{"zh": "转折路口4", "en": "Crossroads 4", "category": "place", "count": 1, "note": "Numbered instance of 转折路口 (Crossroads).", "source_ids": ["MAP/2-1-29/name"]}
+{"zh": "转折路口5", "en": "Crossroads 5", "category": "place", "count": 1, "note": "Numbered instance of 转折路口 (Crossroads).", "source_ids": ["MAP/2-1-30/name"]}
+{"zh": "农舍1", "en": "Farmhouse 1", "category": "place", "count": 1, "note": "Numbered instance of 农舍 (Farmhouse).", "source_ids": ["MAP/2-2-10/name"]}
+{"zh": "农舍2", "en": "Farmhouse 2", "category": "place", "count": 1, "note": "Numbered instance of 农舍 (Farmhouse).", "source_ids": ["MAP/2-2-11/name"]}
+{"zh": "农舍3", "en": "Farmhouse 3", "category": "place", "count": 1, "note": "Numbered instance of 农舍 (Farmhouse).", "source_ids": ["MAP/2-2-12/name"]}
+{"zh": "农舍4", "en": "Farmhouse 4", "category": "place", "count": 1, "note": "Numbered instance of 农舍 (Farmhouse).", "source_ids": ["MAP/2-2-13/name"]}
+{"zh": "空档案", "en": "Empty", "category": "ui", "count": 1, "note": "Empty save slot. Engine string (ENG/0247e).", "source_ids": ["ENG/0247e"]}
+{"zh": "错误指令...", "en": "Bad command...", "category": "ui", "count": 1, "note": "Engine error message. Engine string (ENG/07b6f).", "source_ids": ["ENG/07b6f"]}
+{"zh": "已满载！", "en": "Inventory full!", "category": "ui", "count": 2, "note": "Inventory/shop: bag is full. Engine string (ENG/07b7b, ENG/3b469).", "source_ids": ["ENG/07b7b", "ENG/3b469"]}
+{"zh": "获得:", "en": "Got: ", "category": "ui", "count": 1, "note": "Chest pickup prefix: 'Got: <item>'. Engine string (ENG/07b84).", "source_ids": ["ENG/07b84"]}
+{"zh": "档案储存中… ", "en": "Saving... ", "category": "ui", "count": 1, "note": "Shown while saving. Engine string (ENG/0f615).", "source_ids": ["ENG/0f615"]}
+{"zh": "耗真气:", "en": "MP cost:", "category": "ui", "count": 1, "note": "Magic menu: MP cost. Engine string (ENG/137c6).", "source_ids": ["ENG/137c6"]}
+{"zh": "等级", "en": "Lv", "category": "ui", "count": 1, "note": "Status label: level. Engine string (ENG/13818).", "source_ids": ["ENG/13818"]}
+{"zh": "攻击力", "en": "Attack", "category": "ui", "count": 4, "note": "Status label. Engine string (ENG/13827).", "source_ids": ["ENG/13827", "GRS/6-12-1/desc", "GRS/6-12-4/desc"]}
+{"zh": "防御力", "en": "Defense", "category": "ui", "count": 2, "note": "Status label. Engine string (ENG/1382e).", "source_ids": ["ENG/1382e", "MRS/4-1-40/desc"]}
+{"zh": "经验值", "en": "EXP", "category": "ui", "count": 1, "note": "Status label. Engine string (ENG/13835).", "source_ids": ["ENG/13835"]}
+{"zh": "幸运", "en": "Luck", "category": "ui", "count": 1, "note": "Status label (descriptions say 吉运; both Luck). Engine string (ENG/13846).", "source_ids": ["ENG/13846"]}
+{"zh": "免疫", "en": "Immune", "category": "ui", "count": 1, "note": "Status page 2: immunities. Engine string (ENG/1384b).", "source_ids": ["ENG/1384b"]}
+{"zh": "毒", "en": "Psn", "category": "ui", "count": 53, "note": "Status abbreviation: Poison (中毒). Engine string (ENG/13858).", "source_ids": ["ENG/13858", "gut/1-4-1@0062", "gut/1-4-2@0153"]}
+{"zh": "乱", "en": "Cnf", "category": "ui", "count": 24, "note": "Status abbreviation: Confuse (混乱). Engine string (ENG/1385b).", "source_ids": ["ENG/1385b", "gut/1-2-2@04fb", "gut/1-10-2@00c0"]}
+{"zh": "封", "en": "Sil", "category": "ui", "count": 25, "note": "Status abbreviation: Silence (咒封, cannot cast). Engine string (ENG/1385e).", "source_ids": ["ENG/1385e", "gut/1-1-5@0100", "gut/1-3-5@007c"]}
+{"zh": "眠", "en": "Slp", "category": "ui", "count": 14, "note": "Status abbreviation: Sleep (昏睡). Engine string (ENG/13861).", "source_ids": ["ENG/13861", "GRS/6-1-6/desc", "GRS/6-7-11/name"]}
+{"zh": "无", "en": "-", "category": "ui", "count": 86, "note": "'None' in the immunity row. Engine string (ENG/13864).", "source_ids": ["ENG/13864", "gut/1-1-1@0003", "gut/1-1-1@0422"]}
+{"zh": "属性", "en": "Stats", "category": "ui", "count": 2, "note": "Main map menu (EXIT key). Engine string (ENG/13891.0), packed menu slot 32 px.", "source_ids": ["ENG/13891.0", "GRS/6-7-14/desc"]}
+{"zh": "魔法", "en": "Magic", "category": "ui", "count": 8, "note": "Main map menu. Engine string (ENG/13891.1), packed menu slot 32 px.", "source_ids": ["ENG/13891.1", "MRS/4-1-24/desc", "MRS/4-1-70/desc"]}
+{"zh": "物品", "en": "Items", "category": "ui", "count": 8, "note": "Main map menu. Engine string (ENG/13891.2), packed menu slot 32 px.", "source_ids": ["ENG/13891.2", "gut/1-2-32@01d7", "gut/1-7-9@01d5"]}
+{"zh": "系统", "en": "Game", "category": "ui", "count": 1, "note": "Main map menu: save/load/options/quit. Engine string (ENG/13891.3), packed menu slot 32 px.", "source_ids": ["ENG/13891.3"]}
+{"zh": "状态", "en": "Status", "category": "ui", "count": 12, "note": "Submenu of 属性 and battle wheel item. Engine string (ENG/138a3.0, ENG/1f8aa.4), packed menu slot 32 px.", "source_ids": ["ENG/138a3.0", "ENG/1f8aa.4", "gut/1-9-1@0157"]}
+{"zh": "穿戴", "en": "Gear", "category": "ui", "count": 1, "note": "Submenu of 属性: equipment screen. Engine string (ENG/138a3.1), packed menu slot 32 px.", "source_ids": ["ENG/138a3.1"]}
+{"zh": "使用", "en": "Use", "category": "ui", "count": 21, "note": "Item submenu / battle 道具 submenu. Engine string (ENG/138ad.0, ENG/1f8e4.2), packed menu slot 32 px.", "source_ids": ["ENG/138ad.0", "ENG/1f8e4.2", "gut/1-2-32@0114.2"]}
+{"zh": "装备", "en": "Equip", "category": "ui", "count": 4, "note": "Item submenu / battle 道具 submenu. Engine string (ENG/138ad.1, ENG/1f8e4.0), packed menu slot 32 px.", "source_ids": ["ENG/138ad.1", "ENG/1f8e4.0", "GRS/6-7-13/desc"]}
+{"zh": "读入进度", "en": "Load", "category": "ui", "count": 1, "note": "System menu. Engine string (ENG/138b7.0), packed menu slot 64 px.", "source_ids": ["ENG/138b7.0"]}
+{"zh": "存储进度", "en": "Save", "category": "ui", "count": 1, "note": "System menu. Engine string (ENG/138b7.1), packed menu slot 64 px.", "source_ids": ["ENG/138b7.1"]}
+{"zh": "游戏设置", "en": "Setup", "category": "ui", "count": 1, "alt": "Options (engine_demo; 7 chars)", "note": "System menu. Engine string (ENG/138b7.2), packed menu slot 64 px. Shortened from the engine_demo draft to meet the 6-character menu-label rule.", "source_ids": ["ENG/138b7.2"]}
+{"zh": "结束游戏", "en": "Quit", "category": "ui", "count": 1, "note": "System menu. Engine string (ENG/138b7.3), packed menu slot 64 px.", "source_ids": ["ENG/138b7.3"]}
+{"zh": "音乐开", "en": "Music", "category": "ui", "count": 1, "alt": "Music On (engine_demo; 8 chars, fits 48 px)", "note": "Options toggle: music on. Engine string (ENG/138d9.0), packed menu slot 48 px. Shortened from the engine_demo draft to meet the 6-character menu-label rule.", "source_ids": ["ENG/138d9.0"]}
+{"zh": "音乐关", "en": "Mute", "category": "ui", "count": 1, "alt": "Music Off (engine_demo; 9 chars, fits 48 px)", "note": "Options toggle: music off. Engine string (ENG/138d9.1), packed menu slot 48 px. Shortened from the engine_demo draft to meet the 6-character menu-label rule.", "source_ids": ["ENG/138d9.1"]}
+{"zh": "金钱：", "en": "Money:", "category": "ui", "count": 3, "note": "Money label (menu, shops). Engine string (ENG/138e7, ENG/37931, ENG/3b457).", "source_ids": ["ENG/138e7", "ENG/37931", "ENG/3b457"]}
+{"zh": "目前不能存档!", "en": "Can't save now!", "category": "ui", "count": 1, "note": "Save disabled by script. Engine string (ENG/13912).", "source_ids": ["ENG/13912"]}
+{"zh": "真气不足!", "en": "Not enough MP!", "category": "ui", "count": 1, "note": "Battle: not enough MP. Engine string (ENG/1f8a0).", "source_ids": ["ENG/1f8a0"]}
+{"zh": "围攻", "en": "Rush", "category": "ui", "count": 1, "note": "Battle wheel (DOWN menu): auto/all-out attack. 'Rush' kept from engine_demo; confirm behavior. Engine string (ENG/1f8aa.0), packed menu slot 32 px.", "source_ids": ["ENG/1f8aa.0"]}
+{"zh": "道具", "en": "Item", "category": "ui", "count": 1, "note": "Battle wheel: items. Engine string (ENG/1f8aa.1), packed menu slot 32 px.", "source_ids": ["ENG/1f8aa.1"]}
+{"zh": "逃跑", "en": "Flee", "category": "ui", "count": 1, "note": "Battle wheel. Engine string (ENG/1f8aa.3), packed menu slot 32 px.", "source_ids": ["ENG/1f8aa.3"]}
+{"zh": "投掷", "en": "Throw", "category": "ui", "count": 2, "note": "Battle 道具 submenu: throw an item. Engine string (ENG/1f8e4.1), packed menu slot 32 px.", "source_ids": ["ENG/1f8e4.1", "GRS/6-8-2/desc"]}
+{"zh": "获得经验", "en": "EXP", "category": "ui", "count": 1, "note": "Battle result: 'EXP <n>'. Engine string (ENG/2facd).", "source_ids": ["ENG/2facd"]}
+{"zh": "战斗获得 ", "en": "Earned ", "category": "ui", "count": 1, "note": "Battle result: 'Earned <n> (money)'. Engine string (ENG/2fad6).", "source_ids": ["ENG/2fad6"]}
+{"zh": "得到 ", "en": "Got ", "category": "ui", "count": 1, "note": "Battle result: 'Got <item> xN'. Engine string (ENG/2fae3).", "source_ids": ["ENG/2fae3"]}
+{"zh": "修行提升", "en": "Level up!", "category": "ui", "count": 1, "note": "Level-up popup '<name> Level up!'. Engine string (ENG/2faec).", "source_ids": ["ENG/2faec"]}
+{"zh": "偷得 ", "en": "Stole ", "category": "ui", "count": 1, "note": "Steal result. Engine string (ENG/2fb65).", "source_ids": ["ENG/2fb65"]}
+{"zh": "装饰", "en": "Acc.", "category": "ui", "count": 5, "note": "Equip slot: accessory. Engine string (ENG/3398b, ENG/33990).", "source_ids": ["ENG/3398b", "ENG/33990", "GRS/6-5-1/desc"]}
+{"zh": "护腕", "en": "Wrist", "category": "ui", "count": 6, "note": "Equip slot: wrist. Engine string (ENG/33995).", "source_ids": ["ENG/33995", "GRS/6-5-1/name", "GRS/6-5-2/name"]}
+{"zh": "脚蹬", "en": "Feet", "category": "ui", "count": 1, "note": "Equip slot: feet. Engine string (ENG/3399a).", "source_ids": ["ENG/3399a"]}
+{"zh": "手持", "en": "Hand", "category": "ui", "count": 1, "note": "Equip slot: weapon. Engine string (ENG/3399f).", "source_ids": ["ENG/3399f"]}
+{"zh": "身穿", "en": "Body", "category": "ui", "count": 2, "note": "Equip slot: body. Engine string (ENG/339a4).", "source_ids": ["ENG/339a4", "gut/1-4-2@00ef"]}
+{"zh": "肩披", "en": "Cape", "category": "ui", "count": 1, "note": "Equip slot: cape. Engine string (ENG/339a9).", "source_ids": ["ENG/339a9"]}
+{"zh": "头戴", "en": "Head", "category": "ui", "count": 1, "note": "Equip slot: head. Engine string (ENG/339ae).", "source_ids": ["ENG/339ae"]}
+{"zh": "不能装备！", "en": "Can't equip!", "category": "ui", "count": 2, "note": "Equip error. Engine string (ENG/339f3, ENG/3789f).", "source_ids": ["ENG/339f3", "ENG/3789f"]}
+{"zh": "已装备！", "en": "Equipped!", "category": "ui", "count": 1, "note": "Already equipped. Engine string (ENG/378c6).", "source_ids": ["ENG/378c6"]}
+{"zh": "战斗中才能使用！", "en": "Only in battle!", "category": "ui", "count": 1, "note": "Item use error. Engine string (ENG/378cf).", "source_ids": ["ENG/378cf"]}
+{"zh": "无效！", "en": "No effect!", "category": "ui", "count": 1, "note": "Item/magic had no effect. Engine string (ENG/378e0).", "source_ids": ["ENG/378e0"]}
+{"zh": "真气不足！", "en": "Not enough MP!", "category": "ui", "count": 1, "note": "Map: not enough MP. Engine string (ENG/378ff).", "source_ids": ["ENG/378ff"]}
+{"zh": "此处无法使用！", "en": "Can't use that here!", "category": "ui", "count": 1, "note": "Item use error. Engine string (ENG/3790a).", "source_ids": ["ENG/3790a"]}
+{"zh": "卖出个数  ：", "en": "Sell how many:", "category": "ui", "count": 1, "note": "Shop sell quantity. Engine string (ENG/3793a).", "source_ids": ["ENG/3793a"]}
+{"zh": "买入个数  ：", "en": "Buy how many:", "category": "ui", "count": 1, "note": "Shop buy quantity. Engine string (ENG/37947).", "source_ids": ["ENG/37947"]}
+{"zh": "金钱不足！", "en": "Not enough money!", "category": "ui", "count": 2, "note": "Shop: not enough money. Engine string (ENG/3795c, ENG/3b45e).", "source_ids": ["ENG/3795c", "ENG/3b45e"]}
+{"zh": "没携带物品！", "en": "No items!", "category": "ui", "count": 1, "note": "Shop sell: no items. Engine string (ENG/3796f).", "source_ids": ["ENG/3796f"]}
+{"zh": "不可卖物品！", "en": "Can't sell that!", "category": "ui", "count": 1, "note": "Shop sell: key item. Engine string (ENG/3797c).", "source_ids": ["ENG/3797c"]}
+{"zh": "数量：", "en": "Qty:", "category": "ui", "count": 1, "note": "Shop/item list column. Engine string (ENG/3b446).", "source_ids": ["ENG/3b446"]}
+{"zh": "价：", "en": "Price:", "category": "ui", "count": 1, "note": "Shop list column. Engine string (ENG/3b44d).", "source_ids": ["ENG/3b44d"]}
+{"zh": "名：", "en": "Name:", "category": "ui", "count": 1, "note": "Shop list column. Engine string (ENG/3b452).", "source_ids": ["ENG/3b452"]}
