@@ -74,3 +74,21 @@ Games grouped by a hash of the engine region (0x46 up to the archive). Same hash
 | `dbf25910bd` | 黑暗之心 | 1 |
 
 Native (tier 3): Eros方块, 三国霸业, 中国象棋, 丰收, 乒乓球, 二十一点, 二十四点, 五子棋, 体闲麻将, 公路快车, 升级, 华容道, 坦克大战, 宠物精灵, 对对碰, 平面魔方, 幸运花, 恶龙传说, 扫雷, 投篮游戏, 拱猪, 挖金子, 接龙, 搬运工, 智多星, 比大小, 泡泡侠 加速版, 泡泡侠, 海盗船, 滑雪, 潜艇大战, 炸弹小子, 猪小弟, 猫狗大战, 电子宠物, 碰碰车, 秘密潜入, 螃蟹回家, 豪斯, 贪食蛇, 赛马, 跟花, 跳蛋, 迷宫游戏, 钓鱼, 钓鲨鱼, 阶梯小子, 飞行特训, 魔塔, 魔塔BT版, 魔塔超级版, 黑白子.
+
+## Phase 3 findings (bbkemu-cli)
+
+- **Script loading.** The engine (compiled C, cc65-style software stack at
+  `$28`) copies a fixed 513-byte window of the current script from flash to
+  RAM `0x1AAE`-`0x1CAE` via the OS memcpy at `0xE8A658`; the call is at
+  `0x57E9` (physical `0x2117E9`). The window size does not depend on the script,
+  and scripts larger than it (the 1,275-byte intro) run fine, so script length
+  is not capped by this buffer.
+- **Grown builds work.** A build with every `say` line tripled (4 overflow GUT
+  banks, file 64 KiB larger) boots, plays the opening, renders mixed-case ASCII
+  and pages through long lines without crashing.
+- **Dialogue box.** 2 rows per page. Without a portrait a row holds 8 hanzi /
+  16 ASCII; with a portrait the first row holds 6 hanzi / 12 ASCII. The engine
+  wraps by character (mid-word), so the fitter must place breaks itself.
+- **Navigation.** Title appears by frame 1000; ENTER starts a new game, EXIT
+  skips the intro scroll (`showgut`), first dialogue follows within ~300 frames.
+- Run speed: about 1,250 frames/s on this Mac (20x real time).

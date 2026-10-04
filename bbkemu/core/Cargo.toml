@@ -1,0 +1,13 @@
+[package]
+name = "bbkemu-core"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "BBKEmu core (vendored from github.com/AloysHF/BBKEmu, see UPSTREAM), patched for bbkemu-cli"
+
+[dependencies]
+mos6502 = "0.10"
+serde = { version = "1", features = ["derive"] }
+bincode = "1"
+log = "0.4"
+anyhow = "1"
