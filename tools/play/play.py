@@ -487,6 +487,8 @@ def fight(quiet=True, max_rounds=200):
         texts += [t for _, t in poll(quiet)]
         if st == "idle":
             break
+        if st == "busy" and wheel_shown():
+            st = "key"      # 2nd member's wheel can wait outside the OS key wait (pc 227d3c)
         if st == "key":
             # battle wheel: UP = attack (sword), LEFT = magic, RIGHT = items,
             # DOWN = flee/other. UP is harmless on message boxes.
@@ -1074,7 +1076,7 @@ def party():
         # name block precedes: 75 6e 10 00 <name>
         j = m.rfind(bytes.fromhex("756e1000"), max(0, i - 0x20), i)
         name = m[j + 4:j + 0x10].split(b"\0")[0].decode("gb2312", "replace") if j >= 0 else "?"
-        if j >= 0:
+        if j >= 0 and 0 < r[0] < 100 and 0 < w(6) < 10000 and w(8) <= w(6) and name.isprintable():
             out.append((name, {"hpmax": w(6), "hp": w(8), "mpmax": w(10), "mp": w(12), "atk": w(14), "def": w(16), "addr": hex(0x3000 + i)}))
         i = m.find(bytes.fromhex("756e1c00"), i + 4)
     return out
@@ -1472,4 +1474,93 @@ def map_heal(target=0, times=1, caster=1, spell=0):
             break
     poll(True)
     return pstate()
+# --- session 5 -------------------------------------------------------------------
+
+def mwalk(goal, mask, maxsteps=30):
+    """maze_walk with an explicit flag mask (e.g. set(range(101,114)) | {216, 218}):
+    story flags in the mask let the solver follow `if 216` branches."""
+    import maze as _mz
+    mask = set(mask)
+    for _ in range(maxsteps):
+        key = h.where[0][2:]
+        if key == goal:
+            return True
+        fl = set(f for f in flags(min(mask), max(mask) + 1) if f in mask)
+        p = _mz.solve(key, goal, fl, mask)
+        if not p:
+            print("no path", key, fl)
+            return False
+        k, tile, nxt, f2, notes = p[0]
+        enter_door(tile, quiet=False)
+        print("maze:", k, tile, "->", h.where, sorted(set(flags(min(mask), max(mask) + 1)) & mask), notes)
+    return False
+
+
+def send(keys):
+    """Send a key tuple (None = wait 30 frames) or call a callable."""
+    if callable(keys):
+        keys()
+        return
+    for k in keys:
+        if k is None:
+            e.run_frames(30)
+        else:
+            e.tap(k, hold=2, wait=26)
+
+
+def pair(mk, yk):
+    """Trio battles: duo_beam's mei_cands keys for 小梅 then 袁萍芷 (3rd wheel)."""
+    def f():
+        send(mk)
+        e.run_frames(20)
+        send(yk)
+    return f
+
+
+def MEI_MAG(idx, side):
+    """小梅 party-target magic idx; side 0 self, -1 hero (LEFT), +1 3rd member (RIGHT)."""
+    k = ("LEFT", "ENTER", None) + ("DOWN",) * idx + ("ENTER", None)
+    k += ("LEFT",) if side < 0 else (("RIGHT",) if side > 0 else ())
+    return k + ("ENTER",)
+
+
+def use_item(name, who=0):
+    """Map menu 物品/使用 `name` on party member `who` (who>0 is unreliable)."""
+    import menus
+    menus.main_menu_select(e, 2)
+    tap("ENTER", hold=2, wait=30, quiet=True)
+    tap("ENTER", hold=2, wait=40, quiet=True)
+    r = menu_use(name, 1, who)
+    for _ in range(5):
+        if waitstate() == "idle":
+            break
+        e.tap("EXIT", hold=2, wait=30)
+    poll(True)
+    return r
+
+
+def topup():
+    """Between fights: 小梅 heals anyone under 60% (观音咒)."""
+    for _ in range(4):
+        ps = party()
+        low = [i for i, (n, s) in enumerate(ps) if s["hp"] < 0.6 * s["hpmax"]]
+        mei = [s for n, s in ps if n == "慕容小梅"]
+        if not low or not mei or mei[0]["mp"] < 10:
+            return
+        map_heal(low[0], 1)
+
+
+def safe_adj(x, y, tries=40):
+    """goto_adj that survives many random fights, healing in between.
+    Returns 'dead' if the party vanished (game over)."""
+    for _ in range(tries):
+        topup()
+        r = goto_adj(x, y, tries=1, quiet=True)
+        if r is True or isinstance(r, tuple):
+            return r
+        if not party():
+            return "dead"
+    return False
+
+
 __all__ = [k for k in list(globals()) if not k.startswith("_") and k not in _PRIVATE]

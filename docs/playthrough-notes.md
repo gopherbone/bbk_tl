@@ -1,54 +1,71 @@
 # 伏魔记 agent playthrough — notes
 
-Route: `routes/fmj.agent.route.jsonl` (stopped cleanly, ends at frame 537510,
-~149 min game time; `bbkplay --verify` hash 6e64f31e8d81e799).
+Route: `routes/fmj.agent.route.jsonl` (stopped cleanly after session 5, ends
+at frame 894182, ~248 min game time; `bbkplay --verify` hash f6ae9da0eb91a8bf).
 Coverage of the route (`tools/play/route_coverage.py` -> `route_seen.json`):
-171 / 632 `say` rows (27.1%), 179 gut rows. `seen.json` is cumulative over all
+269 / 632 `say` rows (42.6%), 285 gut rows. `seen.json` is cumulative over all
 attempts incl. rewound ones (also counts GRS/MRS names/descs).
 
 The three emulator bugs found in session 1 (IRQ I flag, save-marker overwrite,
 auto power-off) are fixed in the official `bbkemu/target/release/bbkemu`;
 `work/bbkemu_irqfix/` and `emu_fixes.patch` are obsolete.
 
-## BLOCKER (session 4): OS flash writes corrupt the game image
+## Session 4 blocker: fixed
 
-**Progress past 1-3-12 is blocked by an emulator bug** (Emulator problems #3
-below). Any OS file write (an in-game 存储进度 save, or the engine's
-`deleteactor 2` in 1-3-12, which stashes 小梅's data in a flash file) goes
-through `write_flash` in `bbkemu/core/src/memory.rs`, which shifts every
-program/erase address by +0x8000 while `read_flash` does not. The OS formats
-its file area (programs flash 0x80ff, erases sectors 0x5000 and 0xb000); in
-the emulator these land on .gam offsets 0x30ff, 0x0000-0x0fff and
-0x6000-0x6fff (engine code + header). The game keeps running for a while, then
-draws NPCs through the broken code at gam 0x30ff (`lda $21` became `$03`): a
-garbage sprite pointer, a 169-row blit past the 1920-byte back buffer at
-0x2e3c that overwrites the hero record (HP 0xbdxx = 484xx) and heap tags,
-then `illegal_opcode` at phys e275ae. It happens on **every** line through
-the 蛇妖 fight (tested: exp 0/500/700/900/1051, no level-up / one level-up,
-different last actions, fled vs fought random fights, boss HP poked to 1).
-The session-3 "double level-up" theory and the "exp < 1105" rule were wrong.
-Until the core is fixed: never save in-game, and do not press ENTER at the
-current route end.
+The OS-flash-write bug (Emulator problems #3) is fixed in the official build
+(commit "core: flash writes use the same address map as reads"). Session 5
+verified: `deleteactor 2` in 1-3-12, the solo 蛇妖男 fight, `createactor 2`
+(小梅 restored from the OS file in 1-3-11), an in-game 存储进度 save and a
+读入进度 load all leave the game image byte-identical to the .gam (0 bytes
+differ over the whole 832 KiB). In-game saving is safe now. The session-3
+"double level-up / exp < 1105" rule was a misdiagnosis: ignore it.
 
-## Where we are (end of session 4)
+## Where we are (end of session 5)
 
-- The route ends inside the 1-3-12 cut-scene with the message box
-  `慕容小梅昏倒了！` (gut/1-3-12@0158) on screen, waiting for a key; the game
-  image is still intact there (0 bytes differ from the .gam). Map (1,23).
-  Party 柳清风 Lv12 (HP 310/310, MP 211/244, exp 967, next 1665) +
-  慕容小梅 Lv7 (HP 185, MP 232). Two random fights on the way to (15,4) were
-  fled (`play.FLEE=True`). Money 3431. 1-4-9 has no exit back (its only
-  tile event is the teleport), so 1-4-8 box 22 is out of reach now.
-- **Next (after the emulator fix)**: resume, ENTER -> `deleteactor 2`,
-  `say 我和你拼了！`, then the **solo** fight vs 蛇妖男 (2000 HP). Set
-  `play.AUTO_FIGHT=False` so `adv()` stops at the wheel. Winning line found
-  this session (hero alone, `duo_beam(..., mei_cands=lambda ix, ps:
-  [("-", None)])`): 无影神针, 剑气术, 剑气术, 火灵符, 剑气术, 土灵符, 剑气术,
-  风灵符, 剑气术, 青阴君, 青阴君, 剑气术 (剑气术 = `A_MAG(4, 0)`, items by
-  name with `A_THROW_N` / `A_USE_N`). RNG depends on the action history, so
-  a different pre-fight line may need a new search. Rewards: exp 860, 1200
-  money, 软蛟披风, level 13 (learns 卸劲诀).
-  Afterwards check `e.read(gam=0x30f8, length=8)` is still `18a52069d38520a5`.
+- Route ends at 霸王钟洞口 (script 1-8-2, map (1,35), tile (11,3)) on the
+  free map, right after 冲虚道人's speech (event 224 set: 霸王钟 stolen by
+  赤血, 袁萍芷 gone). In-game saves: slot 1 = 建业城 (before 钟山), slot 2 =
+  here. Party 柳清风 Lv15 (HP 310/342, MP 276/276, atk 210, def 82) +
+  慕容小梅 Lv12 (HP 207/214, MP 275/285). Money 2589. Coverage/verify: see
+  the top of this file and the session-5 report.
+- **Next**: 8-2 tile 1 -> 钟山道院 8-1 -> tile 1 (224 set) -> 6-12 -> back down
+  the 6-8/6-9 bridges -> 6-13 -> 6-4 -> 6-1 hub -> 建业城 (7-1, tile 1 enters
+  from 6-2 with 104, or 6-1 tile 1 with 106) -> 建业客栈 7-2 counter (tile 5):
+  掌柜 sets 225 (袁萍芷 went toward 白水镇) -> 6-1 hub -> 白水镇 (chapter 9,
+  events 226-234). If 1117 is set (we returned the money bag), the 7-2 init
+  ambush fight (3 游人, ARS 9/20/26) triggers on entering the inn unless 221 is
+  set (it is): skipped now.
+- Story flags (setevent): 217 小梅 rejoins (1-3-11), 218 建业城 thief scene
+  (1-7-14), 219 小雷公 / 袁萍芷 joins (1-8-11), 220 参虚阁 fights (1-8-3), 221
+  赤血 (1-8-12), 224 冲虚道人 (1-8-2), 225 inn keeper (1-7-2), 226-234 白水镇
+  (chapter 9), 235-246 周处庙/北海 (10, 12, 13), 247-250 酆都 (11), 251-254
+  陵墓/鹤鸣山 (14), 255-259 摩天顶 2-32 (endgame back at 三清山).
+
+### Session 5 route (frame 537510 -> ~894200)
+
+1-3-12 `deleteactor 2` (no crash) -> solo 蛇妖男 (the session-4 line did
+*not* repeat: the boss heals itself on this RNG; new line found by beam:
+无影神针, 火灵符, 剑气术, 观音符, 土灵符, 风灵符, 水灵符, 玉蓝草, 水灵符, 千里飘,
+雷灵符, 雷灵符, 玉蓝草, 剑气术 x3) -> 野外斜路 talks -> 2-43 -> bridge maze up ->
+三清宫 talks -> 无机阁 (216) -> maze down -> 原野 maze (`mwalk`) -> 忘忧村:
+东东家, 蔡婆家 (gift 七星灯, 222), 村长家 -> 慕容主房: 小梅 rejoins (217,
+`createactor 2` restores her stashed stats) -> 原野 -> 2-50 tile 3 ->
+startchapter 6,1 -> ch6 hub maze -> 7-14 小偷袁 fight (1500 HP; lost once
+to auto-attack = game over; beam win with 剑气术 + 迷魂香/忘魂花 sleep) ->
+建业客栈 talks -> 建业城: 钱袋 box (chose 奉还, 1117), shops browsed
+(武器店, 杂货铺, 当铺, 药铺; bought 5 魔王甲, 4 玉蓝草), 民宅3 阿军 (情书 ->
+3 万能钥匙, 264), save slot 1 -> 6-1 -> 6-4 -> 8-11: 袁萍芷 joins, 3x 小雷公
+(lost once to auto-attack; game over -> 读入进度 slot 1 is in the route; then
+beam win as a trio) -> 6-8/6-9/6-12 -> 钟山道院 8-1 (box, 炼丹房, 冲虚居,
+药房 browsed + 2 魔王甲) -> 参虚阁 8-3: three chained fights (高粱酒坛+雷/风蜘蛛,
+火/土/冰蜘蛛, 怪妖坛子+大头怪+小可爱) won by a staged trio beam (~50 rounds) ->
+8-12 cut-scene -> 赤血 (8000 HP): **losing is scripted** (both enterfight
+labels continue at L_043d; only the win line gut/1-8-12@040f is missed) ->
+袁萍芷 leaves -> 霸王钟洞 -> 霸王迷宫 8-9 (4 of 6 boxes: 雄黄, 枸杞仙果,
+还神丹, 飘飘香; (27,43) and (10,41) skipped) -> stairs (43,19) -> 8-2 (224).
+
+### Older history
+
 - Session 4 did: diagnosis only (the crash), plus the 1-3-12 opening says
   (0060-0158). Repro: `routes/repro/flash_save_corrupts_gam.script.jsonl`.
 - After 1-3-12: `say`s, 忘忧坟场/村 scenes, tile 2 -> 2-43 (三清山入口) -> back
@@ -68,6 +85,41 @@ current route end.
 - Skipped: 忘忧村 revisit (小画家 back home: new 蔡婆 lines?), 1-4-6 box 30
   (21,36) (it sets 1055, which also disables the 蛇窟隐洞 entrance: either/or),
   1-4-8 box 22 (佛天圆) on the final line, 石梦城 杂货店/武器店 purchases.
+
+## Game/script facts found in session 5
+
+- The battle RNG is not a pure function of the in-battle actions: the
+  session-4 winning line vs 蛇妖男 gave different damage here (the boss also
+  healed itself, 1418 -> 1638). Re-search each time the pre-fight route differs.
+- Party members: 3rd member 袁萍芷 (Lv9, 250 HP, attack only; LEFT+ENTER on her
+  wheel just attacks). Heap stat blocks `75 6e 1c 00` also exist for non-party
+  data; `party()` now filters by sane level/HP.
+- Magic lists (battle LEFT): 柳清风 0 气疗术, 1 御剑术, 2 天师符法, 3 凝神诀,
+  4 剑气术 (30 MP, "攻击敌方全体", ~180-280 to each enemy), 5 卸劲诀 (Lv13).
+  慕容小梅 0 观音咒 (150), 1 金刚咒 (def +50% 5 rds), 2 苦口婆心 (confuse 5
+  rds), 3 还魂咒 (revive), 4 血魔噬主, 5 马师皇针灸, 6 御风行, 7 乌手术,
+  8 凝神归元 (heal 220), 9 净衣咒.
+- Good buys: 魔王甲 (Mp+250, 750 at 建业城药铺 / 钟山药房) = 8 剑气术.
+  GRS record: +0x12 buy price, +0x16 hp effect (items/throwables),
+  equipment +0x18 def, +0x19 atk, +0x1b speed (BBKRPGSimulator BaseGoods).
+- Enemies: 小偷袁 (ARS 20) 1500 HP hits ~250; 小雷公 (14) 800 HP; 参虚阁
+  wave 1 ARS 48/50/51, wave 2 52/53/54, wave 3 55/57/58 (700-1440 HP);
+  赤血 (18) 8000 HP atk 350 (meant to be lost). 霸王迷宫 randoms (恶猩猩 25,
+  毒蜘蛛 49, 护灯兽 10, 小蜈蚣 22, 小火怪 13) kill a Lv14 duo: **flee them**
+  (`play.FLEE=True`; 逃跑 worked every time).
+- Game over -> title. The title menu cursor remembers 再续前缘 after a load,
+  so `adv()`'s ENTER spam after a game over silently loads the last in-game
+  save (or starts a new game when the cursor is on 新的故事). Always check
+  `party()`/`mapid()` after a long auto walk.
+- 1-3-1 (忘忧村) tile 2 needs 217 once 216 is set ("先去看看小梅"); 原野 maze to
+  chapter 6: reach 2-50 with event 102 (2-46 tile 2 with 104), then tile 3.
+- The ch6 hub (6-1..6-7, flags 101-113) reaches 7-14 (建业城 first visit,
+  sets 218) via 6-1 t2, 6-3 t2, 6-1 t2, 6-4 t2, 6-2 t2, 6-7 t2, 6-1 t2, 6-3 t2 x2,
+  6-4 t2, 6-2 t2; 钟山 via 7-1 tile 2 (sets 105) -> 6-1 t2 -> 6-4 t2.
+- 1-7-1 box 21 (钱袋): choice 不给 = fight 3 游人 (1118); 奉还 = lose 250 money
+  (1117) and the 游人 ambush in 1-7-2 later (only while 221 is unset).
+- 8-9 霸王迷宫 tiles 1-13 have no script handlers; tile 11 -> 8-10, tile 14
+  (the 迷宫楼梯 object at (43,19), walk DOWN into it from (43,18)) -> 8-2.
 
 ## Game/script facts found in session 3
 
@@ -142,8 +194,8 @@ exactly; an undefined opcode stops the run with reason `illegal_opcode`.)
    data. Session 4 found the real cause upstream: problem 3 (the engine code
    was already corrupted by the OS file write at `deleteactor 2`), not the
    double level-up.
-3. **Flash program/erase addresses are shifted by +0x8000 (open, blocks the
-   playthrough).** `core/src/memory.rs`: `read_flash` rotates only the last
+3. **Flash program/erase addresses were shifted by +0x8000 (FIXED in commit
+   "core: flash writes use the same address map as reads"; verified session 5).** `core/src/memory.rs`: `read_flash` rotates only the last
    32 KiB (`addr >= FLASH_SIZE - 0x8000`), but `write_flash` applies
    `(addr + 0x8000) % FLASH_SIZE` to *every* byte-program and sector/block
    erase. The OS file system lives below the game (flash 0x5000-0xcfff, phys
@@ -245,6 +297,18 @@ exactly; an undefined opcode stops the run with reason `illegal_opcode`.)
 
 ## Tools (tools/play/)
 
+- Session 5 additions in play.py: `mwalk(goal, mask)` (maze solver with
+  story flags in the mask; goal must be a maze node, e.g. "6-13" not "8-11",
+  because script init code is not simulated), `send`, `pair(mei, yuan)` (trio
+  battles through `duo_beam`'s mei_cands), `MEI_MAG(idx, side)`, `use_item`,
+  `topup`, `safe_adj`. `party()` skips non-party `75 6e 1c 00` blocks.
+  `fight()` now also answers a battle wheel shown while the CPU is outside the
+  OS key wait (2nd member's wheel at pc 227d3c), which used to hang auto
+  fights. For chained enterfights use a staged value in `duo_beam` (bonus per
+  wave reached; otherwise finishing a wave looks like a loss). `duo_beam`
+  returns None without replaying when no child survives: load the last kept
+  `bmN` snapshot (`snapshot.list`) and continue from there.
+
 - Session 4: `duo_beam` declared a win when the hero had died (a game over
   also zeroes the monster records); it now needs a living party member.
   `poll()` keeps watchpoint hits (`watch.add log=True`) in `play.WATCH_LOG`
@@ -302,3 +366,8 @@ Session 4: the level-up popup `<name> / 练成 / <magic>` draws the name and
 magic through draw-string but `练成` is a bitmap (not in text.log); the
 存储进度 screen (title in a decorative font, slots `空档案`) was seen only in
 a scratch emulator without hooks.
+Session 5 (with hooks): the 存储进度/读入进度 slot lists draw each slot as the
+saved scene name (e.g. `建业城`, via setscenename text) or `空档案`; saving
+draws ` 档案储存中…`; the screen titles 存储进度/读入进度 are bitmaps (not in
+text.log). The title menu 新的故事/再续前缘 and `完美版 v1.0` are bitmaps too.
+Choice boxes `不给/奉还` (1-7-1 钱袋) are script rows.
