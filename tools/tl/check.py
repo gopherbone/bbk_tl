@@ -1,4 +1,4 @@
-"""Check translation part files: python3 tools/tl/check.py translations/parts/x.jsonl [...]"""
+"""Check translation part files: python3 tools/tl/check.py [--game fmj] translations/parts/x.jsonl [...]"""
 import sys
 from common import rows, glossary, load_part, problems, warnings
 

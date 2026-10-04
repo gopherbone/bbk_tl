@@ -1,15 +1,16 @@
 """Two-slot save/load check on a fresh game (same inputs on bbkemu and gam4980)."""
 import sys
-sys.path.insert(0, "bbkemu/cli/py"); sys.path.insert(0, "tools"); sys.path.insert(0, "tools/play")
+sys.path.insert(0, "."); sys.path.insert(0, "bbkemu/cli/py"); sys.path.insert(0, "tools"); sys.path.insert(0, "tools/play")
 import menus
+from bbkrpg import games
 
-GAM = "gam4980/retroarch/downloads/bbk/伏魔记.gam"
+GAM = games.from_argv().gam
 
 
 class BE:          # bbkemu adapter
     def __init__(self):
         from bbkemu import BBKEmu
-        self.e = BBKEmu(); self.e.load_gam(GAM, rom_dir="gam4980/retroarch/system/gam4980")
+        self.e = BBKEmu(); self.e.load_gam(GAM, rom_dir=games.ROMS)
     def run(self, n): self.e.run_frames(n)
     def tap(self, k, hold=2, wait=30): self.e.tap(k, hold=hold, wait=wait)
     def ram(self, a, n): return self.e.read(a, n)

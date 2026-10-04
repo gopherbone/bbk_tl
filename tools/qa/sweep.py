@@ -1,20 +1,21 @@
 """Gallery sweep: show every script row of the English build and check it.
 
-  python3 tools/qa/sweep.py [--batch 40] [--kinds say,message,choice,menu] [--only N]
+  python3 tools/qa/sweep.py [--game fmj] [--batch 40] [--kinds say,message,choice,menu] [--only N]
 For each batch of row ids: build a gallery .gam, play it (ENTER through every
 page), log what the English renderer drew (EnHooks), and check that each
 expected page/message/choice text was drawn and that no CJK text appeared.
-Writes work/qa/sweep/batch_NN_sheet.png and work/qa/sweep/report.json.
+Writes <qa>/sweep/batch_NN_sheet.png and <qa>/sweep/report.json (qa dir from
+the game profile, work/qa for fmj).
 """
 import argparse, json, os, re, sys
 sys.path.insert(0, "."); sys.path.insert(0, "bbkemu/cli/py"); sys.path.insert(0, "tools/font")
-from bbkrpg import build, engine_text, fit
+from bbkrpg import build, engine_text, fit, games
 from bbkemu import BBKEmu, EnHooks
 from sheet import sheet
 
-GAM = "gam4980/retroarch/downloads/bbk/伏魔记.gam"
-ROMS = "gam4980/retroarch/system/gam4980"
-OUT = "work/qa/sweep"
+GAME = games.from_argv()
+ROMS = games.ROMS
+OUT = f"{GAME.qa}/sweep"
 CJK = re.compile(r"[　-鿿＀-￯]")
 
 ap = argparse.ArgumentParser()
@@ -24,8 +25,8 @@ ap.add_argument("--only", type=int)
 a = ap.parse_args()
 os.makedirs(OUT, exist_ok=True)
 
-rows = [json.loads(l) for l in open("work/fmj.strings.jsonl")] + engine_text.export()
-en = {d["id"]: d["en"] for d in map(json.loads, open("translations/fmj.en.jsonl"))}
+rows = [json.loads(l) for l in open(GAME.strings)] + engine_text.export(GAME.engine)
+en = {d["id"]: d["en"] for d in map(json.loads, open(GAME.merged))}
 for r in rows:
     r["en"] = en.get(r["id"], "")
 kinds = set(a.kinds.split(","))
@@ -50,13 +51,13 @@ def expected(rid):
     return [r["en"]], r["kind"]
 
 
-orig = open(GAM, "rb").read()
+orig = GAME.read_gam()
 report = json.load(open(f"{OUT}/report.json")) if os.path.exists(f"{OUT}/report.json") else {}
 batches = [ids[i:i + a.batch] for i in range(0, len(ids), a.batch)]
 for bn, batch in enumerate(batches):
     if a.only is not None and bn != a.only:
         continue
-    out, info, probs = build.build(orig, rows, gallery=batch)
+    out, info, probs = build.build(orig, rows, gallery=batch, game=GAME)
     assert not probs, probs
     path = f"{OUT}/batch_{bn:02d}.gam"
     open(path, "wb").write(out)

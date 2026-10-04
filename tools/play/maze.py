@@ -10,7 +10,9 @@ import os, re, sys
 from collections import deque
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-GUT = os.path.join(ROOT, "work/fmj_gut")
+sys.path.insert(0, ROOT)
+from bbkrpg import games  # noqa: E402
+GUT = games.from_argv().path("gut")
 
 
 def parse(key):

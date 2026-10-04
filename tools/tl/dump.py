@@ -1,6 +1,6 @@
 """Print rows to translate, in story order, with context.
 
-  python3 tools/tl/dump.py --chapters 2,3        script rows of those chapters (key 1-<chapter>-n)
+  python3 tools/tl/dump.py [--game fmj] --chapters 2,3   script rows of those chapters (key 1-<chapter>-n)
   python3 tools/tl/dump.py --kinds grs.desc,mrs.desc
 """
 import argparse

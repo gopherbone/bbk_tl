@@ -1,14 +1,18 @@
-"""Shared helpers for the translation workflow."""
+"""Shared helpers for the translation workflow.
+
+Every tl script takes `--game KEY` (or BBK_GAME=KEY); the default is fmj.
+"""
 import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
-from bbkrpg import fit, font_sans  # noqa: E402
+from bbkrpg import fit, font_sans, games  # noqa: E402
 
-STRINGS = os.path.join(ROOT, "work", "fmj.strings.jsonl")
-GLOSSARY = os.path.join(ROOT, "docs", "glossary.jsonl")
-PARTS = os.path.join(ROOT, "translations", "parts")
-MERGED = os.path.join(ROOT, "translations", "fmj.en.jsonl")
+GAME = games.from_argv()
+STRINGS = GAME.path("strings")
+GLOSSARY = GAME.path("glossary")
+PARTS = GAME.path("parts")
+MERGED = GAME.path("merged")
 
 
 def rows():

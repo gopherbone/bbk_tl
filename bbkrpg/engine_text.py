@@ -9,7 +9,8 @@ byte layout, so translations go in as renderer tokens (fontpatch):
     so the slot keeps its original pixel width;
   * a NUL-terminated string -> plain ASCII when it fits the original bytes,
     else a token + NUL.
-Offsets are for engine build c81b80 (伏魔记 Ver1.3); `apply` checks the
+Offsets are per engine build: FMJ is c81b80 (伏魔记 Ver1.3), JY is fcef8d9af2
+(金庸群侠传). bbkrpg.games picks the table for a game; `apply` checks the
 original bytes before writing.
 """
 
@@ -17,8 +18,10 @@ from __future__ import annotations
 
 from . import fontpatch
 
+Entry = tuple[int, str, list[int] | None]
+
 # (gam offset, zh, packed item byte widths or None for a C string)
-ENTRIES: list[tuple[int, str, list[int] | None]] = [
+FMJ: list[Entry] = [
     (0x0247E, "空档案", None),
     (0x07B6F, "错误指令...", None),
     (0x07B7B, "已满载！", None),
@@ -84,13 +87,19 @@ ENTRIES: list[tuple[int, str, list[int] | None]] = [
     (0x3B45E, "金钱不足！", None),
     (0x3B469, "已满载！", None),
 ]
+ENTRIES = FMJ
+
+# 金庸群侠传 has the same strings at the same offsets, except three battle
+# strings that sit 0x50 later (its battle segment is laid out differently).
+_JY_MOVED = {0x1F8A0: 0x1F8F0, 0x1F8AA: 0x1F8FA, 0x1F8E4: 0x1F934}
+JY: list[Entry] = [(_JY_MOVED.get(off, off), zh, items) for off, zh, items in FMJ]
 
 FILLER = b"\xfc\x80"
 RESERVED_SHORT = 128          # bank ids 0..127 are for 2-byte (FD) slots
 
 
-def _rows():
-    for off, zh, items in ENTRIES:
+def _rows(entries: list[Entry] = FMJ):
+    for off, zh, items in entries:
         if items is None:
             yield f"ENG/{off:05x}", off, zh, None
         else:
@@ -101,9 +110,9 @@ def _rows():
                 pos += w
 
 
-def export() -> list[dict]:
+def export(entries: list[Entry] = FMJ) -> list[dict]:
     out = []
-    for rid, _, zh, slot in _rows():
+    for rid, _, zh, slot in _rows(entries):
         limits = {"max_px": slot * 8} if slot else {"max_bytes": None}
         out.append({"id": rid, "kind": "engine", "zh": zh, "en": "", "ctx": {}, "limits": limits,
                     "status": "todo", "note": ""})
@@ -128,14 +137,15 @@ def inline_token(bank: list[bytes], text: bytes, width: int) -> bytes:
     return bytes([0xFE, 0x80 | i >> 7, 0xFE, 0x80 | i & 0x7F]) + FILLER * ((width - 4) // 2)
 
 
-def apply(gam: bytes, rows: list[dict], bank: list[bytes]) -> tuple[bytes, list[str]]:
+def apply(gam: bytes, rows: list[dict], bank: list[bytes],
+          entries: list[Entry] = FMJ) -> tuple[bytes, list[str]]:
     """Write translated engine strings into the .gam's engine code."""
     if len(bank) < RESERVED_SHORT:
         bank.extend([b""] * (RESERVED_SHORT - len(bank)))
     en = {r["id"]: r["en"] for r in rows if r.get("en") and r["id"].startswith("ENG/")}
     out = bytearray(gam)
     problems = []
-    for rid, off, zh, slot in _rows():
+    for rid, off, zh, slot in _rows(entries):
         orig = zh.encode("gb2312")
         if bytes(out[off:off + len(orig)]) != orig and rid in en:
             problems.append(f"{rid}: original bytes not found (different engine build?)")

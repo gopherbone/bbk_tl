@@ -1,8 +1,10 @@
 """Persistent Python namespace holding a live bbkemu session.
 
-    python3 tools/play/daemon.py &            # starts, listens on work/playthrough/daemon.sock
-    python3 tools/play/run.py 'print(e.call("info"))'   # exec code in the namespace
-    python3 tools/play/run.py -f snippet.py
+    python3 tools/play/daemon.py [--game fmj] &   # listens on <playthrough>/daemon.sock
+    python3 tools/play/run.py [--game fmj] 'print(e.call("info"))'   # exec code in the namespace
+    python3 tools/play/run.py [--game fmj] -f snippet.py
+
+<playthrough> is the game profile's directory (work/playthrough for fmj).
 
 The namespace starts with `from play import *` (tools/play/play.py).
 Code is exec'd; stdout/stderr are captured and returned.
@@ -10,8 +12,13 @@ Code is exec'd; stdout/stderr are captured and returned.
 import contextlib, io, os, socket, sys, traceback
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-SOCK = os.path.join(ROOT, "work", "playthrough", "daemon.sock")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+from bbkrpg import games  # noqa: E402
+GAME = games.from_argv()
+os.environ["BBK_GAME"] = GAME.key      # play.py (and its reloads) read it
+os.makedirs(GAME.path("playthrough"), exist_ok=True)
+SOCK = os.path.join(GAME.path("playthrough"), "daemon.sock")
 os.chdir(ROOT)
 
 ns = {"__name__": "__play__"}

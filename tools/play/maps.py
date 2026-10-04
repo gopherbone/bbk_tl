@@ -1,4 +1,5 @@
-"""伏魔记 MAP resources: walkability + tile events, and BFS path finding.
+"""MAP resources of the current game (BBK_GAME, default fmj): walkability +
+tile events, and BFS path finding.
 
 Map resource (BBKRPGSimulator ResMap): [0]=type [1]=index [2]=til index
 [3..] name (GB2312, NUL), [0x10]=width [0x11]=height, then w*h 2-byte cells:
@@ -10,7 +11,7 @@ from collections import deque
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.insert(0, ROOT)
-from bbkrpg import lib as libmod, gam as gammod  # noqa: E402
+from bbkrpg import games, lib as libmod, gam as gammod  # noqa: E402
 
 _LIB = None
 
@@ -18,7 +19,7 @@ _LIB = None
 def lib():
     global _LIB
     if _LIB is None:
-        data = open(os.path.join(ROOT, "gam4980/retroarch/downloads/bbk/伏魔记.gam"), "rb").read()
+        data = games.get().read_gam()
         raw, _ = gammod.split(data)
         _LIB = libmod.parse(raw)
     return _LIB

@@ -1,4 +1,6 @@
-"""Helpers for playing 伏魔记 in bbkemu while recording a route.
+"""Helpers for playing a game in bbkemu while recording a route.
+
+The game is BBK_GAME (default fmj); the daemon sets it from `--game`.
 
 Used inside the daemon namespace (tools/play/daemon.py) or directly:
     from play import *; start()
@@ -7,14 +9,18 @@ import json, os, sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.insert(0, os.path.join(ROOT, "bbkemu", "cli", "py"))
+sys.path.insert(0, ROOT)
 from bbkemu import BBKEmu, Hooks  # noqa: E402
+from bbkrpg import games  # noqa: E402
 
-GAM = os.path.join(ROOT, "gam4980/retroarch/downloads/bbk/伏魔记.gam")
-ROMS = os.path.join(ROOT, "gam4980/retroarch/system/gam4980")
-ROUTE = os.path.join(ROOT, "routes/fmj.agent.route.jsonl")
-SEEN = os.path.join(ROOT, "work/playthrough/seen.json")
-SHOTS = os.path.join(ROOT, "work/playthrough/shots")
-STRINGS = os.path.join(ROOT, "work/fmj.strings.jsonl")
+GAME = games.get()
+GAM = GAME.path("gam")
+ROMS = GAME.path("roms")
+ROUTE = GAME.path("route")
+SEEN = os.path.join(GAME.path("playthrough"), "seen.json")
+SHOTS = os.path.join(GAME.path("playthrough"), "shots")
+os.makedirs(SHOTS, exist_ok=True)
+STRINGS = GAME.path("strings")
 # The stock bbkemu hangs at frame ~3540 (RTC alarm IRQ storm: IRQ entry does not
 # set the I flag), and load_gam clobbers gam 0x30f8..0x30ff (engine code) with a
 # save-area marker (fixed in bbkemu/core since commit "core: fix IRQ I flag...").
@@ -420,7 +426,7 @@ def open_box(x, y, quiet=False):
 
 # --- scripts -------------------------------------------------------------------
 import re as _re
-GUT_DIR = os.path.join(ROOT, "work/fmj_gut")
+GUT_DIR = GAME.path("gut")
 
 
 def gut(key):

@@ -1,15 +1,14 @@
 """Build a gallery .gam for row ids and screenshot each line.
 
-  python3 tools/qa/gallery.py OUT_PREFIX id [id ...]     (uses work/fmj.strings.jsonl + --en file)
+  python3 tools/qa/gallery.py [--game fmj] OUT_PREFIX id [id ...]     (uses the game's strings + --en file)
 """
 import argparse, json, sys
 sys.path.insert(0, "."); sys.path.insert(0, "bbkemu/cli/py"); sys.path.insert(0, "tools/font")
-from bbkrpg import build, engine_text
+from bbkrpg import build, engine_text, games
 from bbkemu import BBKEmu
 from sheet import sheet
 
-GAM = "gam4980/retroarch/downloads/bbk/伏魔记.gam"
-ROMS = "gam4980/retroarch/system/gam4980"
+ROMS = games.ROMS
 
 
 def shots(gam_path, n, prefix, wait=90):
@@ -43,17 +42,18 @@ def shots(gam_path, n, prefix, wait=90):
 
 
 if __name__ == "__main__":
+    game = games.from_argv()
     ap = argparse.ArgumentParser()
     ap.add_argument("prefix"); ap.add_argument("ids", nargs="+")
     ap.add_argument("--en", help="JSON {id: english}")
     ap.add_argument("--shots", type=int, default=0)
     a = ap.parse_args()
-    rows = [json.loads(l) for l in open("work/fmj.strings.jsonl")] + engine_text.export()
+    rows = [json.loads(l) for l in open(game.strings)] + engine_text.export(game.engine)
     en = json.load(open(a.en)) if a.en else {}
     for r in rows:
         if r["id"] in en:
             r["en"] = en[r["id"]]
-    out, info, problems = build.build(open(GAM, "rb").read(), rows, gallery=a.ids)
+    out, info, problems = build.build(game.read_gam(), rows, gallery=a.ids, game=game)
     assert not problems, problems
     open(a.prefix + ".gam", "wb").write(out)
     paths = shots(a.prefix + ".gam", a.shots or len(a.ids) + 2, a.prefix)

@@ -100,11 +100,12 @@ class EngineText(unittest.TestCase):
 
     @unittest.skipUnless(os.path.exists(GAM), "game set not present")
     def test_original_bytes_present(self):
-        from bbkrpg import engine_text
-        data = open(GAM, "rb").read()
-        for off, zh, _ in engine_text.ENTRIES:
-            raw = zh.encode("gb2312")
-            self.assertEqual(data[off:off + len(raw)], raw, hex(off))
+        from bbkrpg import games
+        for g in games.GAMES.values():
+            data = g.read_gam()
+            for off, zh, _ in g.engine:
+                raw = zh.encode("gb2312")
+                self.assertEqual(data[off:off + len(raw)], raw, f"{g.key} {off:#x}")
 
 
 class Bps(unittest.TestCase):

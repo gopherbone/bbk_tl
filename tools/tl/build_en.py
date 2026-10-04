@@ -1,18 +1,19 @@
 """Merge translation parts and build the English .gam.
 
-  python3 tools/tl/build_en.py [--out work/fmj_en.gam]
-Writes translations/fmj.en.jsonl (merged id -> en) and reports coverage.
+  python3 tools/tl/build_en.py [--game fmj] [--out work/fmj_en.gam]
+Writes the game's merged table (translations/<key>.en.jsonl, id -> en) and
+reports coverage.
 """
 import argparse, glob, json, os, sys
-from common import ROOT, PARTS, MERGED, rows, load_part, problems
+from common import ROOT, GAME, PARTS, MERGED, rows, load_part, problems
 sys.path.insert(0, ROOT)
 from bbkrpg import build, engine_text
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--out", default=os.path.join(ROOT, "work", "fmj_en.gam"))
+ap.add_argument("--out", default=GAME.path("en_gam"))
 a = ap.parse_args()
 
-table = rows() + engine_text.export()
+table = rows() + engine_text.export(GAME.engine)
 by_id = {r["id"]: r for r in table}
 merged = {}
 src = {}
@@ -38,7 +39,7 @@ kinds = {}
 for r in todo:
     kinds[r["kind"]] = kinds.get(r["kind"], 0) + 1
 print(f"translated {len(table) - len(todo)}/{len(table)}; missing by kind: {kinds}")
-out, info, probs = build.build(open(os.path.join(ROOT, "gam4980/retroarch/downloads/bbk/伏魔记.gam"), "rb").read(), table)
+out, info, probs = build.build(GAME.read_gam(), table, game=GAME)
 for p in probs:
     print("BUILD", p)
 open(a.out, "wb").write(out)
