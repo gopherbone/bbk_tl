@@ -168,6 +168,36 @@ struct Snap {
     frame_cycles: u32,
     instructions: u64,
     held: Option<BbkKey>,
+    /// recorded route length when the snapshot was taken
+    rec_len: Option<usize>,
+}
+
+/// route.record: the inputs actually applied, as a bbkplay route. Loading a
+/// snapshot or rewinding truncates it, so it always describes one straight
+/// path from boot to the current state.
+struct Recorder {
+    path: String,
+    header: String,
+    events: Vec<route::Event>,
+}
+
+impl Recorder {
+    fn push(&mut self, e: route::Event) {
+        use std::io::Write;
+        if let Ok(mut f) = std::fs::OpenOptions::new().append(true).open(&self.path) {
+            let _ = writeln!(f, "{}", route::to_line(&e));
+        }
+        self.events.push(e);
+    }
+
+    fn rewrite(&self) {
+        let mut s = self.header.clone() + "\n";
+        for e in &self.events {
+            s += &route::to_line(e);
+            s.push('\n');
+        }
+        let _ = std::fs::write(&self.path, s);
+    }
 }
 
 #[derive(Clone, Copy)]
@@ -193,6 +223,7 @@ pub struct Session {
     schedule: BTreeMap<u64, Vec<InputEv>>,
     /// route events from input.replay, applied exactly as bbkplay applies them
     replay: BTreeMap<u64, Vec<route::Event>>,
+    rec: Option<Recorder>,
     breaks: Vec<Break>,
     watches: Vec<Watch>,
     next_id: u64,
@@ -218,6 +249,7 @@ impl Session {
             held: None,
             schedule: BTreeMap::new(),
             replay: BTreeMap::new(),
+            rec: None,
             breaks: Vec::new(),
             watches: Vec::new(),
             next_id: 1,
@@ -322,6 +354,22 @@ impl Session {
             "input.tap" => self.input_tap(p),
             "input.script" => self.input_script(p),
             "input.replay" => self.input_replay(p),
+            "route.record" => self.route_record(p),
+            "route.mark" => self.route_mark(p),
+            "route.stop" => {
+                let frame = self.emu()?.frame_count();
+                match self.rec.take() {
+                    Some(mut r) => {
+                        r.push(route::Event { frame, action: route::Action::End });
+                        Ok(json!({"path": r.path, "events": r.events.len(), "frame": frame}))
+                    }
+                    None => Err("not recording".into()),
+                }
+            }
+            "route.status" => Ok(match &self.rec {
+                Some(r) => json!({"recording": true, "path": r.path, "events": r.events.len()}),
+                None => json!({"recording": false}),
+            }),
             "screen.capture" => self.screen_capture(p),
             "snapshot.save" => self.snapshot_save(p),
             "snapshot.load" => self.snapshot_load(p),
@@ -411,6 +459,7 @@ impl Session {
         self.held = None;
         self.schedule.clear();
         self.replay.clear();
+        self.rec = None;
         self.breaks.clear();
         self.watches.clear();
         self.break_log.clear();
@@ -482,6 +531,23 @@ impl Session {
     }
 
     fn on_frame_start(&mut self) {
+        self.on_frame_start_inputs_only();
+        let Some(emu) = self.emu.as_mut() else { return };
+        emu.begin_frame();
+        if self.rewind_cap > 0 {
+            let snap = Snap {
+                emu: emu.clone(), frame_cycles: 0, instructions: self.instructions, held: self.held,
+                rec_len: self.rec.as_ref().map(|r| r.events.len()),
+            };
+            self.rewind.push_back(snap);
+            while self.rewind.len() > self.rewind_cap {
+                self.rewind.pop_front();
+            }
+        }
+    }
+
+    /// Apply the route and input events due at the current frame start.
+    fn on_frame_start_inputs_only(&mut self) {
         let Some(emu) = self.emu.as_mut() else { return };
         let f = emu.frame_count();
         let due: Vec<u64> = self.replay.range(..=f).map(|(k, _)| *k).collect();
@@ -494,24 +560,21 @@ impl Session {
         let due: Vec<u64> = self.schedule.range(..=f).map(|(k, _)| *k).collect();
         for k in due {
             for ev in self.schedule.remove(&k).unwrap_or_default() {
-                match ev {
+                let action = match ev {
                     InputEv::Press(key) => {
-                        emu.key_down(key);
                         self.held = Some(key);
+                        route::Action::Down(key)
                     }
                     InputEv::Release => {
-                        emu.key_up();
                         self.held = None;
+                        route::Action::Up
                     }
+                };
+                let e = route::Event { frame: f, action };
+                route::apply(emu, &e);
+                if let Some(r) = self.rec.as_mut() {
+                    r.push(e);
                 }
-            }
-        }
-        emu.begin_frame();
-        if self.rewind_cap > 0 {
-            let snap = Snap { emu: emu.clone(), frame_cycles: 0, instructions: self.instructions, held: self.held };
-            self.rewind.push_back(snap);
-            while self.rewind.len() > self.rewind_cap {
-                self.rewind.pop_front();
             }
         }
     }
@@ -906,16 +969,74 @@ impl Session {
 
     // -------------------------------------------------------------- input --
 
+    /// Frame at which an input given now takes effect (inputs apply at frame starts).
+    fn input_frame(&self) -> R<u64> {
+        Ok(self.emu()?.frame_count() + if self.frame_cycles > 0 { 1 } else { 0 })
+    }
+
     fn press(&mut self, k: BbkKey) -> R<()> {
-        self.emu_mut()?.key_down(k);
-        self.held = Some(k);
+        let at = self.input_frame()?;
+        self.schedule.entry(at).or_default().push(InputEv::Press(k));
         Ok(())
     }
 
     fn release(&mut self) -> R<()> {
-        self.emu_mut()?.key_up();
-        self.held = None;
+        let at = self.input_frame()?;
+        self.schedule.entry(at).or_default().push(InputEv::Release);
         Ok(())
+    }
+
+    /// route.record: start recording inputs to `path`. If the file exists and
+    /// `resume` (default true), it is replayed first (only right after
+    /// load_gam) and recording continues after it.
+    fn route_record(&mut self, p: &Value) -> R<Value> {
+        let path = p_str(p, "path").ok_or("missing 'path'")?.to_string();
+        let header = route::header(&self.gam, self.emu()?.model().name);
+        let mut events = Vec::new();
+        if std::path::Path::new(&path).exists() && p_bool(p, "resume", true) {
+            if self.emu()?.frame_count() != 0 || self.instructions != 0 {
+                return Err("resuming a route needs a fresh load_gam".into());
+            }
+            let text = std::fs::read_to_string(&path).map_err(|e| format!("{path}: {e}"))?;
+            for (n, line) in text.lines().enumerate() {
+                if let Some((hash, _)) = route::parse_header(line) {
+                    if hash != route::gam_hash(&self.gam) {
+                        return Err(format!("{path} was recorded on a different .gam"));
+                    }
+                    continue;
+                }
+                if let Some(e) = route::parse_line(line).map_err(|e| format!("{path}:{}: {e}", n + 1))? {
+                    events.push(e);
+                }
+            }
+            // resume where the last session stopped (its End), then drop the End
+            let last = events.iter().map(|e| e.frame).max().unwrap_or(0);
+            events.retain(|e| e.action != route::Action::End);
+            for e in &events {
+                self.replay.entry(e.frame).or_default().push(e.clone());
+            }
+            self.rec = Some(Recorder { path, header, events });
+            self.rec.as_ref().unwrap().rewrite();
+            let n = self.rec.as_ref().unwrap().events.len();
+            let r = if last > 0 { self.run(Limit::Frames(last))? } else { json!({}) };
+            // events stamped with the last frame are still pending; apply them now
+            if self.frame_cycles == 0 {
+                self.on_frame_start_inputs_only();
+            }
+            return Ok(json!({"resumed": n, "frame": self.emu()?.frame_count(), "run": r}));
+        }
+        let rec = Recorder { path, header, events };
+        rec.rewrite();
+        self.rec = Some(rec);
+        Ok(json!({"recording": true, "frame": self.emu()?.frame_count()}))
+    }
+
+    fn route_mark(&mut self, p: &Value) -> R<Value> {
+        let text = p_str(p, "text").unwrap_or("mark").to_string();
+        let frame = self.input_frame()?;
+        let r = self.rec.as_mut().ok_or("not recording (route.record first)")?;
+        r.push(route::Event { frame, action: route::Action::Mark(text) });
+        Ok(json!({"frame": frame, "events": r.events.len()}))
     }
 
     /// Queue key events relative to the current frame. `steps` items:
@@ -987,6 +1108,11 @@ impl Session {
         let last = events.iter().map(|e| e.frame).max().unwrap_or(now);
         let n = events.len();
         for e in events {
+            if let Some(r) = self.rec.as_mut() {
+                if e.action != route::Action::End {
+                    r.push(e.clone());
+                }
+            }
             self.replay.entry(e.frame).or_default().push(e);
         }
         let until = p_num(p, "until_frame")?.unwrap_or(last);
@@ -1030,10 +1156,19 @@ impl Session {
     // ---------------------------------------------------------- snapshots --
 
     fn snap(&self) -> R<Snap> {
-        Ok(Snap { emu: self.emu()?.clone(), frame_cycles: self.frame_cycles, instructions: self.instructions, held: self.held })
+        Ok(Snap {
+            emu: self.emu()?.clone(), frame_cycles: self.frame_cycles, instructions: self.instructions,
+            held: self.held, rec_len: self.rec.as_ref().map(|r| r.events.len()),
+        })
     }
 
     fn restore(&mut self, s: Snap) {
+        if let (Some(r), Some(n)) = (self.rec.as_mut(), s.rec_len) {
+            if r.events.len() != n {
+                r.events.truncate(n);
+                r.rewrite();
+            }
+        }
         self.emu = Some(s.emu);
         self.frame_cycles = s.frame_cycles;
         self.instructions = s.instructions;

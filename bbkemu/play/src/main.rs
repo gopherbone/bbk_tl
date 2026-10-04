@@ -30,12 +30,15 @@ use winit::event_loop::{ActiveEventLoop, ControlFlow, EventLoop};
 use winit::keyboard::{KeyCode, PhysicalKey};
 use winit::window::{Window, WindowId};
 
-const USAGE: &str = "usage: bbkplay <game.gam> --roms <dir> --route <route.jsonl> [--model 4988|4980] [--scale N]";
+const USAGE: &str = "usage: bbkplay <game.gam> --roms <dir> [--route <route.jsonl> | --from <route.jsonl>] [--model 4988|4980] [--scale N] [--verify]\n  --route  record to this route (resumes it if it exists)\n  --from   replay this route first, then play without recording\n  neither  just play";
 
 struct Args {
     game: PathBuf,
     roms: PathBuf,
-    route: PathBuf,
+    /// route to record to (resumed if it exists)
+    route: Option<PathBuf>,
+    /// route to replay without recording
+    from: Option<PathBuf>,
     model: String,
     scale: u32,
     /// replay the route headless, print frame + screen hash, exit
@@ -45,11 +48,13 @@ struct Args {
 fn parse_args() -> Result<Args, String> {
     let mut it = std::env::args().skip(1);
     let (mut game, mut roms, mut route, mut model, mut scale) = (None, None, None, "4988".to_string(), 5);
+    let mut from = None;
     let mut verify = false;
     while let Some(a) = it.next() {
         match a.as_str() {
             "--roms" => roms = it.next().map(PathBuf::from),
             "--route" => route = it.next().map(PathBuf::from),
+            "--from" => from = it.next().map(PathBuf::from),
             "--model" => model = it.next().ok_or("--model needs a value")?,
             "--scale" => scale = it.next().and_then(|s| s.parse().ok()).ok_or("--scale needs a number")?,
             "--verify" => verify = true,
@@ -61,7 +66,8 @@ fn parse_args() -> Result<Args, String> {
     Ok(Args {
         game: game.ok_or(USAGE)?,
         roms: roms.ok_or(USAGE)?,
-        route: route.ok_or(USAGE)?,
+        route,
+        from,
         model,
         scale,
         verify,
@@ -123,7 +129,7 @@ fn map_key(code: KeyCode) -> Option<BbkKey> {
 struct App {
     emu: Emulator,
     scale: u32,
-    route: File,
+    route: Option<File>,
     marks: u32,
     fast: bool,
     window: Option<Rc<Window>>,
@@ -138,8 +144,10 @@ impl App {
         let e = Event { frame: self.emu.frame_count(), action };
         route::apply(&mut self.emu, &e);
         // written and flushed immediately, so a crash loses nothing
-        let _ = writeln!(self.route, "{}", route::to_line(&e));
-        let _ = self.route.flush();
+        if let Some(f) = self.route.as_mut() {
+            let _ = writeln!(f, "{}", route::to_line(&e));
+            let _ = f.flush();
+        }
     }
 
     fn draw(&mut self) -> Result<(), String> {
@@ -165,9 +173,10 @@ impl App {
         if let Some(w) = &self.window {
             let secs = self.emu.frame_count() / 60;
             w.set_title(&format!(
-                "bbkplay  {}:{:02}:{:02}  frame {}{}  (recording)",
+                "bbkplay  {}:{:02}:{:02}  frame {}{}  {}",
                 secs / 3600, secs / 60 % 60, secs % 60, self.emu.frame_count(),
-                if self.fast { "  FAST" } else { "" }
+                if self.fast { "  FAST" } else { "" },
+                if self.route.is_some() { "(recording)" } else { "(not recording)" }
             ));
         }
     }
@@ -306,21 +315,22 @@ fn main() {
 
     // Resume: replay the existing route, then keep appending to it.
     let mut marks = 0;
-    if args.route.exists() {
-        let f = File::open(&args.route).unwrap_or_else(|e| fail(format!("{}: {e}", args.route.display())));
+    let replay_path = args.from.clone().or_else(|| args.route.clone().filter(|p| p.exists()));
+    if let Some(rp) = replay_path {
+        let f = File::open(&rp).unwrap_or_else(|e| fail(format!("{}: {e}", rp.display())));
         let mut events = Vec::new();
         for (n, line) in BufReader::new(f).lines().enumerate() {
             let line = line.unwrap_or_default();
             if let Some((hash, _)) = route::parse_header(&line) {
                 if hash != route::gam_hash(&gam) {
-                    fail(format!("{} was recorded on a different .gam", args.route.display()));
+                    fail(format!("{} was recorded on a different .gam", rp.display()));
                 }
                 continue;
             }
             match route::parse_line(&line) {
                 Ok(Some(e)) => events.push(e),
                 Ok(None) => {}
-                Err(e) => fail(format!("{}:{}: {e}", args.route.display(), n + 1)),
+                Err(e) => fail(format!("{}:{}: {e}", rp.display(), n + 1)),
             }
         }
         marks = events.iter().filter(|e| matches!(e.action, Action::Mark(_))).count() as u32;
@@ -344,11 +354,11 @@ fn main() {
         }
         println!("resumed at frame {} in {:.1}s", emu.frame_count(), t0.elapsed().as_secs_f32());
     } else if args.verify {
-        fail(format!("{} does not exist", args.route.display()));
-    } else {
-        fs::write(&args.route, route::header(&gam, emu.model().name) + "\n")
-            .unwrap_or_else(|e| fail(format!("{}: {e}", args.route.display())));
-        println!("new route {}", args.route.display());
+        fail("--verify needs an existing --route or --from".into());
+    } else if let Some(rp) = &args.route {
+        fs::write(rp, route::header(&gam, emu.model().name) + "\n")
+            .unwrap_or_else(|e| fail(format!("{}: {e}", rp.display())));
+        println!("new route {}", rp.display());
     }
     if args.verify {
         let px = emu.render_lcd_buffer();
@@ -359,8 +369,12 @@ fn main() {
         println!("verify frame={} hash={h:016x}", emu.frame_count());
         return;
     }
-    let file = OpenOptions::new().append(true).open(&args.route)
-        .unwrap_or_else(|e| fail(format!("{}: {e}", args.route.display())));
+    let file = args.route.as_ref().map(|rp| {
+        OpenOptions::new().append(true).open(rp).unwrap_or_else(|e| fail(format!("{}: {e}", rp.display())))
+    });
+    if file.is_none() {
+        println!("not recording (pass --route to record)");
+    }
 
     println!("keys: arrows, Enter, Backspace = back/exit, Space; hold Tab = fast-forward;");
     println!("      F2 = drop a numbered marker (note what happened, e.g. a bug); F12 = screenshot; Esc = quit");
@@ -381,5 +395,7 @@ fn main() {
     if let Err(e) = el.run_app(&mut app) {
         fail(format!("{e}"));
     }
-    println!("route saved: {} (frame {})", args.route.display(), app.emu.frame_count());
+    if let Some(rp) = &args.route {
+        println!("route saved: {} (frame {})", rp.display(), app.emu.frame_count());
+    }
 }

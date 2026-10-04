@@ -1,4 +1,16 @@
-# Recording the playthrough route
+# Playing and recording routes
+
+Three ways to run `bbkplay`:
+
+```sh
+P=bbkemu/target/release/bbkplay; ROMS=gam4980/retroarch/system/gam4980
+$P <game.gam> --roms $ROMS                                # just play (any build)
+$P <game.gam> --roms $ROMS --from routes/fmj.agent.route.jsonl  # watch/continue the agent's route, unrecorded
+$P <game.gam> --roms $ROMS --route routes/mine.route.jsonl      # record (resumes if it exists)
+```
+
+A route only replays on the `.gam` it was recorded on; bbkplay refuses others.
+
 
 `bbkplay` is BBKEmu's desktop window running on the same core as `bbkemu`.
 It records every key press to a route file as you play, and `bbkemu`'s

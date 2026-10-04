@@ -103,6 +103,19 @@ Key names are BBKEmu's: `ENTER`, `EXIT`, `UP`, `DOWN`, `LEFT`, `RIGHT`,
 | `input.press` / `input.release` | `key` | holds until released |
 | `input.replay` | `path` (bbkplay route), `until_frame`, `run` (true) | `{events, last_frame, marks, run}`. Applies events exactly as bbkplay does; run it right after `load_gam` |
 
+### Route recording
+| cmd | params | result |
+|---|---|---|
+| `route.record` | `path`, `resume` (true) | starts recording every applied input as a bbkplay route. If `path` exists, it is first replayed up to where that session ended (fresh `load_gam` only), then recording continues |
+| `route.mark` | `text` | adds a note at the next frame start |
+| `route.status` | — | `{recording, path, events}` |
+| `route.stop` | — | writes the session's end marker |
+
+`snapshot.load` and `rewind.pop` truncate the recorded route back to the
+snapshot, so the route always describes one straight path from boot. That
+makes retries and save-scumming safe. `input.press`/`input.release` take
+effect at the next frame start, like every other input.
+
 A key is pressed once (`key_down`) and stays down until released, as in
 BBKEmu's frontend. It is not re-pressed every frame.
 
