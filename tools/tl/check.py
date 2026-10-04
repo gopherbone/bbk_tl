@@ -1,8 +1,9 @@
 """Check translation part files: python3 tools/tl/check.py [--game fmj] translations/parts/x.jsonl [...]"""
 import sys
-from common import rows, glossary, load_part, problems, warnings
+from common import GAME, rows, glossary, load_part, problems, warnings
+from bbkrpg import engine_text
 
-table = {r["id"]: r for r in rows()}
+table = {r["id"]: r for r in rows() + engine_text.export(GAME.engine)}
 gl = glossary()
 bad = 0
 for path in sys.argv[1:]:
@@ -11,7 +12,7 @@ for path in sys.argv[1:]:
         r = table.get(rid)
         if r is None:
             print(f"ERROR {rid}: no such row"); bad += 1; continue
-        for p in problems(r, en):
+        for p in [] if rid.startswith("ENG/") else problems(r, en):
             print(f"ERROR {rid}: {p}"); bad += 1
         for w in warnings(r, en, gl):
             print(f"warn  {rid}: {w}")

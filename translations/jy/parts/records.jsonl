@@ -1,0 +1,114 @@
+{"id": "GRS/6-1-1/desc", "en": "A plain linen headband.\nDEF +5"}
+{"id": "GRS/6-1-2/desc", "en": "A cotton cap.\nDEF +10"}
+{"id": "GRS/6-1-3/desc", "en": "A pearl hairpin. Good protection.\nDEF +20"}
+{"id": "GRS/6-1-4/desc", "en": "A green jade hairpin. Decent protection.\nDEF +30"}
+{"id": "GRS/6-1-5/desc", "en": "A hairpin carved like a phoenix head.\nDEF +40"}
+{"id": "GRS/6-1-6/desc", "en": "A gold hairpin with carved pearls.\nDEF +40, Max MP +10"}
+{"id": "GRS/6-1-7/desc", "en": "A solid gold hairpin. Basic protection.\nDEF +40, Max MP +20"}
+{"id": "GRS/6-1-8/desc", "en": "A steel wire hood that guards the face.\nDEF +40, Max MP +30"}
+{"id": "GRS/6-1-9/desc", "en": "A steel helmet. Sturdy, but stiff.\nDEF +40, Max MP +40"}
+{"id": "GRS/6-1-10/desc", "en": "A heavy gold helmet. Sturdy, but stiff.\nDEF +40, Max MP +50"}
+{"id": "GRS/6-1-11/desc", "en": "Blue Dragon Altar relic.\nSPI +30, Max MP +100\nResists Poison."}
+{"id": "GRS/6-2-1/desc", "en": "A hip-length tunic, common in the south.\nDEF +5"}
+{"id": "GRS/6-2-2/desc", "en": "A cloth robe lined with cotton. Fairly warm.\nDEF +10"}
+{"id": "GRS/6-2-3/desc", "en": "Rawhide, cloth and metal. Stops blades.\nDEF +20"}
+{"id": "GRS/6-2-4/desc", "en": "Padded and warm. A must for winter travel.\nDEF +40"}
+{"id": "GRS/6-2-5/desc", "en": "A knee-length satin robe.\nDEF +80"}
+{"id": "GRS/6-2-6/desc", "en": "Satin outside, fox fur inside. Warm and costly.\nDEF +120"}
+{"id": "GRS/6-2-7/desc", "en": "Said to be woven from the Mystic Sky's qi.\nDEF +150"}
+{"id": "GRS/6-2-8/desc", "en": "Said to make you as swift as a panther.\nDEF +180, SPI +5"}
+{"id": "GRS/6-2-9/desc", "en": "Light, soft gold silk that stops blades.\nDEF +200, SPI +10"}
+{"id": "GRS/6-2-10/desc", "en": "The kasaya handed down by Bodhidharma.\nDEF +200, SPI +20"}
+{"id": "GRS/6-3-1/desc", "en": "The simplest shoes.\nDEF +5"}
+{"id": "GRS/6-3-2/desc", "en": "Leather boots.\nDEF +10"}
+{"id": "GRS/6-3-3/desc", "en": "Boots for running fast.\nDEF +20"}
+{"id": "GRS/6-3-4/desc", "en": "Said to let you glide over water.\nDEF +30"}
+{"id": "GRS/6-3-5/desc", "en": "Said to let you move unseen, like a ghost.\nDEF +40"}
+{"id": "GRS/6-3-6/desc", "en": "Said to clear a thousand miles in a leap.\nDEF +40, Max MP +10"}
+{"id": "GRS/6-3-7/desc", "en": "Dragon-scale boots. Very protective.\nDEF +40, Max MP +20"}
+{"id": "GRS/6-3-8/desc", "en": "Phoenix-feather boots that build resistance.\nDEF +40, Max MP +30"}
+{"id": "GRS/6-3-9/desc", "en": "Run as fast as a flying horse.\nDEF +40, Max MP +40"}
+{"id": "GRS/6-3-10/desc", "en": "Legendary! ATK +10,\nDEF +40, Max MP +50\nResists Sleep."}
+{"id": "GRS/6-3-11/desc", "en": "Black Tortoise relic.\nSPI +30, Max MP +100\nResists Sleep."}
+{"id": "GRS/6-4-1/desc", "en": "An ordinary cape with no power.\nDEF +5"}
+{"id": "GRS/6-4-2/desc", "en": "A light cape that helps you focus.\nDEF +10"}
+{"id": "GRS/6-4-3/desc", "en": "It rumbles like thunder in the wind.\nDEF +20"}
+{"id": "GRS/6-4-4/desc", "en": "White as snow, light as a cloud.\nDEF +30"}
+{"id": "GRS/6-4-5/desc", "en": "Lifts the wearer's spirits.\nDEF +40"}
+{"id": "GRS/6-4-6/desc", "en": "It dazzles the enemy's eyes.\nDEF +40, Max MP +10"}
+{"id": "GRS/6-4-7/desc", "en": "Lets you move softly, without a sound.\nDEF +40, Max MP +20"}
+{"id": "GRS/6-4-8/desc", "en": "A mysterious treasure of great power.\nDEF +40, Max MP +30"}
+{"id": "GRS/6-4-9/desc", "en": "A coveted treasure that even ghosts fear.\nDEF +40, Max MP +40"}
+{"id": "GRS/6-4-10/desc", "en": "Grants uncanny power in the air.\nDEF +40, Max MP +50"}
+{"id": "GRS/6-4-11/desc", "en": "Vermilion Bird relic.\nSPI +30, Max MP +100\nResists Silence."}
+{"id": "GRS/6-5-1/desc", "en": "Basic gauntlets, heavy and weak.\nDEF +5"}
+{"id": "GRS/6-5-2/desc", "en": "Better gauntlets, with bursts of power.\nDEF +10"}
+{"id": "GRS/6-5-3/desc", "en": "Strong, high-grade gauntlets.\nDEF +20"}
+{"id": "GRS/6-5-4/desc", "en": "Gauntlets of power not to be scorned.\nDEF +30"}
+{"id": "GRS/6-5-5/desc", "en": "Gauntlets with a spirit. A fine treasure.\nDEF +40"}
+{"id": "GRS/6-5-6/desc", "en": "Strange powers, known only to users.\nDEF +40, Max MP +10"}
+{"id": "GRS/6-5-7/desc", "en": "Said to be Lord Guan's own. Mighty.\nDEF +40, Max MP +20"}
+{"id": "GRS/6-5-8/desc", "en": "Worn by celestial generals, not mortals.\nDEF +40, Max MP +30"}
+{"id": "GRS/6-5-9/desc", "en": "A purple phoenix spirit dwells within.\nDEF +40, Max MP +40"}
+{"id": "GRS/6-5-10/desc", "en": "The War God's own.\nDEF +40, Max MP +50\nResists Confuse."}
+{"id": "GRS/6-5-11/desc", "en": "White Tiger Altar relic.\nSPI +30, Max MP +100\nResists Confuse."}
+{"id": "GRS/6-6-1/desc", "en": "A simple metal ring.\nDEF +5"}
+{"id": "GRS/6-6-2/desc", "en": "A fine steel ring.\nDEF +10"}
+{"id": "GRS/6-6-3/desc", "en": "Forged of heaven and earth's essence.\nDEF +20"}
+{"id": "GRS/6-6-4/desc", "en": "Its maker tamed a dragon and shrank it.\nDEF +30"}
+{"id": "GRS/6-6-5/desc", "en": "Ancient cold jade, with wondrous power.\nDEF +40"}
+{"id": "GRS/6-6-6/desc", "en": "Made by immortals. Good protection.\nDEF +40, HP +1"}
+{"id": "GRS/6-6-7/desc", "en": "Violet mist essence. Calms the heart.\nDEF +40, HP +4"}
+{"id": "GRS/6-6-8/desc", "en": "Crystal-clear, from Tianshan's ancient snow.\nDEF +40, HP +7"}
+{"id": "GRS/6-6-9/desc", "en": "Reflects starlight to daunt foes.\nDEF +40, HP +11"}
+{"id": "GRS/6-6-10/desc", "en": "Forged of the polar aurora. It shimmers.\nDEF +40, HP +15"}
+{"id": "GRS/6-6-11/desc", "en": "A brass necklace. Very ordinary.\nDEF +5"}
+{"id": "GRS/6-6-12/desc", "en": "A fine chain of small gold links. Costly.\nDEF +10"}
+{"id": "GRS/6-6-13/desc", "en": "Bright as the moon. Looks noble.\nDEF +20"}
+{"id": "GRS/6-6-14/desc", "en": "Rumored to open the heavenly eye.\nDEF +30"}
+{"id": "GRS/6-6-15/desc", "en": "Of unknown make. Shines in seven colors.\nDEF +40"}
+{"id": "GRS/6-6-16/desc", "en": "Pure gold, dazzling.\nDEF +40, HP +1"}
+{"id": "GRS/6-6-17/desc", "en": "Charged by the stars in the sky.\nDEF +40, HP +4"}
+{"id": "GRS/6-6-18/desc", "en": "Fills you with righteous fervor.\nDEF +40, MP +7"}
+{"id": "GRS/6-6-19/desc", "en": "Its claw is said to be a dragon's.\nDEF +40, MP +11"}
+{"id": "GRS/6-6-20/desc", "en": "It has the power to beguile foes.\nDEF +40, MP +15"}
+{"id": "GRS/6-7-1/desc", "en": "A short sword for defense or parrying.\nATK +5"}
+{"id": "GRS/6-7-2/desc", "en": "A blunt iron sword, for practice only.\nATK +10"}
+{"id": "GRS/6-7-3/desc", "en": "Wrought iron. Wears out if overused.\nATK +20"}
+{"id": "GRS/6-7-4/desc", "en": "A mid-Tang masterwork of folded steel.\nATK +40"}
+{"id": "GRS/6-7-5/desc", "en": "Nickel steel, sharp and hard. Can bash too.\nATK +70"}
+{"id": "GRS/6-7-6/desc", "en": "A Longquan sword, not true dark iron.\nATK +110"}
+{"id": "GRS/6-7-7/desc", "en": "Zhang Sanfeng's steel sword. It breathes cold.\nATK +150"}
+{"id": "GRS/6-7-8/desc", "en": "A red-gold blade, 10 ft long. Takes training.\nATK +200, SPI +5"}
+{"id": "GRS/6-7-9/desc", "en": "One of Ou Yezi's five swords.\nATK +225, SPI +10"}
+{"id": "GRS/6-7-10/desc", "en": "Dark iron that cuts iron like mud. Hides a secret.\nATK +250, SPI +20"}
+{"id": "GRS/6-7-11/desc", "en": "Peerless under heaven.\nATK +250\nInflicts Silence."}
+{"id": "GRS/6-9-1/desc", "en": "HP +100"}
+{"id": "GRS/6-9-2/desc", "en": "HP +200"}
+{"id": "GRS/6-9-3/desc", "en": "HP +500"}
+{"id": "GRS/6-9-4/desc", "en": "HP +999"}
+{"id": "GRS/6-9-5/desc", "en": "MP +50"}
+{"id": "GRS/6-9-6/desc", "en": "MP +100"}
+{"id": "GRS/6-9-7/desc", "en": "MP +200"}
+{"id": "GRS/6-9-8/desc", "en": "MP +500"}
+{"id": "GRS/6-9-9/desc", "en": "MP +999"}
+{"id": "GRS/6-9-10/desc", "en": "HP +999, MP +999"}
+{"id": "GRS/6-11-1/desc", "en": "Max MP +100"}
+{"id": "GRS/6-13-1/desc", "en": "A mysterious stone. Takes you back to the last city in an instant."}
+{"id": "GRS/6-14-1/desc", "en": "The Capital to Xixia."}
+{"id": "GRS/6-14-2/desc", "en": "The Capital to Dali."}
+{"id": "GRS/6-14-3/desc", "en": "The Capital to Yangzhou."}
+{"id": "GRS/6-14-4/desc", "en": "Xixia to Dali."}
+{"id": "GRS/6-14-5/desc", "en": "Xixia to Yangzhou."}
+{"id": "GRS/6-14-6/desc", "en": "Xixia to the Capital."}
+{"id": "GRS/6-14-7/desc", "en": "Dali to Yangzhou."}
+{"id": "GRS/6-14-8/desc", "en": "Dali to the Capital."}
+{"id": "GRS/6-14-9/desc", "en": "Dali to Xixia."}
+{"id": "GRS/6-14-10/desc", "en": "Yangzhou to the Capital."}
+{"id": "GRS/6-14-11/desc", "en": "Yangzhou to Xixia."}
+{"id": "GRS/6-14-12/desc", "en": "Yangzhou to Dali."}
+{"id": "GRS/6-14-13/desc", "en": "A 1000-tael banknote. Sells at face value."}
+{"id": "GRS/6-14-14/desc", "en": "A 2000-tael banknote. Sells at face value."}
+{"id": "GRS/6-14-99/desc", "en": "Token of the Alliance Leader. One of a kind! Proof of rank only."}
+{"id": "MRS/4-2-1/desc", "en": "AGI +5%, 3 turns"}
+{"id": "MRS/4-2-2/desc", "en": "ATK, DEF +5%, 3 turns"}
