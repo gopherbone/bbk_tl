@@ -119,7 +119,7 @@ def parse(data: bytes) -> Lib:
         if items and end <= items[-1][0]:
             raise LibError(f"bank {b}: end offset {end:#x} before last resource")
         if not items:
-            end = BANK_HDR if end < BANK_HDR or end > BANK else end
+            end = BANK_HDR    # no indexed resources: keep the body verbatim as filler
         for i, (a, k) in enumerate(items):
             stop = items[i + 1][0] if i + 1 < len(items) else end
             res[k] = data[base + a: base + stop]
@@ -148,7 +148,8 @@ def pack(lib: Lib) -> bytes:
             body += lib.res[k]
         end = BANK_HDR + len(body)
         hdr = bytearray(header)
-        hdr[12], hdr[13] = end & 0xff, end >> 8
+        if keys:  # an empty bank keeps its header (and body, as filler) verbatim
+            hdr[12], hdr[13] = end & 0xff, end >> 8
         room = BANK - end
         fill = filler if filler is not None and len(filler) == room else b"\xff" * room
         out_banks.append(bytes(hdr) + bytes(body) + fill)

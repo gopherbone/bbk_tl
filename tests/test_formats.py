@@ -115,19 +115,53 @@ class Relocation(unittest.TestCase):
         self.assertTrue(any("non-ASCII" in e for e in errors))
 
 
-@unittest.skipUnless(os.path.isdir(ASSETS), "reference archives not cloned")
-class Gam(unittest.TestCase):
-    def test_find_embedded_archive(self):
-        raw = load("fmj.LIB")
-        fake = b"\x4c" * 0x1234 + raw + b"\xea" * 0x100   # code + archive + code
-        hits = gam.find(fake)
-        self.assertEqual(len(hits), 1)
-        self.assertEqual((hits[0].offset, hits[0].size, hits[0].name), (0x1234, len(raw), "伏魔记"))
-        blob, _ = gam.split(fake)
-        self.assertEqual(blob, raw)
-        self.assertEqual(gam.join(fake, raw), fake)
-        with self.assertRaises(lib.LibError):
-            gam.join(fake, raw + b"\xff" * lib.BANK)
+GAMES = os.path.join(os.path.dirname(__file__), "..", "gam4980", "retroarch", "downloads", "bbk")
+
+
+@unittest.skipUnless(os.path.isdir(GAMES), "gam4980 game set not present")
+class RealGames(unittest.TestCase):
+    def read(self, name):
+        with open(os.path.join(GAMES, name), "rb") as f:
+            return f.read()
+
+    def test_fmj_gam(self):
+        data = self.read("伏魔记.gam")
+        blob, h = gam.split(data)
+        self.assertEqual((h.offset, h.name, h.entry), (0x48000, "伏魔记", 0x5046))
+        L = lib.parse(blob)
+        self.assertEqual(lib.pack(L), blob)
+        self.assertEqual(gam.join(data, lib.pack(L)), data)
+        for k in L.keys_of(1):
+            g = gut.parse(L.res[k])
+            self.assertEqual(gut.asm(gut.disasm(g)), L.res[k], k)
+
+    def test_fmj_gam_grows(self):
+        data = self.read("伏魔记.gam")
+        L = lib.parse(gam.split(data)[0])
+        rows = strings.export(L)
+        for r in rows:
+            if r["kind"] == "say":
+                r["en"] = "The quick brown fox jumps over the lazy dog. " * 3
+        built, problems = strings.apply(L, rows)
+        self.assertEqual(problems, [])
+        out = gam.join(data, lib.pack(built))
+        self.assertGreater(len(out), len(data))
+        self.assertEqual(out[:0x48000], data[:0x48000])
+        again = lib.parse(gam.split(out)[0])
+        self.assertEqual(len(again.order), len(L.order))
+
+    def test_all_bbkrpg_archives_round_trip(self):
+        n = 0
+        for name in sorted(os.listdir(GAMES)):
+            data = self.read(name)
+            hits = gam.find(data)
+            if not hits:
+                continue
+            n += 1
+            with self.subTest(name):
+                blob = data[hits[0].offset:]
+                self.assertEqual(lib.pack(lib.parse(blob)), blob)
+        self.assertGreater(n, 90)
 
 
 if __name__ == "__main__":

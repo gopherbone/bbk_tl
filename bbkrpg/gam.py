@@ -1,9 +1,15 @@
-"""Locate a BBKRPG archive inside a .gam file.
+""".gam container: find, split out and replace the BBKRPG archive.
 
-Provisional until phase 1 recon on a real 伏魔记.gam: we assume the archive
-is stored raw and contiguous, and find it by its "LIB" signature plus a
-successful parse. Join only supports writing back an archive of the same
-size; growing the archive needs the .gam header fields mapped first.
+.gam header (BBKEmu docs/Game-File-Formats.md, checked on the 152-game set):
+  0x00  "GAM\\0", then game name (GB2312) from 0x06
+  0x40  u16 LE entry point (6502 address)
+  0x42  u32 LE data section offset
+
+In every BBKRPG game the data section is the archive ("LIB" + name), usually
+at 0x48000, and it runs to the end of the file. Nothing in the header records
+the archive size, so a larger archive is written by extending the file. A few
+fan games carry bytes after the archive's last bank; those are kept as the
+archive's tail.
 """
 
 from __future__ import annotations
@@ -13,59 +19,47 @@ from dataclasses import dataclass
 
 from . import lib as libmod
 
+DATA_OFFSET = 0x42
+
 
 @dataclass
 class Found:
     offset: int
     size: int
     name: str
-    engine_sha1: str      # hash of every byte outside the archive
+    entry: int
+    engine_sha1: str      # hash of the bytes before the archive, header excluded
 
 
-def _archive_size(data: bytes, off: int) -> int | None:
-    """Parse the archive's tables and return the end of its last bank."""
-    nbytes = data[off + 0x0c] | data[off + 0x0d] << 8
-    if nbytes == 0 or nbytes % 3 or nbytes > 0x1ff0:
-        return None
-    last = 0
-    for e in range(nbytes // 3):
-        p = data[off + 0x2000 + 3 * e: off + 0x2003 + 3 * e]
-        if len(p) < 3:
-            return None
-        last = max(last, p[0])
-    size = (last + 1) * libmod.BANK
-    return size if off + size <= len(data) else None
+def data_offset(data: bytes) -> int:
+    return int.from_bytes(data[DATA_OFFSET:DATA_OFFSET + 4], "little")
 
 
 def find(data: bytes) -> list[Found]:
-    out = []
-    pos = data.find(b"LIB")
-    while pos >= 0:
-        size = _archive_size(data, pos)
-        if size:
-            try:
-                L = libmod.parse(data[pos:pos + size])
-            except libmod.LibError:
-                L = None
-            if L is not None:
-                engine = data[:pos] + data[pos + size:]
-                out.append(Found(pos, size, L.name, hashlib.sha1(engine).hexdigest()))
-        pos = data.find(b"LIB", pos + 1)
-    return out
+    """The BBKRPG archive named by the header, if there is one."""
+    if data[:3] != b"GAM":
+        return []
+    off = data_offset(data)
+    if data[off:off + 3] != b"LIB":
+        return []
+    try:
+        L = libmod.parse(data[off:])
+    except libmod.LibError:
+        return []
+    entry = data[0x40] | data[0x41] << 8
+    return [Found(off, len(data) - off, L.name, entry,
+                  hashlib.sha1(data[0x46:off]).hexdigest())]
 
 
 def split(data: bytes) -> tuple[bytes, Found]:
     hits = find(data)
-    if len(hits) != 1:
-        raise libmod.LibError(f"expected one BBKRPG archive in the .gam, found {len(hits)}")
+    if not hits:
+        raise libmod.LibError("no BBKRPG archive at the .gam's data offset")
     h = hits[0]
-    return data[h.offset:h.offset + h.size], h
+    return data[h.offset:], h
 
 
 def join(data: bytes, new_lib: bytes) -> bytes:
+    """Replace the archive; the file grows or shrinks with it."""
     _, h = split(data)
-    if len(new_lib) != h.size:
-        raise libmod.LibError(
-            f"archive is {len(new_lib)} bytes, the .gam slot holds {h.size}; "
-            "resizing needs the .gam header mapped (phase 1)")
-    return data[:h.offset] + new_lib + data[h.offset + h.size:]
+    return data[:h.offset] + new_lib

@@ -43,6 +43,12 @@ jump still lands on the same instruction.
 
 ## Not done yet
 
-- `gam split/join` are provisional: the archive is found by signature, and join
-  only accepts a same-size archive until a real `.gam` is mapped (phase 1).
-- bbkemu-cli (phase 3) needs `伏魔记.gam` plus `8.BIN`/`E.BIN` dumps.
+- bbkemu-cli (phase 3).
+- 10 fan games have script variants the decoder rejects (e.g. 魔道传奇 leaves the
+  script length field at 0); 伏魔记 and 87 others decode cleanly.
+
+## Game set
+
+`gam4980/` (gitignored) holds the 152-game set and the `8.BIN`/`E.BIN` BIOS
+dumps; tests that need it skip when it is absent. `docs/recon.md` has the
+伏魔记.gam byte map and the engine-build groups.
