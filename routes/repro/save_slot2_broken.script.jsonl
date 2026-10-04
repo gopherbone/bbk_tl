@@ -1,0 +1,9 @@
+{"id": 1, "cmd": "load_gam", "params": {"path": "gam4980/retroarch/downloads/bbk/伏魔记.gam", "rom_dir": "gam4980/retroarch/system/gam4980"}}
+{"id": 2, "cmd": "mem.read", "params": {"phys": "0x3fc000", "len": 2}}
+{"id": 3, "cmd": "mem.write", "params": {"phys": "0x204000", "data": "a1a2"}}
+{"id": 4, "cmd": "mem.read", "params": {"phys": "0x3fc000", "len": 2}}
+{"id": 5, "cmd": "mem.write", "params": {"phys": "0x204000", "data": "ffff"}}
+{"id": 6, "cmd": "input.replay", "params": {"path": "routes/fmj.agent.route.jsonl", "until_frame": 920580}}
+{"id": 7, "cmd": "screen.capture", "params": {"path": "work/playthrough/shots/save_slot2_broken.png", "scale": 2}}
+{"id": 8, "cmd": "mem.read", "params": {"phys": "0x3fc000", "len": 32}}
+{"id": 9, "cmd": "mem.read", "params": {"phys": "0x204000", "len": 32}}

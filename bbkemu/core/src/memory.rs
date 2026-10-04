@@ -687,11 +687,13 @@ impl Memory {
     }
 }
 
-/// Index into `Memory::flash` for a flash address: the last 32 KiB (the save
-/// area) is stored rotated to the front; everything else is direct.
-fn flash_index(addr: u32) -> usize {
-    let size = FLASH_SIZE as u32;
-    (if addr >= size - 0x8000 { addr - (size - 0x8000) } else { addr }) as usize
+/// Index into `Memory::flash` for a flash address. Storage is the whole chip
+/// rotated by 32 KiB (the last 32 KiB, the save area, first), as in gam4980;
+/// it is a bijection, so no two addresses share a cell. (An earlier version
+/// rotated only the top 32 KiB and so aliased it onto flash 0x0000-0x7FFF,
+/// where the OS keeps its file tables: a second save file broke them.)
+pub fn flash_index(addr: u32) -> usize {
+    ((addr + 0x8000) % FLASH_SIZE as u32) as usize
 }
 
 impl Bus for Memory {

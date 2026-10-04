@@ -1076,6 +1076,12 @@ def party():
         # name block precedes: 75 6e 10 00 <name>
         j = m.rfind(bytes.fromhex("756e1000"), max(0, i - 0x20), i)
         name = m[j + 4:j + 0x10].split(b"\0")[0].decode("gb2312", "replace") if j >= 0 else "?"
+        if j < 0 and 0 < r[0] < 100 and 0 < w(6) < 10000 and w(8) <= w(6) and w(12) <= w(10):
+            # 3rd member re-created by createactor: the name block sits elsewhere
+            j = m.rfind(bytes.fromhex("756e1000"), max(0, i - 0x200), i)
+            name = m[j + 4:j + 0x10].split(b"\0")[0].decode("gb2312", "replace") if j >= 0 else "?"
+            if name not in ("袁萍芷",):
+                j = -1
         if j >= 0 and 0 < r[0] < 100 and 0 < w(6) < 10000 and w(8) <= w(6) and name.isprintable():
             out.append((name, {"hpmax": w(6), "hp": w(8), "mpmax": w(10), "mp": w(12), "atk": w(14), "def": w(16), "addr": hex(0x3000 + i)}))
         i = m.find(bytes.fromhex("756e1c00"), i + 4)
@@ -1156,9 +1162,19 @@ def act_as(keys, want, tries=4):
                 e.run_frames(30)
             else:
                 e.tap(k, hold=2, wait=26)
-        e.run_frames(20)
+        # the next member's wheel shows at once; if it does not, that member
+        # was skipped (asleep etc.) and the round is already running
+        for _ in range(10):
+            e.run_frames(5)
+            if wheel_shown():
+                break
         poll(True)
-        r = "wheel" if wheel_shown() else wait_wheel()
+        if wheel_shown():
+            r = "wheel"
+        else:
+            r = wait_wheel()
+            if r == "wheel":
+                r = "newround"
     return r
 
 
@@ -1171,6 +1187,8 @@ def duo_round(hero, mei, tag="dr"):
         r = act_as(hero, 1)
         if r == "wheel":
             r = act_as(mei, 0)
+        elif r == "newround":
+            r = "wheel"
     for _ in range(12):     # in-battle dialogue (enterfight events): ENTER through it
         if r not in ("msg", None) or not any(m[1] > 0 for m in mons_all()):
             break
@@ -1561,6 +1579,161 @@ def safe_adj(x, y, tries=40):
         if not party():
             return "dead"
     return False
+
+
+# --- session 6 -------------------------------------------------------------------
+
+def counter(tile, quiet=False):
+    """Walk up to an unwalkable map tile event (shop/inn counter), face it, ENTER."""
+    m = curmap()
+    for c in m.events().get(tile, []):
+        if goto_adj(*c, quiet=quiet) is True:
+            px, py = pos()
+            d = (c[0] - px, c[1] - py)
+            if d in _DIRS:
+                e.tap(_DIRS[d], hold=2, wait=8)
+                return press_enter(quiet)
+    return None
+
+
+def choose(i, quiet=False):
+    """At a script choice box: move to option i (0/1) and confirm, then advance."""
+    e.run_frames(30)
+    for _ in range(i):
+        e.tap("DOWN", hold=2, wait=30)
+    e.tap("ENTER", hold=2, wait=30)
+    return poll(quiet) + adv(quiet=quiet)
+
+
+def save_game(slot):
+    """Main menu 系统 -> 存储进度 -> slot (1-based). Returns the drawn texts."""
+    import menus
+    menus.main_menu_select(e, 3)
+    out = []
+    for k, w in (("ENTER", 30), ("DOWN", 30), ("ENTER", 60)):
+        e.tap(k, hold=2, wait=w)
+    out += [t for _, t in poll(True)]
+    for _ in range(slot - 1):
+        e.tap("DOWN", hold=2, wait=30)
+    e.tap("ENTER", hold=2, wait=200)
+    out += [t for _, t in poll(True)]
+    for _ in range(6):
+        if waitstate() == "idle":
+            break
+        e.tap("EXIT", hold=2, wait=30)
+    out += [t for _, t in poll(True)]
+    print("save:", out)
+    return out
+
+
+def equip_item(name, who=0):
+    """Map menu 物品/装备 `name` on party member `who`."""
+    import menus
+    menus.main_menu_select(e, 2)
+    tap("ENTER", hold=2, wait=30, quiet=True)
+    tap("DOWN", hold=2, wait=30, quiet=True)
+    tap("ENTER", hold=2, wait=40, quiet=True)
+    r = equip(name, who)
+    for _ in range(6):
+        if waitstate() == "idle":
+            break
+        e.tap("EXIT", hold=2, wait=30)
+    poll(True)
+    return r
+
+
+_GRSN = None
+
+
+def grs_names():
+    global _GRSN
+    if _GRSN is None:
+        _GRSN = {}
+        for k, r in ROWS.items():
+            if r["kind"] == "grs.name":
+                t, i = map(int, k.split("/")[1].split("-")[1:])
+                _GRSN[(t, i)] = r["zh"].strip()
+    return _GRSN
+
+
+def inv(addr=0x4a00, n=0x200):
+    """Inventory: (type, index, count) triples in a heap block (0x4a2d in session 6).
+    Finds the first triple after a zero run; returns {name: count}."""
+    m = e.read(addr, n)
+    i = 0
+    while i < n and m[i] == 0:
+        i += 1
+    names = grs_names()
+    out = {}
+    while i + 3 <= n and m[i] and (m[i], m[i + 1]) in names:
+        out[names[(m[i], m[i + 1])]] = m[i + 2]
+        i += 3
+    return out
+
+
+def _to_idle():
+    for _ in range(8):
+        if waitstate() == "idle":
+            return True
+        e.tap("EXIT", hold=2, wait=30)
+    return waitstate() == "idle"
+
+
+def open_items(kind="use"):
+    """Open the map menu 物品 list: kind 'use' (使用) or 'equip' (装备).
+    The submenu remembers its last choice and sometimes drops a key, so the
+    list is checked by the GRS type of the first drawn name (equipment 1-7)."""
+    import menus
+    rev = {v: k for k, v in grs_names().items()}
+    for attempt in range(4):
+        _to_idle()
+        menus.main_menu_select(e, 2)
+        tap("ENTER", hold=2, wait=40, quiet=True)
+        e.run_frames(20)
+        want_top = kind == "use"
+        for _ in range(3):      # 使用 (top) / 装备 (bottom): read the inverted row
+            px = menus.pixels(e)
+            top = menus.dark(px, 40, 75, 42, 56) > menus.dark(px, 40, 75, 58, 72)
+            if top == want_top:
+                break
+            e.tap("DOWN", hold=2, wait=30)
+        e.tap("ENTER", hold=2, wait=40)
+        e.run_frames(30)
+        poll(True)
+        e.tap("DOWN", hold=2, wait=30)
+        o = [t for _, t in poll(True)]
+        if not o:
+            e.tap("DOWN", hold=2, wait=30)
+            o = [t for _, t in poll(True)]
+        if o and o[0] in rev:
+            is_eq = rev[o[0]][0] <= 7
+            if is_eq == (kind == "equip"):
+                return True
+    return False
+
+
+def use_on(name, who=0, times=1):
+    """Map menu 物品/使用 `name` on party member `who` (RIGHT moves the target)."""
+    ok = open_items("use") and equip_list_goto(name)
+    if ok:
+        for _ in range(times):
+            e.run_frames(20)
+            e.tap("ENTER", hold=2, wait=40)
+            for _ in range(who):
+                e.tap("RIGHT", hold=2, wait=30)
+            e.tap("ENTER", hold=2, wait=40)
+            e.run_frames(20)
+            poll(True)
+    _to_idle()
+    poll(True)
+    return ok
+
+
+def equip_on(name, who=0):
+    ok = open_items("equip") and equip(name, who)
+    _to_idle()
+    poll(True)
+    return ok
 
 
 __all__ = [k for k in list(globals()) if not k.startswith("_") and k not in _PRIVATE]

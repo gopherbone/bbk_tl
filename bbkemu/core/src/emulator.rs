@@ -112,14 +112,12 @@ impl Emulator {
         self.cpu.reset();
         self.run_os_init();
 
-        // Load game into flash at 0x20D000
-        let flash_offset = 0xD000;
+        // Flash layout as gam4980's sys_load, by flash address (storage is
+        // rotated, see memory::flash_index): system and game headers at 0,
+        // the game at 0xD000 (phys 0x20D000), the OS file tables at 0x1000
+        // and at 0x8000 (A4988) / 0x7000 (A4980) with the save-area marker.
         let game_data = &gam.data;
-        let end = (flash_offset + game_data.len()).min(self.cpu.memory().flash.len());
-        self.cpu.memory_mut().flash[flash_offset..end]
-            .copy_from_slice(&game_data[..end - flash_offset]);
-
-        // Setup flash headers
+        let size = game_data.len();
         let sys_hdr = [
             0xC0u8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10,
             0x00, 0x2F,
@@ -128,15 +126,26 @@ impl Emulator {
         gam_hdr[0] = 0xD0;
         gam_hdr[1] = 0x00;
         gam_hdr[2..12].copy_from_slice(&gam.info);
-        let size = game_data.len();
         gam_hdr[12] = (size & 0xFF) as u8;
         gam_hdr[13] = ((size >> 8) & 0xFF) as u8;
         gam_hdr[14] = ((size >> 16) & 0xFF) as u8;
         gam_hdr[15] = 0x3D;
-
-        let flash_base = 0x8000;
-        self.cpu.memory_mut().flash[flash_base..flash_base + 16].copy_from_slice(&sys_hdr);
-        self.cpu.memory_mut().flash[flash_base + 16..flash_base + 32].copy_from_slice(&gam_hdr);
+        let save_base: u32 = if self.model.bank_sys_d == 0x0E88 { 0x8000 } else { 0x7000 };
+        {
+            let flash = &mut self.cpu.memory_mut().flash;
+            let mut put = |addr: u32, data: &[u8]| {
+                for (i, b) in data.iter().enumerate() {
+                    flash[crate::memory::flash_index(addr + i as u32)] = *b;
+                }
+            };
+            put(0x0000, &sys_hdr);
+            put(0x0010, &gam_hdr);
+            put(0xD000, game_data);
+            put(0x1000, &[0x01; 0x100]);
+            put(0x1000, &[0x04; 0x0C]);
+            put(save_base, &[0x01; 0x100]);
+            put(save_base + 0xF8, &[0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x03, 0x02]);
+        }
 
         // Setup bank mappings
         self.cpu.memory_mut().bank_switch.set(0x5, 0x20D);
@@ -149,22 +158,6 @@ impl Emulator {
         self.cpu.memory_mut().bank_switch.set(0xA, data_bank + 1);
         self.cpu.memory_mut().bank_switch.set(0xB, data_bank + 2);
         self.cpu.memory_mut().bank_switch.set(0xC, data_bank + 3);
-
-        // Setup save area (offset differs between models)
-        let save_base = if self.model.bank_sys_d == 0x0E88 {
-            0x8000 // A4988
-        } else {
-            0x7000 // A4980
-        };
-        // bbk_tl fix: the save-area marker at flash 0x100F8 (A4988) / 0xF0F8
-        // (A4980) lies inside any game larger than ~12 KiB (the game sits at
-        // flash 0xD000) and clobbered 8 bytes of 伏魔记's engine code. Only
-        // write it when it is outside the game image.
-        let marker = flash_base + save_base + 0xF8;
-        if marker + 8 <= flash_offset || marker >= flash_offset + game_data.len() {
-            self.cpu.memory_mut().flash[marker..marker + 8]
-                .copy_from_slice(&[0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x03, 0x02]);
-        }
 
         // Set system control
         self.cpu.memory_mut().write(0x2029, 0x0D);
@@ -189,15 +182,7 @@ impl Emulator {
         let bank5 = self.cpu.memory().bank_switch.banks[5];
         log::info!("Bank 5 mapped to: 0x{:04X}", bank5);
 
-        // Debug: check flash content at expected location
-        let flash_offset = 0xD000 + (gam.entry_point & 0x0FFF) as usize;
-        if flash_offset < self.cpu.memory().flash.len() {
-            log::info!(
-                "Flash[0x{:04X}] = 0x{:02X}",
-                flash_offset,
-                self.cpu.memory().flash[flash_offset]
-            );
-        }
+
 
         // Debug: check physical address translation
         let paddr = self.cpu.memory().bank_switch.translate(gam.entry_point);

@@ -1,14 +1,109 @@
 # 伏魔记 agent playthrough — notes
 
-Route: `routes/fmj.agent.route.jsonl` (stopped cleanly after session 5, ends
-at frame 894182, ~248 min game time; `bbkplay --verify` hash f6ae9da0eb91a8bf).
+Route: `routes/fmj.agent.route.jsonl` (stopped cleanly after session 6, ends
+at frame 1138670, ~316 min game time; `bbkplay --verify` hash be83610e8e8cb702).
 Coverage of the route (`tools/play/route_coverage.py` -> `route_seen.json`):
-269 / 632 `say` rows (42.6%), 285 gut rows. `seen.json` is cumulative over all
-attempts incl. rewound ones (also counts GRS/MRS names/descs).
+336 / 632 `say` rows (53.2%), 353 gut rows (session 5: 269 / 285). `seen.json` is cumulative
+over all attempts incl. rewound ones (also counts GRS/MRS names/descs).
 
 The three emulator bugs found in session 1 (IRQ I flag, save-marker overwrite,
 auto power-off) are fixed in the official `bbkemu/target/release/bbkemu`;
 `work/bbkemu_irqfix/` and `emu_fixes.patch` are obsolete.
+
+## Where we are (end of session 6)
+
+- Route ends in 摄魂阵 (script 1-9-13, map (3,9), tile (10,8)) on the free
+  map, right after the 8 怨妇幻妖 stone fights: 袁萍芷 rejoined (231, 232
+  set; 233 not). Party 柳清风 Lv16 (355 HP, 285 MP, atk 215), 慕容小梅 Lv13
+  (226/295), 袁萍芷 Lv11 (272/201). Money 3686. No in-game save is usable
+  (see the save bug below; slot 1 建业城 may still load).
+- **Blocker: 赤血 (ARS 18, 8000 HP, atk 350, def 150).** Stepping on any
+  tile-5 cell around the centre triggers it (L_0446); losing = `gameover`.
+  There is no exit from 摄魂阵 or 枯井迷宫 before it, and no random fights
+  inside to grind. Measured at Lv16: 剑气术 ~120-150 per cast, 天师符法
+  ~100 (13 MP), physical 0-5, poison ~40-60/round; 赤血 deals ~300/round
+  to the party (小梅 often dies in round 2). Not winnable as is.
+  **Next session**: rebuild the route (tools/play/rebuild.py) back to before
+  the well (frame ~921100, 老宅子 9-2, before box 2/3) or to 白水镇, grind
+  levels (枯井迷宫 randoms: 蝎子/公背婆/小蜈蚣/僵尸, auto-fight lost there
+  once, use duo_beam/heals) and buy gear (白水镇 武器店: 龙吟剑 atk+88 7500,
+  无影双剑 atk+60/def+36 7400; 杂货店 法帽, 莲花靴; 药店 魔王甲 750); sell
+  定神珠 (10000) only if MP regen is not needed. Then redo the 8 stones
+  (keep the `stones.py` approach) and 赤血. Or try a very long 赤血 beam
+  with 天师符法 + heals + 魔王甲.
+- After 赤血 (233): 9-1 镇长 (234) -> 9-14 -> north, chapter 10 南北村
+  (235-246: 周处庙, 南山 白虎 10000 HP, 北海 苍龙 14000 HP), 11 酆都
+  (白无常 6400, 真阎罗 16000), 14 陵墓/鹤鸣山 (天道 20000, 天师魂魄 22000),
+  endgame 2-32 摩天顶 (诛仙 18000, 无机 30000). The game expects ~Lv30+.
+
+## Session 6
+
+- **In-game saves: only ever one save file.** Emulator bug (found session 6):
+  `flash_index()` in `bbkemu/core/src/memory.rs` aliases the top 32 KiB of
+  flash (phys 0x3F8000-0x3FFFFF) onto array index 0x0000-0x7FFF, which is
+  also flash 0x0000-0x7FFF (phys 0x200000-0x207FFF). The OS writes the first
+  save file at flash 0x1FF000/0x1FD000 (index 0x7000/0x5000, unused: works);
+  a second file goes to 0x1FC000/0x1FB000 = index 0x4000/0x3000, which the
+  OS file-system bookkeeping sectors (flash 0x2000/0x4000/0xB000) share, so
+  the next bookkeeping erase wipes it. Symptom: slot name drawn as 12x 0xFF +
+  junk (`\xff...音乐开音乐关`), loading it = `RunErr:3`. The session-5 slot-2
+  save (霸王钟洞口) and the session-6 slot-3 save (老宅子) are both broken.
+  The game image is untouched (0 bytes differ). Repro:
+  `routes/repro/save_slot2_broken.script.jsonl` (part 1 instant: write phys
+  0x204000, read phys 0x3FC000). Fix candidate: identity `flash_index`.
+  Workaround: don't save in-game; retry from ancestor snapshots / rebuild.py.
+- The 系统 submenu and the main menu remember their last position, so
+  blind key sequences can pick 读入进度/结束游戏: `save_game()` is unsafe.
+- Game over in 枯井迷宫 (auto-fight vs 公背婆 groups) -> loaded slot 3 ->
+  RunErr:3. Recovered with `rebuild.py` (cut at frame 921300, entering the
+  well); the failed branch is kept as `work/playthrough/session6_gameover.route.jsonl`.
+- 摄魂阵 (1-9-13): 8 stones (boxes 1-8) = 怨妇幻妖1-8 (1560-2200 HP, strong
+  magic that hits both for ~200; 小梅 MP drained). Won by `duo_beam` with
+  hero 剑气术 / 缚龙索 (seal 5 rds) / 忘魂花 / attack and 小梅 attack /
+  观音咒 (self or hero); full heal (map 观音咒) and 魔王甲 between fights.
+  `to_wheel()` right after ENTER on a stone sees "idle" (the fight starts
+  ~100 frames later): wait for `mons_all()` first.
+- **duo_round misaligned actions when a member's turn is skipped** (asleep:
+  怨妇幻妖3/5/7 attacks carry ARS +4 AttackBuff 8 = 眠). The hero's keys then
+  went to 小梅's wheel and 小梅's keys to the next round, so whole beams
+  were bogus (looked like "immune to everything"). Fixed in `act_as`: after
+  the first member's keys it waits up to 50 frames for the next wheel; if none
+  shows, the round is running and it returns "newround" (duo_round then skips
+  the 2nd member's keys).
+- Map item menus: the 物品 submenu (使用/装备) remembers its last choice, so
+  `use_item`/`equip_item` sometimes opened the wrong list (and wasted a
+  魔王甲 on a full hero). New `open_items(kind)` reads the inverted row
+  from the screen; `use_on(name, who)` (target: RIGHT x who) and
+  `equip_on(name, who)` use it. Target 小梅 = RIGHT, not DOWN.
+- Equipment: 定神珠 (MP+10/round) on the hero, 七星灯 (HP+30/round) on 小梅.
+- Inventory triples (type, index, count) exist in RAM, but the copy at
+  0x4a2d is stale (equipped items still listed): `inv()` is unreliable.
+- Level table quirk: hero Lv18 "next" = 1 (instant level-up to 19).
+- Session 6 route (frame 894182 -> 1138670): 8-2 -> 8-1 -> `mwalk("6-1")`
+  -> 7-1 -> 建业客栈 掌柜 (225, both lines) -> 6-1/6-3 -> 9-1 白水镇: all
+  NPCs (疯游人 lines, 守宅人), box 21 with a 万能钥匙 (虫子卡片, 1077),
+  客栈 掌柜 (226), shops browsed (武器店 9-3, 药店 9-7, 杂货店 9-8, 当铺
+  9-9 sale list), 守宅人 (228), 村长家 9-4 镇长 (227), 镇长 in town (229),
+  老宅子 9-2 -> 老宅主房 9-11 box (230) -> slot-3 save (broken) -> well ->
+  枯井迷宫 9-12 (fled randoms; boxes 珠仙草, 蜂王蜜, 缚龙索, 督化笛) ->
+  摄魂阵 9-13: 袁萍芷 talk (232), stones 怨妇幻妖8, 1, 2, 4, 5, 6, 7 won
+  (the counter reached 8 after 7 wins: the 怨妇幻妖3 stone (13,6) is still
+  there and would start a 9th fight) -> 袁萍芷 joins (231).
+- Doors in 白水镇: 杂货店 (tile 9) and 当铺 (tile 10) are entered from
+  *above* (walk DOWN into them); `enter_door` failed on 药店 (tile 8) once.
+- Script choice boxes (`choice`): wait ~30 frames, DOWN, ENTER (`choose(i)`);
+  a DOWN sent at once is dropped.
+- Helpers added: `counter(tile)`, `choose(i)`, `save_game(slot)` (unsafe, see
+  above), `open_items`, `use_on`, `equip_on`, `inv()` (stale), `grs_names()`;
+  `party()` finds the re-created 3rd member (袁萍芷's name block is far away).
+  Battle scripts used: scratchpad `stones.py`/`b2.py` (duo_beam per stone,
+  heal/MP top-up between fights), `cx.py` (trio candidates for 赤血).
+- Text outside the dialogue box seen in session 6: the 存储进度 slot list
+  draws a broken slot as raw 0xFF bytes + `音乐开音乐关` (garbage from the
+  save area); `RunErr:3` after loading it; level-up `<name>修行提升` + new
+  magic (`固若金汤` for 小梅); battle results `获得经验 N`, `战斗获得 N钱`,
+  `得到 X xN` (e.g. 西域奇糯, 赤玉断续膏 drops); box `获得:<item>`;
+  `慕容小梅袁萍芷加入队列` is a script `message`.
 
 ## Session 4 blocker: fixed
 
@@ -20,7 +115,7 @@ verified: `deleteactor 2` in 1-3-12, the solo 蛇妖男 fight, `createactor 2`
 differ over the whole 832 KiB). In-game saving is safe now. The session-3
 "double level-up / exp < 1105" rule was a misdiagnosis: ignore it.
 
-## Where we are (end of session 5)
+## Where we were (end of session 5)
 
 - Route ends at 霸王钟洞口 (script 1-8-2, map (1,35), tile (11,3)) on the
   free map, right after 冲虚道人's speech (event 224 set: 霸王钟 stolen by

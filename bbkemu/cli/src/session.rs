@@ -901,7 +901,7 @@ impl Session {
                 if pa < 0x8000 {
                     m.ram[pa as usize] = *b;
                 } else if (FLASH_BASE..FLASH_BASE + 0x200000).contains(&pa) {
-                    m.flash[(pa - FLASH_BASE) as usize] = *b;
+                    m.flash[bbkemu_core::memory::flash_index(pa - FLASH_BASE)] = *b;
                 } else {
                     return Err(format!("{pa:06x} is not RAM or flash"));
                 }
@@ -1328,17 +1328,19 @@ impl Session {
         let old_len = self.gam.len();
         let e = self.emu_mut()?;
         let flash = &mut e.cpu.memory_mut().flash;
-        let start = (GAM_FLASH - FLASH_BASE) as usize;
-        let end = start + old_len.max(gam.len());
-        for i in start + base..end.min(flash.len()) {
-            flash[i] = 0xff;
+        let fi = bbkemu_core::memory::flash_index;
+        let start = GAM_FLASH - FLASH_BASE;
+        for a in start + base as u32..start + old_len.max(gam.len()) as u32 {
+            flash[fi(a)] = 0xff;
         }
-        flash[start + base..start + gam.len()].copy_from_slice(&lib);
-        // game size in the flash game header (emulator.rs load_gam)
+        for (i, b) in lib.iter().enumerate() {
+            flash[fi(start + (base + i) as u32)] = *b;
+        }
+        // game size in the flash game header (flash address 0x10 + 12)
         let size = gam.len();
-        flash[0x8010 + 12] = size as u8;
-        flash[0x8010 + 13] = (size >> 8) as u8;
-        flash[0x8010 + 14] = (size >> 16) as u8;
+        flash[fi(0x10 + 12)] = size as u8;
+        flash[fi(0x10 + 13)] = (size >> 8) as u8;
+        flash[fi(0x10 + 14)] = (size >> 16) as u8;
         self.archive = Archive::parse(&gam);
         self.gam = gam;
         Ok(json!({"archive_bytes": lib.len(), "gam_bytes": size}))
