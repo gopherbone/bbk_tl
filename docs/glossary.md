@@ -58,7 +58,26 @@ descriptions use the same stat words as the status screen: HP, MP, Attack, Defen
 (abbreviate ATK/DEF/AGI/SPI/LCK only if a description overflows its 102/86 bytes); statuses Poison, Confuse,
 Silence, Sleep (status-screen abbreviations Psn/Cnf/Sil/Slp); 回合 = turns.
 
-## Open decisions for the reviewer
+## Decisions (approved 2026-10-04: reviewer's recommendations accepted)
+
+1. Party members use given names in menus/battle (Qingfeng / Xiaomei / Pingzhi); full names in dialogue.
+2. 天师 = "Celestial Master" in dialogue, "Sage" in short compounds.
+3. 伏魔 = "Demonbane"; place names shorten to "Demon" (Demon Cave).
+4. Game title: "Demonbane Chronicle".
+5. 伏魔剑 and 无机乾坤剑/无极乾坤剑 are the same sword: item "Demonbane", dialogue "Demonbane Sword".
+6. Source errors are fixed quietly in English (1-2-2's uncle is Chongxu; Drake Guard; the table below).
+7. North Sea guards: Drake Guard / North Sea Drake.
+8. 真阎罗 battle name: "Ghost King".
+9. Pingzhi's steal skill is named as listed: "Dragon Cloud Grab".
+10. Dev-team handles are translated (Allnighter, South Imp, Tiny Tot).
+11. 小画家: "Painter" in records, "Little Painter" in dialogue.
+12. 道长 (villagers to the hero): "Master Taoist".
+13. Menu labels: Setup / Music / Mute.
+14. Map names: "Sanqing Hall", "Wuji Tower" (used in dialogue too).
+15. 龟头虫: "Turtle Bug".
+16. Twin-sword names as drafted.
+
+## Open decisions for the reviewer (resolved above)
 
 1. **Hero names in battle/menus**: given names only (Qingfeng / Xiaomei / Pingzhi) because "Liu Qingfeng" (12)
    and "Murong Xiaomei" (14) do not fit 11 bytes. OK, or prefer surnames (Liu / Murong / Yuan)?
