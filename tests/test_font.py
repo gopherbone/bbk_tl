@@ -78,3 +78,30 @@ class Patch(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class EngineText(unittest.TestCase):
+    def test_export_ids_unique(self):
+        from bbkrpg import engine_text
+        rows = engine_text.export()
+        self.assertEqual(len({r["id"] for r in rows}), len(rows))
+        menu = [r for r in rows if r["id"].startswith("ENG/13891.")]
+        self.assertEqual([r["zh"] for r in menu], ["属性", "魔法", "物品", "系统"])
+
+    def test_inline_tokens(self):
+        from bbkrpg import engine_text
+        bank = [b""] * engine_text.RESERVED_SHORT
+        self.assertEqual(engine_text.inline_token(bank, b"-", 2), bytes([0xFD, 0x80]))
+        t = engine_text.inline_token(bank, b"Load", 8)
+        self.assertEqual(len(t), 8)
+        self.assertEqual(t[4:], b"\xfc\x80\xfc\x80")
+        i = ((t[1] & 0x7F) << 7) | (t[3] & 0x7F)
+        self.assertEqual(bank[i], b"Load")
+
+    @unittest.skipUnless(os.path.exists(GAM), "game set not present")
+    def test_original_bytes_present(self):
+        from bbkrpg import engine_text
+        data = open(GAM, "rb").read()
+        for off, zh, _ in engine_text.ENTRIES:
+            raw = zh.encode("gb2312")
+            self.assertEqual(data[off:off + len(raw)], raw, hex(off))

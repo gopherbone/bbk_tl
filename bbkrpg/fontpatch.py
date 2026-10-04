@@ -67,6 +67,9 @@ RENDERER = r"""
 ;  * plain ASCII strings are drawn in bbk_tl Sans on a 16-row cell (like the OS);
 ;  * a page token FF 8h FF 8l (14-bit page id) draws that page of the text
 ;    bank: up to 3 rows, 12 px apart, read from flash through DMA channel 1;
+;  * inline tokens inside a string: FE 8h FE 8l (4 bytes) or FD 8i (2 bytes,
+;    id < 128) draw a text-bank string at the pen, advancing at least the
+;    slot's original width (32 / 16 px); FC xx is a blank 16 px filler;
 ;  * anything else (Chinese) goes to the OS DrawString.
 X      = $2081      ; pen x (OS DrawString's own scratch)
 Y0     = $2082      ; cell top
@@ -86,6 +89,8 @@ TROW   = $208f      ; token mode: row 0..2
 PORT   = $2090      ; token mode: portrait box (row 0/1 start at x=46)
 TP     = $2091      ; token mode: 3-byte physical text pointer
 SAVED  = $2094      ; saved DMA channel 1 address (3) + INCR (1)
+MINADV = $2098      ; inline token: pen x the slot must reach
+TLEN   = $2099      ; inline token: bytes it occupies
 STR    = $2f
 GP     = $31        ; glyph pointer   (saved/restored)
 LP     = $33        ; LCD row pointer (saved/restored)
@@ -108,13 +113,27 @@ drawstring:
         ldy #0
         lda (STR),y
         cmp #$ff
-        bne scan
+        bne scan0
         jmp token
+        ; any byte >= $80 that is not an inline token -> let the OS draw it
+scan0:  ldy #0
 scan:   lda (STR),y
         beq ascii
-        bmi to_os
+        bpl scan1
+        cmp #$fe
+        beq skip4
+        cmp #$fc
+        bcc to_os
+        iny                     ; $fc / $fd: 2 bytes
+scan1:  iny
+        bne scan
+        beq ascii
+skip4:  iny
+        iny
+        iny
         iny
         bne scan
+        beq ascii
 to_os:  lda #<OSVEC
         sta $26
         lda #>OSVEC
@@ -130,28 +149,78 @@ ascii:  jsr savezp
 strlp:  ldy #0
         lda (STR),y
         beq strdone
+        cmp #$fc
+        bcs special
         jsr drawch
-        inc STR
-        bne strlp
+        lda #1
+advstr: clc
+        adc STR
+        sta STR
+        bcc strlp
         inc STR+1
         jmp strlp
 strdone: jmp restzp
-
-; ---- token: draw one page from the text bank
-token:  jsr savezp
+special:
+        cmp #$fc
+        bne inl
+        lda X                   ; $fc: blank 16 px
+        clc
+        adc #16
+        sta X
+        lda #2
+        jmp advstr
+inl:    ; $fd id (2 bytes, min 16 px) or $fe hi $fe lo (4 bytes, min 32 px)
+        cmp #$fe
+        beq inl4
         ldy #1
         lda (STR),y
         and #$7f
-        sta TP+1            ; id hi (7 bits)
+        sta TP
+        lda #0
+        sta TP+1
+        lda #16
+        sta MINADV
+        lda #2
+        sta TLEN
+        jmp inlgo
+inl4:   ldy #1
+        lda (STR),y
+        and #$7f
+        sta TP+1
         ldy #3
         lda (STR),y
         and #$7f
-        asl a               ; id = hi << 7 | lo  -> (hi:lo<<1) >> 1
+        asl a
         lsr TP+1
         ror a
-        sta TP              ; TP:TP+1 = id
-        ; GP = pages + id * 3
-        lda TP
+        sta TP
+        lda #32
+        sta MINADV
+        lda #4
+        sta TLEN
+inlgo:  lda X
+        clc
+        adc MINADV
+        sta MINADV              ; now: minimum pen x after the slot
+        jsr lookup
+        jsr dmasave
+inllp:  jsr fetch
+        beq inlend
+        cmp #$0a
+        beq inlend
+        jsr drawch
+        jmp inllp
+inlend: jsr dmarest
+        lda X
+        cmp MINADV
+        bcs inlx
+        lda MINADV
+        sta X
+inlx:   lda TLEN
+        jmp advstr
+
+; TP:TP+1 = page id  ->  TP..TP+2 = physical address of its text (clobbers GP)
+lookup: lda TP
         sta GP
         lda TP+1
         sta GP+1
@@ -180,8 +249,9 @@ token:  jsr savezp
         iny
         lda (GP),y
         sta TP+2
-        ; save DMA channel 1
-        lda ADDR1
+        rts
+
+dmasave: lda ADDR1
         sta SAVED
         lda ADDR1+1
         sta SAVED+1
@@ -189,6 +259,33 @@ token:  jsr savezp
         sta SAVED+2
         lda INCR
         sta SAVED+3
+        rts
+
+dmarest: lda SAVED
+        sta ADDR1
+        lda SAVED+1
+        sta ADDR1+1
+        lda SAVED+2
+        sta ADDR1+2
+        lda SAVED+3
+        sta INCR
+        rts
+
+; ---- token: draw one page from the text bank
+token:  jsr savezp
+        ldy #1
+        lda (STR),y
+        and #$7f
+        sta TP+1            ; id hi (7 bits)
+        ldy #3
+        lda (STR),y
+        and #$7f
+        asl a               ; id = hi << 7 | lo  -> (hi:lo<<1) >> 1
+        lsr TP+1
+        ror a
+        sta TP              ; TP:TP+1 = id
+        jsr lookup
+        jsr dmasave
         lda #0
         sta PORT
         lda X
@@ -212,14 +309,7 @@ toklp:  jsr fetch
 tokch:  jsr drawch
         jmp toklp
 tokdone:
-        lda SAVED
-        sta ADDR1
-        lda SAVED+1
-        sta ADDR1+1
-        lda SAVED+2
-        sta ADDR1+2
-        lda SAVED+3
-        sta INCR
+        jsr dmarest
         jmp restzp
 
 ; pen position for token row TROW
