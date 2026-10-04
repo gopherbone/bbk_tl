@@ -73,6 +73,8 @@ def warnings(r: dict, en: str, gl: dict) -> list[str]:
         pages = len(fit.pages(en, portrait=bool(r["ctx"].get("pic"))))
         if pages > 3:
             out.append(f"{pages} dialogue pages (consider tightening)")
+    if r["kind"] == "showgut" and any(len(l) > 20 for l in en.split("\n")):
+        out.append("scroll lines over 20 characters wrap mid-phrase (the scroll splits rows at 20)")
     low = en.lower()
     for zh, t in gl.items():
         if len(zh) >= 2 and zh in r["zh"] and t["category"] in ("person", "place", "sect", "monster", "title", "item",
