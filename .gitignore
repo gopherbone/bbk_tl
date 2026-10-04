@@ -4,3 +4,5 @@ __pycache__/
 gam4980/
 refs/
 work/
+dist/
+.DS_Store

@@ -105,3 +105,17 @@ class EngineText(unittest.TestCase):
         for off, zh, _ in engine_text.ENTRIES:
             raw = zh.encode("gb2312")
             self.assertEqual(data[off:off + len(raw)], raw, hex(off))
+
+
+class Bps(unittest.TestCase):
+    def test_round_trip_and_checks(self):
+        import random
+        from bbkrpg import bps
+        rnd = random.Random(1)
+        src = bytes(rnd.randrange(256) for _ in range(5000))
+        tgt = src[:1000] + b"inserted" * 50 + src[1000:3000] + bytes(200) + src[3500:]
+        p = bps.create(src, tgt, b"meta")
+        self.assertEqual(bps.apply(p, src), tgt)
+        self.assertLess(len(p), 1000)
+        with self.assertRaises(ValueError):
+            bps.apply(p, tgt)
