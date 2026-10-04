@@ -60,21 +60,21 @@
 {"id": "gut/1-2-2@062e", "en": "Go."}
 {"id": "gut/1-2-3@0057", "en": "Dispensary"}
 {"id": "gut/1-2-3@0080", "en": "There's quite a selection of good medicine here."}
-{"id": "gut/1-2-4@0067", "en": "Elixir Room"}
+{"id": "gut/1-2-4@0067", "en": "Elixir Rm"}
 {"id": "gut/1-2-5@0070", "en": "Abbot's Rm"}
-{"id": "gut/1-2-6@0067", "en": "Dormitory 1"}
-{"id": "gut/1-2-7@0067", "en": "Senior Room"}
-{"id": "gut/1-2-8@0067", "en": "Dormitory 2"}
+{"id": "gut/1-2-6@0067", "en": "Dorm 1"}
+{"id": "gut/1-2-7@0067", "en": "Brother's"}
+{"id": "gut/1-2-8@0067", "en": "Dorm 2"}
 {"id": "gut/1-2-10@0082", "en": "My Room"}
 {"id": "gut/1-2-10@00dd", "en": "You rest a while. HP restored."}
 {"id": "gut/1-2-10@00fb", "en": "Had a good rest, feeling great. Time to head out."}
 {"id": "gut/1-2-11@0070", "en": "Kitchen"}
-{"id": "gut/1-2-12@0072", "en": "Herb Meadow"}
+{"id": "gut/1-2-12@0072", "en": "Herb Field"}
 {"id": "gut/1-2-12@00c8", "en": "I'd better go see Master first. I can play later."}
-{"id": "gut/1-2-13@0059", "en": "Bamboo Path"}
-{"id": "gut/1-2-14@0055", "en": "Hill Graves"}
-{"id": "gut/1-2-15@0057", "en": "Floatbridge"}
-{"id": "gut/1-2-16@0057", "en": "Demon Trail"}
+{"id": "gut/1-2-13@0059", "en": "Bamboo Way"}
+{"id": "gut/1-2-14@0055", "en": "Cemetery"}
+{"id": "gut/1-2-15@0057", "en": "Pontoon"}
+{"id": "gut/1-2-16@0057", "en": "Demon Path"}
 {"id": "gut/1-2-17@0073", "en": "Cave Mouth"}
 {"id": "gut/1-2-17@008b", "en": "Ow, my hand hurts. Good thing I'm fast on my feet, or I'd have been a goner for sure."}
 {"id": "gut/1-2-17@00e2", "en": "Whoa, it caved in again! Terrifying. Back to Master."}
@@ -104,28 +104,28 @@
 {"id": "gut/1-2-18@05ec", "en": "==== Credits ====\nEngine:\nAllnighter, South Imp\nProduction:\nAllnighter, South Imp\nTesting:\nLots of forum friends\nIntro:\nPure Blue Guardian (forum member)\nBBK Game Team\nJune 2004"}
 {"id": "gut/1-2-18@07f3", "en": "Swordwarden: Let me show you my new ultimate move!"}
 {"id": "gut/1-2-18@0812", "en": "I'm no pushover either. Let's see who's tougher."}
-{"id": "gut/1-2-19@005e", "en": "Lamp Cave 1"}
+{"id": "gut/1-2-19@005e", "en": "Lamp Cave1"}
 {"id": "gut/1-2-19@00c1", "en": "Lamp one, done."}
 {"id": "gut/1-2-19@00df", "en": "Lampwarden 1: Who dares run wild in here?"}
-{"id": "gut/1-2-20@008b", "en": "Lamp Cave 2"}
+{"id": "gut/1-2-20@008b", "en": "Lamp Cave2"}
 {"id": "gut/1-2-20@0100", "en": "Lamp two, done."}
 {"id": "gut/1-2-20@011e", "en": "Lampwarden 2: Who dares run wild in here?"}
-{"id": "gut/1-2-21@0074", "en": "Lamp Cave 3"}
+{"id": "gut/1-2-21@0074", "en": "Lamp Cave3"}
 {"id": "gut/1-2-21@00ce", "en": "Lamp three, done."}
 {"id": "gut/1-2-21@00ec", "en": "Lampwarden 3: Who dares run wild in here?"}
-{"id": "gut/1-2-22@0055", "en": "Lamp Cave 4"}
+{"id": "gut/1-2-22@0055", "en": "Lamp Cave4"}
 {"id": "gut/1-2-22@00b8", "en": "Lamp four, done."}
 {"id": "gut/1-2-22@00d6", "en": "Lampwarden 4: Who dares run wild in here?"}
-{"id": "gut/1-2-23@006b", "en": "Lamp Cave 5"}
+{"id": "gut/1-2-23@006b", "en": "Lamp Cave5"}
 {"id": "gut/1-2-23@00ce", "en": "Lamp five, done."}
 {"id": "gut/1-2-23@00ec", "en": "Lampwarden 5: Who dares run wild in here?"}
-{"id": "gut/1-2-24@007f", "en": "Lamp Cave 6"}
+{"id": "gut/1-2-24@007f", "en": "Lamp Cave6"}
 {"id": "gut/1-2-24@0101", "en": "Lamp six, done."}
 {"id": "gut/1-2-24@011f", "en": "Lampwarden 6: Who dares run wild in here?"}
-{"id": "gut/1-2-25@0062", "en": "Lamp Cave 7"}
+{"id": "gut/1-2-25@0062", "en": "Lamp Cave7"}
 {"id": "gut/1-2-25@00bc", "en": "Lamp seven, done."}
 {"id": "gut/1-2-25@00da", "en": "Lampwarden 7: Who dares run wild in here?"}
-{"id": "gut/1-2-26@0057", "en": "Lamp Cave 8"}
+{"id": "gut/1-2-26@0057", "en": "Lamp Cave8"}
 {"id": "gut/1-2-26@00ba", "en": "Lamp eight, done."}
 {"id": "gut/1-2-26@00d8", "en": "Lampwarden 8: Who dares run wild in here?"}
 {"id": "gut/1-2-31@0057", "en": "Cloudstep"}
@@ -142,7 +142,7 @@
 {"id": "gut/1-2-32@01e1", "en": "Your soul is sucked away!"}
 {"id": "gut/1-2-32@024a", "en": "The Four Symbols Godslayer Array is broken!"}
 {"id": "gut/1-2-32@0262", "en": "Godslayer: Who dares barge into my Godslayer Array? I'll scatter your soul to the winds!"}
-{"id": "gut/1-2-33@0055", "en": "Star Gazebo"}
+{"id": "gut/1-2-33@0055", "en": "Starwatch"}
 {"id": "gut/1-2-33@00a5.1", "en": "Cancel"}
 {"id": "gut/1-2-33@00a5.2", "en": "Use Picklock"}
 {"id": "gut/1-2-33@00bb", "en": "You have no key."}
@@ -155,13 +155,13 @@
 {"id": "gut/1-2-40@008a", "en": "Rest Ledge"}
 {"id": "gut/1-2-41@0082", "en": "Rest Ledge"}
 {"id": "gut/1-2-42@0082", "en": "Rest Ledge"}
-{"id": "gut/1-2-43@006c", "en": "Mt. Sanqing"}
+{"id": "gut/1-2-43@006c", "en": "Hill Gate"}
 {"id": "gut/1-2-43@00b6", "en": "I haven't finished the job Master gave me. How can I go back now?!"}
 {"id": "gut/1-2-43@00e1", "en": "Helping Uncle Chongxu comes first."}
 {"id": "gut/1-2-43@00f6", "en": "Notice: Mt. Sanqing"}
 {"id": "gut/1-2-43@0126", "en": "I'd better go back up the mountain and report first."}
 {"id": "gut/1-2-43@013d", "en": "There's no turning back for us now."}
-{"id": "gut/1-2-44@0069", "en": "Mt. Sanqing"}
+{"id": "gut/1-2-44@0069", "en": "Hill Gate"}
 {"id": "gut/1-2-45@006e", "en": "Fields N-S"}
 {"id": "gut/1-2-46@006e", "en": "Fields E-W"}
 {"id": "gut/1-2-48@0057", "en": "Crossroads"}
@@ -200,7 +200,7 @@
 {"id": "gut/1-2-53@0055", "en": "Graveyard"}
 {"id": "gut/1-3-1@009e", "en": "Heartsease"}
 {"id": "gut/1-3-1@00df", "en": "Oh right, I should go see Xiaomei first."}
-{"id": "gut/1-3-2@006e", "en": "Weapon Shop"}
+{"id": "gut/1-3-2@006e", "en": "Arms Shop"}
 {"id": "gut/1-3-2@0097", "en": "I've got plenty of fine weapons here."}
 {"id": "gut/1-3-3@0065", "en": "Goods Shop"}
 {"id": "gut/1-3-3@0083", "en": "I've got plenty of fine goods here."}
@@ -218,7 +218,7 @@
 {"id": "gut/1-3-7@0067", "en": "Ah Xia's"}
 {"id": "gut/1-3-7@008a", "en": "Ah Xia: Being a clerk in the development department is a lot more work than you'd think."}
 {"id": "gut/1-3-7@00b7", "en": "Ah Xia: Nobody's seen Granny Cai's daughter, Little Painter, for days. Li Hu, the bully of Stonedream, snatches girls in broad daylight, and Granny Cai went to the market there a few days ago... I hope it's not that. How awful..."}
-{"id": "gut/1-3-8@0067", "en": "Cai's House"}
+{"id": "gut/1-3-8@0067", "en": "Granny's"}
 {"id": "gut/1-3-8@0092", "en": "Oh, my daughter... Now I'm just a lonely old woman with no one left. I might as well die and be done with it!"}
 {"id": "gut/1-3-8@00d8", "en": "Granny, please don't talk like that. I'll rescue your daughter."}
 {"id": "gut/1-3-8@00fe", "en": "That Li Hu is the town bully, with over a hundred thugs. Don't go throwing your life away."}
@@ -273,7 +273,7 @@
 {"id": "gut/1-3-12@02c0", "en": "Little Painter: Goodbye, Brother Liu."}
 {"id": "gut/1-3-13@0059", "en": "Heartsease"}
 {"id": "gut/1-3-13@007e", "en": "Let's head up the mountain first."}
-{"id": "gut/1-4-1@0062", "en": "Miasma Gate"}
+{"id": "gut/1-4-1@0062", "en": "Miasma"}
 {"id": "gut/1-4-1@0089", "en": "The miasma here is so thick there's no way to get in!"}
 {"id": "gut/1-4-2@005e", "en": "Hunt Lodge"}
 {"id": "gut/1-4-2@0086", "en": "My family has hunted here for generations. I know this area like the back of my hand."}
@@ -282,12 +282,12 @@
 {"id": "gut/1-4-2@0139", "en": "What kind of treasure is this \"Reed Mail\"?"}
 {"id": "gut/1-4-2@0153", "en": "They say it's armor made by Lord Lu that protects against poison. It was handed down to his descendant, Lu Fu, who lives in Stonedream, not far from here."}
 {"id": "gut/1-4-2@01a7", "en": "Thanks!"}
-{"id": "gut/1-4-3@006e", "en": "Forest Road"}
-{"id": "gut/1-4-4@006e", "en": "Forest Rd 2"}
+{"id": "gut/1-4-3@006e", "en": "Forest Rd"}
+{"id": "gut/1-4-4@006e", "en": "Forest Rd2"}
 {"id": "gut/1-4-5@0058", "en": "Snake Gate"}
 {"id": "gut/1-4-6@0138", "en": "Snake Den"}
-{"id": "gut/1-4-7@009c", "en": "Snake Den 2"}
-{"id": "gut/1-4-8@00ca", "en": "Snake Den 3"}
+{"id": "gut/1-4-7@009c", "en": "Snake Den2"}
+{"id": "gut/1-4-8@00ca", "en": "Snake Den3"}
 {"id": "gut/1-4-8@00fb", "en": "Snake Demon: I told you to bring the boys to the edge of the Miasma Wood after dark. What are you doing here now?"}
 {"id": "gut/1-4-8@013c", "en": "Look closely, old snake. This Taoist is here to sort you out!"}
 {"id": "gut/1-4-8@0187", "en": "Snake Demon: You're tough, I'll give you that. I'll seal you in this cave for good!"}
@@ -340,7 +340,7 @@
 {"id": "gut/1-5-9@0057", "en": "Pawnshop"}
 {"id": "gut/1-5-9@006d", "en": "You won't find fairer prices anywhere."}
 {"id": "gut/1-5-10@0055", "en": "Inn"}
-{"id": "gut/1-5-11@0065", "en": "Weapon Shop"}
+{"id": "gut/1-5-11@0065", "en": "Arms Shop"}
 {"id": "gut/1-5-11@0082", "en": "I've got plenty of fine weapons here."}
 {"id": "gut/1-5-12@0055", "en": "House 5"}
 {"id": "gut/1-5-13@005e", "en": "Lu Fu's"}
@@ -376,7 +376,7 @@
 {"id": "gut/1-5-16@014d", "en": "Little Painter leaves."}
 {"id": "gut/1-5-16@015c", "en": "Fighting for justice sure feels good."}
 {"id": "gut/1-5-17@009e", "en": "Li Passage"}
-{"id": "gut/1-5-18@0070", "en": "Li Servants"}
+{"id": "gut/1-5-18@0070", "en": "Li Staff"}
 {"id": "gut/1-5-18@008d", "en": "Old Wang: I'm just an ordinary servant. Please don't kill me!"}
 {"id": "gut/1-5-18@00ba.1", "en": "Let him go"}
 {"id": "gut/1-5-18@00ba.2", "en": "Kill him"}
@@ -395,7 +395,7 @@
 {"id": "gut/1-6-2@006e", "en": "Fields E-W"}
 {"id": "gut/1-6-2@00a0", "en": "Error: top exit"}
 {"id": "gut/1-6-2@017a", "en": "Error: bottom exit"}
-{"id": "gut/1-6-3@006e", "en": "Forest Road"}
+{"id": "gut/1-6-3@006e", "en": "Forest Rd"}
 {"id": "gut/1-6-4@0057", "en": "Crossroads"}
 {"id": "gut/1-6-5@0057", "en": "Crossroads"}
 {"id": "gut/1-6-6@0057", "en": "Crossroads"}
@@ -436,7 +436,7 @@
 {"id": "gut/1-7-2@023b", "en": "Thanks!"}
 {"id": "gut/1-7-2@0249", "en": "Innkeeper: Will you be staying the night, sir, or having a meal?"}
 {"id": "gut/1-7-2@026b", "en": "Neither, thanks. We have to keep moving."}
-{"id": "gut/1-7-3@0065", "en": "Weapon Shop"}
+{"id": "gut/1-7-3@0065", "en": "Arms Shop"}
 {"id": "gut/1-7-3@0083", "en": "I've got plenty of top-quality weapons."}
 {"id": "gut/1-7-4@0065", "en": "Goods Shop"}
 {"id": "gut/1-7-4@0083", "en": "I've got plenty of top-quality goods."}
@@ -459,7 +459,7 @@
 {"id": "gut/1-7-10@0055", "en": "House 4"}
 {"id": "gut/1-7-11@0055", "en": "House 5"}
 {"id": "gut/1-7-12@0055", "en": "Guest Room"}
-{"id": "gut/1-7-13@0055", "en": "Inn Kitchen"}
+{"id": "gut/1-7-13@0055", "en": "Kitchen"}
 {"id": "gut/1-7-14@000f", "en": "Bystander: Stop, thief...!"}
 {"id": "gut/1-7-14@0039", "en": "Thief: Out of the way! Out of the way!"}
 {"id": "gut/1-7-14@004e", "en": "Catching thieves is my specialty. Leave this to me."}
@@ -473,7 +473,7 @@
 {"id": "gut/1-7-14@01b2", "en": "When I woke up this morning, Sister Yuan wasn't here. She must have left."}
 {"id": "gut/1-7-14@01de", "en": "Oh well, everyone has their own path. Let's head for Mt. Zhong."}
 {"id": "gut/1-7-14@0207", "en": "Murong Xiaomei joins the party."}
-{"id": "gut/1-8-1@0088", "en": "Zhong Abbey"}
+{"id": "gut/1-8-1@0088", "en": "Abbey"}
 {"id": "gut/1-8-1@00ad", "en": "There's still something important to take care of here!"}
 {"id": "gut/1-8-2@0074", "en": "Taoist Chongxu: Qingfeng, the demons have retreated... Why have you come out?"}
 {"id": "gut/1-8-2@00a9", "en": "Uncle, it's all because my skills weren't good enough. The Tyrant Bell has been stolen."}
@@ -485,10 +485,10 @@
 {"id": "gut/1-8-2@01cc", "en": "Yes, Uncle."}
 {"id": "gut/1-8-2@01da", "en": "Taoist Chongxu: I must stay to run things on the mountain. Find the Tyrant Bell as fast as you can, before the land is drowned in suffering."}
 {"id": "gut/1-8-2@0230", "en": "Bell Cave"}
-{"id": "gut/1-8-3@00c3", "en": "Canxu Tower"}
+{"id": "gut/1-8-3@00c3", "en": "Canxu Hall"}
 {"id": "gut/1-8-4@0057", "en": "Dispensary"}
 {"id": "gut/1-8-4@006e", "en": "We have plenty of fine medicines to choose from."}
-{"id": "gut/1-8-5@005e", "en": "Elixir Room"}
+{"id": "gut/1-8-5@005e", "en": "Elixir Rm"}
 {"id": "gut/1-8-6@005e", "en": "Chongxu's"}
 {"id": "gut/1-8-7@0055", "en": "Dormitory"}
 {"id": "gut/1-8-8@0055", "en": "Kitchen"}
@@ -563,7 +563,7 @@
 {"id": "gut/1-9-2@00d8", "en": "There's something odd about this well."}
 {"id": "gut/1-9-2@00ec", "en": "The sound seems to be coming from inside the well."}
 {"id": "gut/1-9-2@010a", "en": "Let's go down and see."}
-{"id": "gut/1-9-3@0065", "en": "Weapon Shop"}
+{"id": "gut/1-9-3@0065", "en": "Arms Shop"}
 {"id": "gut/1-9-3@007d", "en": "Great martial arts won't always save you, but a good weapon will always give you the edge."}
 {"id": "gut/1-9-4@0055", "en": "Elder's"}
 {"id": "gut/1-9-4@008f", "en": "Sigh... So many children missing. Where on earth do we even look..."}
@@ -673,7 +673,7 @@
 {"id": "gut/1-10-1@0611", "en": "How do you know so much about it?"}
 {"id": "gut/1-10-1@062a", "en": "I... uh... well..."}
 {"id": "gut/1-10-1@0642", "en": "Sister Yuan knows so many things, no wonder she can't remember where she heard them all."}
-{"id": "gut/1-10-2@0057", "en": "Zhou Shrine"}
+{"id": "gut/1-10-2@0057", "en": "Shrine"}
 {"id": "gut/1-10-2@0097", "en": "Zhou Chu: I have been waiting for you three for some time."}
 {"id": "gut/1-10-2@00b0", "en": "So it's Zhou Chu."}
 {"id": "gut/1-10-2@00c0", "en": "Zhou Chu: My recent divinations show that the South Hill White Tiger and the North Sea Blue Dragon, whom I slew long ago, are stirring back to life. But this time is different: my readings are muddled, as if something is interfering."}
@@ -686,7 +686,7 @@
 {"id": "gut/1-10-2@02d3", "en": "Zhou Chu: You three kept your word. I thank you on behalf of all living things."}
 {"id": "gut/1-10-2@02fa", "en": "Just thanks? Weren't you promising a big reward?"}
 {"id": "gut/1-10-2@031a", "en": "Zhou Chu: I have a book here. Please take it."}
-{"id": "gut/1-10-3@0065", "en": "Weapon Shop"}
+{"id": "gut/1-10-3@0065", "en": "Arms Shop"}
 {"id": "gut/1-10-3@007c", "en": "Times aren't very peaceful lately. Best to carry a weapon."}
 {"id": "gut/1-10-4@0065", "en": "Goods Shop"}
 {"id": "gut/1-10-4@007c", "en": "Times are hard. I've got no choice but to sell cheap."}
@@ -706,7 +706,7 @@
 {"id": "gut/1-11-1@02cb", "en": "Passerby B: Sigh, my wife went out for groceries yesterday afternoon and fainted from fright. She still can't get out of bed! What a curse..."}
 {"id": "gut/1-11-1@0321", "en": "Whoa, what's that in the well? Something's glinting down there."}
 {"id": "gut/1-11-2@0055", "en": "Prodigy's"}
-{"id": "gut/1-11-3@0065", "en": "Weapon Shop"}
+{"id": "gut/1-11-3@0065", "en": "Arms Shop"}
 {"id": "gut/1-11-3@007d", "en": "My weapons are all top-notch. Come, have a look."}
 {"id": "gut/1-11-4@0062", "en": "Small Inn"}
 {"id": "gut/1-11-4@007f", "en": "Innkeeper: Will you be dining or staying the night, sir?"}
@@ -761,12 +761,12 @@
 {"id": "gut/1-12-1@0074", "en": "Whoa, what a stench @#$!#"}
 {"id": "gut/1-12-1@008b", "en": "I think I'm going to be sick."}
 {"id": "gut/1-12-2@00f9", "en": "The White Tiger must be nearby. Let's search carefully."}
-{"id": "gut/1-12-2@011b", "en": "S.Hill Maze"}
+{"id": "gut/1-12-2@011b", "en": "Hill Maze"}
 {"id": "gut/1-12-2@0137", "en": "Tiger Thrall: Hey, kid, barging into our cave like that - you know that means death!"}
 {"id": "gut/1-12-2@0168", "en": "Oh, really? Let's find out."}
 {"id": "gut/1-12-2@0182", "en": "Tiger Thrall: You don't know what's good for you... Boys, get him!"}
 {"id": "gut/1-12-2@01aa", "en": "Tiger Thrall: Not bad. No wonder the boss is wary of you."}
-{"id": "gut/1-12-3@024d", "en": "Tiger's Den"}
+{"id": "gut/1-12-3@024d", "en": "Tiger Den"}
 {"id": "gut/1-12-3@025d", "en": "Huh! Why is nobody here?"}
 {"id": "gut/1-12-3@026f", "en": "Let's search carefully. We can't let it get away again."}
 {"id": "gut/1-12-3@0290", "en": "White Tiger: Shit, I turned into a bunch of haystacks and STILL couldn't fool you!!!"}
@@ -776,8 +776,8 @@
 {"id": "gut/1-12-3@0354", "en": "White Tiger: Hmph, you only got me because you came while I was still training my Reek Wind art. If I'd mastered it, you'd never have lasted this long."}
 {"id": "gut/1-13-1@00d2", "en": "Why is the water blood-red everywhere? Not a sign of life - it's as if time has stopped here."}
 {"id": "gut/1-13-1@0112", "en": "This place is so creepy!"}
-{"id": "gut/1-13-1@0124", "en": "N. Sea Maze"}
-{"id": "gut/1-13-2@021d", "en": "Dragon Pool"}
+{"id": "gut/1-13-1@0124", "en": "Sea Maze"}
+{"id": "gut/1-13-2@021d", "en": "Dragon Den"}
 {"id": "gut/1-13-2@025b", "en": "Kung fu this lame, and you call yourselves dragons?"}
 {"id": "gut/1-13-2@02a1", "en": "What a weird-looking lizard! !$#@$%!!"}
 {"id": "gut/1-13-2@02de", "en": "North Sea Wyrm: You just wait, I'll !@#$!#!$#!@@#$!"}
@@ -809,7 +809,7 @@
 {"id": "gut/1-13-2@077a", "en": "Finally, someone worth fighting."}
 {"id": "gut/1-13-2@0791", "en": "Blue Dragon: Not bad at all. Too bad you can't beat me."}
 {"id": "gut/1-14-1@009c", "en": "Is this a village? Why is it so desolate..."}
-{"id": "gut/1-14-1@00c2", "en": "Heming Foot"}
+{"id": "gut/1-14-1@00c2", "en": "Mt. Heming"}
 {"id": "gut/1-14-1@00e5", "en": "What are we waiting for? Straight up the mountain!"}
 {"id": "gut/1-14-1@0110", "en": "Villager A: Those monsters come every few days. Next time it might be us lying on the ground."}
 {"id": "gut/1-14-1@0153", "en": "Villager B: Sigh, Heaven has no eyes..."}
@@ -824,8 +824,8 @@
 {"id": "gut/1-14-4@0069", "en": "Ledge"}
 {"id": "gut/1-14-5@0069", "en": "Ledge"}
 {"id": "gut/1-14-6@0057", "en": "Bridge"}
-{"id": "gut/1-14-7@0082", "en": "Forest Road"}
-{"id": "gut/1-14-8@009a", "en": "Heming Cave"}
+{"id": "gut/1-14-7@0082", "en": "Forest Rd"}
+{"id": "gut/1-14-8@009a", "en": "Cave Mouth"}
 {"id": "gut/1-14-8@00bc", "en": "Let's get into the cave first."}
 {"id": "gut/1-14-8@0117", "en": "I'll kill every last one of you demons... kill..."}
 {"id": "gut/1-14-8@0147", "en": "Who dares barge onto Mt. Heming?"}
@@ -861,7 +861,7 @@
 {"id": "gut/1-14-8@0ba0", "en": "Red Phoenix: Listen to me..."}
 {"id": "gut/1-14-8@0bb7", "en": "Lies..."}
 {"id": "gut/1-14-8@0bc4", "en": "Red Phoenix: Liu Qingfeng, you're the only one who can stop Wuji..."}
-{"id": "gut/1-14-9@00c3", "en": "Heming Cave"}
+{"id": "gut/1-14-9@00c3", "en": "Inner Cave"}
 {"id": "gut/1-14-9@00eb", "en": "Ding!"}
 {"id": "gut/1-14-9@00ff", "en": "Dang!"}
 {"id": "gut/1-14-9@0119", "en": "Dong!"}
@@ -877,7 +877,7 @@
 {"id": "gut/1-14-9@0255", "en": "The last few characters are really strange."}
 {"id": "gut/1-14-9@026f", "en": "Look closely!"}
 {"id": "gut/1-14-10@008e", "en": "Tomb Maze"}
-{"id": "gut/1-14-11@004a", "en": "Sage's Tomb"}
+{"id": "gut/1-14-11@004a", "en": "Sage Tomb"}
 {"id": "gut/1-14-11@0056", "en": "Hello there, old grandpa..."}
 {"id": "gut/1-14-11@008f", "en": "Who are you, really?"}
 {"id": "gut/1-14-11@009f", "en": "Sage Spirit: I am a fragment of Zhang Daoling's soul. I still clung to the world, so I could not ascend. Today you have set me free."}
@@ -899,23 +899,23 @@
 {"id": "GRS/6-1-3/desc", "en": "A cowhide hat that keeps off rain and snow. Defense +4."}
 {"id": "GRS/6-1-4/name", "en": "Taoist Hat"}
 {"id": "GRS/6-1-4/desc", "en": "A hat for accomplished Taoists. DEF +11, SPI +3. Blocks Silence."}
-{"id": "GRS/6-1-5/name", "en": "Battle Helm"}
+{"id": "GRS/6-1-5/name", "en": "War Helm"}
 {"id": "GRS/6-1-5/desc", "en": "Worn by decorated generals. DEF +28, AGI +5, SPI +3, LCK +3."}
-{"id": "GRS/6-1-6/name", "en": "Royal Crown"}
+{"id": "GRS/6-1-6/name", "en": "Gold Crown"}
 {"id": "GRS/6-1-6/desc", "en": "Max MP +15, ATK -4, DEF +20, SPI +12. Blocks Confuse, Sleep."}
 {"id": "GRS/6-1-7/name", "en": "Ribbon"}
 {"id": "GRS/6-1-7/desc", "en": "A colorful ribbon girls love. Defense +2."}
-{"id": "GRS/6-1-8/name", "en": "Crane Clasp"}
+{"id": "GRS/6-1-8/name", "en": "Crane Pin"}
 {"id": "GRS/6-1-8/desc", "en": "A silver hair clasp shaped like a crane. Defense +3."}
 {"id": "GRS/6-1-9/name", "en": "Hairpin"}
 {"id": "GRS/6-1-9/desc", "en": "A hairpin for your hair. Defense +5."}
 {"id": "GRS/6-1-10/name", "en": "Dawn Plume"}
 {"id": "GRS/6-1-10/desc", "en": "From the rooster that wakes the sun. DEF +2, SPI +2, LCK +2."}
-{"id": "GRS/6-1-11/name", "en": "Gem Hairpin"}
+{"id": "GRS/6-1-11/name", "en": "Gem Pin"}
 {"id": "GRS/6-1-11/desc", "en": "A hairpin set with a sapphire. Defense +9, Luck +6."}
 {"id": "GRS/6-1-12/name", "en": "Ward Crown"}
 {"id": "GRS/6-1-12/desc", "en": "A Li girl's crown that wards off evil. DEF +10. Blocks Confuse."}
-{"id": "GRS/6-1-13/name", "en": "Azure Crown"}
+{"id": "GRS/6-1-13/name", "en": "Jade Crown"}
 {"id": "GRS/6-1-13/desc", "en": "Silver, set with precious blue jade. DEF +18, SPI +6, LCK +4."}
 {"id": "GRS/6-1-14/name", "en": "Silk Band"}
 {"id": "GRS/6-1-14/desc", "en": "Woven of rare silkworm silk. DEF +25, AGI +8. Blocks Silence."}
@@ -945,11 +945,11 @@
 {"id": "GRS/6-2-11/desc", "en": "Red feathers, like a fire. DEF +30, AGI +4. Blocks Confuse."}
 {"id": "GRS/6-2-12/name", "en": "Holy Robe"}
 {"id": "GRS/6-2-12/desc", "en": "Hides the charm \"Like a Shadow\". Superb armor. Defense +100."}
-{"id": "GRS/6-2-13/name", "en": "Barbed Mail"}
+{"id": "GRS/6-2-13/name", "en": "Spike Mail"}
 {"id": "GRS/6-2-13/desc", "en": "Bronze armor covered in barbs. Defense +55, Attack +19."}
-{"id": "GRS/6-2-14/name", "en": "Spider Silk"}
+{"id": "GRS/6-2-14/name", "en": "Spidersilk"}
 {"id": "GRS/6-2-14/desc", "en": "Woven from a spider god's silk. Defense +40. Blocks Poison."}
-{"id": "GRS/6-2-15/name", "en": "Pearl Shirt"}
+{"id": "GRS/6-2-15/name", "en": "Pearl Vest"}
 {"id": "GRS/6-2-15/desc", "en": "Sewn all over with fine pearls. DEF +60, AGI -3, LCK +10."}
 {"id": "GRS/6-2-16/name", "en": "Swan Robe"}
 {"id": "GRS/6-2-16/desc", "en": "Warm swan-down robe. DEF +64, AGI +6. Blocks Poison."}
@@ -957,47 +957,47 @@
 {"id": "GRS/6-2-17/desc", "en": "Black garb of Ghosttrack Fort. DEF +35, AGI +22, LCK -6."}
 {"id": "GRS/6-2-18/name", "en": "Tide Robe"}
 {"id": "GRS/6-2-18/desc", "en": "Crane-woven silk. Buddhas walk with the wearer. A true treasure!"}
-{"id": "GRS/6-3-1/name", "en": "Straw Shoes"}
+{"id": "GRS/6-3-1/name", "en": "Sandals"}
 {"id": "GRS/6-3-1/desc", "en": "Cheap, light rush sandals, good for walking. Defense +1."}
-{"id": "GRS/6-3-2/name", "en": "Cloth Shoes"}
+{"id": "GRS/6-3-2/name", "en": "Soft Boots"}
 {"id": "GRS/6-3-2/desc", "en": "Tall boots of coarse cloth. Defense +3, Agility +1."}
 {"id": "GRS/6-3-3/name", "en": "Tao Boots"}
 {"id": "GRS/6-3-3/desc", "en": "Tall boots worn by Taoists. Defense +5, Agility +2."}
 {"id": "GRS/6-3-4/name", "en": "Life Boots"}
 {"id": "GRS/6-3-4/desc", "en": "Finely carved boots for lords. DEF +8, AGI +6, Max HP +10."}
-{"id": "GRS/6-3-5/name", "en": "Steel Boots"}
+{"id": "GRS/6-3-5/name", "en": "Iron Boots"}
 {"id": "GRS/6-3-5/desc", "en": "Lined with steel wire against blades. Defense +22, Agility +5."}
-{"id": "GRS/6-3-6/name", "en": "Windchasers"}
+{"id": "GRS/6-3-6/name", "en": "Windchaser"}
 {"id": "GRS/6-3-6/desc", "en": "Gauze boots thin as mist. Run like the wind. DEF +10, AGI +18."}
-{"id": "GRS/6-3-7/name", "en": "Print Shoes"}
+{"id": "GRS/6-3-7/name", "en": "Rose Shoes"}
 {"id": "GRS/6-3-7/desc", "en": "Shoes of plain patterned cloth. Defense +4, Agility +2."}
 {"id": "GRS/6-3-8/name", "en": "Lady Shoes"}
 {"id": "GRS/6-3-8/desc", "en": "Finely embroidered shoes for young ladies. Defense +8, Agility +3."}
 {"id": "GRS/6-3-9/name", "en": "Deerskins"}
 {"id": "GRS/6-3-9/desc", "en": "Soft deerskin boots; move as fast as a deer. Defense +11, Agility +5."}
-{"id": "GRS/6-3-10/name", "en": "Lotus Boots"}
+{"id": "GRS/6-3-10/name", "en": "Lotus Boot"}
 {"id": "GRS/6-3-10/desc", "en": "Tall embroidered boots with gold lotuses. Defense +10, Agility +8."}
 {"id": "GRS/6-3-11/name", "en": "Glow Boots"}
 {"id": "GRS/6-3-11/desc", "en": "Crystal boots set with glowing pearls. DEF +15, AGI +12."}
 {"id": "GRS/6-3-12/name", "en": "Fox Boots"}
 {"id": "GRS/6-3-12/desc", "en": "Sky fox pelt boots. Worth a fortune! DEF +20, AGI +16."}
-{"id": "GRS/6-3-13/name", "en": "Skyclimbers"}
+{"id": "GRS/6-3-13/name", "en": "Skyclimber"}
 {"id": "GRS/6-3-13/desc", "en": "Divine clay shoes that fit any foot. DEF +16, AGI +22, Max HP +20."}
 {"id": "GRS/6-3-14/name", "en": "Windriders"}
 {"id": "GRS/6-3-14/desc", "en": "Straw sandals that ride the wind. Max HP/MP +20, DEF +4, AGI +26."}
-{"id": "GRS/6-3-15/name", "en": "Cosmos Walk"}
+{"id": "GRS/6-3-15/name", "en": "Worldwalk"}
 {"id": "GRS/6-3-15/desc", "en": "Tour every mountain in a day. DEF +30, AGI +24, SPI +12, LCK +10."}
 {"id": "GRS/6-4-1/name", "en": "Cape"}
 {"id": "GRS/6-4-1/desc", "en": "Keeps out wind and cold. Defense +2."}
 {"id": "GRS/6-4-2/name", "en": "Pauldrons"}
 {"id": "GRS/6-4-2/desc", "en": "Armor to guard the shoulders. Defense +6."}
-{"id": "GRS/6-4-3/name", "en": "Bronze Mail"}
+{"id": "GRS/6-4-3/name", "en": "Bronzemail"}
 {"id": "GRS/6-4-3/desc", "en": "Good armor, but heavy! You'll be clumsy in it. Defense +12, Agility -7."}
 {"id": "GRS/6-4-4/name", "en": "Wyrm Cape"}
 {"id": "GRS/6-4-4/desc", "en": "A cape of wyrm hide. Good protection. Defense +12."}
 {"id": "GRS/6-4-5/name", "en": "Scale Mail"}
 {"id": "GRS/6-4-5/desc", "en": "Armor of fish-scale plates. Defense +18, Agility -4."}
-{"id": "GRS/6-4-6/name", "en": "Steel Plate"}
+{"id": "GRS/6-4-6/name", "en": "Steel Mail"}
 {"id": "GRS/6-4-6/desc", "en": "Armor forged of rare fine steel. Defense +19."}
 {"id": "GRS/6-4-7/name", "en": "Saint Mail"}
 {"id": "GRS/6-4-7/desc", "en": "Made from the hide of a blood-sweating steed. Defense +28."}
@@ -1005,33 +1005,33 @@
 {"id": "GRS/6-4-8/desc", "en": "Made of ten green snakeskins; soft and supple. Defense +32."}
 {"id": "GRS/6-4-9/name", "en": "Holy Cape"}
 {"id": "GRS/6-4-9/desc", "en": "Woven from golden eagle feathers. Defense +32, Spirit +16."}
-{"id": "GRS/6-4-10/name", "en": "Spirit Robe"}
+{"id": "GRS/6-4-10/name", "en": "Soul Robe"}
 {"id": "GRS/6-4-10/desc", "en": "An outer robe for powerful Taoists. Defense +31, Spirit +16."}
-{"id": "GRS/6-4-11/name", "en": "Dragon Cape"}
+{"id": "GRS/6-4-11/name", "en": "Dragoncape"}
 {"id": "GRS/6-4-11/desc", "en": "Once worn by Heavenly King Li; holds his aura. DEF +66, SPI +15."}
 {"id": "GRS/6-4-12/name", "en": "Plume Cape"}
 {"id": "GRS/6-4-12/desc", "en": "Woven by the Weaver Girl. Dazzling! Defense +52, Spirit +15."}
-{"id": "GRS/6-4-13/name", "en": "Reed Mail F"}
+{"id": "GRS/6-4-13/name", "en": "Reedmail F"}
 {"id": "GRS/6-4-13/desc", "en": "Lu Ban's poison-proof reeds, female half. DEF +3. Blocks Poison."}
-{"id": "GRS/6-4-14/name", "en": "Reed Mail M"}
+{"id": "GRS/6-4-14/name", "en": "Reedmail M"}
 {"id": "GRS/6-4-14/desc", "en": "Lu Ban's poison-proof reeds, male half. DEF +3. Blocks Poison."}
-{"id": "GRS/6-5-1/name", "en": "Cloth Cuffs"}
+{"id": "GRS/6-5-1/name", "en": "Cloth Cuff"}
 {"id": "GRS/6-5-1/desc", "en": "Sleeve cuffs that keep body heat in. Defense +2."}
 {"id": "GRS/6-5-2/name", "en": "Iron Cuffs"}
 {"id": "GRS/6-5-2/desc", "en": "Iron wrist guards; they slow you down. Defense +12, Agility -3."}
 {"id": "GRS/6-5-3/name", "en": "Gold Cuffs"}
 {"id": "GRS/6-5-3/desc", "en": "Nicely decorated gold cuffs. Defense +10."}
-{"id": "GRS/6-5-4/name", "en": "Blood Cuffs"}
+{"id": "GRS/6-5-4/name", "en": "Blood Cuff"}
 {"id": "GRS/6-5-4/desc", "en": "Never let it see blood, or it turns evil. ATK +10, DEF +24, SPI +4."}
 {"id": "GRS/6-5-5/name", "en": "Red Bangle"}
 {"id": "GRS/6-5-5/desc", "en": "Wrist guards of red cloth. Defense +4."}
-{"id": "GRS/6-5-6/name", "en": "Jade Bangle"}
+{"id": "GRS/6-5-6/name", "en": "Jade Ring"}
 {"id": "GRS/6-5-6/desc", "en": "An ordinary jade bangle. Defense +10."}
 {"id": "GRS/6-5-7/name", "en": "Sky Bangle"}
 {"id": "GRS/6-5-7/desc", "en": "Made of heavenly white jade. Defense +16, Luck +4."}
-{"id": "GRS/6-5-8/name", "en": "Soul Bangle"}
+{"id": "GRS/6-5-8/name", "en": "Soul Ring"}
 {"id": "GRS/6-5-8/desc", "en": "Turns qi into speed and luck. DEF +8, Max MP -10, AGI +10, LCK +10."}
-{"id": "GRS/6-6-1/name", "en": "Peace Charm"}
+{"id": "GRS/6-6-1/name", "en": "Safe Charm"}
 {"id": "GRS/6-6-1/desc", "en": "A charm to keep children safe. Works if you believe! Luck +4."}
 {"id": "GRS/6-6-2/name", "en": "Sachet"}
 {"id": "GRS/6-6-2/desc", "en": "A cloth bag of fragrant powder; wards off evil. Spirit +4, Luck +2."}
@@ -1043,29 +1043,29 @@
 {"id": "GRS/6-6-5/desc", "en": "Silk pouch of mugwort and spice. DEF +6, SPI +3, LCK +5."}
 {"id": "GRS/6-6-6/name", "en": "Ivory Tusk"}
 {"id": "GRS/6-6-6/desc", "en": "A pendant of elephant ivory. Defense +12."}
-{"id": "GRS/6-6-7/name", "en": "Bagua Glass"}
+{"id": "GRS/6-6-7/name", "en": "Bagua Disc"}
 {"id": "GRS/6-6-7/desc", "en": "A cinnabar bagua mirror; draws nature's qi. SPI +5, DEF +5."}
-{"id": "GRS/6-6-8/name", "en": "Mercy Flute"}
+{"id": "GRS/6-6-8/name", "en": "Zen Flute"}
 {"id": "GRS/6-6-8/desc", "en": "A nine-hole flute whose song can tame demons. Luck +18."}
-{"id": "GRS/6-6-9/name", "en": "Taiji Glass"}
+{"id": "GRS/6-6-9/name", "en": "Taiji Disc"}
 {"id": "GRS/6-6-9/desc", "en": "A Taiji mirror that draws in yin-yang qi. Spirit +9, Defense +9."}
 {"id": "GRS/6-6-10/name", "en": "Frost Jade"}
 {"id": "GRS/6-6-10/desc", "en": "A jade pendant of carved ice, full of power. Spirit +20."}
-{"id": "GRS/6-6-11/name", "en": "Focus Pearl"}
+{"id": "GRS/6-6-11/name", "en": "Calm Pearl"}
 {"id": "GRS/6-6-11/desc", "en": "A pearl that focuses the mind. Restores 10 MP per turn."}
 {"id": "GRS/6-6-12/name", "en": "Luck Pearl"}
 {"id": "GRS/6-6-12/desc", "en": "Brings great wealth and good fortune. Luck +99."}
-{"id": "GRS/6-6-13/name", "en": "Violet Lamp"}
+{"id": "GRS/6-6-13/name", "en": "Violet Eye"}
 {"id": "GRS/6-6-13/desc", "en": "A Demon Realm relic lost on earth. All stats but HP/MP +15."}
-{"id": "GRS/6-6-14/name", "en": "Heaven Lamp"}
+{"id": "GRS/6-6-14/name", "en": "Heart Lamp"}
 {"id": "GRS/6-6-14/desc", "en": "Gong Gong's talisman. Restores 30 HP/MP per turn. AGI +5."}
-{"id": "GRS/6-6-15/name", "en": "Tyrant Bell"}
+{"id": "GRS/6-6-15/name", "en": "Tyrantbell"}
 {"id": "GRS/6-6-15/desc", "en": "A domineering demon artifact. Attack +100, Spirit -20, Luck -40."}
 {"id": "GRS/6-6-16/name", "en": "Frost Ruyi"}
 {"id": "GRS/6-6-16/desc", "en": "Carved from ancient black ice jade. Restores 30 MP per turn."}
 {"id": "GRS/6-6-17/name", "en": "Star Lamp"}
 {"id": "GRS/6-6-17/desc", "en": "Zhuge Liang's life lamp. Restores 30 HP per turn, but bulky. AGI -3."}
-{"id": "GRS/6-6-18/name", "en": "Three Banes"}
+{"id": "GRS/6-6-18/name", "en": "3 Banes"}
 {"id": "GRS/6-6-18/desc", "en": "A novel about Zhou Chu and the Three Banes. Odd power. DEF +2."}
 {"id": "GRS/6-7-1/name", "en": "Wood Sword"}
 {"id": "GRS/6-7-1/desc", "en": "A carved wooden sword. A kid's toy. Attack +2."}
@@ -1073,27 +1073,27 @@
 {"id": "GRS/6-7-2/desc", "en": "A crude, mass-produced iron sword. Attack +8."}
 {"id": "GRS/6-7-3/name", "en": "Long Sword"}
 {"id": "GRS/6-7-3/desc", "en": "Made to order; finer than an Iron Sword. ATK +18, AGI -3."}
-{"id": "GRS/6-7-4/name", "en": "Black Sword"}
+{"id": "GRS/6-7-4/name", "en": "Black Iron"}
 {"id": "GRS/6-7-4/desc", "en": "Black iron, but the smith was so-so. ATK +32, AGI -10."}
 {"id": "GRS/6-7-5/name", "en": "Blue Steel"}
 {"id": "GRS/6-7-5/desc", "en": "Light, sharp work of a master smith. ATK +45, AGI +5."}
 {"id": "GRS/6-7-6/name", "en": "Longquan"}
 {"id": "GRS/6-7-6/desc", "en": "Forged with Longquan's famous water. ATK +66, AGI +8."}
-{"id": "GRS/6-7-7/name", "en": "Fiendslayer"}
+{"id": "GRS/6-7-7/name", "en": "Fiendbane"}
 {"id": "GRS/6-7-7/desc", "en": "Made for Taoist demon hunters. ATK +72, LCK +10."}
 {"id": "GRS/6-7-8/name", "en": "Dragonsong"}
 {"id": "GRS/6-7-8/desc", "en": "It sings like a dragon when drawn. ATK +88, SPI +6, DEF +4."}
-{"id": "GRS/6-7-9/name", "en": "Dark Dragon"}
+{"id": "GRS/6-7-9/name", "en": "Darkdragon"}
 {"id": "GRS/6-7-9/desc", "en": "Black iron again, but far better made this time. ATK +108, AGI +6."}
 {"id": "GRS/6-7-10/name", "en": "Peachwood"}
 {"id": "GRS/6-7-10/desc", "en": "Ancient peachwood. ATK +80, AGI +5. May Confuse for 3 turns."}
-{"id": "GRS/6-7-11/name", "en": "Sleep Sword"}
+{"id": "GRS/6-7-11/name", "en": "Lull Sword"}
 {"id": "GRS/6-7-11/desc", "en": "Smith unknown. ATK +100, LCK -3. May Sleep for 5 turns."}
 {"id": "GRS/6-7-12/name", "en": "Star Sword"}
 {"id": "GRS/6-7-12/desc", "en": "ATK +120, DEF/SPI +15, AGI/LCK +12. May Silence for 5 turns."}
-{"id": "GRS/6-7-13/name", "en": "Bloodthirst"}
+{"id": "GRS/6-7-13/name", "en": "Bloodlust"}
 {"id": "GRS/6-7-13/desc", "en": "ATK +250, SPI -40, DEF/LCK -30, Max HP -50. It drinks your life!"}
-{"id": "GRS/6-7-14/name", "en": "Nine Dragon"}
+{"id": "GRS/6-7-14/name", "en": "Ninedragon"}
 {"id": "GRS/6-7-14/desc", "en": "Zhang Daoling slew nine dragons with it. Hits all foes. Stats unknown."}
 {"id": "GRS/6-7-15/name", "en": "Dagger"}
 {"id": "GRS/6-7-15/desc", "en": "Handy, and great for peeling fruit! Attack +4."}
@@ -1105,19 +1105,19 @@
 {"id": "GRS/6-7-18/desc", "en": "A short, broad blade that spins. Attack +28, Agility +3."}
 {"id": "GRS/6-7-19/name", "en": "Crescent"}
 {"id": "GRS/6-7-19/desc", "en": "Shaped like a crescent moon. ATK +49, AGI +4, LCK -9."}
-{"id": "GRS/6-7-20/name", "en": "Lotus Blade"}
+{"id": "GRS/6-7-20/name", "en": "Lotusblade"}
 {"id": "GRS/6-7-20/desc", "en": "Fine steel with an upturned tip. ATK +64, AGI +3, SPI +4."}
 {"id": "GRS/6-7-21/name", "en": "Demonwail"}
 {"id": "GRS/6-7-21/desc", "en": "Wails like a demon when drawn. ATK +80, DEF +10, SPI +3."}
-{"id": "GRS/6-7-22/name", "en": "Demonslayer"}
+{"id": "GRS/6-7-22/name", "en": "Slaughter"}
 {"id": "GRS/6-7-22/desc", "en": "Bane of all demons. ATK +124, DEF +30, AGI +5, SPI +6."}
 {"id": "GRS/6-7-23/name", "en": "Soulshift"}
 {"id": "GRS/6-7-23/desc", "en": "Divine! ATK +124, AGI +10. Hits all. May Confuse for 5 turns."}
-{"id": "GRS/6-7-24/name", "en": "Twin Swords"}
+{"id": "GRS/6-7-24/name", "en": "Twin Sword"}
 {"id": "GRS/6-7-24/desc", "en": "A pair of short swords suited to women. Attack +8, Defense +13."}
 {"id": "GRS/6-7-25/name", "en": "Keen Twins"}
 {"id": "GRS/6-7-25/desc", "en": "Twin swords of decent iron. Attack +19, Defense +17."}
-{"id": "GRS/6-7-26/name", "en": "Sister Pair"}
+{"id": "GRS/6-7-26/name", "en": "Sisters"}
 {"id": "GRS/6-7-26/desc", "en": "A matched pair of fine steel swords. Attack +27, Defense +20."}
 {"id": "GRS/6-7-27/name", "en": "Jade Twins"}
 {"id": "GRS/6-7-27/desc", "en": "Exquisite twin swords, brimming with qi. ATK +36, AGI +4, DEF +24."}
@@ -1133,31 +1133,31 @@
 {"id": "GRS/6-7-32/desc", "en": "Lousy swords, but they may Poison for 3 turns! ATK +50, DEF/AGI -10."}
 {"id": "GRS/6-8-1/name", "en": "Plum Dart"}
 {"id": "GRS/6-8-1/desc", "en": "A plum-blossom throwing star. Deals 90 damage."}
-{"id": "GRS/6-8-2/name", "en": "Thunderball"}
+{"id": "GRS/6-8-2/name", "en": "Bolt Bomb"}
 {"id": "GRS/6-8-2/desc", "en": "A gunpowder ball that bursts on impact. Deals 250 damage."}
 {"id": "GRS/6-8-3/name", "en": "Sage Charm"}
 {"id": "GRS/6-8-3/desc", "en": "A Maoshan Taoist charm against monsters. Deals 150 damage."}
-{"id": "GRS/6-8-4/name", "en": "Sleeveblade"}
+{"id": "GRS/6-8-4/name", "en": "Cuff Blade"}
 {"id": "GRS/6-8-4/desc", "en": "A flying blade hidden in the sleeve. Deals 250 damage."}
-{"id": "GRS/6-8-5/name", "en": "Bonepiercer"}
+{"id": "GRS/6-8-5/name", "en": "Bone Nail"}
 {"id": "GRS/6-8-5/desc", "en": "A sharp three-inch iron spike. Deals 250 damage."}
 {"id": "GRS/6-8-6/name", "en": "Unseen Pin"}
 {"id": "GRS/6-8-6/desc", "en": "Fine as a hair; strikes unseen. Deals 400 damage."}
-{"id": "GRS/6-8-7/name", "en": "Soulspinner"}
+{"id": "GRS/6-8-7/name", "en": "Soulspin"}
 {"id": "GRS/6-8-7/desc", "en": "A glowing green weight that spins unseen. 300 damage to all foes."}
 {"id": "GRS/6-8-8/name", "en": "Wind Charm"}
 {"id": "GRS/6-8-8/desc", "en": "A charm that casts Wind magic."}
 {"id": "GRS/6-8-9/name", "en": "Bolt Charm"}
 {"id": "GRS/6-8-9/desc", "en": "A charm that casts Thunder magic."}
-{"id": "GRS/6-8-10/name", "en": "Water Charm"}
+{"id": "GRS/6-8-10/name", "en": "Aqua Charm"}
 {"id": "GRS/6-8-10/desc", "en": "A charm that casts Water magic."}
-{"id": "GRS/6-8-11/name", "en": "Earth Charm"}
+{"id": "GRS/6-8-11/name", "en": "Rock Charm"}
 {"id": "GRS/6-8-11/desc", "en": "A charm that casts Earth magic."}
 {"id": "GRS/6-8-12/name", "en": "Fire Charm"}
 {"id": "GRS/6-8-12/desc", "en": "A charm that casts Fire magic."}
 {"id": "GRS/6-8-13/name", "en": "Snake Egg"}
 {"id": "GRS/6-8-13/desc", "en": "A venomous snake's egg. May Poison for 2 turns."}
-{"id": "GRS/6-8-14/name", "en": "Corpse Meat"}
+{"id": "GRS/6-8-14/name", "en": "Ghoul Meat"}
 {"id": "GRS/6-8-14/desc", "en": "Flesh from a child zombie. May Poison for 2 turns."}
 {"id": "GRS/6-8-15/name", "en": "Sting Egg"}
 {"id": "GRS/6-8-15/desc", "en": "A venomous scorpion's egg. May Poison for 2 turns."}
@@ -1165,31 +1165,31 @@
 {"id": "GRS/6-8-16/desc", "en": "A venomous spider's egg. May Poison for 2 turns."}
 {"id": "GRS/6-8-17/name", "en": "Caltrops"}
 {"id": "GRS/6-8-17/desc", "en": "Poison spikes; fatal if untreated. Deals 80. May Poison for 2 turns."}
-{"id": "GRS/6-8-18/name", "en": "Gall Poison"}
+{"id": "GRS/6-8-18/name", "en": "Gall Venom"}
 {"id": "GRS/6-8-18/desc", "en": "One of the seven great poisons. Poisons a foe for 5 turns."}
 {"id": "GRS/6-8-19/name", "en": "Viper Spit"}
 {"id": "GRS/6-8-19/desc", "en": "A viper's venom. Poisons all foes for 5 turns."}
 {"id": "GRS/6-8-20/name", "en": "Venom Sand"}
 {"id": "GRS/6-8-20/desc", "en": "Gut-rotting iron sand. 150 damage to all. May Poison for 5 turns."}
-{"id": "GRS/6-8-21/name", "en": "Sleep Smoke"}
+{"id": "GRS/6-8-21/name", "en": "Doze Smoke"}
 {"id": "GRS/6-8-21/desc", "en": "Burning knockout incense. Puts foes to Sleep for 5 turns."}
-{"id": "GRS/6-8-22/name", "en": "Heady Bloom"}
+{"id": "GRS/6-8-22/name", "en": "Headybloom"}
 {"id": "GRS/6-8-22/desc", "en": "Its heady scent makes you reel like a drunk. Confuses for 5 turns."}
 {"id": "GRS/6-8-23/name", "en": "Soul Silk"}
 {"id": "GRS/6-8-23/desc", "en": "Venom silk of an ancient spider. Confuses for 5 turns."}
-{"id": "GRS/6-8-24/name", "en": "Bind Banner"}
+{"id": "GRS/6-8-24/name", "en": "Bind Flag"}
 {"id": "GRS/6-8-24/desc", "en": "Binds the soul in the body. Silences for 3 turns."}
 {"id": "GRS/6-8-25/name", "en": "Dragonbind"}
 {"id": "GRS/6-8-25/desc", "en": "Heaven's dragon rope, stolen and sold. Silences for 5 turns."}
-{"id": "GRS/6-8-26/name", "en": "Taiji Charm"}
+{"id": "GRS/6-8-26/name", "en": "Taiji Seal"}
 {"id": "GRS/6-8-26/desc", "en": "Like the Taiji Charm Art. Deals 350 damage. Silences for 3 turns."}
-{"id": "GRS/6-8-27/name", "en": "Lethe Bloom"}
+{"id": "GRS/6-8-27/name", "en": "Lethebloom"}
 {"id": "GRS/6-8-27/desc", "en": "A little blue flower. One sniff puts you to Sleep for 3 turns."}
 {"id": "GRS/6-8-28/name", "en": "Fire Grub"}
 {"id": "GRS/6-8-28/desc", "en": "A bug from the Flaming Mountain. Puts a foe to Sleep for 5 turns."}
-{"id": "GRS/6-8-29/name", "en": "Rahu Needle"}
+{"id": "GRS/6-8-29/name", "en": "Rahu Pin"}
 {"id": "GRS/6-8-29/desc", "en": "A needle on a magic silk thread. Drains 180 HP from a foe."}
-{"id": "GRS/6-8-30/name", "en": "Shiji Pearl"}
+{"id": "GRS/6-8-30/name", "en": "Shiji Bead"}
 {"id": "GRS/6-8-30/desc", "en": "A mystery item tied to Nuwa mending the sky. Use unknown."}
 {"id": "GRS/6-9-1/name", "en": "Bloodwort"}
 {"id": "GRS/6-9-1/desc", "en": "Chew and press on a wound to stop bleeding. Restores 50 HP."}
@@ -1199,25 +1199,25 @@
 {"id": "GRS/6-9-3/desc", "en": "A rare desert plant that heals cuts and bruises. Restores 280 HP."}
 {"id": "GRS/6-9-4/name", "en": "Ruby Salve"}
 {"id": "GRS/6-9-4/desc", "en": "A clear, ruby-red salve that mends bones. Restores 450 HP."}
-{"id": "GRS/6-9-5/name", "en": "Mercy Charm"}
+{"id": "GRS/6-9-5/name", "en": "Heal Charm"}
 {"id": "GRS/6-9-5/desc", "en": "A charm written in Guanyin's holy water. Restores 700 HP."}
 {"id": "GRS/6-9-6/name", "en": "March Pill"}
 {"id": "GRS/6-9-6/desc", "en": "A black pill that gets the blood flowing. Restores 1000 HP."}
 {"id": "GRS/6-9-7/name", "en": "Holy Charm"}
 {"id": "GRS/6-9-7/desc", "en": "A charm with Nuwa's great power. Restores 300 HP to all allies."}
-{"id": "GRS/6-9-8/name", "en": "Mouse Fruit"}
+{"id": "GRS/6-9-8/name", "en": "Mouseberry"}
 {"id": "GRS/6-9-8/desc", "en": "A wild fruit that mice love. Restores 36 MP."}
-{"id": "GRS/6-9-9/name", "en": "Spirit Pill"}
+{"id": "GRS/6-9-9/name", "en": "Mind Pill"}
 {"id": "GRS/6-9-9/desc", "en": "A pill that refreshes the mind. Restores 50 MP."}
 {"id": "GRS/6-9-10/name", "en": "Mum Wine"}
 {"id": "GRS/6-9-10/desc", "en": "Wine steeped with chrysanthemums for ten years. Restores 110 MP."}
-{"id": "GRS/6-9-11/name", "en": "King Beetle"}
+{"id": "GRS/6-9-11/name", "en": "Kingbeetle"}
 {"id": "GRS/6-9-11/desc", "en": "A truly ugly black beetle, but it boosts qi. Restores 250 MP."}
 {"id": "GRS/6-9-12/name", "en": "Holy Peach"}
 {"id": "GRS/6-9-12/desc", "en": "From the Queen Mother's peach orchard. Restores 450 MP."}
-{"id": "GRS/6-9-13/name", "en": "Exotic Rice"}
+{"id": "GRS/6-9-13/name", "en": "Tibet Rice"}
 {"id": "GRS/6-9-13/desc", "en": "Sticky rice from Tibet. Restores 800 MP."}
-{"id": "GRS/6-9-14/name", "en": "Royal Salve"}
+{"id": "GRS/6-9-14/name", "en": "Royal Balm"}
 {"id": "GRS/6-9-14/desc", "en": "The finest palace-recipe remedy. Fully restores MP."}
 {"id": "GRS/6-9-15/name", "en": "Fox Beetle"}
 {"id": "GRS/6-9-15/desc", "en": "A small farmed beetle, full of qi. Restores 240 MP to all allies."}
@@ -1225,7 +1225,7 @@
 {"id": "GRS/6-9-16/desc", "en": "Cheap, everyday food. Restores 10 HP and MP."}
 {"id": "GRS/6-9-17/name", "en": "Roast Pork"}
 {"id": "GRS/6-9-17/desc", "en": "Charcoal-roasted pork in sauce. Restores 45 HP and MP."}
-{"id": "GRS/6-9-18/name", "en": "Royal Honey"}
+{"id": "GRS/6-9-18/name", "en": "Honeycomb"}
 {"id": "GRS/6-9-18/desc", "en": "The finest honey bees make. Restores 150 HP and 50 MP."}
 {"id": "GRS/6-9-19/name", "en": "Farscent"}
 {"id": "GRS/6-9-19/desc", "en": "Wine aged 50 years. Cures Poison. Restores 180 HP and MP."}
@@ -1241,25 +1241,25 @@
 {"id": "GRS/6-9-24/desc", "en": "A charm that drives off sickness and evil. Cures Poison for all allies."}
 {"id": "GRS/6-9-25/name", "en": "Realgar"}
 {"id": "GRS/6-9-25/desc", "en": "A yellow mineral. Cures Poison. Restores 350 HP."}
-{"id": "GRS/6-9-26/name", "en": "Duanwu Wine"}
+{"id": "GRS/6-9-26/name", "en": "Duanwu Ale"}
 {"id": "GRS/6-9-26/desc", "en": "Realgar wine, drunk at the Duanwu festival. Cures Confuse, Sleep."}
 {"id": "GRS/6-9-27/name", "en": "Calm Charm"}
 {"id": "GRS/6-9-27/desc", "en": "Calms the mind and steadies the will. Cures Confuse, Silence, Sleep."}
 {"id": "GRS/6-10-1/name", "en": "Lingzhi"}
 {"id": "GRS/6-10-1/desc", "en": "A lucky fungus that grows on dead wood. Revives with 15% HP."}
-{"id": "GRS/6-10-2/name", "en": "Ransom Lamp"}
+{"id": "GRS/6-10-2/name", "en": "Soul Lamp"}
 {"id": "GRS/6-10-2/desc", "en": "With a spell, it buys souls back from Death. Revives with 30% HP."}
-{"id": "GRS/6-10-3/name", "en": "Mengpo Soup"}
+{"id": "GRS/6-10-3/name", "en": "Lethe Soup"}
 {"id": "GRS/6-10-3/desc", "en": "Washes away the sins of the dead. Revives with 50% HP."}
 {"id": "GRS/6-10-4/name", "en": "Heaven Dew"}
 {"id": "GRS/6-10-4/desc", "en": "81 rare herbs refined for 81 days. Revives with full HP."}
 {"id": "GRS/6-11-1/name", "en": "Goji Berry"}
 {"id": "GRS/6-11-1/desc", "en": "Permanent Max HP +5."}
-{"id": "GRS/6-11-2/name", "en": "Fairy Stone"}
+{"id": "GRS/6-11-2/name", "en": "Fairystone"}
 {"id": "GRS/6-11-2/desc", "en": "A stone from Eight Immortals Cave. Permanent Defense +2."}
 {"id": "GRS/6-11-3/name", "en": "Cereus"}
 {"id": "GRS/6-11-3/desc", "en": "Eat it for a permanent Attack +2."}
-{"id": "GRS/6-11-4/name", "en": "Trial Fruit"}
+{"id": "GRS/6-11-4/name", "en": "Trial Fig"}
 {"id": "GRS/6-11-4/desc", "en": "The first herb Shennong found. Permanent Spirit +3."}
 {"id": "GRS/6-11-5/name", "en": "Gold Cap"}
 {"id": "GRS/6-11-5/desc", "en": "A precious herb of Mt. Sanqing. Permanent Spirit +2."}
@@ -1277,7 +1277,7 @@
 {"id": "GRS/6-11-11/desc", "en": "A Tianshan bodhi seed; fruits every 80 years. Permanent Max MP +3."}
 {"id": "GRS/6-11-12/name", "en": "Ginkgo Nut"}
 {"id": "GRS/6-11-12/desc", "en": "From a ginkgo behind an immortal's home. Permanent Max HP +3."}
-{"id": "GRS/6-11-13/name", "en": "Arhat Smile"}
+{"id": "GRS/6-11-13/name", "en": "Arhat Grin"}
 {"id": "GRS/6-11-13/desc", "en": "Grown by the herb king of the northern frontier. Permanent Spirit +2."}
 {"id": "GRS/6-11-14/name", "en": "Snow Toad"}
 {"id": "GRS/6-11-14/desc", "en": "Lives in an ice cave on Mt. Taibai. Permanent Attack +2, Defense +2."}
@@ -1291,17 +1291,17 @@
 {"id": "GRS/6-12-3/desc", "en": "Its scent makes you feel airy. Raises Agility for 4 turns."}
 {"id": "GRS/6-12-4/name", "en": "Rage Stone"}
 {"id": "GRS/6-12-4/desc", "en": "Sends you berserk. Doubles Attack for 5 turns."}
-{"id": "GRS/6-12-5/name", "en": "Glare Charm"}
+{"id": "GRS/6-12-5/name", "en": "Glow Charm"}
 {"id": "GRS/6-12-5/desc", "en": "Its blinding golden light dazzles foes. Doubles Defense for 7 turns."}
 {"id": "GRS/6-12-6/name", "en": "Galeweed"}
 {"id": "GRS/6-12-6/desc", "en": "A Yingzhou grass. Ride the gale! Doubles Agility for 9 turns."}
-{"id": "GRS/6-13-1/name", "en": "Guide Stone"}
+{"id": "GRS/6-13-1/name", "en": "Guidestone"}
 {"id": "GRS/6-13-1/desc", "en": "Lost in a maze? It takes you back to the start."}
 {"id": "GRS/6-14-1/name", "en": "Cai Letter"}
 {"id": "GRS/6-14-1/desc", "en": "A letter from Granny Cai to Lockmaster."}
 {"id": "GRS/6-14-2/name", "en": "Picklock"}
 {"id": "GRS/6-14-2/desc", "en": "By Jianye's Lockmaster. Opens a locked chest, then breaks."}
-{"id": "GRS/6-14-3/name", "en": "Love Letter"}
+{"id": "GRS/6-14-3/name", "en": "Love Note"}
 {"id": "GRS/6-14-3/desc", "en": "Old Meng's love letter to her boyfriend Ah Jun, who works in Jianye."}
 {"id": "GRS/6-14-4/name", "en": "Gold Key"}
 {"id": "GRS/6-14-4/desc", "en": "Opens the east wing of Li Hu's house."}
@@ -1315,7 +1315,7 @@
 {"id": "GRS/6-14-8/desc", "en": "One of the Four Symbols: the spirit of the Blue Dragon."}
 {"id": "GRS/6-14-9/name", "en": "Tiger Orb"}
 {"id": "GRS/6-14-9/desc", "en": "One of the Four Symbols: the spirit of the White Tiger."}
-{"id": "GRS/6-14-10/name", "en": "Phoenix Orb"}
+{"id": "GRS/6-14-10/name", "en": "Bird Orb"}
 {"id": "GRS/6-14-10/desc", "en": "One of the Four Symbols: the spirit of the Red Phoenix."}
 {"id": "GRS/6-14-11/name", "en": "Turtle Orb"}
 {"id": "GRS/6-14-11/desc", "en": "One of the Four Symbols: the spirit of the Dark Turtle."}
@@ -1323,183 +1323,183 @@
 {"id": "GRS/6-14-12/desc", "en": "A super sword you can't equip. Eat your heart out. Ha ha..."}
 {"id": "GRS/6-14-13/name", "en": "Chaos Urn"}
 {"id": "GRS/6-14-13/desc", "en": "An immortal treasure that can suck in the soul of any living thing."}
-{"id": "MRS/4-1-1/name", "en": "Flying Sword"}
+{"id": "MRS/4-1-1/name", "en": "Flysword"}
 {"id": "MRS/4-1-1/desc", "en": "Drive a sword with your mind. The first sword art. Attacks one foe."}
 {"id": "MRS/4-1-2/name", "en": "Sword Qi"}
 {"id": "MRS/4-1-2/desc", "en": "Sword qi bursts from the blade. Attacks all foes."}
-{"id": "MRS/4-1-3/name", "en": "All Swords As One"}
+{"id": "MRS/4-1-3/name", "en": "All Swords"}
 {"id": "MRS/4-1-3/desc", "en": "Swords strike one foe from every side. Imagine the power!"}
-{"id": "MRS/4-1-4/name", "en": "Peerless Sword"}
+{"id": "MRS/4-1-4/name", "en": "Peerless"}
 {"id": "MRS/4-1-4/desc", "en": "A fairly ordinary sword spell. Attacks all foes."}
-{"id": "MRS/4-1-5/name", "en": "One With the Sword"}
+{"id": "MRS/4-1-5/name", "en": "Sword Unity"}
 {"id": "MRS/4-1-5/desc", "en": "One With the Sword: how many have ever mastered it?"}
-{"id": "MRS/4-1-6/name", "en": "Sky-Rending Sword"}
+{"id": "MRS/4-1-6/name", "en": "Skyrender"}
 {"id": "MRS/4-1-6/desc", "en": "Your own move! A flying sword pierces the sky. Endless power."}
-{"id": "MRS/4-1-7/name", "en": "Divine Demonward"}
+{"id": "MRS/4-1-7/name", "en": "Divine Ward"}
 {"id": "MRS/4-1-7/desc", "en": "From the Demonward Mantra. Slays demons in a single stroke."}
-{"id": "MRS/4-1-8/name", "en": "Sage Charm Art"}
+{"id": "MRS/4-1-8/name", "en": "Sage Charm"}
 {"id": "MRS/4-1-8/desc", "en": "A Maoshan charm attack. Effective on demons and ghosts."}
-{"id": "MRS/4-1-9/name", "en": "Taiji Charm Art"}
+{"id": "MRS/4-1-9/name", "en": "Taiji Charm"}
 {"id": "MRS/4-1-9/desc", "en": "Taiji power forms a mighty charm. May Silence for 3 turns."}
-{"id": "MRS/4-1-10/name", "en": "Demonward Mantra"}
+{"id": "MRS/4-1-10/name", "en": "Demonward"}
 {"id": "MRS/4-1-10/desc", "en": "Deals damage and Confuses foes for 3 turns."}
-{"id": "MRS/4-1-11/name", "en": "Swarm Over Heaven"}
+{"id": "MRS/4-1-11/name", "en": "Sky Swarm"}
 {"id": "MRS/4-1-11/desc", "en": "Allnighter's scariest move. Drains 300 HP from every foe."}
-{"id": "MRS/4-1-12/name", "en": "Twin Sword Slash"}
+{"id": "MRS/4-1-12/name", "en": "Twin Slash"}
 {"id": "MRS/4-1-12/desc", "en": "Twin swords strike side by side. Opening move of the Murong style."}
-{"id": "MRS/4-1-13/name", "en": "Proud Sword Mantra"}
+{"id": "MRS/4-1-13/name", "en": "Proud Sword"}
 {"id": "MRS/4-1-13/desc", "en": "Twin swords fly out one after the other. Attacks one foe."}
-{"id": "MRS/4-1-14/name", "en": "Scissor Sword Qi"}
+{"id": "MRS/4-1-14/name", "en": "Scissor Qi"}
 {"id": "MRS/4-1-14/desc", "en": "Twin swords fly out crossed like scissors. Attacks one foe."}
-{"id": "MRS/4-1-15/name", "en": "Phoenix Dance"}
+{"id": "MRS/4-1-15/name", "en": "Sky Phoenix"}
 {"id": "MRS/4-1-15/desc", "en": "A phoenix soars and rains feather arrows. Attacks all foes."}
 {"id": "MRS/4-1-16/name", "en": "Lone Blade"}
 {"id": "MRS/4-1-16/desc", "en": "A lone blade against the enemy. Attacks one foe."}
-{"id": "MRS/4-1-17/name", "en": "Mad Blade Slash"}
+{"id": "MRS/4-1-17/name", "en": "Mad Slash"}
 {"id": "MRS/4-1-17/desc", "en": "The Lone Blade's berserk form. Attacks one foe."}
-{"id": "MRS/4-1-18/name", "en": "Tyrant Sweep"}
+{"id": "MRS/4-1-18/name", "en": "Tyrant Cut"}
 {"id": "MRS/4-1-18/desc", "en": "One swing of the great blade slays demons. Attacks all foes."}
-{"id": "MRS/4-1-19/name", "en": "Fire Pinwheel"}
+{"id": "MRS/4-1-19/name", "en": "Pinwheel"}
 {"id": "MRS/4-1-19/desc", "en": "Summons a spinning fire lamp. Attacks one foe."}
-{"id": "MRS/4-1-20/name", "en": "Blazing Pinwheel"}
+{"id": "MRS/4-1-20/name", "en": "Blaze Wheel"}
 {"id": "MRS/4-1-20/desc", "en": "Summons spinning fire lamps. Attacks all foes."}
-{"id": "MRS/4-1-21/name", "en": "Skyfire Strike"}
+{"id": "MRS/4-1-21/name", "en": "Skyfire"}
 {"id": "MRS/4-1-21/desc", "en": "Fire falls from the sky. Attacks one foe."}
-{"id": "MRS/4-1-22/name", "en": "Skyfire Blaze"}
+{"id": "MRS/4-1-22/name", "en": "Skyblaze"}
 {"id": "MRS/4-1-22/desc", "en": "Fire falls from the sky. Attacks all foes."}
-{"id": "MRS/4-1-23/name", "en": "Demon Realm Fire"}
+{"id": "MRS/4-1-23/name", "en": "Hellfire"}
 {"id": "MRS/4-1-23/desc", "en": "Calls up hellfire from the Demon Realm. Attacks all foes."}
-{"id": "MRS/4-1-24/name", "en": "Fire Thunder Burst"}
+{"id": "MRS/4-1-24/name", "en": "Firebolt"}
 {"id": "MRS/4-1-24/desc", "en": "Fire and thunder magic combined. Endless power. Attacks all foes."}
-{"id": "MRS/4-1-25/name", "en": "Flame Dragon"}
+{"id": "MRS/4-1-25/name", "en": "Fire Dragon"}
 {"id": "MRS/4-1-25/desc", "en": "A flame dragon dives from the sky. Attacks all foes."}
-{"id": "MRS/4-1-26/name", "en": "Thunder Spell"}
-{"id": "MRS/4-1-27/name", "en": "Five Thunders Burst"}
-{"id": "MRS/4-1-28/name", "en": "Five Thunder Crash"}
+{"id": "MRS/4-1-26/name", "en": "Thunderbolt"}
+{"id": "MRS/4-1-27/name", "en": "Five Bolts"}
+{"id": "MRS/4-1-28/name", "en": "Bolt Crash"}
 {"id": "MRS/4-1-29/name", "en": "Earth Split"}
-{"id": "MRS/4-1-30/name", "en": "Shatter the World"}
+{"id": "MRS/4-1-30/name", "en": "Worldbreak"}
 {"id": "MRS/4-1-31/name", "en": "Wind Spell"}
 {"id": "MRS/4-1-32/name", "en": "Gale"}
 {"id": "MRS/4-1-33/name", "en": "Sandstorm"}
-{"id": "MRS/4-1-34/name", "en": "Sweeping Slash"}
-{"id": "MRS/4-1-35/name", "en": "Qi Sword Finger"}
+{"id": "MRS/4-1-34/name", "en": "Sweep Slash"}
+{"id": "MRS/4-1-35/name", "en": "Qi Finger"}
 {"id": "MRS/4-1-36/name", "en": "Demon Song"}
 {"id": "MRS/4-1-37/name", "en": "Miasma"}
-{"id": "MRS/4-1-38/name", "en": "World-Eating Venom"}
-{"id": "MRS/4-1-39/name", "en": "Snake Soul Curse"}
-{"id": "MRS/4-1-40/name", "en": "Tyrant Lion Roar"}
+{"id": "MRS/4-1-38/name", "en": "World Venom"}
+{"id": "MRS/4-1-39/name", "en": "Snake Curse"}
+{"id": "MRS/4-1-40/name", "en": "Lion Roar"}
 {"id": "MRS/4-1-40/desc", "en": "A mighty roar that lowers foes' Attack and Defense."}
-{"id": "MRS/4-1-41/name", "en": "Fire Dragon Palm"}
-{"id": "MRS/4-1-42/name", "en": "Great Dragon Palm"}
-{"id": "MRS/4-1-43/name", "en": "Five Fiends Strike"}
+{"id": "MRS/4-1-41/name", "en": "Fire Palm"}
+{"id": "MRS/4-1-42/name", "en": "Great Palm"}
+{"id": "MRS/4-1-43/name", "en": "Five Fiends"}
 {"id": "MRS/4-1-44/name", "en": "Bee Swarm"}
 {"id": "MRS/4-1-45/name", "en": "Bug Swarm"}
 {"id": "MRS/4-1-46/name", "en": "Cataclysm"}
-{"id": "MRS/4-1-47/name", "en": "Bone-Rot Curse"}
-{"id": "MRS/4-1-48/name", "en": "Rakshasa Curse"}
-{"id": "MRS/4-1-49/name", "en": "Dark Moon Slash"}
-{"id": "MRS/4-1-50/name", "en": "Great Moon Slash"}
+{"id": "MRS/4-1-47/name", "en": "Bone Rot"}
+{"id": "MRS/4-1-48/name", "en": "Rakshasa"}
+{"id": "MRS/4-1-49/name", "en": "Moon Slash"}
+{"id": "MRS/4-1-50/name", "en": "Full Moon"}
 {"id": "MRS/4-1-51/name", "en": "Ice Spell"}
 {"id": "MRS/4-1-52/name", "en": "Fire Spell"}
 {"id": "MRS/4-1-53/name", "en": "Petal Rain"}
-{"id": "MRS/4-1-54/name", "en": "Flying Rocks"}
-{"id": "MRS/4-1-55/name", "en": "Blood Demon Art"}
+{"id": "MRS/4-1-54/name", "en": "Flying Rock"}
+{"id": "MRS/4-1-55/name", "en": "Blood Art"}
 {"id": "MRS/4-1-56/name", "en": "Earth Claw"}
 {"id": "MRS/4-1-57/name", "en": "Tyrant Bell"}
-{"id": "MRS/4-1-58/name", "en": "Nether Ghost Claw"}
-{"id": "MRS/4-1-59/name", "en": "Demon Palm Sweep"}
-{"id": "MRS/4-1-60/name", "en": "Shifting Storm"}
-{"id": "MRS/4-1-61/name", "en": "Spirit Frenzy"}
-{"id": "MRS/4-1-62/name", "en": "Wailing Spirits"}
+{"id": "MRS/4-1-58/name", "en": "Ghost Claw"}
+{"id": "MRS/4-1-59/name", "en": "Demon Palm"}
+{"id": "MRS/4-1-60/name", "en": "Tempest"}
+{"id": "MRS/4-1-61/name", "en": "Ghost Dance"}
+{"id": "MRS/4-1-62/name", "en": "Ghost Wail"}
 {"id": "MRS/4-1-63/name", "en": "Black Hand"}
 {"id": "MRS/4-1-63/desc", "en": "A poison strike. Poisons one foe for 3 turns."}
-{"id": "MRS/4-1-64/name", "en": "Myriad Poison Hand"}
+{"id": "MRS/4-1-64/name", "en": "Poison Hand"}
 {"id": "MRS/4-1-64/desc", "en": "Fling any poison fast and true. Poisons all foes for 5 turns."}
-{"id": "MRS/4-1-65/name", "en": "Endless Nagging"}
+{"id": "MRS/4-1-65/name", "en": "Nagging"}
 {"id": "MRS/4-1-65/desc", "en": "Confuses a foe for 5 turns."}
 {"id": "MRS/4-1-66/name", "en": "Mystic Echo"}
 {"id": "MRS/4-1-66/desc", "en": "A Murong family secret. Confuses all foes for 3 turns."}
-{"id": "MRS/4-1-67/name", "en": "Five Ghost Chaos"}
+{"id": "MRS/4-1-67/name", "en": "Five Ghosts"}
 {"id": "MRS/4-1-67/desc", "en": "An evil demon art. Confuses a foe for 5 turns."}
-{"id": "MRS/4-1-68/name", "en": "Smiling Dagger"}
+{"id": "MRS/4-1-68/name", "en": "Smile Knife"}
 {"id": "MRS/4-1-68/desc", "en": "A sneaky move that Silences unnoticed, for 4 turns."}
-{"id": "MRS/4-1-69/name", "en": "Eight Gate Lock"}
+{"id": "MRS/4-1-69/name", "en": "Eight Gates"}
 {"id": "MRS/4-1-69/desc", "en": "The power of the Eight Gates. Silences all foes for 10 turns."}
-{"id": "MRS/4-1-70/name", "en": "Return to Dream"}
+{"id": "MRS/4-1-70/name", "en": "Slumber"}
 {"id": "MRS/4-1-70/desc", "en": "A spell of slumber. Puts a foe to Sleep for 4 turns."}
-{"id": "MRS/4-1-71/name", "en": "Weariness Curse"}
+{"id": "MRS/4-1-71/name", "en": "Weary Curse"}
 {"id": "MRS/4-1-71/desc", "en": "Puts all foes to Sleep for 2 turns."}
 {"id": "MRS/4-1-72/name", "en": "Dream Sutra"}
 {"id": "MRS/4-1-72/desc", "en": "Sends a foe into dreams. Puts a foe to Sleep for 5 turns."}
-{"id": "MRS/4-1-73/name", "en": "Sap Strength"}
+{"id": "MRS/4-1-73/name", "en": "Weaken"}
 {"id": "MRS/4-1-73/desc", "en": "Lowers one foe's Attack for 5 turns."}
-{"id": "MRS/4-1-74/name", "en": "Shatter Arms"}
+{"id": "MRS/4-1-74/name", "en": "Break Arms"}
 {"id": "MRS/4-1-74/desc", "en": "Lowers all foes' Attack for 3 turns."}
-{"id": "MRS/4-1-75/name", "en": "Blood Demon Bite"}
+{"id": "MRS/4-1-75/name", "en": "Blood Bite"}
 {"id": "MRS/4-1-75/desc", "en": "Lowers one foe's Defense for 5 turns."}
-{"id": "MRS/4-1-76/name", "en": "Blood Armorbreak"}
+{"id": "MRS/4-1-76/name", "en": "Blood Break"}
 {"id": "MRS/4-1-76/desc", "en": "Lowers all foes' Defense for 5 turns."}
-{"id": "MRS/4-1-77/name", "en": "Phoenix Disarm"}
+{"id": "MRS/4-1-77/name", "en": "Disarm"}
 {"id": "MRS/4-1-77/desc", "en": "Greatly lowers one foe's Defense for 3 turns."}
 {"id": "MRS/4-1-78/name", "en": "Unravel"}
 {"id": "MRS/4-1-78/desc", "en": "Peels away Defense layer by layer. Greatly lowers it for 4 turns."}
-{"id": "MRS/4-1-79/name", "en": "Shadowbind Spell"}
+{"id": "MRS/4-1-79/name", "en": "Shadowbind"}
 {"id": "MRS/4-1-79/desc", "en": "A spell cast on a foe's shadow. Lowers its Agility for 5 turns."}
 {"id": "MRS/4-1-80/name", "en": "Earth Lock"}
 {"id": "MRS/4-1-80/desc", "en": "The earth's pull lowers all foes' Agility for 6 turns."}
-{"id": "MRS/4-1-81/name", "en": "Demonward Sword"}
+{"id": "MRS/4-1-81/name", "en": "Ward Sword"}
 {"id": "MRS/4-1-81/desc", "en": "Zhang Daoling's sword art. Effective on demons and ghosts."}
-{"id": "MRS/4-2-1/name", "en": "Diamond Spell"}
+{"id": "MRS/4-2-1/name", "en": "Diamond"}
 {"id": "MRS/4-2-1/desc", "en": "Raises Defense by 50% for 5 turns."}
 {"id": "MRS/4-2-2/name", "en": "Golden Bell"}
 {"id": "MRS/4-2-2/desc", "en": "Shields you like a golden bell. Doubles Defense for 9 turns."}
-{"id": "MRS/4-2-3/name", "en": "Iron Bastion"}
+{"id": "MRS/4-2-3/name", "en": "Iron Wall"}
 {"id": "MRS/4-2-3/desc", "en": "Doubles all allies' Defense for 5 turns."}
-{"id": "MRS/4-2-4/name", "en": "Moongaze Step"}
+{"id": "MRS/4-2-4/name", "en": "Moon Step"}
 {"id": "MRS/4-2-4/desc", "en": "A light battle step. Raises one ally's Agility by 50% for 5 turns."}
 {"id": "MRS/4-2-5/name", "en": "Wind Walk"}
 {"id": "MRS/4-2-5/desc", "en": "Doubles one ally's Agility for 8 turns."}
-{"id": "MRS/4-2-6/name", "en": "Heavenly War Qi"}
+{"id": "MRS/4-2-6/name", "en": "Heavenly Qi"}
 {"id": "MRS/4-2-6/desc", "en": "Raises one ally's normal attacks for 7 turns."}
-{"id": "MRS/4-2-7/name", "en": "Six Patriarch Sutra"}
+{"id": "MRS/4-2-7/name", "en": "War Sutra"}
 {"id": "MRS/4-2-7/desc", "en": "Doubles all allies' normal attacks for 5 turns."}
 {"id": "MRS/4-3-1/name", "en": "Qi Heal"}
 {"id": "MRS/4-3-1/desc", "en": "A basic Taoist healing art. Restores 75 HP."}
-{"id": "MRS/4-3-2/name", "en": "Mind Restore"}
+{"id": "MRS/4-3-2/name", "en": "Mind Mend"}
 {"id": "MRS/4-3-2/desc", "en": "A mid-level healing art. Restores 400 HP to one ally."}
-{"id": "MRS/4-3-3/name", "en": "Laozi's Revival"}
+{"id": "MRS/4-3-3/name", "en": "Laozi Mend"}
 {"id": "MRS/4-3-3/desc", "en": "Laozi's secret healing art. Restores 1000 HP to one ally."}
 {"id": "MRS/4-3-4/name", "en": "Mercy Spell"}
 {"id": "MRS/4-3-4/desc", "en": "A basic healing art. Restores 150 HP to one ally."}
-{"id": "MRS/4-3-5/name", "en": "Restore Essence"}
+{"id": "MRS/4-3-5/name", "en": "Focus Mend"}
 {"id": "MRS/4-3-5/desc", "en": "A mid-level healing art. Restores 220 HP to one ally."}
-{"id": "MRS/4-3-6/name", "en": "Spirit Return"}
+{"id": "MRS/4-3-6/name", "en": "Spirit Mend"}
 {"id": "MRS/4-3-6/desc", "en": "A high-level healing art. Restores 560 HP to one ally."}
 {"id": "MRS/4-3-7/name", "en": "Fivefold Qi"}
 {"id": "MRS/4-3-7/desc", "en": "A special healing art. Restores 360 HP to all allies."}
-{"id": "MRS/4-3-8/name", "en": "Zewei's Life Mend"}
+{"id": "MRS/4-3-8/name", "en": "Life Mend"}
 {"id": "MRS/4-3-8/desc", "en": "Chen Zewei's cheap heal. Restores 1000 HP to all allies. Cures all."}
-{"id": "MRS/4-3-9/name", "en": "Hundred Fire Forge"}
+{"id": "MRS/4-3-9/name", "en": "Fire Forge"}
 {"id": "MRS/4-3-9/desc", "en": "A powerful art. Restores 900 HP to one ally."}
-{"id": "MRS/4-3-10/name", "en": "Focus Mantra"}
+{"id": "MRS/4-3-10/name", "en": "Focus"}
 {"id": "MRS/4-3-10/desc", "en": "A Sanqing mind art for a mirror-calm mind. Cures Confuse, Sleep."}
-{"id": "MRS/4-3-11/name", "en": "Purify Spell"}
+{"id": "MRS/4-3-11/name", "en": "Purify"}
 {"id": "MRS/4-3-11/desc", "en": "Purifies the body's qi. Cures Poison."}
-{"id": "MRS/4-3-12/name", "en": "Icy Heart Mantra"}
+{"id": "MRS/4-3-12/name", "en": "Icy Heart"}
 {"id": "MRS/4-3-12/desc", "en": "A spell that Cures Confuse."}
-{"id": "MRS/4-3-13/name", "en": "Hua Tuo's Unseal"}
+{"id": "MRS/4-3-13/name", "en": "Unseal"}
 {"id": "MRS/4-3-13/desc", "en": "Hua Tuo's acupoint mantra. Cures Silence on one ally."}
-{"id": "MRS/4-3-14/name", "en": "Ma Shihuang Needles"}
+{"id": "MRS/4-3-14/name", "en": "Acupuncture"}
 {"id": "MRS/4-3-14/desc", "en": "Healer Ma Shihuang's acupuncture. Cures Sleep on one ally."}
-{"id": "MRS/4-3-15/name", "en": "Five Animals Spell"}
+{"id": "MRS/4-3-15/name", "en": "Five Beasts"}
 {"id": "MRS/4-3-15/desc", "en": "Hua Tuo's Five Animals spell. Cures Poison, Confuse, Silence, Sleep."}
-{"id": "MRS/4-4-1/name", "en": "Revive Spell"}
+{"id": "MRS/4-4-1/name", "en": "Revive"}
 {"id": "MRS/4-4-1/desc", "en": "Calls the soul back to the body. Revives with 15% HP."}
 {"id": "MRS/4-4-2/name", "en": "Soul Call"}
 {"id": "MRS/4-4-2/desc", "en": "Finds a stray soul and returns it. Revives with 30% HP."}
 {"id": "MRS/4-4-3/name", "en": "Soul Ransom"}
 {"id": "MRS/4-4-3/desc", "en": "Wins a soul back from Death's envoys. Revives with 50% HP."}
-{"id": "MRS/4-5-1/name", "en": "Dragon Cloud Grab"}
+{"id": "MRS/4-5-1/name", "en": "Dragon Grab"}
 {"id": "MRS/4-5-1/desc", "en": "Steals an item from a foe."}
 {"id": "ARS/3-1-1/name", "en": "Qingfeng"}
 {"id": "ARS/3-1-2/name", "en": "Xiaomei"}

@@ -194,22 +194,22 @@
 {"zh": "比武大会", "en": "tournament", "category": "other", "count": 1, "note": "Wuji: 'you came second-to-last in the tournament'.", "source_ids": ["gut/1-2-2@0159"]}
 {"zh": "告示", "en": "Notice", "category": "ui", "count": 1, "note": "Sign text prefix ('告示：三清山' -> 'Notice: Mt. Sanqing').", "source_ids": ["gut/1-2-43@00f6"]}
 {"zh": "三清山", "en": "Mt. Sanqing", "category": "place", "count": 7, "alt": "Sanqing Mountain", "note": "The hero's mountain (real place).", "source_ids": ["gut/1-1-1@0003", "gut/1-2-1@029b", "gut/1-2-43@006c"]}
-{"zh": "三清山入口", "en": "Sanqing Gate", "category": "place", "count": 3, "alt": "Mt. Sanqing Entrance", "note": "Foot of the mountain path; map + scene name. [MAP/2-1-20]", "source_ids": ["gut/1-2-43@006c", "gut/1-2-44@0069", "MAP/2-1-20/name"]}
+{"zh": "三清山入口", "en": "Sanqing Gate", "category": "place", "count": 3, "alt": "Mt. Sanqing Entrance", "note": "Foot of the mountain path; map + scene name. [MAP/2-1-20]", "source_ids": ["gut/1-2-43@006c", "gut/1-2-44@0069", "MAP/2-1-20/name"], "short": "Hill Gate"}
 {"zh": "无机阁", "en": "Wuji Tower", "category": "place", "count": 6, "alt": "Wuji Pavilion", "note": "Wuji's hall (map 2-2-7/2-2-8). The demo dialogue uses 'Wuji Pavilion' (13), too long for the 12-byte map field. [MAP/2-2-7; MAP/2-2-8]", "source_ids": ["gut/1-1-3@0057", "gut/1-2-2@0100", "MAP/2-2-7/name"]}
 {"zh": "无机洞", "en": "Wuji Cave", "category": "place", "count": 2, "note": "Final scene where Wuji is fought (1-1-4/5).", "source_ids": ["gut/1-1-4@015a", "gut/1-1-5@0074"]}
-{"zh": "百草地", "en": "Herb Meadow", "category": "place", "count": 2, "alt": "Hundred Herbs Field", "note": "Where the hero chases butterflies in the opening. [MAP/2-1-2]", "source_ids": ["gut/1-2-12@0072", "MAP/2-1-2/name"]}
-{"zh": "竹林山道", "en": "Bamboo Path", "category": "place", "count": 2, "alt": "Bamboo Mountain Path", "note": "Mountain path through bamboo. [MAP/2-1-3]", "source_ids": ["gut/1-2-13@0059", "MAP/2-1-3/name"]}
-{"zh": "后山浮桥", "en": "Float Bridge", "category": "place", "count": 2, "alt": "Back-Mountain Floating Bridge", "note": "Floating bridge on the back of the mountain. [MAP/2-1-4]", "source_ids": ["gut/1-2-15@0057", "MAP/2-1-4/name"]}
+{"zh": "百草地", "en": "Herb Meadow", "category": "place", "count": 2, "alt": "Hundred Herbs Field", "note": "Where the hero chases butterflies in the opening. [MAP/2-1-2]", "source_ids": ["gut/1-2-12@0072", "MAP/2-1-2/name"], "short": "Herb Field"}
+{"zh": "竹林山道", "en": "Bamboo Path", "category": "place", "count": 2, "alt": "Bamboo Mountain Path", "note": "Mountain path through bamboo. [MAP/2-1-3]", "source_ids": ["gut/1-2-13@0059", "MAP/2-1-3/name"], "short": "Bamboo Way"}
+{"zh": "后山浮桥", "en": "Float Bridge", "category": "place", "count": 2, "alt": "Back-Mountain Floating Bridge", "note": "Floating bridge on the back of the mountain. [MAP/2-1-4]", "source_ids": ["gut/1-2-15@0057", "MAP/2-1-4/name"], "short": "Pontoon"}
 {"zh": "后山", "en": "back mountain", "category": "place", "count": 6, "alt": "rear hill", "note": "Rear slopes of a mountain (Sanqing; Zhongshan's bell cave).", "source_ids": ["gut/1-2-2@025f", "gut/1-2-15@0057", "gut/1-8-12@005c"]}
-{"zh": "伏魔山道", "en": "Demon Trail", "category": "place", "count": 2, "alt": "Demonbane Trail", "note": "Path to Demon Cave. [MAP/2-1-5]", "source_ids": ["gut/1-2-16@0057", "MAP/2-1-5/name"]}
+{"zh": "伏魔山道", "en": "Demon Trail", "category": "place", "count": 2, "alt": "Demonbane Trail", "note": "Path to Demon Cave. [MAP/2-1-5]", "source_ids": ["gut/1-2-16@0057", "MAP/2-1-5/name"], "short": "Demon Path"}
 {"zh": "伏魔洞口", "en": "Cave Mouth", "category": "place", "count": 2, "alt": "Demon Cave Mouth", "note": "Entrance of Demon Cave. [MAP/2-1-6]", "source_ids": ["gut/1-2-17@0073", "MAP/2-1-6/name"]}
 {"zh": "伏魔洞", "en": "Demon Cave", "category": "place", "count": 8, "alt": "Demonbane Cave (14)", "note": "Cave on Sanqing's back mountain where demons are sealed and the sword is kept. [MAP/2-3-1]", "source_ids": ["gut/1-2-18@0065", "MAP/2-3-1/name", "gut/1-1-1@0003"]}
-{"zh": "三清坟场", "en": "Hill Graves", "category": "place", "count": 2, "alt": "Sanqing Graveyard", "note": "Sanqing's graveyard. [MAP/2-1-7]", "source_ids": ["gut/1-2-14@0055", "MAP/2-1-7/name"]}
+{"zh": "三清坟场", "en": "Hill Graves", "category": "place", "count": 2, "alt": "Sanqing Graveyard", "note": "Sanqing's graveyard. [MAP/2-1-7]", "source_ids": ["gut/1-2-14@0055", "MAP/2-1-7/name"], "short": "Cemetery"}
 {"zh": "前山步云桥", "en": "Cloudstep", "category": "place", "count": 1, "alt": "Front-Mountain Cloudstep Bridge", "note": "Map name of the front-mountain bridge (same place as scene 步云桥). [MAP/2-1-8]", "source_ids": ["MAP/2-1-8/name"]}
 {"zh": "步云桥", "en": "Cloudstep", "category": "place", "count": 2, "alt": "Cloudstep Bridge", "note": "Bridge maze on the front of the mountain ('stepping on clouds').", "source_ids": ["gut/1-2-31@0057", "MAP/2-1-8/name"]}
 {"zh": "前山", "en": "front mountain", "category": "place", "count": 1, "note": "Appears in: map name.", "source_ids": ["MAP/2-1-8/name"]}
 {"zh": "摩天顶", "en": "Sky Summit", "category": "place", "count": 2, "alt": "Skytop", "note": "Peak with the Four Symbols Godslayer Array. [MAP/2-1-9]", "source_ids": ["gut/1-2-32@00c2", "MAP/2-1-9/name"]}
-{"zh": "观星亭", "en": "Star Gazebo", "category": "place", "count": 2, "alt": "Stargazing Pavilion", "note": "Pavilion on the bridge maze (locked; needs a Picklock). [MAP/2-1-12]", "source_ids": ["gut/1-2-33@0055", "MAP/2-1-12/name"]}
+{"zh": "观星亭", "en": "Star Gazebo", "category": "place", "count": 2, "alt": "Stargazing Pavilion", "note": "Pavilion on the bridge maze (locked; needs a Picklock). [MAP/2-1-12]", "source_ids": ["gut/1-2-33@0055", "MAP/2-1-12/name"], "short": "Starwatch"}
 {"zh": "通用横桥", "en": "Bridge H", "category": "place", "count": 1, "note": "Generic horizontal bridge map (dev label). [MAP/2-1-10]", "source_ids": ["MAP/2-1-10/name"]}
 {"zh": "通用竖桥", "en": "Bridge V", "category": "place", "count": 1, "note": "Generic vertical bridge map (dev label). [MAP/2-1-11]", "source_ids": ["MAP/2-1-11/name"]}
 {"zh": "横桥", "en": "Bridge", "category": "place", "count": 4, "note": "Scene name of horizontal bridges (player sees no H/V distinction).", "source_ids": ["gut/1-2-34@0057", "gut/1-6-12@0057", "gut/1-14-6@0057"]}
@@ -228,15 +228,15 @@
 {"zh": "老孟家", "en": "Old Meng's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-5@005e"]}
 {"zh": "疯子家", "en": "Madman's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-6@005e"]}
 {"zh": "阿霞家", "en": "Ah Xia's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-7@0067"]}
-{"zh": "蔡婆家", "en": "Granny Cai's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-8@0067"]}
+{"zh": "蔡婆家", "en": "Granny Cai's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-3-8@0067"], "short": "Granny's"}
 {"zh": "野外斜路", "en": "Wild Slope", "category": "place", "count": 1, "note": "Map name (diagonal road). [MAP/2-1-25]", "source_ids": ["MAP/2-1-25/name"]}
 {"zh": "转折路口", "en": "Crossroads", "category": "place", "count": 13, "note": "Junction maps/scenes (numbered maps 2-1-26..30).", "source_ids": ["gut/1-2-48@0057", "gut/1-2-49@0057", "gut/1-2-50@005b"]}
 {"zh": "愚人居", "en": "Fool's Hut", "category": "place", "count": 2, "alt": "Fools' Lodge", "note": "Hideout of the dev-team cameos. [MAP/2-1-31]", "source_ids": ["gut/1-2-52@005e", "MAP/2-1-31/name"]}
 {"zh": "瘴气林", "en": "Miasma Wood", "category": "place", "count": 4, "alt": "Miasma Forest", "note": "Poison forest south of Heartsease (needs both Reed Mails).", "source_ids": ["gut/1-3-9@01f7", "gut/1-4-2@00c9", "gut/1-4-8@00fb"]}
 {"zh": "毒瘴林", "en": "Miasma Wood", "category": "place", "count": 2, "note": "Same forest (毒瘴林 vs 瘴气林: two names, one place).", "source_ids": ["gut/1-4-1@0062", "MAP/2-1-33/name"]}
-{"zh": "毒瘴林入口", "en": "Miasma Gate", "category": "place", "count": 2, "alt": "Miasma Wood Entrance", "note": "Entrance of the Miasma Wood. [MAP/2-1-33]", "source_ids": ["gut/1-4-1@0062", "MAP/2-1-33/name"]}
+{"zh": "毒瘴林入口", "en": "Miasma Gate", "category": "place", "count": 2, "alt": "Miasma Wood Entrance", "note": "Entrance of the Miasma Wood. [MAP/2-1-33]", "source_ids": ["gut/1-4-1@0062", "MAP/2-1-33/name"], "short": "Miasma"}
 {"zh": "猎人居", "en": "Hunter's Lodge", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-4-2@005e"]}
-{"zh": "森林道路", "en": "Forest Road", "category": "place", "count": 6, "note": "Map 2-1-34/2-1-38 and scenes (森林道路2 = Forest Road 2). [MAP/2-1-34; MAP/2-1-38]", "source_ids": ["gut/1-4-3@006e", "gut/1-6-3@006e", "gut/1-14-7@0082"]}
+{"zh": "森林道路", "en": "Forest Road", "category": "place", "count": 6, "note": "Map 2-1-34/2-1-38 and scenes (森林道路2 = Forest Road 2). [MAP/2-1-34; MAP/2-1-38]", "source_ids": ["gut/1-4-3@006e", "gut/1-6-3@006e", "gut/1-14-7@0082"], "short": "Forest Rd"}
 {"zh": "人蛇窟", "en": "Snakeman Den", "category": "place", "count": 2, "note": "Lair of the Snake Demon.", "source_ids": ["gut/1-4-5@0058", "MAP/2-1-35/name"]}
 {"zh": "人蛇窟入口", "en": "Snake Gate", "category": "place", "count": 2, "alt": "Snakeman Den Entrance", "note": "Entrance of the Snakeman Den. [MAP/2-1-35]", "source_ids": ["gut/1-4-5@0058", "MAP/2-1-35/name"]}
 {"zh": "蛇窟", "en": "Snake Den", "category": "place", "count": 10, "note": "Appears in: scene name, map name.", "source_ids": ["gut/1-4-5@0058", "gut/1-4-6@0138", "gut/1-4-7@009c"]}
@@ -249,27 +249,27 @@
 {"zh": "李虎家主房", "en": "Li Hu's Hall", "category": "place", "count": 1, "note": "Map name. [MAP/2-2-20]", "source_ids": ["MAP/2-2-20/name"]}
 {"zh": "老王家", "en": "Old Wang's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-5-2@0079"]}
 {"zh": "鲁斧家", "en": "Lu Fu's House", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-5-13@005e"]}
-{"zh": "周处庙", "en": "Zhou Shrine", "category": "place", "count": 2, "alt": "Zhou Chu Shrine", "note": "Zhou Chu's shrine in Nanbei Village. [MAP/2-1-36]", "source_ids": ["gut/1-10-2@0057", "MAP/2-1-36/name"]}
+{"zh": "周处庙", "en": "Zhou Shrine", "category": "place", "count": 2, "alt": "Zhou Chu Shrine", "note": "Zhou Chu's shrine in Nanbei Village. [MAP/2-1-36]", "source_ids": ["gut/1-10-2@0057", "MAP/2-1-36/name"], "short": "Shrine"}
 {"zh": "建业城", "en": "Jianye", "category": "place", "count": 4, "alt": "Jianye City", "note": "City (historical name of Nanjing). [MAP/2-1-39]", "source_ids": ["gut/1-7-1@0076", "MAP/2-1-39/name", "gut/1-3-5@00da"]}
 {"zh": "建业客栈", "en": "Jianye Inn", "category": "place", "count": 2, "note": "Appears in: scene name, map name. [MAP/2-2-22]", "source_ids": ["gut/1-7-2@005d", "MAP/2-2-22/name"]}
 {"zh": "新野客栈", "en": "Xinye Inn", "category": "place", "count": 1, "note": "Map 2-2-21; the scene shown is 建业客栈 - leftover dev name, flagged. [MAP/2-2-21]", "source_ids": ["MAP/2-2-21/name"]}
 {"zh": "钟山", "en": "Mt. Zhong", "category": "place", "count": 18, "alt": "Zhongshan; Bell Mountain", "note": "Mountain of Chongxu's abbey, where the Tyrant Bell is kept (real Zhongshan near Nanjing).", "source_ids": ["gut/1-2-2@056d", "gut/1-3-11@00b7", "gut/1-6-13@0061"]}
 {"zh": "钟山入口", "en": "Zhong Gate", "category": "place", "count": 2, "alt": "Mt. Zhong Entrance", "note": "Map + scene name. [MAP/2-1-40]", "source_ids": ["gut/1-6-13@0061", "MAP/2-1-40/name"]}
-{"zh": "钟山道院", "en": "Zhong Abbey", "category": "place", "count": 2, "alt": "Zhongshan Abbey", "note": "Chongxu's abbey. [MAP/2-1-44]", "source_ids": ["gut/1-8-1@0088", "MAP/2-1-44/name"]}
-{"zh": "参虚阁", "en": "Canxu Tower", "category": "place", "count": 1, "alt": "Canxu Pavilion", "note": "Zhongshan's main hall (cf. Wuji Tower).", "source_ids": ["gut/1-8-3@00c3"]}
+{"zh": "钟山道院", "en": "Zhong Abbey", "category": "place", "count": 2, "alt": "Zhongshan Abbey", "note": "Chongxu's abbey. [MAP/2-1-44]", "source_ids": ["gut/1-8-1@0088", "MAP/2-1-44/name"], "short": "Abbey"}
+{"zh": "参虚阁", "en": "Canxu Tower", "category": "place", "count": 1, "alt": "Canxu Pavilion", "note": "Zhongshan's main hall (cf. Wuji Tower).", "source_ids": ["gut/1-8-3@00c3"], "short": "Canxu Hall"}
 {"zh": "冲虚居", "en": "Chongxu's Room", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-8-6@005e"]}
 {"zh": "弟子居", "en": "Dormitory", "category": "place", "count": 4, "note": "Disciples' quarters (Zhongshan).", "source_ids": ["gut/1-8-7@0055", "gut/1-2-6@0067", "gut/1-2-8@0067"]}
 {"zh": "普通弟子居", "en": "Dormitory", "category": "place", "count": 3, "note": "Sanqing disciples' quarters (map 2-2-4; scenes 普通弟子居1/2 = Dormitory 1/2). [MAP/2-2-4]", "source_ids": ["MAP/2-2-4/name", "gut/1-2-6@0067", "gut/1-2-8@0067"]}
 {"zh": "师傅居", "en": "Abbot's Room", "category": "place", "count": 2, "alt": "Master's Room", "note": "Wuji's quarters (map 2-2-1). \"Master's Room\" is 13 bytes, over the 12-byte map field. [MAP/2-2-1]", "source_ids": ["gut/1-2-5@0070", "MAP/2-2-1/name"]}
-{"zh": "大师兄居", "en": "Senior Room", "category": "place", "count": 2, "alt": "Big Brother's Room", "note": "Eldest disciple's room. [MAP/2-2-2]", "source_ids": ["gut/1-2-7@0067", "MAP/2-2-2/name"]}
+{"zh": "大师兄居", "en": "Senior Room", "category": "place", "count": 2, "alt": "Big Brother's Room", "note": "Eldest disciple's room. [MAP/2-2-2]", "source_ids": ["gut/1-2-7@0067", "MAP/2-2-2/name"], "short": "Brother's"}
 {"zh": "清风居", "en": "My Room", "category": "place", "count": 2, "alt": "Qingfeng's Room", "note": "The hero's own room (rest point). [MAP/2-2-3]", "source_ids": ["gut/1-2-10@0082", "MAP/2-2-3/name"]}
 {"zh": "三清宫厨房", "en": "Kitchen", "category": "place", "count": 2, "note": "Appears in: scene name, map name. [MAP/2-2-5]", "source_ids": ["gut/1-2-11@0070", "MAP/2-2-5/name"]}
 {"zh": "厨房", "en": "Kitchen", "category": "place", "count": 7, "note": "Appears in: scene name, map name.", "source_ids": ["gut/1-8-8@0055", "gut/1-2-11@0070", "gut/1-3-10@0055"]}
 {"zh": "三清宫药房", "en": "Dispensary", "category": "place", "count": 2, "alt": "Sanqing Dispensary", "note": "Temple medicine shop. [MAP/2-2-9]", "source_ids": ["gut/1-2-3@0057", "MAP/2-2-9/name"]}
 {"zh": "药房", "en": "Dispensary", "category": "place", "count": 3, "note": "Zhongshan medicine shop.", "source_ids": ["gut/1-8-4@0057", "gut/1-2-3@0057", "MAP/2-2-9/name"]}
-{"zh": "三清宫丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Alchemy room (scene).", "source_ids": ["gut/1-2-4@0067"]}
+{"zh": "三清宫丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Alchemy room (scene).", "source_ids": ["gut/1-2-4@0067"], "short": "Elixir Rm"}
 {"zh": "三清练丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Map 2-2-6 (练 for 炼 typo). [MAP/2-2-6]", "source_ids": ["MAP/2-2-6/name"]}
-{"zh": "炼丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Zhongshan alchemy room.", "source_ids": ["gut/1-8-5@005e"]}
+{"zh": "炼丹房", "en": "Elixir Room", "category": "place", "count": 1, "note": "Zhongshan alchemy room.", "source_ids": ["gut/1-8-5@005e"], "short": "Elixir Rm"}
 {"zh": "霸王钟洞口", "en": "Bell Cave Mouth", "category": "place", "count": 1, "note": "Scene at Zhongshan.", "source_ids": ["gut/1-8-2@0230"]}
 {"zh": "霸王钟洞", "en": "Bell Cave", "category": "place", "count": 2, "alt": "Tyrant Bell Cave", "note": "Cave where the Tyrant Bell is kept.", "source_ids": ["gut/1-8-10@008b", "gut/1-8-2@0230"]}
 {"zh": "霸王迷宫", "en": "Bell Maze", "category": "place", "count": 1, "alt": "Tyrant Maze", "note": "Maze before the bell cave.", "source_ids": ["gut/1-8-9@0146"]}
@@ -283,31 +283,31 @@
 {"zh": "城隍庙", "en": "City God Temple", "category": "place", "count": 1, "note": "Where the Ghost King waits, south of Fengdu.", "source_ids": ["gut/1-11-10@017c"]}
 {"zh": "南山", "en": "South Hill", "category": "place", "count": 4, "alt": "Nanshan", "note": "Lair of the White Tiger.", "source_ids": ["gut/1-10-2@00c0", "gut/1-12-1@0057", "gut/1-12-2@011b"]}
 {"zh": "南山入口", "en": "South Hill Gate", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-1@0057"]}
-{"zh": "南山迷宫", "en": "South Hill Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-2@011b"]}
-{"zh": "南山虎穴", "en": "Tiger's Den", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-3@024d"]}
+{"zh": "南山迷宫", "en": "South Hill Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-2@011b"], "short": "Hill Maze"}
+{"zh": "南山虎穴", "en": "Tiger's Den", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-12-3@024d"], "short": "Tiger Den"}
 {"zh": "北海", "en": "North Sea", "category": "place", "count": 22, "note": "Lair of the Blue Dragon (whirlpool entrance). [MAP/2-1-45]", "source_ids": ["gut/1-6-14@0072", "MAP/2-1-45/name", "gut/1-10-2@00c0"]}
-{"zh": "北海迷宫", "en": "North Sea Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-13-1@0124"]}
-{"zh": "北海龙潭", "en": "Dragon Pool", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-13-2@021d"]}
+{"zh": "北海迷宫", "en": "North Sea Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-13-1@0124"], "short": "Sea Maze"}
+{"zh": "北海龙潭", "en": "Dragon Pool", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-13-2@021d"], "short": "Dragon Den"}
 {"zh": "鹤鸣山", "en": "Mt. Heming", "category": "place", "count": 8, "alt": "Crane Cry Mountain", "note": "Tiandao's mountain (real Heming Shan, birthplace of the Five Pecks of Rice).", "source_ids": ["gut/1-6-1@0300", "gut/1-11-10@05c4", "gut/1-14-1@00c2"]}
 {"zh": "鹤鸣山入口", "en": "Heming Gate", "category": "place", "count": 1, "note": "Map name. [MAP/2-1-41]", "source_ids": ["MAP/2-1-41/name"]}
-{"zh": "鹤鸣山脚", "en": "Heming Foot", "category": "place", "count": 1, "note": "Scene name: devastated village at the foot of the mountain.", "source_ids": ["gut/1-14-1@00c2"]}
-{"zh": "鹤鸣山洞口", "en": "Heming Cave", "category": "place", "count": 2, "alt": "Heming Cave Mouth", "note": "Map + scene: cave mouth where Tiandao and the Red Phoenix die. [MAP/2-1-46]", "source_ids": ["gut/1-14-8@009a", "MAP/2-1-46/name"]}
-{"zh": "鹤鸣山洞", "en": "Heming Cavern", "category": "place", "count": 3, "note": "Inside the cave (Dark Turtle).", "source_ids": ["gut/1-14-9@00c3", "gut/1-14-8@009a", "MAP/2-1-46/name"]}
+{"zh": "鹤鸣山脚", "en": "Heming Foot", "category": "place", "count": 1, "note": "Scene name: devastated village at the foot of the mountain.", "source_ids": ["gut/1-14-1@00c2"], "short": "Mt. Heming"}
+{"zh": "鹤鸣山洞口", "en": "Heming Cave", "category": "place", "count": 2, "alt": "Heming Cave Mouth", "note": "Map + scene: cave mouth where Tiandao and the Red Phoenix die. [MAP/2-1-46]", "source_ids": ["gut/1-14-8@009a", "MAP/2-1-46/name"], "short": "Cave Mouth"}
+{"zh": "鹤鸣山洞", "en": "Heming Cavern", "category": "place", "count": 3, "note": "Inside the cave (Dark Turtle).", "source_ids": ["gut/1-14-9@00c3", "gut/1-14-8@009a", "MAP/2-1-46/name"], "short": "Inner Cave"}
 {"zh": "陵墓迷宫", "en": "Tomb Maze", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-14-10@008e"]}
-{"zh": "天师陵墓", "en": "Sage's Tomb", "category": "place", "count": 2, "alt": "Tomb of the Celestial Master", "note": "Tomb of the Celestial Master. [MAP/2-3-11]", "source_ids": ["gut/1-14-11@004a", "MAP/2-3-11/name"]}
+{"zh": "天师陵墓", "en": "Sage's Tomb", "category": "place", "count": 2, "alt": "Tomb of the Celestial Master", "note": "Tomb of the Celestial Master. [MAP/2-3-11]", "source_ids": ["gut/1-14-11@004a", "MAP/2-3-11/name"], "short": "Sage Tomb"}
 {"zh": "灯洞", "en": "Lamp Cave", "category": "place", "count": 12, "note": "Eight lamp caves inside Demon Cave (maps 2-3-2..5, scenes 灯洞1..8).", "source_ids": ["gut/1-2-19@005e", "gut/1-2-20@008b", "gut/1-2-21@0074"]}
 {"zh": "通用山洞", "en": "Cave", "category": "place", "count": 1, "note": "Generic cave map (dev label). [MAP/2-3-9]", "source_ids": ["MAP/2-3-9/name"]}
 {"zh": "通用迷宫", "en": "Maze", "category": "place", "count": 1, "note": "Generic maze map (dev label). [MAP/2-3-10]", "source_ids": ["MAP/2-3-10/name"]}
 {"zh": "杂货店", "en": "Goods Shop", "category": "place", "count": 6, "alt": "General Store", "note": "General store. [MAP/2-2-16]", "source_ids": ["gut/1-3-3@0065", "gut/1-5-7@0065", "gut/1-9-8@0065"]}
 {"zh": "杂货铺", "en": "Goods Shop", "category": "place", "count": 1, "note": "Same as 杂货店 (Jianye).", "source_ids": ["gut/1-7-4@0065"]}
-{"zh": "武器店", "en": "Weapon Shop", "category": "place", "count": 7, "note": "Appears in: scene name, map name. [MAP/2-2-17]", "source_ids": ["gut/1-3-2@006e", "gut/1-5-11@0065", "gut/1-7-3@0065"]}
+{"zh": "武器店", "en": "Weapon Shop", "category": "place", "count": 7, "note": "Appears in: scene name, map name. [MAP/2-2-17]", "source_ids": ["gut/1-3-2@006e", "gut/1-5-11@0065", "gut/1-7-3@0065"], "short": "Arms Shop"}
 {"zh": "药店", "en": "Herb Shop", "category": "place", "count": 5, "note": "Appears in: scene name, ARS name.", "source_ids": ["gut/1-5-3@0057", "gut/1-9-7@0057", "gut/1-10-6@0057"]}
 {"zh": "药铺", "en": "Herb Shop", "category": "place", "count": 2, "note": "Appears in: scene name, map name. [MAP/2-2-18]", "source_ids": ["gut/1-7-6@0057", "MAP/2-2-18/name"]}
 {"zh": "当铺", "en": "Pawnshop", "category": "place", "count": 6, "note": "Appears in: scene name, dialogue, map name. [MAP/2-2-19]", "source_ids": ["gut/1-5-9@0057", "gut/1-7-5@0057", "gut/1-9-9@0057"]}
 {"zh": "客栈", "en": "Inn", "category": "place", "count": 11, "note": "Appears in: scene name, dialogue, map name.", "source_ids": ["gut/1-5-10@0055", "gut/1-9-5@0059", "gut/1-7-1@00cd"]}
 {"zh": "小客栈", "en": "Small Inn", "category": "place", "count": 3, "note": "Appears in: scene name, map name. [MAP/2-2-26]", "source_ids": ["gut/1-10-9@0057", "gut/1-11-4@0062", "MAP/2-2-26/name"]}
 {"zh": "客栈客房", "en": "Guest Room", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-7-12@0055"]}
-{"zh": "客栈厨房", "en": "Inn Kitchen", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-7-13@0055"]}
+{"zh": "客栈厨房", "en": "Inn Kitchen", "category": "place", "count": 1, "note": "Appears in: scene name.", "source_ids": ["gut/1-7-13@0055"], "short": "Kitchen"}
 {"zh": "民宅", "en": "House", "category": "place", "count": 16, "note": "Generic houses (scenes 民宅1..5 = House 1..5).", "source_ids": ["gut/1-9-6@0055", "gut/1-9-10@0055", "gut/1-10-7@0055"]}
 {"zh": "农舍", "en": "Farmhouse", "category": "place", "count": 6, "note": "Map names (农舍1..4 numbered). [MAP/2-2-23; MAP/2-2-24]", "source_ids": ["MAP/2-2-23/name", "MAP/2-2-24/name", "MAP/2-2-10/name"]}
 {"zh": "豪华居", "en": "Mansion", "category": "place", "count": 1, "note": "Map name. [MAP/2-2-25]", "source_ids": ["MAP/2-2-25/name"]}
@@ -383,15 +383,15 @@
 {"zh": "头巾", "en": "Headscarf", "category": "armor", "count": 2, "note": "Head. [GRS/6-1-2 desc: 普通人戴的头巾，不但可以防灰，还有保暖作用。防御+2。]", "source_ids": ["GRS/6-1-2/name", "GRS/6-1-2/desc"]}
 {"zh": "避雨帽", "en": "Rain Hat", "category": "armor", "count": 1, "note": "Head. Leather rain hat. [GRS/6-1-3 desc: 牛皮制成的帽子，用来防雨防雪。防御+4。]", "source_ids": ["GRS/6-1-3/name"]}
 {"zh": "法帽", "en": "Taoist Hat", "category": "armor", "count": 1, "note": "Head. Worn by accomplished Taoists. [GRS/6-1-4 desc: 有修为的道士所戴的帽子。防御+11、灵力+3、避咒封。]", "source_ids": ["GRS/6-1-4/name"]}
-{"zh": "将军盔", "en": "Battle Helm", "category": "armor", "count": 1, "alt": "General's Helm", "note": "Head. A general's helmet. [GRS/6-1-5 desc: 是立下过赫赫战功的大将，所护头的东西。防御+28、身法+5、灵力+3、吉运+3。]", "source_ids": ["GRS/6-1-5/name"]}
-{"zh": "紫金冠", "en": "Royal Crown", "category": "armor", "count": 1, "alt": "Purple-Gold Crown", "note": "Head. Purple-gold crown, top-tier. [GRS/6-1-6 desc: 此物本应天上有，人间能得几回见，绝对的极品。真气上限+15、攻击-4、防御+20、灵力+12、避乱、避眠。]", "source_ids": ["GRS/6-1-6/name"]}
+{"zh": "将军盔", "en": "Battle Helm", "category": "armor", "count": 1, "alt": "General's Helm", "note": "Head. A general's helmet. [GRS/6-1-5 desc: 是立下过赫赫战功的大将，所护头的东西。防御+28、身法+5、灵力+3、吉运+3。]", "source_ids": ["GRS/6-1-5/name"], "short": "War Helm"}
+{"zh": "紫金冠", "en": "Royal Crown", "category": "armor", "count": 1, "alt": "Purple-Gold Crown", "note": "Head. Purple-gold crown, top-tier. [GRS/6-1-6 desc: 此物本应天上有，人间能得几回见，绝对的极品。真气上限+15、攻击-4、防御+20、灵力+12、避乱、避眠。]", "source_ids": ["GRS/6-1-6/name"], "short": "Gold Crown"}
 {"zh": "彩带", "en": "Ribbon", "category": "armor", "count": 1, "note": "Head. Colored ribbon (girls). [GRS/6-1-7 desc: 彩色的布条，女孩子比较喜欢。防御+2。]", "source_ids": ["GRS/6-1-7/name"]}
-{"zh": "头饰", "en": "Crane Clasp", "category": "armor", "count": 1, "alt": "Hair Ornament", "note": "Head. Silver crane-shaped hair ornament. [GRS/6-1-8 desc: 银制的仙鹤形状发饰。防御+3。]", "source_ids": ["GRS/6-1-8/name"]}
+{"zh": "头饰", "en": "Crane Clasp", "category": "armor", "count": 1, "alt": "Hair Ornament", "note": "Head. Silver crane-shaped hair ornament. [GRS/6-1-8 desc: 银制的仙鹤形状发饰。防御+3。]", "source_ids": ["GRS/6-1-8/name"], "short": "Crane Pin"}
 {"zh": "头簪", "en": "Hairpin", "category": "armor", "count": 3, "note": "Head. [GRS/6-1-9 desc: 头上插的发簪。防御+5。]", "source_ids": ["GRS/6-1-9/name", "GRS/6-1-11/name", "GRS/6-1-11/desc"]}
 {"zh": "天鸡毛", "en": "Dawn Plume", "category": "armor", "count": 1, "alt": "Sky Rooster Feather", "note": "Head. Feather of the heavenly rooster that wakes the sun. [GRS/6-1-10 desc: 每天叫醒太阳的天鸡身上的毛。防御+2  灵力+2  吉运+2。]", "source_ids": ["GRS/6-1-10/name"]}
-{"zh": "宝石头簪", "en": "Gem Hairpin", "category": "armor", "count": 1, "note": "Head. Sapphire hairpin. [GRS/6-1-11 desc: 镶有蓝宝石的头簪。防御+9、吉运+6。]", "source_ids": ["GRS/6-1-11/name"]}
+{"zh": "宝石头簪", "en": "Gem Hairpin", "category": "armor", "count": 1, "note": "Head. Sapphire hairpin. [GRS/6-1-11 desc: 镶有蓝宝石的头簪。防御+9、吉运+6。]", "source_ids": ["GRS/6-1-11/name"], "short": "Gem Pin"}
 {"zh": "避邪冠", "en": "Ward Crown", "category": "armor", "count": 1, "note": "Head. 避邪 'ward off evil' -> Ward. [GRS/6-1-12 desc: 黎族姑娘戴的头冠，据传可护身避邪。防御+10、避乱。]", "source_ids": ["GRS/6-1-12/name"]}
-{"zh": "蓝玉冠", "en": "Azure Crown", "category": "armor", "count": 1, "alt": "Blue Jade Crown", "note": "Head. Silver crown with blue jade. [GRS/6-1-13 desc: 以白银铸成，外饰以珍贵蓝玉石。防御+18 灵力+6 吉运+4。]", "source_ids": ["GRS/6-1-13/name"]}
+{"zh": "蓝玉冠", "en": "Azure Crown", "category": "armor", "count": 1, "alt": "Blue Jade Crown", "note": "Head. Silver crown with blue jade. [GRS/6-1-13 desc: 以白银铸成，外饰以珍贵蓝玉石。防御+18 灵力+6 吉运+4。]", "source_ids": ["GRS/6-1-13/name"], "short": "Jade Crown"}
 {"zh": "天蚕丝带", "en": "Silk Band", "category": "armor", "count": 1, "alt": "Sky Silk Band", "note": "Head. Heavenly-silkworm silk band. [GRS/6-1-14 desc: 以极珍贵的天蚕丝织成，轻薄柔韧。防御+25、身法+8、避封。]", "source_ids": ["GRS/6-1-14/name"]}
 {"zh": "防毒面罩", "en": "Toxin Mask", "category": "armor", "count": 1, "alt": "Gas Mask", "note": "Head. Weird-looking anti-poison mask. [GRS/6-1-15 desc: 造型怪异，能防毒的面罩。]", "source_ids": ["GRS/6-1-15/name"]}
 {"zh": "白衣", "en": "White Robe", "category": "armor", "count": 2, "note": "Body. [GRS/6-2-1 desc: 粗布缝制的交领长袖白衣。防御+3。]", "source_ids": ["GRS/6-2-1/name", "GRS/6-2-1/desc"]}
@@ -406,94 +406,94 @@
 {"zh": "渺影衣", "en": "Shadowsilk", "category": "armor", "count": 1, "note": "Body. [GRS/6-2-10 desc: 使用天蚕丝纺成的衣服，轻盈且防御效果不错。防御+24、身法+8。]", "source_ids": ["GRS/6-2-10/name"]}
 {"zh": "火羽衣", "en": "Flame Robe", "category": "armor", "count": 1, "alt": "Fire Feather Robe", "note": "Body. Red feather robe that looks like fire. [GRS/6-2-11 desc: 红颜色的羽衣，远看像一团火而得名。防御+30，身法+4、避乱。]", "source_ids": ["GRS/6-2-11/name"]}
 {"zh": "朝圣衣", "en": "Holy Robe", "category": "armor", "count": 1, "alt": "Pilgrim Robe", "note": "Body. DEF+100. [GRS/6-2-12 desc: 内有护身法宝“如影随行”，该衣具有超高的防御效果。防御+100。]", "source_ids": ["GRS/6-2-12/name"]}
-{"zh": "鬼针胃", "en": "Barbed Mail", "category": "armor", "count": 1, "alt": "Ghost Spike Armor", "note": "Body. Barbed bronze armor. 胃 'stomach' is a typo for 胄 'armor'; flagged. [GRS/6-2-13 desc: 长满倒刺的铜制盔肌，防御+55，攻击+19。]", "source_ids": ["GRS/6-2-13/name"]}
-{"zh": "天蛛丝衣", "en": "Spider Silk", "category": "armor", "count": 1, "note": "Body. [GRS/6-2-14 desc: 使用蜘蛛神吐的丝织成，轻薄柔韧。防御+40、避毒。]", "source_ids": ["GRS/6-2-14/name"]}
-{"zh": "珍珠衫", "en": "Pearl Shirt", "category": "armor", "count": 1, "note": "Body. (Description calls it 珍珠衣.) [GRS/6-2-15 desc: 此衣全部饰用上等珍珠穿编而成，故称珍珠衣。防御+60、身法-3、吉运+10。]", "source_ids": ["GRS/6-2-15/name"]}
+{"zh": "鬼针胃", "en": "Barbed Mail", "category": "armor", "count": 1, "alt": "Ghost Spike Armor", "note": "Body. Barbed bronze armor. 胃 'stomach' is a typo for 胄 'armor'; flagged. [GRS/6-2-13 desc: 长满倒刺的铜制盔肌，防御+55，攻击+19。]", "source_ids": ["GRS/6-2-13/name"], "short": "Spike Mail"}
+{"zh": "天蛛丝衣", "en": "Spider Silk", "category": "armor", "count": 1, "note": "Body. [GRS/6-2-14 desc: 使用蜘蛛神吐的丝织成，轻薄柔韧。防御+40、避毒。]", "source_ids": ["GRS/6-2-14/name"], "short": "Spidersilk"}
+{"zh": "珍珠衫", "en": "Pearl Shirt", "category": "armor", "count": 1, "note": "Body. (Description calls it 珍珠衣.) [GRS/6-2-15 desc: 此衣全部饰用上等珍珠穿编而成，故称珍珠衣。防御+60、身法-3、吉运+10。]", "source_ids": ["GRS/6-2-15/name"], "short": "Pearl Vest"}
 {"zh": "避毒衣", "en": "Swan Robe", "category": "armor", "count": 1, "alt": "Antitoxin Robe", "note": "Body. White swan feathers; resists poison. [GRS/6-2-16 desc: 此衣用白天鹅的羽毛织成，透气保暖亦可避毒。防御+64、身法+6、避毒。]", "source_ids": ["GRS/6-2-16/name"]}
 {"zh": "诡踪衣", "en": "Night Garb", "category": "armor", "count": 1, "alt": "Stealth Garb", "note": "Body. Black garb of the Ghosttrack Fort. [GRS/6-2-17 desc: 诡踪堡特有的黑色衣服，来无影、去无踪。防御+35、身法+22、吉运-6。]", "source_ids": ["GRS/6-2-17/name"]}
 {"zh": "潮海衣", "en": "Tide Robe", "category": "armor", "count": 1, "alt": "Ocean Robe", "note": "Body. Ultimate robe. [GRS/6-2-18 desc: 天蚕抽丝，仙鹤织就，穿上可以不落沉沦、不堕地狱，坐有万佛朝礼、行有七佛随身。是宝物中的宝物呀!]", "source_ids": ["GRS/6-2-18/name"]}
-{"zh": "草鞋", "en": "Straw Shoes", "category": "armor", "count": 3, "note": "Feet. [GRS/6-3-1 desc: 以蔺草编织而成，十分便宜，穿起来很轻便，适宜行走。防御+1。]", "source_ids": ["GRS/6-3-1/name", "GRS/6-3-14/name", "GRS/6-3-14/desc"]}
-{"zh": "布鞋", "en": "Cloth Shoes", "category": "armor", "count": 2, "note": "Feet. [GRS/6-3-2 desc: 粗布缝制的长统靴。防御+3、身法+1。]", "source_ids": ["GRS/6-3-2/name", "GRS/6-3-7/name"]}
+{"zh": "草鞋", "en": "Straw Shoes", "category": "armor", "count": 3, "note": "Feet. [GRS/6-3-1 desc: 以蔺草编织而成，十分便宜，穿起来很轻便，适宜行走。防御+1。]", "source_ids": ["GRS/6-3-1/name", "GRS/6-3-14/name", "GRS/6-3-14/desc"], "short": "Sandals"}
+{"zh": "布鞋", "en": "Cloth Shoes", "category": "armor", "count": 2, "note": "Feet. [GRS/6-3-2 desc: 粗布缝制的长统靴。防御+3、身法+1。]", "source_ids": ["GRS/6-3-2/name", "GRS/6-3-7/name"], "short": "Soft Boots"}
 {"zh": "道靴", "en": "Tao Boots", "category": "armor", "count": 1, "alt": "Taoist Boots", "note": "Feet. Taoist boots. [GRS/6-3-3 desc: 道士穿的长靴子。防御+5、身法+2。]", "source_ids": ["GRS/6-3-3/name"]}
 {"zh": "长寿靴", "en": "Life Boots", "category": "armor", "count": 1, "alt": "Longevity Boots", "note": "Feet. Longevity boots, max HP+10. [GRS/6-3-4 desc: 王侯将相所穿，精雕细做的靴子。防御+8、身法+6、生命上限+10。]", "source_ids": ["GRS/6-3-4/name"]}
-{"zh": "霸王靴", "en": "Steel Boots", "category": "armor", "count": 1, "alt": "Tyrant Boots (12)", "note": "Feet. Steel-wire lined. [GRS/6-3-5 desc: 此靴底及靴面内层都加有特铸的金钢丝，可防刀剑。防御+22、身法+5。]", "source_ids": ["GRS/6-3-5/name"]}
-{"zh": "追风靴", "en": "Windchasers", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-6 desc: 以薄如云雾的蝉纱织成，助穿者疾行如风。防御+10、身法+18。]", "source_ids": ["GRS/6-3-6/name"]}
-{"zh": "花布鞋", "en": "Print Shoes", "category": "armor", "count": 1, "alt": "Floral Shoes", "note": "Feet. Floral cotton shoes. [GRS/6-3-7 desc: 用普通的花纹布所做的鞋子。防御+4、身法+2。]", "source_ids": ["GRS/6-3-7/name"]}
+{"zh": "霸王靴", "en": "Steel Boots", "category": "armor", "count": 1, "alt": "Tyrant Boots (12)", "note": "Feet. Steel-wire lined. [GRS/6-3-5 desc: 此靴底及靴面内层都加有特铸的金钢丝，可防刀剑。防御+22、身法+5。]", "source_ids": ["GRS/6-3-5/name"], "short": "Iron Boots"}
+{"zh": "追风靴", "en": "Windchasers", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-6 desc: 以薄如云雾的蝉纱织成，助穿者疾行如风。防御+10、身法+18。]", "source_ids": ["GRS/6-3-6/name"], "short": "Windchaser"}
+{"zh": "花布鞋", "en": "Print Shoes", "category": "armor", "count": 1, "alt": "Floral Shoes", "note": "Feet. Floral cotton shoes. [GRS/6-3-7 desc: 用普通的花纹布所做的鞋子。防御+4、身法+2。]", "source_ids": ["GRS/6-3-7/name"], "short": "Rose Shoes"}
 {"zh": "闺秀鞋", "en": "Lady Shoes", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-8 desc: 大家闺秀所穿的带有精致花纹的鞋子。防御+8、身法+3。]", "source_ids": ["GRS/6-3-8/name"]}
 {"zh": "鹿皮靴", "en": "Deerskins", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-9 desc: 鞋面以麋鹿鹿皮毛缝缝制，质地轻柔，行动可如麋鹿般迅捷。防御+11、身法+5。]", "source_ids": ["GRS/6-3-9/name"]}
-{"zh": "莲花靴", "en": "Lotus Boots", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-10 desc: 饰以金莲的长统绣花鞋。防御+10、身法+8。]", "source_ids": ["GRS/6-3-10/name"]}
+{"zh": "莲花靴", "en": "Lotus Boots", "category": "armor", "count": 1, "note": "Feet. [GRS/6-3-10 desc: 饰以金莲的长统绣花鞋。防御+10、身法+8。]", "source_ids": ["GRS/6-3-10/name"], "short": "Lotus Boot"}
 {"zh": "夜光靴", "en": "Glow Boots", "category": "armor", "count": 1, "note": "Feet. Luminous pearl boots. [GRS/6-3-11 desc: 水晶制作而成的，镶嵌夜明珠，晚上不用打灯笼也能看到路。防御+15、身法+12。]", "source_ids": ["GRS/6-3-11/name"]}
 {"zh": "灵狐靴", "en": "Fox Boots", "category": "armor", "count": 1, "note": "Feet. Spirit-fox fur. [GRS/6-3-12 desc: 用九天灵狐的皮做的鞋子，价格不菲，绝对是值钱的东西。防御+20、身法+16。]", "source_ids": ["GRS/6-3-12/name"]}
-{"zh": "登天泥鞋", "en": "Skyclimbers", "category": "armor", "count": 1, "note": "Feet. Divine clay shoes. [GRS/6-3-13 desc: 神泥做的鞋子，可以适应不同的脚而成不同的形状。生命上限+20、防御+16、身法+22。]", "source_ids": ["GRS/6-3-13/name"]}
+{"zh": "登天泥鞋", "en": "Skyclimbers", "category": "armor", "count": 1, "note": "Feet. Divine clay shoes. [GRS/6-3-13 desc: 神泥做的鞋子，可以适应不同的脚而成不同的形状。生命上限+20、防御+16、身法+22。]", "source_ids": ["GRS/6-3-13/name"], "short": "Skyclimber"}
 {"zh": "御风草鞋", "en": "Windriders", "category": "armor", "count": 1, "note": "Feet. Straw sandals for riding the wind. [GRS/6-3-14 desc: 可以御风而行的草鞋。生命真气上限+20、防御+4、身法+26。]", "source_ids": ["GRS/6-3-14/name"]}
-{"zh": "乾坤游步", "en": "Cosmos Walk", "category": "armor", "count": 1, "note": "Feet. Tour the world in a day. [GRS/6-3-15 desc: 穿上此鞋可于一日内游遍三山五岳。防御+30、身法+24、灵力+12、吉运+10。]", "source_ids": ["GRS/6-3-15/name"]}
+{"zh": "乾坤游步", "en": "Cosmos Walk", "category": "armor", "count": 1, "note": "Feet. Tour the world in a day. [GRS/6-3-15 desc: 穿上此鞋可于一日内游遍三山五岳。防御+30、身法+24、灵力+12、吉运+10。]", "source_ids": ["GRS/6-3-15/name"], "short": "Worldwalk"}
 {"zh": "披风", "en": "Cape", "category": "armor", "count": 7, "alt": "Cloak", "note": "Cape slot (UI 肩披 = Cape). [GRS/6-4-1 desc: 挡风御寒的东西。防御+2。]", "source_ids": ["GRS/6-4-1/name", "GRS/6-4-4/name", "GRS/6-4-4/desc"]}
 {"zh": "肩甲", "en": "Pauldrons", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-2 desc: 用于护两肩的铠甲。防御+6。]", "source_ids": ["GRS/6-4-2/name"]}
-{"zh": "青铜铠", "en": "Bronze Mail", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-3 desc: 防御效果不错的铠甲，只是重量可不轻呀！穿上去一定很笨重。防御+12、身法-7。]", "source_ids": ["GRS/6-4-3/name"]}
+{"zh": "青铜铠", "en": "Bronze Mail", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-3 desc: 防御效果不错的铠甲，只是重量可不轻呀！穿上去一定很笨重。防御+12、身法-7。]", "source_ids": ["GRS/6-4-3/name"], "short": "Bronzemail"}
 {"zh": "软蛟披风", "en": "Wyrm Cape", "category": "armor", "count": 1, "note": "Cape. Jiao (wyrm) hide. [GRS/6-4-4 desc: 利用蛟龙的皮制作成的披风，防御效果不错。防御+12。]", "source_ids": ["GRS/6-4-4/name"]}
 {"zh": "铁鳞甲", "en": "Scale Mail", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-5 desc: 以鱼鳞形甲片编缀而成的铠甲。防御+18、身法-4。]", "source_ids": ["GRS/6-4-5/name"]}
-{"zh": "金钢肌", "en": "Steel Plate", "category": "armor", "count": 1, "alt": "Vajra Plate", "note": "Cape. 肌 'muscle' likely a typo for 甲; flagged. [GRS/6-4-6 desc: 以稀有的上等金钢铁铸造而成。防御+19。]", "source_ids": ["GRS/6-4-6/name"]}
+{"zh": "金钢肌", "en": "Steel Plate", "category": "armor", "count": 1, "alt": "Vajra Plate", "note": "Cape. 肌 'muscle' likely a typo for 甲; flagged. [GRS/6-4-6 desc: 以稀有的上等金钢铁铸造而成。防御+19。]", "source_ids": ["GRS/6-4-6/name"], "short": "Steel Mail"}
 {"zh": "圣斗甲", "en": "Saint Mail", "category": "armor", "count": 1, "alt": "Saint Cloth", "note": "Cape. Saint Seiya joke (圣斗士). [GRS/6-4-7 desc: 此甲以一张血汗宝马的皮制成。防御+28。]", "source_ids": ["GRS/6-4-7/name"]}
 {"zh": "青雷战衣", "en": "Storm Coat", "category": "armor", "count": 1, "alt": "Green Thunder Coat", "note": "Cape. [GRS/6-4-8 desc: 以十张同兽龄青蛇的皮制成，柔软灵活。防御+32。]", "source_ids": ["GRS/6-4-8/name"]}
 {"zh": "圣洁披风", "en": "Holy Cape", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-9 desc: 以菊黄色的雄鹰的羽毛编织成的。防御+32、灵力+16。]", "source_ids": ["GRS/6-4-9/name"]}
-{"zh": "御灵道袍", "en": "Spirit Robe", "category": "armor", "count": 1, "note": "Cape. Powerful Taoist's outer robe. [GRS/6-4-10 desc: 法力高强的道士所穿的外袍。防御+31、灵力+16。]", "source_ids": ["GRS/6-4-10/name"]}
-{"zh": "神龙披风", "en": "Dragon Cape", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-11 desc: 相传是李天王未登天庭以前穿过的，带有他的神气。防御+66、灵力+15。]", "source_ids": ["GRS/6-4-11/name"]}
+{"zh": "御灵道袍", "en": "Spirit Robe", "category": "armor", "count": 1, "note": "Cape. Powerful Taoist's outer robe. [GRS/6-4-10 desc: 法力高强的道士所穿的外袍。防御+31、灵力+16。]", "source_ids": ["GRS/6-4-10/name"], "short": "Soul Robe"}
+{"zh": "神龙披风", "en": "Dragon Cape", "category": "armor", "count": 1, "note": "Cape. [GRS/6-4-11 desc: 相传是李天王未登天庭以前穿过的，带有他的神气。防御+66、灵力+15。]", "source_ids": ["GRS/6-4-11/name"], "short": "Dragoncape"}
 {"zh": "凤纹披风", "en": "Plume Cape", "category": "armor", "count": 1, "alt": "Phoenix Cape", "note": "Cape. Phoenix-embroidered; 'Phoenix Cape' is 12. [GRS/6-4-12 desc: 相传为织女缝织的披风，绣凤织锦，光彩夺目。防御+52、灵力+15。]", "source_ids": ["GRS/6-4-12/name"]}
-{"zh": "芦藤雌甲", "en": "Reed Mail F", "category": "armor", "count": 1, "alt": "Female Reed Mail", "note": "Cape. Female half of Lu Ban's anti-poison reed armor (worn by Xiaomei; both halves needed for the Miasma Wood). [GRS/6-4-13 desc: 相传为鲁班用云南能避百毒的白芦所造，共有雌雄两件，这件为雌的。防御+3，避毒。]", "source_ids": ["GRS/6-4-13/name"]}
-{"zh": "芦藤雄甲", "en": "Reed Mail M", "category": "armor", "count": 1, "alt": "Male Reed Mail", "note": "Cape. Male half (worn by the hero). [GRS/6-4-14 desc: 相传为鲁班用云南能避百毒的白芦所造，共有雌雄两件，这件为雄的。防御+3，避毒。]", "source_ids": ["GRS/6-4-14/name"]}
+{"zh": "芦藤雌甲", "en": "Reed Mail F", "category": "armor", "count": 1, "alt": "Female Reed Mail", "note": "Cape. Female half of Lu Ban's anti-poison reed armor (worn by Xiaomei; both halves needed for the Miasma Wood). [GRS/6-4-13 desc: 相传为鲁班用云南能避百毒的白芦所造，共有雌雄两件，这件为雌的。防御+3，避毒。]", "source_ids": ["GRS/6-4-13/name"], "short": "Reedmail F"}
+{"zh": "芦藤雄甲", "en": "Reed Mail M", "category": "armor", "count": 1, "alt": "Male Reed Mail", "note": "Cape. Male half (worn by the hero). [GRS/6-4-14 desc: 相传为鲁班用云南能避百毒的白芦所造，共有雌雄两件，这件为雄的。防御+3，避毒。]", "source_ids": ["GRS/6-4-14/name"], "short": "Reedmail M"}
 {"zh": "芦藤甲", "en": "Reed Mail", "category": "item", "count": 3, "alt": "Reed-Vine Armor", "note": "The pair as named in dialogue.", "source_ids": ["gut/1-4-2@00ef", "gut/1-4-2@0139", "gut/1-5-13@00d2"]}
-{"zh": "布护腕", "en": "Cloth Cuffs", "category": "armor", "count": 1, "note": "Wrist. [GRS/6-5-1 desc: 衣服袖子上的装饰品，可以起到将人体热气保留在衣服内的效果，能增加保暖功能。防御+2。]", "source_ids": ["GRS/6-5-1/name"]}
+{"zh": "布护腕", "en": "Cloth Cuffs", "category": "armor", "count": 1, "note": "Wrist. [GRS/6-5-1 desc: 衣服袖子上的装饰品，可以起到将人体热气保留在衣服内的效果，能增加保暖功能。防御+2。]", "source_ids": ["GRS/6-5-1/name"], "short": "Cloth Cuff"}
 {"zh": "铁护腕", "en": "Iron Cuffs", "category": "armor", "count": 1, "note": "Wrist. [GRS/6-5-2 desc: 纯铁打造的腕上防具，只是会影响身法。防御+12、身法-3。]", "source_ids": ["GRS/6-5-2/name"]}
 {"zh": "雕龙护腕", "en": "Gold Cuffs", "category": "armor", "count": 1, "alt": "Dragon Cuffs", "note": "Wrist. Carved-dragon gold cuffs. [GRS/6-5-3 desc: 装饰的不错的金护腕。防御+10。]", "source_ids": ["GRS/6-5-3/name"]}
-{"zh": "避血手腕", "en": "Blood Cuffs", "category": "armor", "count": 1, "note": "Wrist. Must not see blood or its demon wakes. [GRS/6-5-4 desc: 不能见到鲜血，不然会激起它的魔性。攻击+10、防御+24、灵力+4。]", "source_ids": ["GRS/6-5-4/name"]}
+{"zh": "避血手腕", "en": "Blood Cuffs", "category": "armor", "count": 1, "note": "Wrist. Must not see blood or its demon wakes. [GRS/6-5-4 desc: 不能见到鲜血，不然会激起它的魔性。攻击+10、防御+24、灵力+4。]", "source_ids": ["GRS/6-5-4/name"], "short": "Blood Cuff"}
 {"zh": "赤镯", "en": "Red Bangle", "category": "armor", "count": 1, "note": "Wrist. [GRS/6-5-5 desc: 红布缝制的护腕。防御+4。]", "source_ids": ["GRS/6-5-5/name"]}
-{"zh": "玉镯", "en": "Jade Bangle", "category": "armor", "count": 2, "note": "Wrist. [GRS/6-5-6 desc: 普通的玉镯子。防御+10。]", "source_ids": ["GRS/6-5-6/name", "GRS/6-5-6/desc"]}
+{"zh": "玉镯", "en": "Jade Bangle", "category": "armor", "count": 2, "note": "Wrist. [GRS/6-5-6 desc: 普通的玉镯子。防御+10。]", "source_ids": ["GRS/6-5-6/name", "GRS/6-5-6/desc"], "short": "Jade Ring"}
 {"zh": "飞天镯", "en": "Sky Bangle", "category": "armor", "count": 1, "alt": "Apsara Bangle", "note": "Wrist. [GRS/6-5-7 desc: 用飞天白玉做成的镯子。防御+16、吉运+4。]", "source_ids": ["GRS/6-5-7/name"]}
-{"zh": "吸灵镯", "en": "Soul Bangle", "category": "armor", "count": 1, "alt": "Leech Bangle", "note": "Wrist. Drains MP into AGI/Luck. [GRS/6-5-8 desc: 会吸食佩带者的灵气，转化为身法和吉运的镯子。防御+8、真气上限-10、身法+10、吉运+10。]", "source_ids": ["GRS/6-5-8/name"]}
-{"zh": "平安符", "en": "Peace Charm", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-1 desc: 人们经常在神的面前诚心许愿，求一道符用来保护自己小孩的平安，据说只要许愿的人心诚，真会有用！吉运+4。]", "source_ids": ["GRS/6-6-1/name"]}
+{"zh": "吸灵镯", "en": "Soul Bangle", "category": "armor", "count": 1, "alt": "Leech Bangle", "note": "Wrist. Drains MP into AGI/Luck. [GRS/6-5-8 desc: 会吸食佩带者的灵气，转化为身法和吉运的镯子。防御+8、真气上限-10、身法+10、吉运+10。]", "source_ids": ["GRS/6-5-8/name"], "short": "Soul Ring"}
+{"zh": "平安符", "en": "Peace Charm", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-1 desc: 人们经常在神的面前诚心许愿，求一道符用来保护自己小孩的平安，据说只要许愿的人心诚，真会有用！吉运+4。]", "source_ids": ["GRS/6-6-1/name"], "short": "Safe Charm"}
 {"zh": "香袋", "en": "Sachet", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-2 desc: 填充木屑，香粉的小布包，常用来装饰兼避邪的物品。灵力+4   吉运+2。]", "source_ids": ["GRS/6-6-2/name"]}
 {"zh": "长命锁", "en": "Life Lock", "category": "armor", "count": 1, "note": "Accessory. Longevity lock. [GRS/6-6-3 desc: 一根红头绳，经过高人开光后就具有了灵性。据说佩带可保长命。防御+3、灵力+3、吉运+3。]", "source_ids": ["GRS/6-6-3/name"]}
 {"zh": "铜镜", "en": "Mirror", "category": "armor", "count": 2, "alt": "Bronze Mirror", "note": "Accessory. Bronze mirror. [GRS/6-6-4 desc: 青铜制造的照容用具。防御+6。]", "source_ids": ["GRS/6-6-4/name", "GRS/6-6-9/desc"]}
 {"zh": "避邪袋", "en": "Ward Pouch", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-5 desc: 用优质的丝绸缝制的小布袋，里面装有艾草、及香料等。防御+6、灵力+3、吉运+5。]", "source_ids": ["GRS/6-6-5/name"]}
 {"zh": "象牙坠", "en": "Ivory Tusk", "category": "armor", "count": 1, "alt": "Ivory Pendant", "note": "Accessory. Ivory pendant. [GRS/6-6-6 desc: 用大象的牙做的坠子。防御+12。]", "source_ids": ["GRS/6-6-6/name"]}
-{"zh": "八卦镜", "en": "Bagua Glass", "category": "armor", "count": 1, "alt": "Bagua Mirror", "note": "Accessory. Trigram mirror. [GRS/6-6-7 desc: 用朱砂在镜面画八卦，可借用自然界的灵气。灵力+5、防御+5。]", "source_ids": ["GRS/6-6-7/name"]}
-{"zh": "督化笛", "en": "Mercy Flute", "category": "armor", "count": 1, "note": "Accessory. Flute that converts demons. [GRS/6-6-8 desc: 此笛为九孔笛，笛声悠扬独特，可感化魔妖。吉运+18。]", "source_ids": ["GRS/6-6-8/name"]}
-{"zh": "乾坤镜", "en": "Taiji Glass", "category": "armor", "count": 1, "alt": "Cosmos Mirror", "note": "Accessory. Mirror with the taiji diagram. [GRS/6-6-9 desc: 铜镜背面铸有太极乾坤图，可吸取天地阴阳之灵气。灵力+9、防御+9。]", "source_ids": ["GRS/6-6-9/name"]}
+{"zh": "八卦镜", "en": "Bagua Glass", "category": "armor", "count": 1, "alt": "Bagua Mirror", "note": "Accessory. Trigram mirror. [GRS/6-6-7 desc: 用朱砂在镜面画八卦，可借用自然界的灵气。灵力+5、防御+5。]", "source_ids": ["GRS/6-6-7/name"], "short": "Bagua Disc"}
+{"zh": "督化笛", "en": "Mercy Flute", "category": "armor", "count": 1, "note": "Accessory. Flute that converts demons. [GRS/6-6-8 desc: 此笛为九孔笛，笛声悠扬独特，可感化魔妖。吉运+18。]", "source_ids": ["GRS/6-6-8/name"], "short": "Zen Flute"}
+{"zh": "乾坤镜", "en": "Taiji Glass", "category": "armor", "count": 1, "alt": "Cosmos Mirror", "note": "Accessory. Mirror with the taiji diagram. [GRS/6-6-9 desc: 铜镜背面铸有太极乾坤图，可吸取天地阴阳之灵气。灵力+9、防御+9。]", "source_ids": ["GRS/6-6-9/name"], "short": "Taiji Disc"}
 {"zh": "寒冰玉佩", "en": "Frost Jade", "category": "armor", "count": 1, "note": "Accessory. [GRS/6-6-10 desc: 用寒冰雕刻而成的玉佩，具有很强的灵力。灵力+20。]", "source_ids": ["GRS/6-6-10/name"]}
-{"zh": "定神珠", "en": "Focus Pearl", "category": "armor", "count": 1, "note": "Accessory. MP regen. [GRS/6-6-11 desc: 具有聚精汇神作用的一颗珠子。每回合恢复真气10。]", "source_ids": ["GRS/6-6-11/name"]}
+{"zh": "定神珠", "en": "Focus Pearl", "category": "armor", "count": 1, "note": "Accessory. MP regen. [GRS/6-6-11 desc: 具有聚精汇神作用的一颗珠子。每回合恢复真气10。]", "source_ids": ["GRS/6-6-11/name"], "short": "Calm Pearl"}
 {"zh": "富贵珠", "en": "Luck Pearl", "category": "armor", "count": 1, "alt": "Fortune Pearl", "note": "Accessory. Luck+99. [GRS/6-6-12 desc: 拥有此珠者便可大富大贵，给人带来福气。吉运+99。]", "source_ids": ["GRS/6-6-12/name"]}
-{"zh": "紫瞳魔灯", "en": "Violet Lamp", "category": "armor", "count": 1, "alt": "Violet-Eye Demon Lamp", "note": "Accessory. Demon-realm treasure hidden in Nanbei Village. [GRS/6-6-13 desc: 本为魔界的一大法宝，后在神魔大战时，被不遗落到了人间。攻击防御身法灵力吉运各+15。]", "source_ids": ["GRS/6-6-13/name"]}
-{"zh": "天心灯", "en": "Heaven Lamp", "category": "armor", "count": 2, "alt": "Heart of Heaven Lamp", "note": "Accessory. Gonggong's lamp; protects against the Chaos Urn on Sky Summit (named in dialogue). [GRS/6-6-14 desc: 上古传下的神器，为共工的护身法宝。每回合恢复生命真气30点，身法+5。]", "source_ids": ["GRS/6-6-14/name", "gut/1-14-8@0826"]}
-{"zh": "霸王钟", "en": "Tyrant Bell", "category": "item", "count": 21, "alt": "Overlord Bell (13)", "note": "The bell guarded at Zhongshan, stolen by the Crimson Demon for Tiandao; also an accessory (GRS 6-6-15), a monster spell (MRS 4-1-57) and a scene object. [GRS/6-6-15 desc: 魔器之一，极为霸气的法宝。攻击+100、灵力-20、吉运-40。; MRS/4-1-57; ARS/3-4-21]", "source_ids": ["GRS/6-6-15/name", "MRS/4-1-57/name", "ARS/3-4-21/name"]}
+{"zh": "紫瞳魔灯", "en": "Violet Lamp", "category": "armor", "count": 1, "alt": "Violet-Eye Demon Lamp", "note": "Accessory. Demon-realm treasure hidden in Nanbei Village. [GRS/6-6-13 desc: 本为魔界的一大法宝，后在神魔大战时，被不遗落到了人间。攻击防御身法灵力吉运各+15。]", "source_ids": ["GRS/6-6-13/name"], "short": "Violet Eye"}
+{"zh": "天心灯", "en": "Heaven Lamp", "category": "armor", "count": 2, "alt": "Heart of Heaven Lamp", "note": "Accessory. Gonggong's lamp; protects against the Chaos Urn on Sky Summit (named in dialogue). [GRS/6-6-14 desc: 上古传下的神器，为共工的护身法宝。每回合恢复生命真气30点，身法+5。]", "source_ids": ["GRS/6-6-14/name", "gut/1-14-8@0826"], "short": "Heart Lamp"}
+{"zh": "霸王钟", "en": "Tyrant Bell", "category": "item", "count": 21, "alt": "Overlord Bell (13)", "note": "The bell guarded at Zhongshan, stolen by the Crimson Demon for Tiandao; also an accessory (GRS 6-6-15), a monster spell (MRS 4-1-57) and a scene object. [GRS/6-6-15 desc: 魔器之一，极为霸气的法宝。攻击+100、灵力-20、吉运-40。; MRS/4-1-57; ARS/3-4-21]", "source_ids": ["GRS/6-6-15/name", "MRS/4-1-57/name", "ARS/3-4-21/name"], "short": "Tyrantbell"}
 {"zh": "玄冰玉如意", "en": "Frost Ruyi", "category": "armor", "count": 1, "alt": "Black Ice Jade Ruyi", "note": "Accessory. [GRS/6-6-16 desc: 用千年的玄冰玉雕刻而成的法宝，每回合恢复真气30点。]", "source_ids": ["GRS/6-6-16/name"]}
 {"zh": "七星灯", "en": "Star Lamp", "category": "armor", "count": 1, "alt": "Seven Star Lamp", "note": "Accessory. Zhuge Liang's seven-star lamp. [GRS/6-6-17 desc: 相传是孔明禳星祈命之灯，每回合可恢复生命30点，只是携带不方便。身法-3。]", "source_ids": ["GRS/6-6-17/name"]}
-{"zh": "周处除三害", "en": "Three Banes", "category": "armor", "count": 2, "alt": "Zhou Chu's Tale", "note": "Accessory: a storybook 'Zhou Chu Rids the Three Banes', Zhou Chu's reward. [GRS/6-6-18 desc: 记载着“周处除三害”故事的一本小说，据说有很玄的作用。防御+2。]", "source_ids": ["GRS/6-6-18/name", "GRS/6-6-18/desc"]}
+{"zh": "周处除三害", "en": "Three Banes", "category": "armor", "count": 2, "alt": "Zhou Chu's Tale", "note": "Accessory: a storybook 'Zhou Chu Rids the Three Banes', Zhou Chu's reward. [GRS/6-6-18 desc: 记载着“周处除三害”故事的一本小说，据说有很玄的作用。防御+2。]", "source_ids": ["GRS/6-6-18/name", "GRS/6-6-18/desc"], "short": "3 Banes"}
 {"zh": "木剑", "en": "Wood Sword", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-1 desc: 用木材雕刻的剑，小孩玩具。攻击+2。]", "source_ids": ["GRS/6-7-1/name"]}
 {"zh": "铁剑", "en": "Iron Sword", "category": "weapon", "count": 3, "note": "Weapon. Appears in: item name, item descriptions. [GRS/6-7-2 desc: 一般铁匠大量生产的剑，打造得颇为粗劣。攻击+8。]", "source_ids": ["GRS/6-7-2/name", "GRS/6-7-3/desc", "GRS/6-7-4/name"]}
 {"zh": "长剑", "en": "Long Sword", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-3 desc: 一般铁匠接受订造的剑，比铁剑精致锋利。攻击+18，身法-3。]", "source_ids": ["GRS/6-7-3/name"]}
-{"zh": "玄铁剑", "en": "Black Sword", "category": "weapon", "count": 1, "alt": "Black Iron Sword", "note": "Black (meteoric) iron. [GRS/6-7-4 desc: 用玄铁矿打造的剑，制作工匠的手艺一般，威力也受到了影响。攻击+32、身法-10。]", "source_ids": ["GRS/6-7-4/name"]}
+{"zh": "玄铁剑", "en": "Black Sword", "category": "weapon", "count": 1, "alt": "Black Iron Sword", "note": "Black (meteoric) iron. [GRS/6-7-4 desc: 用玄铁矿打造的剑，制作工匠的手艺一般，威力也受到了影响。攻击+32、身法-10。]", "source_ids": ["GRS/6-7-4/name"], "short": "Black Iron"}
 {"zh": "青锋剑", "en": "Blue Steel", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-5 desc: 名家精心打造的剑，轻薄锋利。攻击+45、身法+5。]", "source_ids": ["GRS/6-7-5/name"]}
 {"zh": "龙泉剑", "en": "Longquan", "category": "weapon", "count": 2, "alt": "Longquan Sword", "note": "Sword from Longquan. [GRS/6-7-6 desc: 龙泉的水质非常适合造剑，当地生产的剑叫龙泉剑。攻击+66、身法+8。]", "source_ids": ["GRS/6-7-6/name", "GRS/6-7-6/desc"]}
-{"zh": "斩妖剑", "en": "Fiendslayer", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-7 desc: 此剑是专门为道士降妖伏魔所打造的兵器，剑刃锋利，有避邪之功效。攻击+72、吉运+10。]", "source_ids": ["GRS/6-7-7/name"]}
+{"zh": "斩妖剑", "en": "Fiendslayer", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-7 desc: 此剑是专门为道士降妖伏魔所打造的兵器，剑刃锋利，有避邪之功效。攻击+72、吉运+10。]", "source_ids": ["GRS/6-7-7/name"], "short": "Fiendbane"}
 {"zh": "龙吟剑", "en": "Dragonsong", "category": "weapon", "count": 1, "note": "Hums like a dragon when drawn. [GRS/6-7-8 desc: 宝剑出鞘，有龙吟之声，故有“龙吟”之称。攻击+88、灵力+6、防御+4。]", "source_ids": ["GRS/6-7-8/name"]}
-{"zh": "钨龙剑", "en": "Dark Dragon", "category": "weapon", "count": 1, "alt": "Tungsten Dragon", "note": "钨 'tungsten' probably for 乌 'black'. [GRS/6-7-9 desc: 同样用玄铁打造，但这次的做工就明显好的多了。攻击+108、身法+6。]", "source_ids": ["GRS/6-7-9/name"]}
+{"zh": "钨龙剑", "en": "Dark Dragon", "category": "weapon", "count": 1, "alt": "Tungsten Dragon", "note": "钨 'tungsten' probably for 乌 'black'. [GRS/6-7-9 desc: 同样用玄铁打造，但这次的做工就明显好的多了。攻击+108、身法+6。]", "source_ids": ["GRS/6-7-9/name"], "short": "Darkdragon"}
 {"zh": "辟魔剑", "en": "Peachwood", "category": "weapon", "count": 1, "alt": "Demonward Sword", "note": "Thousand-year peachwood sword that wards off demons. [GRS/6-7-10 desc: 用千年的桃木所制，可避过邪魔妖道施法。攻击+80、身法+5，可能产生混乱3回合。]", "source_ids": ["GRS/6-7-10/name"]}
-{"zh": "催眠剑", "en": "Sleep Sword", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-11 desc: 可将敌人催眠的剑，打造工匠不详。攻击+100、吉运-3。可能产生5昏睡回合。]", "source_ids": ["GRS/6-7-11/name"]}
+{"zh": "催眠剑", "en": "Sleep Sword", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-11 desc: 可将敌人催眠的剑，打造工匠不详。攻击+100、吉运-3。可能产生5昏睡回合。]", "source_ids": ["GRS/6-7-11/name"], "short": "Lull Sword"}
 {"zh": "七星剑", "en": "Star Sword", "category": "weapon", "count": 1, "alt": "Seven Star Sword", "note": "Weapon. Appears in: item name. [GRS/6-7-12 desc: 剑身镶七颗金黄色的宝石，可吸取北斗七星之精气。攻击120灵力15身法12吉运12防御15，可能产生5回合咒封。]", "source_ids": ["GRS/6-7-12/name"]}
-{"zh": "嗜血剑", "en": "Bloodthirst", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-13 desc: 屡经战乱，嗜血成性的剑，会吞噬装备者的生命。攻击+250、灵力-40、防御-30、吉运-30，生命上限-50。]", "source_ids": ["GRS/6-7-13/name"]}
-{"zh": "九龙道剑", "en": "Nine Dragon", "category": "weapon", "count": 1, "alt": "Nine Dragon Sword", "note": "Zhang Daoling's sword. [GRS/6-7-14 desc: 相传张道陵用此剑诛杀了九条恶龙，龙魂聚在剑上不散而成。可全体攻击，其它属性不详细。]", "source_ids": ["GRS/6-7-14/name"]}
+{"zh": "嗜血剑", "en": "Bloodthirst", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-13 desc: 屡经战乱，嗜血成性的剑，会吞噬装备者的生命。攻击+250、灵力-40、防御-30、吉运-30，生命上限-50。]", "source_ids": ["GRS/6-7-13/name"], "short": "Bloodlust"}
+{"zh": "九龙道剑", "en": "Nine Dragon", "category": "weapon", "count": 1, "alt": "Nine Dragon Sword", "note": "Zhang Daoling's sword. [GRS/6-7-14 desc: 相传张道陵用此剑诛杀了九条恶龙，龙魂聚在剑上不散而成。可全体攻击，其它属性不详细。]", "source_ids": ["GRS/6-7-14/name"], "short": "Ninedragon"}
 {"zh": "匕首", "en": "Dagger", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-15 desc: 携带方便，且可以当水果刀用。削水果的话，效果不错哟。攻击+4。]", "source_ids": ["GRS/6-7-15/name"]}
 {"zh": "砍刀", "en": "Machete", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-16 desc: 普通的生铁打造，可用来防身。攻击+10、身法-2。]", "source_ids": ["GRS/6-7-16/name"]}
 {"zh": "佩刀", "en": "Saber", "category": "weapon", "count": 1, "note": "刀 = saber/blade, 剑 = sword. [GRS/6-7-17 desc: 刀身宽而长，刃部锋利背部厚重。攻击+16、防御+1。]", "source_ids": ["GRS/6-7-17/name"]}
 {"zh": "旋风刀", "en": "Whirlblade", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-18 desc: 刀身宽而短，攻击敌人时可旋转。攻击+28、身法+3。]", "source_ids": ["GRS/6-7-18/name"]}
 {"zh": "弯月刀", "en": "Crescent", "category": "weapon", "count": 1, "alt": "Crescent Blade", "note": "Weapon. Appears in: item name. [GRS/6-7-19 desc: 一般的刀形状像弯弯的月亮。攻击+49、身法+4、吉运-9。]", "source_ids": ["GRS/6-7-19/name"]}
-{"zh": "莲花刀", "en": "Lotus Blade", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-20 desc: 以上等的精铁打造，刀尖向上翘，刀背略弯曲。攻击+64、身法+3、灵力+4。]", "source_ids": ["GRS/6-7-20/name"]}
+{"zh": "莲花刀", "en": "Lotus Blade", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-20 desc: 以上等的精铁打造，刀尖向上翘，刀背略弯曲。攻击+64、身法+3、灵力+4。]", "source_ids": ["GRS/6-7-20/name"], "short": "Lotusblade"}
 {"zh": "魔哭刀", "en": "Demonwail", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-21 desc: 出鞘之声犹如魔鬼哭泣，令人不寒而栗。攻击+80、防御+10、灵力+3。]", "source_ids": ["GRS/6-7-21/name"]}
-{"zh": "屠魔刀", "en": "Demonslayer", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-22 desc: 此刀以六合精英打造，浑厚有力，是所有妖魔的克星。攻击+124、防御+30、身法+5、灵力+6。]", "source_ids": ["GRS/6-7-22/name"]}
+{"zh": "屠魔刀", "en": "Demonslayer", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-22 desc: 此刀以六合精英打造，浑厚有力，是所有妖魔的克星。攻击+124、防御+30、身法+5、灵力+6。]", "source_ids": ["GRS/6-7-22/name"], "short": "Slaughter"}
 {"zh": "移魂刀", "en": "Soulshift", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-23 desc: 神兵就是神兵，绝对的厉害。攻击+124、身法+10，全体攻击。可能产生5回合混乱。]", "source_ids": ["GRS/6-7-23/name"]}
-{"zh": "双手剑", "en": "Twin Swords", "category": "weapon", "count": 2, "note": "Xiaomei's twin swords start here. [GRS/6-7-24 desc: 一尺长的双手剑，适合女子使用。攻击+8、防御+13。]", "source_ids": ["GRS/6-7-24/name", "GRS/6-7-24/desc"]}
+{"zh": "双手剑", "en": "Twin Swords", "category": "weapon", "count": 2, "note": "Xiaomei's twin swords start here. [GRS/6-7-24 desc: 一尺长的双手剑，适合女子使用。攻击+8、防御+13。]", "source_ids": ["GRS/6-7-24/name", "GRS/6-7-24/desc"], "short": "Twin Sword"}
 {"zh": "明目双剑", "en": "Keen Twins", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-25 desc: 以中等生铁打造的双剑。攻击+19、防御+17。]", "source_ids": ["GRS/6-7-25/name"]}
-{"zh": "姐妹剑", "en": "Sister Pair", "category": "weapon", "count": 2, "alt": "Sister Swords", "note": "Weapon. Appears in: item name, item descriptions. [GRS/6-7-26 desc: 以上等的精铁铸造而成，此剑为一对，故称[姐妹剑]。攻击+27、防御+20。]", "source_ids": ["GRS/6-7-26/name", "GRS/6-7-26/desc"]}
+{"zh": "姐妹剑", "en": "Sister Pair", "category": "weapon", "count": 2, "alt": "Sister Swords", "note": "Weapon. Appears in: item name, item descriptions. [GRS/6-7-26 desc: 以上等的精铁铸造而成，此剑为一对，故称[姐妹剑]。攻击+27、防御+20。]", "source_ids": ["GRS/6-7-26/name", "GRS/6-7-26/desc"], "short": "Sisters"}
 {"zh": "碧玉双剑", "en": "Jade Twins", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-27 desc: 此双剑精巧别致，灵气逼人。攻击+36、身法+4、防御+24。]", "source_ids": ["GRS/6-7-27/name"]}
 {"zh": "芙蓉刀", "en": "Hibiscus", "category": "weapon", "count": 1, "note": "Twin curved sabers of the Hundred Flowers Sect. [GRS/6-7-28 desc: 百花派独门兵器双手弯刀。攻击+48、身法+6、防御+28。]", "source_ids": ["GRS/6-7-28/name"]}
 {"zh": "无影双剑", "en": "Shadowless", "category": "weapon", "count": 1, "note": "Weapon. Appears in: item name. [GRS/6-7-29 desc: 用此剑攻击人时，剑光闪闪使人看不清剑在那里，故称[无影剑]。攻击+60、身法+10、防御+36、吉运+6。]", "source_ids": ["GRS/6-7-29/name"]}
@@ -501,53 +501,53 @@
 {"zh": "幽真双剑", "en": "Enigma", "category": "weapon", "count": 1, "alt": "Mystic Twins", "note": "Origin unknown, 'a riddle'. [GRS/6-7-31 desc: 整个剑就是一个谜，无人知晓它的来历。攻击+125、防御+56、灵力+15、身法+15、吉运+15，真气上限+80。]", "source_ids": ["GRS/6-7-31/name"]}
 {"zh": "尺骨双剑", "en": "Bone Twins", "category": "weapon", "count": 1, "note": "尺骨 = ulna. [GRS/6-7-32 desc: 剑是不怎么样，可它有最大的一个好处――可能产生3回合中毒。攻击+50、防御-10、身法-10。]", "source_ids": ["GRS/6-7-32/name"]}
 {"zh": "梅花镖", "en": "Plum Dart", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-1 desc: 形如梅花的暗器，敌人hp-90。]", "source_ids": ["GRS/6-8-1/name"]}
-{"zh": "雷火珠", "en": "Thunderball", "category": "consumable", "count": 1, "note": "Thrown bomb. [GRS/6-8-2 desc: 充火药的铁珠，投掷撞击后会爆裂伤人。伤敌250。]", "source_ids": ["GRS/6-8-2/name"]}
+{"zh": "雷火珠", "en": "Thunderball", "category": "consumable", "count": 1, "note": "Thrown bomb. [GRS/6-8-2 desc: 充火药的铁珠，投掷撞击后会爆裂伤人。伤敌250。]", "source_ids": ["GRS/6-8-2/name"], "short": "Bolt Bomb"}
 {"zh": "天师符", "en": "Sage Charm", "category": "consumable", "count": 2, "alt": "Celestial Charm", "note": "Thrown Maoshan charm. [GRS/6-8-3 desc: 茅山道士用来对付妖怪的符咒\\x0d\\x0a。伤敌150。]", "source_ids": ["GRS/6-8-3/name", "MRS/4-1-8/name"]}
-{"zh": "袖里剑", "en": "Sleeveblade", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-4 desc: 暗藏在衣袖中的飞剑。伤敌250。]", "source_ids": ["GRS/6-8-4/name"]}
-{"zh": "透骨钉", "en": "Bonepiercer", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-5 desc: 精铁打造、三寸长的铁针是很锋利的暗器。敌人hp-250。]", "source_ids": ["GRS/6-8-5/name"]}
+{"zh": "袖里剑", "en": "Sleeveblade", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-4 desc: 暗藏在衣袖中的飞剑。伤敌250。]", "source_ids": ["GRS/6-8-4/name"], "short": "Cuff Blade"}
+{"zh": "透骨钉", "en": "Bonepiercer", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-5 desc: 精铁打造、三寸长的铁针是很锋利的暗器。敌人hp-250。]", "source_ids": ["GRS/6-8-5/name"], "short": "Bone Nail"}
 {"zh": "无影神针", "en": "Unseen Pin", "category": "consumable", "count": 1, "alt": "Shadowless Needle", "note": "Thrown. [GRS/6-8-6 desc: 细如牛毛，伤人于无形。敌人Hp-400。]", "source_ids": ["GRS/6-8-6/name"]}
-{"zh": "旋魂铊", "en": "Soulspinner", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-7 desc: 此物青光闪闪，旋转极快伤人于无形之中。敌方全体hp-300。]", "source_ids": ["GRS/6-8-7/name"]}
+{"zh": "旋魂铊", "en": "Soulspinner", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-7 desc: 此物青光闪闪，旋转极快伤人于无形之中。敌方全体hp-300。]", "source_ids": ["GRS/6-8-7/name"], "short": "Soulspin"}
 {"zh": "风灵符", "en": "Wind Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-8 desc: 产生凤系法术的符咒。]", "source_ids": ["GRS/6-8-8/name"]}
 {"zh": "雷灵符", "en": "Bolt Charm", "category": "consumable", "count": 1, "alt": "Thunder Charm", "note": "Thrown. 雷 = Bolt in 11-byte names, Thunder elsewhere. [GRS/6-8-9 desc: 产生雷系法术的符咒\\x0d\\x0a。]", "source_ids": ["GRS/6-8-9/name"]}
-{"zh": "水灵符", "en": "Water Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-10 desc: 产生水系法术的符咒。]", "source_ids": ["GRS/6-8-10/name"]}
-{"zh": "土灵符", "en": "Earth Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-11 desc: 产生土系法术的符咒咒。]", "source_ids": ["GRS/6-8-11/name"]}
+{"zh": "水灵符", "en": "Water Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-10 desc: 产生水系法术的符咒。]", "source_ids": ["GRS/6-8-10/name"], "short": "Aqua Charm"}
+{"zh": "土灵符", "en": "Earth Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-11 desc: 产生土系法术的符咒咒。]", "source_ids": ["GRS/6-8-11/name"], "short": "Rock Charm"}
 {"zh": "火灵符", "en": "Fire Charm", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-12 desc: 产生火系法术的符咒\\x0d\\x0a。]", "source_ids": ["GRS/6-8-12/name"]}
 {"zh": "青蛇卵", "en": "Snake Egg", "category": "consumable", "count": 1, "note": "Thrown, poison. [GRS/6-8-13 desc: 毒蛇的卵，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-13/name"]}
-{"zh": "童尸肉", "en": "Corpse Meat", "category": "consumable", "count": 1, "note": "Thrown, poison. [GRS/6-8-14 desc: 童年僵尸身上的肉，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-14/name"]}
+{"zh": "童尸肉", "en": "Corpse Meat", "category": "consumable", "count": 1, "note": "Thrown, poison. [GRS/6-8-14 desc: 童年僵尸身上的肉，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-14/name"], "short": "Ghoul Meat"}
 {"zh": "红蝎卵", "en": "Sting Egg", "category": "consumable", "count": 1, "alt": "Scorpion Egg", "note": "Thrown, poison (red scorpion egg). [GRS/6-8-15 desc: 毒蝎的卵，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-15/name"]}
 {"zh": "蜘蛛卵", "en": "Spider Egg", "category": "consumable", "count": 1, "note": "Thrown, poison. [GRS/6-8-16 desc: 毒蜘蛛的卵，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-16/name"]}
 {"zh": "毒铁菱", "en": "Caltrops", "category": "consumable", "count": 1, "alt": "Poison Caltrops", "note": "Thrown, poison. [GRS/6-8-17 desc: 带毒的暗器，被伤到者虽不会立即毙命，但若延误医治的话，则必死无疑。伤敌80，可能产生2回合毒效果。]", "source_ids": ["GRS/6-8-17/name"]}
-{"zh": "孔雀胆", "en": "Gall Poison", "category": "consumable", "count": 1, "alt": "Peacock Gall", "note": "Thrown. 'Peacock gall', a classic poison. [GRS/6-8-18 desc: 七大毒蛊。可是敌人产生5回合中毒状态。]", "source_ids": ["GRS/6-8-18/name"]}
+{"zh": "孔雀胆", "en": "Gall Poison", "category": "consumable", "count": 1, "alt": "Peacock Gall", "note": "Thrown. 'Peacock gall', a classic poison. [GRS/6-8-18 desc: 七大毒蛊。可是敌人产生5回合中毒状态。]", "source_ids": ["GRS/6-8-18/name"], "short": "Gall Venom"}
 {"zh": "蝮蛇涎", "en": "Viper Spit", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-19 desc: 蝮蛇的毒涎，可使敌方全体中毒5回合。]", "source_ids": ["GRS/6-8-19/name"]}
 {"zh": "蚀毒砂", "en": "Venom Sand", "category": "consumable", "count": 1, "note": "Thrown. [GRS/6-8-20 desc: 以六毒蚀脏粉配以铁砂。伤害全体敌人150。可能5回合中毒效果。]", "source_ids": ["GRS/6-8-20/name"]}
-{"zh": "迷魂香", "en": "Sleep Smoke", "category": "consumable", "count": 1, "alt": "Knockout Incense", "note": "Thrown. [GRS/6-8-21 desc: 点燃蒙汗药散发迷香，可使敌人昏睡五回合。]", "source_ids": ["GRS/6-8-21/name"]}
-{"zh": "醍醐香", "en": "Heady Bloom", "category": "consumable", "count": 1, "note": "Thrown, confusion. [GRS/6-8-22 desc: 紫叶小白花，散发浓郁香气，闻到香气便如酒醉一般，混乱5回合。]", "source_ids": ["GRS/6-8-22/name"]}
+{"zh": "迷魂香", "en": "Sleep Smoke", "category": "consumable", "count": 1, "alt": "Knockout Incense", "note": "Thrown. [GRS/6-8-21 desc: 点燃蒙汗药散发迷香，可使敌人昏睡五回合。]", "source_ids": ["GRS/6-8-21/name"], "short": "Doze Smoke"}
+{"zh": "醍醐香", "en": "Heady Bloom", "category": "consumable", "count": 1, "note": "Thrown, confusion. [GRS/6-8-22 desc: 紫叶小白花，散发浓郁香气，闻到香气便如酒醉一般，混乱5回合。]", "source_ids": ["GRS/6-8-22/name"], "short": "Headybloom"}
 {"zh": "缠魂丝", "en": "Soul Silk", "category": "consumable", "count": 1, "note": "Thrown, confusion. [GRS/6-8-23 desc: 千年蜘蛛的毒丝。可使人混乱5回合。]", "source_ids": ["GRS/6-8-23/name"]}
-{"zh": "定魂旗", "en": "Bind Banner", "category": "consumable", "count": 1, "note": "Thrown, silence. [GRS/6-8-24 desc: 将人的魂魄定在体内3回合，不能施展法术。咒封3回合。]", "source_ids": ["GRS/6-8-24/name"]}
+{"zh": "定魂旗", "en": "Bind Banner", "category": "consumable", "count": 1, "note": "Thrown, silence. [GRS/6-8-24 desc: 将人的魂魄定在体内3回合，不能施展法术。咒封3回合。]", "source_ids": ["GRS/6-8-24/name"], "short": "Bind Flag"}
 {"zh": "缚龙索", "en": "Dragonbind", "category": "consumable", "count": 1, "alt": "Dragon Rope", "note": "Thrown, silence. [GRS/6-8-25 desc: 原本是天界用来捆绑恶龙的绳索，不知被谁偷盗后卖到了人间。咒封5回合。]", "source_ids": ["GRS/6-8-25/name"]}
-{"zh": "太极符", "en": "Taiji Charm", "category": "consumable", "count": 3, "note": "Thrown. [GRS/6-8-26 desc: 具有和太极符法相同的作用。伤敌350、咒封3回合。]", "source_ids": ["GRS/6-8-26/name", "GRS/6-8-26/desc", "MRS/4-1-9/name"]}
-{"zh": "忘魂花", "en": "Lethe Bloom", "category": "consumable", "count": 1, "note": "Thrown, sleep. [GRS/6-8-27 desc: 青蓝色小花，散发淡淡香气，闻到香气，便会昏睡三回合，闻到会使人昏睡3回合。]", "source_ids": ["GRS/6-8-27/name"]}
+{"zh": "太极符", "en": "Taiji Charm", "category": "consumable", "count": 3, "note": "Thrown. [GRS/6-8-26 desc: 具有和太极符法相同的作用。伤敌350、咒封3回合。]", "source_ids": ["GRS/6-8-26/name", "GRS/6-8-26/desc", "MRS/4-1-9/name"], "short": "Taiji Seal"}
+{"zh": "忘魂花", "en": "Lethe Bloom", "category": "consumable", "count": 1, "note": "Thrown, sleep. [GRS/6-8-27 desc: 青蓝色小花，散发淡淡香气，闻到香气，便会昏睡三回合，闻到会使人昏睡3回合。]", "source_ids": ["GRS/6-8-27/name"], "short": "Lethebloom"}
 {"zh": "火毛虫", "en": "Fire Grub", "category": "consumable", "count": 1, "note": "Thrown, sleep. [GRS/6-8-28 desc: 生长在火焰山附近的一种小虫，可以用来攻击敌人。可使敌人昏睡5回合。]", "source_ids": ["GRS/6-8-28/name"]}
-{"zh": "罗喉针", "en": "Rahu Needle", "category": "consumable", "count": 1, "note": "Thrown, drains HP. [GRS/6-8-29 desc: 铁制钢针，尾端系以灵蛊蚕丝，可吸取敌人hp180。]", "source_ids": ["GRS/6-8-29/name"]}
-{"zh": "石矶珠", "en": "Shiji Pearl", "category": "consumable", "count": 1, "note": "Mystery item tied to Nuwa. [GRS/6-8-30 desc: 神秘物品之一，相传和女娲炼石补天有关的一件东西，功用不详。]", "source_ids": ["GRS/6-8-30/name"]}
+{"zh": "罗喉针", "en": "Rahu Needle", "category": "consumable", "count": 1, "note": "Thrown, drains HP. [GRS/6-8-29 desc: 铁制钢针，尾端系以灵蛊蚕丝，可吸取敌人hp180。]", "source_ids": ["GRS/6-8-29/name"], "short": "Rahu Pin"}
+{"zh": "石矶珠", "en": "Shiji Pearl", "category": "consumable", "count": 1, "note": "Mystery item tied to Nuwa. [GRS/6-8-30 desc: 神秘物品之一，相传和女娲炼石补天有关的一件东西，功用不详。]", "source_ids": ["GRS/6-8-30/name"], "short": "Shiji Bead"}
 {"zh": "止血草", "en": "Bloodwort", "category": "consumable", "count": 1, "alt": "Styptic Herb", "note": "HP+50. [GRS/6-9-1 desc: 嚼碎后敷在伤口上，可迅速止血。恢复生命50。]", "source_ids": ["GRS/6-9-1/name"]}
 {"zh": "青阴君", "en": "Shadeleaf", "category": "consumable", "count": 1, "alt": "Qingyin Herb", "note": "HP+150. [GRS/6-9-2 desc: 生长于华山悬崖陡壁之间，对阴阳失调败心火有奇效。hp+150。]", "source_ids": ["GRS/6-9-2/name"]}
 {"zh": "玉蓝草", "en": "Jadegrass", "category": "consumable", "count": 1, "note": "HP+280. [GRS/6-9-3 desc: 生长于沙漠之中、极为罕见的一种植物，可治疗刀伤、剑伤、砸伤等多种外伤。hp+280。]", "source_ids": ["GRS/6-9-3/name"]}
 {"zh": "赤玉断续膏", "en": "Ruby Salve", "category": "consumable", "count": 1, "note": "HP+450 bone-mending salve. [GRS/6-9-4 desc: 颜色赤黄透明如玉、可治疗骨头损伤的一种药。Hp+450。]", "source_ids": ["GRS/6-9-4/name"]}
-{"zh": "观音符", "en": "Mercy Charm", "category": "consumable", "count": 1, "alt": "Guanyin Charm", "note": "HP+700. 观音 Guanyin, Goddess of Mercy. [GRS/6-9-5 desc: 以观音圣水书写的灵符\\x0d\\x0a。hp+700。]", "source_ids": ["GRS/6-9-5/name"]}
+{"zh": "观音符", "en": "Mercy Charm", "category": "consumable", "count": 1, "alt": "Guanyin Charm", "note": "HP+700. 观音 Guanyin, Goddess of Mercy. [GRS/6-9-5 desc: 以观音圣水书写的灵符\\x0d\\x0a。hp+700。]", "source_ids": ["GRS/6-9-5/name"], "short": "Heal Charm"}
 {"zh": "行军丹", "en": "March Pill", "category": "consumable", "count": 1, "note": "HP+1000. [GRS/6-9-6 desc: 特制的一种活血顺气的黑色药丸。Hp+1000。]", "source_ids": ["GRS/6-9-6/name"]}
 {"zh": "圣灵符", "en": "Holy Charm", "category": "consumable", "count": 1, "note": "Party HP+300 (Nuwa). [GRS/6-9-7 desc: 具有女娲神强大灵力的符咒。全体hp+300。]", "source_ids": ["GRS/6-9-7/name"]}
-{"zh": "鼠儿果", "en": "Mouse Fruit", "category": "consumable", "count": 1, "note": "MP+36. [GRS/6-9-8 desc: 产于山间野地，多为鼠类所食，经人发现移种平地。Mp+36。]", "source_ids": ["GRS/6-9-8/name"]}
-{"zh": "还神丹", "en": "Spirit Pill", "category": "consumable", "count": 1, "note": "MP+50. [GRS/6-9-9 desc: 提神醒脑、养脑养神的药丸。Mp+50。]", "source_ids": ["GRS/6-9-9/name"]}
+{"zh": "鼠儿果", "en": "Mouse Fruit", "category": "consumable", "count": 1, "note": "MP+36. [GRS/6-9-8 desc: 产于山间野地，多为鼠类所食，经人发现移种平地。Mp+36。]", "source_ids": ["GRS/6-9-8/name"], "short": "Mouseberry"}
+{"zh": "还神丹", "en": "Spirit Pill", "category": "consumable", "count": 1, "note": "MP+50. [GRS/6-9-9 desc: 提神醒脑、养脑养神的药丸。Mp+50。]", "source_ids": ["GRS/6-9-9/name"], "short": "Mind Pill"}
 {"zh": "菊花酒", "en": "Mum Wine", "category": "consumable", "count": 1, "note": "MP+110. Chrysanthemum wine. [GRS/6-9-10 desc: 撒点菊花在酒中，保存十年而成。Mp+110。]", "source_ids": ["GRS/6-9-10/name"]}
-{"zh": "魔王甲", "en": "King Beetle", "category": "consumable", "count": 1, "alt": "Demon Beetle", "note": "MP+250. 'Demon-king beetle'. [GRS/6-9-11 desc: 周身青黑色，极其难看的一种甲虫，但可增加真气。Mp+250。]", "source_ids": ["GRS/6-9-11/name"]}
+{"zh": "魔王甲", "en": "King Beetle", "category": "consumable", "count": 1, "alt": "Demon Beetle", "note": "MP+250. 'Demon-king beetle'. [GRS/6-9-11 desc: 周身青黑色，极其难看的一种甲虫，但可增加真气。Mp+250。]", "source_ids": ["GRS/6-9-11/name"], "short": "Kingbeetle"}
 {"zh": "蟠果", "en": "Holy Peach", "category": "consumable", "count": 1, "note": "MP+450. From the Queen Mother's peach garden. [GRS/6-9-12 desc: 西王母蟠桃园遗种，籽小肉厚，汁液香甜\\x0d\\x0a。Mp+450。]", "source_ids": ["GRS/6-9-12/name"]}
-{"zh": "西域奇糯", "en": "Exotic Rice", "category": "consumable", "count": 1, "note": "MP+800. [GRS/6-9-13 desc: 产于西藏的一种糯米。Mp+800。]", "source_ids": ["GRS/6-9-13/name"]}
-{"zh": "紫菁玉蓉膏", "en": "Royal Salve", "category": "consumable", "count": 1, "note": "Full MP. [GRS/6-9-14 desc: 依宫廷秘方，采珍贵药材炼制，是疗伤药的极品。真气补满。]", "source_ids": ["GRS/6-9-14/name"]}
+{"zh": "西域奇糯", "en": "Exotic Rice", "category": "consumable", "count": 1, "note": "MP+800. [GRS/6-9-13 desc: 产于西藏的一种糯米。Mp+800。]", "source_ids": ["GRS/6-9-13/name"], "short": "Tibet Rice"}
+{"zh": "紫菁玉蓉膏", "en": "Royal Salve", "category": "consumable", "count": 1, "note": "Full MP. [GRS/6-9-14 desc: 依宫廷秘方，采珍贵药材炼制，是疗伤药的极品。真气补满。]", "source_ids": ["GRS/6-9-14/name"], "short": "Royal Balm"}
 {"zh": "黑狐甲", "en": "Fox Beetle", "category": "consumable", "count": 1, "note": "Party MP+240. [GRS/6-9-15 desc: 人为饲养的一种小甲虫，非常有灵气。全体Mp+240。]", "source_ids": ["GRS/6-9-15/name"]}
 {"zh": "鸡蛋", "en": "Egg", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-16 desc: 便宜而常见的食物。HpMp+10。]", "source_ids": ["GRS/6-9-16/name"]}
 {"zh": "烧肉", "en": "Roast Pork", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-17 desc: 以炭火熏烤的酱汁猪肉，可恢复体力。HpMp+45。]", "source_ids": ["GRS/6-9-17/name"]}
-{"zh": "蜂王蜜", "en": "Royal Honey", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-18 desc: 蜜蜂所酿最好的蜜，恢复生命150 真气50。]", "source_ids": ["GRS/6-9-18/name"]}
+{"zh": "蜂王蜜", "en": "Royal Honey", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-9-18 desc: 蜜蜂所酿最好的蜜，恢复生命150 真气50。]", "source_ids": ["GRS/6-9-18/name"], "short": "Honeycomb"}
 {"zh": "千里飘", "en": "Farscent", "category": "consumable", "count": 1, "note": "Wine whose scent carries a thousand li. [GRS/6-9-19 desc: 以多种极品鲜果酿制五十年的美酒，打开之后香飘千里。可解毒，HpMp+180。]", "source_ids": ["GRS/6-9-19/name"]}
 {"zh": "冰糖葫芦", "en": "Candy Haws", "category": "consumable", "count": 1, "note": "Tanghulu. [GRS/6-9-20 desc: 以竹签串李子，裹上麦芽糖，形如葫芦，故称糖葫芦。HpMp+400。]", "source_ids": ["GRS/6-9-20/name"]}
 {"zh": "鬼枯藤", "en": "Ghost Vine", "category": "consumable", "count": 1, "note": "Cures poison. [GRS/6-9-21 desc: 具毒性的黑褐色野生藤蔓，可解毒。]", "source_ids": ["GRS/6-9-21/name"]}
@@ -555,16 +555,16 @@
 {"zh": "九节菖蒲", "en": "Calamus", "category": "consumable", "count": 1, "note": "Cures poison. [GRS/6-9-23 desc: 一种水草，叶子狭长如剑，可解毒。]", "source_ids": ["GRS/6-9-23/name"]}
 {"zh": "净衣符", "en": "Pure Charm", "category": "consumable", "count": 1, "note": "Party poison cure. [GRS/6-9-24 desc: 具有祛病、驱邪的法力、可全体解毒。]", "source_ids": ["GRS/6-9-24/name"]}
 {"zh": "雄黄", "en": "Realgar", "category": "consumable", "count": 3, "note": "Consumable. Appears in: item name, item descriptions. [GRS/6-9-25 desc: 天然产的矿物，块状、色黄，，可解毒，hp+350。]", "source_ids": ["GRS/6-9-25/name", "GRS/6-9-26/name", "GRS/6-9-26/desc"]}
-{"zh": "雄黄酒", "en": "Duanwu Wine", "category": "consumable", "count": 1, "alt": "Realgar Wine (12)", "note": "Realgar wine, drunk at the Dragon Boat (Duanwu) festival. [GRS/6-9-26 desc: 一点点的雄黄，撒在酒中，习俗在端午节喝这种酒。可解除乱、眠。]", "source_ids": ["GRS/6-9-26/name"]}
+{"zh": "雄黄酒", "en": "Duanwu Wine", "category": "consumable", "count": 1, "alt": "Realgar Wine (12)", "note": "Realgar wine, drunk at the Dragon Boat (Duanwu) festival. [GRS/6-9-26 desc: 一点点的雄黄，撒在酒中，习俗在端午节喝这种酒。可解除乱、眠。]", "source_ids": ["GRS/6-9-26/name"], "short": "Duanwu Ale"}
 {"zh": "定心符", "en": "Calm Charm", "category": "consumable", "count": 1, "note": "Cures confusion/silence/sleep. [GRS/6-9-27 desc: 具有安气宁神、增加定力、防止走火入魔之功效。可解乱、封、眠。]", "source_ids": ["GRS/6-9-27/name"]}
 {"zh": "灵山仙芝", "en": "Lingzhi", "category": "consumable", "count": 1, "note": "Revive 15%. [GRS/6-10-1 desc: 寄生于枯木上的菌类，俗称瑞草，具有养气培元之神效。Hp恢复15%。]", "source_ids": ["GRS/6-10-1/name"]}
-{"zh": "赎魂灯", "en": "Ransom Lamp", "category": "consumable", "count": 1, "note": "Revive 30%; bargains with the Wuchang for a soul. [GRS/6-10-2 desc: 用此灯再施以法术可以和黑白无尝交涉，释放已被带走的魂魄。Hp恢复30%。]", "source_ids": ["GRS/6-10-2/name"]}
-{"zh": "孟婆汤", "en": "Mengpo Soup", "category": "consumable", "count": 1, "note": "Revive 50%. [GRS/6-10-3 desc: 服用之后消除死者平生所犯之罪孽，使死者复活hp恢复50%。]", "source_ids": ["GRS/6-10-3/name"]}
+{"zh": "赎魂灯", "en": "Ransom Lamp", "category": "consumable", "count": 1, "note": "Revive 30%; bargains with the Wuchang for a soul. [GRS/6-10-2 desc: 用此灯再施以法术可以和黑白无尝交涉，释放已被带走的魂魄。Hp恢复30%。]", "source_ids": ["GRS/6-10-2/name"], "short": "Soul Lamp"}
+{"zh": "孟婆汤", "en": "Mengpo Soup", "category": "consumable", "count": 1, "note": "Revive 50%. [GRS/6-10-3 desc: 服用之后消除死者平生所犯之罪孽，使死者复活hp恢复50%。]", "source_ids": ["GRS/6-10-3/name"], "short": "Lethe Soup"}
 {"zh": "天香续命露", "en": "Heaven Dew", "category": "consumable", "count": 1, "note": "Revive 100%. [GRS/6-10-4 desc: 以八十一种顶级精秘药，用三冥真火炼九九八十一天而成，可引住魂魄，滋养肉体延长寿命Hp恢复100%。]", "source_ids": ["GRS/6-10-4/name"]}
 {"zh": "枸杞仙果", "en": "Goji Berry", "category": "consumable", "count": 1, "note": "Max HP+5. [GRS/6-11-1 desc: 增大生命上限5点。]", "source_ids": ["GRS/6-11-1/name"]}
-{"zh": "八仙石", "en": "Fairy Stone", "category": "consumable", "count": 1, "note": "DEF+2. From the Eight Immortals Cave. [GRS/6-11-2 desc: 八仙洞中仙石，可增强防御2点。]", "source_ids": ["GRS/6-11-2/name"]}
+{"zh": "八仙石", "en": "Fairy Stone", "category": "consumable", "count": 1, "note": "DEF+2. From the Eight Immortals Cave. [GRS/6-11-2 desc: 八仙洞中仙石，可增强防御2点。]", "source_ids": ["GRS/6-11-2/name"], "short": "Fairystone"}
 {"zh": "霸王花", "en": "Cereus", "category": "consumable", "count": 1, "note": "Night-blooming cereus. [GRS/6-11-3 desc: 食用者武术上限+2。]", "source_ids": ["GRS/6-11-3/name"]}
-{"zh": "试炼果", "en": "Trial Fruit", "category": "consumable", "count": 1, "note": "Spirit+3. [GRS/6-11-4 desc: 药王神农氏尝百草时，最早发现的珍药。可提高灵力3点。]", "source_ids": ["GRS/6-11-4/name"]}
+{"zh": "试炼果", "en": "Trial Fruit", "category": "consumable", "count": 1, "note": "Spirit+3. [GRS/6-11-4 desc: 药王神农氏尝百草时，最早发现的珍药。可提高灵力3点。]", "source_ids": ["GRS/6-11-4/name"], "short": "Trial Fig"}
 {"zh": "金鍪", "en": "Gold Cap", "category": "consumable", "count": 1, "note": "Rare herb of Mt. Sanqing. [GRS/6-11-5 desc: 三清山上一种名贵的药材，可增强灵力2点。]", "source_ids": ["GRS/6-11-5/name"]}
 {"zh": "无忧仙丹", "en": "Bliss Pill", "category": "consumable", "count": 1, "alt": "Carefree Pill", "note": "Max HP/MP+10. Zhou Chu's 无忧丹 in dialogue is the same pill. [GRS/6-11-6 desc: 太上老君的灵丹之一，可提升生命上限10点，真气上限10点。]", "source_ids": ["GRS/6-11-6/name"]}
 {"zh": "无忧丹", "en": "Bliss Pill", "category": "consumable", "count": 1, "note": "Dialogue name (1-10-2).", "source_ids": ["gut/1-10-2@020c"]}
@@ -574,135 +574,135 @@
 {"zh": "佛天圆", "en": "Sarira", "category": "consumable", "count": 1, "note": "Max MP+2. [GRS/6-11-10 desc: 有成就的高僧西归后、遗体火化时结成的形如圆球带有灵性的东西。最大真气值+2。]", "source_ids": ["GRS/6-11-10/name"]}
 {"zh": "天玉菩提", "en": "Bodhi Seed", "category": "consumable", "count": 1, "note": "Max MP+3. [GRS/6-11-11 desc: 天山菩提树的树种籽，八十年才结一次籽。最大真气值+3。]", "source_ids": ["GRS/6-11-11/name"]}
 {"zh": "玉银杏宝", "en": "Ginkgo Nut", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-12 desc: 东华上仙居后院的一棵银杏树所结的果子。最大体力值+3。]", "source_ids": ["GRS/6-11-12/name"]}
-{"zh": "罗汉笑", "en": "Arhat Smile", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-13 desc: 塞北药王‘笑天下’亲手培育的奇药。灵力最大值+2。]", "source_ids": ["GRS/6-11-13/name"]}
+{"zh": "罗汉笑", "en": "Arhat Smile", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-13 desc: 塞北药王‘笑天下’亲手培育的奇药。灵力最大值+2。]", "source_ids": ["GRS/6-11-13/name"], "short": "Arhat Grin"}
 {"zh": "雪蛤蟆", "en": "Snow Toad", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-14 desc: 世间罕见，只生长在太白山寒冰洞的洞底。武术上限+2，防御上限+2。]", "source_ids": ["GRS/6-11-14/name"]}
 {"zh": "金毛虫", "en": "Gold Grub", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-11-15 desc: 浑身通红并付有灵气的一种小甲虫，人服食后可增加真气2。]", "source_ids": ["GRS/6-11-15/name"]}
 {"zh": "生龙活虎丹", "en": "Vigor Pill", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-1 desc: 使用后犹如生龙活虎般，增强攻击力。攻击提升1回合。]", "source_ids": ["GRS/6-12-1/name"]}
 {"zh": "龟甲散", "en": "Shell Dust", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-2 desc: 使用后如身覆龟甲，刀枪不入。防御提升5回合。]", "source_ids": ["GRS/6-12-2/name"]}
 {"zh": "飘飘香", "en": "Airy Scent", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-3 desc: 可以释放出一种特异的香味，使人产生飘飘欲仙的感觉，故又名“欲仙丹”。身法提升4回合。]", "source_ids": ["GRS/6-12-3/name"]}
 {"zh": "战狂石", "en": "Rage Stone", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-4 desc: 使用后，使人进入暴劲状态，攻击力增强一倍，持续5回合。]", "source_ids": ["GRS/6-12-4/name"]}
-{"zh": "子金光符", "en": "Glare Charm", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-5 desc: 符咒显灵后、金光四射刺眼非凡，使敌人看不清自己。增加防御一倍，持续七回合。]", "source_ids": ["GRS/6-12-5/name"]}
+{"zh": "子金光符", "en": "Glare Charm", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-5 desc: 符咒显灵后、金光四射刺眼非凡，使敌人看不清自己。增加防御一倍，持续七回合。]", "source_ids": ["GRS/6-12-5/name"], "short": "Glow Charm"}
 {"zh": "飓行草", "en": "Galeweed", "category": "consumable", "count": 1, "note": "Consumable. Appears in: item name. [GRS/6-12-6 desc: 在海外的瀛洲仙岛的阴暗处生长一种草，使用后犹如乘飓风而行，身法提升一倍，持续9回合。]", "source_ids": ["GRS/6-12-6/name"]}
-{"zh": "引路石", "en": "Guide Stone", "category": "consumable", "count": 1, "note": "Escapes a maze. [GRS/6-13-1 desc: 当你在迷宫中迷路时，它可一帮你回到起始点。]", "source_ids": ["GRS/6-13-1/name"]}
+{"zh": "引路石", "en": "Guide Stone", "category": "consumable", "count": 1, "note": "Escapes a maze. [GRS/6-13-1 desc: 当你在迷宫中迷路时，它可一帮你回到起始点。]", "source_ids": ["GRS/6-13-1/name"], "short": "Guidestone"}
 {"zh": "蔡婆婆的信", "en": "Cai Letter", "category": "item", "count": 1, "alt": "Granny Cai's Letter", "note": "Desc: Granny Cai's letter to Lockmaster (unused?). [GRS/6-14-1 desc: 蔡婆婆寄给万锁开的信。]", "source_ids": ["GRS/6-14-1/name"]}
 {"zh": "万能钥匙", "en": "Picklock", "category": "item", "count": 6, "alt": "Skeleton Key; Master Key", "note": "One-use master key made by Lockmaster. [GRS/6-14-2 desc: 建业城中开锁能手“万锁开”制造的，可打开加锁的宝箱。由于做工问题，使用一次后会毁掉。]", "source_ids": ["GRS/6-14-2/name", "gut/1-2-33@00a5.2", "gut/1-9-1@045a.2"]}
-{"zh": "老孟情书", "en": "Love Letter", "category": "item", "count": 1, "note": "Old Meng's letter to Ah Jun. [GRS/6-14-3 desc: 住在忘忧村的老孟写给他在建业打工的男朋友阿军的情书。]", "source_ids": ["GRS/6-14-3/name"]}
+{"zh": "老孟情书", "en": "Love Letter", "category": "item", "count": 1, "note": "Old Meng's letter to Ah Jun. [GRS/6-14-3 desc: 住在忘忧村的老孟写给他在建业打工的男朋友阿军的情书。]", "source_ids": ["GRS/6-14-3/name"], "short": "Love Note"}
 {"zh": "金色钥匙", "en": "Gold Key", "category": "item", "count": 1, "note": "Opens Li Manor's east wing. [GRS/6-14-4 desc: 可以打开李虎家东厢房的钥匙。]", "source_ids": ["GRS/6-14-4/name"]}
 {"zh": "虫子卡片", "en": "Bug Card", "category": "item", "count": 2, "note": "Allnighter's card. [GRS/6-14-5 desc: 神秘卡片之一，用途不明。]", "source_ids": ["GRS/6-14-5/name", "gut/1-2-52@021c"]}
 {"zh": "小鬼卡片", "en": "Imp Card", "category": "item", "count": 1, "note": "South Imp's card. [GRS/6-14-6 desc: 神秘卡片之二，用途不明。]", "source_ids": ["GRS/6-14-6/name"]}
 {"zh": "不点卡片", "en": "Tot Card", "category": "item", "count": 2, "note": "Tiny Tot's card. [GRS/6-14-7 desc: 神秘卡片之三，用途不明。]", "source_ids": ["GRS/6-14-7/name", "gut/1-2-52@0264"]}
 {"zh": "苍龙之精", "en": "Dragon Orb", "category": "item", "count": 2, "alt": "Blue Dragon Essence", "note": "Essence of the Blue Dragon; one of four used on Sky Summit. [GRS/6-14-8 desc: 四象之一，苍龙的精魄。]", "source_ids": ["GRS/6-14-8/name", "gut/1-2-32@0114.2"]}
 {"zh": "白虎之精", "en": "Tiger Orb", "category": "item", "count": 2, "note": "Essence of the White Tiger. [GRS/6-14-9 desc: 四象之一，白虎的精魄。]", "source_ids": ["GRS/6-14-9/name", "gut/1-2-32@0148.2"]}
-{"zh": "朱雀之精", "en": "Phoenix Orb", "category": "item", "count": 2, "note": "Essence of the Red Phoenix. [GRS/6-14-10 desc: 四象之一，朱雀的精魄。]", "source_ids": ["GRS/6-14-10/name", "gut/1-2-32@017c.2"]}
+{"zh": "朱雀之精", "en": "Phoenix Orb", "category": "item", "count": 2, "note": "Essence of the Red Phoenix. [GRS/6-14-10 desc: 四象之一，朱雀的精魄。]", "source_ids": ["GRS/6-14-10/name", "gut/1-2-32@017c.2"], "short": "Bird Orb"}
 {"zh": "玄武之精", "en": "Turtle Orb", "category": "item", "count": 4, "note": "Essence of the Dark Turtle. [GRS/6-14-11 desc: 四象之一，玄武的精魄。]", "source_ids": ["GRS/6-14-11/name", "gut/1-2-32@01b0.2", "gut/1-14-8@0826"]}
 {"zh": "混元金斗", "en": "Chaos Urn", "category": "item", "count": 6, "alt": "Hunyuan Golden Bushel", "note": "Primordial golden bushel that swallows souls; placed in the Primal Demonbane Array at the end. Also ARS object 3-4-41. [GRS/6-14-13 desc: 可以吸取任何生命体魂魄的仙家至宝。; ARS/3-4-41]", "source_ids": ["GRS/6-14-13/name", "ARS/3-4-41/name", "gut/1-1-5@0100"]}
 {"zh": "天鸡", "en": "Sky Rooster", "category": "other", "count": 2, "note": "Appears in: item name, item descriptions.", "source_ids": ["GRS/6-1-10/name", "GRS/6-1-10/desc"]}
-{"zh": "御剑术", "en": "Flying Sword", "category": "magic", "count": 1, "note": "Hero, basic sword control. [MRS/4-1-1 desc: 意念驱剑进行攻击，是剑术的入门功夫。]", "source_ids": ["MRS/4-1-1/name"]}
+{"zh": "御剑术", "en": "Flying Sword", "category": "magic", "count": 1, "note": "Hero, basic sword control. [MRS/4-1-1 desc: 意念驱剑进行攻击，是剑术的入门功夫。]", "source_ids": ["MRS/4-1-1/name"], "short": "Flysword"}
 {"zh": "剑气术", "en": "Sword Qi", "category": "magic", "count": 1, "alt": "Sword Aura", "note": "Hero, sword energy on all enemies. [MRS/4-1-2 desc: 由剑身驱出剑气伤人，攻击敌方全体。]", "source_ids": ["MRS/4-1-2/name"]}
-{"zh": "万剑归一", "en": "All Swords As One", "category": "magic", "count": 1, "alt": "Myriad Swords", "note": "Magic. Appears in: magic name. [MRS/4-1-3 desc: 许多剑从不同的方向刺向一个敌人，威力可想而知。]", "source_ids": ["MRS/4-1-3/name"]}
-{"zh": "无双剑咒", "en": "Peerless Sword", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-4 desc: 全体攻击的剑咒的一种，比较稀松平常。]", "source_ids": ["MRS/4-1-4/name"]}
-{"zh": "人剑合一", "en": "One With the Sword", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name, magic descriptions. [MRS/4-1-5 desc: 古来能修炼到人剑合一的又有几人呢？]", "source_ids": ["MRS/4-1-5/name", "MRS/4-1-5/desc"]}
-{"zh": "破天一剑", "en": "Sky-Rending Sword", "category": "magic", "count": 1, "note": "The hero's self-made move ('my own kung fu'). [MRS/4-1-6 desc: 自创的武功招式。放出飞剑穿破天空，威力无穷。]", "source_ids": ["MRS/4-1-6/name"]}
-{"zh": "神剑御魔", "en": "Divine Demonward", "category": "magic", "count": 1, "note": "Derived from 御魔诀. [MRS/4-1-7 desc: 源自御魔诀的超强剑招，几乎可以一剑御魔。]", "source_ids": ["MRS/4-1-7/name"]}
-{"zh": "天师符法", "en": "Sage Charm Art", "category": "magic", "count": 1, "alt": "Celestial Charm Art", "note": "Maoshan charm attack (desc typo 矛山). [MRS/4-1-8 desc: 矛山道士所创的一种攻击符法，能对妖魔鬼怪进行有效的攻击。]", "source_ids": ["MRS/4-1-8/name"]}
-{"zh": "太极符法", "en": "Taiji Charm Art", "category": "magic", "count": 2, "note": "Magic. Appears in: item descriptions, magic name. [MRS/4-1-9 desc: 利用太极的力量形成强力攻击的符咒。可能产生3回合咒封。]", "source_ids": ["MRS/4-1-9/name", "GRS/6-8-26/desc"]}
-{"zh": "御魔诀", "en": "Demonward Mantra", "category": "magic", "count": 2, "note": "Magic. Appears in: magic descriptions, magic name. [MRS/4-1-10 desc: 除了它的攻击效果外，还可使敌人产生3回合的混乱状态。]", "source_ids": ["MRS/4-1-10/name", "MRS/4-1-7/desc"]}
-{"zh": "百虫欺天", "en": "Swarm Over Heaven", "category": "magic", "count": 1, "alt": "Hundred Bugs", "note": "Taught by Allnighter. [MRS/4-1-11 desc: 异域人通宵虫最恐怖的招式，吸取全体敌人每人生命300。]", "source_ids": ["MRS/4-1-11/name"]}
-{"zh": "双剑斩", "en": "Twin Sword Slash", "category": "magic", "count": 1, "note": "Murong twin-sword style. [MRS/4-1-12 desc: 双剑平行齐出，攻击敌人。为慕容家双剑术的起手式。]", "source_ids": ["MRS/4-1-12/name"]}
-{"zh": "傲剑诀", "en": "Proud Sword Mantra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-13 desc: 双剑分前后飞出，攻击敌人。]", "source_ids": ["MRS/4-1-13/name"]}
-{"zh": "剪刀剑气", "en": "Scissor Sword Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-14 desc: 双剑交叉飞出，攻击敌人。]", "source_ids": ["MRS/4-1-14/name"]}
-{"zh": "凤舞九天", "en": "Phoenix Dance", "category": "magic", "count": 1, "alt": "Phoenix Over Nine Heavens", "note": "Magic. Appears in: magic name. [MRS/4-1-15 desc: 一只凤飞上九天之上，落下凤羽箭攻击全体敌人。]", "source_ids": ["MRS/4-1-15/name"]}
+{"zh": "万剑归一", "en": "All Swords As One", "category": "magic", "count": 1, "alt": "Myriad Swords", "note": "Magic. Appears in: magic name. [MRS/4-1-3 desc: 许多剑从不同的方向刺向一个敌人，威力可想而知。]", "source_ids": ["MRS/4-1-3/name"], "short": "All Swords"}
+{"zh": "无双剑咒", "en": "Peerless Sword", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-4 desc: 全体攻击的剑咒的一种，比较稀松平常。]", "source_ids": ["MRS/4-1-4/name"], "short": "Peerless"}
+{"zh": "人剑合一", "en": "One With the Sword", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name, magic descriptions. [MRS/4-1-5 desc: 古来能修炼到人剑合一的又有几人呢？]", "source_ids": ["MRS/4-1-5/name", "MRS/4-1-5/desc"], "short": "Sword Unity"}
+{"zh": "破天一剑", "en": "Sky-Rending Sword", "category": "magic", "count": 1, "note": "The hero's self-made move ('my own kung fu'). [MRS/4-1-6 desc: 自创的武功招式。放出飞剑穿破天空，威力无穷。]", "source_ids": ["MRS/4-1-6/name"], "short": "Skyrender"}
+{"zh": "神剑御魔", "en": "Divine Demonward", "category": "magic", "count": 1, "note": "Derived from 御魔诀. [MRS/4-1-7 desc: 源自御魔诀的超强剑招，几乎可以一剑御魔。]", "source_ids": ["MRS/4-1-7/name"], "short": "Divine Ward"}
+{"zh": "天师符法", "en": "Sage Charm Art", "category": "magic", "count": 1, "alt": "Celestial Charm Art", "note": "Maoshan charm attack (desc typo 矛山). [MRS/4-1-8 desc: 矛山道士所创的一种攻击符法，能对妖魔鬼怪进行有效的攻击。]", "source_ids": ["MRS/4-1-8/name"], "short": "Sage Charm"}
+{"zh": "太极符法", "en": "Taiji Charm Art", "category": "magic", "count": 2, "note": "Magic. Appears in: item descriptions, magic name. [MRS/4-1-9 desc: 利用太极的力量形成强力攻击的符咒。可能产生3回合咒封。]", "source_ids": ["MRS/4-1-9/name", "GRS/6-8-26/desc"], "short": "Taiji Charm"}
+{"zh": "御魔诀", "en": "Demonward Mantra", "category": "magic", "count": 2, "note": "Magic. Appears in: magic descriptions, magic name. [MRS/4-1-10 desc: 除了它的攻击效果外，还可使敌人产生3回合的混乱状态。]", "source_ids": ["MRS/4-1-10/name", "MRS/4-1-7/desc"], "short": "Demonward"}
+{"zh": "百虫欺天", "en": "Swarm Over Heaven", "category": "magic", "count": 1, "alt": "Hundred Bugs", "note": "Taught by Allnighter. [MRS/4-1-11 desc: 异域人通宵虫最恐怖的招式，吸取全体敌人每人生命300。]", "source_ids": ["MRS/4-1-11/name"], "short": "Sky Swarm"}
+{"zh": "双剑斩", "en": "Twin Sword Slash", "category": "magic", "count": 1, "note": "Murong twin-sword style. [MRS/4-1-12 desc: 双剑平行齐出，攻击敌人。为慕容家双剑术的起手式。]", "source_ids": ["MRS/4-1-12/name"], "short": "Twin Slash"}
+{"zh": "傲剑诀", "en": "Proud Sword Mantra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-13 desc: 双剑分前后飞出，攻击敌人。]", "source_ids": ["MRS/4-1-13/name"], "short": "Proud Sword"}
+{"zh": "剪刀剑气", "en": "Scissor Sword Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-14 desc: 双剑交叉飞出，攻击敌人。]", "source_ids": ["MRS/4-1-14/name"], "short": "Scissor Qi"}
+{"zh": "凤舞九天", "en": "Phoenix Dance", "category": "magic", "count": 1, "alt": "Phoenix Over Nine Heavens", "note": "Magic. Appears in: magic name. [MRS/4-1-15 desc: 一只凤飞上九天之上，落下凤羽箭攻击全体敌人。]", "source_ids": ["MRS/4-1-15/name"], "short": "Sky Phoenix"}
 {"zh": "独孤刀", "en": "Lone Blade", "category": "magic", "count": 1, "note": "Desc says 孤独刀 (swapped characters). [MRS/4-1-16 desc: 单刀御敌，攻击敌方单人。]", "source_ids": ["MRS/4-1-16/name"]}
-{"zh": "狂刀斩", "en": "Mad Blade Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-17 desc: 孤独刀的暴劲招式，攻击单个敌人。]", "source_ids": ["MRS/4-1-17/name"]}
-{"zh": "霸王横刀", "en": "Tyrant Sweep", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-18 desc: 大刀一挥，斩妖除魔。攻击全体。]", "source_ids": ["MRS/4-1-18/name"]}
-{"zh": "火旋灯", "en": "Fire Pinwheel", "category": "magic", "count": 2, "alt": "Spinning Fire Lamp", "note": "Magic. Appears in: magic name. [MRS/4-1-19 desc: 召唤火灯，旋转攻击单个敌人。]", "source_ids": ["MRS/4-1-19/name", "MRS/4-1-20/name"]}
-{"zh": "烈火旋灯", "en": "Blazing Pinwheel", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-20 desc: 召唤火灯，旋转攻击全体敌人。]", "source_ids": ["MRS/4-1-20/name"]}
-{"zh": "天火击", "en": "Skyfire Strike", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-21 desc: 天降烈火，攻击单个敌人。]", "source_ids": ["MRS/4-1-21/name"]}
-{"zh": "天火烈焰", "en": "Skyfire Blaze", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-22 desc: 天降烈火，攻击全体敌人。]", "source_ids": ["MRS/4-1-22/name"]}
-{"zh": "魔域炼火", "en": "Demon Realm Fire", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-23 desc: 召唤地下魔域的炼火攻击所有敌人。]", "source_ids": ["MRS/4-1-23/name"]}
-{"zh": "火雷破空", "en": "Fire Thunder Burst", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-24 desc: 火系魔法和雷系魔法相结合所形成的魔法，威力无穷。攻击敌方全体。]", "source_ids": ["MRS/4-1-24/name"]}
-{"zh": "炎龙覆天", "en": "Flame Dragon", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-25 desc: 召唤天上的炎龙俯冲到地上，攻击全体敌人。]", "source_ids": ["MRS/4-1-25/name"]}
-{"zh": "雷咒", "en": "Thunder Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-26]", "source_ids": ["MRS/4-1-26/name"]}
-{"zh": "五雷破空", "en": "Five Thunders Burst", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-27]", "source_ids": ["MRS/4-1-27/name"]}
-{"zh": "五雷轰顶", "en": "Five Thunder Crash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-28]", "source_ids": ["MRS/4-1-28/name"]}
+{"zh": "狂刀斩", "en": "Mad Blade Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-17 desc: 孤独刀的暴劲招式，攻击单个敌人。]", "source_ids": ["MRS/4-1-17/name"], "short": "Mad Slash"}
+{"zh": "霸王横刀", "en": "Tyrant Sweep", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-18 desc: 大刀一挥，斩妖除魔。攻击全体。]", "source_ids": ["MRS/4-1-18/name"], "short": "Tyrant Cut"}
+{"zh": "火旋灯", "en": "Fire Pinwheel", "category": "magic", "count": 2, "alt": "Spinning Fire Lamp", "note": "Magic. Appears in: magic name. [MRS/4-1-19 desc: 召唤火灯，旋转攻击单个敌人。]", "source_ids": ["MRS/4-1-19/name", "MRS/4-1-20/name"], "short": "Pinwheel"}
+{"zh": "烈火旋灯", "en": "Blazing Pinwheel", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-20 desc: 召唤火灯，旋转攻击全体敌人。]", "source_ids": ["MRS/4-1-20/name"], "short": "Blaze Wheel"}
+{"zh": "天火击", "en": "Skyfire Strike", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-21 desc: 天降烈火，攻击单个敌人。]", "source_ids": ["MRS/4-1-21/name"], "short": "Skyfire"}
+{"zh": "天火烈焰", "en": "Skyfire Blaze", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-22 desc: 天降烈火，攻击全体敌人。]", "source_ids": ["MRS/4-1-22/name"], "short": "Skyblaze"}
+{"zh": "魔域炼火", "en": "Demon Realm Fire", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-23 desc: 召唤地下魔域的炼火攻击所有敌人。]", "source_ids": ["MRS/4-1-23/name"], "short": "Hellfire"}
+{"zh": "火雷破空", "en": "Fire Thunder Burst", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-24 desc: 火系魔法和雷系魔法相结合所形成的魔法，威力无穷。攻击敌方全体。]", "source_ids": ["MRS/4-1-24/name"], "short": "Firebolt"}
+{"zh": "炎龙覆天", "en": "Flame Dragon", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-25 desc: 召唤天上的炎龙俯冲到地上，攻击全体敌人。]", "source_ids": ["MRS/4-1-25/name"], "short": "Fire Dragon"}
+{"zh": "雷咒", "en": "Thunder Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-26]", "source_ids": ["MRS/4-1-26/name"], "short": "Thunderbolt"}
+{"zh": "五雷破空", "en": "Five Thunders Burst", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-27]", "source_ids": ["MRS/4-1-27/name"], "short": "Five Bolts"}
+{"zh": "五雷轰顶", "en": "Five Thunder Crash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-28]", "source_ids": ["MRS/4-1-28/name"], "short": "Bolt Crash"}
 {"zh": "地裂术", "en": "Earth Split", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-29]", "source_ids": ["MRS/4-1-29/name"]}
-{"zh": "龟裂天下", "en": "Shatter the World", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-30]", "source_ids": ["MRS/4-1-30/name"]}
+{"zh": "龟裂天下", "en": "Shatter the World", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-30]", "source_ids": ["MRS/4-1-30/name"], "short": "Worldbreak"}
 {"zh": "风咒", "en": "Wind Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-31]", "source_ids": ["MRS/4-1-31/name"]}
 {"zh": "狂风术", "en": "Gale", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-32]", "source_ids": ["MRS/4-1-32/name"]}
 {"zh": "飞沙走石", "en": "Sandstorm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-33]", "source_ids": ["MRS/4-1-33/name"]}
-{"zh": "横刀斩", "en": "Sweeping Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-34]", "source_ids": ["MRS/4-1-34/name"]}
-{"zh": "气剑指", "en": "Qi Sword Finger", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-35]", "source_ids": ["MRS/4-1-35/name"]}
+{"zh": "横刀斩", "en": "Sweeping Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-34]", "source_ids": ["MRS/4-1-34/name"], "short": "Sweep Slash"}
+{"zh": "气剑指", "en": "Qi Sword Finger", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-35]", "source_ids": ["MRS/4-1-35/name"], "short": "Qi Finger"}
 {"zh": "魔音", "en": "Demon Song", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-36]", "source_ids": ["MRS/4-1-36/name"]}
 {"zh": "瘴气", "en": "Miasma", "category": "magic", "count": 7, "note": "Monster spell, and the poisonous vapor of the Miasma Wood (lowercase 'miasma' in prose). [MRS/4-1-37]", "source_ids": ["MRS/4-1-37/name", "gut/1-3-9@01f7", "gut/1-4-1@0089"]}
-{"zh": "毒吞天下", "en": "World-Eating Venom", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-38]", "source_ids": ["MRS/4-1-38/name"]}
-{"zh": "噬灵蛇咒", "en": "Snake Soul Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-39]", "source_ids": ["MRS/4-1-39/name"]}
-{"zh": "霸王狮子吼", "en": "Tyrant Lion Roar", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-40 desc: 利用吼声降低敌人攻击力和防御力。]", "source_ids": ["MRS/4-1-40/name"]}
-{"zh": "火龙掌", "en": "Fire Dragon Palm", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-1-41]", "source_ids": ["MRS/4-1-41/name", "MRS/4-1-42/name"]}
-{"zh": "大火龙掌", "en": "Great Dragon Palm", "category": "magic", "count": 1, "alt": "Great Fire Dragon Palm (20)", "note": "Magic. Appears in: magic name. [MRS/4-1-42]", "source_ids": ["MRS/4-1-42/name"]}
-{"zh": "五煞齐出", "en": "Five Fiends Strike", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-43]", "source_ids": ["MRS/4-1-43/name"]}
+{"zh": "毒吞天下", "en": "World-Eating Venom", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-38]", "source_ids": ["MRS/4-1-38/name"], "short": "World Venom"}
+{"zh": "噬灵蛇咒", "en": "Snake Soul Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-39]", "source_ids": ["MRS/4-1-39/name"], "short": "Snake Curse"}
+{"zh": "霸王狮子吼", "en": "Tyrant Lion Roar", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-40 desc: 利用吼声降低敌人攻击力和防御力。]", "source_ids": ["MRS/4-1-40/name"], "short": "Lion Roar"}
+{"zh": "火龙掌", "en": "Fire Dragon Palm", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-1-41]", "source_ids": ["MRS/4-1-41/name", "MRS/4-1-42/name"], "short": "Fire Palm"}
+{"zh": "大火龙掌", "en": "Great Dragon Palm", "category": "magic", "count": 1, "alt": "Great Fire Dragon Palm (20)", "note": "Magic. Appears in: magic name. [MRS/4-1-42]", "source_ids": ["MRS/4-1-42/name"], "short": "Great Palm"}
+{"zh": "五煞齐出", "en": "Five Fiends Strike", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-43]", "source_ids": ["MRS/4-1-43/name"], "short": "Five Fiends"}
 {"zh": "御蜂咒", "en": "Bee Swarm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-44]", "source_ids": ["MRS/4-1-44/name"]}
 {"zh": "御虫咒", "en": "Bug Swarm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-45]", "source_ids": ["MRS/4-1-45/name"]}
 {"zh": "天崩地裂", "en": "Cataclysm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-46]", "source_ids": ["MRS/4-1-46/name"]}
-{"zh": "蚀骨毒咒", "en": "Bone-Rot Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-47]", "source_ids": ["MRS/4-1-47/name"]}
-{"zh": "罗煞咒", "en": "Rakshasa Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-48]", "source_ids": ["MRS/4-1-48/name"]}
-{"zh": "玄月斩", "en": "Dark Moon Slash", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-1-49]", "source_ids": ["MRS/4-1-49/name", "MRS/4-1-50/name"]}
-{"zh": "大玄月斩", "en": "Great Moon Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-50]", "source_ids": ["MRS/4-1-50/name"]}
+{"zh": "蚀骨毒咒", "en": "Bone-Rot Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-47]", "source_ids": ["MRS/4-1-47/name"], "short": "Bone Rot"}
+{"zh": "罗煞咒", "en": "Rakshasa Curse", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-48]", "source_ids": ["MRS/4-1-48/name"], "short": "Rakshasa"}
+{"zh": "玄月斩", "en": "Dark Moon Slash", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-1-49]", "source_ids": ["MRS/4-1-49/name", "MRS/4-1-50/name"], "short": "Moon Slash"}
+{"zh": "大玄月斩", "en": "Great Moon Slash", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-50]", "source_ids": ["MRS/4-1-50/name"], "short": "Full Moon"}
 {"zh": "冰咒", "en": "Ice Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-51]", "source_ids": ["MRS/4-1-51/name"]}
 {"zh": "火咒", "en": "Fire Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-52]", "source_ids": ["MRS/4-1-52/name"]}
 {"zh": "天女散花", "en": "Petal Rain", "category": "magic", "count": 1, "alt": "Heavenly Maiden's Flowers", "note": "Magic. Appears in: magic name. [MRS/4-1-53]", "source_ids": ["MRS/4-1-53/name"]}
-{"zh": "飞岩术", "en": "Flying Rocks", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-54]", "source_ids": ["MRS/4-1-54/name"]}
-{"zh": "血魔神功", "en": "Blood Demon Art", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-55]", "source_ids": ["MRS/4-1-55/name"]}
+{"zh": "飞岩术", "en": "Flying Rocks", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-54]", "source_ids": ["MRS/4-1-54/name"], "short": "Flying Rock"}
+{"zh": "血魔神功", "en": "Blood Demon Art", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-55]", "source_ids": ["MRS/4-1-55/name"], "short": "Blood Art"}
 {"zh": "地爪术", "en": "Earth Claw", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-56]", "source_ids": ["MRS/4-1-56/name"]}
-{"zh": "幽冥鬼爪", "en": "Nether Ghost Claw", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-58]", "source_ids": ["MRS/4-1-58/name"]}
-{"zh": "魔掌天下", "en": "Demon Palm Sweep", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-59]", "source_ids": ["MRS/4-1-59/name"]}
-{"zh": "风云变色", "en": "Shifting Storm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-60]", "source_ids": ["MRS/4-1-60/name"]}
-{"zh": "神鬼乱舞", "en": "Spirit Frenzy", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-61]", "source_ids": ["MRS/4-1-61/name"]}
-{"zh": "鬼哭神号", "en": "Wailing Spirits", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-62]", "source_ids": ["MRS/4-1-62/name"]}
+{"zh": "幽冥鬼爪", "en": "Nether Ghost Claw", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-58]", "source_ids": ["MRS/4-1-58/name"], "short": "Ghost Claw"}
+{"zh": "魔掌天下", "en": "Demon Palm Sweep", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-59]", "source_ids": ["MRS/4-1-59/name"], "short": "Demon Palm"}
+{"zh": "风云变色", "en": "Shifting Storm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-60]", "source_ids": ["MRS/4-1-60/name"], "short": "Tempest"}
+{"zh": "神鬼乱舞", "en": "Spirit Frenzy", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-61]", "source_ids": ["MRS/4-1-61/name"], "short": "Ghost Dance"}
+{"zh": "鬼哭神号", "en": "Wailing Spirits", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-62]", "source_ids": ["MRS/4-1-62/name"], "short": "Ghost Wail"}
 {"zh": "乌手术", "en": "Black Hand", "category": "magic", "count": 1, "note": "Poison. [MRS/4-1-63 desc: 一种发毒手法。单体中毒3回合。]", "source_ids": ["MRS/4-1-63/name"]}
-{"zh": "万毒手", "en": "Myriad Poison Hand", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-64 desc: 一种可将任合毒药以快、狠、准的身手投向敌人的法术。全体敌人中毒5回合。]", "source_ids": ["MRS/4-1-64/name"]}
-{"zh": "苦口婆心", "en": "Endless Nagging", "category": "magic", "count": 1, "note": "Confuses (idiom: earnest nagging). [MRS/4-1-65 desc: 造成敌人混乱5回合。]", "source_ids": ["MRS/4-1-65/name"]}
+{"zh": "万毒手", "en": "Myriad Poison Hand", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-64 desc: 一种可将任合毒药以快、狠、准的身手投向敌人的法术。全体敌人中毒5回合。]", "source_ids": ["MRS/4-1-64/name"], "short": "Poison Hand"}
+{"zh": "苦口婆心", "en": "Endless Nagging", "category": "magic", "count": 1, "note": "Confuses (idiom: earnest nagging). [MRS/4-1-65 desc: 造成敌人混乱5回合。]", "source_ids": ["MRS/4-1-65/name"], "short": "Nagging"}
 {"zh": "玄籁之音", "en": "Mystic Echo", "category": "magic", "count": 1, "note": "Murong family art. [MRS/4-1-66 desc: 慕容家的家传绝学，可使全体敌人混乱3回合。]", "source_ids": ["MRS/4-1-66/name"]}
-{"zh": "五鬼乱神", "en": "Five Ghost Chaos", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-67 desc: 魔族的一种邪术，可使人丧失心志5回合。]", "source_ids": ["MRS/4-1-67/name"]}
-{"zh": "笑里藏刀", "en": "Smiling Dagger", "category": "magic", "count": 1, "note": "Idiom 'a dagger hidden in a smile'. [MRS/4-1-68 desc: 很阴险的招数，让人不知不觉中被咒封，持续4回合。]", "source_ids": ["MRS/4-1-68/name"]}
-{"zh": "八门金锁", "en": "Eight Gate Lock", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-69 desc: 运用休、生、伤、杜、景、死、惊、开八门的力量将敌人全体咒封10回合。]", "source_ids": ["MRS/4-1-69/name"]}
-{"zh": "回梦", "en": "Return to Dream", "category": "magic", "count": 1, "note": "Sleep. [MRS/4-1-70 desc: 将人催眠的魔法，眠4回合。]", "source_ids": ["MRS/4-1-70/name"]}
-{"zh": "九天困乏咒", "en": "Weariness Curse", "category": "magic", "count": 1, "alt": "Nine Heavens Fatigue (20)", "note": "Magic. Appears in: magic name. [MRS/4-1-71 desc: 可以另全体敌人都进入睡眠状态的魔法，持续2回合。]", "source_ids": ["MRS/4-1-71/name"]}
+{"zh": "五鬼乱神", "en": "Five Ghost Chaos", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-67 desc: 魔族的一种邪术，可使人丧失心志5回合。]", "source_ids": ["MRS/4-1-67/name"], "short": "Five Ghosts"}
+{"zh": "笑里藏刀", "en": "Smiling Dagger", "category": "magic", "count": 1, "note": "Idiom 'a dagger hidden in a smile'. [MRS/4-1-68 desc: 很阴险的招数，让人不知不觉中被咒封，持续4回合。]", "source_ids": ["MRS/4-1-68/name"], "short": "Smile Knife"}
+{"zh": "八门金锁", "en": "Eight Gate Lock", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-69 desc: 运用休、生、伤、杜、景、死、惊、开八门的力量将敌人全体咒封10回合。]", "source_ids": ["MRS/4-1-69/name"], "short": "Eight Gates"}
+{"zh": "回梦", "en": "Return to Dream", "category": "magic", "count": 1, "note": "Sleep. [MRS/4-1-70 desc: 将人催眠的魔法，眠4回合。]", "source_ids": ["MRS/4-1-70/name"], "short": "Slumber"}
+{"zh": "九天困乏咒", "en": "Weariness Curse", "category": "magic", "count": 1, "alt": "Nine Heavens Fatigue (20)", "note": "Magic. Appears in: magic name. [MRS/4-1-71 desc: 可以另全体敌人都进入睡眠状态的魔法，持续2回合。]", "source_ids": ["MRS/4-1-71/name"], "short": "Weary Curse"}
 {"zh": "御梦心经", "en": "Dream Sutra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-72 desc: 可将人带入梦境中的特殊魔法，单体眠5回合。]", "source_ids": ["MRS/4-1-72/name"]}
-{"zh": "卸劲诀", "en": "Sap Strength", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-73 desc: 敌方单人攻击减弱5回合。]", "source_ids": ["MRS/4-1-73/name"]}
-{"zh": "破兵卸劲", "en": "Shatter Arms", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-74 desc: 敌方全体攻击减弱3回合。]", "source_ids": ["MRS/4-1-74/name"]}
-{"zh": "血魔噬主", "en": "Blood Demon Bite", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-75 desc: 单人防御降低5回合。]", "source_ids": ["MRS/4-1-75/name"]}
-{"zh": "血魔破甲", "en": "Blood Armorbreak", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-76 desc: 敌方全体防御降低，持续5回合。]", "source_ids": ["MRS/4-1-76/name"]}
-{"zh": "丹凤解甲", "en": "Phoenix Disarm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-77 desc: 敌方单人防御大幅度降低，持续3回合。]", "source_ids": ["MRS/4-1-77/name"]}
+{"zh": "卸劲诀", "en": "Sap Strength", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-73 desc: 敌方单人攻击减弱5回合。]", "source_ids": ["MRS/4-1-73/name"], "short": "Weaken"}
+{"zh": "破兵卸劲", "en": "Shatter Arms", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-74 desc: 敌方全体攻击减弱3回合。]", "source_ids": ["MRS/4-1-74/name"], "short": "Break Arms"}
+{"zh": "血魔噬主", "en": "Blood Demon Bite", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-75 desc: 单人防御降低5回合。]", "source_ids": ["MRS/4-1-75/name"], "short": "Blood Bite"}
+{"zh": "血魔破甲", "en": "Blood Armorbreak", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-76 desc: 敌方全体防御降低，持续5回合。]", "source_ids": ["MRS/4-1-76/name"], "short": "Blood Break"}
+{"zh": "丹凤解甲", "en": "Phoenix Disarm", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-77 desc: 敌方单人防御大幅度降低，持续3回合。]", "source_ids": ["MRS/4-1-77/name"], "short": "Disarm"}
 {"zh": "抽丝剥茧", "en": "Unravel", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name, magic descriptions. [MRS/4-1-78 desc: 将施展对象的防御像抽丝剥茧似的层层吸去，可极大的降低防御，持续4回合。]", "source_ids": ["MRS/4-1-78/name", "MRS/4-1-78/desc"]}
-{"zh": "定影神咒", "en": "Shadowbind Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-79 desc: 对着敌人的影子念动咒语，可降低他的身法5回合。]", "source_ids": ["MRS/4-1-79/name"]}
+{"zh": "定影神咒", "en": "Shadowbind Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-79 desc: 对着敌人的影子念动咒语，可降低他的身法5回合。]", "source_ids": ["MRS/4-1-79/name"], "short": "Shadowbind"}
 {"zh": "地气锁", "en": "Earth Lock", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-1-80 desc: 利用大地的吸附能力，降低所有敌人的身法，6回合内有效。]", "source_ids": ["MRS/4-1-80/name"]}
-{"zh": "御魔剑诀", "en": "Demonward Sword", "category": "magic", "count": 1, "note": "Zhang Daoling's sword mantra. [MRS/4-1-81 desc: 张道陵所创的一种攻击剑诀，能对妖魔鬼怪进行有效的攻击。]", "source_ids": ["MRS/4-1-81/name"]}
-{"zh": "金刚咒", "en": "Diamond Spell", "category": "magic", "count": 1, "alt": "Vajra Spell", "note": "Magic. Appears in: magic name. [MRS/4-2-1 desc: 增强防御能力50%，持续5回合。]", "source_ids": ["MRS/4-2-1/name"]}
+{"zh": "御魔剑诀", "en": "Demonward Sword", "category": "magic", "count": 1, "note": "Zhang Daoling's sword mantra. [MRS/4-1-81 desc: 张道陵所创的一种攻击剑诀，能对妖魔鬼怪进行有效的攻击。]", "source_ids": ["MRS/4-1-81/name"], "short": "Ward Sword"}
+{"zh": "金刚咒", "en": "Diamond Spell", "category": "magic", "count": 1, "alt": "Vajra Spell", "note": "Magic. Appears in: magic name. [MRS/4-2-1 desc: 增强防御能力50%，持续5回合。]", "source_ids": ["MRS/4-2-1/name"], "short": "Diamond"}
 {"zh": "金钟护身", "en": "Golden Bell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-2 desc: 使用后有如金钟铁罩护身，加倍防御9回合。]", "source_ids": ["MRS/4-2-2/name"]}
-{"zh": "固若金汤", "en": "Iron Bastion", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-3 desc: 全体人员5回合内，防御提高一倍。]", "source_ids": ["MRS/4-2-3/name"]}
-{"zh": "望月步", "en": "Moongaze Step", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-4 desc: 一种轻盈的战斗步法，可使一个人5回合内，身法提升提升50%。]", "source_ids": ["MRS/4-2-4/name"]}
+{"zh": "固若金汤", "en": "Iron Bastion", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-3 desc: 全体人员5回合内，防御提高一倍。]", "source_ids": ["MRS/4-2-3/name"], "short": "Iron Wall"}
+{"zh": "望月步", "en": "Moongaze Step", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-4 desc: 一种轻盈的战斗步法，可使一个人5回合内，身法提升提升50%。]", "source_ids": ["MRS/4-2-4/name"], "short": "Moon Step"}
 {"zh": "御风行", "en": "Wind Walk", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-5 desc: 单人身法提升1倍，持续8回合。]", "source_ids": ["MRS/4-2-5/name"]}
-{"zh": "天罡战气", "en": "Heavenly War Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-6 desc: 被施展者普通攻击效果上升7回合。]", "source_ids": ["MRS/4-2-6/name"]}
-{"zh": "六祖战经", "en": "Six Patriarch Sutra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-7 desc: 我方全体人员，5回合内普通攻击威力加倍。]", "source_ids": ["MRS/4-2-7/name"]}
+{"zh": "天罡战气", "en": "Heavenly War Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-6 desc: 被施展者普通攻击效果上升7回合。]", "source_ids": ["MRS/4-2-6/name"], "short": "Heavenly Qi"}
+{"zh": "六祖战经", "en": "Six Patriarch Sutra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-2-7 desc: 我方全体人员，5回合内普通攻击威力加倍。]", "source_ids": ["MRS/4-2-7/name"], "short": "War Sutra"}
 {"zh": "气疗术", "en": "Qi Heal", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-1 desc: 修道之人疗伤的基本法术，恢复生命75。]", "source_ids": ["MRS/4-3-1/name"]}
-{"zh": "归心术", "en": "Mind Restore", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-3-2 desc: 中级疗伤法术，单人恢复生命400。]", "source_ids": ["MRS/4-3-2/name", "MRS/4-3-6/name"]}
-{"zh": "老子回天术", "en": "Laozi's Revival", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-3 desc: 太上老君秘传的恢复法术，我方单人恢复生命1000。]", "source_ids": ["MRS/4-3-3/name"]}
+{"zh": "归心术", "en": "Mind Restore", "category": "magic", "count": 2, "note": "Magic. Appears in: magic name. [MRS/4-3-2 desc: 中级疗伤法术，单人恢复生命400。]", "source_ids": ["MRS/4-3-2/name", "MRS/4-3-6/name"], "short": "Mind Mend"}
+{"zh": "老子回天术", "en": "Laozi's Revival", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-3 desc: 太上老君秘传的恢复法术，我方单人恢复生命1000。]", "source_ids": ["MRS/4-3-3/name"], "short": "Laozi Mend"}
 {"zh": "观音咒", "en": "Mercy Spell", "category": "magic", "count": 1, "alt": "Guanyin Mantra", "note": "Xiaomei's basic heal. [MRS/4-3-4 desc: 初级疗伤心法，单人恢复生命150。]", "source_ids": ["MRS/4-3-4/name"]}
-{"zh": "凝神归元", "en": "Restore Essence", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-5 desc: 中级疗伤心法，单人恢复生命220。]", "source_ids": ["MRS/4-3-5/name"]}
-{"zh": "元灵归心术", "en": "Spirit Return", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-6 desc: 高级疗伤心法，单人恢复生命560。]", "source_ids": ["MRS/4-3-6/name"]}
+{"zh": "凝神归元", "en": "Restore Essence", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-5 desc: 中级疗伤心法，单人恢复生命220。]", "source_ids": ["MRS/4-3-5/name"], "short": "Focus Mend"}
+{"zh": "元灵归心术", "en": "Spirit Return", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-6 desc: 高级疗伤心法，单人恢复生命560。]", "source_ids": ["MRS/4-3-6/name"], "short": "Spirit Mend"}
 {"zh": "五朝元气", "en": "Fivefold Qi", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-7 desc: 特殊疗伤心法，全体恢复生命360。]", "source_ids": ["MRS/4-3-7/name"]}
-{"zh": "泽伟补命术", "en": "Zewei's Life Mend", "category": "magic", "count": 1, "note": "Named after cameo Chen Zewei; taught by South Imp. [MRS/4-3-8 desc: 异域人陈泽伟传授的强力恢复魔法，而且耗费真气极少。全体恢复生命1000。解除毒、乱、封、眠]", "source_ids": ["MRS/4-3-8/name"]}
-{"zh": "百火练金术", "en": "Hundred Fire Forge", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-9 desc: 我方单人恢复生命900的强力法术。]", "source_ids": ["MRS/4-3-9/name"]}
-{"zh": "凝神诀", "en": "Focus Mantra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-10 desc: 三清心法的一种，使人处于明镜状态。解除乱、眠状态。]", "source_ids": ["MRS/4-3-10/name"]}
-{"zh": "净衣咒", "en": "Purify Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-11 desc: 净化身体的元气，解除中毒状态。]", "source_ids": ["MRS/4-3-11/name"]}
-{"zh": "冰心决", "en": "Icy Heart Mantra", "category": "magic", "count": 1, "note": "决 for 诀 (typo). [MRS/4-3-12 desc: 可解除混乱状态的一种咒语。]", "source_ids": ["MRS/4-3-12/name"]}
-{"zh": "华佗化封诀", "en": "Hua Tuo's Unseal", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-13 desc: 根据华佗的身体穴位图，催动真气念真言，单体解除封招的咒语。]", "source_ids": ["MRS/4-3-13/name"]}
-{"zh": "马师皇针灸", "en": "Ma Shihuang Needles", "category": "magic", "count": 1, "alt": "Acupuncture", "note": "Magic. Appears in: magic name. [MRS/4-3-14 desc: 神医马师皇传下来的一种针灸方法，能令人解除疲乏，恢复精神。单体解除眠状态。]", "source_ids": ["MRS/4-3-14/name"]}
-{"zh": "五禽戏咒", "en": "Five Animals Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-15 desc: 华佗创造的五禽戏，经历代名医道士的演习所形成具有相同作用的咒语，可解除毒乱封眠。]", "source_ids": ["MRS/4-3-15/name"]}
-{"zh": "还魂咒", "en": "Revive Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-4-1 desc: 使脱离人体的魂魄回归本身的咒语。起死回生，恢复15%的生命。]", "source_ids": ["MRS/4-4-1/name"]}
+{"zh": "泽伟补命术", "en": "Zewei's Life Mend", "category": "magic", "count": 1, "note": "Named after cameo Chen Zewei; taught by South Imp. [MRS/4-3-8 desc: 异域人陈泽伟传授的强力恢复魔法，而且耗费真气极少。全体恢复生命1000。解除毒、乱、封、眠]", "source_ids": ["MRS/4-3-8/name"], "short": "Life Mend"}
+{"zh": "百火练金术", "en": "Hundred Fire Forge", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-9 desc: 我方单人恢复生命900的强力法术。]", "source_ids": ["MRS/4-3-9/name"], "short": "Fire Forge"}
+{"zh": "凝神诀", "en": "Focus Mantra", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-10 desc: 三清心法的一种，使人处于明镜状态。解除乱、眠状态。]", "source_ids": ["MRS/4-3-10/name"], "short": "Focus"}
+{"zh": "净衣咒", "en": "Purify Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-11 desc: 净化身体的元气，解除中毒状态。]", "source_ids": ["MRS/4-3-11/name"], "short": "Purify"}
+{"zh": "冰心决", "en": "Icy Heart Mantra", "category": "magic", "count": 1, "note": "决 for 诀 (typo). [MRS/4-3-12 desc: 可解除混乱状态的一种咒语。]", "source_ids": ["MRS/4-3-12/name"], "short": "Icy Heart"}
+{"zh": "华佗化封诀", "en": "Hua Tuo's Unseal", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-13 desc: 根据华佗的身体穴位图，催动真气念真言，单体解除封招的咒语。]", "source_ids": ["MRS/4-3-13/name"], "short": "Unseal"}
+{"zh": "马师皇针灸", "en": "Ma Shihuang Needles", "category": "magic", "count": 1, "alt": "Acupuncture", "note": "Magic. Appears in: magic name. [MRS/4-3-14 desc: 神医马师皇传下来的一种针灸方法，能令人解除疲乏，恢复精神。单体解除眠状态。]", "source_ids": ["MRS/4-3-14/name"], "short": "Acupuncture"}
+{"zh": "五禽戏咒", "en": "Five Animals Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-3-15 desc: 华佗创造的五禽戏，经历代名医道士的演习所形成具有相同作用的咒语，可解除毒乱封眠。]", "source_ids": ["MRS/4-3-15/name"], "short": "Five Beasts"}
+{"zh": "还魂咒", "en": "Revive Spell", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-4-1 desc: 使脱离人体的魂魄回归本身的咒语。起死回生，恢复15%的生命。]", "source_ids": ["MRS/4-4-1/name"], "short": "Revive"}
 {"zh": "唤灵术", "en": "Soul Call", "category": "magic", "count": 1, "note": "Magic. Appears in: magic name. [MRS/4-4-2 desc: 寻找脱离本位的魂魄，使其回归原位。起死回生，恢复30%的生命。]", "source_ids": ["MRS/4-4-2/name"]}
 {"zh": "赎魂", "en": "Soul Ransom", "category": "magic", "count": 2, "note": "Magic. Appears in: item name, magic name. [MRS/4-4-3 desc: 从鬼差手中讨回被索取的魂魄。起死回生，恢复50%的生命。]", "source_ids": ["MRS/4-4-3/name", "GRS/6-10-2/name"]}
-{"zh": "飞龙探云手", "en": "Dragon Cloud Grab", "category": "skill", "count": 1, "alt": "Flying Dragon Cloud Hand", "note": "Steal skill taught by Pingzhi as 妙手空空 (MRS 4-5-1; a nod to Chinese Paladin). [MRS/4-5-1 desc: 偷取敌人身上的物品。]", "source_ids": ["MRS/4-5-1/name"]}
+{"zh": "飞龙探云手", "en": "Dragon Cloud Grab", "category": "skill", "count": 1, "alt": "Flying Dragon Cloud Hand", "note": "Steal skill taught by Pingzhi as 妙手空空 (MRS 4-5-1; a nod to Chinese Paladin). [MRS/4-5-1 desc: 偷取敌人身上的物品。]", "source_ids": ["MRS/4-5-1/name"], "short": "Dragon Grab"}
 {"zh": "生命", "en": "HP", "category": "ui", "count": 26, "alt": "Life", "note": "Stat (engine label + item descriptions).", "source_ids": ["GRS/6-3-4/desc", "GRS/6-3-13/desc", "GRS/6-3-14/desc"]}
 {"zh": "真气", "en": "MP", "category": "ui", "count": 17, "alt": "Qi", "note": "Stat.", "source_ids": ["GRS/6-1-6/desc", "GRS/6-3-14/desc", "GRS/6-5-8/desc"]}
 {"zh": "攻击", "en": "Attack", "category": "ui", "count": 72, "alt": "ATK", "note": "Stat in descriptions (engine label 攻击力 = Attack). Abbreviate ATK only if a description overflows 102 bytes.", "source_ids": ["GRS/6-1-6/desc", "GRS/6-2-13/desc", "GRS/6-5-4/desc"]}
@@ -740,7 +740,7 @@
 {"zh": "李俯客厅", "en": "Li Manor Parlor", "category": "place", "count": 1, "note": "Scene name; Li Hu's boss fight.", "source_ids": ["gut/1-5-15@0083"]}
 {"zh": "李俯东厢房", "en": "Li Manor East Wing", "category": "place", "count": 1, "note": "Scene name; the painter is held here (Gold Key).", "source_ids": ["gut/1-5-16@0076"]}
 {"zh": "李俯密道", "en": "Li Manor Secret Passage", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-17@009e"]}
-{"zh": "李俯下人房", "en": "Li Manor Servants' Room", "category": "place", "count": 1, "note": "Scene name; Old Wang.", "source_ids": ["gut/1-5-18@0070"]}
+{"zh": "李俯下人房", "en": "Li Manor Servants' Room", "category": "place", "count": 1, "note": "Scene name; Old Wang.", "source_ids": ["gut/1-5-18@0070"], "short": "Li Staff"}
 {"zh": "李俯厨房", "en": "Li Manor Kitchen", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-19@0055"]}
 {"zh": "李俯下房", "en": "Li Manor Back Room", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-20@0082"]}
 {"zh": "李俯宝库", "en": "Li Manor Vault", "category": "place", "count": 1, "note": "Scene name.", "source_ids": ["gut/1-5-21@009f"]}
@@ -750,19 +750,19 @@
 {"zh": "使用白虎之精", "en": "Use Tiger Orb", "category": "ui", "count": 1, "note": "Choice on Sky Summit.", "source_ids": ["gut/1-2-32@0148.2"]}
 {"zh": "使用朱雀之精", "en": "Use Phoenix Orb", "category": "ui", "count": 1, "note": "Choice on Sky Summit.", "source_ids": ["gut/1-2-32@017c.2"]}
 {"zh": "使用玄武之精", "en": "Use Turtle Orb", "category": "ui", "count": 1, "note": "Choice on Sky Summit.", "source_ids": ["gut/1-2-32@01b0.2"]}
-{"zh": "普通弟子居1", "en": "Dormitory 1", "category": "place", "count": 1, "note": "Numbered instance of 普通弟子居 (Dormitory).", "source_ids": ["gut/1-2-6@0067"]}
-{"zh": "普通弟子居2", "en": "Dormitory 2", "category": "place", "count": 1, "note": "Numbered instance of 普通弟子居 (Dormitory).", "source_ids": ["gut/1-2-8@0067"]}
-{"zh": "灯洞1", "en": "Lamp Cave 1", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-19@005e", "MAP/2-3-2/name"]}
-{"zh": "灯洞2", "en": "Lamp Cave 2", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-20@008b", "MAP/2-3-3/name"]}
-{"zh": "灯洞3", "en": "Lamp Cave 3", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-21@0074", "MAP/2-3-4/name"]}
-{"zh": "灯洞4", "en": "Lamp Cave 4", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-22@0055", "MAP/2-3-5/name"]}
-{"zh": "灯洞5", "en": "Lamp Cave 5", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-23@006b"]}
-{"zh": "灯洞6", "en": "Lamp Cave 6", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-24@007f"]}
-{"zh": "灯洞7", "en": "Lamp Cave 7", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-25@0062"]}
-{"zh": "灯洞8", "en": "Lamp Cave 8", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-26@0057"]}
-{"zh": "森林道路2", "en": "Forest Road 2", "category": "place", "count": 1, "note": "Numbered instance of 森林道路 (Forest Road).", "source_ids": ["gut/1-4-4@006e"]}
-{"zh": "蛇窟山洞2", "en": "Snake Den 2", "category": "place", "count": 1, "note": "Numbered instance of 蛇窟山洞 (Snake Den).", "source_ids": ["gut/1-4-7@009c"]}
-{"zh": "蛇窟山洞3", "en": "Snake Den 3", "category": "place", "count": 1, "note": "Numbered instance of 蛇窟山洞 (Snake Den).", "source_ids": ["gut/1-4-8@00ca"]}
+{"zh": "普通弟子居1", "en": "Dormitory 1", "category": "place", "count": 1, "note": "Numbered instance of 普通弟子居 (Dormitory).", "source_ids": ["gut/1-2-6@0067"], "short": "Dorm 1"}
+{"zh": "普通弟子居2", "en": "Dormitory 2", "category": "place", "count": 1, "note": "Numbered instance of 普通弟子居 (Dormitory).", "source_ids": ["gut/1-2-8@0067"], "short": "Dorm 2"}
+{"zh": "灯洞1", "en": "Lamp Cave 1", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-19@005e", "MAP/2-3-2/name"], "short": "Lamp Cave1"}
+{"zh": "灯洞2", "en": "Lamp Cave 2", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-20@008b", "MAP/2-3-3/name"], "short": "Lamp Cave2"}
+{"zh": "灯洞3", "en": "Lamp Cave 3", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-21@0074", "MAP/2-3-4/name"], "short": "Lamp Cave3"}
+{"zh": "灯洞4", "en": "Lamp Cave 4", "category": "place", "count": 2, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-22@0055", "MAP/2-3-5/name"], "short": "Lamp Cave4"}
+{"zh": "灯洞5", "en": "Lamp Cave 5", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-23@006b"], "short": "Lamp Cave5"}
+{"zh": "灯洞6", "en": "Lamp Cave 6", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-24@007f"], "short": "Lamp Cave6"}
+{"zh": "灯洞7", "en": "Lamp Cave 7", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-25@0062"], "short": "Lamp Cave7"}
+{"zh": "灯洞8", "en": "Lamp Cave 8", "category": "place", "count": 1, "note": "Numbered instance of 灯洞 (Lamp Cave).", "source_ids": ["gut/1-2-26@0057"], "short": "Lamp Cave8"}
+{"zh": "森林道路2", "en": "Forest Road 2", "category": "place", "count": 1, "note": "Numbered instance of 森林道路 (Forest Road).", "source_ids": ["gut/1-4-4@006e"], "short": "Forest Rd2"}
+{"zh": "蛇窟山洞2", "en": "Snake Den 2", "category": "place", "count": 1, "note": "Numbered instance of 蛇窟山洞 (Snake Den).", "source_ids": ["gut/1-4-7@009c"], "short": "Snake Den2"}
+{"zh": "蛇窟山洞3", "en": "Snake Den 3", "category": "place", "count": 1, "note": "Numbered instance of 蛇窟山洞 (Snake Den).", "source_ids": ["gut/1-4-8@00ca"], "short": "Snake Den3"}
 {"zh": "民宅1", "en": "House 1", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-4@0055", "gut/1-7-7@0055"]}
 {"zh": "民宅2", "en": "House 2", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-5@0055", "gut/1-7-8@0055"]}
 {"zh": "民宅3", "en": "House 3", "category": "place", "count": 2, "note": "Numbered instance of 民宅 (House).", "source_ids": ["gut/1-5-6@0055", "gut/1-7-9@005e"]}
