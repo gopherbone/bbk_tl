@@ -19,7 +19,7 @@ def build(orig: bytes, rows: list[dict], gallery: list[str] | None = None,
     lib = libmod.parse(gammod.split(orig)[0])
     built, problems = strmod.apply(lib, [r for r in rows if not r["id"].startswith("ENG/")], bank=bank)
     if images and game.images:
-        game.images(built.res)
+        game.images(built.res, rows)
     if gallery:
         from . import gallery as gallerymod
         built.res[gallerymod.OPENING] = gallerymod.script(lib, {r["id"]: r for r in rows}, gallery, bank)

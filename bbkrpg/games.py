@@ -21,9 +21,14 @@ GAMES_DIR = "gam4980/retroarch/downloads/bbk"
 ROMS = "gam4980/retroarch/system/gam4980"
 
 
-def _fmj_images(res: dict) -> None:
+def _fmj_images(res: dict, rows: list[dict]) -> None:
     from . import images_en
     images_en.apply(res)
+
+
+def _jy_images(res: dict, rows: list[dict]) -> None:
+    from . import images_jy
+    images_jy.apply(res, rows)
 
 
 @dataclass(frozen=True)
@@ -31,7 +36,7 @@ class Game:
     key: str
     zh: str                                   # .gam file name without extension
     engine: list = field(default_factory=list)  # engine_text entries for this build
-    images: Callable[[dict], None] | None = None  # redraws text inside PIC/SRS images
+    images: Callable[[dict, list], None] | None = None  # (res, rows): redraws text inside images
     title_en: str | None = None               # release name; None = not releasable yet
     strings: str = ""
     gut: str = ""
@@ -71,7 +76,7 @@ GAMES: dict[str, Game] = {g.key: g for g in [
           title_en="Demonbane Chronicle",
           parts="translations/parts", glossary="docs/glossary.jsonl",
           playthrough="work/playthrough", qa="work/qa"),
-    _game("jy", "金庸群侠传", engine=engine_text.JY),
+    _game("jy", "金庸群侠传", engine=engine_text.JY, images=_jy_images, title_en="Heroes of Jin Yong"),
 ]}
 
 DEFAULT = "fmj"

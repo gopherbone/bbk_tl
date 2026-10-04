@@ -26,6 +26,7 @@ _SMALL = {
     "V": ["101", "101", "101", "101", "010"], "X": ["101", "101", "010", "101", "101"],
     "J": ["001", "001", "001", "101", "010"], "Q": ["010", "101", "101", "110", "011"],
     "Z": ["111", "001", "010", "100", "111"], "Y": ["101", "101", "010", "010", "010"],
+    " ": ["000"] * 5, "-": ["000", "000", "111", "000", "000"], "'": ["010", "010", "000", "000", "000"],
 }
 
 
@@ -41,6 +42,8 @@ def sans_width(s: str, scale: int = 1) -> int:
 # ("text", x, y, str, scale[, color]) bbk_tl Sans, top of the 11-row glyph cell at y
 # ("small", x, y, str[, color]) 3x5 caps
 # ("ctext", cx, y, str, scale[, color]) centred on cx
+# ("invert", x0, y0, x1, y1) inverts opaque pixels in [x0,x1) x [y0,y1)
+# ("resize", w, h, color) grows/crops the canvas at the right and bottom
 IMAGES = {
     # title screen: logo, menu box, edition tag
     (11, 2, 14): [
@@ -99,10 +102,22 @@ def _draw_small(img, x, y, s, color):
 
 
 def render(key, blob: bytes) -> bytes:
+    return render_ops(IMAGES[key], blob)
+
+
+def render_ops(ops, blob: bytes) -> bytes:
     h, frames = image.decode(blob)
     for img in frames:
-        for op in IMAGES[key]:
-            if op[0] == "clear":
+        for op in ops:
+            if op[0] == "resize":
+                w, hh, color = op[1:4]
+                del img[hh:]
+                for row in img:
+                    del row[w:]
+                    row.extend([color] * (w - len(row)))
+                img.extend([[color] * w for _ in range(hh - len(img))])
+                h = dict(h, w=w, h=hh)
+            elif op[0] == "clear":
                 x0, y0, x1, y1 = op[1:5]
                 color = op[5] if len(op) > 5 else 0
                 for y in range(y0, min(y1, len(img))):
@@ -118,6 +133,12 @@ def render(key, blob: bytes) -> bytes:
             elif op[0] == "small":
                 x, y, s = op[1:4]
                 _draw_small(img, x, y, s, op[4] if len(op) > 4 else 1)
+            elif op[0] == "invert":
+                x0, y0, x1, y1 = op[1:5]
+                for y in range(y0, min(y1, len(img))):
+                    for x in range(x0, min(x1, len(img[0]))):
+                        if img[y][x] is not None:
+                            img[y][x] ^= 1
     return image.encode(h, frames)
 
 
@@ -147,17 +168,10 @@ SRS_IMAGES = {
 }
 
 
-def _render_ops(ops, blob: bytes) -> bytes:
-    key = object()
-    IMAGES[key] = ops
-    try:
-        return render(key, blob)
-    finally:
-        del IMAGES[key]
-
-
-def render_srs(key, blob: bytes) -> bytes:
-    """SRS: header (6), frame table (5 bytes per frame), then the images."""
+def render_srs(key, blob: bytes, table: dict | None = None) -> bytes:
+    """SRS: header (6), frame table (5 bytes per frame), then the images.
+    `table` maps image number -> ops (default SRS_IMAGES[key])."""
+    table = SRS_IMAGES[key] if table is None else table
     out = bytearray(blob[:6 + 5 * blob[2]])
     p = len(out)
     for i in range(blob[3]):
@@ -165,9 +179,8 @@ def render_srs(key, blob: bytes) -> bytes:
         rb = image._row_bytes(h["w"], h["mode"])
         n = 6 + rb * h["h"] * h["frames"]
         part = blob[p:p + n]
-        if i in SRS_IMAGES[key]:
-            part = _render_ops(SRS_IMAGES[key][i], part)
-            assert len(part) == n
+        if i in table:
+            part = render_ops(table[i], part)          # a "resize" changes its length
         out += part
         p += n
     out += blob[p:]
@@ -188,22 +201,24 @@ TILE_FRAMES = {(7, 1, 1): {120 + i: ops for i, ops in _SIGNS.items()},
                (7, 1, 9): {80 + i: ops for i, ops in _SIGNS.items()}}
 
 
-def render_frames(key, blob: bytes) -> bytes:
+def render_frames(key, blob: bytes, table: dict | None = None) -> bytes:
     h, frames = image.decode(blob)
-    for n, ops in TILE_FRAMES[key].items():
+    for n, ops in (TILE_FRAMES[key] if table is None else table).items():
         one = image.encode(dict(h, frames=1), [frames[n]])
-        frames[n] = image.decode(_render_ops(ops, one))[1][0]
+        frames[n] = image.decode(render_ops(ops, one))[1][0]
     return image.encode(h, frames)
 
 
-def apply(res: dict) -> None:
-    """Replace the translated images in an archive's resource dict, in place."""
-    for key in IMAGES:
+def apply(res: dict, images: dict | None = None, srs: dict | None = None,
+          tiles: dict | None = None) -> None:
+    """Replace the translated images in an archive's resource dict, in place.
+    The tables default to 伏魔记's (IMAGES, SRS_IMAGES, TILE_FRAMES)."""
+    for key, ops in (IMAGES if images is None else images).items():
         if key in res:
-            res[key] = render(key, res[key])
-    for key in SRS_IMAGES:
+            res[key] = render_ops(ops, res[key])
+    for key, table in (SRS_IMAGES if srs is None else srs).items():
         if key in res:
-            res[key] = render_srs(key, res[key])
-    for key in TILE_FRAMES:
+            res[key] = render_srs(key, res[key], table)
+    for key, table in (TILE_FRAMES if tiles is None else tiles).items():
         if key in res:
-            res[key] = render_frames(key, res[key])
+            res[key] = render_frames(key, res[key], table)
