@@ -19,6 +19,16 @@ def rows():
     return [json.loads(l) for l in open(STRINGS, encoding="utf-8")]
 
 
+def canonical(table: list[dict]) -> dict:
+    """id -> id of the first row with the same kind and text (itself if first).
+    Repeated script lines are translated once, at their first occurrence;
+    build_en fills the repeats from it unless a part translates them itself."""
+    first, out = {}, {}
+    for r in table:
+        out[r["id"]] = first.setdefault((r["kind"], r["zh"]), r["id"])
+    return out
+
+
 def glossary():
     out = {}
     for t in map(json.loads, open(GLOSSARY, encoding="utf-8")):

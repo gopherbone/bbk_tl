@@ -1,0 +1,411 @@
+{"id": "gut/1-2-1@0201", "en": "Capital"}
+{"id": "gut/1-2-2@0201", "en": "Xixia"}
+{"id": "gut/1-2-3@0201", "en": "Dali"}
+{"id": "gut/1-2-4@020a", "en": "Yangzhou"}
+{"id": "gut/1-3-1@00a7", "en": "Beggars"}
+{"id": "gut/1-3-2@00a7", "en": "Shaolin"}
+{"id": "gut/1-3-3@0083", "en": "Hengshan"}
+{"id": "gut/1-3-4@00a7", "en": "Wudang"}
+{"id": "gut/1-3-5@0083", "en": "Old Tomb"}
+{"id": "gut/1-3-6@00a7", "en": "Quanzhen"}
+{"id": "gut/1-3-7@00a7", "en": "Huashan"}
+{"id": "gut/1-3-8@0083", "en": "Lingjiu"}
+{"id": "gut/1-3-9@00a7", "en": "Xingxiu"}
+{"id": "gut/1-3-10@00a7", "en": "Xuedao"}
+{"id": "gut/1-3-11@0083", "en": "Emei Sect"}
+{"id": "gut/1-4-1@0201", "en": "Beggars"}
+{"id": "gut/1-4-2@020a", "en": "Mt. Song"}
+{"id": "gut/1-4-3@020a", "en": "Mt. Heng"}
+{"id": "gut/1-4-4@020a", "en": "Mt. Wudang"}
+{"id": "gut/1-4-5@020a", "en": "Zhongnan"}
+{"id": "gut/1-4-7@020a", "en": "Mt. Hua"}
+{"id": "gut/1-4-8@0201", "en": "Lingjiu"}
+{"id": "gut/1-4-9@0201", "en": "Star Sea"}
+{"id": "gut/1-4-10@0201", "en": "Xuedao"}
+{"id": "gut/1-4-11@020a", "en": "Mt. Emei"}
+{"id": "gut/1-5-1@0201", "en": "Yanmen"}
+{"id": "gut/1-5-2@0201", "en": "Heartland"}
+{"id": "gut/1-5-3@0060", "en": "Peach Isle"}
+{"id": "gut/1-5-4@0201", "en": "Heartbreak"}
+{"id": "gut/1-5-5@0201", "en": "Gaochang"}
+{"id": "gut/1-5-6@0201", "en": "Qingcheng"}
+{"id": "gut/1-5-7@0201", "en": "Snow Peaks"}
+{"id": "gut/1-5-8@0201", "en": "Bloom Vale"}
+{"id": "gut/1-5-9@0201", "en": "Sword Tomb"}
+{"id": "gut/1-5-10@0201", "en": "Xiaoyao"}
+{"id": "gut/1-5-11@0201", "en": "Snow Cave"}
+{"id": "gut/1-5-12@005e", "en": "Peach Cave"}
+{"id": "gut/1-6-1@005e", "en": "Dragon"}
+{"id": "gut/1-6-2@005e", "en": "Tiger"}
+{"id": "gut/1-6-3@005e", "en": "Vermilion"}
+{"id": "gut/1-6-4@005e", "en": "Tortoise"}
+{"id": "gut/1-6-5@0067", "en": "Huang's"}
+{"id": "gut/1-9-11@00d5", "en": "Capital"}
+{"id": "gut/1-10-11@00d5", "en": "Xixia"}
+{"id": "gut/1-11-11@00d5", "en": "Dali"}
+{"id": "gut/1-12-11@00d5", "en": "Yangzhou"}
+{"id": "GRS/6-1-1/name", "en": "Headband"}
+{"id": "GRS/6-1-2/name", "en": "Green Cap"}
+{"id": "GRS/6-1-3/name", "en": "Pearl Pin"}
+{"id": "GRS/6-1-4/name", "en": "Jade Pin"}
+{"id": "GRS/6-1-5/name", "en": "Plume Pin"}
+{"id": "GRS/6-1-6/name", "en": "Gilt Pin"}
+{"id": "GRS/6-1-7/name", "en": "Gold Pin"}
+{"id": "GRS/6-1-8/name", "en": "Wire Mask"}
+{"id": "GRS/6-1-9/name", "en": "Steel Helm"}
+{"id": "GRS/6-1-10/name", "en": "Gold Helm"}
+{"id": "GRS/6-1-11/name", "en": "Dragon Cap"}
+{"id": "GRS/6-2-1/name", "en": "Tunic"}
+{"id": "GRS/6-2-2/name", "en": "Sun Tunic"}
+{"id": "GRS/6-2-3/name", "en": "Buff Coat"}
+{"id": "GRS/6-2-4/name", "en": "Quilt Coat"}
+{"id": "GRS/6-2-5/name", "en": "Flame Robe"}
+{"id": "GRS/6-2-6/name", "en": "Fox Robe"}
+{"id": "GRS/6-2-7/name", "en": "Sky Garb"}
+{"id": "GRS/6-2-8/name", "en": "Panther"}
+{"id": "GRS/6-2-9/name", "en": "Gold Mail"}
+{"id": "GRS/6-2-10/name", "en": "Damo Robe"}
+{"id": "GRS/6-3-1/name", "en": "Boots"}
+{"id": "GRS/6-3-2/name", "en": "Hide Boots"}
+{"id": "GRS/6-3-3/name", "en": "Fast Boots"}
+{"id": "GRS/6-3-4/name", "en": "Wave Boots"}
+{"id": "GRS/6-3-5/name", "en": "Ghoststep"}
+{"id": "GRS/6-3-6/name", "en": "Godspeed"}
+{"id": "GRS/6-3-7/name", "en": "Dragonstep"}
+{"id": "GRS/6-3-8/name", "en": "Phoenix"}
+{"id": "GRS/6-3-9/name", "en": "Pegasus"}
+{"id": "GRS/6-3-10/name", "en": "Army Boots"}
+{"id": "GRS/6-3-11/name", "en": "Dark Boots"}
+{"id": "GRS/6-4-1/name", "en": "Cloth Cape"}
+{"id": "GRS/6-4-2/name", "en": "Focus Cape"}
+{"id": "GRS/6-4-3/name", "en": "Storm Cape"}
+{"id": "GRS/6-4-4/name", "en": "Snow Cape"}
+{"id": "GRS/6-4-5/name", "en": "Noble Cape"}
+{"id": "GRS/6-4-6/name", "en": "Star Cape"}
+{"id": "GRS/6-4-7/name", "en": "Moon Cape"}
+{"id": "GRS/6-4-8/name", "en": "Soul Cape"}
+{"id": "GRS/6-4-9/name", "en": "Dread Cape"}
+{"id": "GRS/6-4-10/name", "en": "Sky Cape"}
+{"id": "GRS/6-4-11/name", "en": "Vermilion"}
+{"id": "GRS/6-5-1/name", "en": "Iron Cuff"}
+{"id": "GRS/6-5-2/name", "en": "Jade Cuff"}
+{"id": "GRS/6-5-3/name", "en": "Power Cuff"}
+{"id": "GRS/6-5-4/name", "en": "Fury Cuff"}
+{"id": "GRS/6-5-5/name", "en": "Deft Cuff"}
+{"id": "GRS/6-5-6/name", "en": "Glint Cuff"}
+{"id": "GRS/6-5-7/name", "en": "Valor Cuff"}
+{"id": "GRS/6-5-8/name", "en": "Deity Cuff"}
+{"id": "GRS/6-5-9/name", "en": "Royal Cuff"}
+{"id": "GRS/6-5-10/name", "en": "War Cuff"}
+{"id": "GRS/6-5-11/name", "en": "Tiger Cuff"}
+{"id": "GRS/6-6-1/name", "en": "Ring"}
+{"id": "GRS/6-6-2/name", "en": "Steel Ring"}
+{"id": "GRS/6-6-3/name", "en": "Prime Ring"}
+{"id": "GRS/6-6-4/name", "en": "Drake Ring"}
+{"id": "GRS/6-6-5/name", "en": "Frost Ring"}
+{"id": "GRS/6-6-6/name", "en": "Dream Ring"}
+{"id": "GRS/6-6-7/name", "en": "Mist Ring"}
+{"id": "GRS/6-6-8/name", "en": "Snow Ring"}
+{"id": "GRS/6-6-9/name", "en": "Star Ring"}
+{"id": "GRS/6-6-10/name", "en": "Polar Ring"}
+{"id": "GRS/6-6-11/name", "en": "Tin Chain"}
+{"id": "GRS/6-6-12/name", "en": "Gold Chain"}
+{"id": "GRS/6-6-13/name", "en": "Moon Chain"}
+{"id": "GRS/6-6-14/name", "en": "Seer Chain"}
+{"id": "GRS/6-6-15/name", "en": "Opal Chain"}
+{"id": "GRS/6-6-16/name", "en": "Rich Chain"}
+{"id": "GRS/6-6-17/name", "en": "Star Chain"}
+{"id": "GRS/6-6-18/name", "en": "Holy Chain"}
+{"id": "GRS/6-6-19/name", "en": "Claw Chain"}
+{"id": "GRS/6-6-20/name", "en": "Lure Chain"}
+{"id": "GRS/6-7-1/name", "en": "Dagger"}
+{"id": "GRS/6-7-2/name", "en": "Iron Sword"}
+{"id": "GRS/6-7-3/name", "en": "Qin Sword"}
+{"id": "GRS/6-7-4/name", "en": "Dark Sword"}
+{"id": "GRS/6-7-5/name", "en": "Cold Sword"}
+{"id": "GRS/6-7-6/name", "en": "Longquan"}
+{"id": "GRS/6-7-7/name", "en": "Zhenwu"}
+{"id": "GRS/6-7-8/name", "en": "Greatsword"}
+{"id": "GRS/6-7-9/name", "en": "Zhanlu"}
+{"id": "GRS/6-7-10/name", "en": "Sky Sword"}
+{"id": "GRS/6-7-11/name", "en": "Dragonbane"}
+{"id": "GRS/6-9-1/name", "en": "Jade Salve"}
+{"id": "GRS/6-9-2/name", "en": "Fo-ti Root"}
+{"id": "GRS/6-9-3/name", "en": "Ginseng"}
+{"id": "GRS/6-9-4/name", "en": "Jade Dew"}
+{"id": "GRS/6-9-5/name", "en": "Qi Charm"}
+{"id": "GRS/6-9-6/name", "en": "Toad Pill"}
+{"id": "GRS/6-9-7/name", "en": "Lingzhi"}
+{"id": "GRS/6-9-8/name", "en": "Poria Pill"}
+{"id": "GRS/6-9-9/name", "en": "Viper Balm"}
+{"id": "GRS/6-9-10/name", "en": "Heaven Gel"}
+{"id": "GRS/6-9-11/name", "en": "Dragon Dew"}
+{"id": "GRS/6-11-1/name", "en": "Grand Pill"}
+{"id": "GRS/6-13-1/name", "en": "Waystone"}
+{"id": "GRS/6-14-1/name", "en": "Ticket 1"}
+{"id": "GRS/6-14-2/name", "en": "Ticket 2"}
+{"id": "GRS/6-14-3/name", "en": "Ticket 3"}
+{"id": "GRS/6-14-4/name", "en": "Ticket 4"}
+{"id": "GRS/6-14-5/name", "en": "Ticket 5"}
+{"id": "GRS/6-14-6/name", "en": "Ticket 6"}
+{"id": "GRS/6-14-7/name", "en": "Ticket 7"}
+{"id": "GRS/6-14-8/name", "en": "Ticket 8"}
+{"id": "GRS/6-14-9/name", "en": "Ticket 9"}
+{"id": "GRS/6-14-10/name", "en": "Ticket 10"}
+{"id": "GRS/6-14-11/name", "en": "Ticket 11"}
+{"id": "GRS/6-14-12/name", "en": "Ticket 12"}
+{"id": "GRS/6-14-13/name", "en": "Note 1000"}
+{"id": "GRS/6-14-14/name", "en": "Note 2000"}
+{"id": "GRS/6-14-15/name", "en": "Plat Ore"}
+{"id": "GRS/6-14-16/name", "en": "Gold Ore"}
+{"id": "GRS/6-14-17/name", "en": "Iron Ore"}
+{"id": "GRS/6-14-18/name", "en": "Platinum"}
+{"id": "GRS/6-14-19/name", "en": "Black Gold"}
+{"id": "GRS/6-14-20/name", "en": "Dark Iron"}
+{"id": "GRS/6-14-21/name", "en": "Charcoal"}
+{"id": "GRS/6-14-22/name", "en": "Anthracite"}
+{"id": "GRS/6-14-23/name", "en": "White Coal"}
+{"id": "GRS/6-14-24/name", "en": "Ox Skin"}
+{"id": "GRS/6-14-25/name", "en": "Snake Skin"}
+{"id": "GRS/6-14-26/name", "en": "Tiger Skin"}
+{"id": "GRS/6-14-27/name", "en": "Ox Hide"}
+{"id": "GRS/6-14-28/name", "en": "Snake Hide"}
+{"id": "GRS/6-14-29/name", "en": "Tiger Hide"}
+{"id": "GRS/6-14-30/name", "en": "Flax"}
+{"id": "GRS/6-14-31/name", "en": "Cotton"}
+{"id": "GRS/6-14-32/name", "en": "Raw Silk"}
+{"id": "GRS/6-14-33/name", "en": "Linen"}
+{"id": "GRS/6-14-34/name", "en": "Calico"}
+{"id": "GRS/6-14-35/name", "en": "Silk"}
+{"id": "GRS/6-14-36/name", "en": "Mugwort"}
+{"id": "GRS/6-14-37/name", "en": "Skyreach"}
+{"id": "GRS/6-14-38/name", "en": "Sesame"}
+{"id": "GRS/6-14-39/name", "en": "Rainflower"}
+{"id": "GRS/6-14-40/name", "en": "Poria"}
+{"id": "GRS/6-14-41/name", "en": "Peace Herb"}
+{"id": "GRS/6-14-99/name", "en": "Chief Seal"}
+{"id": "MRS/4-1-1/name", "en": "Basic Sword"}
+{"id": "MRS/4-1-2/name", "en": "Mad Cat"}
+{"id": "MRS/4-1-3/name", "en": "Cleave Palm"}
+{"id": "MRS/4-1-4/name", "en": "Grappling"}
+{"id": "MRS/4-1-5/name", "en": "Swift Sword"}
+{"id": "MRS/4-1-6/name", "en": "All Buddhas"}
+{"id": "MRS/4-1-7/name", "en": "Dragon Palm"}
+{"id": "MRS/4-1-8/name", "en": "Qi Dissolve"}
+{"id": "MRS/4-1-9/name", "en": "Evil Ward"}
+{"id": "MRS/4-1-10/name", "en": "Venom Staff"}
+{"id": "MRS/4-1-11/name", "en": "Sunflower"}
+{"id": "MRS/4-1-12/name", "en": "Blood Blade"}
+{"id": "MRS/4-1-13/name", "en": "Snow Sword"}
+{"id": "MRS/4-1-14/name", "en": "Gale Blade"}
+{"id": "MRS/4-1-15/name", "en": "Dark Palm"}
+{"id": "MRS/4-1-16/name", "en": "Bone Claw"}
+{"id": "MRS/4-1-17/name", "en": "Hua Sword"}
+{"id": "MRS/4-1-18/name", "en": "Tiger Fist"}
+{"id": "MRS/4-1-19/name", "en": "Prime Palm"}
+{"id": "MRS/4-1-20/name", "en": "Stone Fist"}
+{"id": "MRS/4-1-21/name", "en": "Violet Mist"}
+{"id": "MRS/4-1-22/name", "en": "Fatal Trio"}
+{"id": "MRS/4-1-23/name", "en": "Dugu Nine"}
+{"id": "MRS/4-1-24/name", "en": "Taizu Fist"}
+{"id": "MRS/4-1-25/name", "en": "Mad Staff"}
+{"id": "MRS/4-1-26/name", "en": "Lotus Palm"}
+{"id": "MRS/4-1-27/name", "en": "Dog Beater"}
+{"id": "MRS/4-1-28/name", "en": "18 Dragons"}
+{"id": "MRS/4-1-29/name", "en": "Wudang Fist"}
+{"id": "MRS/4-1-30/name", "en": "Coil Sword"}
+{"id": "MRS/4-1-31/name", "en": "Cloud Sword"}
+{"id": "MRS/4-1-32/name", "en": "Pure Yang"}
+{"id": "MRS/4-1-33/name", "en": "Taiji Fist"}
+{"id": "MRS/4-1-34/name", "en": "Taiji Sword"}
+{"id": "MRS/4-1-35/name", "en": "Quanzhen"}
+{"id": "MRS/4-1-36/name", "en": "Sky Palm"}
+{"id": "MRS/4-1-37/name", "en": "Doom Sword"}
+{"id": "MRS/4-1-38/name", "en": "Crown Palm"}
+{"id": "MRS/4-1-39/name", "en": "Dual Hands"}
+{"id": "MRS/4-1-40/name", "en": "Long Fist"}
+{"id": "MRS/4-1-41/name", "en": "Arhat Fist"}
+{"id": "MRS/4-1-42/name", "en": "Damo Sword"}
+{"id": "MRS/4-1-43/name", "en": "Dragon Claw"}
+{"id": "MRS/4-1-44/name", "en": "Nine Yang"}
+{"id": "MRS/4-1-45/name", "en": "Blood Blade"}
+{"id": "MRS/4-1-46/name", "en": "Godslayer"}
+{"id": "MRS/4-1-47/name", "en": "Snow Step"}
+{"id": "MRS/4-1-48/name", "en": "Blood Sea"}
+{"id": "MRS/4-1-49/name", "en": "Venom Cast"}
+{"id": "MRS/4-1-50/name", "en": "Marrow Palm"}
+{"id": "MRS/4-1-51/name", "en": "Centipede"}
+{"id": "MRS/4-1-52/name", "en": "Tian Staff"}
+{"id": "MRS/4-1-53/name", "en": "Qi Dissolve"}
+{"id": "MRS/4-1-54/name", "en": "Cloud Palm"}
+{"id": "MRS/4-1-55/name", "en": "Wind Willow"}
+{"id": "MRS/4-1-56/name", "en": "Extinction"}
+{"id": "MRS/4-1-57/name", "en": "Severance"}
+{"id": "MRS/4-1-58/name", "en": "Buddha Glow"}
+{"id": "MRS/4-1-59/name", "en": "Jade Maiden"}
+{"id": "MRS/4-1-60/name", "en": "Beauty Fist"}
+{"id": "MRS/4-1-61/name", "en": "Sky Net"}
+{"id": "MRS/4-1-62/name", "en": "Red Serpent"}
+{"id": "MRS/4-1-63/name", "en": "Sorrow Palm"}
+{"id": "MRS/4-1-64/name", "en": "Sky Feather"}
+{"id": "MRS/4-1-65/name", "en": "Plum Hand"}
+{"id": "MRS/4-1-66/name", "en": "Eight Wilds"}
+{"id": "MRS/4-1-67/name", "en": "Death Charm"}
+{"id": "MRS/4-1-68/name", "en": "Heng Sword"}
+{"id": "MRS/4-1-69/name", "en": "Ever Palm"}
+{"id": "MRS/4-1-70/name", "en": "Bloom Sword"}
+{"id": "MRS/4-1-71/name", "en": "Heng Array"}
+{"id": "MRS/4-1-72/name", "en": "Nine Yin"}
+{"id": "MRS/4-2-1/name", "en": "Basic Step"}
+{"id": "MRS/4-2-2/name", "en": "Basic Qi"}
+{"id": "MRS/4-3-1/name", "en": "Basic Heal"}
+{"id": "MRS/4-3-2/name", "en": "Minor Heal"}
+{"id": "MRS/4-3-3/name", "en": "Mid Heal"}
+{"id": "MRS/4-3-4/name", "en": "Major Heal"}
+{"id": "MRS/4-3-5/name", "en": "Grand Heal"}
+{"id": "MRS/4-3-6/name", "en": "Heng Heal"}
+{"id": "ARS/3-1-1/name", "en": "Yinfeng"}
+{"id": "ARS/3-1-2/name", "en": "Ling'er"}
+{"id": "ARS/3-2-1/name", "en": "Taoist Wuji"}
+{"id": "ARS/3-2-2/name", "en": "Junior"}
+{"id": "ARS/3-2-7/name", "en": "Pingzhi"}
+{"id": "ARS/3-2-8/name", "en": "Granny Cai"}
+{"id": "ARS/3-2-9/name", "en": "Murong Xuan"}
+{"id": "ARS/3-2-11/name", "en": "Merchant"}
+{"id": "ARS/3-2-12/name", "en": "Herbalist"}
+{"id": "ARS/3-2-13/name", "en": "Pilgrim 1"}
+{"id": "ARS/3-2-14/name", "en": "Pilgrim 2"}
+{"id": "ARS/3-2-15/name", "en": "Pilgrim 3"}
+{"id": "ARS/3-2-16/name", "en": "Pilgrim 4"}
+{"id": "ARS/3-2-17/name", "en": "Pilgrim 5"}
+{"id": "ARS/3-2-18/name", "en": "Pilgrim 6"}
+{"id": "ARS/3-2-21/name", "en": "Ah Xia"}
+{"id": "ARS/3-2-25/name", "en": "Li Hu"}
+{"id": "ARS/3-2-32/name", "en": "Allnighter"}
+{"id": "ARS/3-3-1/name", "en": "Platinum"}
+{"id": "ARS/3-3-2/name", "en": "Black Gold"}
+{"id": "ARS/3-3-3/name", "en": "Dark Iron"}
+{"id": "ARS/3-3-4/name", "en": "Ox Hide"}
+{"id": "ARS/3-3-5/name", "en": "Snake Hide"}
+{"id": "ARS/3-3-6/name", "en": "Tiger Hide"}
+{"id": "ARS/3-3-7/name", "en": "Linen"}
+{"id": "ARS/3-3-8/name", "en": "Calico"}
+{"id": "ARS/3-3-9/name", "en": "Silk"}
+{"id": "ARS/3-3-10/name", "en": "Greatsword"}
+{"id": "ARS/3-3-11/name", "en": "Zhanlu"}
+{"id": "ARS/3-3-12/name", "en": "Sky Sword"}
+{"id": "ARS/3-3-13/name", "en": "Wire Mask"}
+{"id": "ARS/3-3-14/name", "en": "Steel Helm"}
+{"id": "ARS/3-3-15/name", "en": "Gold Helm"}
+{"id": "ARS/3-3-16/name", "en": "Panther"}
+{"id": "ARS/3-3-17/name", "en": "Gold Mail"}
+{"id": "ARS/3-3-18/name", "en": "Damo Robe"}
+{"id": "ARS/3-3-19/name", "en": "Deity Cuff"}
+{"id": "ARS/3-3-20/name", "en": "Royal Cuff"}
+{"id": "ARS/3-3-21/name", "en": "War Cuff"}
+{"id": "ARS/3-3-22/name", "en": "Soul Cape"}
+{"id": "ARS/3-3-23/name", "en": "Dread Cape"}
+{"id": "ARS/3-3-24/name", "en": "Sky Cape"}
+{"id": "ARS/3-3-25/name", "en": "Snow Ring"}
+{"id": "ARS/3-3-26/name", "en": "Star Ring"}
+{"id": "ARS/3-3-27/name", "en": "Polar Ring"}
+{"id": "ARS/3-3-28/name", "en": "Holy Chain"}
+{"id": "ARS/3-3-29/name", "en": "Claw Chain"}
+{"id": "ARS/3-3-30/name", "en": "Lure Chain"}
+{"id": "ARS/3-3-31/name", "en": "Dragon Cap"}
+{"id": "ARS/3-3-32/name", "en": "Tiger Cuff"}
+{"id": "ARS/3-3-33/name", "en": "Vermilion"}
+{"id": "ARS/3-3-34/name", "en": "Dark Boots"}
+{"id": "ARS/3-3-35/name", "en": "Phoenix"}
+{"id": "ARS/3-3-36/name", "en": "Pegasus"}
+{"id": "ARS/3-3-37/name", "en": "Army Boots"}
+{"id": "ARS/3-3-38/name", "en": "Plat Ore"}
+{"id": "ARS/3-3-39/name", "en": "Gold Ore"}
+{"id": "ARS/3-3-40/name", "en": "Iron Ore"}
+{"id": "ARS/3-3-41/name", "en": "Charcoal"}
+{"id": "ARS/3-3-42/name", "en": "Anthracite"}
+{"id": "ARS/3-3-43/name", "en": "White Coal"}
+{"id": "ARS/3-3-44/name", "en": "Ox"}
+{"id": "ARS/3-3-45/name", "en": "Snake"}
+{"id": "ARS/3-3-46/name", "en": "Tiger"}
+{"id": "ARS/3-3-47/name", "en": "Flax"}
+{"id": "ARS/3-3-48/name", "en": "Cotton"}
+{"id": "ARS/3-3-49/name", "en": "Raw Silk"}
+{"id": "ARS/3-3-50/name", "en": "Dice"}
+{"id": "ARS/3-3-51/name", "en": "Bandit"}
+{"id": "ARS/3-3-52/name", "en": "Robber"}
+{"id": "ARS/3-3-53/name", "en": "Raider"}
+{"id": "ARS/3-3-54/name", "en": "Lecher"}
+{"id": "ARS/3-3-55/name", "en": "Evil Taoist"}
+{"id": "ARS/3-3-56/name", "en": "Thief"}
+{"id": "ARS/3-3-57/name", "en": "Rogue Monk"}
+{"id": "ARS/3-3-58/name", "en": "Faceless"}
+{"id": "ARS/3-3-59/name", "en": "Man-Butcher"}
+{"id": "ARS/3-3-60/name", "en": "Evil Master"}
+{"id": "ARS/3-3-61/name", "en": "Mad Scholar"}
+{"id": "ARS/3-3-62/name", "en": "Old Ghost"}
+{"id": "ARS/3-3-63/name", "en": "Bandit Boss"}
+{"id": "ARS/3-3-64/name", "en": "Robber Boss"}
+{"id": "ARS/3-3-65/name", "en": "Raider King"}
+{"id": "ARS/3-3-66/name", "en": "Lecher Boss"}
+{"id": "ARS/3-3-67/name", "en": "Taoist Boss"}
+{"id": "ARS/3-3-68/name", "en": "Thief Boss"}
+{"id": "ARS/3-3-69/name", "en": "Assassin"}
+{"id": "ARS/3-3-70/name", "en": "Mask Killer"}
+{"id": "ARS/3-3-71/name", "en": "Bully Boss"}
+{"id": "ARS/3-3-72/name", "en": "Bandit King"}
+{"id": "ARS/3-3-73/name", "en": "Outlaw"}
+{"id": "ARS/3-3-74/name", "en": "Dark Master"}
+{"id": "ARS/3-3-75/name", "en": "Royal Lama"}
+{"id": "ARS/3-3-76/name", "en": "Royal Guard"}
+{"id": "ARS/3-3-77/name", "en": "Recluse"}
+{"id": "ARS/3-3-78/name", "en": "Cult Leader"}
+{"id": "ARS/3-3-79/name", "en": "Evil Monk"}
+{"id": "ARS/3-3-80/name", "en": "Savage King"}
+{"id": "ARS/3-3-81/name", "en": "Ex-Huashan"}
+{"id": "ARS/3-3-82/name", "en": "Ex-Wudang"}
+{"id": "ARS/3-3-83/name", "en": "Ex-Shaolin"}
+{"id": "ARS/3-3-84/name", "en": "Ex-Quanzhen"}
+{"id": "ARS/3-3-85/name", "en": "Ex-Xuedao"}
+{"id": "ARS/3-3-86/name", "en": "Ex-Xingxiu"}
+{"id": "ARS/3-3-87/name", "en": "Chunqiu"}
+{"id": "ARS/3-3-88/name", "en": "Yue Buqun"}
+{"id": "ARS/3-3-89/name", "en": "Ouyang Feng"}
+{"id": "ARS/3-3-90/name", "en": "Dongfang"}
+{"id": "ARS/3-3-91/name", "en": "Shengdi"}
+{"id": "ARS/3-3-92/name", "en": "Shi Zhongyu"}
+{"id": "ARS/3-3-93/name", "en": "Boguang"}
+{"id": "ARS/3-3-94/name", "en": "He Biweng"}
+{"id": "ARS/3-3-95/name", "en": "Cyclone Mei"}
+{"id": "MAP/2-1-1/name", "en": "Shop"}
+{"id": "MAP/2-1-2/name", "en": "Shop"}
+{"id": "MAP/2-1-3/name", "en": "Shop"}
+{"id": "MAP/2-1-4/name", "en": "Inn"}
+{"id": "MAP/2-1-5/name", "en": "House"}
+{"id": "MAP/2-1-6/name", "en": "Magistracy"}
+{"id": "MAP/2-2-1/name", "en": "Outskirts"}
+{"id": "MAP/2-2-2/name", "en": "Outskirts"}
+{"id": "MAP/2-3-1/name", "en": "Sect Hall"}
+{"id": "MAP/2-4-1/name", "en": "Sect Lands"}
+{"id": "MAP/2-4-2/name", "en": "Sect Lands"}
+{"id": "MAP/2-4-3/name", "en": "Sect Lands"}
+{"id": "MAP/2-4-4/name", "en": "Sect Lands"}
+{"id": "MAP/2-4-5/name", "en": "Sect Lands"}
+{"id": "MAP/2-5-1/name", "en": "Yanmen Pass"}
+{"id": "MAP/2-5-2/name", "en": "Heartland"}
+{"id": "MAP/2-5-3/name", "en": "Peach Isle"}
+{"id": "MAP/2-5-4/name", "en": "Heartbreak"}
+{"id": "MAP/2-5-6/name", "en": "Qingcheng"}
+{"id": "MAP/2-5-7/name", "en": "Snow Peaks"}
+{"id": "MAP/2-5-8/name", "en": "Flower Vale"}
+{"id": "MAP/2-5-9/name", "en": "Sword Tomb"}
+{"id": "MAP/2-5-10/name", "en": "Cave"}
+{"id": "MAP/2-5-11/name", "en": "Snow Cave"}
+{"id": "MAP/2-5-12/name", "en": "Peach Cave"}
+{"id": "MAP/2-6-1/name", "en": "Headquarters"}
+{"id": "MAP/2-8-1/name", "en": "Master Hall"}
+{"id": "MAP/2-8-2/name", "en": "Elders Hall"}
+{"id": "MAP/2-9-1/name", "en": "The Capital"}
+{"id": "MAP/2-9-2/name", "en": "Xixia"}
+{"id": "MAP/2-9-3/name", "en": "Dali"}
+{"id": "MAP/2-9-4/name", "en": "Yangzhou"}

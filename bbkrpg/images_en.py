@@ -44,6 +44,7 @@ def sans_width(s: str, scale: int = 1) -> int:
 # ("ctext", cx, y, str, scale[, color]) centred on cx
 # ("invert", x0, y0, x1, y1) inverts opaque pixels in [x0,x1) x [y0,y1)
 # ("resize", w, h, color) grows/crops the canvas at the right and bottom
+# ("despeckle", n) whitens black blobs (8-connected) of at most n pixels
 IMAGES = {
     # title screen: logo, menu box, edition tag
     (11, 2, 14): [
@@ -92,6 +93,28 @@ def _draw_sans(img, x, y, s, scale, color):
         x += (len(g[0]) + 1) * scale
 
 
+def _despeckle(img, n):
+    seen = set()
+    for y0, row in enumerate(img):
+        for x0, p in enumerate(row):
+            if p != 1 or (x0, y0) in seen:
+                continue
+            blob, todo = [], [(x0, y0)]
+            seen.add((x0, y0))
+            while todo:
+                x, y = todo.pop()
+                blob.append((x, y))
+                for dy in (-1, 0, 1):
+                    for dx in (-1, 0, 1):
+                        xx, yy = x + dx, y + dy
+                        if 0 <= yy < len(img) and 0 <= xx < len(row) and img[yy][xx] == 1 and (xx, yy) not in seen:
+                            seen.add((xx, yy))
+                            todo.append((xx, yy))
+            if len(blob) <= n:
+                for x, y in blob:
+                    img[y][x] = 0
+
+
 def _draw_small(img, x, y, s, color):
     for ch in s:
         for r, row in enumerate(_SMALL[ch]):
@@ -117,6 +140,8 @@ def render_ops(ops, blob: bytes) -> bytes:
                     row.extend([color] * (w - len(row)))
                 img.extend([[color] * w for _ in range(hh - len(img))])
                 h = dict(h, w=w, h=hh)
+            elif op[0] == "despeckle":
+                _despeckle(img, op[1])
             elif op[0] == "clear":
                 x0, y0, x1, y1 = op[1:5]
                 color = op[5] if len(op) > 5 else 0

@@ -1,13 +1,19 @@
-"""Fill name/label rows straight from the glossary -> <parts>/auto.jsonl.  [--game fmj]"""
+"""Fill name/label rows straight from the glossary -> <parts>/auto.jsonl.  [--game fmj]
+
+A term's `short` form is used where its `en` breaks the row's display limit."""
 import json, os
-from common import rows, glossary, PARTS
+from common import rows, glossary, PARTS, problems
 
 gl = glossary()
-ENG_FIX = {"游戏设置": "Setup", "音乐开": "Music", "音乐关": "Mute"}
+by_source = {sid: t for t in gl.values() for sid in t.get("source_ids") or []}   # e.g. GBK-encoded names
 out = []
 for r in rows():
-    if r["kind"] in ("grs.name", "mrs.name", "ars.name", "map.name", "setscenename") and r["zh"] in gl:
-        out.append({"id": r["id"], "en": gl[r["zh"]]["en"]})
+    t = gl.get(r["zh"]) or by_source.get(r["id"])
+    if r["kind"] in ("grs.name", "mrs.name", "ars.name", "map.name", "setscenename") and t:
+        en = t["en"]
+        if problems(r, en) and t.get("short"):
+            en = t["short"]
+        out.append({"id": r["id"], "en": en})
 os.makedirs(PARTS, exist_ok=True)
 with open(os.path.join(PARTS, "auto.jsonl"), "w") as f:
     for d in out:

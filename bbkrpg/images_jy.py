@@ -34,6 +34,48 @@ SRS_IMAGES = {
     (5, 1, 248): {2: _LOGO, 4: _LOGO},
 }
 
+# World map (SRS 1-8, shown by 查看 on the map item): each place is one hand-drawn
+# hanzi joined by roads. Each glyph box is cleared and relabelled in 3x5 caps,
+# two rows of up to 3 letters. glyph -> (box x0, y0, x1, y1)
+MAP_GLYPHS = {
+    "高": (3, 2, 16, 14), "玄": (93, 0, 105, 11), "雁": (118, 1, 139, 15), "龙": (143, 9, 158, 22),
+    "灵": (31, 9, 41, 21), "恒": (69, 14, 83, 27), "丐": (106, 15, 120, 24), "京": (124, 22, 137, 35),
+    "嵩": (90, 28, 104, 41), "西": (17, 24, 28, 35), "绝": (39, 23, 51, 36), "星": (3, 33, 17, 46),
+    "青": (21, 44, 39, 54), "华": (54, 38, 67, 50), "武": (74, 44, 90, 58), "古": (110, 36, 128, 50),
+    "扬": (145, 45, 158, 59), "虎": (3, 50, 15, 63), "百": (45, 53, 58, 64), "雪": (22, 58, 36, 68),
+    "终": (106, 60, 122, 73), "血": (3, 67, 13, 78), "剑": (78, 67, 91, 80), "峨": (30, 75, 48, 87),
+    "桃": (144, 73, 158, 86), "理": (59, 84, 73, 95), "逍": (100, 82, 118, 95),
+}
+# glyph -> label rows, from the glossary's place names (docs/jy/glossary.md)
+MAP_LABELS: dict[str, tuple[str, ...]] = {
+    "高": ("GAO",), "玄": ("TOR", "TSE"), "雁": ("YAN", "MEN"), "龙": ("DRA", "GON"),
+    "灵": ("LIN", "JIU"), "恒": ("HENG",), "丐": ("BEG",), "京": ("CAP",),
+    "嵩": ("SONG",), "西": ("XI", "XIA"), "绝": ("HRT", "BRK"), "星": ("STAR", "SEA"),
+    "青": ("QING",), "华": ("HUA",), "武": ("WU", "DANG"), "古": ("OLD", "TOMB"),
+    "扬": ("YANG",), "虎": ("TIG", "ER"), "百": ("FLWR",), "雪": ("SNOW",),
+    "终": ("ZHO", "NAN"), "血": ("XUE", "DAO"), "剑": ("SWD", "TOMB"), "峨": ("EMEI",),
+    "桃": ("PCH", "ISLE"), "理": ("DALI",), "逍": ("XIAO", "YAO"),
+}
+
+
+def _map_ops():
+    ops = [("clear", *box) for g, box in MAP_GLYPHS.items() if g in MAP_LABELS]
+    ops.append(("despeckle", 12))             # glyph strokes left outside the boxes
+    for g, (x0, y0, x1, y1) in MAP_GLYPHS.items():
+        lines = MAP_LABELS.get(g)
+        if not lines:
+            continue
+        cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
+        y = cy - (6 * len(lines) - 1) // 2
+        for ln in lines:
+            ops.append(("small", cx - small_width(ln) // 2, y, ln))
+            y += 6
+    return ops
+
+
+if MAP_LABELS:
+    SRS_IMAGES[(5, 1, 8)] = {0: _map_ops(), 1: _map_ops()}
+
 # martial-art name banners (60x15) in skill animations: (SRS key, image) -> MRS name row
 BANNERS = {
     (5, 2, 62): {8: "MRS/4-1-1/name", 9: "MRS/4-2-1/name"},

@@ -2,18 +2,24 @@
 
   python3 tools/tl/dump.py [--game fmj] --chapters 2,3   script rows of those chapters (key 1-<chapter>-n)
   python3 tools/tl/dump.py --kinds grs.desc,mrs.desc
+Rows that repeat an earlier row's kind and text are left out (build_en copies
+the first one's translation to them); --all lists them too.
 """
 import argparse
-from common import rows
+from common import rows, canonical
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--chapters"); ap.add_argument("--kinds")
+ap.add_argument("--chapters"); ap.add_argument("--kinds"); ap.add_argument("--all", action="store_true")
 a = ap.parse_args()
 chs = set(a.chapters.split(",")) if a.chapters else None
 kinds = set(a.kinds.split(",")) if a.kinds else None
 SCRIPT = {"say", "message", "choice", "showgut", "menu"}
 last = None
-for r in rows():
+table = rows()
+canon = canonical(table)
+for r in table:
+    if not a.all and canon[r["id"]] != r["id"]:
+        continue
     if chs is not None:
         if not r["id"].startswith("gut/") or r["kind"] not in SCRIPT or r["id"].split("/")[1].split("-")[1] not in chs:
             continue

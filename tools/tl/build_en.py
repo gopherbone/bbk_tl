@@ -5,7 +5,7 @@ Writes the game's merged table (translations/<key>.en.jsonl, id -> en) and
 reports coverage.
 """
 import argparse, glob, json, os, sys
-from common import ROOT, GAME, PARTS, MERGED, rows, load_part, problems
+from common import ROOT, GAME, PARTS, MERGED, rows, load_part, problems, canonical
 sys.path.insert(0, ROOT)
 from bbkrpg import build, engine_text
 
@@ -28,6 +28,12 @@ errs = 0
 for rid, en in merged.items():
     for p in problems(by_id[rid], en) if rid in by_id and not rid.startswith("ENG/") else []:
         print(f"ERROR {rid}: {p}"); errs += 1
+canon = canonical(table)
+repeats = 0
+for r in table:                                   # repeated lines take their first occurrence's text
+    if r["id"] not in merged and canon[r["id"]] in merged:
+        merged[r["id"]] = merged[canon[r["id"]]]
+        repeats += 1
 with open(MERGED, "w") as f:
     for r in table:
         if r["id"] in merged:
@@ -38,7 +44,8 @@ todo = [r for r in table if not r["en"]]
 kinds = {}
 for r in todo:
     kinds[r["kind"]] = kinds.get(r["kind"], 0) + 1
-print(f"translated {len(table) - len(todo)}/{len(table)}; missing by kind: {kinds}")
+print(f"translated {len(table) - len(todo)}/{len(table)} ({repeats} filled from an identical earlier line); "
+      f"missing by kind: {kinds}")
 out, info, probs = build.build(GAME.read_gam(), table, game=GAME)
 for p in probs:
     print("BUILD", p)
