@@ -37,8 +37,9 @@ SRS_IMAGES = {
     # order, so the first (英) grows to span all four and carries the English
     # under them; the later glyphs draw over its top rows.
     (5, 1, 248): {0: [("resize", 97, 31, 0), ("ctext", 48, 20, TITLE, 1)]},
-    # 神童乐园 card (96x24, drawn at 30,6): 12 more rows for the English
-    (5, 1, 247): {1: [("resize", 96, 36, 0), ("ctext", 48, 24, "Prodigy Park", 1)]},
+    # 神童乐园 card (96x24, drawn at 30,36): the star row drawn at y 66 covers
+    # anything lower, so 6 more rows hold the English in 3x5 caps
+    (5, 1, 247): {1: [("resize", 96, 30, 0), ("small", 48 - small_width("PRODIGY PARK") // 2, 25, "PRODIGY PARK")]},
 }
 
 
