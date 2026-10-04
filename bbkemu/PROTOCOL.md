@@ -71,6 +71,7 @@ item is one of:
 - `{addr, deref:true, len, cstr?}`: bytes where the pointer at `addr` points.
   With `cstr`, capture stops at NUL.
 - `{addr, deref:true, phys:true}`: the physical address the pointer resolves to
+- `{addr, deref:true, ptr_off:n, len, cstr?}`: `addr` points at a block (e.g. C-stack args); read the pointer stored at block+n and capture from there
 - `{stack:true, len}`: bytes above the stack pointer (return addresses)
 
 ### Watchpoints

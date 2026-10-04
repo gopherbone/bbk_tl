@@ -151,3 +151,66 @@ class Hooks:
                 out.append({"frame": x["frame"], "y": args[0], "text": _gb(x["mem"][0]),
                             "raw": x["mem"][0], "args": x["mem"][1], "script": self.where})
         return out
+
+
+class EnHooks(Hooks):
+    """Hooks for English builds (bbkrpg fontpatch): text is drawn by our
+    renderer, so log its entry points and decode text-bank tokens with the
+    bank written next to the .gam (<name>.bank.json)."""
+
+    def __init__(self, emu: BBKEmu, bank_path: str, script_fetch_phys: int = SCRIPT_FETCH_PHYS):
+        import sys as _sys
+        _sys.path.insert(0, os.path.join(HERE, "..", "..", ".."))
+        from bbkrpg import fontpatch
+        self.bank = json.load(open(bank_path))["bank"]
+        _, syms = fontpatch.build_segment([0])
+        base = 0x20D000 + 0x48000 - 0x5000          # font segment at .gam 0x48000, CPU $5000
+        self.e = emu
+        self.text_id = emu.break_add(None, phys=base + syms["drawstring"], stop=False, capture=[
+            {"addr": 0x28, "deref": True, "len": 1},
+            {"addr": 0x28, "deref": True, "ptr_off": 1, "cstr": True, "len": 160}])
+        self.msg_id = emu.break_add(None, phys=base + syms["msgbox"], stop=False, capture=[
+            {"addr": 0x28, "deref": True, "len": 1},
+            {"addr": 0x28, "deref": True, "ptr_off": 0, "cstr": True, "len": 160}])
+        self.fetch_id = emu.break_add(None, phys=script_fetch_phys, stop=False, capture=[
+            {"addr": 0x20, "deref": True, "phys": True}])
+        self.where = None
+        self._map_cache = {}
+
+    def _decode(self, raw: bytes) -> str:
+        out, i = [], 0
+        while i < len(raw):
+            b = raw[i]
+            if b in (0xFE, 0xFF) and i + 3 < len(raw):
+                n = ((raw[i + 1] & 0x7F) << 7) | (raw[i + 3] & 0x7F)
+                out.append(self.bank[n] if n < len(self.bank) else f"<tok{n}>")
+                i += 4
+            elif b == 0xFD and i + 1 < len(raw):
+                n = raw[i + 1] & 0x7F
+                out.append(self.bank[n] if n < len(self.bank) else f"<tok{n}>")
+                i += 2
+            elif b == 0xFC:
+                i += 2
+            elif b < 0x80:
+                out.append(chr(b)); i += 1
+            else:
+                out.append(raw[i:i + 2].decode("gb2312", "replace")); i += 2
+        return "".join(out)
+
+    def _read_str(self, ptr: int) -> bytes:
+        data = self.e.read(ptr, 96)
+        return data.split(b"\0", 1)[0]
+
+    def drain(self):
+        out = []
+        for x in self.e.call("break.log", clear=True, max=100000)["entries"]:
+            if x["id"] == self.fetch_id:
+                pos = self._script_pos(x["mem"][0])
+                if pos:
+                    self.where = pos
+            elif x["id"] in (self.text_id, self.msg_id):
+                y = bytes.fromhex(x["mem"][0])[0] if x["id"] == self.text_id else None
+                raw = bytes.fromhex(x["mem"][1])
+                out.append({"frame": x["frame"], "y": y, "kind": "msg" if y is None else "text",
+                            "text": self._decode(raw), "script": self.where})
+        return out

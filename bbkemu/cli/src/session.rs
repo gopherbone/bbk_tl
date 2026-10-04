@@ -127,6 +127,9 @@ struct Capture {
     stack: bool,
     /// with deref: record the pointer's physical address (6 hex digits) instead of bytes
     phys: bool,
+    /// with deref: the pointer at `addr` points at a block; read a second
+    /// pointer at block + `ptr_off` and capture from there (C-stack args)
+    ptr_off: Option<u16>,
 }
 
 #[derive(Clone)]
@@ -639,7 +642,14 @@ impl Session {
                                     let base = if c.stack {
                                         0x101u16 + emu.cpu.sp() as u16
                                     } else if c.deref {
-                                        m.read(c.addr) as u16 | (m.read(c.addr.wrapping_add(1)) as u16) << 8
+                                        let p = m.read(c.addr) as u16 | (m.read(c.addr.wrapping_add(1)) as u16) << 8;
+                                        match c.ptr_off {
+                                            Some(o) => {
+                                                let q = p.wrapping_add(o);
+                                                m.read(q) as u16 | (m.read(q.wrapping_add(1)) as u16) << 8
+                                            }
+                                            None => p,
+                                        }
                                     } else {
                                         c.addr
                                     };
@@ -822,6 +832,7 @@ impl Session {
                     cstr: p_bool(c, "cstr", false),
                     stack,
                     phys: p_bool(c, "phys", false),
+                    ptr_off: p_num(c, "ptr_off")?.map(|v| v as u16),
                 });
             }
         }

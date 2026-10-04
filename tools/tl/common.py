@@ -1,0 +1,67 @@
+"""Shared helpers for the translation workflow."""
+import json, os, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT)
+from bbkrpg import fit, font_sans  # noqa: E402
+
+STRINGS = os.path.join(ROOT, "work", "fmj.strings.jsonl")
+GLOSSARY = os.path.join(ROOT, "docs", "glossary.jsonl")
+PARTS = os.path.join(ROOT, "translations", "parts")
+MERGED = os.path.join(ROOT, "translations", "fmj.en.jsonl")
+
+
+def rows():
+    return [json.loads(l) for l in open(STRINGS, encoding="utf-8")]
+
+
+def glossary():
+    out = {}
+    for t in map(json.loads, open(GLOSSARY, encoding="utf-8")):
+        out.setdefault(t["zh"], t)
+    return out
+
+
+def load_part(path):
+    """A part file: JSON lines {"id", "en"} (other keys ignored)."""
+    return {d["id"]: d["en"] for d in map(json.loads, open(path, encoding="utf-8")) if d.get("en")}
+
+
+def problems(r: dict, en: str) -> list[str]:
+    """Hard errors for one translation."""
+    out = []
+    if not en.isascii():
+        out.append("non-ASCII characters: " + "".join(sorted({c for c in en if not c.isascii()})))
+    if "\0" in en:
+        out.append("contains NUL")
+    k = r["kind"]
+    if k == "choice" and len(en) > 19:
+        out.append(f"choice is {len(en)} chars; max 19")
+    if k in ("grs.name", "ars.name", "mrs.name", "map.name") and len(en) > r["limits"]["max_bytes"]:
+        out.append(f"name is {len(en)} chars; max {r['limits']['max_bytes']}")
+    if k == "setscenename" and len(en) > 11:
+        # copied unbounded into a 10-byte RAM buffer (0x1942); the original's
+        # longest names are 11 bytes, so never go past that
+        out.append(f"scene name is {len(en)} chars; max 11")
+    if k in ("grs.desc", "mrs.desc") and len(fit.rows(en, fit.DESC_WIDTH)) > fit.DESC_ROWS:
+        out.append(f"description needs {len(fit.rows(en, fit.DESC_WIDTH))} rows; the window shows {fit.DESC_ROWS}")
+    if k == "message" and len(fit.rows(en, fit.MESSAGE_WIDTH)) > 4:
+        out.append("message needs more than 4 rows")
+    if k == "menu" and len(en.split(" ")) != len(r["zh"].split(" ")):
+        out.append("menu needs the same number of space-separated items")
+    return out
+
+
+def warnings(r: dict, en: str, gl: dict) -> list[str]:
+    out = []
+    if r["kind"] == "say":
+        pages = len(fit.pages(en, portrait=bool(r["ctx"].get("pic"))))
+        if pages > 3:
+            out.append(f"{pages} dialogue pages (consider tightening)")
+    low = en.lower()
+    for zh, t in gl.items():
+        if len(zh) >= 2 and zh in r["zh"] and t["category"] in ("person", "place", "sect", "monster", "title", "item",
+                                                                "weapon", "armor", "consumable", "magic", "skill"):
+            if t["en"].lower() not in low and not any(a.lower() in low for a in (t.get("alt") or []) if isinstance(a, str)):
+                out.append(f"glossary: {zh} = {t['en']!r} not found")
+    return out

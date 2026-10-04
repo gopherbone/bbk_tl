@@ -22,4 +22,5 @@ def build(orig: bytes, rows: list[dict], gallery: list[str] | None = None) -> tu
     problems += eprob
     joined = gammod.join(engine, libmod.pack(built))
     out, info = fontpatch.patch(joined, bank)
+    info["bank"] = [b.decode("ascii", "replace") for b in bank]
     return out, info, problems

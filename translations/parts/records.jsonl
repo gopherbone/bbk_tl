@@ -1,0 +1,88 @@
+{"id": "GRS/6-1-1/desc", "en": "A strip of cloth for tying hair. Defense +1."}
+{"id": "GRS/6-1-2/desc", "en": "A plain headscarf. Keeps out dust and keeps you warm. Defense +2."}
+{"id": "GRS/6-1-3/desc", "en": "A cowhide hat that keeps off rain and snow. Defense +4."}
+{"id": "GRS/6-1-4/desc", "en": "A hat for accomplished Taoists. DEF +11, SPI +3. Blocks Silence."}
+{"id": "GRS/6-1-5/desc", "en": "Worn by decorated generals. DEF +28, AGI +5, SPI +3, LCK +3."}
+{"id": "GRS/6-1-6/desc", "en": "Max MP +15, ATK -4, DEF +20, SPI +12. Blocks Confuse, Sleep."}
+{"id": "GRS/6-1-7/desc", "en": "A colorful ribbon girls love. Defense +2."}
+{"id": "GRS/6-1-8/desc", "en": "A silver hair clasp shaped like a crane. Defense +3."}
+{"id": "GRS/6-1-9/desc", "en": "A hairpin for your hair. Defense +5."}
+{"id": "GRS/6-1-10/desc", "en": "From the rooster that wakes the sun. DEF +2, SPI +2, LCK +2."}
+{"id": "GRS/6-1-11/desc", "en": "A hairpin set with a sapphire. Defense +9, Luck +6."}
+{"id": "GRS/6-1-12/desc", "en": "A Li girl's crown that wards off evil. DEF +10. Blocks Confuse."}
+{"id": "GRS/6-1-13/desc", "en": "Silver, set with precious blue jade. DEF +18, SPI +6, LCK +4."}
+{"id": "GRS/6-1-14/desc", "en": "Woven of rare silkworm silk. DEF +25, AGI +8. Blocks Silence."}
+{"id": "GRS/6-1-15/desc", "en": "A weird-looking mask that keeps out poison."}
+{"id": "GRS/6-2-1/desc", "en": "A long-sleeved white robe of coarse cloth. Defense +3."}
+{"id": "GRS/6-2-2/desc", "en": "Armor made of buffalo hide. Defense +7."}
+{"id": "GRS/6-2-3/desc", "en": "Armor of linked iron rings. Defense +20, Agility -3."}
+{"id": "GRS/6-2-4/desc", "en": "Worn by skilled, devout monks. DEF +15, LCK +5, SPI +5."}
+{"id": "GRS/6-2-5/desc", "en": "Tough snakeskin clothes. Defense +35. Blocks Poison."}
+{"id": "GRS/6-2-6/desc", "en": "Zhang Daoling's Taoist robe. DEF +40, SPI +12. Blocks Silence."}
+{"id": "GRS/6-2-7/desc", "en": "Jade sewn with gold. DEF +40, LCK +10, AGI -10. Blocks Confuse."}
+{"id": "GRS/6-2-8/desc", "en": "A rich girl's dress. The poor only get one at New Year! Defense +10."}
+{"id": "GRS/6-2-9/desc", "en": "Worn by ladies of high rank. Defense +18, Luck +2."}
+{"id": "GRS/6-2-10/desc", "en": "Light silkworm-silk clothes that protect well. DEF +24, AGI +8."}
+{"id": "GRS/6-2-11/desc", "en": "Red feathers, like a fire. DEF +30, AGI +4. Blocks Confuse."}
+{"id": "GRS/6-2-12/desc", "en": "Hides the charm \"Like a Shadow\". Superb armor. Defense +100."}
+{"id": "GRS/6-2-13/desc", "en": "Bronze armor covered in barbs. Defense +55, Attack +19."}
+{"id": "GRS/6-2-14/desc", "en": "Woven from a spider god's silk. Defense +40. Resists Poison."}
+{"id": "GRS/6-2-15/desc", "en": "Sewn all over with fine pearls. DEF +60, AGI -3, LCK +10."}
+{"id": "GRS/6-2-16/desc", "en": "Warm swan-down robe. DEF +64, AGI +6. Blocks Poison."}
+{"id": "GRS/6-2-17/desc", "en": "Guizong Fort's black garb. Go unseen. DEF +35, AGI +22, LCK -6."}
+{"id": "GRS/6-2-18/desc", "en": "Crane-woven silk. Buddhas walk with the wearer. A true treasure!"}
+{"id": "GRS/6-3-1/desc", "en": "Cheap, light rush sandals, good for walking. Defense +1."}
+{"id": "GRS/6-3-2/desc", "en": "Tall boots of coarse cloth. Defense +3, Agility +1."}
+{"id": "GRS/6-3-3/desc", "en": "Tall boots worn by Taoists. Defense +5, Agility +2."}
+{"id": "GRS/6-3-4/desc", "en": "Finely carved boots for lords. DEF +8, AGI +6, Max HP +10."}
+{"id": "GRS/6-3-5/desc", "en": "Lined with steel wire against blades. Defense +22, Agility +5."}
+{"id": "GRS/6-3-6/desc", "en": "Gauze boots thin as mist. Run like the wind. DEF +10, AGI +18."}
+{"id": "GRS/6-3-7/desc", "en": "Shoes of plain patterned cloth. Defense +4, Agility +2."}
+{"id": "GRS/6-3-8/desc", "en": "Finely embroidered shoes for young ladies. Defense +8, Agility +3."}
+{"id": "GRS/6-3-9/desc", "en": "Soft deerskin boots; move as fast as a deer. Defense +11, Agility +5."}
+{"id": "GRS/6-3-10/desc", "en": "Tall embroidered boots with gold lotuses. Defense +10, Agility +8."}
+{"id": "GRS/6-3-11/desc", "en": "Crystal boots set with glowing pearls. DEF +15, AGI +12."}
+{"id": "GRS/6-3-12/desc", "en": "Sky fox pelt boots. Worth a fortune! DEF +20, AGI +16."}
+{"id": "GRS/6-3-13/desc", "en": "Divine clay shoes that fit any foot. DEF +16, AGI +22, Max HP +20."}
+{"id": "GRS/6-3-14/desc", "en": "Straw sandals that ride the wind. Max HP/MP +20, DEF +4, AGI +26."}
+{"id": "GRS/6-3-15/desc", "en": "Tour every mountain in a day. DEF +30, AGI +24, SPI +12, LCK +10."}
+{"id": "GRS/6-4-1/desc", "en": "Keeps out wind and cold. Defense +2."}
+{"id": "GRS/6-4-2/desc", "en": "Armor to guard the shoulders. Defense +6."}
+{"id": "GRS/6-4-3/desc", "en": "Good armor, but heavy! You'll be clumsy in it. Defense +12, Agility -7."}
+{"id": "GRS/6-4-4/desc", "en": "A cape of wyrm hide. Good protection. Defense +12."}
+{"id": "GRS/6-4-5/desc", "en": "Armor of fish-scale plates. Defense +18, Agility -4."}
+{"id": "GRS/6-4-6/desc", "en": "Armor forged of rare fine steel. Defense +19."}
+{"id": "GRS/6-4-7/desc", "en": "Made from the hide of a blood-sweating steed. Defense +28."}
+{"id": "GRS/6-4-8/desc", "en": "Made of ten green snakeskins; soft and supple. Defense +32."}
+{"id": "GRS/6-4-9/desc", "en": "Woven from golden eagle feathers. Defense +32, Spirit +16."}
+{"id": "GRS/6-4-10/desc", "en": "An outer robe for powerful Taoists. Defense +31, Spirit +16."}
+{"id": "GRS/6-4-11/desc", "en": "Once worn by Heavenly King Li; holds his aura. DEF +66, SPI +15."}
+{"id": "GRS/6-4-12/desc", "en": "Woven by the Weaver Girl. Dazzling! Defense +52, Spirit +15."}
+{"id": "GRS/6-4-13/desc", "en": "Lu Ban's poison-proof reeds, female half. DEF +3. Blocks Poison."}
+{"id": "GRS/6-4-14/desc", "en": "Lu Ban's poison-proof reeds, male half. DEF +3. Blocks Poison."}
+{"id": "GRS/6-5-1/desc", "en": "Sleeve cuffs that keep body heat in. Defense +2."}
+{"id": "GRS/6-5-2/desc", "en": "Iron wrist guards; they slow you down. Defense +12, Agility -3."}
+{"id": "GRS/6-5-3/desc", "en": "Nicely decorated gold cuffs. Defense +10."}
+{"id": "GRS/6-5-4/desc", "en": "Never let it see blood, or it turns evil. ATK +10, DEF +24, SPI +4."}
+{"id": "GRS/6-5-5/desc", "en": "Wrist guards of red cloth. Defense +4."}
+{"id": "GRS/6-5-6/desc", "en": "An ordinary jade bangle. Defense +10."}
+{"id": "GRS/6-5-7/desc", "en": "Made of heavenly white jade. Defense +16, Luck +4."}
+{"id": "GRS/6-5-8/desc", "en": "Turns qi into speed and luck. DEF +8, Max MP -10, AGI +10, LCK +10."}
+{"id": "GRS/6-6-1/desc", "en": "A charm to keep children safe. Works if you believe! Luck +4."}
+{"id": "GRS/6-6-2/desc", "en": "A cloth bag of fragrant powder; wards off evil. Spirit +4, Luck +2."}
+{"id": "GRS/6-6-3/desc", "en": "A red cord blessed for long life. DEF +3, SPI +3, LCK +3."}
+{"id": "GRS/6-6-4/desc", "en": "A bronze hand mirror. Defense +6."}
+{"id": "GRS/6-6-5/desc", "en": "Silk pouch of mugwort and spice. DEF +6, SPI +3, LCK +5."}
+{"id": "GRS/6-6-6/desc", "en": "A pendant of elephant ivory. Defense +12."}
+{"id": "GRS/6-6-7/desc", "en": "A cinnabar bagua mirror; draws nature's qi. SPI +5, DEF +5."}
+{"id": "GRS/6-6-8/desc", "en": "A nine-hole flute whose song can tame demons. Luck +18."}
+{"id": "GRS/6-6-9/desc", "en": "A Taiji mirror that draws in yin-yang qi. Spirit +9, Defense +9."}
+{"id": "GRS/6-6-10/desc", "en": "A jade pendant of carved ice, full of power. Spirit +20."}
+{"id": "GRS/6-6-11/desc", "en": "A pearl that focuses the mind. Restores 10 MP per turn."}
+{"id": "GRS/6-6-12/desc", "en": "Brings great wealth and good fortune. Luck +99."}
+{"id": "GRS/6-6-13/desc", "en": "A demon-realm relic lost on earth. All stats but HP/MP +15."}
+{"id": "GRS/6-6-14/desc", "en": "Gong Gong's talisman. Restores 30 HP/MP per turn. AGI +5."}
+{"id": "GRS/6-6-15/desc", "en": "A domineering demon artifact. Attack +100, Spirit -20, Luck -40."}
+{"id": "GRS/6-6-16/desc", "en": "Carved from ancient black ice jade. Restores 30 MP per turn."}
+{"id": "GRS/6-6-17/desc", "en": "Zhuge Liang's life lamp. Restores 30 HP per turn, but bulky. AGI -3."}
+{"id": "GRS/6-6-18/desc", "en": "A novel about Zhou Chu and the Three Banes. Odd power. DEF +2."}
