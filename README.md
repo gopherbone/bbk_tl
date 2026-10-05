@@ -39,10 +39,10 @@ engine string table, image redraws and working paths. The scripts in
 
 | Key | Game | Parts | Glossary | Release |
 | --- | --- | --- | --- | --- |
-| `fmj` | 伏魔记 | `translations/parts/` | `docs/glossary.jsonl` | Demonbane Chronicle v0.4 |
-| `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` | Heroes of Jin Yong v0.3 |
-| `yxts` | 英雄坛说 | `translations/yxts/parts/` | `docs/yxts/glossary.jsonl` | Heroes' Altar v0.2 |
-| `szzm` | 十字之门 | `translations/szzm/parts/` | `docs/szzm/glossary.jsonl` | Cross Entry v0.2 |
+| `fmj` | 伏魔记 | `translations/parts/` | `docs/glossary.jsonl` | Demonbane Chronicle v0.5 |
+| `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` | Heroes of Jin Yong v0.4 |
+| `yxts` | 英雄坛说 | `translations/yxts/parts/` | `docs/yxts/glossary.jsonl` | Heroes' Altar v0.3 |
+| `szzm` | 十字之门 | `translations/szzm/parts/` | `docs/szzm/glossary.jsonl` | Cross Entry v0.3 |
 | `xkx` | 侠客行 | `translations/xkx/parts/` | `docs/xkx/glossary.jsonl` | Ode to Gallantry v0.1 |
 
 ```sh
