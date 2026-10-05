@@ -611,12 +611,18 @@ mul:    asl LP
         adc #4
         sta LP+1
         ldy K0
-        lda M0
+        cpy #19                 ; x 0-7: byte 19 of the previous memory row
+        bne k0go
+        jsr lpup
+k0go:   lda M0
         eor #$ff
         and (LP),y
         ora D0
         sta (LP),y
-        ldy K1
+        cpy #19
+        bne k0done
+        jsr lpdown
+k0done: ldy K1
         cpy #$ff
         beq nextrow
         lda M1
@@ -634,6 +640,24 @@ chdone: lda X
         adc ADV
         sta X
         rts
+
+; The LCD reads each display row as 20 bytes starting 13 bytes before its
+; memory row: x 0-7 are byte 19 of the previous row (as the OS clears them),
+; x 8-159 bytes 0-18 of the row itself. Y is preserved.
+lpup:   lda LP
+        sec
+        sbc #32
+        sta LP
+        bcs lpu1
+        dec LP+1
+lpu1:   rts
+lpdown: lda LP
+        clc
+        adc #32
+        sta LP
+        bcc lpd1
+        inc LP+1
+lpd1:   rts
 
 ; ---- msgbox: replacement for the OS message box (vector E953).
 ; C stack: [text ptr lo, hi, mode lo, hi]. Draws a centred framed box with the
@@ -1150,7 +1174,8 @@ plm:    asl LP
         beq plc0
         dey
         jmp plby
-plc0:   ldy #19
+plc0:   jsr lpup                ; x 0-7: byte 19 of the previous memory row
+        ldy #19
 plby:   lda PX
         and #7
         tax
