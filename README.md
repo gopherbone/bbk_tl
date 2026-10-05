@@ -1,7 +1,8 @@
 # bbk_tl — BBK dictionary game translation
 
 Tools for translating BBKRPG games (伏魔记 first) on the BBK A-series
-dictionaries. Plan: https://claude.ai/artifact/LRsiui8Mka3ZqHKQgsY3t2
+dictionaries. The games, firmware and translated builds are not in this
+repository: releases are BPS patches applied to your own copy of a game.
 
 ## bbkrpg (format toolkit)
 
@@ -120,3 +121,41 @@ replays match frame for frame.
 `gam4980/` (gitignored) holds the 152-game set and the `8.BIN`/`E.BIN` BIOS
 dumps; tests that need it skip when it is absent. `docs/recon.md` has the
 伏魔记.gam byte map and the engine-build groups.
+
+## Credits
+
+The games belong to their authors; the English patches change only text,
+images and the renderer, and ship no game data.
+
+| Game | English | Original authors |
+| --- | --- | --- |
+| 伏魔记 | Demonbane Chronicle | 通宵虫 (Allnighter) and 南方小鬼 (South Imp), with the BBK Game Team (2004) |
+| 金庸群侠传 | Heroes of Jin Yong | BOSS工作室 (BOSS Studio) |
+| 英雄坛说 | Heroes' Altar | 才子工作室 (Caizi Studio): 金远见 (Jin Yuanjian), 柴梓 (Chai Zi) (2005) |
+| 十字之门 | Cross Entry | 翼王 (Yiwang) |
+| 三国霸业 | Three Kingdoms: Hegemony | BBK Game Group; code by 通宵虫 (Allnighter) and 南方小鬼 (South Imp), art by Sunday (2005) |
+
+The BBK A-series dictionaries, their firmware and the BBKRPG engine are BBK's
+(步步高). Translation, tools, the bbk_tl Sans font and the English renderer:
+gopherbone, with Claude (Anthropic).
+
+Third-party work this builds on:
+
+- [BBKEmu](https://github.com/AloysHF/BBKEmu) by Aloys (AloysHF), GPL-3.0:
+  vendored with patches as `bbkemu/core` (see `bbkemu/core/UPSTREAM`); the
+  `bbkemu` CLI and `bbkplay` are built on it.
+- [gam4980](https://codeberg.org/iyzsong/gam4980) by iyzsong, based on the
+  [BA4988 simulator](https://gitee.com/BA4988/BBK-simulator) by 无云 and
+  [vrEmu6502](https://github.com/visrealm/vrEmu6502) by Troy Schrapel, GPL-3.0:
+  the web player's core, as built by
+  [iuxt/bbk-games](https://github.com/iuxt/bbk-games) (`site/vendor/gam4988`).
+- [BBKRPGSimulator](https://github.com/stratosblue/BBKRPGSimulator) by
+  stratosblue: the reference for the BBKRPG archive, script and record
+  formats (`bbkrpg/gut.py`, `bbkrpg/strings.py`) and the test oracle.
+- [iBaye](https://gitee.com/bgwp/iBaye): usage context for 三国霸业's strings
+  (`sgby`).
+- The bbkemu CLI protocol follows gopherbone's gbemu-cli.
+
+## License
+
+GPL-3.0-or-later (`LICENSE`), the license of the emulator code vendored here.

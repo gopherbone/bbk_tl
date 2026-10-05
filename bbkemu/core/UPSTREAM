@@ -1,1 +1,8 @@
-09bc66de868c8d2d6e1e1a6339552baf0c778b34
+BBKEmu core by Aloys (AloysHF), GPL-3.0-or-later (see ../LICENSE)
+https://github.com/AloysHF/BBKEmu
+vendored from commit 09bc66de868c8d2d6e1e1a6339552baf0c778b34 (crates/bbkemu-core)
+
+Local changes (see git log -- bbkemu/core): snapshots by clone, bus access
+recording for breakpoints/watchpoints (debug.rs), a split frame loop, input
+routes with recorded pokes (route.rs), IRQ entry sets the I flag, no save-marker
+overwrite of the .gam, no auto power-off, flash storage laid out like gam4980.

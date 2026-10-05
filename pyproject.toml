@@ -3,6 +3,7 @@ name = "bbkrpg"
 version = "0.1.0"
 description = "Format toolkit for BBK BBKRPG game archives (unpack, script disasm/asm, string tables)"
 requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
 
 [project.scripts]
 bbkrpg = "bbkrpg.cli:main"
