@@ -18,6 +18,7 @@ tgt = open(game.en_gam, "rb").read()
 patch = bps.create(src, tgt, f"{game.title_en} ({game.zh}) English translation {ver}".encode())
 assert bps.apply(patch, src) == tgt
 name = "".join(w[:1].upper() + w[1:] for w in game.title_en.split()) + f"-{ver}"   # HeroesOfJinYong-v0.1
+name = "".join(c for c in name if c.isalnum() or c in "-.")                          # HeroesAltar-v0.1
 open(f"dist/{name}.bps", "wb").write(patch)
 gver = src[0x37:0x40].split(b"\0")[0].decode("ascii")   # header version string, e.g. Ver1.3
 crc = lambda b: f"{zlib.crc32(b):08x}"
