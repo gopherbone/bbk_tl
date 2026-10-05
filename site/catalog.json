@@ -129,6 +129,38 @@
           "base": "gam4980/retroarch/downloads/bbk/十字之门.gam"
         }
       ]
+    },
+    {
+      "id": "three-kingdoms-hegemony",
+      "title": "Three Kingdoms: Hegemony",
+      "title_zh": "三国霸业",
+      "pinyin": "Sān Guó Bà Yè",
+      "year": 2005,
+      "genre": "Strategy",
+      "authors": "BBK Game Group; code by 通宵虫 (Allnighter) and 南方小鬼 (South Imp), art by Sunday",
+      "blurb": "BBK's own turn-based Three Kingdoms strategy game. Pick one of four eras and a warlord, then run your cities month by month - farming, trade, diplomacy and recruitment - and fight tactical battles with officers, troop types and skills to unify the realm.",
+      "keys": [
+        "arrows",
+        "ok",
+        "back"
+      ],
+      "versions": [
+        {
+          "lang": "en",
+          "label": "English",
+          "version": "v0.1",
+          "status": "Complete translation (in testing)",
+          "base": "gam4980/retroarch/downloads/bbk/三国霸业.gam",
+          "patch": "dist/ThreeKingdomsHegemony-v0.1.bps"
+        },
+        {
+          "lang": "zh",
+          "label": "Original (Chinese)",
+          "version": "Ver1.0",
+          "status": "Original release",
+          "base": "gam4980/retroarch/downloads/bbk/三国霸业.gam"
+        }
+      ]
     }
   ]
 }

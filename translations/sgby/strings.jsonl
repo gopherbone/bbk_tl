@@ -1,0 +1,740 @@
+{"id": "e/1", "zh": "无法到达!", "bytes": 9, "kind": "label", "budget": 54, "macro": "dFgtCtMove", "usage": ["pstring.c:4: const U8 dFgtCtMove[] = \"无法到达!\";", "Fight.c:481: FgtLoadToMem(dFgtCtMove,buf);"]}
+{"id": "e/2", "zh": "没有目标", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtNoAim", "usage": ["pstring.c:5: const U8 dFgtNoAim[] = \"没有目标\";", "Fight.c:294: FgtLoadToMem(dFgtNoAim,naim);"]}
+{"id": "e/3", "zh": "命令无效", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtErrAim", "usage": ["pstring.c:6: const U8 dFgtErrAim[] = \"命令无效\";", "Fight.c:295: FgtLoadToMem(dFgtErrAim,err);"]}
+{"id": "e/4", "zh": "天候错误", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtWhrErr", "usage": ["pstring.c:7: const U8 dFgtWhrErr[] = \"天候错误\";", "FgtPkAi.c:453: return dFgtWhrErr;\t\t/*天候错误*/"]}
+{"id": "e/5", "zh": "地形错误", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtEthErr", "usage": ["pstring.c:8: const U8 dFgtEthErr[] = \"地形错误\";", "FgtPkAi.c:451: return dFgtEthErr;\t\t/*地形错误*/"]}
+{"id": "e/6", "zh": "技能不足", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtMpErr", "usage": ["pstring.c:9: const U8 dFgtMpErr[] = \"技能不足\";", "FgtPkAi.c:449: return dFgtMpErr;\t\t/*技能点不足*/"]}
+{"id": "e/7#0", "zh": "草地", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/7#1", "zh": "平原", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/7#2", "zh": "山地", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/7#3", "zh": "森林", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/7#4", "zh": "村庄", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/7#5", "zh": "城池", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/7#6", "zh": "营寨", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/7#7", "zh": "河流", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtTrnInf", "usage": ["pstring.c:12: const U8 dFgtTrnInf[] = \"草地平原山地森林村庄城池营寨河流\";", "Fight.c:1520: FgtLoadToMem(dFgtTrnInf,buf);"]}
+{"id": "e/8#0", "zh": "攻击", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtMnuCmd", "usage": ["pstring.c:15: const U8 dFgtMnuCmd[] = \"攻击计谋查看待机\";", "Fight.c:233: FgtLoadToMem(dFgtMnuCmd,buf);"]}
+{"id": "e/8#1", "zh": "计谋", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtMnuCmd", "usage": ["pstring.c:15: const U8 dFgtMnuCmd[] = \"攻击计谋查看待机\";", "Fight.c:233: FgtLoadToMem(dFgtMnuCmd,buf);"]}
+{"id": "e/8#2", "zh": "查看", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtMnuCmd", "usage": ["pstring.c:15: const U8 dFgtMnuCmd[] = \"攻击计谋查看待机\";", "Fight.c:233: FgtLoadToMem(dFgtMnuCmd,buf);"]}
+{"id": "e/8#3", "zh": "待机", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtMnuCmd", "usage": ["pstring.c:15: const U8 dFgtMnuCmd[] = \"攻击计谋查看待机\";", "Fight.c:233: FgtLoadToMem(dFgtMnuCmd,buf);"]}
+{"id": "e/9#0", "zh": "回合结束", "bytes": 8, "kind": "menu", "budget": 62, "macro": "dFgtSysMnu", "usage": ["pstring.c:16: const U8 dFgtSysMnu[] = \"回合结束全军撤退战斗动画移动速度敌军移动\";", "FightSub.c:819: FgtLoadToMem2(dFgtSysMnu,mbuf);"]}
+{"id": "e/9#1", "zh": "全军撤退", "bytes": 8, "kind": "menu", "budget": 62, "macro": "dFgtSysMnu", "usage": ["pstring.c:16: const U8 dFgtSysMnu[] = \"回合结束全军撤退战斗动画移动速度敌军移动\";", "FightSub.c:819: FgtLoadToMem2(dFgtSysMnu,mbuf);"]}
+{"id": "e/9#2", "zh": "战斗动画", "bytes": 8, "kind": "menu", "budget": 62, "macro": "dFgtSysMnu", "usage": ["pstring.c:16: const U8 dFgtSysMnu[] = \"回合结束全军撤退战斗动画移动速度敌军移动\";", "FightSub.c:819: FgtLoadToMem2(dFgtSysMnu,mbuf);"]}
+{"id": "e/9#3", "zh": "移动速度", "bytes": 8, "kind": "menu", "budget": 62, "macro": "dFgtSysMnu", "usage": ["pstring.c:16: const U8 dFgtSysMnu[] = \"回合结束全军撤退战斗动画移动速度敌军移动\";", "FightSub.c:819: FgtLoadToMem2(dFgtSysMnu,mbuf);"]}
+{"id": "e/9#4", "zh": "敌军移动", "bytes": 8, "kind": "menu", "budget": 62, "macro": "dFgtSysMnu", "usage": ["pstring.c:16: const U8 dFgtSysMnu[] = \"回合结束全军撤退战斗动画移动速度敌军移动\";", "FightSub.c:819: FgtLoadToMem2(dFgtSysMnu,mbuf);"]}
+{"id": "e/10#0", "zh": "不看", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtLookMnu", "usage": ["pstring.c:17: const U8 dFgtLookMnu[] = \"不看观看\";", "FightSub.c:843: tmp = dFgtLookMnu;", "FightSub.c:851: tmp = dFgtLookMnu;"]}
+{"id": "e/10#1", "zh": "观看", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtLookMnu", "usage": ["pstring.c:17: const U8 dFgtLookMnu[] = \"不看观看\";", "FightSub.c:843: tmp = dFgtLookMnu;", "FightSub.c:851: tmp = dFgtLookMnu;"]}
+{"id": "e/11#0", "zh": "快速", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtMoveSpe", "usage": ["pstring.c:18: const U8 dFgtMoveSpe[] = \"快速慢速\";", "FightSub.c:847: tmp = dFgtMoveSpe;"]}
+{"id": "e/11#1", "zh": "慢速", "bytes": 4, "kind": "menu", "budget": 46, "macro": "dFgtMoveSpe", "usage": ["pstring.c:18: const U8 dFgtMoveSpe[] = \"快速慢速\";", "FightSub.c:847: tmp = dFgtMoveSpe;"]}
+{"id": "e/12#0", "zh": "骑兵", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtGenTyp", "usage": ["pstring.c:21: const U8 dFgtGenTyp[] = \"骑兵步兵弓兵水军极兵玄兵\";", "FightSub.c:165: FgtLoadToMem2(dFgtGenTyp,tbuf2);"]}
+{"id": "e/12#1", "zh": "步兵", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtGenTyp", "usage": ["pstring.c:21: const U8 dFgtGenTyp[] = \"骑兵步兵弓兵水军极兵玄兵\";", "FightSub.c:165: FgtLoadToMem2(dFgtGenTyp,tbuf2);"]}
+{"id": "e/12#2", "zh": "弓兵", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtGenTyp", "usage": ["pstring.c:21: const U8 dFgtGenTyp[] = \"骑兵步兵弓兵水军极兵玄兵\";", "FightSub.c:165: FgtLoadToMem2(dFgtGenTyp,tbuf2);"]}
+{"id": "e/12#3", "zh": "水军", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtGenTyp", "usage": ["pstring.c:21: const U8 dFgtGenTyp[] = \"骑兵步兵弓兵水军极兵玄兵\";", "FightSub.c:165: FgtLoadToMem2(dFgtGenTyp,tbuf2);"]}
+{"id": "e/12#4", "zh": "极兵", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtGenTyp", "usage": ["pstring.c:21: const U8 dFgtGenTyp[] = \"骑兵步兵弓兵水军极兵玄兵\";", "FightSub.c:165: FgtLoadToMem2(dFgtGenTyp,tbuf2);"]}
+{"id": "e/12#5", "zh": "玄兵", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtGenTyp", "usage": ["pstring.c:21: const U8 dFgtGenTyp[] = \"骑兵步兵弓兵水军极兵玄兵\";", "FightSub.c:165: FgtLoadToMem2(dFgtGenTyp,tbuf2);"]}
+{"id": "e/13", "zh": "等级:% |兵种:    |武力:%  |智力:%  |经验:%  |生命:%  |技力:%  |攻击:%   |防御:%   |兵力:%   |状态:", "bytes": 98, "kind": "msg", "box": [148, 4], "macro": "dFgtHlpGen", "usage": ["pstring.c:22: const U8 dFgtHlpGen[] = \"等级:% |兵种:    |武力:%  |智力:%  |经验:%  |生命:%  |技力:%  |攻击:%   |防御:%   |兵力:%   |状态:\";", "FightSub.c:156: FgtLoadToMem2(dFgtHlpGen,pbuf);"]}
+{"id": "e/14", "zh": "草地：适合各兵种作战之地形。无防御效果。", "bytes": 40, "kind": "msg", "box": [148, 2], "macro": "dTerrInf0", "usage": ["pstring.c:23: const U8 dTerrInf0[] = \"草地：适合各兵种作战之地形。无防御效果。\";", "FightSub.c:197: FgtLoadToMem2(dTerrInf0 + idx,pbuf);"]}
+{"id": "e/15", "zh": "平原：适合各兵种作战之地形。无防御效果。", "bytes": 40, "kind": "msg", "box": [148, 2], "macro": "dTerrInf1", "usage": ["pstring.c:24: const U8 dTerrInf1[] = \"平原：适合各兵种作战之地形。无防御效果。\";"]}
+{"id": "e/16", "zh": "山地：适合步兵和弓箭兵作战之地形。步兵、弓箭兵防御上升30%。", "bytes": 59, "kind": "msg", "box": [148, 3], "macro": "dTerrInf2", "usage": ["pstring.c:25: const U8 dTerrInf2[] = \"山地：适合步兵和弓箭兵作战之地形。步兵、弓箭兵防御上升30%。\";"]}
+{"id": "e/17", "zh": "森林：适合步兵和弓箭兵作战之地形。步兵、弓箭兵防御上升15%。", "bytes": 59, "kind": "msg", "box": [148, 3], "macro": "dTerrInf3", "usage": ["pstring.c:26: const U8 dTerrInf3[] = \"森林：适合步兵和弓箭兵作战之地形。步兵、弓箭兵防御上升15%。\";"]}
+{"id": "e/18", "zh": "村庄：适合各兵种作战之地形。各兵种防御上升10%。", "bytes": 47, "kind": "msg", "box": [148, 2], "macro": "dTerrInf4", "usage": ["pstring.c:27: const U8 dTerrInf4[] = \"村庄：适合各兵种作战之地形。各兵种防御上升10%。\";"]}
+{"id": "e/19", "zh": "城池：适合各兵种作战之地形。各兵种防御上升50%。", "bytes": 47, "kind": "msg", "box": [148, 2], "macro": "dTerrInf5", "usage": ["pstring.c:28: const U8 dTerrInf5[] = \"城池：适合各兵种作战之地形。各兵种防御上升50%。\";"]}
+{"id": "e/20", "zh": "营寨：适合各兵种作战之地形。各兵种防御上升20%。", "bytes": 47, "kind": "msg", "box": [148, 2], "macro": "dTerrInf6", "usage": ["pstring.c:29: const U8 dTerrInf6[] = \"营寨：适合各兵种作战之地形。各兵种防御上升20%。\";"]}
+{"id": "e/21", "zh": "河流：适合水军作战之地形。水军无防御效果。", "bytes": 42, "kind": "msg", "box": [148, 2], "macro": "dTerrInf7", "usage": ["pstring.c:30: const U8 dTerrInf7[] = \"河流：适合水军作战之地形。水军无防御效果。\";"]}
+{"id": "e/22", "zh": "  获得经验：", "bytes": 12, "kind": "label", "budget": 72, "macro": "dFgtGetExp", "usage": ["pstring.c:33: const U8 dFgtGetExp[] = \"  获得经验：\";", "Fight.c:1357: FgtLoadToMem(dFgtGetExp,sbuf);"]}
+{"id": "e/23", "zh": "兵力减少", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtArmsH", "usage": ["pstring.c:34: const U8 dFgtArmsH[] = \"兵力减少\";", "FightSub.c:293: bidx = dFgtArmsH;"]}
+{"id": "e/24", "zh": "兵力增加", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtArmsA", "usage": ["pstring.c:35: const U8 dFgtArmsA[] = \"兵力增加\";", "FightSub.c:288: bidx = dFgtArmsA;"]}
+{"id": "e/25", "zh": "粮草减少", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtProvH", "usage": ["pstring.c:36: const U8 dFgtProvH[] = \"粮草减少\";", "FightSub.c:404: bidx = dFgtProvH;", "FightSub.c:414: FgtLoadToMem2(dFgtProvH, buf);"]}
+{"id": "e/26", "zh": "计谋失败!", "bytes": 9, "kind": "label", "budget": 54, "macro": "dFgtJNFail", "usage": ["pstring.c:37: const U8 dFgtJNFail[] = \"计谋失败!\";", "FightSub.c:368: FgtLoadToMem2(dFgtJNFail,buf+7);"]}
+{"id": "e/27", "zh": " 陷入了 ", "bytes": 8, "kind": "label", "budget": 48, "macro": "dFgtInSta", "usage": ["pstring.c:40: const U8 dFgtInSta[] = \" 陷入了 \";", "FightSub.c:319: FgtLoadToMem2(dFgtInSta,ptr);"]}
+{"id": "e/28", "zh": "正常", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState0", "usage": ["pstring.c:41: const U8 dFgtState0[] = \"正常\";", "FightSub.c:176: FgtLoadToMem2(dFgtState0 + pos->state,tbuf);", "FightSub.c:320: FgtLoadToMem2(dFgtState0 + state,ptr + 8);"]}
+{"id": "e/29", "zh": "混乱", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState1", "usage": ["pstring.c:42: const U8 dFgtState1[] = \"混乱\";"]}
+{"id": "e/30", "zh": "禁咒", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState2", "usage": ["pstring.c:43: const U8 dFgtState2[] = \"禁咒\";"]}
+{"id": "e/31", "zh": "定身", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState3", "usage": ["pstring.c:44: const U8 dFgtState3[] = \"定身\";"]}
+{"id": "e/32", "zh": "奇门", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState4", "usage": ["pstring.c:45: const U8 dFgtState4[] = \"奇门\";"]}
+{"id": "e/33", "zh": "遁甲", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState5", "usage": ["pstring.c:46: const U8 dFgtState5[] = \"遁甲\";"]}
+{"id": "e/34", "zh": "石阵", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState6", "usage": ["pstring.c:47: const U8 dFgtState6[] = \"石阵\";"]}
+{"id": "e/35", "zh": "潜踪", "bytes": 4, "kind": "label", "budget": 24, "macro": "dFgtState7", "usage": ["pstring.c:48: const U8 dFgtState7[] = \"潜踪\";"]}
+{"id": "e/36", "zh": " 状态", "bytes": 5, "kind": "label", "budget": 30, "macro": "dFgtState", "usage": ["pstring.c:49: const U8 dFgtState[] = \" 状态\";", "FightSub.c:321: FgtLoadToMem2(dFgtState,ptr + 8 + 4);"]}
+{"id": "e/37", "zh": " 我军的粮食消耗完了。", "bytes": 21, "kind": "label", "budget": 126, "macro": "dFgtNoProv0", "usage": ["pstring.c:50: const U8 dFgtNoProv0[] = \" 我军的粮食消耗完了。\";", "Fight.c:1025: idx = dFgtNoProv0;"]}
+{"id": "e/38", "zh": " 敌军的粮食消耗完了。", "bytes": 21, "kind": "label", "budget": 126, "macro": "dFgtNoProv1", "usage": ["pstring.c:51: const U8 dFgtNoProv1[] = \" 敌军的粮食消耗完了。\";", "Fight.c:1020: idx = dFgtNoProv1;"]}
+{"id": "e/39", "zh": "随着能力的提升，我也应该有更好的表现吧！", "bytes": 40, "kind": "speech", "box": [90, 3], "macro": "dFgtLevUp0", "usage": ["pstring.c:54: const U8 dFgtLevUp0[] = \"随着能力的提升，我也应该有更好的表现吧！\";", "Fight.c:1397: FgtLoadToMem(dFgtLevUp0 + idx,buf);"]}
+{"id": "e/40", "zh": "哈哈……，知道我的厉害了吧！哟哟哟……", "bytes": 38, "kind": "speech", "box": [90, 3], "macro": "dFgtLevUp1", "usage": ["pstring.c:55: const U8 dFgtLevUp1[] = \"哈哈……，知道我的厉害了吧！哟哟哟……\";"]}
+{"id": "e/41", "zh": "早就说过，我是无敌的嘛！怎么就没人肯信呢？", "bytes": 42, "kind": "speech", "box": [90, 3], "macro": "dFgtLevUp2", "usage": ["pstring.c:56: const U8 dFgtLevUp2[] = \"早就说过，我是无敌的嘛！怎么就没人肯信呢？\";"]}
+{"id": "e/42", "zh": "就这点兵力，实在无法再战下去，只好先撤退了。", "bytes": 44, "kind": "speech", "box": [90, 3], "macro": "dFgtDead0", "usage": ["pstring.c:57: const U8 dFgtDead0[] = \"就这点兵力，实在无法再战下去，只好先撤退了。\";", "Fight.c:1406: FgtLoadToMem(dFgtDead0 + idx,buf);"]}
+{"id": "e/43", "zh": "谋事在人，成事在天。我已尽力。时也？命也？", "bytes": 42, "kind": "speech", "box": [90, 3], "macro": "dFgtDead1", "usage": ["pstring.c:58: const U8 dFgtDead1[] = \"谋事在人，成事在天。我已尽力。时也？命也？\";"]}
+{"id": "e/44", "zh": "为什么受伤的总是我？我不甘心，我不甘心！", "bytes": 40, "kind": "speech", "box": [90, 3], "macro": "dFgtDead2", "usage": ["pstring.c:59: const U8 dFgtDead2[] = \"为什么受伤的总是我？我不甘心，我不甘心！\";"]}
+{"id": "e/45", "zh": "势力形势图", "bytes": 10, "kind": "label", "budget": 60, "macro": "dChoseKing", "usage": ["gamEng.c:459: ResLoadToMem(IFACE_STRID,dChoseKing,tbuf);", "pstring.c:62: const U8 dChoseKing[] = \"势力形势图\";"]}
+{"id": "e/46", "zh": "游戏环境变量初始化失败。请重试！", "bytes": 32, "kind": "msg", "box": [148, 2], "macro": "dGamConErr", "usage": ["pstring.c:63: const U8 dGamConErr[] = \"游戏环境变量初始化失败。请重试！\";"]}
+{"id": "e/47", "zh": "游戏引擎初始化失败。请重试！", "bytes": 28, "kind": "msg", "box": [148, 2], "macro": "dGamVarErr", "usage": ["pstring.c:64: const U8 dGamVarErr[] = \"游戏引擎初始化失败。请重试！\";"]}
+{"id": "e/48", "zh": "第    天", "bytes": 8, "kind": "label", "budget": 48, "macro": "dDaysInf", "usage": ["pstring.c:67: const U8 dDaysInf[] = \"第    天\";", "FgtPkAi.c:938: FgtLoadToMem3(dDaysInf,tbuf);"]}
+{"id": "e/49", "zh": "战场形势图", "bytes": 10, "kind": "label", "budget": 60, "macro": "dPowerCmp", "usage": ["pstring.c:68: const U8 dPowerCmp[] = \"战场形势图\";", "FgtPkAi.c:936: FgtLoadToMem3(dPowerCmp,tbuf);"]}
+{"id": "e/50", "zh": "军", "bytes": 2, "kind": "label", "budget": 12, "macro": "dArmyInf", "usage": ["pstring.c:69: const U8 dArmyInf[] = \"军\";", "FgtPkAi.c:1053: FgtLoadToMem3(dArmyInf,tbuf + i);"]}
+{"id": "e/51", "zh": "将:", "bytes": 3, "kind": "label", "budget": 18, "macro": "dMainGen", "usage": ["pstring.c:70: const U8 dMainGen[] = \"将:\";"]}
+{"id": "e/52", "zh": "粮草:", "bytes": 5, "kind": "label", "budget": 30, "macro": "dProvInf", "usage": ["pstring.c:71: const U8 dProvInf[] = \"粮草:\";", "FgtPkAi.c:1056: FgtLoadToMem3(dProvInf,tbuf);"]}
+{"id": "e/53", "zh": "?????", "bytes": 5, "kind": "label", "budget": 30, "macro": "dNoView", "usage": ["pstring.c:72: const U8 dNoView[] = \"?????\";", "FgtPkAi.c:1060: FgtLoadToMem3(dNoView,tbuf + 5);"]}
+{"id": "e/54", "zh": "将领分布", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve0", "usage": ["pstring.c:73: const U8 dReserve0[] = \"将领分布\";", "FgtPkAi.c:942: FgtLoadToMem3(dReserve0,tbuf);"]}
+{"id": "e/55", "zh": "已获取敌人最新情报！可使用查找键观看。", "bytes": 38, "kind": "msg", "box": [148, 2], "macro": "dReserve1", "usage": ["pstring.c:74: const U8 dReserve1[] = \"已获取敌人最新情报！可使用查找键观看。\";", "FightSub.c:393: FgtLoadToMem2(dReserve1,SHARE_MEM);"]}
+{"id": "e/56", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve2", "usage": ["pstring.c:75: const U8 dReserve2[] = \"保留序号\";"]}
+{"id": "e/57", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve3", "usage": ["pstring.c:76: const U8 dReserve3[] = \"保留序号\";"]}
+{"id": "e/58", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve4", "usage": ["pstring.c:77: const U8 dReserve4[] = \"保留序号\";"]}
+{"id": "e/59", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve5", "usage": ["pstring.c:78: const U8 dReserve5[] = \"保留序号\";"]}
+{"id": "e/60", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve6", "usage": ["pstring.c:79: const U8 dReserve6[] = \"保留序号\";"]}
+{"id": "e/61", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve7", "usage": ["pstring.c:80: const U8 dReserve7[] = \"保留序号\";"]}
+{"id": "e/62", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve8", "usage": ["pstring.c:81: const U8 dReserve8[] = \"保留序号\";"]}
+{"id": "e/63", "zh": "保留序号", "bytes": 8, "kind": "label", "budget": 48, "macro": "dReserve9", "usage": ["pstring.c:82: const U8 dReserve9[] = \"保留序号\";"]}
+{"id": "e/64", "zh": "sango .sav", "bytes": 10, "kind": "label", "budget": 60, "macro": "dSaveFNam", "usage": ["gamEng.c:788: ResLoadToMem(IFACE_STRID,dSaveFNam,fnam);", "gamEng.c:831: ResLoadToMem(IFACE_STRID,dSaveFNam,tbuf);", "gamEng.c:942: ResLoadToMem(IFACE_STRID,dSaveFNam,tbuf);", "pstring.c:85: const U8 dSaveFNam[] = \"sango .sav\";"]}
+{"id": "e/65", "zh": "              年", "bytes": 16, "kind": "label", "budget": 96, "macro": "dRecordInf", "usage": ["gamEng.c:803: ResLoadToMem(IFACE_STRID,dRecordInf,fnam);", "pstring.c:86: const U8 dRecordInf[] = \"              年\";"]}
+{"id": "e/66", "zh": "空", "bytes": 2, "kind": "label", "budget": 12, "macro": "dNullFNam", "usage": ["gamEng.c:792: ResLoadToMem(IFACE_STRID,dNullFNam,fnam);\t/* fnam = \"空\" */", "pstring.c:87: const U8 dNullFNam[] = \"空\";"]}
+{"id": "e/67", "zh": "存储中...", "bytes": 9, "kind": "label", "budget": 54, "macro": "dWriting", "usage": ["gamEng.c:939: ResLoadToMem(IFACE_STRID,dWriting,tbuf);", "pstring.c:88: const U8 dWriting[] = \"存储中...\";"]}
+{"id": "e/68", "zh": "读取中...", "bytes": 9, "kind": "label", "budget": 54, "macro": "dReading", "usage": ["gamEng.c:829: ResLoadToMem(IFACE_STRID,dReading,tbuf);", "pstring.c:89: const U8 dReading[] = \"读取中...\";"]}
+{"id": "e/69", "zh": "创建文件失败!", "bytes": 13, "kind": "label", "budget": 78, "macro": "dErrInf", "usage": ["gamEng.c:951: ResLoadToMem(IFACE_STRID,dErrInf,tbuf);", "gamEng.c:977: ResLoadToMem(IFACE_STRID,dErrInf,tbuf);", "gamEng.c:994: ResLoadToMem(IFACE_STRID,dErrInf,tbuf);", "pstring.c:90: const U8 dErrInf[] = \"创建文件失败!\";"]}
+{"id": "e/70", "zh": "打开文件失败!", "bytes": 13, "kind": "label", "budget": 78}
+{"id": "s/1", "zh": "状态:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR0", "usage": ["strcnt.c:3: const U8 ATRR_STR0[]=\"状态:\";", "showface.c:1099: ResLoadToMem(STRING_CONST,ATRR_STR0,str);"]}
+{"id": "s/2", "zh": "归属:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR1", "usage": ["strcnt.c:4: const U8 ATRR_STR1[]=\"归属:\";", "showface.c:1029: ResLoadToMem(STRING_CONST,ATRR_STR1,str);"]}
+{"id": "s/3", "zh": "太守:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR2", "usage": ["strcnt.c:5: const U8 ATRR_STR2[]=\"太守:\";", "showface.c:1040: ResLoadToMem(STRING_CONST,ATRR_STR2,str);"]}
+{"id": "s/4", "zh": "农业:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR3", "usage": ["strcnt.c:6: const U8 ATRR_STR3[]=\"农业:\";", "showface.c:1051: ResLoadToMem(STRING_CONST,ATRR_STR3,str);"]}
+{"id": "s/5", "zh": "商业:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR4", "usage": ["strcnt.c:7: const U8 ATRR_STR4[]=\"商业:\";", "showface.c:1060: ResLoadToMem(STRING_CONST,ATRR_STR4,str);"]}
+{"id": "s/6", "zh": "民忠:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR5", "usage": ["strcnt.c:8: const U8 ATRR_STR5[]=\"民忠:\";", "showface.c:1069: ResLoadToMem(STRING_CONST,ATRR_STR5,str);"]}
+{"id": "s/7", "zh": "防灾:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR6", "usage": ["strcnt.c:9: const U8 ATRR_STR6[]=\"防灾:\";", "showface.c:1074: ResLoadToMem(STRING_CONST,ATRR_STR6,str);"]}
+{"id": "s/8", "zh": "人口:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR7", "usage": ["strcnt.c:10: const U8 ATRR_STR7[]=\"人口:\";", "showface.c:1079: ResLoadToMem(STRING_CONST,ATRR_STR7,str);"]}
+{"id": "s/9", "zh": "金钱:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR8", "usage": ["strcnt.c:11: const U8 ATRR_STR8[]=\"金钱:\";", "showface.c:1084: ResLoadToMem(STRING_CONST,ATRR_STR8,str);"]}
+{"id": "s/10", "zh": "粮食:", "bytes": 5, "kind": "label", "budget": 30, "macro": "ATRR_STR9", "usage": ["strcnt.c:12: const U8 ATRR_STR9[]=\"粮食:\";", "showface.c:1089: ResLoadToMem(STRING_CONST,ATRR_STR9,str);"]}
+{"id": "s/11", "zh": "后备兵力:", "bytes": 9, "kind": "label", "budget": 54, "macro": "ATRR_STR10", "usage": ["strcnt.c:13: const U8 ATRR_STR10[]=\"后备兵力:\";", "showface.c:1094: ResLoadToMem(STRING_CONST,ATRR_STR10,str);"]}
+{"id": "s/12", "zh": "正常", "bytes": 4, "kind": "label", "budget": 24, "macro": "CITY_STATE_STR1", "usage": ["strcnt.c:15: const U8 CITY_STATE_STR1[]=\"正常\";", "showface.c:1113: state = CITY_STATE_STR1;"]}
+{"id": "s/13", "zh": "饥荒", "bytes": 4, "kind": "label", "budget": 24, "macro": "CITY_STATE_STR2", "usage": ["strcnt.c:16: const U8 CITY_STATE_STR2[]=\"饥荒\";", "showface.c:1116: state = CITY_STATE_STR2;"]}
+{"id": "s/14", "zh": "旱灾", "bytes": 4, "kind": "label", "budget": 24, "macro": "CITY_STATE_STR3", "usage": ["strcnt.c:17: const U8 CITY_STATE_STR3[]=\"旱灾\";", "showface.c:1119: state = CITY_STATE_STR3;"]}
+{"id": "s/15", "zh": "水灾", "bytes": 4, "kind": "label", "budget": 24, "macro": "CITY_STATE_STR4", "usage": ["strcnt.c:18: const U8 CITY_STATE_STR4[]=\"水灾\";", "showface.c:1122: state = CITY_STATE_STR4;"]}
+{"id": "s/16", "zh": "暴动", "bytes": 4, "kind": "label", "budget": 24, "macro": "CITY_STATE_STR5", "usage": ["strcnt.c:19: const U8 CITY_STATE_STR5[]=\"暴动\";", "showface.c:1125: state = CITY_STATE_STR5;"]}
+{"id": "s/17", "zh": "骑兵", "bytes": 4, "kind": "label", "budget": 40, "macro": "ATRR_STR11", "usage": ["strcnt.c:21: const U8 ATRR_STR11[]=\"骑兵\";", "showface.c:183: idx = ATRR_STR11 + gptr->arm-4;", "showface.c:646: idx = ATRR_STR11;"]}
+{"id": "s/18", "zh": "步兵", "bytes": 4, "kind": "label", "budget": 40, "macro": "ATRR_STR12", "usage": ["strcnt.c:22: const U8 ATRR_STR12[]=\"步兵\";", "showface.c:649: idx = ATRR_STR12;"]}
+{"id": "s/19", "zh": "弓兵", "bytes": 4, "kind": "label", "budget": 40, "macro": "ATRR_STR13", "usage": ["strcnt.c:23: const U8 ATRR_STR13[]=\"弓兵\";", "showface.c:652: idx = ATRR_STR13;"]}
+{"id": "s/20", "zh": "水兵", "bytes": 4, "kind": "label", "budget": 40, "macro": "ATRR_STR14", "usage": ["strcnt.c:24: const U8 ATRR_STR14[]=\"水兵\";", "showface.c:655: idx = ATRR_STR14;"]}
+{"id": "s/21", "zh": "极兵", "bytes": 4, "kind": "label", "budget": 40, "macro": "ATRR_STR15", "usage": ["strcnt.c:25: const U8 ATRR_STR15[]=\"极兵\";", "showface.c:658: idx = ATRR_STR15;"]}
+{"id": "s/22", "zh": "玄兵", "bytes": 4, "kind": "label", "budget": 40, "macro": "ATRR_STR16", "usage": ["strcnt.c:26: const U8 ATRR_STR16[]=\"玄兵\";", "showface.c:661: idx = ATRR_STR16;"]}
+{"id": "s/23", "zh": " 姓  名 ", "bytes": 8, "kind": "label", "budget": 58, "macro": "ATRR_STR17", "usage": ["strcnt.c:28: const U8 ATRR_STR17[]=\" 姓  名 \";", "showface.c:711: ResLoadToMem(STRING_CONST,ATRR_STR17,str);"]}
+{"id": "s/24", "zh": " 归  属 ", "bytes": 8, "kind": "label", "budget": 64, "macro": "ATRR_STR18", "usage": ["strcnt.c:29: const U8 ATRR_STR18[]=\" 归  属 \";", "showface.c:736: if (str[0] == 0) ResLoadToMem(STRING_CONST,ATRR_STR18 + i,str);"]}
+{"id": "s/25", "zh": " 所在城市 ", "bytes": 10, "kind": "label", "budget": 52, "macro": "ATRR_STR19", "usage": ["strcnt.c:30: const U8 ATRR_STR19[]=\" 所在城市 \";"]}
+{"id": "s/26", "zh": "等级", "bytes": 4, "kind": "label", "budget": 28, "macro": "ATRR_STR20", "usage": ["strcnt.c:31: const U8 ATRR_STR20[]=\"等级\";"]}
+{"id": "s/27", "zh": "武力", "bytes": 4, "kind": "label", "budget": 22, "macro": "ATRR_STR21", "usage": ["strcnt.c:32: const U8 ATRR_STR21[]=\"武力\";"]}
+{"id": "s/28", "zh": "智力", "bytes": 4, "kind": "label", "budget": 22, "macro": "ATRR_STR22", "usage": ["strcnt.c:33: const U8 ATRR_STR22[]=\"智力\";"]}
+{"id": "s/29", "zh": "忠诚", "bytes": 4, "kind": "label", "budget": 34, "macro": "ATRR_STR23", "usage": ["strcnt.c:34: const U8 ATRR_STR23[]=\"忠诚\";"]}
+{"id": "s/30", "zh": "经验", "bytes": 4, "kind": "label", "budget": 22, "macro": "ATRR_STR24", "usage": ["strcnt.c:35: const U8 ATRR_STR24[]=\"经验\";"]}
+{"id": "s/31", "zh": "体力", "bytes": 4, "kind": "label", "budget": 34, "macro": "ATRR_STR25", "usage": ["strcnt.c:36: const U8 ATRR_STR25[]=\"体力\";"]}
+{"id": "s/32", "zh": "兵种", "bytes": 4, "kind": "label", "budget": 40, "macro": "ATRR_STR26", "usage": ["strcnt.c:37: const U8 ATRR_STR26[]=\"兵种\";"]}
+{"id": "s/33", "zh": "兵力", "bytes": 4, "kind": "label", "budget": 28, "macro": "ATRR_STR27", "usage": ["strcnt.c:38: const U8 ATRR_STR27[]=\"兵力\";"]}
+{"id": "s/34", "zh": "年龄", "bytes": 4, "kind": "label", "budget": 22, "macro": "ATRR_STR28", "usage": ["strcnt.c:39: const U8 ATRR_STR28[]=\"年龄\";"]}
+{"id": "s/35", "zh": "  道具一  ", "bytes": 10, "kind": "label", "budget": 58, "macro": "ATRR_GOODS1", "usage": ["strcnt.c:40: const U8 ATRR_GOODS1[]=\"  道具一  \";"]}
+{"id": "s/36", "zh": "  道具二  ", "bytes": 10, "kind": "label", "budget": 58, "macro": "ATRR_GOODS2", "usage": ["strcnt.c:41: const U8 ATRR_GOODS2[]=\"  道具二  \";"]}
+{"id": "s/37#0", "zh": "内政", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_MAINSTR", "usage": ["strcnt.c:43: const U8 MENU_MAINSTR[]=\"内政外交军备状况\";", "citycmdb.c:94: ResLoadToMem(STRING_CONST,MENU_MAINSTR,mstr);"]}
+{"id": "s/37#1", "zh": "外交", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_MAINSTR", "usage": ["strcnt.c:43: const U8 MENU_MAINSTR[]=\"内政外交军备状况\";", "citycmdb.c:94: ResLoadToMem(STRING_CONST,MENU_MAINSTR,mstr);"]}
+{"id": "s/37#2", "zh": "军备", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_MAINSTR", "usage": ["strcnt.c:43: const U8 MENU_MAINSTR[]=\"内政外交军备状况\";", "citycmdb.c:94: ResLoadToMem(STRING_CONST,MENU_MAINSTR,mstr);"]}
+{"id": "s/37#3", "zh": "状况", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_MAINSTR", "usage": ["strcnt.c:43: const U8 MENU_MAINSTR[]=\"内政外交军备状况\";", "citycmdb.c:94: ResLoadToMem(STRING_CONST,MENU_MAINSTR,mstr);"]}
+{"id": "s/38#0", "zh": "开垦", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#1", "zh": "招商", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#2", "zh": "搜寻", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#3", "zh": "治理", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#4", "zh": "出巡", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#5", "zh": "招降", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#6", "zh": "处斩", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#7", "zh": "流放", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#8", "zh": "赏赐", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#9", "zh": "没收", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#10", "zh": "交易", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#11", "zh": "宴请", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#12", "zh": "输送", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/38#13", "zh": "移动", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_INTERIORSTR", "usage": ["strcnt.c:44: const U8 MENU_INTERIORSTR[]=\"开垦招商搜寻治理出巡招降处斩流放赏赐没收交易宴请输送移动\";", "citycmdb.c:126: ResLoadToMem(STRING_CONST,MENU_INTERIORSTR,mstr);"]}
+{"id": "s/39#0", "zh": "离间", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_DIPLOMATISMSTR", "usage": ["strcnt.c:45: const U8 MENU_DIPLOMATISMSTR[]=\"离间招揽策反反间劝降\";", "citycmdb.c:159: ResLoadToMem(STRING_CONST,MENU_DIPLOMATISMSTR,mstr);"]}
+{"id": "s/39#1", "zh": "招揽", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_DIPLOMATISMSTR", "usage": ["strcnt.c:45: const U8 MENU_DIPLOMATISMSTR[]=\"离间招揽策反反间劝降\";", "citycmdb.c:159: ResLoadToMem(STRING_CONST,MENU_DIPLOMATISMSTR,mstr);"]}
+{"id": "s/39#2", "zh": "策反", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_DIPLOMATISMSTR", "usage": ["strcnt.c:45: const U8 MENU_DIPLOMATISMSTR[]=\"离间招揽策反反间劝降\";", "citycmdb.c:159: ResLoadToMem(STRING_CONST,MENU_DIPLOMATISMSTR,mstr);"]}
+{"id": "s/39#3", "zh": "反间", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_DIPLOMATISMSTR", "usage": ["strcnt.c:45: const U8 MENU_DIPLOMATISMSTR[]=\"离间招揽策反反间劝降\";", "citycmdb.c:159: ResLoadToMem(STRING_CONST,MENU_DIPLOMATISMSTR,mstr);"]}
+{"id": "s/39#4", "zh": "劝降", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_DIPLOMATISMSTR", "usage": ["strcnt.c:45: const U8 MENU_DIPLOMATISMSTR[]=\"离间招揽策反反间劝降\";", "citycmdb.c:159: ResLoadToMem(STRING_CONST,MENU_DIPLOMATISMSTR,mstr);"]}
+{"id": "s/40#0", "zh": "侦察", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_ARMAMENTSTR", "usage": ["strcnt.c:46: const U8 MENU_ARMAMENTSTR[]=\"侦察征兵分配掠夺出征\";", "citycmdb.c:191: ResLoadToMem(STRING_CONST,MENU_ARMAMENTSTR,mstr);"]}
+{"id": "s/40#1", "zh": "征兵", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_ARMAMENTSTR", "usage": ["strcnt.c:46: const U8 MENU_ARMAMENTSTR[]=\"侦察征兵分配掠夺出征\";", "citycmdb.c:191: ResLoadToMem(STRING_CONST,MENU_ARMAMENTSTR,mstr);"]}
+{"id": "s/40#2", "zh": "分配", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_ARMAMENTSTR", "usage": ["strcnt.c:46: const U8 MENU_ARMAMENTSTR[]=\"侦察征兵分配掠夺出征\";", "citycmdb.c:191: ResLoadToMem(STRING_CONST,MENU_ARMAMENTSTR,mstr);"]}
+{"id": "s/40#3", "zh": "掠夺", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_ARMAMENTSTR", "usage": ["strcnt.c:46: const U8 MENU_ARMAMENTSTR[]=\"侦察征兵分配掠夺出征\";", "citycmdb.c:191: ResLoadToMem(STRING_CONST,MENU_ARMAMENTSTR,mstr);"]}
+{"id": "s/40#4", "zh": "出征", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_ARMAMENTSTR", "usage": ["strcnt.c:46: const U8 MENU_ARMAMENTSTR[]=\"侦察征兵分配掠夺出征\";", "citycmdb.c:191: ResLoadToMem(STRING_CONST,MENU_ARMAMENTSTR,mstr);"]}
+{"id": "s/41", "zh": "  粮食操作", "bytes": 10, "kind": "label", "budget": 60, "macro": "ATRR_STR60", "usage": ["strcnt.c:48: const U8 ATRR_STR60[]=\"  粮食操作\";", "cityedit.c:1324: ResLoadToMem(STRING_CONST,ATRR_STR60,str);"]}
+{"id": "s/42", "zh": "  金钱操作", "bytes": 10, "kind": "label", "budget": 60, "macro": "ATRR_STR61", "usage": ["strcnt.c:49: const U8 ATRR_STR61[]=\"  金钱操作\";", "cityedit.c:1348: ResLoadToMem(STRING_CONST,ATRR_STR61,str);"]}
+{"id": "s/43", "zh": "  士兵操作", "bytes": 10, "kind": "label", "budget": 60, "macro": "ATRR_STR62", "usage": ["strcnt.c:50: const U8 ATRR_STR62[]=\"  士兵操作\";", "cityedit.c:1372: ResLoadToMem(STRING_CONST,ATRR_STR62,str);"]}
+{"id": "s/44", "zh": "操作值:", "bytes": 7, "kind": "label", "budget": 42, "macro": "ATRR_STR63", "usage": ["strcnt.c:51: const U8 ATRR_STR63[]=\"操作值:\";", "tactic.c:1198: ResLoadToMem(STRING_CONST,ATRR_STR63,str);"]}
+{"id": "s/45", "zh": "最大值:", "bytes": 7, "kind": "label", "budget": 42, "macro": "ATRR_STR64", "usage": ["strcnt.c:52: const U8 ATRR_STR64[]=\"最大值:\";", "tactic.c:1200: ResLoadToMem(STRING_CONST,ATRR_STR64,str);"]}
+{"id": "s/46#0", "zh": "买入", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_TSTR", "usage": ["citycmdc.c:103: ResLoadToMem(STRING_CONST,MENU_TSTR,mstr);", "strcnt.c:54: const U8 MENU_TSTR[]=\"买入卖出\";"]}
+{"id": "s/46#1", "zh": "卖出", "bytes": 4, "kind": "menu", "budget": 46, "macro": "MENU_TSTR", "usage": ["citycmdc.c:103: ResLoadToMem(STRING_CONST,MENU_TSTR,mstr);", "strcnt.c:54: const U8 MENU_TSTR[]=\"买入卖出\";"]}
+{"id": "s/47", "zh": "在野", "bytes": 4, "kind": "label", "budget": 64, "macro": "ATRR_STR67", "usage": ["strcnt.c:56: const U8 ATRR_STR67[]=\"在野\";", "showface.c:605: ResLoadToMem(STRING_CONST,ATRR_STR67,str);"]}
+{"id": "s/48", "zh": "君主", "bytes": 4, "kind": "label", "budget": 64, "macro": "ATRR_STR68", "usage": ["strcnt.c:57: const U8 ATRR_STR68[]=\"君主\";", "showface.c:597: ResLoadToMem(STRING_CONST,ATRR_STR68,str);"]}
+{"id": "s/49", "zh": "俘虏", "bytes": 4, "kind": "label", "budget": 64, "macro": "ATRR_STR69", "usage": ["strcnt.c:58: const U8 ATRR_STR69[]=\"俘虏\";", "showface.c:593: ResLoadToMem(STRING_CONST,ATRR_STR69,str);"]}
+{"id": "s/50", "zh": "无", "bytes": 2, "kind": "label", "budget": 12, "macro": "ATRR_STR70", "usage": ["strcnt.c:59: const U8 ATRR_STR70[]=\"无\";", "showface.c:171: idx = ATRR_STR70;", "showface.c:1036: ResLoadToMem(STRING_CONST,ATRR_STR70,&str[5]);", "showface.c:1047: ResLoadToMem(STRING_CONST,ATRR_STR70,&str[5]);"]}
+{"id": "s/51", "zh": "--", "bytes": 2, "kind": "label", "budget": 12, "macro": "ATRR_STR71", "usage": ["strcnt.c:60: const U8 ATRR_STR71[]=\"--\";", "showface.c:623: ResLoadToMem(STRING_CONST,ATRR_STR71,str);", "showface.c:631: ResLoadToMem(STRING_CONST,ATRR_STR71,str);"]}
+{"id": "s/52", "zh": "已达农业上限", "bytes": 12, "kind": "label", "budget": 72, "macro": "NOTE_STR1", "usage": ["strcnt.c:62: const U8 NOTE_STR1[]=\"已达农业上限\";", "citycmdb.c:390: ShowConstStrMsg(NOTE_STR1);"]}
+{"id": "s/53", "zh": "已达商业上限", "bytes": 12, "kind": "label", "budget": 72, "macro": "NOTE_STR2", "usage": ["strcnt.c:63: const U8 NOTE_STR2[]=\"已达商业上限\";", "citycmdb.c:485: ShowConstStrMsg(NOTE_STR2);"]}
+{"id": "s/54", "zh": "敌方城池", "bytes": 8, "kind": "label", "budget": 48, "macro": "NOTE_STR3", "usage": ["citycmdc.c:357: ShowConstStrMsg(NOTE_STR3);", "citycmdc.c:455: ShowConstStrMsg(NOTE_STR3);", "strcnt.c:64: const U8 NOTE_STR3[]=\"敌方城池\";", "tactic.c:87: ShowConstStrMsg(NOTE_STR3);"]}
+{"id": "s/55", "zh": "无法到达", "bytes": 8, "kind": "label", "budget": 48, "macro": "NOTE_STR4", "usage": ["citycmdc.c:391: ShowConstStrMsg(NOTE_STR4);", "citycmdc.c:468: ShowConstStrMsg(NOTE_STR4);", "citycmdd.c:161: ShowConstStrMsg(NOTE_STR4);", "strcnt.c:65: const U8 NOTE_STR4[]=\"无法到达\";"]}
+{"id": "s/56", "zh": "无人占领城池", "bytes": 12, "kind": "label", "budget": 72, "macro": "NOTE_STR5", "usage": ["citycmdc.c:351: ShowConstStrMsg(NOTE_STR5);", "citycmdc.c:450: ShowConstStrMsg(NOTE_STR5);", "strcnt.c:66: const U8 NOTE_STR5[]=\"无人占领城池\";", "tactic.c:91: ShowConstStrMsg(NOTE_STR5);"]}
+{"id": "s/57", "zh": "无兵可分配", "bytes": 10, "kind": "label", "budget": 60, "macro": "NOTE_STR6", "usage": ["citycmdc.c:1120: ShowConstStrMsg(NOTE_STR6);", "strcnt.c:67: const U8 NOTE_STR6[]=\"无兵可分配\";"]}
+{"id": "s/58", "zh": "我方城池", "bytes": 8, "kind": "label", "budget": 48, "macro": "NOTE_STR7", "usage": ["citycmdc.c:935: ShowConstStrMsg(NOTE_STR7);", "citycmdd.c:131: ShowConstStrMsg(NOTE_STR7);", "strcnt.c:68: const U8 NOTE_STR7[]=\"我方城池\";"]}
+{"id": "s/59", "zh": "无足够金钱", "bytes": 10, "kind": "label", "budget": 60, "macro": "NOTE_STR8", "usage": ["citycmdc.c:218: ShowConstStrMsg(NOTE_STR8);", "citycmdc.c:536: ShowConstStrMsg(NOTE_STR8);", "citycmdc.c:615: ShowConstStrMsg(NOTE_STR8);", "citycmdc.c:691: ShowConstStrMsg(NOTE_STR8);"]}
+{"id": "s/60", "zh": "该将体力不足", "bytes": 12, "kind": "label", "budget": 72, "macro": "NOTE_STR9", "usage": ["citycmdc.c:85: ShowConstStrMsg(NOTE_STR9);", "citycmdc.c:301: ShowConstStrMsg(NOTE_STR9);", "citycmdc.c:487: ShowConstStrMsg(NOTE_STR9);", "citycmdc.c:555: ShowConstStrMsg(NOTE_STR9);"]}
+{"id": "s/61", "zh": "防灾已达上限", "bytes": 12, "kind": "label", "budget": 72, "macro": "NOTE_STR10", "usage": ["strcnt.c:71: const U8 NOTE_STR10[]=\"防灾已达上限\";", "citycmdb.c:727: ShowConstStrMsg(NOTE_STR10);"]}
+{"id": "s/62", "zh": "公元", "bytes": 4, "kind": "label", "budget": 24, "macro": "DATE_TIME_STR1", "usage": ["strcnt.c:73: const U8 DATE_TIME_STR1[]=\"公元\";"]}
+{"id": "s/63", "zh": "年", "bytes": 2, "kind": "label", "budget": 12, "macro": "DATE_TIME_STR2", "usage": ["strcnt.c:74: const U8 DATE_TIME_STR2[]=\"年\";", "cityedit.c:1265: ResLoadToMem(STRING_CONST,DATE_TIME_STR2,astr);"]}
+{"id": "s/64", "zh": "月  ", "bytes": 4, "kind": "label", "budget": 24, "macro": "DATE_TIME_STR3", "usage": ["strcnt.c:75: const U8 DATE_TIME_STR3[]=\"月  \";", "cityedit.c:1269: ResLoadToMem(STRING_CONST,DATE_TIME_STR3,astr);"]}
+{"id": "s/65", "zh": "  名  称  ", "bytes": 10, "kind": "label", "budget": 58, "macro": "GOODS_ATRR_STR0", "usage": ["strcnt.c:77: const U8 GOODS_ATRR_STR0[]=\"  名  称  \";", "showface.c:216: ResLoadToMem(STRING_CONST,GOODS_ATRR_STR0,str);"]}
+{"id": "s/66", "zh": "用法", "bytes": 4, "kind": "label", "budget": 22, "macro": "GOODS_ATRR_STR1", "usage": ["strcnt.c:78: const U8 GOODS_ATRR_STR1[]=\"用法\";", "showface.c:238: ResLoadToMem(STRING_CONST,GOODS_ATRR_STR1 + i,str);"]}
+{"id": "s/67", "zh": "武力\\xa2\\xfd", "bytes": 6, "kind": "label", "budget": 34, "macro": "GOODS_ATRR_STR2", "usage": ["strcnt.c:79: const U8 GOODS_ATRR_STR2[]=\"武力�\";"]}
+{"id": "s/68", "zh": "智力\\xa2\\xfd", "bytes": 6, "kind": "label", "budget": 34, "macro": "GOODS_ATRR_STR3", "usage": ["strcnt.c:80: const U8 GOODS_ATRR_STR3[]=\"智力�\";"]}
+{"id": "s/69", "zh": "移动\\xa2\\xfd", "bytes": 6, "kind": "label", "budget": 34, "macro": "GOODS_ATRR_STR4", "usage": ["strcnt.c:81: const U8 GOODS_ATRR_STR4[]=\"移动�\";"]}
+{"id": "s/70", "zh": "兵种\\xa2\\xfe", "bytes": 6, "kind": "label", "budget": 34, "macro": "GOODS_ATRR_STR5", "usage": ["strcnt.c:82: const U8 GOODS_ATRR_STR5[]=\"兵种�\";"]}
+{"id": "s/71", "zh": "装备", "bytes": 4, "kind": "label", "budget": 22, "macro": "GOODS_USEFLAG0", "usage": ["strcnt.c:83: const U8 GOODS_USEFLAG0[]=\"装备\";", "showface.c:150: idx = GOODS_USEFLAG0;"]}
+{"id": "s/72", "zh": "使用", "bytes": 4, "kind": "label", "budget": 22, "macro": "GOODS_USEFLAG1", "usage": ["strcnt.c:84: const U8 GOODS_USEFLAG1[]=\"使用\";", "showface.c:153: idx = GOODS_USEFLAG1;"]}
+{"id": "s/73", "zh": "水兵", "bytes": 4, "kind": "label", "budget": 34, "macro": "GOODS_ARM1", "usage": ["strcnt.c:85: const U8 GOODS_ARM1[]=\"水兵\";", "showface.c:174: idx = GOODS_ARM1;"]}
+{"id": "s/74", "zh": "玄兵", "bytes": 4, "kind": "label", "budget": 34, "macro": "GOODS_ARM2", "usage": ["strcnt.c:86: const U8 GOODS_ARM2[]=\"玄兵\";", "showface.c:177: idx = GOODS_ARM2;"]}
+{"id": "s/75", "zh": "极兵", "bytes": 4, "kind": "label", "budget": 34, "macro": "GOODS_ARM3", "usage": ["strcnt.c:87: const U8 GOODS_ARM3[]=\"极兵\";", "showface.c:180: idx = GOODS_ARM3;"]}
+{"id": "s/76", "zh": " 姓  名 命令目标时间", "bytes": 20, "kind": "label", "budget": 120, "macro": "ALLP_O_STR", "usage": ["strcnt.c:89: const U8 ALLP_O_STR[]=\" 姓  名 命令目标时间\";"]}
+{"id": "s/77", "zh": "         --  --  -- ", "bytes": 20, "kind": "label", "budget": 120, "macro": "NONE_O_STR", "usage": ["strcnt.c:90: const U8 NONE_O_STR[]=\"         --  --  -- \";"]}
+{"id": "s/78", "zh": "君主 ", "bytes": 5, "kind": "label", "budget": 30, "macro": "STR_KING", "usage": ["citycmdd.c:804: ResLoadToMem(STRING_CONST,STR_KING,str);", "strcnt.c:92: const U8 STR_KING[]=\"君主 \";"]}
+{"id": "s/79", "zh": " 遭劫", "bytes": 5, "kind": "label", "budget": 30, "macro": "STR_DEAD", "usage": ["citycmdd.c:807: ResLoadToMem(STRING_CONST,STR_DEAD,sbuf);", "strcnt.c:93: const U8 STR_DEAD[]=\" 遭劫\";"]}
+{"id": "s/80", "zh": "请拥立新君", "bytes": 10, "kind": "label", "budget": 60, "macro": "STR_MAKENEWKING", "usage": ["citycmdd.c:743: ShowConstStrMsg(STR_MAKENEWKING);", "strcnt.c:94: const U8 STR_MAKENEWKING[]=\"请拥立新君\";"]}
+{"id": "s/81", "zh": " 成为君主", "bytes": 9, "kind": "label", "budget": 54, "macro": "STR_BEKING", "usage": ["citycmdd.c:830: ResLoadToMem(STRING_CONST,STR_BEKING,sbuf);", "strcnt.c:95: const U8 STR_BEKING[]=\" 成为君主\";"]}
+{"id": "s/82", "zh": " 被策反成为君主", "bytes": 15, "kind": "label", "budget": 90, "macro": "STR_BEKINGED", "usage": ["citycmdd.c:853: ResLoadToMem(STRING_CONST,STR_BEKINGED,sbuf);", "strcnt.c:96: const U8 STR_BEKINGED[]=\" 被策反成为君主\";"]}
+{"id": "s/83", "zh": " 势力灭亡", "bytes": 9, "kind": "label", "budget": 54, "macro": "STR_OVER", "usage": ["citycmdd.c:876: ResLoadToMem(STRING_CONST,STR_OVER,sbuf);", "strcnt.c:97: const U8 STR_OVER[]=\" 势力灭亡\";"]}
+{"id": "s/84", "zh": "城中无空闲武将", "bytes": 14, "kind": "label", "budget": 84, "macro": "STR_NOPERSON", "usage": ["citycmdc.c:75: ShowConstStrMsg(STR_NOPERSON);", "citycmdc.c:209: ShowConstStrMsg(STR_NOPERSON);", "citycmdc.c:226: /*ShowConstStrMsg(STR_NOPERSON);*/", "citycmdc.c:291: ShowConstStrMsg(STR_NOPERSON);"]}
+{"id": "s/85", "zh": "该将无道具", "bytes": 10, "kind": "label", "budget": 60, "macro": "STR_NOGOODS", "usage": ["strcnt.c:99: const U8 STR_NOGOODS[]=\"该将无道具\";", "citycmde.c:128: ShowConstStrMsg(STR_NOGOODS);"]}
+{"id": "s/86", "zh": "城中无道具", "bytes": 10, "kind": "label", "budget": 60, "macro": "STR_CNOGOODS", "usage": ["strcnt.c:100: const U8 STR_CNOGOODS[]=\"城中无道具\";", "citycmdb.c:1193: ShowConstStrMsg(STR_CNOGOODS);"]}
+{"id": "s/87", "zh": "该将道具已满", "bytes": 12, "kind": "label", "budget": 72, "macro": "STR_FULLGOODS", "usage": ["strcnt.c:101: const U8 STR_FULLGOODS[]=\"该将道具已满\";", "citycmdb.c:1154: ShowConstStrMsg(STR_FULLGOODS);"]}
+{"id": "s/88", "zh": "城中无俘虏", "bytes": 10, "kind": "label", "budget": 60, "macro": "STR_NOCAPTIVES", "usage": ["strcnt.c:102: const U8 STR_NOCAPTIVES[]=\"城中无俘虏\";", "citycmdb.c:921: ShowConstStrMsg(STR_NOCAPTIVES);", "citycmdb.c:1006: ShowConstStrMsg(STR_NOCAPTIVES);"]}
+{"id": "s/89", "zh": "我军全军覆没", "bytes": 12, "kind": "label", "budget": 72, "macro": "STR_GAMELOST", "usage": ["strcnt.c:103: const U8 STR_GAMELOST[]=\"我军全军覆没\";", "tactic.c:714: ShowConstStrMsg(STR_GAMELOST);"]}
+{"id": "s/90", "zh": "我军大获全胜", "bytes": 12, "kind": "label", "budget": 72, "macro": "STR_GAMEWON", "usage": ["strcnt.c:104: const U8 STR_GAMEWON[]=\"我军大获全胜\";", "tactic.c:720: ShowConstStrMsg(STR_GAMEWON);"]}
+{"id": "s/91", "zh": " 战斗胜利", "bytes": 9, "kind": "label", "budget": 54, "macro": "STR_WON", "usage": ["strcnt.c:105: const U8 STR_WON[]=\" 战斗胜利\";", "citycmde.c:294: ResLoadToMem(STRING_CONST,STR_WON,buf);"]}
+{"id": "s/92", "zh": " 战斗失败", "bytes": 9, "kind": "label", "budget": 54, "macro": "STR_LOST", "usage": ["strcnt.c:106: const U8 STR_LOST[]=\" 战斗失败\";", "citycmde.c:321: ResLoadToMem(STRING_CONST,STR_LOST,buf);"]}
+{"id": "s/93", "zh": "选择目标", "bytes": 8, "kind": "label", "budget": 48, "macro": "STR_OBJ", "usage": ["citycmdc.c:337: ResLoadToMem(STRING_CONST,STR_OBJ,str);", "citycmdc.c:438: ResLoadToMem(STRING_CONST,STR_OBJ,str);", "citycmdc.c:921: ResLoadToMem(STRING_CONST,STR_OBJ,str);", "citycmdd.c:114: ResLoadToMem(STRING_CONST,STR_OBJ,str);"]}
+{"id": "s/94", "zh": "部队已出发", "bytes": 10, "kind": "label", "budget": 60, "macro": "STR_ARMOUT", "usage": ["citycmdd.c:139: ShowConstStrMsg(STR_ARMOUT);", "strcnt.c:108: const U8 STR_ARMOUT[]=\"部队已出发\";"]}
+{"id": "s/95", "zh": " 我愿加入，为主公效力！", "bytes": 23, "kind": "speech", "box": [90, 3], "macro": "STR_WONP", "usage": ["citycmdd.c:897: ResLoadToMem(STRING_CONST,STR_WONP,str);", "strcnt.c:109: const U8 STR_WONP[]=\" 我愿加入，为主公效力！\";"]}
+{"id": "s/96", "zh": "无可出征武将", "bytes": 12, "kind": "label", "budget": 72, "macro": "STR_NOFIGHTER", "usage": ["citycmdd.c:74: ShowConstStrMsg(STR_NOFIGHTER);", "strcnt.c:110: const U8 STR_NOFIGHTER[]=\"无可出征武将\";"]}
+{"id": "s/97", "zh": "军队进攻", "bytes": 8, "kind": "label", "budget": 48, "macro": "STR_ATTACKC", "usage": ["strcnt.c:111: const U8 STR_ATTACKC[]=\"军队进攻\";", "infdeal.c:598: ResLoadToMem(STRING_CONST,STR_ATTACKC,buf);", "citycmde.c:228: ResLoadToMem(STRING_CONST,STR_ATTACKC,buf);"]}
+{"id": "s/98", "zh": "我方", "bytes": 4, "kind": "label", "budget": 24, "macro": "STR_OURS", "usage": ["strcnt.c:112: const U8 STR_OURS[]=\"我方\";", "infdeal.c:592: ResLoadToMem(STRING_CONST,STR_OURS,str);", "citycmde.c:222: ResLoadToMem(STRING_CONST,STR_OURS,str);", "citycmde.c:288: ResLoadToMem(STRING_CONST,STR_OURS,str);"]}
+{"id": "s/99", "zh": "城中找到 ", "bytes": 9, "kind": "label", "budget": 54, "macro": "STR_GETGOODS", "usage": ["strcnt.c:113: const U8 STR_GETGOODS[]=\"城中找到 \";", "citycmd.c:205: ResLoadToMem(STRING_CONST,STR_GETGOODS,str);", "citycmd.c:242: ResLoadToMem(STRING_CONST,STR_GETGOODS,str);"]}
+{"id": "s/100", "zh": "听说城中有位贤者，可惜臣未能访到。", "bytes": 34, "kind": "speech", "box": [90, 3], "macro": "STR_HEARPERSON", "usage": ["strcnt.c:114: const U8 STR_HEARPERSON[]=\"听说城中有位贤者，可惜臣未能访到。\";", "citycmd.c:199: ResLoadToMem(STRING_CONST,STR_HEARPERSON,str);"]}
+{"id": "s/101", "zh": "什么也没找到……", "bytes": 16, "kind": "speech", "box": [90, 3], "macro": "STR_GETNOTHING", "usage": ["strcnt.c:115: const U8 STR_GETNOTHING[]=\"什么也没找到……\";", "citycmd.c:261: ResLoadToMem(STRING_CONST,STR_GETNOTHING,str);", "citycmd.c:290: ResLoadToMem(STRING_CONST,STR_GETNOTHING,str);"]}
+{"id": "s/102", "zh": "城中找到金钱 ", "bytes": 13, "kind": "label", "budget": 78, "macro": "STR_GETSOME1", "usage": ["strcnt.c:116: const U8 STR_GETSOME1[]=\"城中找到金钱 \";", "citycmd.c:294: ResLoadToMem(STRING_CONST,STR_GETSOME1 - 2 + pss,str);"]}
+{"id": "s/103", "zh": "城中找到粮食 ", "bytes": 13, "kind": "label", "budget": 78, "macro": "STR_GETSOME2", "usage": ["strcnt.c:117: const U8 STR_GETSOME2[]=\"城中找到粮食 \";"]}
+{"id": "s/104", "zh": "军 vs ", "bytes": 6, "kind": "label", "budget": 36, "macro": "STR_FIGHT_NOTE1", "usage": ["strcnt.c:118: const U8 STR_FIGHT_NOTE1[]=\"军 vs \";", "citycmde.c:257: ResLoadToMem(STRING_CONST,STR_FIGHT_NOTE1,buf);"]}
+{"id": "s/105", "zh": "军", "bytes": 2, "kind": "label", "budget": 12, "macro": "STR_FIGHT_NOTE2", "usage": ["strcnt.c:119: const U8 STR_FIGHT_NOTE2[]=\"军\";", "citycmde.c:261: ResLoadToMem(STRING_CONST,STR_FIGHT_NOTE2,buf);"]}
+{"id": "s/106", "zh": " 成为俘虏", "bytes": 9, "kind": "label", "budget": 54, "macro": "STR_CAV_NOTE1", "usage": ["citycmdd.c:498: ResLoadToMem(STRING_CONST,STR_CAV_NOTE1 + cavps - 1,astr);", "strcnt.c:120: const U8 STR_CAV_NOTE1[]=\" 成为俘虏\";"]}
+{"id": "s/107", "zh": " 等成为俘虏", "bytes": 11, "kind": "label", "budget": 66, "macro": "STR_CAV_NOTE2", "usage": ["strcnt.c:121: const U8 STR_CAV_NOTE2[]=\" 等成为俘虏\";"]}
+{"id": "s/108", "zh": " 战死", "bytes": 5, "kind": "label", "budget": 30, "macro": "STR_PERSONOVER", "usage": ["citycmdd.c:596: ResLoadToMem(STRING_CONST,STR_PERSONOVER,astr);", "strcnt.c:122: const U8 STR_PERSONOVER[]=\" 战死\";"]}
+{"id": "s/109", "zh": "该将条件无法使用", "bytes": 16, "kind": "label", "budget": 96, "macro": "STR_CANNOTUSE", "usage": ["strcnt.c:123: const U8 STR_CANNOTUSE[]=\"该将条件无法使用\";", "citycmdb.c:1166: ShowConstStrMsg(STR_CANNOTUSE);"]}
+{"id": "s/110", "zh": " 势力归降 ", "bytes": 10, "kind": "label", "budget": 60, "macro": "STR_INDUCENOTE", "usage": ["strcnt.c:124: const U8 STR_INDUCENOTE[]=\" 势力归降 \";", "citycmd.c:987: ResLoadToMem(STRING_CONST,STR_INDUCENOTE,astr);"]}
+{"id": "s/111", "zh": "  出现  ", "bytes": 8, "kind": "label", "budget": 48, "macro": "STR_RP1", "usage": ["strcnt.c:126: const U8 STR_RP1[]=\"  出现  \";", "infdeal.c:888: ResLoadToMem(STRING_CONST,STR_RP1,astr);"]}
+{"id": "s/112", "zh": "，须尽快治理。", "bytes": 14, "kind": "label", "budget": 84, "macro": "STR_RP2", "usage": ["strcnt.c:127: const U8 STR_RP2[]=\"，须尽快治理。\";", "infdeal.c:892: ResLoadToMem(STRING_CONST,STR_RP2,astr);"]}
+{"id": "s/113", "zh": " 农业开发度变为 ", "bytes": 16, "kind": "label", "budget": 96, "macro": "STR_RP3", "usage": ["strcnt.c:128: const U8 STR_RP3[]=\" 农业开发度变为 \";", "citycmdb.c:565: ResLoadToMem(STRING_CONST,STR_RP3,str);"]}
+{"id": "s/114", "zh": " (+", "bytes": 3, "kind": "label", "budget": 18, "macro": "STR_RP4", "usage": ["strcnt.c:129: const U8 STR_RP4[]=\" (+\";", "citycmdb.c:582: ResLoadToMem(STRING_CONST,STR_RP4,astr);"]}
+{"id": "s/115", "zh": ")。", "bytes": 3, "kind": "label", "budget": 18, "macro": "STR_RP5", "usage": ["strcnt.c:130: const U8 STR_RP5[]=\")。\";", "citycmdb.c:586: ResLoadToMem(STRING_CONST,STR_RP5,astr);"]}
+{"id": "s/116", "zh": " 商业开发度变为 ", "bytes": 16, "kind": "label", "budget": 96, "macro": "STR_RP6", "usage": ["strcnt.c:131: const U8 STR_RP6[]=\" 商业开发度变为 \";", "citycmdb.c:569: ResLoadToMem(STRING_CONST,STR_RP6,str);"]}
+{"id": "s/117", "zh": " 民忠变为 ", "bytes": 10, "kind": "label", "budget": 60, "macro": "STR_RP7", "usage": ["strcnt.c:132: const U8 STR_RP7[]=\" 民忠变为 \";", "citycmdb.c:573: ResLoadToMem(STRING_CONST,STR_RP7,str);"]}
+{"id": "s/118", "zh": " 城市状态正常，防灾变为 ", "bytes": 24, "kind": "msg", "box": [148, 1], "macro": "STR_RP8", "usage": ["strcnt.c:133: const U8 STR_RP8[]=\" 城市状态正常，防灾变为 \";", "citycmdb.c:577: ResLoadToMem(STRING_CONST,STR_RP8,str);"]}
+{"id": "s/119", "zh": "物资运送完毕。", "bytes": 14, "kind": "label", "budget": 84, "macro": "STR_RP9", "usage": ["strcnt.c:134: const U8 STR_RP9[]=\"物资运送完毕。\";", "citycmd.c:497: rpi = STR_RP9;"]}
+{"id": "s/120", "zh": "途中遇到山贼，所输送物质被抢劫一空！", "bytes": 36, "kind": "msg", "box": [148, 2], "macro": "STR_RP10", "usage": ["strcnt.c:135: const U8 STR_RP10[]=\"途中遇到山贼，所输送物质被抢劫一空！\";", "citycmd.c:501: rpi = STR_RP10;"]}
+{"id": "s/121#0", "zh": "策略结束", "bytes": 8, "kind": "menu", "budget": 62, "macro": "MENU_FUNCSTR", "usage": ["strcnt.c:137: const U8 MENU_FUNCSTR[]=\"策略结束存储进度结束游戏\";", "tactic.c:1101: ResLoadToMem(STRING_CONST,MENU_FUNCSTR,mstr);"]}
+{"id": "s/121#1", "zh": "存储进度", "bytes": 8, "kind": "menu", "budget": 62, "macro": "MENU_FUNCSTR", "usage": ["strcnt.c:137: const U8 MENU_FUNCSTR[]=\"策略结束存储进度结束游戏\";", "tactic.c:1101: ResLoadToMem(STRING_CONST,MENU_FUNCSTR,mstr);"]}
+{"id": "s/121#2", "zh": "结束游戏", "bytes": 8, "kind": "menu", "budget": 62, "macro": "MENU_FUNCSTR", "usage": ["strcnt.c:137: const U8 MENU_FUNCSTR[]=\"策略结束存储进度结束游戏\";", "tactic.c:1101: ResLoadToMem(STRING_CONST,MENU_FUNCSTR,mstr);"]}
+{"id": "s/122", "zh": "哼！我岂是贪生怕死之徒！", "bytes": 24, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR1", "usage": ["strcnt.c:139: const U8 P_SAY_STR1[]=\"哼！我岂是贪生怕死之徒！\";", "citycmd.c:436: ResLoadToMem(STRING_CONST,P_SAY_STR1 + (gam_rand() % 3),str);"]}
+{"id": "s/123", "zh": "你还是少费唇舌，我是不会背信弃义的！", "bytes": 36, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR2", "usage": ["strcnt.c:140: const U8 P_SAY_STR2[]=\"你还是少费唇舌，我是不会背信弃义的！\";"]}
+{"id": "s/124", "zh": "就凭你要我归降，笑话！", "bytes": 22, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR3", "usage": ["strcnt.c:141: const U8 P_SAY_STR3[]=\"就凭你要我归降，笑话！\";"]}
+{"id": "s/125", "zh": "哈……，来吧，十八年后又是一条好汉！", "bytes": 36, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR4", "usage": ["strcnt.c:142: const U8 P_SAY_STR4[]=\"哈……，来吧，十八年后又是一条好汉！\";", "citycmdb.c:1023: ResLoadToMem(STRING_CONST,P_SAY_STR4 + (gam_rand() % 3),str);"]}
+{"id": "s/126", "zh": "死，我岂会恐惧？", "bytes": 16, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR5", "usage": ["strcnt.c:143: const U8 P_SAY_STR5[]=\"死，我岂会恐惧？\";"]}
+{"id": "s/127", "zh": "天命吾身踏黄泉，定起万军夺阴巢！", "bytes": 32, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR6", "usage": ["strcnt.c:144: const U8 P_SAY_STR6[]=\"天命吾身踏黄泉，定起万军夺阴巢！\";"]}
+{"id": "s/128", "zh": "一片忠诚，竟遭此待遇……", "bytes": 24, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR7", "usage": ["strcnt.c:145: const U8 P_SAY_STR7[]=\"一片忠诚，竟遭此待遇……\";", "citycmde.c:110: ResLoadToMem(STRING_CONST,P_SAY_STR7 + (gam_rand() % 3),str);"]}
+{"id": "s/129", "zh": "长此以往，人心难留……", "bytes": 22, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR8", "usage": ["strcnt.c:146: const U8 P_SAY_STR8[]=\"长此以往，人心难留……\";"]}
+{"id": "s/130", "zh": "主公此举自有道理，我却无法理解……", "bytes": 34, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR9", "usage": ["strcnt.c:147: const U8 P_SAY_STR9[]=\"主公此举自有道理，我却无法理解……\";"]}
+{"id": "s/131", "zh": "我决不会辜负主公对我的期望！", "bytes": 28, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR10", "usage": ["strcnt.c:148: const U8 P_SAY_STR10[]=\"我决不会辜负主公对我的期望！\";", "citycmdb.c:1174: ResLoadToMem(STRING_CONST,P_SAY_STR10 + (gam_rand() % 3),str);"]}
+{"id": "s/132", "zh": "请期待我日后的表现！", "bytes": 20, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR11", "usage": ["strcnt.c:149: const U8 P_SAY_STR11[]=\"请期待我日后的表现！\";"]}
+{"id": "s/133", "zh": "臣定鞠躬尽瘁，以报答主公之恩！", "bytes": 30, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR12", "usage": ["strcnt.c:150: const U8 P_SAY_STR12[]=\"臣定鞠躬尽瘁，以报答主公之恩！\";"]}
+{"id": "s/134", "zh": "某愿效死忠。", "bytes": 12, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR13", "usage": ["strcnt.c:152: const U8 P_SAY_STR13[]=\"某愿效死忠。\";", "citycmd.c:212: rnd = P_SAY_STR13 + gam_rand() % 4;"]}
+{"id": "s/135", "zh": "在下不才，蒙明公不弃，愿效犬马之劳。", "bytes": 36, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR14", "usage": ["strcnt.c:153: const U8 P_SAY_STR14[]=\"在下不才，蒙明公不弃，愿效犬马之劳。\";"]}
+{"id": "s/136", "zh": "某虽不才，愿为主公效劳。", "bytes": 24, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR15", "usage": ["strcnt.c:154: const U8 P_SAY_STR15[]=\"某虽不才，愿为主公效劳。\";"]}
+{"id": "s/137", "zh": "请主公期待我的表现吧。", "bytes": 22, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR16", "usage": ["strcnt.c:155: const U8 P_SAY_STR16[]=\"请主公期待我的表现吧。\";"]}
+{"id": "s/138", "zh": "只凭你我交情，不足以讨论天下大事，请回吧。", "bytes": 42, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR17", "usage": ["strcnt.c:156: const U8 P_SAY_STR17[]=\"只凭你我交情，不足以讨论天下大事，请回吧。\";", "citycmd.c:216: rnd = P_SAY_STR17 + gam_rand() % 4;"]}
+{"id": "s/139", "zh": "什么鸡鸣狗盗之徒，也想让我为你效力？", "bytes": 36, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR18", "usage": ["strcnt.c:157: const U8 P_SAY_STR18[]=\"什么鸡鸣狗盗之徒，也想让我为你效力？\";"]}
+{"id": "s/140", "zh": "某的能力还不足以担当重任，足下另请高明吧。", "bytes": 42, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR19", "usage": ["strcnt.c:158: const U8 P_SAY_STR19[]=\"某的能力还不足以担当重任，足下另请高明吧。\";"]}
+{"id": "s/141", "zh": "比在下高明之士众多，明公何必舍良才择朽木？", "bytes": 42, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR20", "usage": ["strcnt.c:159: const U8 P_SAY_STR20[]=\"比在下高明之士众多，明公何必舍良才择朽木？\";"]}
+{"id": "s/142", "zh": "此事便交给我，有利的消息我都会带回来。", "bytes": 38, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR21", "usage": ["strcnt.c:161: const U8 P_SAY_STR21[]=\"此事便交给我，有利的消息我都会带回来。\";", "citycmdb.c:662: psay += P_SAY_STR21;"]}
+{"id": "s/143", "zh": "属下这就动身，主公就静待佳音吧。", "bytes": 32, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR22", "usage": ["strcnt.c:162: const U8 P_SAY_STR22[]=\"属下这就动身，主公就静待佳音吧。\";"]}
+{"id": "s/144", "zh": "属下会留心各种消息，以期有所得。", "bytes": 32, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR23", "usage": ["strcnt.c:163: const U8 P_SAY_STR23[]=\"属下会留心各种消息，以期有所得。\";"]}
+{"id": "s/145", "zh": "我去城中访贤，各位费心留守了。", "bytes": 30, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR24", "usage": ["strcnt.c:164: const U8 P_SAY_STR24[]=\"我去城中访贤，各位费心留守了。\";", "citycmdb.c:658: psay += P_SAY_STR24;"]}
+{"id": "s/146", "zh": "好的人才，要亲自去找才行。", "bytes": 26, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR25", "usage": ["strcnt.c:165: const U8 P_SAY_STR25[]=\"好的人才，要亲自去找才行。\";"]}
+{"id": "s/147", "zh": "为了今后大业，城中看看也非坏事。", "bytes": 32, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR26", "usage": ["strcnt.c:166: const U8 P_SAY_STR26[]=\"为了今后大业，城中看看也非坏事。\";"]}
+{"id": "s/148", "zh": "我虽不愿如此，但也是不得已。", "bytes": 28, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR27", "usage": ["strcnt.c:168: const U8 P_SAY_STR27[]=\"我虽不愿如此，但也是不得已。\";", "citycmde.c:183: ResLoadToMem(STRING_CONST,P_SAY_STR27,str);"]}
+{"id": "s/149", "zh": "掠得金钱 ", "bytes": 9, "kind": "label", "budget": 54, "macro": "P_SAY_STR28", "usage": ["strcnt.c:170: const U8 P_SAY_STR28[]=\"掠得金钱 \";", "citycmd.c:1090: ResLoadToMem(STRING_CONST,P_SAY_STR28,str);"]}
+{"id": "s/150", "zh": "；夺得粮食 ", "bytes": 11, "kind": "label", "budget": 66, "macro": "P_SAY_STR29", "usage": ["strcnt.c:171: const U8 P_SAY_STR29[]=\"；夺得粮食 \";", "citycmd.c:1093: ResLoadToMem(STRING_CONST,P_SAY_STR29,astr);"]}
+{"id": "s/151", "zh": "。", "bytes": 2, "kind": "label", "budget": 12, "macro": "P_SAY_STR30", "usage": ["strcnt.c:172: const U8 P_SAY_STR30[]=\"。\";", "citycmd.c:1097: ResLoadToMem(STRING_CONST,P_SAY_STR30,astr);"]}
+{"id": "s/152", "zh": "马上出发。", "bytes": 10, "kind": "label", "budget": 60, "macro": "P_SAY_STR31", "usage": ["citycmdc.c:376: ResLoadToMem(STRING_CONST,P_SAY_STR31,str);", "citycmdc.c:497: ResLoadToMem(STRING_CONST,P_SAY_STR31,str);", "strcnt.c:174: const U8 P_SAY_STR31[]=\"马上出发。\";"]}
+{"id": "s/153", "zh": "此事不必再说，战场上分高低！", "bytes": 28, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR32", "usage": ["strcnt.c:176: const U8 P_SAY_STR32[]=\"此事不必再说，战场上分高低！\";", "citycmd.c:978: wf = P_SAY_STR32;"]}
+{"id": "s/154", "zh": "你快回去备好兵马，我到战场上再答复你。", "bytes": 38, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR33", "usage": ["strcnt.c:177: const U8 P_SAY_STR33[]=\"你快回去备好兵马，我到战场上再答复你。\";"]}
+{"id": "s/155", "zh": "笑话，该投降的是你们吧！", "bytes": 24, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR34", "usage": ["strcnt.c:178: const U8 P_SAY_STR34[]=\"笑话，该投降的是你们吧！\";"]}
+{"id": "s/156", "zh": "大胆！竟敢小看我，滚回去喜好脖子！", "bytes": 34, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR35", "usage": ["strcnt.c:179: const U8 P_SAY_STR35[]=\"大胆！竟敢小看我，滚回去喜好脖子！\";"]}
+{"id": "s/157", "zh": "事到如今，也只好降了……", "bytes": 24, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR36", "usage": ["strcnt.c:181: const U8 P_SAY_STR36[]=\"事到如今，也只好降了……\";", "citycmd.c:974: wf = P_SAY_STR36;"]}
+{"id": "s/158", "zh": "此乃天命，请明公善待我的部属和百姓。", "bytes": 36, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR37", "usage": ["strcnt.c:182: const U8 P_SAY_STR37[]=\"此乃天命，请明公善待我的部属和百姓。\";"]}
+{"id": "s/159", "zh": "为了避免生灵涂炭，降也是无可奈何……", "bytes": 36, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR38", "usage": ["strcnt.c:183: const U8 P_SAY_STR38[]=\"为了避免生灵涂炭，降也是无可奈何……\";"]}
+{"id": "s/160", "zh": "我乃竭诚投降，请明公勿疑！", "bytes": 26, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR39", "usage": ["strcnt.c:184: const U8 P_SAY_STR39[]=\"我乃竭诚投降，请明公勿疑！\";"]}
+{"id": "s/161", "zh": "主公恩情，永铭于心……", "bytes": 22, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR40", "usage": ["citycmdc.c:240: ResLoadToMem(STRING_CONST,P_SAY_STR40,str);", "strcnt.c:186: const U8 P_SAY_STR40[]=\"主公恩情，永铭于心……\";"]}
+{"id": "s/162", "zh": "凭我的三寸不烂之舌，定让他回心转意。", "bytes": 36, "kind": "speech", "box": [90, 3], "macro": "P_SAY_STR41", "usage": ["strcnt.c:187: const U8 P_SAY_STR41[]=\"凭我的三寸不烂之舌，定让他回心转意。\";", "citycmdb.c:962: ResLoadToMem(STRING_CONST,P_SAY_STR41,str);"]}
+{"id": "s/163", "zh": " 策略中……", "bytes": 11, "kind": "label", "budget": 66, "macro": "TACTIC_STR", "usage": ["strcnt.c:189: const U8 TACTIC_STR[]=\" 策略中……\";", "tactic.c:1367: ResLoadToMem(STRING_CONST,TACTIC_STR,astr);"]}
+{"id": "skill/1", "zh": "践踏", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/2", "zh": "冲锋", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/3", "zh": "突击", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/4", "zh": "突袭", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/5", "zh": "火攻", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/6", "zh": "滚木", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/7", "zh": "落石", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/8", "zh": "奋战", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/9", "zh": "飞矢", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/10", "zh": "箭雨", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/11", "zh": "火箭", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/12", "zh": "水淹", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/13", "zh": "撞击", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/14", "zh": "咒封", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/15", "zh": "定身", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/16", "zh": "流言", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/17", "zh": "援兵", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/18", "zh": "烈火", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/19", "zh": "海啸", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/20", "zh": "奇门", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/21", "zh": "遁甲", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/22", "zh": "天变", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/23", "zh": "石阵", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/24", "zh": "陷阱", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/25", "zh": "天籁", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/26", "zh": "潜踪", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/27", "zh": "围攻", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/28", "zh": "急行", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/29", "zh": "援军", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skill/30", "zh": "谍报", "bytes": 4, "field": 4, "kind": "skill", "budget": 46}
+{"id": "skilldesc/1", "zh": "骑兵的基本技能，可对步兵造成一定伤害。", "bytes": 38, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/2", "zh": "骑兵的中级技能，可对许多兵种造成一定伤害。", "bytes": 42, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/3", "zh": "骑兵的高级技能，可对所有兵种造成较大伤害。", "bytes": 42, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/4", "zh": "使目标敌人的部队受到很大伤害，同时陷入混乱。", "bytes": 44, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/5", "zh": "趁敌人不防备，放火烧敌人或粮草。", "bytes": 32, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/6", "zh": "利用高出的地势，使用滚木攻击敌人。", "bytes": 34, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/7", "zh": "利用高出的地势，向下丢石头。", "bytes": 28, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/8", "zh": "全军士气高昂，奋力一战。", "bytes": 24, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/9", "zh": "弓箭兵远程发箭，间接攻击敌人。", "bytes": 30, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/10", "zh": "由于弓箭的数量太多，飞矢变成了箭雨。", "bytes": 36, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/11", "zh": "箭头带火，可以造成重大伤害，或引燃军粮。", "bytes": 40, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/12", "zh": "利用敌人不知水性的特点，重创敌人。", "bytes": 34, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/13", "zh": "猛烈撞击敌人的船只，对目标造成伤害。", "bytes": 36, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/14", "zh": "使目标部队无法施展技能。", "bytes": 24, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/15", "zh": "使目标部队无法移动。", "bytes": 20, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/16", "zh": "使目标敌人混乱。", "bytes": 16, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/17", "zh": "恢复对友少量兵力。", "bytes": 18, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/18", "zh": "利用地利，引然大火，焚烧敌人。", "bytes": 30, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/19", "zh": "驾御狂风，引发海啸，攻击水面军队。", "bytes": 34, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/20", "zh": "使目标部队在战场上无视其他部队的阻挡，进行移动。", "bytes": 48, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/21", "zh": "使目标部队为敌人不可见。", "bytes": 24, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/22", "zh": "施展法术，改变当前战场天气。", "bytes": 28, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/23", "zh": "利用地理环境，布置巧妙阵法。", "bytes": 28, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/24", "zh": "在适当的地方挖陷阱。", "bytes": 20, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/25", "zh": "利用天籁之音对敌人进行迷惑。", "bytes": 28, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/26", "zh": "消除部队的行动踪迹。", "bytes": 20, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/27", "zh": "使临近目标敌人的步兵部队同时再攻击一次敌人。", "bytes": 44, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "skilldesc/28", "zh": "自己部队快速移动。", "bytes": 18, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/29", "zh": "恢复对友大量兵力。", "bytes": 18, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "skilldesc/30", "zh": "君主特有技能。可以获取敌人的最新战场情报。", "bytes": 42, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "item/1", "zh": "方天画戟", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/2", "zh": "七星刀", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/3", "zh": "青龙刀", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/4", "zh": "丈八矛", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/5", "zh": "双股剑", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/6", "zh": "三尖刀", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/7", "zh": "双铁戟", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/8", "zh": "倚天剑", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/9", "zh": "青虹剑", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/10", "zh": "望月枪", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/11", "zh": "古淀刀", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/12", "zh": "六韬", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/13", "zh": "司马法", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/14", "zh": "孙子兵法", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/15", "zh": "范蠡兵法", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/16", "zh": "墨子", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/17", "zh": "吴子兵法", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/18", "zh": "鬼谷子", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/19", "zh": "孙膑兵法", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/20", "zh": "尉缭子", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/21", "zh": "商君书", "bytes": 6, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/22", "zh": "三略", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/23", "zh": "赤兔", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/24", "zh": "的卢", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/25", "zh": "绝影", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/26", "zh": "爪黄飞电", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/27", "zh": "王追", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/28", "zh": "惊帆", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/29", "zh": "白鸽", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/30", "zh": "快航", "bytes": 4, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/31", "zh": "铁骑兵符", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/32", "zh": "太玄兵符", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "item/33", "zh": "水战兵符", "bytes": 8, "field": 10, "kind": "item", "budget": 58}
+{"id": "itemdesc/1", "zh": "武力+10", "bytes": 7, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/2", "zh": "王允之刀，后由孟德献刀而归董卓。武力+10。", "bytes": 41, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/3", "zh": "武力+8", "bytes": 6, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/4", "zh": "武力+8", "bytes": 6, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/5", "zh": "武力+4", "bytes": 6, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/6", "zh": "武力+3", "bytes": 6, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/7", "zh": "武力+2", "bytes": 6, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/8", "zh": "武力+10", "bytes": 7, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/9", "zh": "武力+8", "bytes": 6, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/10", "zh": "武力+3", "bytes": 6, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/11", "zh": "孙坚的武器，武力+5。", "bytes": 20, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/12", "zh": "西周姜太公吕尚所著之兵书。智力+8", "bytes": 32, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/13", "zh": "春秋田骧苴所著之兵书。智力+2", "bytes": 28, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/14", "zh": "春秋孙武所著之兵书，为兵法之首。智力+10", "bytes": 39, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/15", "zh": "春秋范蠡所著之兵书。智力+4", "bytes": 26, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/16", "zh": "战国墨翟所著之兵书。智力+3", "bytes": 26, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/17", "zh": "战国吴起所著之兵书。智力+2", "bytes": 26, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/18", "zh": "战国鬼谷子所著之兵书。智力+5", "bytes": 28, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/19", "zh": "战国孙膑所著之兵书。智力+3", "bytes": 26, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/20", "zh": "战国尉缭子所著之兵书。智力+1", "bytes": 28, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/21", "zh": "战国商鞅所著之书。智力+2", "bytes": 24, "field": 50, "kind": "desc", "box": [148, 1]}
+{"id": "itemdesc/22", "zh": "战国黄石公所著之书。智力+6", "bytes": 26, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/23", "zh": "最初归吕布所有，后归关羽。移动力+15，安全撤退。", "bytes": 47, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/24", "zh": "最初归张武所有，后归刘备。移动力+13，安全撤退。", "bytes": 47, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/25", "zh": "曹操所有。移动力+10，安全撤退。", "bytes": 31, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/26", "zh": "曹操所有。移动力+4，安全撤退。", "bytes": 30, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/27", "zh": "张飞的坐骑。移动力+8，安全撤退。", "bytes": 32, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/28", "zh": "曹植的坐骑。移动力+5，安全撤退。", "bytes": 32, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/29", "zh": "曹洪的坐骑。移动力+3，安全撤退。", "bytes": 32, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/30", "zh": "孙权的坐骑。移动力+4，安全撤退。", "bytes": 32, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/31", "zh": "有条件使用，可使目标将领兵种转为极兵。", "bytes": 38, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/32", "zh": "有条件使用，可使目标将领兵种转为玄兵。", "bytes": 38, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "itemdesc/33", "zh": "无条件使用，可使目标将领兵种转为水军。", "bytes": 38, "field": 50, "kind": "desc", "box": [148, 2]}
+{"id": "city/1", "zh": "西凉", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/2", "zh": "北平", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/3", "zh": "襄平", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/4", "zh": "安定", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/5", "zh": "晋阳", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/6", "zh": "平原", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/7", "zh": "南皮", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/8", "zh": "北海", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/9", "zh": "天水", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/10", "zh": "河内", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/11", "zh": "长安", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/12", "zh": "邺", "bytes": 2, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/13", "zh": "濮阳", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/14", "zh": "徐州", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/15", "zh": "汉中", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/16", "zh": "洛阳", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/17", "zh": "许昌", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/18", "zh": "小沛", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/19", "zh": "下邳", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/20", "zh": "梓潼", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/21", "zh": "宛城", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/22", "zh": "寿春", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/23", "zh": "建业", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/24", "zh": "吴", "bytes": 2, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/25", "zh": "成都", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/26", "zh": "棉竹", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/27", "zh": "襄阳", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/28", "zh": "江夏", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/29", "zh": "庐江", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/30", "zh": "会稽", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/31", "zh": "云南", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/32", "zh": "巴郡", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/33", "zh": "武陵", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/34", "zh": "长沙", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/35", "zh": "柴桑", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/36", "zh": "零陵", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/37", "zh": "桂阳", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "city/38", "zh": "建宁", "bytes": 4, "field": 10, "kind": "city", "budget": 43}
+{"id": "name/董卓", "zh": "董卓", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹操", "zh": "曹操", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/袁绍", "zh": "袁绍", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/袁术", "zh": "袁术", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孙坚", "zh": "孙坚", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马腾", "zh": "马腾", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陶谦", "zh": "陶谦", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孔融", "zh": "孔融", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘岱", "zh": "刘岱", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张杨", "zh": "张杨", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/韩馥", "zh": "韩馥", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王匡", "zh": "王匡", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张邈", "zh": "张邈", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘备", "zh": "刘备", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘表", "zh": "刘表", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘焉", "zh": "刘焉", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/公孙瓒", "zh": "公孙瓒", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/公孙度", "zh": "公孙度", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张鲁", "zh": "张鲁", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/李儒", "zh": "李儒", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吕布", "zh": "吕布", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/华雄", "zh": "华雄", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张辽", "zh": "张辽", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/李\\xa2\\xe3", "zh": "李\\xa2\\xe3", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/郭汜", "zh": "郭汜", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/李肃", "zh": "李肃", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/侯成", "zh": "侯成", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/高顺", "zh": "高顺", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/徐荣", "zh": "徐荣", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/牛辅", "zh": "牛辅", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王允", "zh": "王允", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/荀攸", "zh": "荀攸", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/夏侯\\xa2\\xef", "zh": "夏侯\\xa2\\xef", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/夏侯渊", "zh": "夏侯渊", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/李典", "zh": "李典", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/乐进", "zh": "乐进", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹洪", "zh": "曹洪", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹仁", "zh": "曹仁", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/颜良", "zh": "颜良", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/文丑", "zh": "文丑", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/淳于琼", "zh": "淳于琼", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/逢纪", "zh": "逢纪", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/审配", "zh": "审配", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/田丰", "zh": "田丰", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/沮授", "zh": "沮授", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/许攸", "zh": "许攸", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/纪灵", "zh": "纪灵", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈兰", "zh": "陈兰", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/雷薄", "zh": "雷薄", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/俞涉", "zh": "俞涉", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/程普", "zh": "程普", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/韩当", "zh": "韩当", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/黄盖", "zh": "黄盖", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/祖茂", "zh": "祖茂", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孙策", "zh": "孙策", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孙权", "zh": "孙权", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/韩遂", "zh": "韩遂", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马超", "zh": "马超", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/庞德", "zh": "庞德", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/侯选", "zh": "侯选", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/程银", "zh": "程银", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/李堪", "zh": "李堪", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张横", "zh": "张横", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/梁兴", "zh": "梁兴", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/成宜", "zh": "成宜", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马玩", "zh": "马玩", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/杨秋", "zh": "杨秋", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈圭", "zh": "陈圭", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈登", "zh": "陈登", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孙乾", "zh": "孙乾", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/糜竺", "zh": "糜竺", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/糜芳", "zh": "糜芳", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹豹", "zh": "曹豹", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/太史慈", "zh": "太史慈", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/武安国", "zh": "武安国", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘繇", "zh": "刘繇", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/乔瑁", "zh": "乔瑁", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/袁遗", "zh": "袁遗", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/董昭", "zh": "董昭", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/穆顺", "zh": "穆顺", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/潘凤", "zh": "潘凤", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/荀谌", "zh": "荀谌", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/辛评", "zh": "辛评", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/关纯", "zh": "关纯", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/耿武", "zh": "耿武", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/方悦", "zh": "方悦", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈宫", "zh": "陈宫", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/典韦", "zh": "典韦", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张超", "zh": "张超", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/关羽", "zh": "关羽", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张飞", "zh": "张飞", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蒯良", "zh": "蒯良", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蒯越", "zh": "蒯越", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蔡瑁", "zh": "蔡瑁", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张允", "zh": "张允", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/黄祖", "zh": "黄祖", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/甘宁", "zh": "甘宁", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张任", "zh": "张任", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/严颜", "zh": "严颜", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/公孙越", "zh": "公孙越", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/严纲", "zh": "严纲", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王门", "zh": "王门", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/田楷", "zh": "田楷", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/公孙康", "zh": "公孙康", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/公孙恭", "zh": "公孙恭", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张卫", "zh": "张卫", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/杨松", "zh": "杨松", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/杨任", "zh": "杨任", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/阎圃", "zh": "阎圃", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/凌统", "zh": "凌统", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹休", "zh": "曹休", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘晔", "zh": "刘晔", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈群", "zh": "陈群", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘璋", "zh": "刘璋", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈武", "zh": "陈武", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陆逊", "zh": "陆逊", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/程昱", "zh": "程昱", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吕范", "zh": "吕范", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吕蒙", "zh": "吕蒙", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/费\\xa5\\xf7", "zh": "费\\xa5\\xf7", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/董允", "zh": "董允", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马良", "zh": "马良", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马谡", "zh": "马谡", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/满宠", "zh": "满宠", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/庞统", "zh": "庞统", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/关平", "zh": "关平", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/郭嘉", "zh": "郭嘉", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王朗", "zh": "王朗", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/虞翻", "zh": "虞翻", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/华歆", "zh": "华歆", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蒋琬", "zh": "蒋琬", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/文聘", "zh": "文聘", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/贾诩", "zh": "贾诩", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蒋钦", "zh": "蒋钦", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/辛毗", "zh": "辛毗", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/徐庶", "zh": "徐庶", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/雷铜", "zh": "雷铜", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/许褚", "zh": "许褚", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/荀\\xa2\\xe4", "zh": "荀\\xa2\\xe4", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/法正", "zh": "法正", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张松", "zh": "张松", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孟达", "zh": "孟达", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/李严", "zh": "李严", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吴懿", "zh": "吴懿", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/黄权", "zh": "黄权", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/杨修", "zh": "杨修", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/伊籍", "zh": "伊籍", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/于禁", "zh": "于禁", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/袁尚", "zh": "袁尚", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/袁谭", "zh": "袁谭", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/袁熙", "zh": "袁熙", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张\\xc0\\x80", "zh": "张\\xc0\\x80", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张昭", "zh": "张昭", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/周仓", "zh": "周仓", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/廖化", "zh": "廖化", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/周泰", "zh": "周泰", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/诸葛谨", "zh": "诸葛谨", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/诸葛亮", "zh": "诸葛亮", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/郭图", "zh": "郭图", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张南", "zh": "张南", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/朱桓", "zh": "朱桓", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张绣", "zh": "张绣", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/钟繇", "zh": "钟繇", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/徐晃", "zh": "徐晃", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/凌操", "zh": "凌操", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张\\xa5\\xf8", "zh": "张\\xa5\\xf8", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/赵云", "zh": "赵云", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/臧霸", "zh": "臧霸", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王平", "zh": "王平", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/魏延", "zh": "魏延", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王粲", "zh": "王粲", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/鲁肃", "zh": "鲁肃", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/丁奉", "zh": "丁奉", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王威", "zh": "王威", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王修", "zh": "王修", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王累", "zh": "王累", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/简雍", "zh": "简雍", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/向朗", "zh": "向朗", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/阚泽", "zh": "阚泽", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/黄忠", "zh": "黄忠", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/高览", "zh": "高览", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/高干", "zh": "高干", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王忠", "zh": "王忠", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/管辂", "zh": "管辂", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/华佗", "zh": "华佗", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/通宵虫", "zh": "通宵虫", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/南方小鬼", "zh": "南方小鬼", "bytes": 8, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/韩玄", "zh": "韩玄", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/夏侯恩", "zh": "夏侯恩", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/郭淮", "zh": "郭淮", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张燕", "zh": "张燕", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈琳", "zh": "陈琳", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈震", "zh": "陈震", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/朱治", "zh": "朱治", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/周瑜", "zh": "周瑜", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/胡车儿", "zh": "胡车儿", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹性", "zh": "曹性", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/魏续", "zh": "魏续", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马岱", "zh": "马岱", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/韩嵩", "zh": "韩嵩", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘琦", "zh": "刘琦", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蔡中", "zh": "蔡中", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蔡和", "zh": "蔡和", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吴班", "zh": "吴班", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吴兰", "zh": "吴兰", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/毛\\xa5\\xf9", "zh": "毛\\xa5\\xf9", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/崔琰", "zh": "崔琰", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/车胄", "zh": "车胄", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/邓芝", "zh": "邓芝", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/郭攸之", "zh": "郭攸之", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/泠苞", "zh": "泠苞", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王甫", "zh": "王甫", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/胡班", "zh": "胡班", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘琮", "zh": "刘琮", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吕旷", "zh": "吕旷", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吕翔", "zh": "吕翔", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘度", "zh": "刘度", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/赵范", "zh": "赵范", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/金旋", "zh": "金旋", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/杨龄", "zh": "杨龄", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘贤", "zh": "刘贤", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刑道荣", "zh": "刑道荣", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈应", "zh": "陈应", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/鲍隆", "zh": "鲍隆", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/巩志", "zh": "巩志", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/夏侯尚", "zh": "夏侯尚", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/夏侯德", "zh": "夏侯德", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/夏侯霸", "zh": "夏侯霸", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/牛金", "zh": "牛金", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹丕", "zh": "曹丕", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹真", "zh": "曹真", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹植", "zh": "曹植", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/蒋干", "zh": "蒋干", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马延", "zh": "马延", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘封", "zh": "刘封", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/徐盛", "zh": "徐盛", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/潘璋", "zh": "潘璋", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/董袭", "zh": "董袭", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孙尚香", "zh": "孙尚香", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/朱然", "zh": "朱然", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/顾雍", "zh": "顾雍", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/严\\xa5\\xfa", "zh": "严\\xa5\\xfa", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张温", "zh": "张温", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/李恢", "zh": "李恢", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/公孙渊", "zh": "公孙渊", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/潘浚", "zh": "潘浚", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/赵累", "zh": "赵累", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/邓艾", "zh": "邓艾", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/钟会", "zh": "钟会", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/司马懿", "zh": "司马懿", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/姜维", "zh": "姜维", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张嶷", "zh": "张嶷", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陈式", "zh": "陈式", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/陆抗", "zh": "陆抗", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/贾华", "zh": "贾华", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/博士仁", "zh": "博士仁", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/董和", "zh": "董和", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/邓贤", "zh": "邓贤", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/庞仪", "zh": "庞仪", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/高沛", "zh": "高沛", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/杨怀", "zh": "杨怀", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/典满", "zh": "典满", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/王双", "zh": "王双", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/诸葛均", "zh": "诸葛均", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/刘禅", "zh": "刘禅", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孟获", "zh": "孟获", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹彰", "zh": "曹彰", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/司马师", "zh": "司马师", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/司马昭", "zh": "司马昭", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/文钦", "zh": "文钦", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/毋丘俭", "zh": "毋丘俭", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/郝昭", "zh": "郝昭", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/关兴", "zh": "关兴", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张苞", "zh": "张苞", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/马忠", "zh": "马忠", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张翼", "zh": "张翼", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/沙摩柯", "zh": "沙摩柯", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/全琮", "zh": "全琮", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/张休", "zh": "张休", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孙浩", "zh": "孙浩", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/吕岱", "zh": "吕岱", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/诸葛恪", "zh": "诸葛恪", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/朵思大王", "zh": "朵思大王", "bytes": 8, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/金环三结", "zh": "金环三结", "bytes": 8, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/朱褒", "zh": "朱褒", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/孟优", "zh": "孟优", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/祝融夫人", "zh": "祝融夫人", "bytes": 8, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/带来洞主", "zh": "带来洞主", "bytes": 8, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/董荼那", "zh": "董荼那", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/阿会喃", "zh": "阿会喃", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/忙牙长", "zh": "忙牙长", "bytes": 6, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/羊祜", "zh": "羊祜", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/何晏", "zh": "何晏", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/曹\\xa2\\xf0", "zh": "曹\\xa2\\xf0", "bytes": 4, "field": 8, "kind": "name", "budget": 60}
+{"id": "name/杨仪", "zh": "杨仪", "bytes": 4, "field": 8, "kind": "name", "budget": 60}

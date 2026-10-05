@@ -57,6 +57,25 @@ Adding a game: a profile in `bbkrpg/games.py` (engine-string offsets in
 docs/<key>/ glossary and brief, parts, sweep and release. 金庸群侠传's notes
 are in `docs/jy/` (`translating.md` is the brief its translators used).
 
+## 三国霸业 (sgby, native game)
+
+三国霸业 is not a BBKRPG game: it is BBK's own 6502 program with an embedded
+resource archive (`dat.lib`, identical to iBaye's `src/dat.lib.orig`). Its
+toolkit is the `sgby/` package; `docs/sgby/recon.md` explains the format, the
+English renderer and the layout patches.
+
+```sh
+python3 tools/sgby/export.py                  # -> translations/sgby/strings.jsonl (budgets, usage context)
+python3 tools/sgby/check.py                   # translations/sgby/en.jsonl against the pixel budgets
+python3 tools/sgby/build_en.py                # en.jsonl + fix*.jsonl -> work/sgby/sgby_en.gam
+python3 tools/sgby/tour.py work/sgby/sgby_en.gam work/sgby/qa/en && python3 tools/sgby/sheets.py work/sgby/qa/en
+python3 tools/sgby/coverage.py work/sgby/qa/en/texts.jsonl
+python3 tools/sgby/release.py v0.1            # -> dist/ThreeKingdomsHegemony-v0.1.bps
+```
+
+The tour needs `refs/iBaye` only for `export.py` (usage context):
+`git clone --depth 1 https://gitee.com/bgwp/iBaye.git refs/iBaye`.
+
 ## Tests
 
 ```sh

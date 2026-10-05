@@ -1,0 +1,23 @@
+{"id": "s/63", "en": " AD", "note": "year suffix on the map panel"}
+{"id": "s/64", "en": "\u001e", "note": "month control: the renderer turns the preceding number into Jan..Dec"}
+{"id": "s/27", "en": "STR", "note": "match STR in the battle panel and item descriptions"}
+{"id": "e/1", "en": "Can't reach!         ", "note": "battle status line: trailing spaces clear the previous message (x 74..157)"}
+{"id": "e/2", "en": "No target           ", "note": "battle status line: trailing spaces clear the previous message (x 74..157)"}
+{"id": "e/3", "en": "Invalid              ", "note": "battle status line: trailing spaces clear the previous message (x 74..157)"}
+{"id": "e/4", "en": "Wrong weather     ", "note": "battle status line: trailing spaces clear the previous message (x 74..157)"}
+{"id": "e/5", "en": "Bad terrain         ", "note": "battle status line: trailing spaces clear the previous message (x 74..157)"}
+{"id": "e/6", "en": "Not enough SP     ", "note": "battle status line: trailing spaces clear the previous message (x 74..157)"}
+{"id": "s/44", "en": "Amount:  ", "note": "number dialog: the value is drawn at label x + 42 (7 cells); pad to that"}
+{"id": "s/45", "en": "Max:      ", "note": "number dialog: the value is drawn at label x + 42 (7 cells); pad to that"}
+{"id": "s/1", "en": "State: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/2", "en": "Ruler: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/3", "en": "Gov.: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/4", "en": "Farm: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/5", "en": "Comm: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/6", "en": "Morale: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/7", "en": "Relief: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/8", "en": "Pop.: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/9", "en": "Gold: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/10", "en": "Food: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/11", "en": "Reserves: ", "note": "city status panel label; the value is appended (90 px line)"}
+{"id": "s/74", "en": "Mystic", "note": "item list troop column is 6 cells (34 px)"}
