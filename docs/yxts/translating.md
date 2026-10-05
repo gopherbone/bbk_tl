@@ -63,7 +63,7 @@ My Sect and the Dreamscape, 1-12 the Demonspire basement, 1-255 item scripts.
   Earth Water Fire) or hyphens (Fire-Spell, Sect-Qi, Check-Qi, 1888RMB). Hero menu:
   "Dugu Ouyang Tang". Keep items <= 10 characters.
 - `message` rows: a centred box of at most 4 rows of 140 px (about 25
-  characters a row). The MUD "look" texts (`★...`) are messages: keep the ★ marks and
+  characters a row). The MUD "look" texts (`★...`) are messages: write each ★ as `*` (text must be ASCII) and
   stay within 4 rows; the source pads them with full-width spaces, drop the padding.
 - `showgut` (the intro scroll, credits, end note, the opened letter) scrolls in 20-column
   rows; `\n` may break lines. `timemsg` rows (loading / Healthy Gaming Advice) are
