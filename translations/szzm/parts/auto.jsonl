@@ -1,0 +1,357 @@
+{"id": "gut/1-1-2@0057", "en": "Temple"}
+{"id": "gut/1-1-3@0057", "en": "Sanctum"}
+{"id": "gut/1-1-4@0057", "en": "Bedroom"}
+{"id": "gut/1-1-5@0065", "en": "Kabras"}
+{"id": "gut/1-1-6@007b", "en": "Kabras"}
+{"id": "gut/1-1-7@0059", "en": "Palace"}
+{"id": "gut/1-1-10@0059", "en": "Guild Hall"}
+{"id": "gut/1-1-13@005b", "en": "Library"}
+{"id": "gut/1-2-2@0057", "en": "Outskirts"}
+{"id": "GRS/6-1-1/name", "en": "Plume Cap"}
+{"id": "GRS/6-1-2/name", "en": "Light Helm"}
+{"id": "GRS/6-1-3/name", "en": "Great Helm"}
+{"id": "GRS/6-1-4/name", "en": "Steel Helm"}
+{"id": "GRS/6-1-5/name", "en": "Storm Helm"}
+{"id": "GRS/6-1-6/name", "en": "Wizard Hat"}
+{"id": "GRS/6-1-7/name", "en": "Seer Hat"}
+{"id": "GRS/6-1-8/name", "en": "Guard Cap"}
+{"id": "GRS/6-2-1/name", "en": "Trail Garb"}
+{"id": "GRS/6-2-2/name", "en": "Noble Suit"}
+{"id": "GRS/6-2-3/name", "en": "Light Mail"}
+{"id": "GRS/6-2-4/name", "en": "Chain Mail"}
+{"id": "GRS/6-2-5/name", "en": "Plate Mail"}
+{"id": "GRS/6-2-6/name", "en": "Brave Mail"}
+{"id": "GRS/6-2-7/name", "en": "Dragonmail"}
+{"id": "GRS/6-2-8/name", "en": "Moon Garb"}
+{"id": "GRS/6-2-9/name", "en": "Vestments"}
+{"id": "GRS/6-2-10/name", "en": "Holy Robe"}
+{"id": "GRS/6-3-1/name", "en": "Soft Boots"}
+{"id": "GRS/6-3-2/name", "en": "Mail Shoes"}
+{"id": "GRS/6-3-3/name", "en": "Iron Boots"}
+{"id": "GRS/6-3-4/name", "en": "Thornboots"}
+{"id": "GRS/6-3-5/name", "en": "Gale Shoes"}
+{"id": "GRS/6-3-6/name", "en": "Sabatons"}
+{"id": "GRS/6-3-7/name", "en": "Rune Boots"}
+{"id": "GRS/6-3-8/name", "en": "Hush Boots"}
+{"id": "GRS/6-4-1/name", "en": "Shortsword"}
+{"id": "GRS/6-4-2/name", "en": "Gem Dagger"}
+{"id": "GRS/6-4-3/name", "en": "Buckler"}
+{"id": "GRS/6-4-4/name", "en": "Big Shield"}
+{"id": "GRS/6-4-5/name", "en": "Runed Dirk"}
+{"id": "GRS/6-4-6/name", "en": "Dark Touch"}
+{"id": "GRS/6-4-7/name", "en": "Frostblade"}
+{"id": "GRS/6-4-8/name", "en": "Cross Ward"}
+{"id": "GRS/6-4-9/name", "en": "Gold Aegis"}
+{"id": "GRS/6-4-10/name", "en": "Hope Aegis"}
+{"id": "GRS/6-5-1/name", "en": "Soft Mitts"}
+{"id": "GRS/6-5-2/name", "en": "War Gloves"}
+{"id": "GRS/6-5-3/name", "en": "Rune Mitts"}
+{"id": "GRS/6-5-4/name", "en": "Gauntlets"}
+{"id": "GRS/6-5-5/name", "en": "Stout Hand"}
+{"id": "GRS/6-5-6/name", "en": "Sure Hand"}
+{"id": "GRS/6-5-7/name", "en": "Thorn Grip"}
+{"id": "GRS/6-6-1/name", "en": "Bookmark"}
+{"id": "GRS/6-6-2/name", "en": "Sword Pin"}
+{"id": "GRS/6-6-3/name", "en": "Demon Eye"}
+{"id": "GRS/6-6-4/name", "en": "Rosary"}
+{"id": "GRS/6-6-5/name", "en": "Silverband"}
+{"id": "GRS/6-6-6/name", "en": "Star Studs"}
+{"id": "GRS/6-6-7/name", "en": "Flameheart"}
+{"id": "GRS/6-6-8/name", "en": "Ever Seal"}
+{"id": "GRS/6-6-9/name", "en": "Storm Gem"}
+{"id": "GRS/6-6-10/name", "en": "Bracelet"}
+{"id": "GRS/6-6-11/name", "en": "Ring"}
+{"id": "GRS/6-6-12/name", "en": "Apple"}
+{"id": "GRS/6-7-1/name", "en": "Iron Sword"}
+{"id": "GRS/6-7-2/name", "en": "Longsword"}
+{"id": "GRS/6-7-3/name", "en": "Crossblade"}
+{"id": "GRS/6-7-4/name", "en": "Rapier"}
+{"id": "GRS/6-7-5/name", "en": "Darksilver"}
+{"id": "GRS/6-7-6/name", "en": "Dragonbane"}
+{"id": "GRS/6-7-7/name", "en": "Sunblade"}
+{"id": "GRS/6-7-8/name", "en": "Wood Staff"}
+{"id": "GRS/6-7-9/name", "en": "Star Staff"}
+{"id": "GRS/6-7-10/name", "en": "Blaze Rod"}
+{"id": "GRS/6-7-11/name", "en": "Seer Staff"}
+{"id": "GRS/6-7-12/name", "en": "Cleric Rod"}
+{"id": "GRS/6-7-13/name", "en": "Curse Rod"}
+{"id": "GRS/6-7-14/name", "en": "Prism Disc"}
+{"id": "GRS/6-9-1/name", "en": "Apple"}
+{"id": "GRS/6-9-2/name", "en": "HP Potion"}
+{"id": "GRS/6-9-3/name", "en": "MP Potion"}
+{"id": "GRS/6-9-4/name", "en": "HP Fount"}
+{"id": "GRS/6-9-5/name", "en": "MP Fount"}
+{"id": "GRS/6-9-6/name", "en": "Elixir"}
+{"id": "GRS/6-9-7/name", "en": "Holy Water"}
+{"id": "GRS/6-9-8/name", "en": "Recovery"}
+{"id": "GRS/6-10-1/name", "en": "Revival"}
+{"id": "GRS/6-12-1/name", "en": "Booster"}
+{"id": "GRS/6-13-1/name", "en": "Key"}
+{"id": "GRS/6-13-2/name", "en": "White Key"}
+{"id": "GRS/6-13-3/name", "en": "Black Key"}
+{"id": "GRS/6-13-4/name", "en": "Odd Key"}
+{"id": "GRS/6-13-5/name", "en": "Crest I"}
+{"id": "GRS/6-13-6/name", "en": "Crest II"}
+{"id": "GRS/6-13-7/name", "en": "Crest III"}
+{"id": "GRS/6-13-8/name", "en": "Crest IV"}
+{"id": "GRS/6-13-9/name", "en": "Fragment A"}
+{"id": "GRS/6-13-10/name", "en": "Fragment B"}
+{"id": "GRS/6-13-11/name", "en": "Fragment C"}
+{"id": "GRS/6-13-12/name", "en": "Fragment D"}
+{"id": "GRS/6-13-13/name", "en": "Necklace"}
+{"id": "GRS/6-13-14/name", "en": "Shardstone"}
+{"id": "GRS/6-13-15/name", "en": "Glimstone"}
+{"id": "GRS/6-13-16/name", "en": "Starstone"}
+{"id": "GRS/6-13-17/name", "en": "Dawnstone"}
+{"id": "GRS/6-13-18/name", "en": "Hematite"}
+{"id": "GRS/6-13-19/name", "en": "Glowwood"}
+{"id": "GRS/6-13-20/name", "en": "Soft Down"}
+{"id": "GRS/6-13-21/name", "en": "Book"}
+{"id": "GRS/6-13-22/name", "en": "Cogwheel"}
+{"id": "GRS/6-13-23/name", "en": "Pass"}
+{"id": "GRS/6-13-24/name", "en": "Blazestone"}
+{"id": "GRS/6-14-1/name", "en": "Homeward"}
+{"id": "GRS/6-14-2/name", "en": "Ignite"}
+{"id": "GRS/6-14-3/name", "en": "Dig"}
+{"id": "GRS/6-14-4/name", "en": "Climb"}
+{"id": "GRS/6-14-5/name", "en": "Scroll A"}
+{"id": "GRS/6-14-6/name", "en": "Scroll B"}
+{"id": "GRS/6-14-7/name", "en": "Scroll C"}
+{"id": "GRS/6-14-8/name", "en": "Scroll D"}
+{"id": "GRS/6-14-9/name", "en": "Scroll E"}
+{"id": "GRS/6-14-10/name", "en": "Scroll F"}
+{"id": "GRS/6-14-11/name", "en": "Scroll G"}
+{"id": "GRS/6-14-12/name", "en": "Scroll H"}
+{"id": "GRS/6-14-13/name", "en": "Scroll I"}
+{"id": "GRS/6-14-14/name", "en": "Scroll J"}
+{"id": "GRS/6-14-15/name", "en": "Scroll K"}
+{"id": "GRS/6-14-16/name", "en": "Scroll L"}
+{"id": "GRS/6-14-17/name", "en": "Smash"}
+{"id": "GRS/6-14-18/name", "en": "Compass"}
+{"id": "MRS/4-1-1/name", "en": "Fire Strike"}
+{"id": "MRS/4-1-2/name", "en": "Ice Rush"}
+{"id": "MRS/4-1-3/name", "en": "Whirlwind"}
+{"id": "MRS/4-1-4/name", "en": "Meteor"}
+{"id": "MRS/4-1-5/name", "en": "Life Drain"}
+{"id": "MRS/4-1-6/name", "en": "Thunderclap"}
+{"id": "MRS/4-1-7/name", "en": "Hailstorm"}
+{"id": "MRS/4-1-8/name", "en": "Mind Blast"}
+{"id": "MRS/4-1-9/name", "en": "Skill Lock"}
+{"id": "MRS/4-1-10/name", "en": "Dark Cut"}
+{"id": "MRS/4-1-11/name", "en": "Gale Slash"}
+{"id": "MRS/4-1-12/name", "en": "Shatter"}
+{"id": "MRS/4-1-13/name", "en": "Red Lotus"}
+{"id": "MRS/4-1-14/name", "en": "Dazzle"}
+{"id": "MRS/4-1-15/name", "en": "Shade Slash"}
+{"id": "MRS/4-1-16/name", "en": "Venom Sting"}
+{"id": "MRS/4-1-17/name", "en": "1"}
+{"id": "MRS/4-1-18/name", "en": "1"}
+{"id": "MRS/4-1-19/name", "en": "2"}
+{"id": "MRS/4-1-20/name", "en": "2"}
+{"id": "MRS/4-2-1/name", "en": "Light Ward"}
+{"id": "MRS/4-2-2/name", "en": "Hot Blood"}
+{"id": "MRS/4-2-3/name", "en": "Haste"}
+{"id": "MRS/4-3-1/name", "en": "Heal"}
+{"id": "MRS/4-3-2/name", "en": "First Aid"}
+{"id": "MRS/4-3-3/name", "en": "Holy Light"}
+{"id": "MRS/4-4-1/name", "en": "Revive"}
+{"id": "MRS/4-5-1/name", "en": "Pilfer"}
+{"id": "ARS/3-1-1/name", "en": "Delat"}
+{"id": "ARS/3-1-2/name", "en": "Eluna"}
+{"id": "ARS/3-1-3/name", "en": "Delat"}
+{"id": "ARS/3-1-4/name", "en": "Eluna"}
+{"id": "ARS/3-2-1/name", "en": "1"}
+{"id": "ARS/3-2-2/name", "en": "2"}
+{"id": "ARS/3-2-3/name", "en": "3"}
+{"id": "ARS/3-2-4/name", "en": "4"}
+{"id": "ARS/3-2-5/name", "en": "5"}
+{"id": "ARS/3-2-6/name", "en": "6"}
+{"id": "ARS/3-2-7/name", "en": "7"}
+{"id": "ARS/3-2-8/name", "en": "8"}
+{"id": "ARS/3-2-9/name", "en": "9"}
+{"id": "ARS/3-2-10/name", "en": "10"}
+{"id": "ARS/3-2-11/name", "en": "11"}
+{"id": "ARS/3-2-12/name", "en": "12"}
+{"id": "ARS/3-2-13/name", "en": "13"}
+{"id": "ARS/3-2-14/name", "en": "14"}
+{"id": "ARS/3-2-15/name", "en": "15"}
+{"id": "ARS/3-2-16/name", "en": "16"}
+{"id": "ARS/3-2-17/name", "en": "17"}
+{"id": "ARS/3-2-18/name", "en": "18"}
+{"id": "ARS/3-2-19/name", "en": "19"}
+{"id": "ARS/3-2-20/name", "en": "20"}
+{"id": "ARS/3-2-21/name", "en": "21"}
+{"id": "ARS/3-2-22/name", "en": "22"}
+{"id": "ARS/3-3-1/name", "en": "d1"}
+{"id": "ARS/3-3-2/name", "en": "d2"}
+{"id": "ARS/3-3-3/name", "en": "d3"}
+{"id": "ARS/3-3-4/name", "en": "d4"}
+{"id": "ARS/3-3-5/name", "en": "d5"}
+{"id": "ARS/3-3-6/name", "en": "d6"}
+{"id": "ARS/3-3-7/name", "en": "d7"}
+{"id": "ARS/3-3-8/name", "en": "d8"}
+{"id": "ARS/3-3-9/name", "en": "d9"}
+{"id": "ARS/3-3-10/name", "en": "d10"}
+{"id": "ARS/3-3-11/name", "en": "d11"}
+{"id": "ARS/3-3-12/name", "en": "d12"}
+{"id": "ARS/3-3-13/name", "en": "d13"}
+{"id": "ARS/3-3-14/name", "en": "d14"}
+{"id": "ARS/3-3-15/name", "en": "d15"}
+{"id": "ARS/3-3-16/name", "en": "d16"}
+{"id": "ARS/3-3-17/name", "en": "d17"}
+{"id": "ARS/3-3-18/name", "en": "d18"}
+{"id": "ARS/3-3-19/name", "en": "d19"}
+{"id": "ARS/3-3-20/name", "en": "d20"}
+{"id": "ARS/3-3-21/name", "en": "d21"}
+{"id": "ARS/3-3-22/name", "en": "d22"}
+{"id": "ARS/3-3-23/name", "en": "d23"}
+{"id": "ARS/3-3-24/name", "en": "d24"}
+{"id": "ARS/3-3-25/name", "en": "d25"}
+{"id": "ARS/3-3-26/name", "en": "d26"}
+{"id": "ARS/3-3-27/name", "en": "d27"}
+{"id": "ARS/3-3-28/name", "en": "d28"}
+{"id": "ARS/3-3-29/name", "en": "d29"}
+{"id": "ARS/3-3-30/name", "en": "d30"}
+{"id": "ARS/3-3-31/name", "en": "d31"}
+{"id": "ARS/3-3-32/name", "en": "d32"}
+{"id": "ARS/3-3-33/name", "en": "d33"}
+{"id": "ARS/3-3-34/name", "en": "d34"}
+{"id": "ARS/3-3-35/name", "en": "d35"}
+{"id": "ARS/3-3-36/name", "en": "d36"}
+{"id": "ARS/3-3-37/name", "en": "d37"}
+{"id": "ARS/3-3-38/name", "en": "d38"}
+{"id": "ARS/3-3-39/name", "en": "d39"}
+{"id": "ARS/3-3-40/name", "en": "d40"}
+{"id": "ARS/3-3-41/name", "en": "d41"}
+{"id": "ARS/3-3-42/name", "en": "x"}
+{"id": "ARS/3-3-43/name", "en": "43"}
+{"id": "ARS/3-3-44/name", "en": "44"}
+{"id": "ARS/3-3-45/name", "en": "45"}
+{"id": "ARS/3-3-46/name", "en": "46"}
+{"id": "ARS/3-3-47/name", "en": "47"}
+{"id": "ARS/3-3-48/name", "en": "48"}
+{"id": "ARS/3-3-49/name", "en": "49"}
+{"id": "ARS/3-3-50/name", "en": "50"}
+{"id": "ARS/3-3-51/name", "en": "51"}
+{"id": "ARS/3-3-52/name", "en": "52"}
+{"id": "ARS/3-3-53/name", "en": "53"}
+{"id": "ARS/3-3-54/name", "en": "54"}
+{"id": "ARS/3-3-55/name", "en": "55"}
+{"id": "ARS/3-3-56/name", "en": "56"}
+{"id": "ARS/3-3-57/name", "en": "57"}
+{"id": "ARS/3-3-58/name", "en": "58"}
+{"id": "ARS/3-3-59/name", "en": "59"}
+{"id": "ARS/3-3-60/name", "en": "60"}
+{"id": "ARS/3-3-61/name", "en": "61"}
+{"id": "ARS/3-3-62/name", "en": "62"}
+{"id": "ARS/3-3-63/name", "en": "62"}
+{"id": "ARS/3-3-64/name", "en": "64"}
+{"id": "ARS/3-3-65/name", "en": "65"}
+{"id": "ARS/3-3-66/name", "en": "66"}
+{"id": "ARS/3-3-67/name", "en": "67"}
+{"id": "ARS/3-3-68/name", "en": "68"}
+{"id": "ARS/3-3-69/name", "en": "69"}
+{"id": "ARS/3-3-70/name", "en": "70"}
+{"id": "ARS/3-3-71/name", "en": "71"}
+{"id": "ARS/3-3-72/name", "en": "72"}
+{"id": "ARS/3-3-73/name", "en": "73"}
+{"id": "ARS/3-3-74/name", "en": "74"}
+{"id": "ARS/3-3-75/name", "en": "75"}
+{"id": "ARS/3-3-76/name", "en": "76"}
+{"id": "ARS/3-3-77/name", "en": "77"}
+{"id": "ARS/3-3-78/name", "en": "78"}
+{"id": "ARS/3-3-79/name", "en": "79"}
+{"id": "ARS/3-3-80/name", "en": "80"}
+{"id": "ARS/3-3-81/name", "en": "81"}
+{"id": "ARS/3-3-82/name", "en": "82"}
+{"id": "ARS/3-3-83/name", "en": "83"}
+{"id": "ARS/3-3-84/name", "en": "84"}
+{"id": "ARS/3-3-85/name", "en": "85"}
+{"id": "ARS/3-3-86/name", "en": "86"}
+{"id": "ARS/3-4-1/name", "en": "1"}
+{"id": "ARS/3-4-2/name", "en": "2"}
+{"id": "ARS/3-4-3/name", "en": "3"}
+{"id": "ARS/3-4-4/name", "en": "4"}
+{"id": "ARS/3-4-5/name", "en": "5"}
+{"id": "ARS/3-4-6/name", "en": "c6"}
+{"id": "ARS/3-4-7/name", "en": "c7"}
+{"id": "ARS/3-4-8/name", "en": "c8"}
+{"id": "ARS/3-4-9/name", "en": "c9"}
+{"id": "ARS/3-4-10/name", "en": "c10"}
+{"id": "ARS/3-4-11/name", "en": "c11"}
+{"id": "ARS/3-4-12/name", "en": "c12"}
+{"id": "ARS/3-4-13/name", "en": "c13"}
+{"id": "ARS/3-4-14/name", "en": "c14"}
+{"id": "ARS/3-4-15/name", "en": "c15"}
+{"id": "ARS/3-4-16/name", "en": "c16"}
+{"id": "ARS/3-4-17/name", "en": "c17"}
+{"id": "ARS/3-4-18/name", "en": "c18"}
+{"id": "ARS/3-4-19/name", "en": "c19"}
+{"id": "ARS/3-4-20/name", "en": "c20"}
+{"id": "ARS/3-4-21/name", "en": "c21"}
+{"id": "ARS/3-4-22/name", "en": "c22"}
+{"id": "ARS/3-4-23/name", "en": "c23"}
+{"id": "ARS/3-4-24/name", "en": "c24"}
+{"id": "ARS/3-4-25/name", "en": "c25"}
+{"id": "ARS/3-4-27/name", "en": "a"}
+{"id": "ARS/3-4-28/name", "en": "b"}
+{"id": "ARS/3-4-29/name", "en": "c"}
+{"id": "ARS/3-4-44/name", "en": "44"}
+{"id": "ARS/3-4-45/name", "en": "45"}
+{"id": "ARS/3-4-46/name", "en": "46"}
+{"id": "ARS/3-4-47/name", "en": "47"}
+{"id": "MAP/2-1-1/name", "en": "Kabras"}
+{"id": "MAP/2-1-2/name", "en": "Kabras"}
+{"id": "MAP/2-1-3/name", "en": "Kabras"}
+{"id": "MAP/2-1-4/name", "en": "Graveyard"}
+{"id": "MAP/2-1-5/name", "en": "Snowblade"}
+{"id": "MAP/2-1-6/name", "en": "Silverleaf"}
+{"id": "MAP/2-1-7/name", "en": "Silverleaf"}
+{"id": "MAP/2-1-8/name", "en": "Mine"}
+{"id": "MAP/2-1-9/name", "en": "Nightstar"}
+{"id": "MAP/2-1-10/name", "en": "Nightstar"}
+{"id": "MAP/2-1-11/name", "en": "Forgotten"}
+{"id": "MAP/2-2-1/name", "en": "Indoors"}
+{"id": "MAP/2-2-2/name", "en": "Indoors"}
+{"id": "MAP/2-2-3/name", "en": "Indoors"}
+{"id": "MAP/2-2-4/name", "en": "Indoors"}
+{"id": "MAP/2-2-5/name", "en": "Library"}
+{"id": "MAP/2-2-6/name", "en": "Corridor"}
+{"id": "MAP/2-2-7/name", "en": "Hall"}
+{"id": "MAP/2-2-8/name", "en": "Shop"}
+{"id": "MAP/2-2-9/name", "en": "Shop"}
+{"id": "MAP/2-2-10/name", "en": "Inn"}
+{"id": "MAP/2-2-11/name", "en": "Workshop"}
+{"id": "MAP/2-2-12/name", "en": "Temple"}
+{"id": "MAP/2-2-13/name", "en": "Sewers"}
+{"id": "MAP/2-2-14/name", "en": "Stairs"}
+{"id": "MAP/2-2-15/name", "en": "    "}
+{"id": "MAP/2-2-16/name", "en": "Star Wilds"}
+{"id": "MAP/2-2-17/name", "en": "Maze"}
+{"id": "MAP/2-2-18/name", "en": "Unnamed"}
+{"id": "MAP/2-2-19/name", "en": "Unnamed"}
+{"id": "MAP/2-3-1/name", "en": "Maze"}
+{"id": "MAP/2-3-2/name", "en": "Blade Wilds"}
+{"id": "MAP/2-3-3/name", "en": "Institute"}
+{"id": "MAP/2-3-4/name", "en": "Star Wilds"}
+{"id": "MAP/2-3-5/name", "en": "Cross Entry"}
+{"id": "MAP/2-3-6/name", "en": "Maze"}
+{"id": "MAP/2-3-7/name", "en": "Maze"}
+{"id": "MAP/2-3-8/name", "en": "Maze"}
+{"id": "MAP/2-3-9/name", "en": "Maze"}
+{"id": "MAP/2-3-10/name", "en": "Maze"}
+{"id": "MAP/2-3-11/name", "en": "Maze"}
+{"id": "MAP/2-3-12/name", "en": "Maze"}
+{"id": "MAP/2-3-13/name", "en": "Maze"}
+{"id": "MAP/2-3-14/name", "en": "Maze"}
+{"id": "MAP/2-3-15/name", "en": "Maze"}
+{"id": "MAP/2-3-16/name", "en": "Maze"}
+{"id": "MAP/2-3-17/name", "en": "Maze"}
+{"id": "MAP/2-3-18/name", "en": "Maze"}
+{"id": "MAP/2-4-1/name", "en": "Wilds"}
+{"id": "MAP/2-4-2/name", "en": "Wilds"}
+{"id": "MAP/2-4-3/name", "en": "Wilds"}
+{"id": "MAP/2-4-4/name", "en": "Wilds"}
+{"id": "MAP/2-4-5/name", "en": "Tunnel"}
+{"id": "MAP/2-4-6/name", "en": "Wilds"}
+{"id": "MAP/2-4-7/name", "en": "Maze"}
