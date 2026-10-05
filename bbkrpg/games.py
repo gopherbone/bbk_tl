@@ -91,7 +91,8 @@ GAMES: dict[str, Game] = {g.key: g for g in [
           owner="its authors, BOSS Studio (BOSS工作室)"),
     _game("yxts", "英雄坛说", engine=engine_text.FMJ, images=_yxts_images, title_en="Heroes' Altar",
           owner="its authors, Caizi Studio (才子工作室)"),
-    _game("szzm", "十字之门", engine=engine_text.SZZM, images=_szzm_images, title_en="Cross Entry"),
+    _game("szzm", "十字之门", engine=engine_text.SZZM, images=_szzm_images, title_en="Cross Entry",
+          owner="its author, 翼王 (Yiwang)"),
 ]}
 
 DEFAULT = "fmj"

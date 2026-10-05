@@ -98,6 +98,37 @@
           "base": "gam4980/retroarch/downloads/bbk/英雄坛说.gam"
         }
       ]
+    },
+    {
+      "id": "cross-entry",
+      "title": "Cross Entry",
+      "title_zh": "十字之门",
+      "pinyin": "Shí Zì Zhī Mén",
+      "genre": "RPG",
+      "authors": "翼王 (Yiwang)",
+      "blurb": "A one-person fantasy RPG on the BBKRPG engine: two thousand years after humankind was banished underground, the foundling swordswoman Eluna, sure she came from the surface, drags the reluctant crown prince Delat across four cities after the four Crests that open the legendary Cross Entry.",
+      "keys": [
+        "arrows",
+        "ok",
+        "back"
+      ],
+      "versions": [
+        {
+          "lang": "en",
+          "label": "English",
+          "version": "v0.1",
+          "status": "Complete translation",
+          "base": "gam4980/retroarch/downloads/bbk/十字之门.gam",
+          "patch": "dist/CrossEntry-v0.1.bps"
+        },
+        {
+          "lang": "zh",
+          "label": "Original (Chinese)",
+          "version": "Ver1.3",
+          "status": "Original release",
+          "base": "gam4980/retroarch/downloads/bbk/十字之门.gam"
+        }
+      ]
     }
   ]
 }
