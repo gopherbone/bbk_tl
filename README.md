@@ -41,6 +41,7 @@ engine string table, image redraws and working paths. The scripts in
 | `fmj` | 伏魔记 | `translations/parts/` | `docs/glossary.jsonl` | Demonbane Chronicle v0.3 |
 | `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` | Heroes of Jin Yong v0.2 |
 | `yxts` | 英雄坛说 | `translations/yxts/parts/` | `docs/yxts/glossary.jsonl` | Heroes' Altar v0.1 |
+| `szzm` | 十字之门 | `translations/szzm/parts/` | `docs/szzm/glossary.jsonl` | (Cross Entry, in progress) |
 
 ```sh
 python3 -m bbkrpg strings export gam4980/retroarch/downloads/bbk/金庸群侠传.gam work/jy.strings.jsonl
