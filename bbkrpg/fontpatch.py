@@ -1187,13 +1187,14 @@ def _bytes_lines(b: bytes) -> str:
     return "\n".join("        .byte " + ", ".join(f"${x:02x}" for x in b[i:i + 16]) for i in range(0, len(b), 16))
 
 
-def build_segment(page_addrs: list[int] = ()) -> tuple[bytes, dict]:
+def build_segment(page_addrs: list[int] = (), top: int = TOKEN_TOP) -> tuple[bytes, dict]:
     """Assemble the font segment with a page table of physical addresses;
-    returns (16 KiB segment, symbols)."""
+    returns (16 KiB segment, symbols). `top` is the first dialogue row's top
+    (games draw the say box at slightly different heights)."""
     widths, rows = font_tables()
     table = b"".join(a.to_bytes(3, "little") for a in page_addrs) or b"\0"
     syms = {"OSVEC": OS_DRAWSTRING_VEC, "DISPATCH": DISPATCH, "GLYPH_TOP": GLYPH_TOP,
-            "GLYPH_H": font_sans.H, "CELL": CELL, "TCELL": TOKEN_PITCH, "TOP": TOKEN_TOP,
+            "GLYPH_H": font_sans.H, "CELL": CELL, "TCELL": TOKEN_PITCH, "TOP": top,
             "PX0": PORTRAIT_X, "LX": LEFT_X, "OSMSG": OS_MSGBOX_VEC, "DLG_Y": DIALOGUE_Y, "BLK_PITCH": BLOCK_PITCH}
 
     def src(lo, hi):
@@ -1217,7 +1218,7 @@ def token(page_id: int) -> bytes:
     return bytes([0xFF, 0x80 | page_id >> 7, 0xFF, 0x80 | page_id & 0x7F])
 
 
-def patch(gam: bytes, pages: list[bytes] = ()) -> tuple[bytes, dict]:
+def patch(gam: bytes, pages: list[bytes] = (), top: int = TOKEN_TOP) -> tuple[bytes, dict]:
     """Return a .gam with the font segment (and a text bank holding `pages`,
     each NUL-free, rows separated by 0x0A) inserted and DrawString rerouted."""
     data_off = int.from_bytes(gam[0x42:0x46], "little")
@@ -1236,7 +1237,7 @@ def patch(gam: bytes, pages: list[bytes] = ()) -> tuple[bytes, dict]:
         bank += p + b"\0"
     nbank = -(-len(bank) // SEG)
     bank_off = data_off + SEG                      # text bank follows the font segment
-    seg, syms = build_segment([GAM_PHYS + bank_off + o for o in offs])
+    seg, syms = build_segment([GAM_PHYS + bank_off + o for o in offs], top)
     # The dispatcher reads the page byte through the caller's mapping, then
     # switches pages and reads the target address at the same CPU address, so
     # each entry must also exist at that offset in the font segment.

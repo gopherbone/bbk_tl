@@ -49,6 +49,7 @@ class Game:
     images: Callable[[dict, list], None] | None = None  # (res, rows): redraws text inside images
     title_en: str | None = None               # release name; None = not releasable yet
     owner: str = "BBK"                        # rights holder named in release notes
+    dialogue_top: int = 57                    # top of a say box's first English row (fontpatch)
     strings: str = ""
     gut: str = ""
     parts: str = ""
@@ -92,7 +93,7 @@ GAMES: dict[str, Game] = {g.key: g for g in [
     _game("yxts", "英雄坛说", engine=engine_text.FMJ, images=_yxts_images, title_en="Heroes' Altar",
           owner="its authors, Caizi Studio (才子工作室)"),
     _game("szzm", "十字之门", engine=engine_text.SZZM, images=_szzm_images, title_en="Cross Entry",
-          owner="its author, 翼王 (Yiwang)"),
+          owner="its author, 翼王 (Yiwang)", dialogue_top=59),   # its say box sits 2 px lower
 ]}
 
 DEFAULT = "fmj"
