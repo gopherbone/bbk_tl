@@ -60,15 +60,16 @@ My Sect and the Dreamscape, 1-12 the Demonspire basement, 1-255 item scripts.
   inside an item**. Use the glossary's one-word forms (Safehaven, Snowpeak, Shang,
   Jade, Wuzhi, Icefire, Wudang, Prodigy, Sect; Flower, Iga, Snow, Lotus, Bagua;
   Forging, Literacy, Step, Qi, Parry, Fist, Sword, Blade, Staff, Whip; Thunder Wind
-  Earth Water Fire) or hyphens (Fire-Spell, Sect-Qi, Check-Qi, 1888RMB). Hero menu:
-  "Dugu Ouyang Tang". Keep items <= 10 characters.
+  Earth Water Fire); otherwise join words with hyphens, never CamelCase (Pay-Heal,
+  Sect-Qi, Warm-Mist, Heaven-Gale, 1888RMB). Hero menu: "Dugu Ouyang Tang". Items up
+  to 11 characters fit (the box grows 8 px a character).
 - `message` rows: a centred box of at most 4 rows of 140 px (about 25
   characters a row). The MUD "look" texts (`★...`) are messages: write each ★ as `*` (text must be ASCII) and
   stay within 4 rows; the source pads them with full-width spaces, drop the padding.
 - `showgut` (the intro scroll, credits, end note, the opened letter) scrolls in 20-column
-  rows; `\n` may break lines. `timemsg` rows (loading / Healthy Gaming Advice) are
-  short timed boxes: keep them short (the advice is eight four-character slogans: make
-  them eight short lines).
+  rows; `\n` may break lines. `timemsg` rows (loading / Healthy Gaming Advice / studio
+  card) are timed message boxes fed from the text bank: `\n` breaks rows, at most 5 rows
+  of 140 px (`check.py` errors past 5). Do not copy the source's 16-byte space padding.
 - Item/art descriptions (`grs.desc`, `mrs.desc`): at most 3 rows of 108 px
   (about 18-20 characters a row; `check.py` measures it). Keep the stats with the
   status-screen words: `防御+30` -> `DEF+30`, `攻击` ATK, `灵力` SPI, `身法`/`速度` AGI,

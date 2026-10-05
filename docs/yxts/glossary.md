@@ -76,10 +76,14 @@ Ironfang) because "Silver Sword" is 12. The 魔剑 is the **Hexblade**, purified
 by purity, as the descriptions do: 金矿1/2/3 = Gold 90% / 80% / 70%, likewise Silver, Copper, Iron.
 
 **Menus.** A `menu` row is split on spaces and must keep the same number of items, so **menu items cannot contain
-spaces**. Use the one-word forms this glossary gives (Safehaven, Snowpeak, Shang, Jade, Wuzhi, Icefire, Wudang,
-Prodigy, Sect; Flower, Iga, Snow, Lotus, Bagua; Step, Qi, Parry, Fist...) and otherwise join words with a hyphen
-(Fire-Spell, True-Guard, Sect-Qi, Check-Qi). The hero menu 1-1-1 "独孤圣 欧阳剑 唐静" uses the surnames:
-"Dugu Ouyang Tang". Keep items short (<= 10 is safe).
+spaces**. Rule (review): use the one-word form where the glossary has one (Safehaven, Snowpeak, Shang, Jade, Wuzhi,
+Icefire, Wudang, Prodigy, Sect; Flower, Iga, Snow, Lotus, Bagua; Step, Qi, Parry, Fist...); otherwise join the
+words of the name with **hyphens**, never CamelCase (Pay-Heal, Qi-Train, Check-Qi, Sect-Qi, Kill-Tiger, Sky-Stone,
+Prism-Silk, Blade-Book, Warm-Mist, Heaven-Gale, Meteor-Rain, Taizu-Fist, Whirl-Slash). Items up to **11 characters**
+are fine: the engine sizes the menu box at 8 px per character and draws the text proportionally (checked in the
+emulator with "Heaven-Gale / Meteor-Rain / Clean-Spell" in the 1-1-1 menu). Only if a hyphenated name would pass 11,
+shorten it (drop a word, as "Ruffian" for 驱逐恶棍) rather than run the words together. The hero menu 1-1-1
+"独孤圣 欧阳剑 唐静" uses the surnames: "Dugu Ouyang Tang".
 
 **Forms of address.** 掌门 Sect Head ("掌门好!" from your disciples = "Welcome, Master!"), 大侠 hero, 少侠/小侠 young
 hero, 女侠 heroine (本女侠 = Yuxin's "yours truly"), 客官 sir, 姑娘 Miss, 小伙子 lad, 小子 kid (bosses and villains
@@ -130,9 +134,22 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 12. **Parody names follow the joke** (see Conventions); 吸腥大法 (a pun on 吸星大法 "Star-Sucking Art") = "Leech
     Art", 北冥神功 = "Beiming" (the description itself says "everyone knows what it does").
 13. **Typos are fixed silently** in English (table below); deliberate puns are kept.
-14. **Menus**: no spaces inside items; one-word forms or hyphens (see Conventions).
+14. **Menus**: no spaces inside items; one-word forms, otherwise hyphens (no CamelCase), items <= 11 characters
+    (see Conventions).
 15. **The credits and the end note** are translated as written: "about to start my second year of senior high"
     (马上升高二); 健康游戏忠告 = "Healthy Gaming Advice" (the official 2004 Chinese anti-addiction notice).
+16. **One name for the villain** (review): 大恶魔, 大魔头 (Chai Zi) and 魔王 (1-255-32) are all "the Archdemon";
+    "???" / "Who Am I" stay as written where he hides his name. The Inspector's 大恶魔 in the Hundred Flowers Array
+    (1-1-17) is the Prodigy Park Beast, not the villain: "a great demon".
+17. **Disciples' 掌门好** = "Welcome, Master!" (natural from disciples; 掌门 is "Sect Head" everywhere else).
+18. **Appraisal and status labels**: "Fame: X", "Talent: X", "Forging: X", "Step: X" (轻功技能, same word as the
+    menu item), "Mastery: X" (修为等级, shared by the other skills), "Reward: ...", "Potential: N-odd points",
+    "Disciples: under N". Look texts: one row per `*`: "*X looks 30-something." / "*Skill: a pushover." /
+    "*Hits: light." and "*Wears: Plain Robe" / "*description".
+19. **timemsg** (loading text, Healthy Gaming Advice, the 1-1-1 studio card) is drawn by the message box, which
+    shows a plain string on one row: these rows go through the text bank like `message` rows (`\n` breaks rows,
+    at most 5 rows of 140 px). The source's 16-byte padded rows are not copied.
+20. **Ellipses**: "..." for every 。。。。。。/......; US spelling (favorite, leveling, practiced).
 
 ## Inconsistencies and typos found in the source
 
@@ -181,10 +198,10 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 
 | category | terms |
 |---|---|
-| person | 72 |
-| title | 18 |
+| person | 74 |
+| title | 19 |
 | sect | 8 |
-| place | 69 |
+| place | 70 |
 | monster | 107 |
 | weapon | 46 |
 | armor | 48 |
@@ -192,9 +209,9 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | item | 48 |
 | magic | 53 |
 | skill | 21 |
-| other | 88 |
-| ui | 100 |
-| **total** | **712** |
+| other | 89 |
+| ui | 110 |
+| **total** | **727** |
 
 
 ## People and speakers
@@ -269,10 +286,12 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | 幻影守护者 | Dream Keeper |  |  | Taunts you when you refuse (1-11-3). |
 | 魔剑魂灵 | Hexblade Spirit |  |  | Moans when the two swords are fused (1-255-6); 镇妖剑魂灵 = 'Quellblade Spirit'. |
 | 大恶魔 | Archdemon |  | the Great Demon | Main villain: came through the time machine with the hero, controls the six sects; revealed (1-255-32) as the evil in the hero's own heart ('kill me and you kill yourself'). Same English for 大魔头 and 黑魔头. His fights use ARS 75 / 83 / 4 (Elder Fang, Retainer, Quarry Boss). |
-| 大魔头 | Archdemon |  | archfiend | Chai Zi's word for the same villain (1-1-20, 1-1-3). |
-| 魔王 | Demon King |  | Archdemon | 1-255-32 messages ('魔王使出大绝招'): the Archdemon. |
+| 大魔头 | Archdemon |  | archfiend | Chai Zi's word for the same villain (1-1-20 briefing, 1-1-3): 'the Archdemon' in dialogue too (review), so the player meets one name. |
+| 魔王 | Archdemon |  | Demon King | 1-255-32 message ' 魔王使出大绝招 ': the same villain, written 'the Archdemon' (review: one name for 大恶魔 / 大魔头 / 魔王). |
 | 我是谁 | Who Am I |  |  | The Archdemon's speaker tag in the final battle (1-1-17): literally 'who am I' (he is the hero's other half). Tag 'Who Am I:'. |
 | 朱元彰 | Zhu Yuanzhang |  |  | Ming founder (typo for 朱元璋) in the Taizu Fist description. |
+| 幻境BOSS | Dream Boss |  |  | Boss-level fights in the Dreamscape (1-11-3); beside Dream Guardian 1-5. |
+| 镇妖剑魂灵 | Quellblade Spirit |  |  | Moans during the sword fusion (1-255-6), beside the Hexblade Spirit. |
 
 ## Titles and forms of address
 
@@ -296,6 +315,7 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | 妾身 | I |  |  | The Matron's humble self-reference; plain 'I' with polite tone. |
 | 老身 | I |  |  | Granny's self-reference. |
 | 小子 | kid |  | boy; punk | How bosses, villains and Mr. Wenshi address the hero. |
+| 超级斑竹 | super moderator |  |  | SSK's rank on the BBK Club forum (1-3-6). |
 
 ## Sects and groups
 
@@ -383,6 +403,7 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | 中原 | the Central Plains |  |  | Intro scroll. |
 | 现实世界 | the real world |  |  | Quest log: the full version's quest is to return to the real world. |
 | 未来世界 | the future |  | the future world | Good ending: 'you returned to the future, now named Chai Zi'. |
+| 百花毒阵 | Hundred Flowers Poison Array |  |  | Prodigy Park banner message (1-10-1) for the Hundred Flowers Array. |
 
 ## Enemies and ARS-only names
 
@@ -764,7 +785,7 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | 基本刀法 | Basic Blade |  |  | Menu 'Blade'. |
 | 基本鞭法 | Basic Whip |  |  | Menu 'Whip'. |
 | 门派轻功 | Sect Step |  |  | Menu 'Sect-Step'. |
-| 轻功 | lightness skill |  | Step | Appraisal menu item 'Step'; ranks below. |
+| 轻功 | lightness skill |  | Step | Appraisal menu item 'Step'; ranks below. Appraisal label 轻功技能： = 'Step:' (matches the menu item), e.g. 'Step: Swift Feet'. |
 | 内功 | inner art |  | Qi | Appraisal menu item 'Qi'. |
 | 招架 | Parry |  |  |  |
 | 拳脚 | Fist |  | fists and feet |  |
@@ -806,6 +827,7 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | 仙剑 | Chinese Paladin |  |  | 仙剑迷 'a Chinese Paladin fan'; Xiaoyao's song (岁月难得沉默 秋风厌倦漂泊) is from the 2005 TV series song 逍遥叹. |
 | 试玩版 | demo |  | demo version | Leftover demo lines (1-10-7); 正式版 'full version'. |
 | 花讽院 | Hanafuin |  |  | Fictional school 'that created Kaede-ryu' (Slam Dunk pun); Japanese-style reading. |
+| 避毒披风 | poison-proof cape |  |  | Deng Shiyu's hint for the club treasure (1-7-6). Not an item in the game: lowercase, descriptive. |
 | 001 .. 052, b001 .. b010 | (same) |  |  | Numbered dev labels: NPC records ARS 3-2-1..52 and scene objects ARS 3-4-1..10. Never displayed; kept as is (62 glossary rows so autofill covers every ARS name). |
 
 ## UI, stats, money and rank ladders
@@ -889,7 +911,7 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | 神乎其技 | Uncanny |  |  | Forging rank (锻造技能：...). 不足挂齿 also in NPC looks ('skill: negligible'). |
 | 举世无双 | Peerless |  |  | Forging rank (锻造技能：...). 不足挂齿 also in NPC looks ('skill: negligible'). |
 | 鬼斧神工 | Divine |  |  | Forging rank (锻造技能：...). 不足挂齿 also in NPC looks ('skill: negligible'). |
-| 微力轻身 | Light Step |  |  | Lightness-skill rank (轻功技能：...). |
+| 微力轻身 | Featherlight |  |  | Lightness-skill rank, lowest; shown as 'Step: Featherlight' (轻功技能：...). Not 'Light Step' (would read 'Step: Light Step'). |
 | 神行百里 | Swift Feet |  |  | Lightness-skill rank (轻功技能：...). |
 | 飞檐走壁 | Wall Runner |  |  | Lightness-skill rank (轻功技能：...). |
 | 壁虎游墙 | Gecko |  |  | Lightness-skill rank (轻功技能：...). |
@@ -912,3 +934,13 @@ and RMB are the same joke currency, "RMB" (1W = 10K, 5W = 50K, 200W = 2M); 两 "
 | 初学乍练 | a novice |  |  | MUD-style look text '★武艺看起来...' ('Skill looks like: ...'). |
 | 不堪一击 | a pushover |  |  | MUD-style look text '★武艺看起来...' ('Skill looks like: ...'). |
 | 不知深浅 | unfathomable |  |  | MUD-style look text '★武艺看起来...' ('Skill looks like: ...'). |
+| 修为等级 | Mastery |  |  | Appraisal label (1-9-5, shared by qi/parry/fist/sword/blade/staff/whip): 'Mastery: Refined'. Ranks below (Cultivation rank). |
+| 轻功技能 | Step |  |  | Appraisal label (1-9-4): 'Step: Swift Feet', same word as the menu item 轻功 'Step'. |
+| 锻造技能 | Forging |  |  | Appraisal label (1-9-4): 'Forging: Expert'. |
+| 自言自语 | (to self) |  |  | Speaker-like tag for the hero talking to himself: '(to self): You mean my time machine, right?'. After another speaker's tag ('官兵:(自言自语)') write '(muttering)'. |
+| 练级提示 | Training tip |  |  | Tag (1-1-19): 'Training tip: Which skill gets your essence?'. |
+| 你被奖励了 | Reward |  |  | Reward messages: 'Reward: 3 battle exp, 0 potential'. |
+| 带著 | Wears |  |  | MUD look text '★带著：X' -> '*Wears: X' (no period). Look texts: one row per ★: '*X looks 30-something.' / '*Skill: a novice.' / '*Hits: light.' and '*Wears: Plain Robe' / '*description'. |
+| 武艺看起来 | Skill |  |  | MUD look text '★武艺看起来X' -> '*Skill: X.' (ranks: a novice, negligible, a pushover, unfathomable). |
+| 出手似乎 | Hits |  |  | MUD look text '★出手似乎X' -> '*Hits: light.' (very light, light, very heavy). |
+| 安全模式 | safe mode |  |  | Item script 1-255-1 (no encounters until you change maps). |

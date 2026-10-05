@@ -146,7 +146,7 @@ def translate_instr(i, argn: int, value, bank: list[bytes] | None) -> list:
     if i.name == "showgut":                 # the engine lays the scroll out 20 bytes per row
         i.args[argn] = fit.scroll_bytes(value)
         return []
-    if i.name == "message":                 # one box, rows from the bank
+    if i.name in ("message", "timemsg"):    # one box (timemsg: timed), rows from the bank
         bank.append("\n".join(fit.rows(value, fit.MESSAGE_WIDTH)).encode("ascii"))
         n = len(bank) - 1
         i.args[argn] = bytes([0xFE, 0x80 | n >> 7, 0xFE, 0x80 | n & 0x7F])
@@ -190,7 +190,7 @@ def apply(lib: Lib, rows: list[dict], bank: list[bytes] | None = None) -> tuple[
         if rid.startswith("gut/"):
             key_s, _, where = rid[4:].partition("@")
             gut_rows.setdefault(parse_key(key_s), {})[where] = (
-                r["en"] if bank is not None and r["kind"] in ("say", "message", "showgut") else data)
+                r["en"] if bank is not None and r["kind"] in ("say", "message", "timemsg", "showgut") else data)
             continue
         tag, key_s, fname = rid.split("/")
         k = parse_key(key_s)

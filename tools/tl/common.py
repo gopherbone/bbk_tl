@@ -62,6 +62,8 @@ def problems(r: dict, en: str) -> list[str]:
         out.append(f"description needs {len(fit.rows(en, fit.DESC_WIDTH))} rows; the window shows {fit.DESC_ROWS}")
     if k == "message" and len(fit.rows(en, fit.MESSAGE_WIDTH)) > 4:
         out.append("message needs more than 4 rows")
+    if k == "timemsg" and len(fit.rows(en, fit.MESSAGE_WIDTH)) > 5:
+        out.append("timed message needs more than 5 rows")
     if k == "menu" and len(en.split(" ")) != len(r["zh"].split(" ")):
         out.append("menu needs the same number of space-separated items")
     return out

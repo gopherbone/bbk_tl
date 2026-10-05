@@ -68,8 +68,8 @@
 {"zh": "魔剑魂灵", "en": "Hexblade Spirit", "category": "person", "count": 1, "note": "Moans when the two swords are fused (1-255-6); 镇妖剑魂灵 = 'Quellblade Spirit'.", "source_ids": ["gut/1-255-6@0086"]}
 {"zh": "怪兽", "en": "Beast", "category": "monster", "count": 26, "alt": "Monster", "note": "1-4-1: a man turned into a beast by Chen Xiao (speaks gibberish, then human speech); 1-10-1: the Prodigy Park boss ('小锣锣们上!'). [ARS/3-3-130]", "source_ids": ["ARS/3-3-130/name", "gut/1-4-1@0323", "gut/1-4-1@0340"]}
 {"zh": "大恶魔", "en": "Archdemon", "category": "person", "count": 12, "alt": "the Great Demon", "note": "Main villain: came through the time machine with the hero, controls the six sects; revealed (1-255-32) as the evil in the hero's own heart ('kill me and you kill yourself'). Same English for 大魔头 and 黑魔头. His fights use ARS 75 / 83 / 4 (Elder Fang, Retainer, Quarry Boss).", "source_ids": ["gut/1-1-3@06a4", "gut/1-1-3@06b0", "gut/1-1-3@075b"]}
-{"zh": "大魔头", "en": "Archdemon", "category": "person", "count": 5, "alt": "archfiend", "note": "Chai Zi's word for the same villain (1-1-20, 1-1-3).", "source_ids": ["gut/1-1-3@06f1", "gut/1-1-20@027a", "gut/1-1-20@0372.1"]}
-{"zh": "魔王", "en": "Demon King", "category": "person", "count": 1, "alt": "Archdemon", "note": "1-255-32 messages ('魔王使出大绝招'): the Archdemon.", "source_ids": ["gut/1-255-32@015b"]}
+{"zh": "大魔头", "en": "Archdemon", "category": "person", "count": 5, "alt": "archfiend", "note": "Chai Zi's word for the same villain (1-1-20 briefing, 1-1-3): 'the Archdemon' in dialogue too (review), so the player meets one name.", "source_ids": ["gut/1-1-3@06f1", "gut/1-1-20@027a", "gut/1-1-20@0372.1"]}
+{"zh": "魔王", "en": "Archdemon", "category": "person", "count": 1, "alt": "Demon King", "note": "1-255-32 message ' 魔王使出大绝招 ': the same villain, written 'the Archdemon' (review: one name for 大恶魔 / 大魔头 / 魔王).", "source_ids": ["gut/1-255-32@015b"]}
 {"zh": "我是谁", "en": "Who Am I", "category": "person", "count": 6, "note": "The Archdemon's speaker tag in the final battle (1-1-17): literally 'who am I' (he is the hero's other half). Tag 'Who Am I:'.", "source_ids": ["gut/1-1-17@0459", "gut/1-1-17@048e", "gut/1-1-17@053c"]}
 {"zh": "众玩家", "en": "Players", "category": "other", "count": 8, "alt": "All Players", "note": "Fourth-wall chorus tag ('众玩家:KAO!有完没完!').", "source_ids": ["gut/1-1-3@02fc", "gut/1-1-3@0356", "gut/1-1-3@0389"]}
 {"zh": "玩家", "en": "Player", "category": "other", "count": 12, "note": "Tag for the player complaining (1-1-17, 1-1-20).", "source_ids": ["gut/1-1-3@02fc", "gut/1-1-3@0356", "gut/1-1-3@0389"]}
@@ -96,6 +96,7 @@
 {"zh": "妾身", "en": "I", "category": "title", "count": 24, "note": "The Matron's humble self-reference; plain 'I' with polite tone.", "source_ids": ["gut/1-1-8@0291", "gut/1-1-8@02bf", "gut/1-1-8@02ed"]}
 {"zh": "老身", "en": "I", "category": "title", "count": 4, "note": "Granny's self-reference.", "source_ids": ["gut/1-9-10@01fe", "gut/1-9-10@022f", "gut/1-9-10@0257"]}
 {"zh": "小子", "en": "kid", "category": "title", "count": 17, "alt": "boy; punk", "note": "How bosses, villains and Mr. Wenshi address the hero.", "source_ids": ["gut/1-1-5@039b", "gut/1-1-17@0338", "gut/1-1-18@03bc"]}
+{"zh": "超级斑竹", "en": "super moderator", "category": "title", "count": 1, "note": "SSK's rank on the BBK Club forum (1-3-6).", "source_ids": ["gut/1-3-6@02a4"]}
 {"zh": "MM", "en": "girls", "category": "other", "count": 4, "alt": "babes", "note": "Net slang 美眉 (Chai Zi: 'take some girls along'; the quest log hint 'find two girls'). Use 'girls'.", "source_ids": ["gut/1-0-9@02e2", "gut/1-1-3@05fa", "gut/1-1-17@048e"]}
 {"zh": "花间派", "en": "Flower Sect", "category": "sect", "count": 3, "alt": "Huajian Sect", "note": "Li Qingzhao's sect on Jade Peak; pun on the 花间 school of ci poetry. Whip arts (Myriad Lash, Ice Lash, Bloom Whip). Token menu item '花间' = 'Flower'.", "source_ids": ["GRS/6-14-33/desc", "MRS/4-1-13/desc", "MRS/4-1-14/desc"]}
 {"zh": "伊贺谷", "en": "Iga Valley", "category": "sect", "count": 2, "note": "Ninja clan (Japanese 伊賀) on Icefire Isle, head He Zhongyang; its members are game/anime parodies (Jubei, Fujiomaru, Ukyo...). Menu '伊贺' = 'Iga'.", "source_ids": ["GRS/6-14-34/name", "GRS/6-14-34/desc"]}
@@ -180,6 +181,7 @@
 {"zh": "中原", "en": "the Central Plains", "category": "place", "count": 1, "note": "Intro scroll.", "source_ids": ["gut/1-1-1@0086"]}
 {"zh": "现实世界", "en": "the real world", "category": "place", "count": 2, "note": "Quest log: the full version's quest is to return to the real world.", "source_ids": ["gut/1-0-9@02e2", "gut/1-10-2@011e"]}
 {"zh": "未来世界", "en": "the future", "category": "place", "count": 1, "alt": "the future world", "note": "Good ending: 'you returned to the future, now named Chai Zi'.", "source_ids": ["gut/1-1-17@080f"]}
+{"zh": "百花毒阵", "en": "Hundred Flowers Poison Array", "category": "place", "count": 1, "note": "Prodigy Park banner message (1-10-1) for the Hundred Flowers Array.", "source_ids": ["gut/1-10-1@0217"]}
 {"zh": "时间机器", "en": "time machine", "category": "item", "count": 5, "note": "In the hero's room (1-1-3): takes the six tokens and releases the Archdemon. Also 时空转换装置 'space-time transfer device' (intro).", "source_ids": ["gut/1-1-9@02f5", "gut/1-1-20@027a", "gut/1-11-2@019f"]}
 {"zh": "瞬息转移系统", "en": "Instant Transfer", "category": "ui", "count": 1, "alt": "teleport system", "note": "1-0-6 message 'opened the Instant Transfer system' (teleport to towns; costs qi).", "source_ids": ["gut/1-0-6@01f7"]}
 {"zh": "雪豹", "en": "Snow Leopard", "category": "monster", "count": 7, "note": "Snowpeak: sells 'leopard skin... 1500' (his own!). Errand target ('Can it even understand?'). ARS 7 is also used for the tiger fights. 12 chars: ARS short 'Leopard'. [ARS/3-3-7]", "source_ids": ["ARS/3-3-7/name", "gut/1-0-9@0459", "gut/1-1-8@0a36"], "short": "Leopard"}
@@ -524,7 +526,7 @@
 {"zh": "基本刀法", "en": "Basic Blade", "category": "skill", "count": 2, "note": "Menu 'Blade'.", "source_ids": ["gut/1-1-19@0502", "gut/1-9-14@0340"]}
 {"zh": "基本鞭法", "en": "Basic Whip", "category": "skill", "count": 2, "note": "Menu 'Whip'.", "source_ids": ["gut/1-1-19@0502", "gut/1-9-14@040e"]}
 {"zh": "门派轻功", "en": "Sect Step", "category": "skill", "count": 2, "note": "Menu 'Sect-Step'.", "source_ids": ["gut/1-1-19@0502", "gut/1-9-14@04dc"]}
-{"zh": "轻功", "en": "lightness skill", "category": "skill", "count": 15, "alt": "Step", "note": "Appraisal menu item 'Step'; ranks below.", "source_ids": ["gut/1-1-19@0502", "gut/1-9-4@050f", "gut/1-9-4@0b61"]}
+{"zh": "轻功", "en": "lightness skill", "category": "skill", "count": 15, "alt": "Step", "note": "Appraisal menu item 'Step'; ranks below. Appraisal label 轻功技能： = 'Step:' (matches the menu item), e.g. 'Step: Swift Feet'.", "source_ids": ["gut/1-1-19@0502", "gut/1-9-4@050f", "gut/1-9-4@0b61"]}
 {"zh": "内功", "en": "inner art", "category": "skill", "count": 8, "alt": "Qi", "note": "Appraisal menu item 'Qi'.", "source_ids": ["gut/1-0-8@0003", "gut/1-1-19@0502", "gut/1-9-4@050f"]}
 {"zh": "招架", "en": "Parry", "category": "skill", "count": 3, "note": "", "source_ids": ["gut/1-1-19@0502", "gut/1-9-4@050f", "gut/1-9-14@020b"]}
 {"zh": "拳脚", "en": "Fist", "category": "skill", "count": 3, "alt": "fists and feet", "note": "", "source_ids": ["gut/1-1-19@0502", "gut/1-9-4@050f", "gut/1-9-14@0272"]}
@@ -610,7 +612,7 @@
 {"zh": "神乎其技", "en": "Uncanny", "category": "ui", "count": 1, "note": "Forging rank (锻造技能：...). 不足挂齿 also in NPC looks ('skill: negligible').", "source_ids": ["gut/1-9-4@0b08"]}
 {"zh": "举世无双", "en": "Peerless", "category": "ui", "count": 1, "note": "Forging rank (锻造技能：...). 不足挂齿 also in NPC looks ('skill: negligible').", "source_ids": ["gut/1-9-4@0b26"]}
 {"zh": "鬼斧神工", "en": "Divine", "category": "ui", "count": 1, "note": "Forging rank (锻造技能：...). 不足挂齿 also in NPC looks ('skill: negligible').", "source_ids": ["gut/1-9-4@0b3b"]}
-{"zh": "微力轻身", "en": "Light Step", "category": "ui", "count": 1, "note": "Lightness-skill rank (轻功技能：...).", "source_ids": ["gut/1-9-4@0b61"]}
+{"zh": "微力轻身", "en": "Featherlight", "category": "ui", "count": 1, "note": "Lightness-skill rank, lowest; shown as 'Step: Featherlight' (轻功技能：...). Not 'Light Step' (would read 'Step: Light Step').", "source_ids": ["gut/1-9-4@0b61"]}
 {"zh": "神行百里", "en": "Swift Feet", "category": "ui", "count": 1, "note": "Lightness-skill rank (轻功技能：...).", "source_ids": ["gut/1-9-4@0b96"]}
 {"zh": "飞檐走壁", "en": "Wall Runner", "category": "ui", "count": 1, "note": "Lightness-skill rank (轻功技能：...).", "source_ids": ["gut/1-9-4@0bb4"]}
 {"zh": "壁虎游墙", "en": "Gecko", "category": "ui", "count": 1, "note": "Lightness-skill rank (轻功技能：...).", "source_ids": ["gut/1-9-4@0bd2"]}
@@ -633,6 +635,16 @@
 {"zh": "初学乍练", "en": "a novice", "category": "ui", "count": 1, "note": "MUD-style look text '★武艺看起来...' ('Skill looks like: ...').", "source_ids": ["gut/1-1-2@0689"]}
 {"zh": "不堪一击", "en": "a pushover", "category": "ui", "count": 5, "note": "MUD-style look text '★武艺看起来...' ('Skill looks like: ...').", "source_ids": ["gut/1-1-5@025b", "gut/1-1-6@041d", "gut/1-1-7@065c"]}
 {"zh": "不知深浅", "en": "unfathomable", "category": "ui", "count": 1, "note": "MUD-style look text '★武艺看起来...' ('Skill looks like: ...').", "source_ids": ["gut/1-9-4@0406"]}
+{"zh": "修为等级", "en": "Mastery", "category": "ui", "count": 10, "note": "Appraisal label (1-9-5, shared by qi/parry/fist/sword/blade/staff/whip): 'Mastery: Refined'. Ranks below (Cultivation rank).", "source_ids": ["gut/1-9-5@0207", "gut/1-9-5@023a", "gut/1-9-5@0258"]}
+{"zh": "轻功技能", "en": "Step", "category": "ui", "count": 10, "note": "Appraisal label (1-9-4): 'Step: Swift Feet', same word as the menu item 轻功 'Step'.", "source_ids": ["gut/1-9-4@0b61", "gut/1-9-4@0b96", "gut/1-9-4@0bb4"]}
+{"zh": "锻造技能", "en": "Forging", "category": "ui", "count": 10, "note": "Appraisal label (1-9-4): 'Forging: Expert'.", "source_ids": ["gut/1-9-4@0a21", "gut/1-9-4@0a54", "gut/1-9-4@0a72"]}
+{"zh": "自言自语", "en": "(to self)", "category": "ui", "count": 4, "note": "Speaker-like tag for the hero talking to himself: '(to self): You mean my time machine, right?'. After another speaker's tag ('官兵:(自言自语)') write '(muttering)'.", "source_ids": ["gut/1-1-9@02f5", "gut/1-1-17@0315", "gut/1-1-17@07dc"]}
+{"zh": "练级提示", "en": "Training tip", "category": "ui", "count": 1, "note": "Tag (1-1-19): 'Training tip: Which skill gets your essence?'.", "source_ids": ["gut/1-1-19@04d8"]}
+{"zh": "你被奖励了", "en": "Reward", "category": "ui", "count": 37, "note": "Reward messages: 'Reward: 3 battle exp, 0 potential'.", "source_ids": ["gut/1-1-7@03ec", "gut/1-1-7@040a", "gut/1-1-7@0428"]}
+{"zh": "带著", "en": "Wears", "category": "ui", "count": 10, "note": "MUD look text '★带著：X' -> '*Wears: X' (no period). Look texts: one row per ★: '*X looks 30-something.' / '*Skill: a novice.' / '*Hits: light.' and '*Wears: Plain Robe' / '*description'.", "source_ids": ["gut/1-1-2@06db", "gut/1-1-4@02a7", "gut/1-1-5@02ad"]}
+{"zh": "武艺看起来", "en": "Skill", "category": "ui", "count": 10, "note": "MUD look text '★武艺看起来X' -> '*Skill: X.' (ranks: a novice, negligible, a pushover, unfathomable).", "source_ids": ["gut/1-1-2@0689", "gut/1-1-4@0255", "gut/1-1-5@025b"]}
+{"zh": "出手似乎", "en": "Hits", "category": "ui", "count": 10, "note": "MUD look text '★出手似乎X' -> '*Hits: light.' (very light, light, very heavy).", "source_ids": ["gut/1-1-2@0689", "gut/1-1-4@0255", "gut/1-1-5@025b"]}
+{"zh": "安全模式", "en": "safe mode", "category": "ui", "count": 2, "note": "Item script 1-255-1 (no encounters until you change maps).", "source_ids": ["gut/1-255-1@0003", "gut/1-255-1@0064"]}
 {"zh": "江湖", "en": "the martial world", "category": "other", "count": 7, "alt": "jianghu", "note": "", "source_ids": ["gut/1-0-8@0783", "gut/1-7-6@0258", "gut/1-9-4@0458"]}
 {"zh": "武林", "en": "the martial world", "category": "other", "count": 4, "alt": "wulin", "note": "", "source_ids": ["gut/1-1-20@0232", "gut/1-1-20@03e9", "GRS/6-14-11/name"]}
 {"zh": "健康游戏忠告", "en": "Healthy Gaming Advice", "category": "other", "count": 2, "note": "The 2004 official Chinese anti-addiction notice (1-0-5 timemsg): 抵制不良游戏 'Reject bad games', 拒绝盗版游戏 'Refuse pirated games', 适度自我保护 'Protect yourself', 谨防受骗上当 'Beware of scams', 适度游戏益脑 'Moderate play is good for the brain', 沉迷游戏伤身 'Addiction harms the body', 合理安排时间 'Manage your time', 享受健康生活 'Enjoy a healthy life'.", "source_ids": ["gut/1-0-2@0003", "gut/1-0-5@0046"]}
@@ -647,6 +659,8 @@
 {"zh": "仙剑", "en": "Chinese Paladin", "category": "other", "count": 1, "note": "仙剑迷 'a Chinese Paladin fan'; Xiaoyao's song (岁月难得沉默 秋风厌倦漂泊) is from the 2005 TV series song 逍遥叹.", "source_ids": ["gut/1-10-1@06e2"]}
 {"zh": "试玩版", "en": "demo", "category": "other", "count": 1, "alt": "demo version", "note": "Leftover demo lines (1-10-7); 正式版 'full version'.", "source_ids": ["gut/1-10-7@000c"]}
 {"zh": "朱元彰", "en": "Zhu Yuanzhang", "category": "person", "count": 1, "note": "Ming founder (typo for 朱元璋) in the Taizu Fist description.", "source_ids": ["MRS/4-1-16/desc"]}
+{"zh": "幻境BOSS", "en": "Dream Boss", "category": "person", "count": 1, "note": "Boss-level fights in the Dreamscape (1-11-3); beside Dream Guardian 1-5.", "source_ids": ["gut/1-11-3@029b"]}
+{"zh": "镇妖剑魂灵", "en": "Quellblade Spirit", "category": "person", "count": 1, "note": "Moans during the sword fusion (1-255-6), beside the Hexblade Spirit.", "source_ids": ["gut/1-255-6@009b"]}
 {"zh": "花讽院", "en": "Hanafuin", "category": "other", "count": 1, "note": "Fictional school 'that created Kaede-ryu' (Slam Dunk pun); Japanese-style reading.", "source_ids": ["MRS/4-1-20/desc"]}
 {"zh": "001", "en": "001", "category": "other", "count": 2, "note": "NPC record label (ARS 3-2-1..52 are numbered dev labels; NPC names are never displayed). Keep as is.", "source_ids": ["ARS/3-2-1/name", "ARS/3-4-1/name"]}
 {"zh": "002", "en": "002", "category": "other", "count": 2, "note": "NPC record label (ARS 3-2-1..52 are numbered dev labels; NPC names are never displayed). Keep as is.", "source_ids": ["ARS/3-2-2/name", "ARS/3-4-2/name"]}
@@ -710,3 +724,4 @@
 {"zh": "b008", "en": "b008", "category": "other", "count": 1, "note": "Scene-object record label (ARS 3-4-x). Keep as is.", "source_ids": ["ARS/3-4-8/name"]}
 {"zh": "b009", "en": "b009", "category": "other", "count": 1, "note": "Scene-object record label (ARS 3-4-x). Keep as is.", "source_ids": ["ARS/3-4-9/name"]}
 {"zh": "b010", "en": "b010", "category": "other", "count": 1, "note": "Scene-object record label (ARS 3-4-x). Keep as is.", "source_ids": ["ARS/3-4-10/name"]}
+{"zh": "避毒披风", "en": "poison-proof cape", "category": "other", "count": 1, "note": "Deng Shiyu's hint for the club treasure (1-7-6). Not an item in the game: lowercase, descriptive.", "source_ids": ["gut/1-7-6@03ea"]}

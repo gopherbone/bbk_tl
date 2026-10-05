@@ -53,7 +53,7 @@ def script(orig: Lib, rows: dict[str, dict], ids: list[str], bank: list[bytes] |
             r = rows.get(base + (f".{sn + 1}" if len(sidx) > 1 else ""), {})
             en = r.get("en")
             if en:
-                value = en if (bank is not None and r.get("kind") in ("say", "message", "showgut")) else strmod.encode_en(en)
+                value = en if (bank is not None and r.get("kind") in ("say", "message", "timemsg", "showgut")) else strmod.encode_en(en)
                 extra += strmod.translate_instr(i, argn, value, bank)
         code += [i] + extra
     idle = gutmod.Instr(0, gutmod.BY_NAME["goto"][0], [0], b"")
