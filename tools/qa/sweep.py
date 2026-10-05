@@ -48,7 +48,16 @@ def expected(rid):
         return ["\n".join(fit.rows(r["en"], fit.MESSAGE_WIDTH))], "message"
     if r["kind"] == "menu":
         return r["en"].split(" "), "menu"
+    if r["kind"] == "showgut":                       # the scroll is logged row by row
+        return [l.strip() for l in r["en"].split("\n") if l.strip()], "showgut"
     return [r["en"]], r["kind"]
+
+
+def budget(rid):
+    """ENTER presses (70 frames apart) to give a row: one per page; a scroll
+    moves about one row per two presses whatever the keys do."""
+    exp, kind = expected(rid)
+    return 1 if kind == "menu" else 2 * len(exp) if kind == "showgut" else len(exp)
 
 
 orig = GAME.read_gam()
@@ -62,7 +71,7 @@ for bn, batch in enumerate(batches):
     path = f"{OUT}/batch_{bn:02d}.gam"
     open(path, "wb").write(out)
     json.dump({"bank": info["bank"]}, open(path[:-4] + ".bank.json", "w"))
-    pages = sum(len(expected(i)[0]) for i in batch)
+    pages = sum(budget(i) for i in batch)
     shots, drawn = [], []
     with BBKEmu() as e:
         e.load_gam(path, rom_dir=ROMS)
