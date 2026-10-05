@@ -31,8 +31,11 @@ def _icon(word: str):
 
 # Calligraphy is kept as drawn; English is added in free space beside it.
 SRS_IMAGES = {
-    # status pop-ups that float up in battle: 攻 防 速 毒 乱 封 眠
-    **{(5, 1, 3 + i): {0: _icon(w)} for i, w in enumerate(["ATK", "DEF", "AGI", "PSN", "CNF", "SIL", "SLP"])},
+    # status pop-ups: 攻 防 速 毒 乱 封 眠. Battle draws the copies at 240-246;
+    # 3-9 are the originals. The Eight Gates formation (5-2-25, 休生伤杜景死惊开)
+    # keeps its glyphs: they are the formation's symbols, not text.
+    **{(5, 1, base + i): {0: _icon(w)} for base in (3, 240)
+       for i, w in enumerate(["ATK", "DEF", "AGI", "PSN", "CNF", "SIL", "SLP"])},
     # boot logo: four 20x19 brush glyphs at x 32, 57, 82, 107 (y 38), drawn in
     # order, so the first (英) grows to span all four and carries the English
     # under them; the later glyphs draw over its top rows.

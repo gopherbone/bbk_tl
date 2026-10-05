@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from . import engine_text, fontpatch, games
+from . import engine_images, engine_text, fontpatch, games
 from . import gam as gammod
 from . import lib as libmod
 from . import strings as strmod
@@ -25,6 +25,8 @@ def build(orig: bytes, rows: list[dict], gallery: list[str] | None = None,
         built.res[gallerymod.OPENING] = gallerymod.script(lib, {r["id"]: r for r in rows}, gallery, bank)
     engine, eprob = engine_text.apply(orig, rows, bank, game.engine)
     problems += eprob
+    engine, iprob = engine_images.apply(engine, rows)
+    problems += iprob
     joined = gammod.join(engine, libmod.pack(built))
     out, info = fontpatch.patch(joined, bank, game.dialogue_top)
     info["bank"] = [b.decode("ascii", "replace") for b in bank]
