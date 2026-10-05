@@ -99,6 +99,9 @@ section p { max-width: 680px; }
 .card .orig { color: var(--muted); margin: 2px 0 8px; }
 .card .meta { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
 .card .blurb { margin: 0 0 14px; }
+.card .content-note { margin: -6px 0 14px; color: var(--muted); font-size: 14px; }
+.card .content-note summary { cursor: pointer; }
+.card .content-note p { margin: 6px 0 0; }
 .badge {
   display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 99px;
   background: var(--surface-2); border: 1px solid var(--border); color: var(--text); vertical-align: 3px; margin-left: 6px;

@@ -36,6 +36,11 @@ def _szzm_images(res: dict, rows: list[dict]) -> None:
     images_szzm.apply(res, rows)
 
 
+def _xkx_images(res: dict, rows: list[dict]) -> None:
+    from . import images_xkx
+    images_xkx.apply(res, rows)
+
+
 def _jy_images(res: dict, rows: list[dict]) -> None:
     from . import images_jy
     images_jy.apply(res, rows)
@@ -50,6 +55,7 @@ class Game:
     title_en: str | None = None               # release name; None = not releasable yet
     owner: str = "BBK"                        # rights holder named in release notes
     dialogue_top: int = 57                    # top of a say box's first English row (fontpatch)
+    content_note: str = ""                    # for the release README and the site catalog
     strings: str = ""
     gut: str = ""
     parts: str = ""
@@ -83,6 +89,16 @@ def _game(key: str, zh: str, **kw) -> Game:
     return Game(key, zh, **d)
 
 
+XKX_NOTE = (
+    "This fan game, written around 2005, has a side area on a \"Japan Island\" built on crude anti-Japanese "
+    "jokes: the player spits on and kicks a Japanese official, and refusing ends the game for \"shaming China\". "
+    "The jokes come from their moment. In spring 2005 Japan's bid for a permanent UN Security Council seat, "
+    "together with Japanese history textbooks that played down wartime atrocities and prime-ministerial visits "
+    "to the Yasukuni Shrine, set off mass protests across China, and that anger filled the Chinese teenage "
+    "forums this game came from. Behind it lies the memory of Japan's invasion and occupation of China "
+    "(1931-1945). The translation keeps these scenes as written but not the slur 小日本 (\"little Japan\"), "
+    "which becomes \"the Japanese\". The game also has its teenage authors' swearing and crude humour.")
+
 GAMES: dict[str, Game] = {g.key: g for g in [
     _game("fmj", "伏魔记", engine=engine_text.FMJ, images=_fmj_images,
           title_en="Demonbane Chronicle",
@@ -94,6 +110,8 @@ GAMES: dict[str, Game] = {g.key: g for g in [
           owner="its authors, Caizi Studio (才子工作室)"),
     _game("szzm", "十字之门", engine=engine_text.SZZM, images=_szzm_images, title_en="Cross Entry",
           owner="its author, 翼王 (Yiwang)", dialogue_top=59),   # its say box sits 2 px lower
+    _game("xkx", "侠客行", engine=engine_text.XKX, images=_xkx_images, title_en="Ode to Gallantry",
+          owner="its authors, Chunlan Studio (纯蓝工作室)", content_note=XKX_NOTE),
 ]}
 
 DEFAULT = "fmj"

@@ -4,7 +4,7 @@
 -> dist/<Title>-<VERSION>.bps (+ README, checksums). The patch is applied to
 the player's own copy of the game (BBK A4980/A4988, CRC32 below).
 """
-import hashlib, subprocess, sys, zlib
+import hashlib, subprocess, sys, textwrap, zlib
 sys.path.insert(0, ".")
 from bbkrpg import bps, games
 
@@ -37,5 +37,7 @@ Patched result:
 The patch contains no BBK firmware and no game data beyond the translated
 text, font and the English renderer. {game.zh} belongs to {game.owner}.
 """
+if game.content_note:
+    readme += "\nContent note:\n" + textwrap.fill(game.content_note, 78, initial_indent="  ", subsequent_indent="  ") + "\n"
 open(f"dist/{name}.README.txt", "w").write(readme)
 print(f"dist/{name}.bps: {len(patch)} bytes")

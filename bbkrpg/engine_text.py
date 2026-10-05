@@ -163,6 +163,14 @@ SZZM: list[Entry] = [
     (0x3B469, "已满载！", None),
 ]
 
+# 侠客行 and its engine family (24941e1b32: 新仙剑奇侠传, 天之骄子, 新伏魔记 and 28
+# more) is 伏魔记's Ver1.3 code with the save message and the battle segment
+# moved (like 十字之门), plus the overwrite prompt.
+_XKX_MOVED = {0x0F615: 0x0F524, 0x1F8A0: 0x1F788, 0x1F8AA: 0x1F792, 0x1F8E4: 0x1F7CC}
+XKX: list[Entry] = [(_XKX_MOVED.get(off, off), zh, items) for off, zh, items in FMJ] + [
+    (0x47C12, "覆盖原进度？", None),
+]
+
 FILLER = b"\xfc\x80"
 RESERVED_SHORT = 128          # bank ids 0..127 are for 2-byte (FD) slots
 

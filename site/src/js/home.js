@@ -31,6 +31,7 @@
         el('p', { class: 'orig' }, [el('span', { class: 'zh', text: game.title_zh }), ' · ' + game.pinyin]),
         el('p', { class: 'meta', text: [game.year, game.genre, game.authors].filter(Boolean).join(' · ') }),
         el('p', { class: 'blurb', text: game.blurb }),
+        game.content_note ? el('details', { class: 'content-note' }, [el('summary', { text: 'Content note' }), el('p', { text: game.content_note })]) : null,
         el('div', { class: 'actions-row' }, buttons)
       ])
     ]);

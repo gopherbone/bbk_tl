@@ -161,6 +161,39 @@
           "base": "gam4980/retroarch/downloads/bbk/三国霸业.gam"
         }
       ]
+    },
+    {
+      "id": "ode-to-gallantry",
+      "title": "Ode to Gallantry",
+      "title_zh": "侠客行",
+      "pinyin": "Xiá Kè Xíng",
+      "year": 2005,
+      "genre": "RPG / raising sim",
+      "authors": "纯蓝工作室 (Chunlan Studio): 纯蓝守护者 (Chunlan Guardian), SSK",
+      "blurb": "A cheeky wuxia raising sim on the BBKRPG engine: as young Mo Ming you age a year for every hour of play, join and climb a sect, win the Martial Tournament, marry, found your own sect and storm Bright Peak, then seal the world's demons in a well with an array of BBK electronic dictionaries. Not Jin Yong's novel, despite the name.",
+      "content_note": "This fan game, written around 2005, has a side area on a \"Japan Island\" built on crude anti-Japanese jokes: the player spits on and kicks a Japanese official, and refusing ends the game for \"shaming China\". The jokes come from their moment. In spring 2005 Japan's bid for a permanent UN Security Council seat, together with Japanese history textbooks that played down wartime atrocities and prime-ministerial visits to the Yasukuni Shrine, set off mass protests across China, and that anger filled the Chinese teenage forums this game came from. Behind it lies the memory of Japan's invasion and occupation of China (1931-1945). The translation keeps these scenes as written but not the slur 小日本 (\"little Japan\"), which becomes \"the Japanese\". The game also has its teenage authors' swearing and crude humour.",
+      "keys": [
+        "arrows",
+        "ok",
+        "back"
+      ],
+      "versions": [
+        {
+          "lang": "en",
+          "label": "English",
+          "version": "v0.1",
+          "status": "Complete translation",
+          "base": "gam4980/retroarch/downloads/bbk/侠客行.gam",
+          "patch": "dist/OdeToGallantry-v0.1.bps"
+        },
+        {
+          "lang": "zh",
+          "label": "Original (Chinese)",
+          "version": "完美版",
+          "status": "Original release",
+          "base": "gam4980/retroarch/downloads/bbk/侠客行.gam"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,317 @@
+{"id": "GRS/6-1-1/desc", "en": "Bronze makes a Bronze Cap. Every Earthling knows. DEF+3"}
+{"id": "GRS/6-1-2/desc", "en": "Copper makes a Copper Cap. Any human knows. DEF+5"}
+{"id": "GRS/6-1-3/desc", "en": "Iron makes an Iron Helm. Even aliens know. DEF+8"}
+{"id": "GRS/6-1-4/desc", "en": "Steel. The universe knows. DEF+11, SPI+3, Sil immune"}
+{"id": "GRS/6-1-5/desc", "en": "Every universe knows this one. DEF+28, AGI+5, SPI+3, LUK+3"}
+{"id": "GRS/6-1-6/desc", "en": "Dunno~ MaxMP+15, ATK-4, DEF+20, SPI+12, immune Cnf Slp"}
+{"id": "GRS/6-1-7/desc", "en": "From Legend of Mir! DEF+30, AGI+15, SPI+10, LUK+30"}
+{"id": "GRS/6-1-8/desc", "en": "From Legend of Mir! DEF+35, AGI+20, SPI+10, LUK+30"}
+{"id": "GRS/6-1-9/desc", "en": "A Mystic Cap from Legend of Mir, full of mystic power!"}
+{"id": "GRS/6-1-10/desc", "en": "Mir's Black Helm, of dark iron! DEF+40, SPI+20, LUK+20"}
+{"id": "GRS/6-1-11/desc", "en": "Ox Helm: the Bull Demon King's horns. DEF+60, LUK+60"}
+{"id": "GRS/6-1-12/desc", "en": "A Li tribe headdress said to ward off evil. DEF+100, Cnf immune"}
+{"id": "GRS/6-1-13/desc", "en": "Silver set with blue jade. DEF+100, SPI+60, LUK+40, Cnf immune"}
+{"id": "GRS/6-1-14/desc", "en": "Bunny Helm: it has bunny ears! DEF+100, AGI+50, Sil immune"}
+{"id": "GRS/6-1-15/desc", "en": "A weird-looking mask that keeps out poison."}
+{"id": "GRS/6-2-1/desc", "en": "A short-sleeved black jacket of coarse cloth. DEF+5"}
+{"id": "GRS/6-2-2/desc", "en": "Armor made of buffalo hide. DEF+10"}
+{"id": "GRS/6-2-3/desc", "en": "A long-sleeved black jacket of coarse cloth. DEF+5"}
+{"id": "GRS/6-2-4/desc", "en": "For true martial artists. DEF+15, LUK+5, SPI+5"}
+{"id": "GRS/6-2-5/desc", "en": "Snakeskin clothes that keep out poison. DEF+35, Psn immune"}
+{"id": "GRS/6-2-6/desc", "en": "Zhang Daoling's robe. DEF+40, SPI+12, Sil immune"}
+{"id": "GRS/6-2-7/desc", "en": "Jade on gold thread. DEF+40, LUK+10, AGI-10, Cnf immune"}
+{"id": "GRS/6-2-8/desc", "en": "Mir's Lv40 sorceress robe! DEF+50, SPI+12, Sil immune"}
+{"id": "GRS/6-2-9/desc", "en": "Only those brimming with justice can wear it. DEF+80, LUK+20"}
+{"id": "GRS/6-2-10/desc", "en": "Light wild silk. DEF+50, AGI+50"}
+{"id": "GRS/6-2-11/desc", "en": "Red plumes like a fire. DEF+60, AGI+40, Cnf immune"}
+{"id": "GRS/6-2-12/desc", "en": "Holds the 'Shadow' charm. DEF+100, immune to all ailments"}
+{"id": "GRS/6-2-13/desc", "en": "Bronze armor covered in barbs. DEF+55, ATK+50"}
+{"id": "GRS/6-2-14/desc", "en": "Spider God silk. DEF+140, Psn immune"}
+{"id": "GRS/6-2-15/desc", "en": "Strung all over with fine pearls. DEF+150, AGI+30, LUK+10"}
+{"id": "GRS/6-2-16/desc", "en": "Swan feathers, poison-proof. DEF+164, AGI+60, Psn immune"}
+{"id": "GRS/6-2-17/desc", "en": "Stealth Fort's black garb. DEF+135, AGI+60, LUK+16"}
+{"id": "GRS/6-2-18/desc", "en": "Crane-woven silk. Buddhas walk with you. A true treasure!"}
+{"id": "GRS/6-3-1/desc", "en": "Cheap rush sandals, light and good for walking. DEF+1"}
+{"id": "GRS/6-3-2/desc", "en": "Tall boots of coarse cloth. DEF+3, AGI+1"}
+{"id": "GRS/6-3-3/desc", "en": "Tall boots worn by Taoists. DEF+5, AGI+2"}
+{"id": "GRS/6-3-4/desc", "en": "Boots fit for lords. DEF+8, AGI+6, MaxHP+10"}
+{"id": "GRS/6-3-5/desc", "en": "Lined with steel wire against blades. DEF+22, AGI+5"}
+{"id": "GRS/6-3-6/desc", "en": "Gauze thin as mist. Run like the wind. DEF+10, AGI+18"}
+{"id": "GRS/6-3-7/desc", "en": "Shoes of plain patterned cloth. DEF+4, AGI+2"}
+{"id": "GRS/6-3-8/desc", "en": "Fine embroidered shoes for young ladies. DEF+8, AGI+3"}
+{"id": "GRS/6-3-9/desc", "en": "Soft deerskin. Move as fast as a deer. DEF+11, AGI+5"}
+{"id": "GRS/6-3-10/desc", "en": "Tall embroidered boots with gold lotuses. DEF+10, AGI+8"}
+{"id": "GRS/6-3-11/desc", "en": "Crystal with glow pearls. DEF+15, AGI+12"}
+{"id": "GRS/6-3-12/desc", "en": "Sky fox pelt. Pricey, and worth a fortune! DEF+20, AGI+16"}
+{"id": "GRS/6-3-13/desc", "en": "Divine clay shoes that fit any foot. MaxHP+20, DEF+16, AGI+22"}
+{"id": "GRS/6-3-14/desc", "en": "Wind-riding sandals. MaxHP/MP+20, DEF+4, AGI+26"}
+{"id": "GRS/6-3-15/desc", "en": "Tour the mountains in a day. DEF+30, AGI+24, SPI+12, LUK+10"}
+{"id": "GRS/6-4-1/desc", "en": "Keeps out wind and cold. DEF+2"}
+{"id": "GRS/6-4-2/desc", "en": "Armor that guards the shoulders. DEF+6"}
+{"id": "GRS/6-4-3/desc", "en": "Good armor, but heavy! You'll be clumsy in it. DEF+12, AGI-7"}
+{"id": "GRS/6-4-4/desc", "en": "A cape of wyrm hide. Good protection. DEF+12"}
+{"id": "GRS/6-4-5/desc", "en": "Armor of fish-scale plates. DEF+18, AGI-4"}
+{"id": "GRS/6-4-6/desc", "en": "Forged of rare fine steel. DEF+19"}
+{"id": "GRS/6-4-7/desc", "en": "Made from the hide of a blood-sweating steed. DEF+28"}
+{"id": "GRS/6-4-8/desc", "en": "Ten green snakeskins of one age, soft and supple. DEF+32"}
+{"id": "GRS/6-4-9/desc", "en": "Woven of golden eagle feathers. DEF+32, SPI+16"}
+{"id": "GRS/6-4-10/desc", "en": "The outer robe of a powerful Taoist. DEF+31, SPI+26"}
+{"id": "GRS/6-4-11/desc", "en": "Heavenly King Li's old cape. DEF+66, SPI+15"}
+{"id": "GRS/6-4-12/desc", "en": "Woven by the Weaver Girl. DEF+52, SPI+15"}
+{"id": "GRS/6-4-13/desc", "en": "Lu Ban's reed armor, female. DEF+3, Psn immune"}
+{"id": "GRS/6-4-14/desc", "en": "Lu Ban's reed armor, male. DEF+3, Psn immune"}
+{"id": "GRS/6-5-1/desc", "en": "Gloves are gloves! What's to explain? DEF+2"}
+{"id": "GRS/6-5-2/desc", "en": "Sun Wukong wore it (fits on a wrist too). DEF+60, AGI-3, SPI-10"}
+{"id": "GRS/6-5-3/desc", "en": "Ha ha! A wristband made of cloth, duh. DEF+30"}
+{"id": "GRS/6-5-4/desc", "en": "A well-made wristband! ATK+10, DEF+24, SPI+4"}
+{"id": "GRS/6-5-5/desc", "en": "Stolen beads! (Stolen? By who?!) DEF+60"}
+{"id": "GRS/6-5-6/desc", "en": "A perfectly ordinary jade bangle. DEF+100"}
+{"id": "GRS/6-5-7/desc", "en": "A bangle of heavenly white jade. DEF+100, LUK+40"}
+{"id": "GRS/6-5-8/desc", "en": "Spirit to speed and luck. DEF+80, MaxMP-10, AGI+10, LUK+10"}
+{"id": "GRS/6-6-1/desc", "en": "Bigeye's keepsake. HP and MP +50 each in battle."}
+{"id": "GRS/6-6-2/desc", "en": "A necklace made of gold bars! SPI+4, LUK+2"}
+{"id": "GRS/6-6-3/desc", "en": "A red cord blessed by a master, for long life. DEF+3, SPI+3, LUK+3"}
+{"id": "GRS/6-6-4/desc", "en": "A bronze necklace. DEF+6"}
+{"id": "GRS/6-6-5/desc", "en": "A necklace of fine silk. SPI+3, LUK+5"}
+{"id": "GRS/6-6-6/desc", "en": "A pendant of elephant ivory. DEF+12"}
+{"id": "GRS/6-6-7/desc", "en": "A cinnabar moon on the mirror draws nature's qi. SPI+5, DEF+5"}
+{"id": "GRS/6-6-8/desc", "en": "A one-of-a-kind necklace that can tame demons. LUK+10"}
+{"id": "GRS/6-6-9/desc", "en": "Mir wizard gear. Draws yin-yang qi. SPI+9, DEF+9"}
+{"id": "GRS/6-6-10/desc", "en": "A jade pendant carved of ice, full of spirit. SPI+20"}
+{"id": "GRS/6-6-11/desc", "en": "A pearl that focuses the mind. MP+10 each turn"}
+{"id": "GRS/6-6-12/desc", "en": "Whoever owns it gets rich and lucky. LUK+99"}
+{"id": "GRS/6-6-13/desc", "en": "Lost Demon Realm relic. ATK/DEF/AGI/SPI/LUK+15"}
+{"id": "GRS/6-6-14/desc", "en": "Gonggong's relic. HP/MP+20 each turn, AGI+10"}
+{"id": "GRS/6-6-15/desc", "en": "A domineering demon relic. ATK+100, SPI-20, LUK-40"}
+{"id": "GRS/6-6-16/desc", "en": "Carved from thousand-year black ice jade. MP+30 each turn"}
+{"id": "GRS/6-6-17/desc", "en": "Said to be made by Kongming. HP+30 each turn, AGI+5"}
+{"id": "GRS/6-6-18/desc", "en": "A swanky necklace. What it does is unknown."}
+{"id": "GRS/6-7-1/desc", "en": "A fishing rod. Hardly any attack power. ATK+10"}
+{"id": "GRS/6-7-2/desc", "en": "A junk sword, maker unknown. ATK+8. That's it."}
+{"id": "GRS/6-7-3/desc", "en": "Flutters like a feather when swung, hence the name. ATK+18"}
+{"id": "GRS/6-7-4/desc", "en": "A nine-section staff of pure iron. Packs a punch. ATK+50"}
+{"id": "GRS/6-7-5/desc", "en": "A master smith's sword, light and sharp. ATK+45, AGI+5"}
+{"id": "GRS/6-7-6/desc", "en": "A Warrior item from Legend of Mir! ATK+66, AGI+8"}
+{"id": "GRS/6-7-7/desc", "en": "The sword of the Azure Dragon. ATK+72, LUK+10, SPI+10"}
+{"id": "GRS/6-7-8/desc", "en": "It sings like a dragon when drawn. ATK+88, SPI+6, DEF+4"}
+{"id": "GRS/6-7-9/desc", "en": "Peerless blade! Armies fall when it's drawn. ATK+108, AGI+6"}
+{"id": "GRS/6-7-10/desc", "en": "Wards off evil. ATK+80, AGI+5, may Cnf 3 turns"}
+{"id": "GRS/6-7-11/desc", "en": "A sleep sword. ATK+100, LUK-10, may Slp 5 turns"}
+{"id": "GRS/6-7-12/desc", "en": "ATK+120, DEF/SPI+15, AGI/LUK+12, may Sil 5 turns"}
+{"id": "GRS/6-7-13/desc", "en": "Life-eating! ATK+250, SPI-40, DEF/LUK-30, MaxHP-50"}
+{"id": "GRS/6-7-14/desc", "en": "Zhang Daoling slew nine dragons with it. Hits all enemies. Rest unknown."}
+{"id": "GRS/6-7-15/desc", "en": "Handy, and great for peeling fruit! ATK+4"}
+{"id": "GRS/6-7-16/desc", "en": "Plain pig iron, for self-defense. ATK+10, AGI-2"}
+{"id": "GRS/6-7-17/desc", "en": "Long, broad, sharp edge, heavy back. ATK+16, DEF+1"}
+{"id": "GRS/6-7-18/desc", "en": "A short, broad blade that spins at foes. ATK+28, AGI+3"}
+{"id": "GRS/6-7-19/desc", "en": "Curved like a crescent moon. ATK+49, AGI+4, LUK-9"}
+{"id": "GRS/6-7-20/desc", "en": "Fine steel, upturned tip, curved back. ATK+64, AGI+3, SPI+4"}
+{"id": "GRS/6-7-21/desc", "en": "Wails like a demon. ATK+80, DEF+10, SPI+3"}
+{"id": "GRS/6-7-22/desc", "en": "Bane of all demons. ATK+124, DEF+30, AGI+5, SPI+6"}
+{"id": "GRS/6-7-23/desc", "en": "Divine! ATK+124, AGI+10, all enemies, may Cnf 5 turns"}
+{"id": "GRS/6-7-24/desc", "en": "Foot-long Twin Swords for women. ATK+8, DEF+13"}
+{"id": "GRS/6-7-25/desc", "en": "Twin swords of decent iron. ATK+19, DEF+17"}
+{"id": "GRS/6-7-26/desc", "en": "Fine steel swords forged as a pair. ATK+27, DEF+20"}
+{"id": "GRS/6-7-27/desc", "en": "Exquisite twin swords. ATK+36, AGI+4, DEF+24"}
+{"id": "GRS/6-7-28/desc", "en": "Hundred Flowers Sect Twin Swords. ATK+48, AGI+6, DEF+28"}
+{"id": "GRS/6-7-29/desc", "en": "Shadowless: too fast to see. ATK+60, AGI+10, DEF+36, LUK+6"}
+{"id": "GRS/6-7-30/desc", "en": "ATK+85, SPI+10, DEF+44, AGI+10, LUK+12"}
+{"id": "GRS/6-7-31/desc", "en": "ATK+125, DEF+56, SPI/AGI/LUK+15, MaxMP+80"}
+{"id": "GRS/6-7-32/desc", "en": "Lousy, but may Psn 3 turns. ATK+50, DEF-10, AGI-10"}
+{"id": "GRS/6-8-1/desc", "en": "A plum-blossom throwing star. Enemy HP-90"}
+{"id": "GRS/6-8-2/desc", "en": "A favorite hidden weapon of the martial world. 150 dmg"}
+{"id": "GRS/6-8-3/desc", "en": "A Taoist charm against weak demons and ghosts. 150 dmg"}
+{"id": "GRS/6-8-4/desc", "en": "A flying blade hidden in the sleeve. 250 dmg"}
+{"id": "GRS/6-8-5/desc", "en": "A sharp three-inch iron spike. Enemy HP-250"}
+{"id": "GRS/6-8-6/desc", "en": "Flaming Mountain iron; pierces a spider's heart. Enemy HP-400"}
+{"id": "GRS/6-8-7/desc", "en": "Glints green, spins fast, strikes unseen. All enemies HP-300"}
+{"id": "GRS/6-8-8/desc", "en": "A charm that asks Granny Wind for wind."}
+{"id": "GRS/6-8-9/desc", "en": "A spell charm that calls the Thunder God's thunder."}
+{"id": "GRS/6-8-10/desc", "en": "A charm that freezes water fast to hit foes."}
+{"id": "GRS/6-8-11/desc", "en": "A spell charm that moves the earth."}
+{"id": "GRS/6-8-12/desc", "en": "A spell charm to wield fire at will."}
+{"id": "GRS/6-8-13/desc", "en": "A venomous snake's egg. May Psn 2 turns"}
+{"id": "GRS/6-8-14/desc", "en": "Flesh from a child zombie. May Psn 2 turns"}
+{"id": "GRS/6-8-15/desc", "en": "A venomous scorpion's egg. May Psn 2 turns"}
+{"id": "GRS/6-8-16/desc", "en": "A venomous spider's egg. May Psn 2 turns"}
+{"id": "GRS/6-8-17/desc", "en": "Poison spikes; fatal if untreated. 80 dmg, may Psn 2 turns"}
+{"id": "GRS/6-8-18/desc", "en": "Venom of a frontier desert snake. Psn 5 turns"}
+{"id": "GRS/6-8-19/desc", "en": "Brewed from six venomous creatures. Psn all enemies 5 turns"}
+{"id": "GRS/6-8-20/desc", "en": "Six Venoms + iron sand. 150 dmg to all enemies, may Psn 5 turns"}
+{"id": "GRS/6-8-21/desc", "en": "Unstop it, shake, and it spreads on the air. Cnf 3 turns"}
+{"id": "GRS/6-8-22/desc", "en": "Like a siren's spell: friend or foe, who knows? Cnf 5 turns"}
+{"id": "GRS/6-8-23/desc", "en": "Venom silk of a thousand-year spider. Cnf 5 turns"}
+{"id": "GRS/6-8-24/desc", "en": "Pins the soul in the body: no spells. Sil 3 turns"}
+{"id": "GRS/6-8-25/desc", "en": "Heaven's dragon rope, stolen and sold on earth. Sil 5 turns"}
+{"id": "GRS/6-8-26/desc", "en": "Works like the Taiji Charm art. 350 dmg, Sil 3 turns"}
+{"id": "GRS/6-8-27/desc", "en": "Wet its green flower for a sweet scent. Slp 3 turns"}
+{"id": "GRS/6-8-28/desc", "en": "A little bug from near Flaming Mountain. Slp 5 turns"}
+{"id": "GRS/6-8-29/desc", "en": "Steel needle on a magic silk thread. Drains 180 HP from a foe."}
+{"id": "GRS/6-8-30/desc", "en": "A mystery item tied to Nuwa mending the sky. Use unknown."}
+{"id": "GRS/6-9-1/desc", "en": "A steamed rice cake. MP+50"}
+{"id": "GRS/6-9-2/desc", "en": "A kid's favorite snack. HP/MP+50"}
+{"id": "GRS/6-9-3/desc", "en": "A rare desert plant that heals cuts and bruises. HP+280"}
+{"id": "GRS/6-9-4/desc", "en": "A clear ruby-red salve that mends bones. HP+450"}
+{"id": "GRS/6-9-5/desc", "en": "Guanyin wrote it in the purple bamboo grove. HP+700"}
+{"id": "GRS/6-9-6/desc", "en": "A black pill that opens the meridians. HP+1000"}
+{"id": "GRS/6-9-7/desc", "en": "Heals with the mothering power of the earth. All allies HP+300"}
+{"id": "GRS/6-9-8/desc", "en": "A wild fruit from beyond the Wall; cools and cleans. MP+36"}
+{"id": "GRS/6-9-9/desc", "en": "A pill that refreshes and feeds the mind. MP+50"}
+{"id": "GRS/6-9-10/desc", "en": "Chrysanthemum wine aged ten years. MP+110"}
+{"id": "GRS/6-9-11/desc", "en": "A truly ugly black beetle, but it boosts qi. MP+250"}
+{"id": "GRS/6-9-12/desc", "en": "From Flower-Fruit Mountain stock, grown on Penglai. MP+450"}
+{"id": "GRS/6-9-13/desc", "en": "Sticky rice from Tibet. MP+800"}
+{"id": "GRS/6-9-14/desc", "en": "Medicine King Xiao Tianxia's secret cure for madness. Full MP"}
+{"id": "GRS/6-9-15/desc", "en": "A small farmed beetle, full of qi. All allies MP+240"}
+{"id": "GRS/6-9-16/desc", "en": "Boiled by a mystery method. Tasty! HP/MP+10"}
+{"id": "GRS/6-9-17/desc", "en": "Fine venison smoked over pine charcoal. HP/MP+45"}
+{"id": "GRS/6-9-18/desc", "en": "The essence of sanchi root. HP+150, MP+50"}
+{"id": "GRS/6-9-19/desc", "en": "Fruit wine aged 50 years. Cures Psn, HP/MP+180"}
+{"id": "GRS/6-9-20/desc", "en": "Zhang Guolao's own Twin Haws. HP/MP+400"}
+{"id": "GRS/6-9-21/desc", "en": "Tangled and red-brown like a devil's beard. Cures Psn."}
+{"id": "GRS/6-9-22/desc", "en": "A crust from Tianshan caves. Seasoning, cures Psn."}
+{"id": "GRS/6-9-23/desc", "en": "Sword-thin pine needles from Mt. Hua's peak. Cures Psn."}
+{"id": "GRS/6-9-24/desc", "en": "A charm that drives off sickness and evil. Cures Psn for all allies."}
+{"id": "GRS/6-9-25/desc", "en": "Yellow essence of the finest chrysanthemums. Cures Psn, HP+350"}
+{"id": "GRS/6-9-26/desc", "en": "Rub it on your forehead to clear your head. Cures Cnf and Slp."}
+{"id": "GRS/6-9-27/desc", "en": "Calms the mind, stops qi deviation. Cures Cnf, Sil and Slp."}
+{"id": "GRS/6-10-1/desc", "en": "A Kunlun herb that raises the dead. Restores 15% HP"}
+{"id": "GRS/6-10-2/desc", "en": "Buys a soul back from Death. Restores 30% HP"}
+{"id": "GRS/6-10-3/desc", "en": "Washes away the sins of the dead, reviving them. Restores 50% HP"}
+{"id": "GRS/6-10-4/desc", "en": "81 rare herbs fired 81 days; binds the soul. Restores 100% HP"}
+{"id": "GRS/6-11-1/desc", "en": "Permanent MaxHP+5"}
+{"id": "GRS/6-11-2/desc", "en": "A stone from Eight Immortals Cave. Permanent DEF+2"}
+{"id": "GRS/6-11-3/desc", "en": "Eat it for a permanent ATK+2."}
+{"id": "GRS/6-11-4/desc", "en": "Immortal fruit of a red tree on Mount Zhong. Permanent LUK+1"}
+{"id": "GRS/6-11-5/desc", "en": "A precious herb of Mount Sanqing. Permanent SPI+2"}
+{"id": "GRS/6-11-6/desc", "en": "One of Laozi's elixirs. Permanent MaxHP+4, MaxMP+4"}
+{"id": "GRS/6-11-7/desc", "en": "Red leaf, first of three immortal herbs. Permanent SPI+3"}
+{"id": "GRS/6-11-8/desc", "en": "Black leaf, second of three immortal herbs. Permanent AGI+3"}
+{"id": "GRS/6-11-9/desc", "en": "Yellow leaf, third of three immortal herbs. Permanent LUK+3"}
+{"id": "GRS/6-11-10/desc", "en": "A relic left by a cremated holy monk. Permanent MaxMP+2"}
+{"id": "GRS/6-11-11/desc", "en": "A Tianshan bodhi seed; fruits every 80 years. Permanent MaxMP+3"}
+{"id": "GRS/6-11-12/desc", "en": "From a ginkgo behind an immortal's home. Permanent MaxHP+3"}
+{"id": "GRS/6-11-13/desc", "en": "Grown by Medicine King Xiao Tianxia. Permanent SPI+2"}
+{"id": "GRS/6-11-14/desc", "en": "From Mt. Taibai's ice cave. Permanent ATK+2, DEF+2"}
+{"id": "GRS/6-11-15/desc", "en": "A bright red bug full of qi. Permanent MaxMP+2"}
+{"id": "GRS/6-12-1/desc", "en": "Makes you lively as a dragon. Raises ATK for 3 turns"}
+{"id": "GRS/6-12-2/desc", "en": "Like wearing a turtle shell. Raises DEF for 5 turns"}
+{"id": "GRS/6-12-3/desc", "en": "A strange scent that makes you float. Raises AGI for 4 turns"}
+{"id": "GRS/6-12-4/desc", "en": "Sends you berserk. Doubles ATK for 5 turns"}
+{"id": "GRS/6-12-5/desc", "en": "Blinding golden light dazzles foes. Doubles DEF for 7 turns"}
+{"id": "GRS/6-12-6/desc", "en": "A Yingzhou grass. Ride the gale! Doubles AGI for 9 turns"}
+{"id": "GRS/6-13-1/desc", "en": "Lost in a maze? It takes you back to the start."}
+{"id": "GRS/6-14-1/desc", "en": "Young Wang's letter to his big brother, Old Wang."}
+{"id": "GRS/6-14-2/desc", "en": "The Wise Elder's letter to his grandson Mingming."}
+{"id": "GRS/6-14-3/desc", "en": "Incense the Wise Elder asked you to burn for him."}
+{"id": "GRS/6-14-4/desc", "en": "A USB stick holding BBK's newest RPG dev kit."}
+{"id": "GRS/6-14-5/desc", "en": "A bottle of water."}
+{"id": "GRS/6-14-6/desc", "en": "It looks plain, but smells wonderfully fresh."}
+{"id": "GRS/6-14-7/desc", "en": "A kitchen knife with a very sharp edge."}
+{"id": "GRS/6-14-8/desc", "en": "BBK A100. Button cell, no audio. Has an E-C dictionary."}
+{"id": "GRS/6-14-9/desc", "en": "BBK dictionary 4980. Runs on AAA batteries, with a speaker!"}
+{"id": "GRS/6-14-10/desc", "en": "BBK 5980. AAA batteries, real-voice audio, Longman."}
+{"id": "GRS/6-14-11/desc", "en": "BBK 6980. Backlit, rechargeable. Chunlan Guardian says buy it!"}
+{"id": "GRS/6-14-12/desc", "en": "BBK Waiyutong 9188. 128MB flash, plays MP3s - recommended!"}
+{"id": "GRS/6-14-13/desc", "en": "An old treasure map. Only the Little Prodigy can read it."}
+{"id": "GRS/6-14-14/desc", "en": "A treasure map. Use it to get the treasure."}
+{"id": "GRS/6-14-19/desc", "en": "One of the things you need to make a fishing rod."}
+{"id": "GRS/6-14-20/desc", "en": "Material for making a fishing rod."}
+{"id": "GRS/6-14-21/desc", "en": "A letter home from Mrs. Pu's husband."}
+{"id": "GRS/6-14-22/desc", "en": "Xiaoxian's bun for Zhao Si. Very spicy."}
+{"id": "GRS/6-14-23/desc", "en": "Zhao Si's bun for Xiaoxian. Very sweet."}
+{"id": "GRS/6-14-24/desc", "en": "A leaf found only on Hainan. Very sweet; nature's own seasoning."}
+{"id": "GRS/6-14-25/desc", "en": "Old wine whose scent carries seven miles: Sevenmile."}
+{"id": "GRS/6-14-26/desc", "en": "An ordinary stone, the most basic material for ore."}
+{"id": "GRS/6-14-27/desc", "en": "Black iron ore from stone. Hard; used for weapons."}
+{"id": "GRS/6-14-28/desc", "en": "Ore made from ordinary stone. Very hard; makes sharp, tough weapons."}
+{"id": "GRS/6-14-29/desc", "en": "The best ore. Makes sharp, light, hard weapons."}
+{"id": "GRS/6-14-30/desc", "en": "Silk cloth for wrapping weapon grips."}
+{"id": "GRS/6-14-31/desc", "en": "One of the ingredients for brewing medicine."}
+{"id": "GRS/6-14-36/desc", "en": "Dongyouzi's divine relic. Medicine brewed in it works wonders."}
+{"id": "GRS/6-14-37/desc", "en": "1000 degrees hot. With the Dragon Cauldron it reaches full power."}
+{"id": "GRS/6-14-38/desc", "en": "Doctor Wan's miracle medicine. Cures every ill."}
+{"id": "GRS/6-14-39/desc", "en": "Mother's letter to you."}
+{"id": "GRS/6-14-40/desc", "en": "A note in Mother's letter. It looks like Father's writing."}
+{"id": "GRS/6-14-41/desc", "en": "An egg that hatches into a pet."}
+{"id": "GRS/6-14-42/desc", "en": "A deep martial arts manual of mysterious moves."}
+{"id": "GRS/6-14-43/desc", "en": "Smell its mysterious scent and live one day longer."}
+{"id": "GRS/6-14-44/desc", "en": "A bottle of poison. Use it to shorten your life."}
+{"id": "GRS/6-14-45/desc", "en": "Needed for the Coming-of-Age task."}
+{"id": "GRS/6-14-46/desc", "en": "The letter your master asked you to take to Yi Tianchou."}
+{"id": "GRS/6-14-47/desc", "en": "Jay's newest album, <Yeh Hui-Mei>."}
+{"id": "GRS/6-14-48/desc", "en": "SSK's special potion. It can beat the Water Demon."}
+{"id": "GRS/6-14-49/desc", "en": "A key that opens a door."}
+{"id": "GRS/6-14-50/desc", "en": "A Fly Charm to the Central Plains at (45,45)."}
+{"id": "GRS/6-14-51/desc", "en": "A Fly Charm to the North at (45,45)."}
+{"id": "GRS/6-14-52/desc", "en": "A Fly Charm to the South at (45,45)."}
+{"id": "GRS/6-14-53/desc", "en": "A Fly Charm to the West at (45,45)."}
+{"id": "GRS/6-14-54/desc", "en": "A Fly Charm to the East at (11,4)."}
+{"id": "GRS/6-14-55/desc", "en": "Old Uncle's letter for you to take to Dugu Zheng."}
+{"id": "GRS/6-14-56/desc", "en": "Bigeye's orb. It takes you to him in an instant."}
+{"id": "GRS/6-14-57/desc", "en": "The best gift for a sweetheart. Intimacy +1"}
+{"id": "GRS/6-14-58/desc", "en": "AAA battery and button cell. BBK machines need them."}
+{"id": "GRS/6-14-59/desc", "en": "A letter home with money tucked inside."}
+{"id": "GRS/6-14-60/desc", "en": "Big Rabbit's family heirloom."}
+{"id": "GRS/6-14-61/desc", "en": "Incense that keeps monsters away. Note: changing maps breaks it."}
+{"id": "GRS/6-14-62/desc", "en": "Master Taiyi's incense. Lures monsters out to be slain."}
+{"id": "gut/1-5-1@0236", "en": "Hey, there's noise upstairs! Let's go see!"}
+{"id": "gut/1-5-1@0275", "en": "A little tent? Somebody's gotta be in there. Let's take a look!"}
+{"id": "gut/1-5-1@0297", "en": "Bandit: Damn, what are you doing here, kid?"}
+{"id": "gut/1-5-1@02b7", "en": "Listen up: Doing - Heaven's - justice!"}
+{"id": "gut/1-5-1@02f1", "en": "System: You got killed by the bandits. GAME OVER!"}
+{"id": "gut/1-5-1@0624", "en": "Bandit: Boss, stop hitting me! I'll turn myself in, okay?"}
+{"id": "gut/1-5-1@0650", "en": "Go on, scram! You're wasting my time!"}
+{"id": "gut/1-5-1@066f", "en": "System: The bandits have run off."}
+{"id": "gut/1-5-1@06a2", "en": "Whoa, a baby pet! Lemme catch it..."}
+{"id": "gut/1-5-1@06be", "en": "Pet: Poor little me, run, run..."}
+{"id": "gut/1-5-1@06de", "en": "Where do you think you're going!"}
+{"id": "gut/1-5-1@0713", "en": "System: The pet got away."}
+{"id": "gut/1-5-2@0209", "en": "Whoa... so many rocks. Rock Hill sure lives up to its name!"}
+{"id": "gut/1-5-2@0249", "en": "Whoa? This is the Dragon Cauldron? It's huge. Oof, so heavy? Whoa-whoa."}
+{"id": "gut/1-5-2@0279", "en": "Guardian: Bah, who's there? Who dares touch my bed?"}
+{"id": "gut/1-5-2@029d", "en": "What kind of monster are you? Short AND fat..."}
+{"id": "gut/1-5-2@02bf", "en": "Guardian: Damn, nobody's ever insulted me like that! Take this!"}
+{"id": "gut/1-5-2@0310", "en": "Ha ha, you're trash!"}
+{"id": "gut/1-5-2@032a", "en": "Guardian: You're driving me nuts! I'll burn you to a crisp!"}
+{"id": "gut/1-5-2@034e", "en": "Ow ow ow, that's hot!"}
+{"id": "gut/1-5-2@0360", "en": "System: You dummy, use the Dragon Cauldron to catch the fire!"}
+{"id": "gut/1-5-2@0392", "en": "Yeah, yeah! Watch this!"}
+{"id": "gut/1-5-2@03a4", "en": "Guardian: Damn, that works too? I'm filing a complaint against Chunlan Guardian! Fine, we'll die together. Rock Array!"}
+{"id": "gut/1-5-2@0404", "en": "Whoa, nearly got squashed. Damn, that's vicious. Dodge!"}
+{"id": "gut/1-5-2@043f", "en": "System: You didn't get the Samadhi Fire here, so you'll have to buy it at the Central Plains mall~ I've already called the owner for you."}
+{"id": "gut/1-5-2@04a1", "en": "System: The Guardian killed you. Game over."}
+{"id": "gut/1-5-4@0224", "en": "Look, there's a house here!"}
+{"id": "gut/1-5-4@023c", "en": "Bigeye: Ah... sigh... so I couldn't escape them after all! If you're going to kill me, do it!"}
+{"id": "gut/1-5-4@0278", "en": "Why would I kill you?"}
+{"id": "gut/1-5-4@028a", "en": "Bigeye: Because I disturbed Green Blight while he was killing someone."}
+{"id": "gut/1-5-4@02ba", "en": "What!!! But why is everyone else after you?"}
+{"id": "gut/1-5-4@02e2", "en": "Bigeye: Because I'm a monster! Sigh... you don't want to kill me?"}
+{"id": "gut/1-5-4@0312", "en": "Mm... I'm not one of Green Blight's men."}
+{"id": "gut/1-5-4@0330", "en": "Bigeye: Sigh... I might as well just die..."}
+{"id": "gut/1-5-4@035a", "en": "Why?"}
+{"id": "gut/1-5-4@0366", "en": "Bigeye: Long ago my father disturbed Green Blight at a killing, so he was killed. My mother died protecting me. I survived, but she was gone. I was so full of hate, I trained hard for the day I'd get revenge, but...... Heavens! Why is life so unfair to me!"}
+{"id": "gut/1-5-4@0434", "en": "Sigh... let it go. The past is past, why keep..."}
+{"id": "gut/1-5-4@0464", "en": "Bigeye: Mm...... I'll never get my revenge. I've no hope left. Young man, can you do one more thing for me?"}
+{"id": "gut/1-5-4@04ba", "en": "Sure! Name it!"}
+{"id": "gut/1-5-4@04ca", "en": "Bigeye: Find Master Xuanji in the West, tell him I'm dying, and come back and tell me what he says! Green Blight's outside, use this charm to get out!"}
+{"id": "gut/1-5-4@0542", "en": "Bigeye: Green Blight's outside, use this charm to get out! And take the Soul Orb: use it to find me again."}
+{"id": "gut/1-5-4@058b", "en": "Bigeye: You're back? What did he say?"}
+{"id": "gut/1-5-4@05a9", "en": "#$*#.-$(*#-$(.*#-$(.."}
+{"id": "gut/1-5-4@05d0", "en": "Bigeye: Sigh... so I deserve to die after all!"}
+{"id": "gut/1-5-4@05f6", "en": "No!"}
+{"id": "gut/1-5-4@0602", "en": "Whoosh--"}
+{"id": "gut/1-5-4@060a", "en": "Bigeye: Urgh!"}
+{"id": "gut/1-5-4@061c", "en": "You haven't got your revenge yet!"}
+{"id": "gut/1-5-4@062e", "en": "Bigeye: ...... Sigh~ No need! The Master told me not to take revenge... This is for you..."}
+{"id": "gut/1-5-4@06a1", "en": "Bigeye sent you to the Huashan Sect!"}
+{"id": "gut/1-5-5@0216", "en": "Water Beast: ROAR!~"}
+{"id": "gut/1-5-5@0227", "en": "Water Beast: Who goes there? Who dares disturb my sleep?"}
+{"id": "gut/1-5-5@024f", "en": "WHAT!!! Why do all the monsters in Xiake love sleeping? And I woke one up! Run~~~"}
+{"id": "gut/1-5-5@0289", "en": "Water Beast: Roar roar roar~~~ What bird-talk are you squawking?"}
+{"id": "gut/1-5-5@02b8", "en": "Damn~ it's caught up! Fine, let's fight. If I die, I die!"}
+{"id": "gut/1-5-5@02d9", "en": "System: The Water Beast is an ancient divine beast. Chiyou tamed it with his Firecry Ring, losing 21 generals doing it, then fed it the Soul of the Martial World and the Myriad-Year Water Essence. Its power soared; nothing under heaven could match it! But when the Flame Emperor attacked, the ring broke and the beast fled, whereabouts unknown. Since then it has soaked up the qi of heaven and earth and the land's holy soul-power, pushing itself to the limit. Now it's invincible. Even the Buddha can't do a thing about it..."}
+{"id": "gut/1-5-5@0430", "en": "Damn, will you ever shut up? What kind of system tip yaps at a time like this? (Scared~~) Guess we're really fighting..."}
+{"id": "gut/1-5-5@049d", "en": "System: You beat the Water Beast and took its treasure."}
+{"id": "gut/1-5-5@050e", "en": "System: You've been sent to Bright Peak."}
+{"id": "gut/1-5-5@0861", "en": "System: There's no way out."}

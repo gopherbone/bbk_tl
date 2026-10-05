@@ -1,0 +1,415 @@
+{"id": "gut/1-0-1@0003", "en": "Prologue:\nWelcome to 'The True\nTale of the Xiake',\na brand-new RPG from\nChunlan Studio! It's\na raising sim with\nfree stat allocation\nand an age system,\nand the whole game\nchanges as your\ncharacter levels up.\nSo that you learn\nsomething while\nplaying, all NPC\ndialogue is famous\nsayings, so read\nthem carefully! One\nlast secret tip:\nwhen you play Xiake,\nuse Pickpocket a\nlot. Also, finding\nthe hidden storyline\nat the start makes\nthe game a bit\neasier~ That's all.\nHave fun!"}
+{"id": "gut/1-0-2@0003", "en": "== *Dev Team* ==\nChunlan Studio\n== *Game Engine* ==\nBBKRPG Dev Kit V1.3\n== *Main Crew* ==\nScript design:\nChunlan Guardian\nPlanning:\nChunlan Guardian\nMaps:\nSSK\nWriters:\nChunlan Guardian\nSSK\nBY\nChunlan Studio\nJune 17, 2005"}
+{"id": "gut/1-0-5@0088", "en": "== Game Engine ==\nNightbug\nSouthern Imp\n== Dev Team ==\nChunlan Studio\nPlanning:\nChunlan Guardian\nMaps:\nSSK\nScript:\nChunlan Guardian\nThanks to:\nNightbug\nGame King\nYe Lingling\nTesters:\nLeng Yi\nZF\n315200242\n...and many\nnetizens\nChunlan Studio\nJune 17, 2005"}
+{"id": "gut/1-0-6@085e", "en": "== Game Engine ==\nNightbug\nSouthern Imp\n== Dev Team ==\nChunlan Studio\nPlanning:\nChunlan Guardian\nMaps:\nSSK\nScript:\nChunlan Guardian\nThanks to:\nNightbug\nGame King\nYe Lingling\nTesters:\nLeng Yi\nZF\n315200242\n...and many\nnetizens\nChunlan Studio\nJuly 1, 2005"}
+{"id": "gut/1-0-5@003e", "en": "You've lived past the span Heaven allots; it's time to pass away peacefully. Please start a new game."}
+{"id": "gut/1-0-6@080c", "en": "You've grown so old - past the span Heaven allots - it's time to pass away in peace. Please start a new game."}
+{"id": "gut/1-0-5@0392", "en": "System: The five-yearly Martial Tournament has begun, but you're already Martial Lord, so you needn't compete."}
+{"id": "gut/1-0-6@0003", "en": "System: What would you like to do?"}
+{"id": "gut/1-0-6@0023", "en": "Allot-points Renown Age Sect-points Minimap"}
+{"id": "gut/1-0-6@0090", "en": "System: Sorry, you have fewer than 10 Essence Points, so you can't allot any."}
+{"id": "gut/1-0-6@00cc", "en": "System: Every 10 Essence Points buy one point of a stat; HP and MP need only 2. Choose a stat to raise."}
+{"id": "gut/1-0-6@0121", "en": "Attack Defense Agility Spirit Luck Max-HP Max-MP"}
+{"id": "gut/1-0-6@0197", "en": "System: Done! Your Attack went up by 1."}
+{"id": "gut/1-0-6@01d2", "en": "System: Done! Your Defense went up by 1."}
+{"id": "gut/1-0-6@020d", "en": "System: Done! Your Agility went up by 1."}
+{"id": "gut/1-0-6@0246", "en": "System: Done! Your Spirit went up by 1."}
+{"id": "gut/1-0-6@0281", "en": "System: Done! Your Luck went up by 1."}
+{"id": "gut/1-0-6@02bc", "en": "System: Done! Your Max HP went up by 1."}
+{"id": "gut/1-0-6@02fb", "en": "System: Done! Your Max MP went up by 1."}
+{"id": "gut/1-0-6@0599", "en": "Your Renown: Nobody"}
+{"id": "gut/1-0-6@05b7", "en": "Your Renown: Small Fry"}
+{"id": "gut/1-0-6@05d5", "en": "Your Renown: Rising Star"}
+{"id": "gut/1-0-6@05f3", "en": "Your Renown: Young Hero"}
+{"id": "gut/1-0-6@0608", "en": "Your Renown: Great Hero"}
+{"id": "gut/1-0-6@073e", "en": "Your age: 40"}
+{"id": "gut/1-0-6@075b", "en": "Your age: forties"}
+{"id": "gut/1-0-6@077a", "en": "Your age: fifties"}
+{"id": "gut/1-0-6@0799", "en": "Your age: sixties"}
+{"id": "gut/1-0-6@07b8", "en": "Your age: seventies"}
+{"id": "gut/1-0-6@07d7", "en": "Your age: eighties"}
+{"id": "gut/1-0-6@07f6", "en": "Your age: nineties"}
+{"id": "gut/1-0-6@0b0e", "en": "Your age: 1"}
+{"id": "gut/1-0-6@0b20", "en": "Your age: 2"}
+{"id": "gut/1-0-6@0b32", "en": "Your age: 3"}
+{"id": "gut/1-0-6@0b44", "en": "Your age: 4"}
+{"id": "gut/1-0-6@0b56", "en": "Your age: 5"}
+{"id": "gut/1-0-6@0b68", "en": "Your age: 6"}
+{"id": "gut/1-0-6@0b7a", "en": "Your age: 7"}
+{"id": "gut/1-0-6@0b8c", "en": "Your age: 8"}
+{"id": "gut/1-0-6@0b9e", "en": "Your age: 9"}
+{"id": "gut/1-0-6@0bb0", "en": "Your age: 10"}
+{"id": "gut/1-0-6@0bc2", "en": "Your age: 11"}
+{"id": "gut/1-0-6@0bd6", "en": "Your age: 12"}
+{"id": "gut/1-0-6@0bea", "en": "Your age: 13"}
+{"id": "gut/1-0-6@0bfe", "en": "Your age: 14"}
+{"id": "gut/1-0-6@0c12", "en": "Your age: 15"}
+{"id": "gut/1-0-6@0c26", "en": "Your age: 16"}
+{"id": "gut/1-0-6@0c3a", "en": "Your age: 17"}
+{"id": "gut/1-0-6@0c4e", "en": "Your age: 18"}
+{"id": "gut/1-0-6@0c62", "en": "Your age: 19"}
+{"id": "gut/1-0-6@0c76", "en": "Your age: 20"}
+{"id": "gut/1-0-6@0c8a", "en": "Your age: 21"}
+{"id": "gut/1-0-6@0ca0", "en": "Your age: 22"}
+{"id": "gut/1-0-6@0cb6", "en": "Your age: 23"}
+{"id": "gut/1-0-6@0ccc", "en": "Your age: 24"}
+{"id": "gut/1-0-6@0ce2", "en": "Your age: 25"}
+{"id": "gut/1-0-6@0cf8", "en": "Your age: 26"}
+{"id": "gut/1-0-6@0d0e", "en": "Your age: 27"}
+{"id": "gut/1-0-6@0d24", "en": "Your age: 28"}
+{"id": "gut/1-0-6@0d3a", "en": "Your age: 29"}
+{"id": "gut/1-0-6@0d50", "en": "Your age: 30"}
+{"id": "gut/1-0-6@0d64", "en": "Your age: 31"}
+{"id": "gut/1-0-6@0d7a", "en": "Your age: 32"}
+{"id": "gut/1-0-6@0d90", "en": "Your age: 33"}
+{"id": "gut/1-0-6@0da6", "en": "Your age: 34"}
+{"id": "gut/1-0-6@0dbc", "en": "Your age: 35"}
+{"id": "gut/1-0-6@0dd2", "en": "Your age: 36"}
+{"id": "gut/1-0-6@0de8", "en": "Your age: 37"}
+{"id": "gut/1-0-6@0dfe", "en": "Your age: 38"}
+{"id": "gut/1-0-6@0e14", "en": "Your age: 39"}
+{"id": "gut/1-0-6@0e47", "en": "Your Sect Points: under 20"}
+{"id": "gut/1-0-6@0e6a", "en": "Your Sect Points: 20-something"}
+{"id": "gut/1-0-6@0e8b", "en": "Your Sect Points: 30-something"}
+{"id": "gut/1-0-6@0eac", "en": "Your Sect Points: 40-something"}
+{"id": "gut/1-0-6@0ecd", "en": "Your Sect Points: 50-something"}
+{"id": "gut/1-0-6@0eee", "en": "Your Sect Points: 60-something"}
+{"id": "gut/1-0-6@0f0f", "en": "Your Sect Points: 70-something"}
+{"id": "gut/1-0-6@0f30", "en": "Your Sect Points: 80-something"}
+{"id": "gut/1-0-6@0f51", "en": "Your Sect Points: 90-something"}
+{"id": "gut/1-0-6@0f72", "en": "Your Sect Points: 110-something"}
+{"id": "gut/1-0-6@0f97", "en": "Your Sect Points: 120-something"}
+{"id": "gut/1-0-6@0fbc", "en": "Your Sect Points: 130-something"}
+{"id": "gut/1-0-6@0fe1", "en": "Your Sect Points: 140-something"}
+{"id": "gut/1-0-6@1006", "en": "Your Sect Points: 150-something"}
+{"id": "gut/1-0-6@102b", "en": "Your Sect Points: 160-something"}
+{"id": "gut/1-0-6@1050", "en": "Your Sect Points: 170-something"}
+{"id": "gut/1-0-6@1075", "en": "Your Sect Points: 180-something"}
+{"id": "gut/1-0-6@109a", "en": "Your Sect Points: 190-something"}
+{"id": "gut/1-0-6@10bf", "en": "Your Sect Points: 200-something"}
+{"id": "gut/1-0-7@0023", "en": "Teleport Manage-sect Switch-mode Play-music"}
+{"id": "gut/1-0-7@006d", "en": "North South Central West East"}
+{"id": "gut/1-0-7@00d8", "en": "System: You don't have a sect. What are you going to manage?"}
+{"id": "gut/1-0-7@0100", "en": "System: What do you want to do?"}
+{"id": "gut/1-0-7@011c.1", "en": "Recruit disciples"}
+{"id": "gut/1-0-7@011c.2", "en": "Nothing"}
+{"id": "gut/1-0-7@012d", "en": "System: Each notice costs 1000 yuan. Post one?"}
+{"id": "gut/1-0-7@0161.1", "en": "Post"}
+{"id": "gut/1-0-7@0161.2", "en": "Don't post"}
+{"id": "gut/1-0-7@017d", "en": "The notice has been up for days, but nobody's shown any interest."}
+{"id": "gut/1-0-7@01a0", "en": "You've taken on a disciple."}
+{"id": "gut/1-0-7@01be", "en": "System: Damn, no money and you want to post a notice?"}
+{"id": "gut/1-0-7@01e4", "en": "System: Which mode do you want to switch to?"}
+{"id": "gut/1-0-7@0206.1", "en": "Free Mode"}
+{"id": "gut/1-0-7@0206.2", "en": "Contest Mode"}
+{"id": "gut/1-0-7@021b", "en": "System: Free Mode on."}
+{"id": "gut/1-0-7@023b", "en": "System: Contest Mode on."}
+{"id": "gut/1-0-7@0258", "en": "Ring1 Ring2 Ring3 Ring4 Ring5 Ring6 Ring7 Ring8 Ring9 Ring10 Ring11 Stop"}
+{"id": "gut/1-0-8@001a", "en": "System: Character data repaired. Don't enter the Wood Maze when you clear the four great mazes."}
+{"id": "gut/1-0-9@0003", "en": "System: The DEL key isn't used yet."}
+{"id": "gut/1-10-1@0201", "en": "Flybug: Who are you? How did you get into my secret tunnel?"}
+{"id": "gut/1-10-1@0227", "en": "I..."}
+{"id": "gut/1-10-1@0231", "en": "Flybug: Cut the chatter! Whoever stands between me and my fortune dies!"}
+{"id": "gut/1-10-1@0273", "en": "Sheesh, STOP!"}
+{"id": "gut/1-10-1@0281", "en": "Flybug: What?"}
+{"id": "gut/1-10-1@0295", "en": "I only came to learn your secret art from you, honest. Nothing else."}
+{"id": "gut/1-10-1@02c3", "en": "Flybug: Why didn't you say so? Give me all the money you've got and I'll teach you."}
+{"id": "gut/1-10-1@02ff.1", "en": "Pay him"}
+{"id": "gut/1-10-1@030c", "en": "Flybug: Damn, you want to learn with this little bit of money? Go, go, go!"}
+{"id": "gut/1-10-1@033b", "en": "...My money..."}
+{"id": "gut/1-10-1@036a", "en": "Flybug: Not bad, kid, you've got style. Seeing as you've got style, I'll teach you!"}
+{"id": "gut/1-10-1@03b2", "en": "Ha ha!"}
+{"id": "gut/1-10-1@03bc", "en": "Flybug: See you again, if fate allows!"}
+{"id": "gut/1-10-1@042b", "en": "System: Flybug beat you flat. GAME OVER!"}
+{"id": "gut/1-20-1@0248", "en": "Why does it reek of blood? Oh no!"}
+{"id": "gut/1-20-1@027d", "en": "Father said never, ever to go into this room. Better stay out."}
+{"id": "gut/1-20-1@02b6", "en": "The Sword Saint has left."}
+{"id": "gut/1-20-1@02c4", "en": "Laying the Dictionary Array is what matters now!"}
+{"id": "gut/1-20-1@03b8", "en": "The Electronic Dictionary Array is open."}
+{"id": "gut/1-20-1@03cc", "en": "In an instant heaven shook and the earth split."}
+{"id": "gut/1-20-1@03e7", "en": "The array has sealed the world's demons in the well."}
+{"id": "gut/1-20-1@03ff", "en": "Mo Jingchou: Kid, I knew you'd try this. Hmph! Behold my Five-Element Bagua Array!"}
+{"id": "gut/1-20-1@043b", "en": "The Bagua Array has broken the Dictionary Array."}
+{"id": "gut/1-20-1@045d", "en": "A force sends you into the Bagua Array."}
+{"id": "gut/1-20-1@04a0", "en": "My head's spinning."}
+{"id": "gut/1-20-1@04ac", "en": "Huh? Where am I?"}
+{"id": "gut/1-20-1@04da", "en": "System: This is the Bagua Array. Break it and the Dictionary Array can show its power. It has four parts - Metal, Wood, Water and Earth - each with a guardian to beat. But the maze moves you every 60 seconds, so hurry. Good luck!"}
+{"id": "gut/1-20-1@05c4", "en": "What a strange well! It looks like an array!"}
+{"id": "gut/1-20-2@0235", "en": "The room is empty. There seems to be something on the table."}
+{"id": "gut/1-20-2@0254", "en": "The room is empty."}
+{"id": "gut/1-20-2@026a", "en": "There's nothing on the table."}
+{"id": "gut/1-20-2@0280", "en": "There's a letter on the table."}
+{"id": "gut/1-20-2@02cb", "en": "Mother: We're pretty, we're fine, our essays beat XX."}
+{"id": "gut/1-20-2@02f3", "en": "Sheesh... Chunlan wrote the dialogue wrong, didn't he?"}
+{"id": "gut/1-20-2@0312", "en": "Mother: Hurry and fetch Doctor Wan from the village!"}
+{"id": "gut/1-20-2@0336", "en": "Okay."}
+{"id": "gut/1-20-2@0346", "en": "Mom, I'm back."}
+{"id": "gut/1-20-2@0358", "en": "Mother: Did you find the medicine?"}
+{"id": "gut/1-20-2@036c", "en": "Yes, here. Quick, give it to Dad."}
+{"id": "gut/1-20-2@0384", "en": "Your father takes the medicine and slowly comes round."}
+{"id": "gut/1-20-2@03a6", "en": "Mother: You must be tired too. Go and get some rest."}
+{"id": "gut/1-20-2@03ca", "en": "Okay. You get some rest too, Mother."}
+{"id": "gut/1-20-2@03f8", "en": "Mother: Sigh, your poor father!"}
+{"id": "gut/1-20-2@0413", "en": "Mom, how's Dad doing?"}
+{"id": "gut/1-20-2@042d", "en": "Mother: He's out of danger now. You've worked so hard."}
+{"id": "gut/1-20-2@0453", "en": "Father: Cough, cough, cough..."}
+{"id": "gut/1-20-2@0466", "en": "Dad, how are you feeling now?"}
+{"id": "gut/1-20-2@047e", "en": "Father: I'm fine now. You're all grown up; it's time you went out to see the world."}
+{"id": "gut/1-20-2@04be", "en": "Okay... Take care, both of you. I'm off."}
+{"id": "gut/1-20-2@04e2", "en": "System: Just join any sect, then come back and report."}
+{"id": "gut/1-20-3@020d", "en": "Sword Saint: You're Mo Jingchou's son?"}
+{"id": "gut/1-20-3@0229", "en": "Yes. Are you the Sword Saint?"}
+{"id": "gut/1-20-3@0241", "en": "Sword Saint: I am."}
+{"id": "gut/1-20-3@024f", "en": "Why are you locked up in here?"}
+{"id": "gut/1-20-3@0269", "en": "Sword Saint: ...Sigh... Like Hua Yingxiong, I trusted your father's word too much, and this is what it brought me!"}
+{"id": "gut/1-20-3@02c5", "en": "Who is my father, really? Was Hua Yingxiong telling the truth?"}
+{"id": "gut/1-20-3@02f1", "en": "Sword Saint: Yes! He's the Cult Leader of the Five Poisons Cult. He's always wanted to rule the martial world, and he'll stop at nothing to do it... he won't even spare his own son..."}
+{"id": "gut/1-20-3@0365", "en": "...Sigh... Why does it have to be like this?"}
+{"id": "gut/1-20-3@0387", "en": "Sword Saint: Your father was good at heart. But training with the Minghan Manual he fell into qi deviation, and the chaotic power turned on him, and so..."}
+{"id": "gut/1-20-3@03eb", "en": "No, I have to stop him. If this goes on, the whole world will fall into chaos!"}
+{"id": "gut/1-20-3@0423", "en": "Sword Saint: To change this, get BBK's e-dictionaries - the Waiyutong 9188, Download King A100 and Longman 4980, 5980 and 6980 - and lay the Electronic Dictionary Array in the well at the west end of Worryfree Village. It will draw in every demon in the world, down to the faintest trace."}
+{"id": "gut/1-20-3@04fe", "en": "How do I get the Waiyutong 9188? I've already got the other dictionaries."}
+{"id": "gut/1-20-3@0530", "en": "Sword Saint: The 9188 isn't on sale yet. Ask Zhang Zhanqing in dictionary marketing for one, but you'll need some support rating with the BBK forum. The range: above 0 and below 150."}
+{"id": "gut/1-20-3@05bf", "en": "How do I support the forum?"}
+{"id": "gut/1-20-3@05d3", "en": "Sword Saint: ...Go to the internet cafe and get on BBK's forum, of course."}
+{"id": "gut/1-20-3@05f8", "en": "Got it. I'm on my way."}
+{"id": "gut/1-20-3@060e", "en": "Sword Saint: ...In such a hurry, kid? With your strength now, even if you laid the Dictionary Array, you couldn't open it."}
+{"id": "gut/1-20-3@0660", "en": "Then what do I do?"}
+{"id": "gut/1-20-3@0672", "en": "Sword Saint: The Minghan Manual holds an ultimate move - Sky Thunder. Just read the book often and you're sure to learn it."}
+{"id": "gut/1-20-3@06c4", "en": "Got it. I'm off, then."}
+{"id": "gut/1-20-3@06da", "en": "Sword Saint: Good luck!"}
+{"id": "gut/1-20-3@06ee", "en": "Chunlan Guardian: The hint's obvious enough, ha ha."}
+{"id": "gut/1-20-3@0723", "en": "The Sword Saint is gone."}
+{"id": "gut/1-20-3@073a", "en": "I'd better ask the Sword Saint."}
+{"id": "gut/1-20-4@020f", "en": "The house is empty. The doctor is gone too."}
+{"id": "gut/1-20-4@0242", "en": "Doctor Wan, quick, my dad's collapsed! Please come and look at him."}
+{"id": "gut/1-20-4@026c", "en": "Doctor Wan: Let me get my things. Don't panic."}
+{"id": "gut/1-20-4@02a0", "en": "Doctor Wan: Found the ingredients for the medicine?"}
+{"id": "gut/1-20-4@02be.1", "en": "Found them"}
+{"id": "gut/1-20-4@02f0", "en": "Doctor Wan: Mm, let me count... all here. Oh, I forgot to tell you: it must be brewed in the Dragon Cauldron with Samadhi Fire, or the medicine won't work at all."}
+{"id": "gut/1-20-4@0370", "en": "Doctor Wan: Have a look in the Central Plains. They might be there."}
+{"id": "gut/1-20-4@03a2", "en": "Doctor Wan: They are Wake Fruit, Butter Tea, Jade Peony, Red Azalea and Red Whisk, probably found only in the Central Plains. Your father hasn't got long, so hurry!"}
+{"id": "gut/1-20-4@0411", "en": "Doctor Wan: Found the Dragon Cauldron and Samadhi Fire?"}
+{"id": "gut/1-20-4@0435.2", "en": "Not yet"}
+{"id": "gut/1-20-4@045a", "en": "Doctor Wan: There. Take this medicine and give it to your father."}
+{"id": "gut/1-20-4@0494", "en": "It must be brewed in the Dragon Cauldron with Samadhi Fire, or the medicine won't work at all. Have a look in the Central Plains. They might be there."}
+{"id": "gut/1-20-5@0204", "en": "Whoa? So this is the legendary Chunlan Studio?"}
+{"id": "gut/1-20-5@0226", "en": "Damn, all these computers? And nobody here. Whatever, let's have a look around first."}
+{"id": "gut/1-20-5@0266", "en": "Whoa, a beta of 'The True Tale of the Xiake'. Let's give it a go."}
+{"id": "gut/1-20-5@0296", "en": "Chunlan Guardian: Damn, who's that touching my computer!"}
+{"id": "gut/1-20-5@02ba", "en": "Yo, Chunlan's here."}
+{"id": "gut/1-20-5@02e8", "en": "Chunlan Guardian: Damn, who are you? Why are you messing with my computer?"}
+{"id": "gut/1-20-5@0312", "en": "Just playing a game, that's all."}
+{"id": "gut/1-20-5@0326", "en": "Chunlan Guardian: Damn, take this!"}
+{"id": "gut/1-20-5@035f", "en": "Boss, can't we just not fight?"}
+{"id": "gut/1-20-5@0375", "en": "Chunlan Guardian: I'm worn out too, why didn'tcha say so sooner? Oh well, meeting like this was fate. Take these, hope they help with your game."}
+{"id": "gut/1-20-5@03e8", "en": "System: You got 100 Essence Points and 8888 yuan."}
+{"id": "gut/1-20-5@0413", "en": "Ha ha, jackpot!"}
+{"id": "gut/1-20-5@042e", "en": "Finally over... what a nightmare..."}
+{"id": "gut/1-20-5@045b", "en": "System: You got 10 Essence Points and 888 yuan."}
+{"id": "gut/1-20-5@0486", "en": "Phew... you nearly finished me! Why hit so hard?"}
+{"id": "gut/1-20-5@04ac", "en": "Chunlan Guardian: Cut the chatter, take this!"}
+{"id": "gut/1-20-5@04cb", "en": "Boss, again? Can't I just give up?"}
+{"id": "gut/1-20-5@04eb", "en": "Chunlan Guardian: What I hate most is people touching my computer, ya hear!"}
+{"id": "gut/1-20-5@0514", "en": "I can't take this..."}
+{"id": "gut/1-20-5@0524.1", "en": "Keep fighting"}
+{"id": "gut/1-20-5@0524.2", "en": "Give up"}
+{"id": "gut/1-20-5@053c", "en": "Chunlan Guardian: You've got guts, kid. Here, have a pet bug!"}
+{"id": "gut/1-20-5@0589", "en": "Chunlan Guardian: No way! Like they say, no fight, no friendship; a fight like ours was fate too. Take these, hope they help with your game."}
+{"id": "gut/1-20-5@05f3", "en": "System: You got 200 Essence Points and 88888 yuan."}
+{"id": "gut/1-20-5@061f", "en": "Chunlan Guardian: Now try and beat me!"}
+{"id": "gut/1-20-5@0639", "en": "...!"}
+{"id": "gut/1-20-6@023f", "en": "Mother, I'm back. What's wrong with Father?"}
+{"id": "gut/1-20-6@025f", "en": "Mother: Sigh... I don't know. He just collapsed. Hurry and fetch Doctor Wan from the village."}
+{"id": "gut/1-20-6@02a3", "en": "I'm on my way."}
+{"id": "gut/1-20-6@02b1", "en": "Mother: Be quick!"}
+{"id": "gut/1-20-6@02e5", "en": "System: Choose a starting skill to learn. You only get one chance!"}
+{"id": "gut/1-20-6@031d.1", "en": "Mo Fist"}
+{"id": "gut/1-20-6@031d.2", "en": "Mo Mind Art"}
+{"id": "gut/1-20-6@0346", "en": "Chunlan Guardian: Xiake's pretty tough at the start, so here are two newbie packs for everyone. Pick the one you need."}
+{"id": "gut/1-20-6@03a4.1", "en": "8888 yuan"}
+{"id": "gut/1-20-6@03a4.2", "en": "Beginner magic"}
+{"id": "gut/1-20-6@03db", "en": "System: All right, off you go on your journey. Have fun!"}
+{"id": "gut/1-20-7@0200", "en": "Doctor, how's my father?"}
+{"id": "gut/1-20-7@021a", "en": "Doctor Wan: There's a dark aura on your father's face, perhaps from the climate of the Western Regions. Add overwork, and the result is a deep coma - what modern medicine calls 'intermittent anemia'. In other words..."}
+{"id": "gut/1-20-7@02b0", "en": "Doctor Wan: In a word, he's gravely ill and will be very hard to cure."}
+{"id": "gut/1-20-7@02e4", "en": "Don't they call you a miracle doctor? Is there a patient a miracle doctor can't save?"}
+{"id": "gut/1-20-7@0310", "en": "Doctor Wan: It's not that I can't. The ingredients are hard to gather; only the vast, rich Central Plains has them. And your father hasn't much time left."}
+{"id": "gut/1-20-7@0378", "en": "I'll do anything to save his life. What ingredients do you need?"}
+{"id": "gut/1-20-7@03a8", "en": "Doctor Wan: They are Wake Fruit, Butter Tea, Jade Peony, Red Azalea and Red Whisk. Once you've gathered them, come find me at the pharmacy. I'll head back first. Hurry!"}
+{"id": "gut/1-20-7@041a", "en": "Got it, I'm on my way!"}
+{"id": "gut/1-20-8@0203", "en": "The next morning."}
+{"id": "gut/1-20-8@0211", "en": "I wonder how Father is. I'll go and see."}
+{"id": "gut/1-30-1@020c", "en": "Uncle Tu: People say hogging the latrine without using it is bad. Worse is finishing and still hogging it."}
+{"id": "gut/1-30-2@020a", "en": "Xiaowang: Unless we burst out in the silence, we shall perish in this silence."}
+{"id": "gut/1-30-3@0213", "en": "System: You've already killed Kitsugi Ichiro."}
+{"id": "gut/1-30-3@023b", "en": "Kitsugi Ichiro: Inuinu Jiro is a son of a dog, and Kanto Binro is a bastard!"}
+{"id": "gut/1-30-3@026b", "en": "Ha ha, the Japanese are at each other's throats!"}
+{"id": "gut/1-30-3@0285", "en": "Kitsugi Ichiro: What's so funny? Can you kill those two for me? Big reward: 10,000 yen!"}
+{"id": "gut/1-30-3@02c6", "en": "Whoa, that's a lot of money. But doing a Japanese guy's dirty work..."}
+{"id": "gut/1-30-3@02fb", "en": "Well, it's killing Japanese either way. I'll do it for you!"}
+{"id": "gut/1-30-3@0321", "en": "Sort out your own mess. I'll never work for the Japanese!"}
+{"id": "gut/1-30-3@0353", "en": "Kitsugi Ichiro: They live just down below."}
+{"id": "gut/1-30-3@0372", "en": "Kitsugi Ichiro: Wakakaka~ Now they're both dead!! That feels much better! Here's your money!"}
+{"id": "gut/1-30-3@03b1", "en": "Sheesh... OK! (I've struck it rich this time)"}
+{"id": "gut/1-30-3@03d6", "en": "Damn! 10,000 yen = 2500 yuan! What a rip-off!"}
+{"id": "gut/1-30-3@03fa.1", "en": "Kill Kitsugi Ichiro"}
+{"id": "gut/1-30-3@040f", "en": "Goddamn, being played like that feels lousy! I'm gonna kill you!"}
+{"id": "gut/1-30-3@0437", "en": "Kitsugi Ichiro: Wakakaka..."}
+{"id": "gut/1-30-3@048a", "en": "Pure trash!"}
+{"id": "gut/1-30-3@0499", "en": "System: Search his house?"}
+{"id": "gut/1-30-3@04b7.1", "en": "Don't search"}
+{"id": "gut/1-30-3@04b7.2", "en": "Search"}
+{"id": "gut/1-30-3@04cb", "en": "System: Search done. You found the following items."}
+{"id": "gut/1-30-3@0517", "en": "System: You're damn trash, beaten flat by a Japanese. GAME OVER!"}
+{"id": "gut/1-30-4@0213", "en": "System: You've already killed Inuinu Jiro."}
+{"id": "gut/1-30-4@023b", "en": "Inuinu Jiro: Kitsugi Ichiro is a son of a dog, and Kanto Binro is a bastard!"}
+{"id": "gut/1-30-4@026c", "en": "You're Inuinu Jiro?"}
+{"id": "gut/1-30-4@0280", "en": "Inuinu Jiro: Yes, that's me? What do you want?"}
+{"id": "gut/1-30-4@02a4", "en": "Cut the chatter. Your life is mine!"}
+{"id": "gut/1-30-4@02d8", "en": "Inuinu Jiro: Aaargh..."}
+{"id": "gut/1-30-4@02ec", "en": "Trash! One down, ha ha!"}
+{"id": "gut/1-30-5@0213", "en": "System: You've already killed Kanto Binro."}
+{"id": "gut/1-30-5@023b", "en": "Kanto Binro: Inuinu Jiro is a son of a dog, and Kitsugi Ichiro is a bastard!"}
+{"id": "gut/1-30-5@026c", "en": "You're Kanto Binro?"}
+{"id": "gut/1-30-5@0280", "en": "Kanto Binro: Yes, that's me? What do you want?"}
+{"id": "gut/1-30-5@02d8", "en": "Kanto Binro: Aaargh..."}
+{"id": "gut/1-30-6@0218", "en": "Japanese Official: We're applying for a permanent seat on the Security Council. Don't bother me!"}
+{"id": "gut/1-30-6@024e", "en": "Hell, a trash country like yours thinks it qualifies?"}
+{"id": "gut/1-30-6@0277", "en": "Japanese Official: I'll never dare again, spare me!"}
+{"id": "gut/1-30-6@029f", "en": "Pah!"}
+{"id": "gut/1-30-6@02a7", "en": "You spit right in the Japanese man's face. Give him a good hard kick too?"}
+{"id": "gut/1-30-6@02db.2", "en": "Kick him to death"}
+{"id": "gut/1-30-6@02ea", "en": "System: You're damn trash. Not kicking that Japanese shames the Chinese people. GAME OVER!"}
+{"id": "gut/1-30-6@0334", "en": "Japanese Official: Wakakaka~~ That goddamn merchant had nothing for me today, ha ha~ Sealing his shop felt great!"}
+{"id": "gut/1-30-6@037d", "en": "Hell! Sealing someone's shop for no reason? I'll teach you a lesson!"}
+{"id": "gut/1-30-6@03a9", "en": "Japanese Official: Damn! Guards! Cut him down!"}
+{"id": "gut/1-30-6@03ea", "en": "Japanese Official: Aaah..."}
+{"id": "gut/1-30-6@0400", "en": "If you keep that shop sealed, I'll kill you!"}
+{"id": "gut/1-30-6@0422", "en": "Japanese Official: Waaaaah~~~ Great hero! I was wrong, I apologize, I'll unseal it. Waaah~~"}
+{"id": "gut/1-30-6@0467", "en": "Damn right. Let me tell you, the Chinese are no pushovers. A spineless wimp like you dares take on China? Get lost!"}
+{"id": "gut/1-30-6@04b6", "en": "System: You're damn trash, beaten by a Japanese? You've shamed the Chinese people. GAME OVER!"}
+{"id": "gut/1-30-6@0806", "en": "Chunlan Guardian: You've got a future, kid. Here's 10 yuan for candy."}
+{"id": "gut/1-40-1@0218", "en": "Metal: Enter the Metal Gate and you'll never leave, ha ha!"}
+{"id": "gut/1-40-1@023b", "en": "Don't get cocky. Watch this."}
+{"id": "gut/1-40-1@026d", "en": "However strong you are, I'll still take you down."}
+{"id": "gut/1-40-2@0218", "en": "Wood: Enter the Wood Gate and you'll never leave, ha ha!"}
+{"id": "gut/1-40-3@0218", "en": "Water: Enter the Water Gate and you'll never leave, ha ha!"}
+{"id": "gut/1-40-4@0218", "en": "Earth: Enter the Earth Gate and you'll never leave, ha ha!"}
+{"id": "gut/1-40-5@020c", "en": "The Bagua Array is broken."}
+{"id": "gut/1-40-5@021c", "en": "The Electronic Dictionary Array opens."}
+{"id": "gut/1-40-5@022c", "en": "Mo Jingchou: Mo Ming, come and save me, it hurts so much."}
+{"id": "gut/1-40-5@0252", "en": "Father..."}
+{"id": "gut/1-40-5@025e.1", "en": "Save him"}
+{"id": "gut/1-40-5@025e.2", "en": "Don't save him"}
+{"id": "gut/1-40-5@0269", "en": "Mo Jingchou: Ha ha, free at last! Die, boy!"}
+{"id": "gut/1-40-5@0295", "en": "!!! You still won't repent? Then I won't hold back either!"}
+{"id": "gut/1-40-5@02d9", "en": "Mo Jingchou: !! Watch me transform!"}
+{"id": "gut/1-40-5@02f3", "en": "Mo Jingchou"}
+{"id": "gut/1-40-5@031b", "en": "Chunlan Guardian: A man like that deserved to die - he wouldn't even spare his own son. The game ends here. Thanks for playing."}
+{"id": "gut/1-40-5@06a7", "en": "Chunlan Guardian: Ho ho, how heartless, not even saving your own father. The game ends here. Thanks for playing."}
+{"id": "gut/1-40-5@0752", "en": "The Metal Gate has been broken."}
+{"id": "gut/1-40-5@0765", "en": "The Wood Gate has been broken."}
+{"id": "gut/1-40-5@0778", "en": "The Water Gate has been broken."}
+{"id": "gut/1-40-5@078b", "en": "The Earth Gate has been broken."}
+{"id": "gut/1-50-1@0003", "en": "System: Choose where you want to go. 100 yuan a trip."}
+{"id": "gut/1-50-1@0030", "en": "Xiaoxue's Code-Nut's Elder's Charmer's Ah-Xiu's Jay-Fan's SSK's Wushan-Den Shopaholic Granny's Old-Wu's Haunted Bandit-Den"}
+{"id": "gut/1-50-1@01a8", "en": "System: That's a quest map. You can't teleport there."}
+{"id": "gut/1-50-1@02cd", "en": "System: Not enough money!"}
+{"id": "gut/1-50-2@0030", "en": "Yi's Chengxin's Wang's Xiaobao's Ah-Dai's PC-Nut's Libai's Shadow-Pig Chunlan's Blight's-Den"}
+{"id": "gut/1-50-3@0030", "en": "Xiaohu's Old-Wang's Fisher's Zhang's Mrs.Pu's Chief's Ah-San's Mingming's Prodigy's Young-Wang Xiaomei's Xiong's Ah-Wang's Fat-Chef's Bug's"}
+{"id": "gut/1-50-4@0030", "en": "Xuanji's Flood-King Pingping's Shin-chan Zhuofeng's Rabbit's TAD's Yaya's Flooder's Windchime Silly-King Leng-Yi's"}
+{"id": "gut/1-50-5@0030", "en": "Xiyu's Dugu-Zheng Uncle's Lingling's Fangfang's Qin'er's Douzi's Tipsy's Comedian's Ding's Philosophy Doudou's Patriot's"}
+{"id": "gut/1-100-1@020a", "en": "What a strange skull!"}
+{"id": "gut/1-100-1@021c", "en": "Soul Guardian: Ho ho, who's disturbing my sleep?"}
+{"id": "gut/1-100-1@0248", "en": "Cut the chatter, take this!"}
+{"id": "gut/1-100-1@0279", "en": "System: You died miserably at the Guardian's hands. GAME OVER."}
+{"id": "gut/1-100-1@05c6", "en": "Huh, why only one?"}
+{"id": "gut/1-100-1@05ed", "en": "System: Use magic to collect them~~~"}
+{"id": "gut/1-100-1@0643", "en": "System: All your sect data has been cleared. Please join a sect again!"}
+{"id": "gut/1-100-1@069c", "en": "System: Congratulations, task complete. You've come of age."}
+{"id": "gut/1-100-1@0723", "en": "System: All right, carry on with your journey. Have fun!"}
+{"id": "gut/1-100-1@07a9", "en": "System: A grown-up still playing with pets? Thrown out! The system deleted your pet!"}
+{"id": "gut/1-100-1@07e7", "en": "Aah... my baby! I'm filing a complaint against Chunlan Guardian, waaah!"}
+{"id": "gut/1-100-1@0892", "en": "System: Time's up. Challenge failed!"}
+{"id": "gut/1-100-1@08c2", "en": "Wise Elder: Sigh, young man, you must train yourself whenever you get the chance!"}
+{"id": "gut/1-255-14@000a", "en": "System: You didn't get anything."}
+{"id": "gut/1-255-16@000f", "en": "System: You got 5 Story Points."}
+{"id": "gut/1-255-17@000f", "en": "System: You got 5 Renown."}
+{"id": "gut/1-255-18@000f", "en": "System: You got 5 Essence Points."}
+{"id": "gut/1-255-39@01f7", "en": "Mo Ming,\nYour father and I\nhave left\nWorryfree Village.\nDon't blame us for\ngoing without a\ngoodbye. It's time\nyou knew: twenty\nyears ago your\nfather came upon the\nMinghan Manual by\nchance, and everyone\nhailed him as\nMartial Lord. He\ncouldn't stand the\nways of the world,\nso he and I retired\nto this little\nvillage. But the\nmartial world still\nwouldn't leave us\nalone. They tracked\nus down for the\nMinghan Manual. Your\nfather was badly\nwounded in the\nfight, and the\nmanual was taken. I\ncan't wait for you\nto come back, so I\nhave to leave with\nyour father first.\nTake good care of\nyourself. I've left\nsome things on the\ntable; they may be\nuseful. The\nNameless Elder in\nthe Central Plains\nis your father's old\nfriend. If you have\nquestions, go and\nsee him; he may be\nable to help. Take\ncare!"}
+{"id": "gut/1-255-39@0681", "en": "Mom, I'll make your wishes come true!"}
+{"id": "gut/1-255-40@01f7", "en": "Destroy the five sects\nClimb Bright Peak\nTake the Minghan Manual\n - Father"}
+{"id": "gut/1-255-40@0239", "en": "Dad, I'll complete your mission, I swear!"}
+{"id": "gut/1-255-41@01f7", "en": "System: Hatch the Pet Egg at Fun City."}
+{"id": "gut/1-255-42@000f", "en": "The book records the ultimate move - Sky Thunder."}
+{"id": "gut/1-255-42@0031", "en": "The Sword Saint said to read it a lot to learn it, but I just can't make sense of it. Sigh."}
+{"id": "gut/1-255-42@006f", "en": "Ha ha, I finally get it! It's so simple. The Sword Saint was right!"}
+{"id": "gut/1-255-43@0200", "en": "System: Using it makes you one year younger and adds an hour to the game clock. Use it?"}
+{"id": "gut/1-255-43@024e.1", "en": "Use"}
+{"id": "gut/1-255-43@024e.2", "en": "Don't use"}
+{"id": "gut/1-255-43@0267", "en": "System: You're one year younger, and the game clock has gained an hour."}
+{"id": "gut/1-255-43@02ab", "en": "System: You're too young to need Life Joss yet."}
+{"id": "gut/1-255-44@0200", "en": "System: Using it makes you one year older and takes an hour off the game clock. Use it?"}
+{"id": "gut/1-255-44@0267", "en": "System: You're one year older, and the game clock has lost an hour."}
+{"id": "gut/1-255-44@02ab", "en": "System: You're in your 90s already and you still want to take poison?"}
+{"id": "gut/1-255-56@0012", "en": "System: You used the Soul Orb without granting Bigeye's last wish. Quest failed!"}
+{"id": "gut/1-255-59@01f7", "en": "Mother,\nPlease forgive me\nfor leaving without\na word. Trading has\nbeen my dream since\nI was little, but\nyou stood in my way.\nI'll prove myself to\nyou with my success.\nI'm at the\nCentral Plains mall\nnow. Don't come\nlooking for me,\nbecause I'm about to\ngo East to do some\nbusiness. Please\nlook after your\nhealth, and forgive\nyour unfilial son.\n*Your unfilial son -\nBig Rabbit*"}
+{"id": "gut/1-255-59@058a", "en": "Wow... that's so touching... Big Rabbit. I have to find you and give your things back!"}
+{"id": "gut/1-255-61@0003", "en": "System: Using it turns on Safe Mode, which switches off when you change maps. Use it?"}
+{"id": "gut/1-255-61@0064", "en": "System: Safe Mode is on. It switches off when you change maps."}
+{"id": "gut/1-255-62@0003", "en": "System: Using it makes you meet enemies nonstop until you want to stop. Use it?"}
+{"id": "gut/1-255-62@010b", "en": "System: Keep meeting enemies?"}
+{"id": "gut/1-255-62@0127.1", "en": "Yes"}
+{"id": "gut/1-255-62@0127.2", "en": "No"}
+{"id": "gut/1-1-1@000e", "en": "This is the Xiake\nPerfect Edition.\nPress INSERT to\nrepair the character\ndata, and don't\nenter the Wood Maze\nwhen you clear the\nfour great mazes;\nthat way you'll see\nthe game's perfect\nending. Thanks for\nall your support,\neveryone!"}
+{"id": "gut/1-1-9@0237", "en": "The gate is shut tight."}
+{"id": "gut/1-1-9@024e", "en": "What a strange well!"}
+{"id": "gut/1-1-10@020c", "en": "Hand over the Minghan Manual and I'll spare your life!"}
+{"id": "gut/1-1-10@022c", "en": "Hua Yingxiong: Hmph, a kid like you thinks he can beat me?"}
+{"id": "gut/1-1-10@0250", "en": "Let's find out!"}
+{"id": "gut/1-1-10@05a9", "en": "Hua Yingxiong: Argh..."}
+{"id": "gut/1-1-10@05bb", "en": "You've gravely wounded Hua Yingxiong!"}
+{"id": "gut/1-1-10@05d6", "en": "Hua Yingxiong: Sigh... the young are to be held in awe. But I still have to tell you: your father is using you."}
+{"id": "gut/1-1-10@061a", "en": "At death's door and still lying to me?"}
+{"id": "gut/1-1-10@0630", "en": "Hua Yingxiong: Sigh... these young people. You'll see soon enough!"}
+{"id": "gut/1-1-10@0662", "en": "???"}
+{"id": "gut/1-1-10@066c", "en": "Hua Yingxiong: Look out!!"}
+{"id": "gut/1-1-10@06c8", "en": "Ah, the manual!"}
+{"id": "gut/1-1-10@06d6", "en": "!! How can it be you?"}
+{"id": "gut/1-1-10@06e8", "en": "Mo Jingchou: Ha ha, good son, thanks for doing all this for me. But today is the day you die!"}
+{"id": "gut/1-1-10@0734", "en": "Hua Yingxiong: Kid, do you believe me now?"}
+{"id": "gut/1-1-10@0756", "en": "It can't be... it can't be..."}
+{"id": "gut/1-1-10@0772", "en": "Mo Jingchou: To achieve great things you must stop at nothing, ruthless and cruel! Now die, both of you!"}
+{"id": "gut/1-1-10@07d1", "en": "Hua Yingxiong: Hmph, you want us dead? It won't be that easy!"}
+{"id": "gut/1-1-10@0804", "en": "Hua Yingxiong used Sword Control and flew you back to Worryfree Village."}
+{"id": "gut/1-1-10@082c", "en": "Hua Yingxiong: I'm badly hurt; I won't last long. The Sword Saint is locked in this Forbidden Room. He'll tell you everything."}
+{"id": "gut/1-1-10@087c", "en": "Mo Ming is lost in confusion..."}
+{"id": "gut/1-1-10@089c", "en": "Hua Yingxiong: Why do you want the Minghan Manual?"}
+{"id": "gut/1-1-10@08c2", "en": "To carry out my father's wish!"}
+{"id": "gut/1-1-10@08e0", "en": "Hua Yingxiong: Your father? Is he Mo Jingchou?"}
+{"id": "gut/1-1-10@0902", "en": "Yes. How did you know?"}
+{"id": "gut/1-1-10@0916", "en": "Hua Yingxiong: ...Sigh. After all these years, he still won't leave me be."}
+{"id": "gut/1-1-10@095a", "en": "Hua Yingxiong: Years ago I was egged on just like you. I stormed Bright Peak, beat the Sword Saint and took the Minghan Manual, dreaming of ruling the world, never knowing I was being used. The man behind it was your father, Mo Jingchou, Cult Leader of the Five Poisons Cult. Too weak to rule the martial world himself, he used every power he could - me included. And now he won't even spare his own son..."}
+{"id": "gut/1-1-10@0aa6", "en": "Impossible, you're lying to me!!"}
+{"id": "gut/1-1-10@0abe", "en": "Hua Yingxiong: Ha ha, that's the world. Accept your fate."}
+{"id": "gut/1-1-10@0b02", "en": "Hua Yingxiong: Ha ha............."}
+{"id": "gut/1-1-10@0b27", "en": "Hua Yingxiong: Not bad, kid, you've got skills. Looks like I underestimated you."}
+{"id": "gut/1-1-10@0b55", "en": "Take my sword!"}
+{"id": "gut/1-1-10@0b60", "en": "Phew... he's really strong."}
+{"id": "gut/1-1-10@0b76", "en": "Hua Yingxiong: You're not bad yourself, kid."}
+{"id": "gut/1-1-97@01f7", "en": "System: The Martial Tournament, held every five years, has begun. Will you take part?"}
+{"id": "gut/1-1-97@022b.1", "en": "Take part"}
+{"id": "gut/1-1-97@022b.2", "en": "Don't take part"}
+{"id": "gut/1-1-97@023a", "en": "System: The Martial Tournament has officially begun. Beat ten opponents in a row to win."}
+{"id": "gut/1-1-97@03de", "en": "System: Congratulations! You've beaten every master in the martial world and won the title of Martial Lord."}
+{"id": "gut/1-1-97@0425", "en": "System: You got 100 Essence Points and 50 Renown."}
+{"id": "gut/1-1-97@0467", "en": "System: SORRY, you've been knocked off the stage. We hope you'll take part in the next Martial Tournament."}
+{"id": "gut/1-1-97@04cf", "en": "System: We hope you'll take part in the next Martial Tournament."}
+{"id": "gut/1-1-98@0276", "en": "System: You got the quest reward."}
+{"id": "gut/1-1-98@02cc", "en": "System: You got 1 Essence Point."}
+{"id": "gut/1-1-98@02f9", "en": "System: You got 1 Renown."}
+{"id": "gut/1-1-98@0622", "en": "System: Congratulations, you get one free choice. Pick what you want."}
+{"id": "gut/1-1-98@0662", "en": "Essence Sect-points Story-points Renown"}
+{"id": "gut/1-1-98@06df", "en": "System: You got 1 Sect Point."}
+{"id": "gut/1-1-98@070c", "en": "System: You got 1 Story Point."}

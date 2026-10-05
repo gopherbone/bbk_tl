@@ -43,6 +43,7 @@ engine string table, image redraws and working paths. The scripts in
 | `jy` | 金庸群侠传 | `translations/jy/parts/` | `docs/jy/glossary.jsonl` | Heroes of Jin Yong v0.3 |
 | `yxts` | 英雄坛说 | `translations/yxts/parts/` | `docs/yxts/glossary.jsonl` | Heroes' Altar v0.2 |
 | `szzm` | 十字之门 | `translations/szzm/parts/` | `docs/szzm/glossary.jsonl` | Cross Entry v0.2 |
+| `xkx` | 侠客行 | `translations/xkx/parts/` | `docs/xkx/glossary.jsonl` | Ode to Gallantry v0.1 |
 
 ```sh
 python3 -m bbkrpg strings export gam4980/retroarch/downloads/bbk/金庸群侠传.gam work/jy.strings.jsonl
