@@ -1,0 +1,24 @@
+{"id": "MRS/4-1-1/desc", "en": "Attacks one enemy, base dmg 180. May cut ATK 50% for 3 turns."}
+{"id": "MRS/4-1-2/desc", "en": "Attacks one enemy, base dmg 160. May cut AGI 50% for 4 turns."}
+{"id": "MRS/4-1-3/desc", "en": "Attacks one enemy, base dmg 280."}
+{"id": "MRS/4-1-4/desc", "en": "Attacks one enemy, base dmg 150. May stun for 3 turns."}
+{"id": "MRS/4-1-5/desc", "en": "Drains HP from an enemy, base dmg 150."}
+{"id": "MRS/4-1-6/desc", "en": "Attacks all enemies, base dmg 150."}
+{"id": "MRS/4-1-7/desc", "en": "Attacks all enemies, base dmg 220. May cut AGI 50% for 2 turns."}
+{"id": "MRS/4-1-8/desc", "en": "Drains one enemy's MP, base 150. May cut DEF 50% for 3 turns."}
+{"id": "MRS/4-1-9/desc", "en": "Silences one enemy for 4 turns."}
+{"id": "MRS/4-1-10/desc", "en": "Attacks one enemy, base dmg 200. May silence for 2 turns."}
+{"id": "MRS/4-1-11/desc", "en": "Attacks all enemies, base dmg 200."}
+{"id": "MRS/4-1-12/desc", "en": "Attacks one enemy, base dmg 150. May cut DEF 50% for 3 turns."}
+{"id": "MRS/4-1-13/desc", "en": "Attacks one enemy, base dmg 400."}
+{"id": "MRS/4-1-14/desc", "en": "Attacks one enemy, base dmg 100, plus 100 base MP dmg."}
+{"id": "MRS/4-1-15/desc", "en": "Attacks one enemy, base dmg 150. May confuse for 3 turns."}
+{"id": "MRS/4-1-16/desc", "en": "Attacks one enemy, base dmg 120. May poison for 2 turns."}
+{"id": "MRS/4-2-1/desc", "en": "All allies DEF+50% for 4 turns."}
+{"id": "MRS/4-2-2/desc", "en": "All allies ATK+50% for 3 turns."}
+{"id": "MRS/4-2-3/desc", "en": "One ally AGI+50% for 4 turns."}
+{"id": "MRS/4-3-1/desc", "en": "Restores 180 HP to one and cures all ailments."}
+{"id": "MRS/4-3-2/desc", "en": "Restores 450 HP to one."}
+{"id": "MRS/4-3-3/desc", "en": "Restores 180 HP to all allies."}
+{"id": "MRS/4-4-1/desc", "en": "Revives one ally with full HP."}
+{"id": "MRS/4-5-1/desc", "en": "Steals an item from an enemy."}

@@ -1,0 +1,81 @@
+{"id": "GRS/6-1-1/desc", "en": "DEF+12 DEX+4"}
+{"id": "GRS/6-1-2/desc", "en": "DEF+20 SPI+2"}
+{"id": "GRS/6-1-3/desc", "en": "DEF+22 ATK+12 HP+50"}
+{"id": "GRS/6-1-4/desc", "en": "DEF+52 MP+30"}
+{"id": "GRS/6-1-5/desc", "en": "DEF+46 HP-20 ATK+65"}
+{"id": "GRS/6-1-6/desc", "en": "DEF+10 SPI+5 AGI+5"}
+{"id": "GRS/6-1-7/desc", "en": "DEF+26 AGI+7"}
+{"id": "GRS/6-1-8/desc", "en": "DEF+50 Stn immune"}
+{"id": "GRS/6-2-1/desc", "en": "DEF+16 DEX+2"}
+{"id": "GRS/6-2-2/desc", "en": "DEF+30 ATK-5 MP+50"}
+{"id": "GRS/6-2-3/desc", "en": "DEF+27"}
+{"id": "GRS/6-2-4/desc", "en": "DEF+50 DEX-5 AGI+5"}
+{"id": "GRS/6-2-5/desc", "en": "DEF+50 AGI-2 HP+50"}
+{"id": "GRS/6-2-6/desc", "en": "DEF+40 SPI-3 Sil immune"}
+{"id": "GRS/6-2-7/desc", "en": "DEF+95 SPI+7"}
+{"id": "GRS/6-2-8/desc", "en": "DEF+20 AGI+15"}
+{"id": "GRS/6-2-9/desc", "en": "DEF+25 SPI+6"}
+{"id": "GRS/6-2-10/desc", "en": "DEF+40 Immune to all ailments"}
+{"id": "GRS/6-3-1/desc", "en": "DEF+10 AGI+2"}
+{"id": "GRS/6-3-2/desc", "en": "DEF+28 HP+25"}
+{"id": "GRS/6-3-3/desc", "en": "DEF+38 SPI+2 AGI+2"}
+{"id": "GRS/6-3-4/desc", "en": "DEF+24 ATK+65 HP-30"}
+{"id": "GRS/6-3-5/desc", "en": "DEF+32 AGI+8"}
+{"id": "GRS/6-3-6/desc", "en": "DEF+40 AGI-3 HP+60"}
+{"id": "GRS/6-3-7/desc", "en": "DEF+27 SPI+6"}
+{"id": "GRS/6-3-8/desc", "en": "DEF+18 DEX+20"}
+{"id": "GRS/6-4-1/desc", "en": "ATK+25 DEX+3"}
+{"id": "GRS/6-4-2/desc", "en": "ATK+44 DEX+6"}
+{"id": "GRS/6-4-3/desc", "en": "DEF+30 SPI+4"}
+{"id": "GRS/6-4-4/desc", "en": "DEF+58 HP+20"}
+{"id": "GRS/6-4-5/desc", "en": "ATK+45 MP+50"}
+{"id": "GRS/6-4-6/desc", "en": "ATK+45 SPI+18 HP-50 MP-50"}
+{"id": "GRS/6-4-7/desc", "en": "ATK+50 SPI+5 Cnf immune"}
+{"id": "GRS/6-4-8/desc", "en": "DEF+110 DEX+4 SPI+4"}
+{"id": "GRS/6-4-9/desc", "en": "DEF+80 ATK+20"}
+{"id": "GRS/6-4-10/desc", "en": "DEF+65 HP+40 MP+35"}
+{"id": "GRS/6-5-1/desc", "en": "DEF+14 DEX+6"}
+{"id": "GRS/6-5-2/desc", "en": "DEF+36 ATK+20"}
+{"id": "GRS/6-5-3/desc", "en": "DEF+10 SPI+5"}
+{"id": "GRS/6-5-4/desc", "en": "DEF+35 DEX-3 HP+50"}
+{"id": "GRS/6-5-5/desc", "en": "DEF+20 MP+40"}
+{"id": "GRS/6-5-6/desc", "en": "DEF+20 AGI+6"}
+{"id": "GRS/6-5-7/desc", "en": "DEF+18 ATK+45 SPI+3"}
+{"id": "GRS/6-6-1/desc", "en": "SPI+4"}
+{"id": "GRS/6-6-2/desc", "en": "ATK+25"}
+{"id": "GRS/6-6-4/desc", "en": "HP+20 each turn"}
+{"id": "GRS/6-6-5/desc", "en": "MP+17 each turn"}
+{"id": "GRS/6-6-6/desc", "en": "AGI+6"}
+{"id": "GRS/6-6-7/desc", "en": "ATK+60 DEF-30"}
+{"id": "GRS/6-6-8/desc", "en": "DEF+30 SPI+5"}
+{"id": "GRS/6-6-12/desc", "en": "Unknown."}
+{"id": "GRS/6-7-1/desc", "en": "ATK+40"}
+{"id": "GRS/6-7-2/desc", "en": "ATK+90 DEF+30"}
+{"id": "GRS/6-7-3/desc", "en": "ATK+75 DEX+7"}
+{"id": "GRS/6-7-4/desc", "en": "ATK+80 AGI+6"}
+{"id": "GRS/6-7-5/desc", "en": "ATK+60 AGI+3 Hits all enemies"}
+{"id": "GRS/6-7-6/desc", "en": "ATK+220 MP+50 DEF-60"}
+{"id": "GRS/6-7-7/desc", "en": "ATK+150 HP+120"}
+{"id": "GRS/6-7-8/desc", "en": "ATK+20 SPI+4"}
+{"id": "GRS/6-7-9/desc", "en": "ATK+35 SPI+8 HP+30"}
+{"id": "GRS/6-7-10/desc", "en": "ATK+110 SPI+5"}
+{"id": "GRS/6-7-11/desc", "en": "ATK+60 SPI+13"}
+{"id": "GRS/6-7-12/desc", "en": "ATK+60 SPI+10 DEX+10"}
+{"id": "GRS/6-7-13/desc", "en": "ATK+50 SPI+10 HP-80 Inflicts Psn"}
+{"id": "GRS/6-7-14/desc", "en": "ATK+70 SPI+15 DEF+30"}
+{"id": "GRS/6-9-2/desc", "en": "Restores 180 HP to one."}
+{"id": "GRS/6-9-3/desc", "en": "Restores 120 MP to one."}
+{"id": "GRS/6-9-4/desc", "en": "Restores 360 HP to one."}
+{"id": "GRS/6-9-5/desc", "en": "Restores 270 MP to one."}
+{"id": "GRS/6-9-6/desc", "en": "Restores 200 HP and 200 MP to one."}
+{"id": "GRS/6-9-7/desc", "en": "Cures one ally's ailments."}
+{"id": "GRS/6-9-8/desc", "en": "Restores 300 HP and MP to one."}
+{"id": "GRS/6-12-1/desc", "en": "ATK, DEF and AGI +50% for 4 turns."}
+{"id": "GRS/6-13-14/desc", "en": "Lightstone of very low purity."}
+{"id": "GRS/6-13-15/desc", "en": "Lightstone of low purity."}
+{"id": "GRS/6-13-16/desc", "en": "Lightstone of fairly high purity."}
+{"id": "GRS/6-13-17/desc", "en": "Lightstone of very high purity."}
+{"id": "GRS/6-14-2/desc", "en": "Press SEARCH to use this item."}
+{"id": "GRS/6-14-3/desc", "en": "Press INSERT to use this item."}
+{"id": "GRS/6-14-4/desc", "en": "Press MODIFY to use this item."}
+{"id": "GRS/6-14-17/desc", "en": "Press DEL to use this item."}
